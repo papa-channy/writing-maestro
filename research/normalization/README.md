@@ -12,8 +12,8 @@ Keep routing boundaries, declared dependencies, sources, and epistemic status se
 
 - **405** inventoried paths in `skills_manifest.json`.
 - **100** primary `SKILL.md` documents fetched (two upstream path errors were resolved in `evidence/recovered-paths.json`).
-- **57** analyst-normalized, source-grounded I/P/O signatures in `functional_profiles.json`.
-- **43** read sources with workflow evidence but no approved I/P/O abstraction yet.
+- **100** analyst-normalized, primary-source-grounded I/P/O signatures in `functional_profiles.json`.
+- **0** source-read cases awaiting an analyst I/P/O abstraction in this 100-skill batch.
 - **305** candidates with no primary-body read in this pass.
 
 The old 24 clusters and shortlist of 28 are historical notes only; they were **not supplied as grouping features**. Some extracted heading/step signals are noisy; a numbered anti-pattern or example is not necessarily a workflow step.
@@ -24,7 +24,7 @@ The old 24 clusters and shortlist of 28 are historical notes only; they were **n
 - `evidence/recovered-paths.json`: upstream path fixes. Do not rewrite the archived original inventory.
 - `functional_profiles.json`: comparable structured records. `normalization_level=ANALYST_FUNCTIONAL` means inferred functional semantics **from a read SKILL.md**, not operational validation.
 - `functional_matrix.csv`: spreadsheet-friendly projection of the JSON.
-- `similarity_neighbors.csv`: 100 closest pairs among the 57 normalized profiles. The score is a **term-frequency similarity of I/P/O wording**, not a quality/performance score. Higher similarity requires semantic review, not automatic merging.
+- `similarity_neighbors.csv`: 150 closest pairs among the 100 normalized profiles. The score is a **term-frequency similarity of I/P/O wording**, not a quality/performance score. Higher similarity requires semantic review, not automatic merging.
 
 ## Core schema
 
