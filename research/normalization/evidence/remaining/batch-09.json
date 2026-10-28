@@ -1,0 +1,1572 @@
+{
+  "idx": 9,
+  "records": [
+    {
+      "id": "WM-X0208",
+      "repo": "github/awesome-copilot",
+      "path": "skills/documentation-writer/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/documentation-writer/SKILL.md",
+      "sha": "93e3fbf57fe64179570de382347db8258c661b56",
+      "status": "OK",
+      "description": "Diátaxis Documentation Expert. An expert technical writer specializing in creating high-quality software documentation, guided by the principles and structure of the Diátaxis technical documentation authoring framework.' ",
+      "intro": "# Diátaxis Documentation Expert You are an expert technical writer specializing in creating high-quality software documentation. Your work is strictly guided by the principles and structure of the Diátaxis Framework (https://diataxis.fr/). 1. **Clarity:** Write in simple, clear, and unambiguous language.",
+      "headings": [
+        {
+          "line": 27,
+          "text": "## WORKFLOW",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 31,
+          "text": "1. **Acknowledge & Clarify:** Acknowledge my request and ask clarifying questions to fill any gaps in the information I provide. You MUST determine the following before proceeding:"
+        },
+        {
+          "line": 32,
+          "text": "- **Document Type:** (Tutorial, How-to, Reference, or Explanation)"
+        },
+        {
+          "line": 33,
+          "text": "- **Target Audience:** (e.g., novice developers, experienced sysadmins, non-technical users)"
+        },
+        {
+          "line": 34,
+          "text": "- **User's Goal:** What does the user want to achieve by reading this document?"
+        },
+        {
+          "line": 35,
+          "text": "- **Scope:** What specific topics should be included and, importantly, excluded?"
+        },
+        {
+          "line": 37,
+          "text": "2. **Propose a Structure:** Based on the clarified information, propose a detailed outline (e.g., a table of contents with brief descriptions) for the document. Await my approval before writing the full content."
+        },
+        {
+          "line": 39,
+          "text": "3. **Generate Content:** Once I approve the outline, write the full documentation in well-formatted Markdown. Adhere to all guiding principles."
+        },
+        {
+          "line": 41,
+          "text": "## CONTEXTUAL AWARENESS"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 46
+    },
+    {
+      "id": "WM-X0209",
+      "repo": "github/awesome-copilot",
+      "path": "skills/finalize-agent-prompt/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/finalize-agent-prompt/SKILL.md",
+      "sha": "54b8647e242acf25ee90fece5716bf53fd84d832",
+      "status": "OK",
+      "description": "Finalize prompt file using the role of an AI agent to polish the prompt for the end user.' ",
+      "intro": "You are an AI agent who knows what works best for the prompt files you have seen and the feedback you have received. Apply that experience to refine the current prompt so it aligns with proven best practices. - A prompt file must be provided. If none accompanies the request, ask for the",
+      "headings": [],
+      "input_evidence": [
+        {
+          "line": 16,
+          "text": "- A prompt file must be provided. If none accompanies the request, ask for the"
+        },
+        {
+          "line": 18,
+          "text": "- Maintain the prompt’s front matter, encoding, and markdown structure while"
+        }
+      ],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 27
+    },
+    {
+      "id": "WM-X0210",
+      "repo": "github/awesome-copilot",
+      "path": "skills/gen-specs-as-issues/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/gen-specs-as-issues/SKILL.md",
+      "sha": "abbce0e3b6013b28fe274b5039b337edc64589be",
+      "status": "OK",
+      "description": "This workflow guides you through a systematic approach to identify missing features, prioritize them, and create detailed specifications for implementation.' ",
+      "intro": "# Product Manager Assistant: Feature Identification and Specification This workflow guides you through a systematic approach to identify missing features, prioritize them, and create detailed specifications for implementation. ## 1. Project Understanding Phase - Review the project structure to understand its organization",
+      "headings": [
+        {
+          "line": 10,
+          "text": "## 1. Project Understanding Phase",
+          "depth": 2
+        },
+        {
+          "line": 26,
+          "text": "## 2. Gap Analysis Phase",
+          "depth": 2
+        },
+        {
+          "line": 41,
+          "text": "## 3. Prioritization Phase",
+          "depth": 2
+        },
+        {
+          "line": 62,
+          "text": "## 4. Specification Development Phase",
+          "depth": 2
+        },
+        {
+          "line": 90,
+          "text": "## 5. GitHub Issue Creation Phase",
+          "depth": 2
+        },
+        {
+          "line": 105,
+          "text": "## Scope",
+          "depth": 2
+        },
+        {
+          "line": 151,
+          "text": "## 6. Final Review Phase",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 111,
+          "text": "## Implementation Plan"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 12,
+          "text": "- Review the project structure to understand its organization"
+        },
+        {
+          "line": 13,
+          "text": "- Read the README.md and other documentation files to understand the project's core functionality"
+        },
+        {
+          "line": 14,
+          "text": "- Identify the existing implementation status by examining:"
+        },
+        {
+          "line": 15,
+          "text": "- Main entry points (CLI, API, UI, etc.)"
+        },
+        {
+          "line": 16,
+          "text": "- Core modules and their functionality"
+        },
+        {
+          "line": 17,
+          "text": "- Tests to understand expected behavior"
+        },
+        {
+          "line": 18,
+          "text": "- Any placeholder implementations"
+        },
+        {
+          "line": 21,
+          "text": "- What is the primary purpose of this project?"
+        },
+        {
+          "line": 22,
+          "text": "- What user problems does it solve?"
+        },
+        {
+          "line": 23,
+          "text": "- What patterns exist in the current implementation?"
+        },
+        {
+          "line": 24,
+          "text": "- Which features are mentioned in documentation but not fully implemented?"
+        },
+        {
+          "line": 26,
+          "text": "## 2. Gap Analysis Phase"
+        },
+        {
+          "line": 28,
+          "text": "- Compare the documented capabilities ONLY against the actual implementation"
+        },
+        {
+          "line": 29,
+          "text": "- Identify \"placeholder\" code that lacks real functionality"
+        },
+        {
+          "line": 30,
+          "text": "- Look for features mentioned in documentation but missing robust implementation"
+        },
+        {
+          "line": 31,
+          "text": "- Consider the user journey and identify broken or missing steps"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 148,
+          "text": "- Add labels to indicate dependency status (e.g., \"blocked\", \"prerequisite\")"
+        }
+      ],
+      "source_lines": 166
+    },
+    {
+      "id": "WM-X0211",
+      "repo": "github/awesome-copilot",
+      "path": "skills/generate-custom-instructions-from-codebase/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/generate-custom-instructions-from-codebase/SKILL.md",
+      "sha": "777c627f7010a86e9cf87219d01d7ca294d44529",
+      "status": "OK",
+      "description": "Migration and code evolution instructions generator for GitHub Copilot. Analyzes differences between two project versions (branches, commits, or releases) to create precise instructions allowing Copilot to maintain consistency during technology migrations, major refactoring, or framework version upgrades.' ",
+      "intro": "# Migration and Code Evolution Instructions Generator ${MIGRATION_TYPE=\"Framework Version|Architecture Refactoring|Technology Migration|Dependencies Update|Pattern Changes\"} <!-- Type of migration or evolution --> ${SOURCE_REFERENCE=\"branch|commit|tag\"}",
+      "headings": [
+        {
+          "line": 41,
+          "text": "### Phase 1: Comparative State Analysis",
+          "depth": 3
+        },
+        {
+          "line": 74,
+          "text": "### Phase 2: Migration Instructions Generation",
+          "depth": 3
+        },
+        {
+          "line": 169,
+          "text": "### Phase 3: Contextual Examples Generation",
+          "depth": 3
+        },
+        {
+          "line": 186,
+          "text": "### Phase 4: Validation and Optimization",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 43,
+          "text": "#### Structural Changes Detection"
+        },
+        {
+          "line": 44,
+          "text": "- Compare folder structure between ${SOURCE_REFERENCE} and ${TARGET_REFERENCE}"
+        },
+        {
+          "line": 45,
+          "text": "- Identify moved, renamed, or deleted files"
+        },
+        {
+          "line": 46,
+          "text": "- Analyze changes in configuration files"
+        },
+        {
+          "line": 47,
+          "text": "- Document new dependencies and removed ones"
+        },
+        {
+          "line": 49,
+          "text": "#### Code Transformation Analysis"
+        },
+        {
+          "line": 52,
+          "text": "- Analyze new features being used"
+        },
+        {
+          "line": 53,
+          "text": "- Document obsolete methods/properties"
+        },
+        {
+          "line": 54,
+          "text": "- Note syntax or convention changes\" : \"\"}"
+        },
+        {
+          "line": 58,
+          "text": "- Identify new abstractions introduced"
+        },
+        {
+          "line": 59,
+          "text": "- Document responsibility reorganization"
+        },
+        {
+          "line": 60,
+          "text": "- Note changes in data flows\" : \"\"}"
+        },
+        {
+          "line": 64,
+          "text": "- Identify functional equivalences"
+        },
+        {
+          "line": 65,
+          "text": "- Document API and syntax changes"
+        },
+        {
+          "line": 66,
+          "text": "- Note new dependencies and configurations\" : \"\"}"
+        },
+        {
+          "line": 68,
+          "text": "#### Transformation Pattern Extraction"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 241
+    },
+    {
+      "id": "WM-X0212",
+      "repo": "github/awesome-copilot",
+      "path": "skills/meeting-minutes/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/meeting-minutes/SKILL.md",
+      "sha": "63424b8be544169f9206b8ce9e9e6d4e67219f69",
+      "status": "OK",
+      "description": "Generate concise, actionable meeting minutes for internal meetings. Includes metadata, attendees, agenda, decisions, action items (owner + due date), and follow-up steps.' ",
+      "intro": "# Meeting Minutes Skill — Short Internal Meetings This Skill produces high-quality, consistent meeting minutes for internal meetings that are 60 minutes or shorter. Output is designed to be clear, actionable, and easy to convert into task trackers (e.g., GitHub Issues, Jira). The generated minutes prioritize decisions and action items so teams can move quickly from discussion to execution. - Internal syncs, standups, design reviews, triage, planning or ad-hoc meetings with short duration - Situations that require a concise record of decisions, assigned action items, and follow-ups",
+      "headings": [
+        {
+          "line": 22,
+          "text": "## Operational Workflow",
+          "depth": 2
+        },
+        {
+          "line": 24,
+          "text": "### Phase 1: Intake (before drafting)",
+          "depth": 3
+        },
+        {
+          "line": 30,
+          "text": "### Phase 2: Capture (during / immediately after meeting)",
+          "depth": 3
+        },
+        {
+          "line": 36,
+          "text": "### Phase 3: Drafting",
+          "depth": 3
+        },
+        {
+          "line": 42,
+          "text": "### Phase 4: Review & Publish",
+          "depth": 3
+        },
+        {
+          "line": 61,
+          "text": "## Strict Minutes Schema (Output Structure)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 26,
+          "text": "- Obtain meeting metadata: title, date, start/end time (or duration), organizer, and intended audience."
+        },
+        {
+          "line": 27,
+          "text": "- Confirm available inputs: agenda, slides, recording, transcript, or raw notes."
+        },
+        {
+          "line": 28,
+          "text": "- If key details are missing, ask up to 3 clarifying questions before producing minutes (see \"Discovery\" below)."
+        },
+        {
+          "line": 30,
+          "text": "### Phase 2: Capture (during / immediately after meeting)"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 24,
+          "text": "### Phase 1: Intake (before drafting)"
+        },
+        {
+          "line": 26,
+          "text": "- Obtain meeting metadata: title, date, start/end time (or duration), organizer, and intended audience."
+        },
+        {
+          "line": 27,
+          "text": "- Confirm available inputs: agenda, slides, recording, transcript, or raw notes."
+        },
+        {
+          "line": 28,
+          "text": "- If key details are missing, ask up to 3 clarifying questions before producing minutes (see \"Discovery\" below)."
+        },
+        {
+          "line": 30,
+          "text": "### Phase 2: Capture (during / immediately after meeting)"
+        },
+        {
+          "line": 32,
+          "text": "- Record attendees and absentees."
+        },
+        {
+          "line": 33,
+          "text": "- Capture brief notes per agenda item with time markers if available."
+        },
+        {
+          "line": 34,
+          "text": "- Record explicit decisions, rationale summary (1–2 sentences), and action items (owner + due date)."
+        },
+        {
+          "line": 36,
+          "text": "### Phase 3: Drafting"
+        },
+        {
+          "line": 38,
+          "text": "- Generate minutes following the **Strict Minutes Schema** (below)."
+        },
+        {
+          "line": 39,
+          "text": "- Ensure every action item includes owner, due date (or timeframe), and acceptance criteria when applicable."
+        },
+        {
+          "line": 40,
+          "text": "- Mark unresolved issues or items requiring follow-up in the Parking Lot."
+        },
+        {
+          "line": 42,
+          "text": "### Phase 4: Review & Publish"
+        },
+        {
+          "line": 44,
+          "text": "- If possible, send draft to meeting organizer or a designated reviewer for quick verification (within 24 hours)."
+        },
+        {
+          "line": 45,
+          "text": "- Publish final minutes to the agreed channel (shared drive, repo, ticket, or email) and optionally create tasks in the team's tracker."
+        },
+        {
+          "line": 49,
+          "text": "## Discovery (required clarifying questions)"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 65,
+          "text": "### 1. Metadata"
+        },
+        {
+          "line": 68,
+          "text": "- **Date (YYYY-MM-DD)**:"
+        },
+        {
+          "line": 69,
+          "text": "- **Start Time (UTC)**:"
+        },
+        {
+          "line": 70,
+          "text": "- **End Time (UTC) or Duration**:"
+        },
+        {
+          "line": 71,
+          "text": "- **Organizer**:"
+        },
+        {
+          "line": 72,
+          "text": "- **Location / Virtual Link**:"
+        },
+        {
+          "line": 73,
+          "text": "- **Minutes Author** (agent or person):"
+        },
+        {
+          "line": 74,
+          "text": "- **Distribution List** (who receives the minutes):"
+        },
+        {
+          "line": 76,
+          "text": "### 2. Attendance"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 236
+    },
+    {
+      "id": "WM-X0213",
+      "repo": "github/awesome-copilot",
+      "path": "skills/memory-merger/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/memory-merger/SKILL.md",
+      "sha": "d6ff27b62e10110c93eb92212b64fd1df6c82810",
+      "status": "OK",
+      "description": "Merges mature lessons from a domain memory file into its instruction file. Syntax: `/memory-merger >domain [scope]` where scope is `global` (default), `user`, `workspace`, or `ws`.' ",
+      "intro": "You consolidate mature learnings from a domain's memory file into its instruction file, ensuring knowledge preservation with minimal redundancy. **Use the todo list** to track your progress through the process steps and keep the user informed. Memory instructions can be stored in two scopes: - **Global** (`global` or `user`) - Stored in `<global-prompts>` (`vscode-userdata:/User/prompts/`) and apply to all VS Code projects",
+      "headings": [
+        {
+          "line": 12,
+          "text": "## Scopes",
+          "depth": 2
+        },
+        {
+          "line": 37,
+          "text": "## Process",
+          "depth": 2
+        },
+        {
+          "line": 39,
+          "text": "### 1. Parse Input and Read Files",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 41,
+          "text": "- **Extract** domain and scope from user input"
+        },
+        {
+          "line": 42,
+          "text": "- **Determine** file paths:"
+        },
+        {
+          "line": 43,
+          "text": "- Global: `<global-prompts>/{domain}-memory.instructions.md` → `<global-prompts>/{domain}.instructions.md`"
+        },
+        {
+          "line": 44,
+          "text": "- Workspace: `<workspace-instructions>/{domain}-memory.instructions.md` → `<workspace-instructions>/{domain}.instructions.md`"
+        },
+        {
+          "line": 45,
+          "text": "- The user can have mistyped the domain, if you don't find the memory file, glob the directory and determine if there may be a match there. Ask the user for input if in doubt."
+        },
+        {
+          "line": 46,
+          "text": "- **Read** both files (memory file must exist; instruction file may not)"
+        },
+        {
+          "line": 48,
+          "text": "### 2. Analyze and Propose"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 39,
+          "text": "### 1. Parse Input and Read Files"
+        },
+        {
+          "line": 41,
+          "text": "- **Extract** domain and scope from user input"
+        },
+        {
+          "line": 42,
+          "text": "- **Determine** file paths:"
+        },
+        {
+          "line": 43,
+          "text": "- Global: `<global-prompts>/{domain}-memory.instructions.md` → `<global-prompts>/{domain}.instructions.md`"
+        },
+        {
+          "line": 44,
+          "text": "- Workspace: `<workspace-instructions>/{domain}-memory.instructions.md` → `<workspace-instructions>/{domain}.instructions.md`"
+        },
+        {
+          "line": 45,
+          "text": "- The user can have mistyped the domain, if you don't find the memory file, glob the directory and determine if there may be a match there. Ask the user for input if in doubt."
+        },
+        {
+          "line": 46,
+          "text": "- **Read** both files (memory file must exist; instruction file may not)"
+        },
+        {
+          "line": 48,
+          "text": "### 2. Analyze and Propose"
+        },
+        {
+          "line": 53,
+          "text": "## Proposed Memories for Merger"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 109
+    },
+    {
+      "id": "WM-X0214",
+      "repo": "github/awesome-copilot",
+      "path": "skills/prd/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/prd/SKILL.md",
+      "sha": "b19e77a252c14eed2b8fd1b506aa100fa2010fb3",
+      "status": "OK",
+      "description": "Generate high-quality Product Requirements Documents (PRDs) for software systems and AI-powered features. Includes executive summaries, user stories, technical specifications, and risk analysis.' ",
+      "intro": "# Product Requirements Document (PRD) Design comprehensive, production-grade Product Requirements Documents (PRDs) that bridge the gap between business vision and technical execution. This skill works for modern software systems, ensuring that requirements are clearly defined. - Starting a new product or feature development cycle - Translating a vague idea into a concrete technical specification",
+      "headings": [
+        {
+          "line": 25,
+          "text": "## Operational Workflow",
+          "depth": 2
+        },
+        {
+          "line": 27,
+          "text": "### Phase 1: Discovery (The Interview)",
+          "depth": 3
+        },
+        {
+          "line": 37,
+          "text": "### Phase 2: Analysis & Scoping",
+          "depth": 3
+        },
+        {
+          "line": 44,
+          "text": "### Phase 3: Technical Drafting",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 13,
+          "text": "## When to Use"
+        },
+        {
+          "line": 17,
+          "text": "- Starting a new product or feature development cycle"
+        },
+        {
+          "line": 18,
+          "text": "- Translating a vague idea into a concrete technical specification"
+        },
+        {
+          "line": 19,
+          "text": "- Defining requirements for AI-powered features"
+        },
+        {
+          "line": 20,
+          "text": "- Stakeholders need a unified \"source of truth\" for project scope"
+        },
+        {
+          "line": 21,
+          "text": "- User asks to \"write a PRD\", \"document requirements\", or \"plan a feature\""
+        },
+        {
+          "line": 25,
+          "text": "## Operational Workflow"
+        },
+        {
+          "line": 27,
+          "text": "### Phase 1: Discovery (The Interview)"
+        },
+        {
+          "line": 33,
+          "text": "- **The Core Problem**: Why are we building this now?"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 27,
+          "text": "### Phase 1: Discovery (The Interview)"
+        },
+        {
+          "line": 33,
+          "text": "- **The Core Problem**: Why are we building this now?"
+        },
+        {
+          "line": 34,
+          "text": "- **Success Metrics**: How do we know it worked?"
+        },
+        {
+          "line": 35,
+          "text": "- **Constraints**: Budget, tech stack, or deadline?"
+        },
+        {
+          "line": 37,
+          "text": "### Phase 2: Analysis & Scoping"
+        },
+        {
+          "line": 41,
+          "text": "- Map out the **User Flow**."
+        },
+        {
+          "line": 42,
+          "text": "- Define **Non-Goals** to protect the timeline."
+        },
+        {
+          "line": 44,
+          "text": "### Phase 3: Technical Drafting"
+        },
+        {
+          "line": 50,
+          "text": "## PRD Quality Standards"
+        },
+        {
+          "line": 33,
+          "text": "- **The Core Problem**: Why are we building this now?"
+        },
+        {
+          "line": 34,
+          "text": "- **Success Metrics**: How do we know it worked?"
+        },
+        {
+          "line": 35,
+          "text": "- **Constraints**: Budget, tech stack, or deadline?"
+        },
+        {
+          "line": 37,
+          "text": "### Phase 2: Analysis & Scoping"
+        },
+        {
+          "line": 41,
+          "text": "- Map out the **User Flow**."
+        },
+        {
+          "line": 42,
+          "text": "- Define **Non-Goals** to protect the timeline."
+        },
+        {
+          "line": 44,
+          "text": "### Phase 3: Technical Drafting"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 144
+    },
+    {
+      "id": "WM-X0215",
+      "repo": "github/awesome-copilot",
+      "path": "skills/project-workflow-analysis-blueprint-generator/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/project-workflow-analysis-blueprint-generator/SKILL.md",
+      "sha": "c29ad633e141a493e4fac3307ea4c82c4aba838d",
+      "status": "OK",
+      "description": "Comprehensive technology-agnostic prompt generator for documenting end-to-end application workflows. Automatically detects project architecture patterns, technology stacks, and data flow patterns to generate detailed implementation blueprints covering entry points, service layers, data access, error handling, and testing approaches across multiple technologies including .NET, Java/Spring, React, and microservices architectures.' ",
+      "intro": "# Project Workflow Documentation Generator ${PROJECT_TYPE=\"Auto-detect|.NET|Java|Spring|Node.js|Python|React|Angular|Microservices|Other\"} <!-- Primary technology stack --> ${ENTRY_POINT=\"API|GraphQL|Frontend|CLI|Message Consumer|Scheduled Job|Custom\"}",
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Project Workflow Documentation Generator",
+          "depth": 1
+        },
+        {
+          "line": 43,
+          "text": "### Initial Detection Phase",
+          "depth": 3
+        },
+        {
+          "line": 76,
+          "text": "### Workflow Documentation Instructions",
+          "depth": 3
+        },
+        {
+          "line": 80,
+          "text": "#### 1. Workflow Overview",
+          "depth": 4
+        },
+        {
+          "line": 185,
+          "text": "#### 8. Asynchronous Processing Patterns",
+          "depth": 4
+        },
+        {
+          "line": 276,
+          "text": "#### 1. Step-by-Step Implementation Process",
+          "depth": 4
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 8,
+          "text": "## Configuration Variables"
+        },
+        {
+          "line": 36,
+          "text": "## Generated Prompt"
+        },
+        {
+          "line": 43,
+          "text": "### Initial Detection Phase"
+        },
+        {
+          "line": 48,
+          "text": "- Check for .NET solutions/projects, Spring configurations, Node.js/Express files, etc."
+        },
+        {
+          "line": 49,
+          "text": "- Identify the primary programming language(s) and frameworks in use"
+        },
+        {
+          "line": 50,
+          "text": "- Determine the architectural patterns based on folder structure and key components\""
+        },
+        {
+          "line": 48,
+          "text": "- Check for .NET solutions/projects, Spring configurations, Node.js/Express files, etc."
+        },
+        {
+          "line": 49,
+          "text": "- Identify the primary programming language(s) and frameworks in use"
+        },
+        {
+          "line": 50,
+          "text": "- Determine the architectural patterns based on folder structure and key components\""
+        },
+        {
+          "line": 57,
+          "text": "- API controllers or route definitions"
+        },
+        {
+          "line": 58,
+          "text": "- GraphQL resolvers"
+        },
+        {
+          "line": 59,
+          "text": "- UI components that initiate network requests"
+        },
+        {
+          "line": 60,
+          "text": "- Message handlers or event subscribers"
+        },
+        {
+          "line": 61,
+          "text": "- Scheduled job definitions\""
+        },
+        {
+          "line": 68,
+          "text": "- Database context/connection configurations"
+        },
+        {
+          "line": 69,
+          "text": "- Repository implementations"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 294
+    },
+    {
+      "id": "WM-X0217",
+      "repo": "github/awesome-copilot",
+      "path": "skills/readme-blueprint-generator/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/readme-blueprint-generator/SKILL.md",
+      "sha": "76982e2b9b3c2de35a00dbb06087be43051a60c2",
+      "status": "OK",
+      "description": "Intelligent README.md generation prompt that analyzes project documentation structure and creates comprehensive repository documentation. Scans .github/copilot directory files and copilot-instructions.md to extract project information, technology stack, architecture, development workflow, coding standards, and testing approaches while generating well-structured markdown documentation with proper formatting, cross-references, and developer-focused content.' ",
+      "intro": "Generate a comprehensive README.md for this repository by analyzing the documentation files in the .github/copilot directory and the copilot-instructions.md file. Follow these steps: 1. Scan all the files in the .github/copilot folder, like: 2. Also review the copilot-instructions.md file in the .github folder 3. Create a README.md with the following sections:",
+      "headings": [
+        {
+          "line": 50,
+          "text": "## Development Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 51,
+          "text": "- Summarize the development process"
+        },
+        {
+          "line": 52,
+          "text": "- Include information about branching strategy if available"
+        },
+        {
+          "line": 53,
+          "text": "- Source from Workflow_Analysis file"
+        },
+        {
+          "line": 55,
+          "text": "## Coding Standards"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 40,
+          "text": "- Include any prerequisites"
+        }
+      ],
+      "source_lines": 79
+    },
+    {
+      "id": "WM-X0218",
+      "repo": "github/awesome-copilot",
+      "path": "skills/refactor-plan/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/refactor-plan/SKILL.md",
+      "sha": "ebeab3e11652f350def9676463e6e42cf5806cb0",
+      "status": "OK",
+      "description": "Create a concrete plan before starting a multi-file refactor. Use when the user asks to plan, sequence, scope, or safely execute a refactor across multiple files; always investigate first, output the plan, and wait for confirmation before making code changes.' ",
+      "intro": "Create a detailed plan before making any code changes. 1. Do not edit files while preparing the plan. 2. Search the codebase to understand the current state. Read enough implementation, tests, configuration, and docs to make the plan specific to the repository. 3. Identify affected files, ownership boundaries, dependencies, and likely hidden coupling.",
+      "headings": [
+        {
+          "line": 23,
+          "text": "## Output Format",
+          "depth": 2
+        },
+        {
+          "line": 41,
+          "text": "#### Phase 1: Types and Interfaces",
+          "depth": 4
+        },
+        {
+          "line": 45,
+          "text": "#### Phase 2: Implementation",
+          "depth": 4
+        },
+        {
+          "line": 49,
+          "text": "#### Phase 3: Tests",
+          "depth": 4
+        },
+        {
+          "line": 53,
+          "text": "#### Phase 4: Cleanup",
+          "depth": 4
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 41,
+          "text": "#### Phase 1: Types and Interfaces"
+        },
+        {
+          "line": 42,
+          "text": "- [ ] Step 1.1: [action] in `file.ts`"
+        },
+        {
+          "line": 43,
+          "text": "- [ ] Verify: [how to check it worked]"
+        },
+        {
+          "line": 45,
+          "text": "#### Phase 2: Implementation"
+        },
+        {
+          "line": 46,
+          "text": "- [ ] Step 2.1: [action] in `file.ts`"
+        },
+        {
+          "line": 47,
+          "text": "- [ ] Verify: [how to check]"
+        },
+        {
+          "line": 49,
+          "text": "#### Phase 3: Tests"
+        },
+        {
+          "line": 50,
+          "text": "- [ ] Step 3.1: Update tests in `file.test.ts`"
+        },
+        {
+          "line": 51,
+          "text": "- [ ] Verify: Run `npm test`"
+        },
+        {
+          "line": 53,
+          "text": "#### Phase 4: Cleanup"
+        },
+        {
+          "line": 54,
+          "text": "- [ ] Remove deprecated code"
+        },
+        {
+          "line": 55,
+          "text": "- [ ] Update documentation"
+        },
+        {
+          "line": 57,
+          "text": "### Rollback Plan"
+        },
+        {
+          "line": 42,
+          "text": "- [ ] Step 1.1: [action] in `file.ts`"
+        },
+        {
+          "line": 43,
+          "text": "- [ ] Verify: [how to check it worked]"
+        },
+        {
+          "line": 45,
+          "text": "#### Phase 2: Implementation"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 26,
+          "text": "## Refactor Plan: [title]"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 67
+    },
+    {
+      "id": "WM-X0219",
+      "repo": "github/awesome-copilot",
+      "path": "skills/security-review/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/security-review/SKILL.md",
+      "sha": "5281fa2f537eadca9e078a770ae129e81b759179",
+      "status": "OK",
+      "description": "AI-powered codebase security scanner that reasons about code like a security researcher — tracing data flows, understanding component interactions, and catching vulnerabilities that pattern-matching tools miss. Use this skill when asked to scan code for security vulnerabilities, find bugs, check for SQL injection, XSS, command injection, exposed API keys, hardcoded secrets, insecure dependencies, access control issues, or any request like \"is my code secure?\", \"review for security issues\", \"audit this codebase\", or \"check for vulnerabilities\". Covers injection flaws, authentication and access control bugs, secrets exposure, weak cryptography, insecure dependencies, and business logic issues across JavaScript, TypeScript, Python, Java, PHP, Go, Ruby, and Rust.' ",
+      "intro": "An AI-powered security scanner that reasons about your codebase the way a human security researcher would — tracing data flows, understanding component interactions, and catching vulnerabilities that pattern-matching tools miss. Use this skill when the request involves:",
+      "headings": [
+        {
+          "line": 37,
+          "text": "## Execution Workflow",
+          "depth": 2
+        },
+        {
+          "line": 41,
+          "text": "### Step 1 — Scope Resolution",
+          "depth": 3
+        },
+        {
+          "line": 49,
+          "text": "### Step 2 — Dependency Audit",
+          "depth": 3
+        },
+        {
+          "line": 60,
+          "text": "### Step 3 — Secrets & Exposure Scan",
+          "depth": 3
+        },
+        {
+          "line": 69,
+          "text": "### Step 4 — Vulnerability Deep Scan",
+          "depth": 3
+        },
+        {
+          "line": 107,
+          "text": "### Step 5 — Cross-File Data Flow Analysis",
+          "depth": 3
+        },
+        {
+          "line": 114,
+          "text": "### Step 6 — Self-Verification Pass",
+          "depth": 3
+        },
+        {
+          "line": 122,
+          "text": "### Step 7 — Generate Security Report",
+          "depth": 3
+        },
+        {
+          "line": 125,
+          "text": "### Step 8 — Propose Patches",
+          "depth": 3
+        },
+        {
+          "line": 145,
+          "text": "## Output Rules",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 41,
+          "text": "### Step 1 — Scope Resolution"
+        },
+        {
+          "line": 43,
+          "text": "- If a path was provided (`/security-review src/auth/`), scan only that scope"
+        },
+        {
+          "line": 44,
+          "text": "- If no path given, scan the **entire project** starting from the root"
+        },
+        {
+          "line": 45,
+          "text": "- Identify the language(s) and framework(s) in use (check package.json, requirements.txt,"
+        },
+        {
+          "line": 47,
+          "text": "- Read `references/language-patterns.md` to load language-specific vulnerability patterns"
+        },
+        {
+          "line": 49,
+          "text": "### Step 2 — Dependency Audit"
+        },
+        {
+          "line": 51,
+          "text": "- **Node.js**: Check `package.json` + `package-lock.json` for known vulnerable packages"
+        },
+        {
+          "line": 52,
+          "text": "- **Python**: Check `requirements.txt` / `pyproject.toml` / `Pipfile`"
+        },
+        {
+          "line": 53,
+          "text": "- **Java**: Check `pom.xml` / `build.gradle`"
+        },
+        {
+          "line": 54,
+          "text": "- **Ruby**: Check `Gemfile.lock`"
+        },
+        {
+          "line": 55,
+          "text": "- **Rust**: Check `Cargo.toml`"
+        },
+        {
+          "line": 56,
+          "text": "- **Go**: Check `go.sum`"
+        },
+        {
+          "line": 57,
+          "text": "- Flag packages with known CVEs, deprecated crypto libs, or suspiciously old pinned versions"
+        },
+        {
+          "line": 58,
+          "text": "- Read `references/vulnerable-packages.md` for a curated watchlist"
+        },
+        {
+          "line": 60,
+          "text": "### Step 3 — Secrets & Exposure Scan"
+        },
+        {
+          "line": 62,
+          "text": "- Hardcoded API keys, tokens, passwords, private keys"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 147,
+          "text": "- **Always** produce a findings summary table first (counts by severity)"
+        },
+        {
+          "line": 148,
+          "text": "- **Never** auto-apply any patch — present patches for human review only"
+        },
+        {
+          "line": 149,
+          "text": "- **Always** include a confidence rating per finding (High / Medium / Low)"
+        },
+        {
+          "line": 150,
+          "text": "- **Group findings** by category, not by file"
+        },
+        {
+          "line": 151,
+          "text": "- **Be specific** — include file path, line number, and the exact vulnerable code snippet"
+        },
+        {
+          "line": 152,
+          "text": "- **Explain the risk** in plain English — what could an attacker do with this?"
+        },
+        {
+          "line": 153,
+          "text": "- If the codebase is clean, say so clearly: \"No vulnerabilities found\" with what was scanned"
+        },
+        {
+          "line": 155,
+          "text": "## Reference Files"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 169
+    },
+    {
+      "id": "WM-X0220",
+      "repo": "github/awesome-copilot",
+      "path": "skills/signal-write/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/signal-write/SKILL.md",
+      "sha": "03a3d26a69ab78d0f3d29d9affe957c55bc90def",
+      "status": "OK",
+      "description": "Emit structured agent signals — hands-up, blocked, done, checkpoint, partnership. Signals are written as JSON to .signals/ for dashboard consumption and noted in the journal for persistence.' ",
+      "intro": "Emit structured signals from a desk to the operator or other desks. - A desk needs operator attention (hands-up, blocked) - Work is complete and ready for review (done) - Significant progress worth noting (checkpoint)",
+      "headings": [
+        {
+          "line": 44,
+          "text": "## How to emit",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 46,
+          "text": "### 1. Write a JSON signal file to `.signals/`"
+        },
+        {
+          "line": 77,
+          "text": "### Signal type mapping"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 97,
+          "text": "> orders signals by it and falls back to file mtime only when it's"
+        }
+      ],
+      "source_lines": 157
+    },
+    {
+      "id": "WM-X0221",
+      "repo": "github/awesome-copilot",
+      "path": "skills/structured-autonomy-plan/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/structured-autonomy-plan/SKILL.md",
+      "status": "FAILED",
+      "error": "TypeError: Cannot read properties of undefined (reading 'trim')"
+    },
+    {
+      "id": "WM-X0222",
+      "repo": "github/awesome-copilot",
+      "path": "skills/test-gap-audit/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/test-gap-audit/SKILL.md",
+      "sha": "31ea9fa996bf9efa3343a70f95efda34a1eb8cd7",
+      "status": "OK",
+      "description": "Run a read-only audit for missing, weak, stale, or mis-scoped test coverage. If the user does not name a scope, audit the full repository and identify important code paths, routes, features, services, workflows, and contracts that lack proper tests. If the user names a feature, PR, branch, route, workflow, service, bug fix, API, security-sensitive path, or risky code change, focus only on that specific scope. Use when the user asks what tests are missing, whether coverage is enough, what regression tests to add, or how to prove a change is safe. This is not a general bug audit and not a security review; it evaluates whether behavior is covered by tests. ",
+      "intro": "Find the tests that should exist but do not, or tests that exist but do not prove the important behavior. Produce concrete, prioritized test recommendations grounded in code paths, risk, and existing test conventions. - Stay read-only unless the user explicitly asks to add tests. - Default to a full-repository audit when the user does not provide a specific scope. - Full-repo audits are breadth-first, then depth-limited. Inventory the repo, rank surfaces by risk, deep-inspect as many high-risk surfaces as the turn allows, and list the rest under **Surveyed But Not Deeply Inspected** with a pointer to run another pass on them. State the surface counts in the report header. Never present a shallow sweep as complete coverage.",
+      "headings": [
+        {
+          "line": 26,
+          "text": "## Inputs",
+          "depth": 2
+        },
+        {
+          "line": 41,
+          "text": "## Discovery Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 32,
+          "text": "- Pull requests or branches: `audit test gaps in this PR`, `what tests should this branch add`."
+        },
+        {
+          "line": 33,
+          "text": "- Features: `test gap audit uploads`, `what coverage is missing for billing`."
+        },
+        {
+          "line": 34,
+          "text": "- Routes/APIs: `review tests for POST /orders`, `check auth tests around exports`."
+        },
+        {
+          "line": 35,
+          "text": "- Workflows: `invite teammate -> accept invite -> set role -> revoke access`."
+        },
+        {
+          "line": 36,
+          "text": "- Bug fixes: `what regression test should cover this fix`."
+        },
+        {
+          "line": 37,
+          "text": "- Security or docs follow-up: `what tests prove the security audit fixes`, `do examples have tests`."
+        },
+        {
+          "line": 41,
+          "text": "## Discovery Workflow"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 43,
+          "text": "1. Establish repo context."
+        },
+        {
+          "line": 44,
+          "text": "- Check `git status --short`."
+        },
+        {
+          "line": 45,
+          "text": "- Identify stack, test runners, package scripts, CI checks, test file naming, fixture style, mocks, factories, browser tools, API test conventions, and monorepo boundaries."
+        },
+        {
+          "line": 46,
+          "text": "- Read relevant manifests, CI workflows, test configs, and nearby tests."
+        },
+        {
+          "line": 48,
+          "text": "2. Map the behavior under review."
+        },
+        {
+          "line": 49,
+          "text": "- For full-repo audits, inventory major app surfaces, packages, routes, APIs, services, jobs, CLIs, schemas, integrations, and shared libraries before choosing the highest-risk gaps to inspect deeply."
+        },
+        {
+          "line": 50,
+          "text": "- For PRs, inspect changed files, changed tests, and adjacent unchanged code."
+        },
+        {
+          "line": 51,
+          "text": "- For features, locate routes, components, services, models, schemas, jobs, permissions, integrations, and user-facing states."
+        },
+        {
+          "line": 52,
+          "text": "- Identify happy paths, failure paths, edge cases, data boundaries, auth/authorization boundaries, migration/config behavior, and external integration behavior."
+        },
+        {
+          "line": 54,
+          "text": "3. Map existing coverage."
+        },
+        {
+          "line": 55,
+          "text": "- Run the bundled `scripts/coverage_map.py` first when it is available. It detects the test framework and naming convention, then matches every source file against the tests by name, mirrored path, and what the test files actually import, and returns"
+        },
+        {
+          "line": 56,
+          "text": "- `python <skill-dir>/scripts/coverage_map.py --top 25`, or `--format json` to filter the results yourself."
+        },
+        {
+          "line": 57,
+          "text": "- The matcher is heuristic and cannot see coverage that arrives through fixtures, end-to-end tests, or indirection. Treat an unmatched file as a lead, and grep for the module name to confirm before reporting it as `P0` or `P1`. Report a gap as confir"
+        },
+        {
+          "line": 58,
+          "text": "- If the script is unavailable, compare production/source areas against test directories and test naming conventions manually to find untested or weakly tested portions of the repo."
+        },
+        {
+          "line": 59,
+          "text": "- Find direct tests for the changed or requested code."
+        },
+        {
+          "line": 60,
+          "text": "- Find indirect tests that cover the same behavior through a higher-level workflow."
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 39,
+          "text": "If scope is blurry, infer the smallest useful boundary and state it. If no scope is stated, do not ask for one; proceed with a full-repo audit. Ask only when different scopes would require materially different test plans."
+        },
+        {
+          "line": 159,
+          "text": "- Update fixtures, test data, or contract examples only when needed for the selected tests."
+        }
+      ],
+      "source_lines": 176
+    },
+    {
+      "id": "WM-X0223",
+      "repo": "github/awesome-copilot",
+      "path": "skills/tldr-prompt/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/tldr-prompt/SKILL.md",
+      "sha": "c080bd92e28c094c2b28a7e707ffeb919d9c91cb",
+      "status": "OK",
+      "description": "Create tldr summaries for GitHub Copilot files (prompts, agents, instructions, collections), MCP servers, or documentation from URLs and queries.' ",
+      "intro": "You are an expert technical documentation specialist who creates concise, actionable `tldr` summaries following the tldr-pages project standards. You MUST transform verbose GitHub Copilot customization files (prompts, agents, instructions, collections), MCP server documentation, or Copilot documentation into clear, example-driven references for the current chat session.",
+      "headings": [
+        {
+          "line": 223,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 227,
+          "text": "1. **Validate Input**: Confirm at least one required parameter is provided. If not, output the error"
+        },
+        {
+          "line": 229,
+          "text": "2. **Identify Context**:"
+        },
+        {
+          "line": 230,
+          "text": "- Determine file type (.prompt.md, .agent.md, .instructions.md, .collections.md)"
+        },
+        {
+          "line": 231,
+          "text": "- Recognize if query is about MCP servers, inline chat, chat view, or general Copilot features"
+        },
+        {
+          "line": 232,
+          "text": "- Note if you're in inline chat (Ctrl+I) or chat view context"
+        },
+        {
+          "line": 233,
+          "text": "3. **Fetch Content**:"
+        },
+        {
+          "line": 234,
+          "text": "- For files: Read the file(s) using available file tools"
+        },
+        {
+          "line": 235,
+          "text": "- For URLs: Fetch content using `#tool:fetch`"
+        },
+        {
+          "line": 236,
+          "text": "- For queries: Apply URL Resolver strategy to find and fetch relevant content"
+        },
+        {
+          "line": 237,
+          "text": "4. **Analyze Content**: Extract the file's/documentation's purpose, key parameters, and primary use"
+        },
+        {
+          "line": 239,
+          "text": "5. **Generate tldr**: Create summary using the template format below with correct invocation syntax"
+        },
+        {
+          "line": 241,
+          "text": "6. **Format Output**:"
+        },
+        {
+          "line": 242,
+          "text": "- Ensure markdown formatting is correct with proper code blocks and placeholders"
+        },
+        {
+          "line": 243,
+          "text": "- Use appropriate invocation prefix: `/` for prompts, `@` for agents, context-specific for"
+        },
+        {
+          "line": 245,
+          "text": "- Adapt verbosity: inline chat = concise, chat view = detailed"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 305
+    },
+    {
+      "id": "WM-X0224",
+      "repo": "github/awesome-copilot",
+      "path": "skills/update-implementation-plan/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/update-implementation-plan/SKILL.md",
+      "sha": "4bd64725f520d8b9971f30bb321740be5ac1d08b",
+      "status": "OK",
+      "description": "Update an existing implementation plan file with new or update requirements to provide new features, refactoring existing code or upgrading packages, design, architecture or infrastructure.' ",
+      "intro": "You are an AI agent tasked with updating the implementation plan file `${file}` based on new or updated requirements. Your output must be machine-readable, deterministic, and structured for autonomous execution by other AI systems or humans. This prompt is designed for AI-to-AI communication and automated processing. All instructions must be interpreted literally and executed systematically without human interpretation or clarification. - Generate implementation plans that are fully executable by AI agents or humans - Use deterministic language with zero ambiguity",
+      "headings": [
+        {
+          "line": 27,
+          "text": "## Phase Architecture",
+          "depth": 2
+        },
+        {
+          "line": 44,
+          "text": "## Output File Specifications",
+          "depth": 2
+        },
+        {
+          "line": 96,
+          "text": "## 2. Implementation Steps",
+          "depth": 2
+        },
+        {
+          "line": 98,
+          "text": "### Implementation Phase 1",
+          "depth": 3
+        },
+        {
+          "line": 108,
+          "text": "### Implementation Phase 2",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 18,
+          "text": "- Generate implementation plans that are fully executable by AI agents or humans"
+        },
+        {
+          "line": 19,
+          "text": "- Use deterministic language with zero ambiguity"
+        },
+        {
+          "line": 20,
+          "text": "- Structure all content for automated parsing and execution"
+        },
+        {
+          "line": 21,
+          "text": "- Ensure complete self-containment with no external dependencies for understanding"
+        },
+        {
+          "line": 23,
+          "text": "## Plan Structure Requirements"
+        },
+        {
+          "line": 27,
+          "text": "## Phase Architecture"
+        },
+        {
+          "line": 89,
+          "text": "- **REQ-001**: Requirement 1"
+        },
+        {
+          "line": 90,
+          "text": "- **SEC-001**: Security Requirement 1"
+        },
+        {
+          "line": 91,
+          "text": "- **[3 LETTERS]-001**: Other Requirement 1"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "## Core Requirements"
+        },
+        {
+          "line": 29,
+          "text": "- Each phase must have measurable completion criteria"
+        },
+        {
+          "line": 30,
+          "text": "- Tasks within phases must be executable in parallel unless dependencies are specified"
+        },
+        {
+          "line": 31,
+          "text": "- All task descriptions must include specific file paths, function names, and exact implementation details"
+        },
+        {
+          "line": 32,
+          "text": "- No task should require human interpretation or decision-making"
+        },
+        {
+          "line": 34,
+          "text": "## AI-Optimized Implementation Standards"
+        },
+        {
+          "line": 98,
+          "text": "### Implementation Phase 1"
+        },
+        {
+          "line": 100,
+          "text": "- GOAL-001: [Describe the goal of this phase, e.g., \"Implement feature X\", \"Refactor module Y\", etc.]"
+        },
+        {
+          "line": 108,
+          "text": "### Implementation Phase 2"
+        },
+        {
+          "line": 110,
+          "text": "- GOAL-002: [Describe the goal of this phase, e.g., \"Implement feature X\", \"Refactor module Y\", etc.]"
+        },
+        {
+          "line": 118,
+          "text": "## 3. Alternatives"
+        },
+        {
+          "line": 100,
+          "text": "- GOAL-001: [Describe the goal of this phase, e.g., \"Implement feature X\", \"Refactor module Y\", etc.]"
+        },
+        {
+          "line": 108,
+          "text": "### Implementation Phase 2"
+        },
+        {
+          "line": 110,
+          "text": "- GOAL-002: [Describe the goal of this phase, e.g., \"Implement feature X\", \"Refactor module Y\", etc.]"
+        },
+        {
+          "line": 118,
+          "text": "## 3. Alternatives"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 46,
+          "text": "- Save implementation plan files in `/plan/` directory"
+        },
+        {
+          "line": 47,
+          "text": "- Use naming convention: `[purpose]-[component]-[version].md`"
+        },
+        {
+          "line": 48,
+          "text": "- Purpose prefixes: `upgrade|refactor|feature|data|infrastructure|process|architecture|design`"
+        },
+        {
+          "line": 49,
+          "text": "- Example: `upgrade-system-command-4.md`, `feature-auth-module-1.md`"
+        },
+        {
+          "line": 50,
+          "text": "- File must be valid Markdown with proper front matter structure"
+        },
+        {
+          "line": 52,
+          "text": "## Mandatory Template Structure"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 158
+    }
+  ]
+}
