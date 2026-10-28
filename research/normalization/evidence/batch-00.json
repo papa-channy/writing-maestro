@@ -1,0 +1,79 @@
+{
+  "batch": 0,
+  "extraction_version": "0.1.0",
+  "as_of": "2026-10-28",
+  "records": [
+    {
+      "id": "WM-X0003",
+      "path": "skills/citation-management/SKILL.md",
+      "status": "FETCH_FAILED",
+      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+    },
+    {
+      "id": "WM-X0008",
+      "path": "skills/literature-review/SKILL.md",
+      "status": "FETCH_FAILED",
+      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+    },
+    {
+      "id": "WM-X0015",
+      "path": "skills/peer-review/SKILL.md",
+      "status": "FETCH_FAILED",
+      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+    },
+    {
+      "id": "WM-X0022",
+      "path": "skills/scientific-writing/SKILL.md",
+      "status": "FETCH_FAILED",
+      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+    },
+    {
+      "id": "WM-X0030",
+      "path": "skills/citation-verification/SKILL.md",
+      "status": "FETCH_FAILED",
+      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+    },
+    {
+      "id": "WM-X0033",
+      "path": "skills/creative-thinking-for-research/SKILL.md",
+      "status": "FETCH_FAILED",
+      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+    },
+    {
+      "id": "WM-X0036",
+      "path": "skills/literature-review/SKILL.md",
+      "status": "FETCH_FAILED",
+      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+    },
+    {
+      "id": "WM-X0043",
+      "path": "skills/peer-review/SKILL.md",
+      "status": "FETCH_FAILED",
+      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+    },
+    {
+      "id": "WM-X0051",
+      "path": "skills/scientific-writing/SKILL.md",
+      "status": "FETCH_FAILED",
+      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+    },
+    {
+      "id": "WM-X0052",
+      "path": "skills/systematic-review-prisma/SKILL.md",
+      "status": "FETCH_FAILED",
+      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+    },
+    {
+      "id": "WM-X0054",
+      "path": "skills/unslop-academic-writing/SKILL.md",
+      "status": "FETCH_FAILED",
+      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+    },
+    {
+      "id": "WM-X0059",
+      "path": "skills/context-engineering/SKILL.md",
+      "status": "FETCH_FAILED",
+      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+    }
+  ]
+}
