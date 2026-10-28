@@ -1,4 +1,4 @@
-repo,path,name,source,original_tier,original_category,id,url,description,cluster_id,cluster_label,candidate_status
+﻿repo,path,name,source,original_tier,original_category,id,url,description,cluster_id,cluster_label,candidate_status
 Jingyang-Zhu/personal-academic-writing-skill,SKILL.md,SKILL.md,web-github-repo-description-verify-path,,,WM-X0001,https://github.com/Jingyang-Zhu/personal-academic-writing-skill/blob/main/SKILL.md,,,,UNASSESSED
 K-Dense-AI/scientific-agent-skills,skills/bgpt-paper-search/SKILL.md,bgpt-paper-search,legacy-verified,BACKLOG,research_evidence,WM-X0002,https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/bgpt-paper-search/SKILL.md,,,,UNASSESSED
 K-Dense-AI/scientific-agent-skills,skills/citation-management/SKILL.md,citation-management,legacy-verified,CONDITIONAL,research_evidence,WM-X0003,https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/citation-management/SKILL.md,,,,UNASSESSED
