@@ -1,0 +1,702 @@
+{
+  "idx": 13,
+  "records": [
+    {
+      "id": "WM-X0297",
+      "repo": "obra/superpowers",
+      "path": "skills/receiving-code-review/SKILL.md",
+      "url": "https://github.com/obra/superpowers/blob/main/skills/receiving-code-review/SKILL.md",
+      "sha": "950da7b74bf6dbed6b8726d12ddadd65a9f5fda7",
+      "status": "OK",
+      "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation ",
+      "intro": "Code review requires technical evaluation, not emotional performance. **Core principle:** Verify before implementing. Ask before assuming. Technical correctness over social comfort. WHEN receiving code review feedback: 1. READ: Complete feedback without reacting",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 3,
+          "text": "description: Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation"
+        },
+        {
+          "line": 10,
+          "text": "Code review requires technical evaluation, not emotional performance."
+        }
+      ],
+      "source_lines": 206
+    },
+    {
+      "id": "WM-X0299",
+      "repo": "obra/superpowers",
+      "path": "skills/using-superpowers/SKILL.md",
+      "url": "https://github.com/obra/superpowers/blob/main/skills/using-superpowers/SKILL.md",
+      "sha": "069d578445805a28b8dacbf70cdf045e1673def0",
+      "status": "OK",
+      "description": "Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions ",
+      "intro": "If you were dispatched as a subagent to execute a specific task, ignore this skill. If you think there is even a 1% chance a skill might apply to what you are doing, you ABSOLUTELY MUST invoke the skill. IF A SKILL APPLIES TO YOUR TASK, YOU DO NOT HAVE A CHOICE. YOU MUST USE IT. This is not negotiable. You cannot rationalize your way out of this.",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 66
+    },
+    {
+      "id": "WM-X0300",
+      "repo": "obra/superpowers",
+      "path": "skills/verification-before-completion/SKILL.md",
+      "url": "https://github.com/obra/superpowers/blob/main/skills/verification-before-completion/SKILL.md",
+      "sha": "7d45333cc4a49c57a80df6c1fe2fa777a207afbc",
+      "status": "OK",
+      "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always ",
+      "intro": "# Verification Before Completion **Core principle:** Evidence before claims, always. **Violating the letter of this rule is violating the spirit of this rule.** NO COMPLETION CLAIMS WITHOUT FRESH VERIFICATION EVIDENCE",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 3,
+          "text": "description: Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always"
+        }
+      ],
+      "source_lines": 121
+    },
+    {
+      "id": "WM-X0302",
+      "repo": "obra/superpowers",
+      "path": "skills/writing-skills/SKILL.md",
+      "url": "https://github.com/obra/superpowers/blob/main/skills/writing-skills/SKILL.md",
+      "status": "FAILED",
+      "error": "TypeError: Cannot read properties of undefined (reading 'trim')"
+    },
+    {
+      "id": "WM-X0303",
+      "repo": "riekelt/technical-writer",
+      "path": "plugins/technical-writer/skills/diagramming-processes/SKILL.md",
+      "url": "https://github.com/riekelt/technical-writer/blob/main/plugins/technical-writer/skills/diagramming-processes/SKILL.md",
+      "sha": "08590e181d608fc759e7b21918e49344cb0a5a62",
+      "status": "OK",
+      "description": "Use when a business process, workflow, lifecycle, or interaction between systems needs a diagram - a flow that prose serializes badly, a state machine, a message sequence, an enterprise process map - or when drawing the process documentation of a legacy campaign. Encodes diagrams-as-source, the notation ladder from ArchiMate to PlantUML, the kind-per-question table, behavior-level participants, the diagram index, and the same-change maintenance rule. Use whenever a document needs a graph rather than more paragraphs, even if nobody says \"PlantUML\". ",
+      "intro": "**REQUIRED BACKGROUND:** the `technical-writing` skill (hard rules, truth rules, style). A diagram is a set of claims drawn instead of written; every box and arrow is bound by the same truth rules as a sentence. Core principle: **diagram the behavior (processes, lifecycles, interactions), keep the source in version control, and treat every render as derived.** The prose owns the reasoning; the diagram carries what prose serializes badly: branching, concurrency, and state. Invoke when a flow, lifecycle, or interaction needs showing: a business process spanning components or organizations, a state machine, a message exchange, the `processes.md` of a legacy campaign (`documenting-legacy-codebases`). Do NOT invoke to decorate: a linear flow of ",
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Diagramming processes",
+          "depth": 1
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 14,
+          "text": "## When to invoke, and not"
+        },
+        {
+          "line": 18,
+          "text": "## The notation ladder"
+        },
+        {
+          "line": 22,
+          "text": "- **Business layer: ArchiMate.** Processes spanning departments, organizations, or multiple systems, capability maps, and the TOGAF-style views enterprise stakeholders expect. The audience reads roles, services, and processes, never components."
+        },
+        {
+          "line": 23,
+          "text": "- **System layer: PlantUML behavior diagrams.** Flows, state machines, and sequences within and between systems: code documentation, one level above the code."
+        },
+        {
+          "line": 24,
+          "text": "- **Code layer: no diagrams.** Class and package structure is the code's own to show; an IDE generates a fresher picture on demand than any committed one."
+        },
+        {
+          "line": 28,
+          "text": "## Source, not pictures"
+        },
+        {
+          "line": 30,
+          "text": "- The source is committed text, in the diagram tool the repository already uses. Where none is established, PlantUML is the default (rich standard library, ArchiMate included); where the choice is genuinely open, ask the owner, recommending PlantUML."
+        },
+        {
+          "line": 31,
+          "text": "- One diagram per source file, named for the process it shows, grouped in one diagrams directory beside the documents."
+        },
+        {
+          "line": 32,
+          "text": "- Rendering requires tooling the repository owns (a script, a make target, or a build step), set up by the owner, not by the diagram's author. Tell the owner when it is missing; never route around the gap by picking whatever notation the hosting plat"
+        },
+        {
+          "line": 33,
+          "text": "- One repo command renders everything; renders are committed unless the host already renders the repository's chosen source format. When a source changes, its outdated render is deleted in the same change, and the missing render is recorded in the in"
+        },
+        {
+          "line": 34,
+          "text": "- A screenshot, an exported picture, or a whiteboard photo with no source is a finding against the document that contains it: nobody can diff it, so nobody will maintain it."
+        },
+        {
+          "line": 36,
+          "text": "## The kind answers the reader's question"
+        },
+        {
+          "line": 50,
+          "text": "## Behavior, never implementation"
+        },
+        {
+          "line": 54,
+          "text": "- **Participants are systems, roles, modules, and business objects.** Classes, methods, and functions stay in the code (see the ladder)."
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 32,
+          "text": "- Rendering requires tooling the repository owns (a script, a make target, or a build step), set up by the owner, not by the diagram's author. Tell the owner when it is missing; never route around the gap by picking whatever notation the hosting platform happens to render inline."
+        }
+      ],
+      "source_lines": 81
+    },
+    {
+      "id": "WM-X0304",
+      "repo": "riekelt/technical-writer",
+      "path": "plugins/technical-writer/skills/documenting-contracts/SKILL.md",
+      "url": "https://github.com/riekelt/technical-writer/blob/main/plugins/technical-writer/skills/documenting-contracts/SKILL.md",
+      "sha": "eccc7f7752edaaaa61b3e308e63d2e1472f8a5ea",
+      "status": "OK",
+      "description": "Use when documenting an HTTP API, message payloads, queue contracts, DTOs, file formats, or webhooks - or when writing the api-reference of a legacy campaign, or when callers keep asking what a field means or which errors an endpoint returns. Encodes the four detail levels, the DTO-first catalog, wire types with source anchors, the generated-spec one-home rule, and omitted-versus-null semantics. Use whenever a machine interface needs documenting for its callers, even if nobody says \"API docs\". ",
+      "intro": "**REQUIRED BACKGROUND:** the `technical-writing` skill (hard rules, truth rules, style). A contract document is read by a stranger who cannot see the code and is about to depend on it. Core principle: **document the wire, exhaustively, with each detail at its own level; the caller's language is the wire format and domain terms, never the implementation's types.** Contract surfaces are reference kind, so the core Reference rule applies: every endpoint, every field, every error. Invoke when documenting anything machines call or parse: REST and RPC endpoints, message queues and topics, webhooks, CLI commands, file formats. The `api-reference.md` of a legacy campaign (`documenting-legacy-codebases`) is this skill's document. Do NOT invoke for i",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 104
+    },
+    {
+      "id": "WM-X0305",
+      "repo": "riekelt/technical-writer",
+      "path": "plugins/technical-writer/skills/documenting-legacy-codebases/SKILL.md",
+      "url": "https://github.com/riekelt/technical-writer/blob/main/plugins/technical-writer/skills/documenting-legacy-codebases/SKILL.md",
+      "sha": "166b7240691ab86785a4928e66b9e49ec91637d5",
+      "status": "OK",
+      "description": "Use when documenting an existing codebase whose documentation is missing, stale, or untrusted - an inherited system, a legacy application, a repo where the docs lie - or when regrounding a documentation tree against the code, or when someone asks what a system actually does. Encodes the survey-first inventory, the writer-side evidence hierarchy, depth-per-surface rules, the refactor test, dead-or-alive proofs, the quirks-and-findings split, the coverage ledger, the parallel campaign, and the docs-tree skeleton. Use whenever documentation must be reconstructed from the code rather than written alongside a change. ",
+      "intro": "**REQUIRED BACKGROUND:** the `technical-writing` skill (hard rules, kind classification, truth rules, style). A legacy codebase has one reliable witness: the code at HEAD. Everything else that speaks about it (names, comments, old documents, diagrams, the memory of whoever is left) is testimony. Core principle: **describe how the system works and what to look out for, verified against the code; the code stays the authority on how it is implemented.** The deliverable is a docs tree the next engineer trusts and the next refactor leaves untouched: only changed behavior or a new feature sends anyone back to edit it. Invoke when documenting a system that exists and is under-documented: an inherited or acquired codebase, a system whose authors le",
+      "headings": [
+        {
+          "line": 121,
+          "text": "# diagrams in diagrams/ (see diagramming-processes)",
+          "depth": 0
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 37,
+          "text": "- **The refactor test.** A finished document sits still while the code is refactored, and changes only when behavior changes or a feature lands. A sentence that a rename would falsify (a method name, a line number, a list of classes) is implementation detail in prose form; lift it to the behavior it implements or cut it."
+        }
+      ],
+      "source_lines": 137
+    },
+    {
+      "id": "WM-X0308",
+      "repo": "riekelt/technical-writer",
+      "path": "plugins/technical-writer/skills/technical-writing/SKILL.md",
+      "url": "https://github.com/riekelt/technical-writer/blob/main/plugins/technical-writer/skills/technical-writing/SKILL.md",
+      "sha": "6c9129840daee8286eff2ac233a3a6da9eb8d7e7",
+      "status": "OK",
+      "description": "Use when writing, restructuring, or revising any technical document - specs, design docs, READMEs, reference documentation, plans, reports - or any prose that must survive being read twice by someone in a hurry. Encodes the house style, the truth and sourcing rules, and the banned-constructions list. Use whenever you produce repository-bound text longer than a paragraph, even if nobody says \"document\". Foundation for the sibling document-type skills. ",
+      "intro": "House style for technical documents. The rules are in English; documents keep their own language: a Dutch document is written and reviewed in Dutch. The structural and truth rules apply in any language; the vocabulary lists in `references/style.md` are English-specific and other languages carry their own. Core principle: **a document states current, verified behavior, conclusion first, with every claim traceable to a source, and every fact living in exactly one place.** A thin document beats an overstated one. These rules govern documents, not chat replies. Length and section rules apply to running prose, not to reference lists like this file. Load this skill for any technical prose, then the matching document-type skill on top. These are r",
+      "headings": [
+        {
+          "line": 97,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 99,
+          "text": "1. **Read first** (above), and classify the document."
+        },
+        {
+          "line": 100,
+          "text": "2. **Declare before drafting**: fill the checkpoint above (kind, audience, purpose, non-goals)."
+        },
+        {
+          "line": 101,
+          "text": "3. **Draft conclusion-first** at every level: document, chapter, paragraph. No run-up, no context paragraphs before the outcome. Each chapter opens with what came out of it, not how it was approached."
+        },
+        {
+          "line": 102,
+          "text": "4. **Ground every claim** and label its confidence: `references/truth.md`."
+        },
+        {
+          "line": 103,
+          "text": "5. **Style pass** over sentences, words, headings, and the banned-constructions list: `references/style.md`."
+        },
+        {
+          "line": 104,
+          "text": "6. **Verify before delivery**: load `reviewing-technical-prose` for the checklist. Check references by actually following them."
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 47,
+          "text": "Fill the fields from the request, sources, and repository context. State a safe assumption and continue when it does not materially change the result. Ask only when an unknown would change the audience, substance, or scope. Never invent a fact to complete the checkpoint; do not insert the checkpoint into the finished document unless its schema requires it."
+        },
+        {
+          "line": 77,
+          "text": "| Normative | architecture principles, contracts, style guides | If code violates the contract, do NOT water the contract down; record the violation. Edit only when the contract itself names deleted or renamed concepts. |"
+        }
+      ],
+      "source_lines": 129
+    },
+    {
+      "id": "WM-X0309",
+      "repo": "riekelt/technical-writer",
+      "path": "plugins/technical-writer/skills/writing-changelogs/SKILL.md",
+      "url": "https://github.com/riekelt/technical-writer/blob/main/plugins/technical-writer/skills/writing-changelogs/SKILL.md",
+      "sha": "a20b716624ac2df329c0a8856d757dfbe403f9c5",
+      "status": "OK",
+      "description": "Use when writing a changelog entry, release notes, or a \"what shipped\" summary after completing work. Encodes the entry shape, the handover template, and the honesty conventions. Use after shipping meaningful work, even if the user just says \"summarize what we did\". ",
+      "intro": "**REQUIRED BACKGROUND:** the `technical-writing` skill (hard rules, truth rules, style). The changelog's subject is the change, not the current state; migration docs and release notes are the other document types with that subject. It is historical: entries are never rewritten, only appended. Invoke after shipping a meaningful change (a feature, a fix of real size, a removal), when writing release notes, or when summarizing what shipped. Do NOT invoke for trivial edits (roughly three changed files, or three commits), and never rewrite or delete existing entries. - One entry per shipped change, newest first, ISO dates, grouped by version where versions exist.",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 65
+    },
+    {
+      "id": "WM-X0311",
+      "repo": "riekelt/technical-writer",
+      "path": "plugins/technical-writer/skills/writing-issues/SKILL.md",
+      "url": "https://github.com/riekelt/technical-writer/blob/main/plugins/technical-writer/skills/writing-issues/SKILL.md",
+      "sha": "36e79db6093bbc4c2804c357ad43b1fb79109ffe",
+      "status": "OK",
+      "description": "Use when writing or refining tracker items - epics, stories, tasks, bug reports, spikes, or acceptance criteria - or when turning a discussion, review finding, or plan into tickets. Encodes the survives-without-you test, the issue-type glossary, and the story and bug skeletons. Use whenever work is written into a tracker, even from a rough verbal dump. ",
+      "intro": "**REQUIRED BACKGROUND:** the `technical-writing` skill (hard rules, truth rules, style). Core principle: **write issues so they survive without you.** State the outcome, include the acceptance check that decides Done, link the evidence behind every decision, and name the owner of every open part. Invoke when writing or editing tracker items, filing a bug, splitting work into tickets, or writing acceptance criteria. Do NOT invoke for weighing alternatives: when an issue needs a design argued, that is `writing-design-docs`; the issue links the design doc and never inlines it. This skill covers the writing only, not prioritization or workflow advice. Read-first applies to the tracker: read up to two recent issues of the same type and match the",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 101
+    },
+    {
+      "id": "WM-X0312",
+      "repo": "riekelt/technical-writer",
+      "path": "plugins/technical-writer/skills/writing-postmortems/SKILL.md",
+      "url": "https://github.com/riekelt/technical-writer/blob/main/plugins/technical-writer/skills/writing-postmortems/SKILL.md",
+      "sha": "38d03179229886aad08030dce9c2b5a77c0c7612",
+      "status": "OK",
+      "description": "Use when writing a postmortem, incident report, or root-cause analysis after an outage, a defect that reached users, a data issue, or a near miss - or when turning an incident channel, alert log, or war-room thread into a durable document. Encodes the blameless framing, the evidence-only timeline, contributing factors, and owned action items. Use whenever something broke and the write-up must outlive the incident. ",
+      "intro": "**REQUIRED BACKGROUND:** the `technical-writing` skill (hard rules, truth rules, style). Audience: the engineer who hits something similar in a year, not the people in the room. Core principle: **facts from evidence, causes from mechanisms, lessons from both, and no names.** Classification: historical; once reviewed it is immutable, and corrections are dated addenda. Invoke after an incident is resolved, or at a stable milestone of a long one. A defect that reached users and a near miss (a guard caught what review missed) earn the same write-up. Do NOT invoke during the live incident: the runbook governs that. Not for assigning accountability: a postmortem that needs a person's name to make sense is describing a process hole. Not for a stat",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 70
+    },
+    {
+      "id": "WM-X0314",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "agent-security/prompt-injection-defense/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/agent-security/prompt-injection-defense/SKILL.md",
+      "sha": "e09bac63913fdb9e2457e2498f389ee6d01fdf48",
+      "status": "OK",
+      "description": "Threat-model and harden AI agents, RAG systems, assistants, and tool-using workflows against direct, indirect, stored, cross-agent, and multimodal prompt injection. Use when reviewing an agent architecture, isolating untrusted content, constraining tools and egress, protecting secrets, adding injection-focused tests, investigating a suspected injection incident, or documenting residual prompt-injection risk. ",
+      "intro": "Design for compromise of model reasoning. Prompt text and classifiers can reduce attack success, but they do not create a reliable security boundary. Keep consequential authority, authorization, validation, and policy enforcement outside the model. Collect or infer, and label assumptions for: - Agent purpose, system/developer instructions, models, memory, and orchestration - Every input source, including users, web pages, email, documents, images, audio, tool results, RAG, and other agents",
+      "headings": [
+        {
+          "line": 10,
+          "text": "## Inputs",
+          "depth": 2
+        },
+        {
+          "line": 24,
+          "text": "## Output contract",
+          "depth": 2
+        },
+        {
+          "line": 38,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 14,
+          "text": "- Agent purpose, system/developer instructions, models, memory, and orchestration"
+        },
+        {
+          "line": 15,
+          "text": "- Every input source, including users, web pages, email, documents, images, audio, tool results, RAG, and other agents"
+        },
+        {
+          "line": 16,
+          "text": "- Tool list, privileges, identities, targets, write effects, and network egress"
+        },
+        {
+          "line": 17,
+          "text": "- Secrets, private data, system prompts, policy data, and other protected assets"
+        },
+        {
+          "line": 18,
+          "text": "- Output sinks such as UI rendering, code execution, messages, databases, and downstream agents"
+        },
+        {
+          "line": 19,
+          "text": "- Authorization model, human gates, monitoring, incident history, and risk tolerance"
+        },
+        {
+          "line": 20,
+          "text": "- Representative benign tasks and a safe evaluation environment"
+        },
+        {
+          "line": 24,
+          "text": "## Output contract"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 40,
+          "text": "### 1. Map instructions, data, authority, and sinks"
+        },
+        {
+          "line": 46,
+          "text": "### 2. Define enforceable invariants"
+        },
+        {
+          "line": 50,
+          "text": "- Retrieved content cannot grant permissions or change the tool allowlist."
+        },
+        {
+          "line": 51,
+          "text": "- A support agent cannot read records outside the authenticated tenant."
+        },
+        {
+          "line": 52,
+          "text": "- An email body cannot determine recipients for a send operation."
+        },
+        {
+          "line": 53,
+          "text": "- Model output cannot execute as code or HTML without validation and safe handling."
+        },
+        {
+          "line": 54,
+          "text": "- Secrets unavailable to the task never enter model context."
+        },
+        {
+          "line": 58,
+          "text": "### 3. Reduce exposed authority"
+        },
+        {
+          "line": 64,
+          "text": "### 4. Separate control from untrusted content"
+        },
+        {
+          "line": 70,
+          "text": "### 5. Validate every transition"
+        },
+        {
+          "line": 76,
+          "text": "### 6. Test with safe adversarial cases"
+        },
+        {
+          "line": 80,
+          "text": "- Direct attempts to override instructions or elicit protected data"
+        },
+        {
+          "line": 81,
+          "text": "- Indirect instructions embedded in retrieved pages, email, documents, tool results, metadata, and memory"
+        },
+        {
+          "line": 82,
+          "text": "- Obfuscation, encoding, language changes, splitting across turns, and repeated attempts"
+        },
+        {
+          "line": 83,
+          "text": "- Cross-agent delegation and tainted summaries"
+        },
+        {
+          "line": 84,
+          "text": "- Hidden or alternate-modal content when images, audio, PDFs, HTML, or OCR are supported"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 28,
+          "text": "1. A data-flow and trust-boundary map covering protected assets, all modalities, sinks, memory stores, agent hops, approved destinations, and credential boundaries"
+        },
+        {
+          "line": 29,
+          "text": "2. A threat model listing protected assets, attacker-controlled channels, injection paths, and security invariants"
+        },
+        {
+          "line": 30,
+          "text": "3. A prioritized defense plan that maps each path to preventive, limiting, detective, and recovery controls, each marked `missing`, `planned`, `implemented`, or `verified`"
+        },
+        {
+          "line": 31,
+          "text": "4. Code or configuration changes only within the user's authorized scope"
+        },
+        {
+          "line": 32,
+          "text": "5. A regression suite with safe direct, indirect, stored, encoded, cross-agent, and multimodal cases as applicable"
+        },
+        {
+          "line": 33,
+          "text": "6. Verification evidence, observed failures, and metrics rather than a blanket claim of prevention"
+        },
+        {
+          "line": 34,
+          "text": "7. Residual risk, operational monitoring, and an incident containment/recovery plan"
+        }
+      ],
+      "boundary_evidence": [
+        {
+          "line": 62,
+          "text": "Keep secrets outside model context and tool results. Add network and data egress allowlists. Sandbox code, parsers, browsers, and file processing. Require independent authorization and, where warranted, action-specific approval immediately before consequential effects. A tool classified `critical` must not have confirmation mode `none`."
+        },
+        {
+          "line": 88,
+          "text": "Measure invariant violations, unauthorized tool attempts, canary exposure, successful benign tasks, false-positive rate, and containment behavior. A detector pass rate alone is insufficient. Promote a control to `verified` only when implementation evidence and named test evidence both exist; use `implemented` when code exists but the relevant tests have not established behavior."
+        },
+        {
+          "line": 123,
+          "text": "Finish only when architecture, controls, tests, and recovery cover the full data flow; evidence shows protected invariants hold in the tested environment; benign utility remains measured; and residual risk plus unverified surfaces are explicit."
+        }
+      ],
+      "source_lines": 124
+    },
+    {
+      "id": "WM-X0315",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "code-and-development/code-documentation/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/code-and-development/code-documentation/SKILL.md",
+      "sha": "9edc4db2ed6f4c85d226c02b14da3ec5d312dcb0",
+      "status": "OK",
+      "description": "Automatically generate clear, comprehensive documentation for codebases — including API references, inline docstrings, README files, and usage guides. Use when the user requests code documentation or provides relevant inputs for this workflow.\" ",
+      "intro": "This skill enables an AI agent to analyze source code and produce high-quality documentation in multiple formats. It covers everything from single-function docstrings to full project README files, ensuring that both human developers and downstream tooling (IDEs, doc generators) benefit from consistent, accurate descriptions. 1. **Inventory the Codebase**: Walk the project tree and catalog public modules, classes, functions, constants, and type definitions. Note which symbols already have documentation and which are missing or stale. 2. **Determine Documentation Scope**: Based on the user's request, decide whether to generate inline docstrings, a standalone API reference, a project-level README, or a combination. Match the output format to t",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        },
+        {
+          "line": 156,
+          "text": "### Prerequisites",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 158,
+          "text": "- Node.js >= 18"
+        },
+        {
+          "line": 159,
+          "text": "- npm or yarn"
+        },
+        {
+          "line": 161,
+          "text": "### Installation"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Inventory the Codebase**: Walk the project tree and catalog public modules, classes, functions, constants, and type definitions. Note which symbols already have documentation and which are missing or stale."
+        },
+        {
+          "line": 18,
+          "text": "2. **Determine Documentation Scope**: Based on the user's request, decide whether to generate inline docstrings, a standalone API reference, a project-level README, or a combination. Match the output format to the project's existing conventions (JSDo"
+        },
+        {
+          "line": 20,
+          "text": "3. **Analyze Signatures and Behavior**: For each symbol, inspect parameter types, return types, default values, raised exceptions, and side effects. Read surrounding test files when available to understand intended usage and edge cases."
+        },
+        {
+          "line": 22,
+          "text": "4. **Generate Documentation**: Write documentation that includes a one-line summary, an extended description when the logic is non-trivial, parameter and return-value documentation with types, exception/error documentation, and at least one usage exa"
+        },
+        {
+          "line": 24,
+          "text": "5. **Insert or Update In-Place**: For inline documentation (docstrings, JSDoc comments), insert the generated text directly above or inside the relevant symbol. For standalone files (README, API reference), create or update the Markdown file at the p"
+        },
+        {
+          "line": 26,
+          "text": "6. **Validate and Cross-Reference**: Verify that documented parameter names match the actual signature, that referenced types exist, and that examples are syntactically valid. Flag any inconsistencies for the user to review."
+        },
+        {
+          "line": 28,
+          "text": "## Supported Formats"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 215
+    },
+    {
+      "id": "WM-X0316",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "code-and-development/code-review/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/code-and-development/code-review/SKILL.md",
+      "sha": "a1d502250886b903d4d35ee8ae7f49d81c70a532",
+      "status": "OK",
+      "description": "Perform thorough code reviews on files or pull requests, checking for bugs, security vulnerabilities, performance issues, and style violations. Use when the user requests code review or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to conduct a structured, comprehensive code review on a source file, a set of changes, or a pull request. The agent examines the code across multiple quality dimensions — correctness, security, performance, readability, and maintainability — and produces a detailed review report with actionable feedback tied to specific lines of code. 1. **Parse the input and establish context.** Determine whether the input is a single file, a directory, or a pull request diff. If it is a pull request, fetch the diff and identify the base branch so that only the changed lines are reviewed. Read any related configuration files (linter configs, style guides, type definitions) to calibrate the review against the project's standar",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Parse the input and establish context.** Determine whether the input is a single file, a directory, or a pull request diff. If it is a pull request, fetch the diff and identify the base branch so that only the changed lines are reviewed. Read an"
+        },
+        {
+          "line": 18,
+          "text": "2. **Understand the intent of the change.** Read commit messages, PR descriptions, and surrounding code to understand what the author intended. This prevents false positives — a reviewer must know the goal before judging whether the code achieves it."
+        },
+        {
+          "line": 20,
+          "text": "3. **Check for correctness and bugs.** Walk through every changed function and trace the data flow. Look for null or undefined dereferences, off-by-one errors, incorrect boolean logic, unhandled error paths, race conditions in concurrent code, and re"
+        },
+        {
+          "line": 22,
+          "text": "4. **Evaluate security.** Scan for common vulnerability patterns: unsanitized user input (SQL injection, XSS), hardcoded secrets or credentials, insecure cryptographic usage, overly permissive file or network access, and missing authentication or aut"
+        },
+        {
+          "line": 24,
+          "text": "5. **Assess performance and scalability.** Identify algorithmic complexity issues (nested loops over large collections, repeated database queries inside loops, unbounded memory growth). Check for unnecessary allocations, missing caching opportunities"
+        },
+        {
+          "line": 26,
+          "text": "6. **Review readability and maintainability.** Evaluate naming clarity, function length, code duplication (DRY violations), and adherence to the project's style guide. Check that public functions have docstrings or type annotations. Verify that magic"
+        },
+        {
+          "line": 28,
+          "text": "## Review Checklist"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 110,
+          "text": "**Summary:** 2 critical, 1 warning, 1 info. This function must not be"
+        }
+      ],
+      "source_lines": 184
+    },
+    {
+      "id": "WM-X0317",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "communication/chatbot-conversation-design/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/communication/chatbot-conversation-design/SKILL.md",
+      "sha": "4a9457aa62863edc60db5bc104ae79255f98ba5d",
+      "status": "OK",
+      "description": "Design structured, engaging chatbot conversations with robust intent handling, slot filling, disambiguation, error recovery, and graceful fallback strategies. Use when the user requests chatbot conversation design or provides relevant inputs for this workflow. ",
+      "intro": "This skill provides a comprehensive framework for designing chatbot conversations that feel natural, handle ambiguity gracefully, and guide users toward successful outcomes. It covers the full design lifecycle — from persona definition and intent mapping through dialog state management, error recovery, and iterative testing. The focus is on building conversations that are resilient to unexpected inputs while maintaining a consistent, helpful tone. 1. **Define the bot persona and scope.** Establish the chatbot's personality traits (friendly, professional, concise, witty) and guardrails. Define what the bot can and cannot do. A well-scoped bot that excels at five tasks outperforms a vague bot that attempts fifty. Document the persona in a sty",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Define the bot persona and scope.** Establish the chatbot's personality traits (friendly, professional, concise, witty) and guardrails. Define what the bot can and cannot do. A well-scoped bot that excels at five tasks outperforms a vague bot th"
+        },
+        {
+          "line": 18,
+          "text": "2. **Map intents, entities, and user journeys.** Identify every intent the bot must handle — both primary task intents (e.g., `order.place`, `account.reset_password`) and meta-intents (e.g., `help`, `cancel`, `speak_to_human`). For each intent, list "
+        },
+        {
+          "line": 20,
+          "text": "3. **Design slot-filling and disambiguation dialogs.** For each intent, define the slot-filling sequence — which entities are required, which are optional, and in what order the bot should prompt for them. When user input is ambiguous (e.g., \"the lar"
+        },
+        {
+          "line": 22,
+          "text": "4. **Build error recovery and fallback flows.** Design three tiers of fallback: (1) rephrasing the question when confidence is low, (2) offering a constrained set of options when the intent is unclear after two attempts, and (3) escalating to a human"
+        },
+        {
+          "line": 24,
+          "text": "5. **Implement context carryover and state management.** Define how dialog state persists across turns. Specify which slots carry forward (e.g., the user's name should persist for the session) and which reset between tasks. Design the context stack s"
+        },
+        {
+          "line": 26,
+          "text": "6. **Prototype, test, and iterate.** Build a low-fidelity prototype using conversation scripts or tools like Botmock, Voiceflow, or Dialogflow CX. Test with real users to identify where conversations break down. Track metrics: task completion rate, a"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 144,
+          "text": "- **Use progressive disclosure.** Don't dump all options upfront. Start with the most common paths and offer \"more options\" only when needed."
+        }
+      ],
+      "source_lines": 155
+    },
+    {
+      "id": "WM-X0318",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "communication/email-drafting/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/communication/email-drafting/SKILL.md",
+      "sha": "02285a456e93645d6df1b02eba203dc1bfb7e520",
+      "status": "OK",
+      "description": "Draft a professional, audience-aware email or reply with calibrated tone and a clear call to action. Use when the user needs one message, response, follow-up, support note, or meeting request; use sales-email-sequences for a coordinated multi-touch outbound campaign. ",
+      "intro": "This skill enables an AI agent to compose professional, context-appropriate emails across a variety of scenarios. The agent analyzes the purpose, audience, and tone requirements, then produces a complete email with subject line, body, and call to action. It supports common email types including cold outreach, follow-up sequences, customer support responses, internal status updates, and meeting requests. 1. **Identify the email type and objective.** Determine the category of the email — cold outreach, follow-up, customer support reply, internal update, or meeting request. Each type has different structural expectations. A cold outreach email prioritizes a compelling hook, while a support response leads with empathy and resolution. Clarify th",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Identify the email type and objective.** Determine the category of the email — cold outreach, follow-up, customer support reply, internal update, or meeting request. Each type has different structural expectations. A cold outreach email prioriti"
+        },
+        {
+          "line": 18,
+          "text": "2. **Profile the recipient and calibrate tone.** Gather details about the recipient: name, title, company, relationship history, and any previous interactions. Use this context to select the appropriate tone — formal for executive outreach, conversat"
+        },
+        {
+          "line": 20,
+          "text": "3. **Compose the subject line.** Write a subject line that is specific, concise (under 60 characters), and action-oriented. Avoid generic phrases like \"Quick question\" or \"Touching base.\" Instead, reference a concrete benefit or context point, e.g., "
+        },
+        {
+          "line": 22,
+          "text": "4. **Draft the email body with clear structure.** Follow a proven structure: opening hook (1-2 sentences establishing relevance), body (2-3 short paragraphs delivering the core message with supporting evidence or context), and closing with a single, "
+        },
+        {
+          "line": 24,
+          "text": "5. **Add signature and formatting polish.** Include an appropriate sign-off (\"Best regards,\" for formal, \"Thanks,\" for casual, \"Cheers,\" for friendly) followed by the sender's name, title, and contact info. Review the draft for grammar, spelling, and"
+        },
+        {
+          "line": 26,
+          "text": "6. **Review against checklist and deliver.** Verify the email meets these criteria: subject line is compelling, tone matches the audience, the CTA is clear and singular, the email is under 200 words for outreach or under 300 words for detailed respon"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 120
+    }
+  ]
+}
