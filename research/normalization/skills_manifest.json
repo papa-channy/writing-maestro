@@ -36,7 +36,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K27"
+      "historic_numeric_cluster": "K27",
+      "repo": "Jingyang-Zhu/personal-academic-writing-skill"
     },
     {
       "id": "WM-X0002",
@@ -69,7 +70,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K11"
+      "historic_numeric_cluster": "K11",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0003",
@@ -102,7 +104,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K12"
+      "historic_numeric_cluster": "K12",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0004",
@@ -135,7 +138,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K14"
+      "historic_numeric_cluster": "K14",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0005",
@@ -168,7 +172,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0006",
@@ -201,7 +206,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K14"
+      "historic_numeric_cluster": "K14",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0007",
@@ -234,7 +240,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K09"
+      "historic_numeric_cluster": "K09",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0008",
@@ -267,7 +274,8 @@
       "method_evidence": [],
       "prior_observation": "literature review source comparison synthesis gap citation",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K41"
+      "historic_numeric_cluster": "K41",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0009",
@@ -300,7 +308,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K25"
+      "historic_numeric_cluster": "K25",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0010",
@@ -333,7 +342,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K47"
+      "historic_numeric_cluster": "K47",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0011",
@@ -366,7 +376,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0012",
@@ -399,7 +410,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K11"
+      "historic_numeric_cluster": "K11",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0013",
@@ -432,7 +444,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K14"
+      "historic_numeric_cluster": "K14",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0014",
@@ -465,7 +478,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K14"
+      "historic_numeric_cluster": "K14",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0015",
@@ -498,7 +512,8 @@
       "method_evidence": [],
       "prior_observation": "peer reviewer manuscript source methods claim evidence ethics revisions",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K03"
+      "historic_numeric_cluster": "K03",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0016",
@@ -531,7 +546,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0017",
@@ -564,7 +580,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K23"
+      "historic_numeric_cluster": "K23",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0018",
@@ -597,7 +614,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K23"
+      "historic_numeric_cluster": "K23",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0019",
@@ -630,7 +648,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K14"
+      "historic_numeric_cluster": "K14",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0020",
@@ -663,7 +682,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K30"
+      "historic_numeric_cluster": "K30",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0021",
@@ -696,7 +716,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K30"
+      "historic_numeric_cluster": "K30",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0022",
@@ -729,7 +750,8 @@
       "method_evidence": [],
       "prior_observation": "scientific paper manuscript evidence provenance citations factual accuracy",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K30"
+      "historic_numeric_cluster": "K30",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0023",
@@ -762,7 +784,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "K-Dense-AI/scientific-agent-skills"
     },
     {
       "id": "WM-X0024",
@@ -795,7 +818,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K23"
+      "historic_numeric_cluster": "K23",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0025",
@@ -828,7 +852,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K28"
+      "historic_numeric_cluster": "K28",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0026",
@@ -861,7 +886,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K14"
+      "historic_numeric_cluster": "K14",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0027",
@@ -894,7 +920,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K11"
+      "historic_numeric_cluster": "K11",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0028",
@@ -927,7 +954,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K30"
+      "historic_numeric_cluster": "K30",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0029",
@@ -960,7 +988,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K12"
+      "historic_numeric_cluster": "K12",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0030",
@@ -993,7 +1022,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0031",
@@ -1026,7 +1056,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K47"
+      "historic_numeric_cluster": "K47",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0032",
@@ -1059,7 +1090,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0033",
@@ -1092,7 +1124,8 @@
       "method_evidence": [],
       "prior_observation": "research ideation analogies recombination constraints novel hypotheses",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K23"
+      "historic_numeric_cluster": "K23",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0034",
@@ -1125,7 +1158,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K23"
+      "historic_numeric_cluster": "K23",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0035",
@@ -1158,7 +1192,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K06"
+      "historic_numeric_cluster": "K06",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0036",
@@ -1191,7 +1226,8 @@
       "method_evidence": [],
       "prior_observation": "literature review source comparison synthesis gap citation",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K41"
+      "historic_numeric_cluster": "K41",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0037",
@@ -1224,7 +1260,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K25"
+      "historic_numeric_cluster": "K25",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0038",
@@ -1257,7 +1294,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K47"
+      "historic_numeric_cluster": "K47",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0039",
@@ -1290,7 +1328,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K11"
+      "historic_numeric_cluster": "K11",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0040",
@@ -1323,7 +1362,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K00"
+      "historic_numeric_cluster": "K00",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0041",
@@ -1356,7 +1396,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K11"
+      "historic_numeric_cluster": "K11",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0042",
@@ -1389,7 +1430,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K11"
+      "historic_numeric_cluster": "K11",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0043",
@@ -1422,7 +1464,8 @@
       "method_evidence": [],
       "prior_observation": "peer reviewer manuscript source methods claim evidence ethics revisions",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K03"
+      "historic_numeric_cluster": "K03",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0044",
@@ -1455,7 +1498,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K00"
+      "historic_numeric_cluster": "K00",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0045",
@@ -1488,7 +1532,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K23"
+      "historic_numeric_cluster": "K23",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0046",
@@ -1521,7 +1566,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K23"
+      "historic_numeric_cluster": "K23",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0047",
@@ -1554,7 +1600,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K06"
+      "historic_numeric_cluster": "K06",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0048",
@@ -1587,7 +1634,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K23"
+      "historic_numeric_cluster": "K23",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0049",
@@ -1620,7 +1668,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K30"
+      "historic_numeric_cluster": "K30",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0050",
@@ -1653,7 +1702,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K30"
+      "historic_numeric_cluster": "K30",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0051",
@@ -1686,7 +1736,8 @@
       "method_evidence": [],
       "prior_observation": "scientific paper manuscript evidence provenance citations factual accuracy",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K30"
+      "historic_numeric_cluster": "K30",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0052",
@@ -1719,7 +1770,8 @@
       "method_evidence": [],
       "prior_observation": "systematic research review literature protocol screening reproducible prisma evidence",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K03"
+      "historic_numeric_cluster": "K03",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0053",
@@ -1752,7 +1804,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K11"
+      "historic_numeric_cluster": "K11",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0054",
@@ -1785,7 +1838,8 @@
       "method_evidence": [],
       "prior_observation": "academic anti slop prose edit linter remove boilerplate preserve evidence",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K42"
+      "historic_numeric_cluster": "K42",
+      "repo": "KalarisLabs/research-agent-skills"
     },
     {
       "id": "WM-X0055",
@@ -1818,7 +1872,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K23"
+      "historic_numeric_cluster": "K23",
+      "repo": "YerayL/Science-Research-Writing-Skills"
     },
     {
       "id": "WM-X0056",
@@ -1851,7 +1906,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K27"
+      "historic_numeric_cluster": "K27",
+      "repo": "YuanZHAO321/Academic-Writing"
     },
     {
       "id": "WM-X0057",
@@ -1884,7 +1940,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K19"
+      "historic_numeric_cluster": "K19",
+      "repo": "addyosmani/agent-skills"
     },
     {
       "id": "WM-X0058",
@@ -1917,7 +1974,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K34"
+      "historic_numeric_cluster": "K34",
+      "repo": "addyosmani/agent-skills"
     },
     {
       "id": "WM-X0059",
@@ -1950,7 +2008,8 @@
       "method_evidence": [],
       "prior_observation": "agent context management rules hierarchy sessions token efficient loading",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K12"
+      "historic_numeric_cluster": "K12",
+      "repo": "addyosmani/agent-skills"
     },
     {
       "id": "WM-X0060",
@@ -1983,7 +2042,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K18"
+      "historic_numeric_cluster": "K18",
+      "repo": "addyosmani/agent-skills"
     },
     {
       "id": "WM-X0061",
@@ -2016,7 +2076,8 @@
       "method_evidence": [],
       "prior_observation": "adversarial review challenge assumptions independent reviewers falsification",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K34"
+      "historic_numeric_cluster": "K34",
+      "repo": "addyosmani/agent-skills"
     },
     {
       "id": "WM-X0062",
@@ -2049,7 +2110,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "addyosmani/agent-skills"
     },
     {
       "id": "WM-X0063",
@@ -2082,7 +2144,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "addyosmani/agent-skills"
     },
     {
       "id": "WM-X0064",
@@ -2115,7 +2178,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K33"
+      "historic_numeric_cluster": "K33",
+      "repo": "addyosmani/agent-skills"
     },
     {
       "id": "WM-X0065",
@@ -2148,7 +2212,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K34"
+      "historic_numeric_cluster": "K34",
+      "repo": "addyosmani/agent-skills"
     },
     {
       "id": "WM-X0066",
@@ -2181,7 +2246,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K34"
+      "historic_numeric_cluster": "K34",
+      "repo": "addyosmani/agent-skills"
     },
     {
       "id": "WM-X0067",
@@ -2214,7 +2280,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K04"
+      "historic_numeric_cluster": "K04",
+      "repo": "addyosmani/agent-skills"
     },
     {
       "id": "WM-X0068",
@@ -2247,7 +2314,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K43"
+      "historic_numeric_cluster": "K43",
+      "repo": "aleberriz/agent-skills"
     },
     {
       "id": "WM-X0069",
@@ -2280,7 +2348,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K43"
+      "historic_numeric_cluster": "K43",
+      "repo": "aleberriz/agent-skills"
     },
     {
       "id": "WM-X0070",
@@ -2313,7 +2382,8 @@
       "method_evidence": [],
       "prior_observation": "business prose plan audience structure editing word choice data storytelling",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K43"
+      "historic_numeric_cluster": "K43",
+      "repo": "aleberriz/agent-skills"
     },
     {
       "id": "WM-X0071",
@@ -2346,7 +2416,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K40"
+      "historic_numeric_cluster": "K40",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0072",
@@ -2379,7 +2450,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0073",
@@ -2412,7 +2484,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0074",
@@ -2445,7 +2518,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0075",
@@ -2478,7 +2552,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K28"
+      "historic_numeric_cluster": "K28",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0076",
@@ -2511,7 +2586,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0077",
@@ -2544,7 +2620,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0078",
@@ -2577,7 +2654,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K32"
+      "historic_numeric_cluster": "K32",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0079",
@@ -2610,7 +2688,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K32"
+      "historic_numeric_cluster": "K32",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0080",
@@ -2643,7 +2722,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K32"
+      "historic_numeric_cluster": "K32",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0081",
@@ -2676,7 +2756,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0082",
@@ -2709,7 +2790,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0083",
@@ -2742,7 +2824,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K46"
+      "historic_numeric_cluster": "K46",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0084",
@@ -2775,7 +2858,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0085",
@@ -2808,7 +2892,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0086",
@@ -2841,7 +2926,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0087",
@@ -2874,7 +2960,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0088",
@@ -2907,7 +2994,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K20"
+      "historic_numeric_cluster": "K20",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0089",
@@ -2940,7 +3028,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K16"
+      "historic_numeric_cluster": "K16",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0090",
@@ -2973,7 +3062,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K32"
+      "historic_numeric_cluster": "K32",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0091",
@@ -3006,7 +3096,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K32"
+      "historic_numeric_cluster": "K32",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0092",
@@ -3039,7 +3130,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K32"
+      "historic_numeric_cluster": "K32",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0093",
@@ -3072,7 +3164,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K32"
+      "historic_numeric_cluster": "K32",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0094",
@@ -3105,7 +3198,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K40"
+      "historic_numeric_cluster": "K40",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0095",
@@ -3138,7 +3232,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K40"
+      "historic_numeric_cluster": "K40",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0096",
@@ -3171,7 +3266,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K40"
+      "historic_numeric_cluster": "K40",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0097",
@@ -3204,7 +3300,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K40"
+      "historic_numeric_cluster": "K40",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0098",
@@ -3237,7 +3334,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K40"
+      "historic_numeric_cluster": "K40",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0099",
@@ -3270,7 +3368,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K21"
+      "historic_numeric_cluster": "K21",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0100",
@@ -3303,7 +3402,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K40"
+      "historic_numeric_cluster": "K40",
+      "repo": "alirezarezvani/claude-skills"
     },
     {
       "id": "WM-X0101",
@@ -3336,7 +3436,8 @@
       "method_evidence": [],
       "prior_observation": "formal research synthesis systematic review evidence screening risk bias reporting",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K03"
+      "historic_numeric_cluster": "K03",
+      "repo": "anayy09/claude-research-skills"
     },
     {
       "id": "WM-X0102",
@@ -3369,7 +3470,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "anayy09/claude-research-skills"
     },
     {
       "id": "WM-X0103",
@@ -3402,7 +3504,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "anayy09/claude-research-skills"
     },
     {
       "id": "WM-X0104",
@@ -3435,7 +3538,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "anayy09/claude-research-skills"
     },
     {
       "id": "WM-X0105",
@@ -3468,7 +3572,8 @@
       "method_evidence": [],
       "prior_observation": "rewrite ai patterns prose natural editing retain writer voice",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K42"
+      "historic_numeric_cluster": "K42",
+      "repo": "anayy09/claude-research-skills"
     },
     {
       "id": "WM-X0106",
@@ -3501,7 +3606,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K23"
+      "historic_numeric_cluster": "K23",
+      "repo": "anayy09/claude-research-skills"
     },
     {
       "id": "WM-X0107",
@@ -3534,7 +3640,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K28"
+      "historic_numeric_cluster": "K28",
+      "repo": "anayy09/claude-research-skills"
     },
     {
       "id": "WM-X0108",
@@ -3567,7 +3674,8 @@
       "method_evidence": [],
       "prior_observation": "claude md audit quality report targeted update project memory context",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K12"
+      "historic_numeric_cluster": "K12",
+      "repo": "anthropics/claude-plugins-official"
     },
     {
       "id": "WM-X0109",
@@ -3600,7 +3708,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "anthropics/claude-plugins-official"
     },
     {
       "id": "WM-X0110",
@@ -3633,7 +3742,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K34"
+      "historic_numeric_cluster": "K34",
+      "repo": "anthropics/claude-plugins-official"
     },
     {
       "id": "WM-X0111",
@@ -3666,7 +3776,8 @@
       "method_evidence": [],
       "prior_observation": "collaborative documentation context gathering refinement structure reader testing drafts proposals technical specifications",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K22"
+      "historic_numeric_cluster": "K22",
+      "repo": "anthropics/skills"
     },
     {
       "id": "WM-X0112",
@@ -3699,7 +3810,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K14"
+      "historic_numeric_cluster": "K14",
+      "repo": "anthropics/skills"
     },
     {
       "id": "WM-X0113",
@@ -3732,7 +3844,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K21"
+      "historic_numeric_cluster": "K21",
+      "repo": "anthropics/skills"
     },
     {
       "id": "WM-X0114",
@@ -3765,7 +3878,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "anthropics/skills"
     },
     {
       "id": "WM-X0115",
@@ -3798,7 +3912,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "anthropics/skills"
     },
     {
       "id": "WM-X0116",
@@ -3831,7 +3946,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K22"
+      "historic_numeric_cluster": "K22",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0117",
@@ -3864,7 +3980,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K07"
+      "historic_numeric_cluster": "K07",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0118",
@@ -3897,7 +4014,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0119",
@@ -3930,7 +4048,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K31"
+      "historic_numeric_cluster": "K31",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0120",
@@ -3963,7 +4082,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K43"
+      "historic_numeric_cluster": "K43",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0121",
@@ -3996,7 +4116,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K45"
+      "historic_numeric_cluster": "K45",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0122",
@@ -4029,7 +4150,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K00"
+      "historic_numeric_cluster": "K00",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0123",
@@ -4062,7 +4184,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K14"
+      "historic_numeric_cluster": "K14",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0124",
@@ -4095,7 +4218,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K05"
+      "historic_numeric_cluster": "K05",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0125",
@@ -4128,7 +4252,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0126",
@@ -4161,7 +4286,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K05"
+      "historic_numeric_cluster": "K05",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0127",
@@ -4194,7 +4320,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0128",
@@ -4227,7 +4354,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K45"
+      "historic_numeric_cluster": "K45",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0129",
@@ -4260,7 +4388,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K04"
+      "historic_numeric_cluster": "K04",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0130",
@@ -4293,7 +4422,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K16"
+      "historic_numeric_cluster": "K16",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0131",
@@ -4326,7 +4456,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0132",
@@ -4359,7 +4490,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0133",
@@ -4392,7 +4524,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K23"
+      "historic_numeric_cluster": "K23",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0134",
@@ -4425,7 +4558,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0135",
@@ -4458,7 +4592,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K05"
+      "historic_numeric_cluster": "K05",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0136",
@@ -4491,7 +4626,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K33"
+      "historic_numeric_cluster": "K33",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0137",
@@ -4524,7 +4660,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K21"
+      "historic_numeric_cluster": "K21",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0138",
@@ -4557,7 +4694,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K05"
+      "historic_numeric_cluster": "K05",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0139",
@@ -4590,7 +4728,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K05"
+      "historic_numeric_cluster": "K05",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0140",
@@ -4623,7 +4762,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K05"
+      "historic_numeric_cluster": "K05",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0141",
@@ -4656,7 +4796,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K05"
+      "historic_numeric_cluster": "K05",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0142",
@@ -4689,7 +4830,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K05"
+      "historic_numeric_cluster": "K05",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0143",
@@ -4722,7 +4864,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0144",
@@ -4755,7 +4898,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K05"
+      "historic_numeric_cluster": "K05",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0145",
@@ -4788,7 +4932,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0146",
@@ -4821,7 +4966,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K14"
+      "historic_numeric_cluster": "K14",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0147",
@@ -4854,7 +5000,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K31"
+      "historic_numeric_cluster": "K31",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0148",
@@ -4887,7 +5034,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K44"
+      "historic_numeric_cluster": "K44",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0149",
@@ -4920,7 +5068,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K26"
+      "historic_numeric_cluster": "K26",
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "id": "WM-X0150",
@@ -4953,7 +5102,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K12"
+      "historic_numeric_cluster": "K12",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0151",
@@ -4986,7 +5136,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0152",
@@ -5019,7 +5170,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K12"
+      "historic_numeric_cluster": "K12",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0153",
@@ -5052,7 +5204,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0154",
@@ -5085,7 +5238,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K03"
+      "historic_numeric_cluster": "K03",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0155",
@@ -5118,7 +5272,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K04"
+      "historic_numeric_cluster": "K04",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0156",
@@ -5151,7 +5306,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K17"
+      "historic_numeric_cluster": "K17",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0157",
@@ -5184,7 +5340,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0158",
@@ -5217,7 +5374,8 @@
       "method_evidence": [],
       "prior_observation": "sentence line edit story dialogue grammar rhythm author voice before after rationale",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K16"
+      "historic_numeric_cluster": "K16",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0159",
@@ -5250,7 +5408,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K22"
+      "historic_numeric_cluster": "K22",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0160",
@@ -5283,7 +5442,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0161",
@@ -5316,7 +5476,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0162",
@@ -5349,7 +5510,8 @@
       "method_evidence": [],
       "prior_observation": "simulated beta readers persona feedback first read narrative reader testing",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K21"
+      "historic_numeric_cluster": "K21",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0163",
@@ -5382,7 +5544,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K23"
+      "historic_numeric_cluster": "K23",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0164",
@@ -5415,7 +5578,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K00"
+      "historic_numeric_cluster": "K00",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0165",
@@ -5448,7 +5612,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K17"
+      "historic_numeric_cluster": "K17",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0166",
@@ -5481,7 +5646,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K00"
+      "historic_numeric_cluster": "K00",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0167",
@@ -5514,7 +5680,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K16"
+      "historic_numeric_cluster": "K16",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0168",
@@ -5547,7 +5714,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K16"
+      "historic_numeric_cluster": "K16",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0169",
@@ -5580,7 +5748,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K28"
+      "historic_numeric_cluster": "K28",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0170",
@@ -5613,7 +5782,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K17"
+      "historic_numeric_cluster": "K17",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0171",
@@ -5646,7 +5816,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K17"
+      "historic_numeric_cluster": "K17",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0172",
@@ -5679,7 +5850,8 @@
       "method_evidence": [],
       "prior_observation": "story style sheet house style consistency character voice lint prose",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K42"
+      "historic_numeric_cluster": "K42",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0173",
@@ -5712,7 +5884,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K14"
+      "historic_numeric_cluster": "K14",
+      "repo": "danjdewhurst/story-skills"
     },
     {
       "id": "WM-X0174",
@@ -5745,7 +5918,8 @@
       "method_evidence": [],
       "prior_observation": "developer blog writing technical article engineering narrative voice style",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K42"
+      "historic_numeric_cluster": "K42",
+      "repo": "getsentry/skills"
     },
     {
       "id": "WM-X0175",
@@ -5778,7 +5952,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K31"
+      "historic_numeric_cluster": "K31",
+      "repo": "getsentry/skills"
     },
     {
       "id": "WM-X0176",
@@ -5811,7 +5986,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K19"
+      "historic_numeric_cluster": "K19",
+      "repo": "getsentry/skills"
     },
     {
       "id": "WM-X0177",
@@ -5844,7 +6020,8 @@
       "method_evidence": [],
       "prior_observation": "collaborative documentation context gathering refinement structure reader testing drafts proposals technical specifications",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K22"
+      "historic_numeric_cluster": "K22",
+      "repo": "getsentry/skills"
     },
     {
       "id": "WM-X0178",
@@ -5877,7 +6054,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K16"
+      "historic_numeric_cluster": "K16",
+      "repo": "getsentry/skills"
     },
     {
       "id": "WM-X0179",
@@ -5910,7 +6088,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K03"
+      "historic_numeric_cluster": "K03",
+      "repo": "getsentry/skills"
     },
     {
       "id": "WM-X0180",
@@ -5943,7 +6122,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K10"
+      "historic_numeric_cluster": "K10",
+      "repo": "getsentry/skills"
     },
     {
       "id": "WM-X0181",
@@ -5976,7 +6156,8 @@
       "method_evidence": [],
       "prior_observation": "optimize prompts system developer user instructions templates evals reliability model portability",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K15"
+      "historic_numeric_cluster": "K15",
+      "repo": "getsentry/skills"
     },
     {
       "id": "WM-X0182",
@@ -6009,7 +6190,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K10"
+      "historic_numeric_cluster": "K10",
+      "repo": "getsentry/skills"
     },
     {
       "id": "WM-X0183",
@@ -6042,7 +6224,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K14"
+      "historic_numeric_cluster": "K14",
+      "repo": "getsentry/skills"
     },
     {
       "id": "WM-X0184",
@@ -6075,7 +6258,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K06"
+      "historic_numeric_cluster": "K06",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0185",
@@ -6108,7 +6292,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0186",
@@ -6141,7 +6326,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0187",
@@ -6174,7 +6360,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K15"
+      "historic_numeric_cluster": "K15",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0188",
@@ -6207,7 +6394,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K35"
+      "historic_numeric_cluster": "K35",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0189",
@@ -6240,7 +6428,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K31"
+      "historic_numeric_cluster": "K31",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0190",
@@ -6273,7 +6462,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K14"
+      "historic_numeric_cluster": "K14",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0191",
@@ -6306,7 +6496,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K15"
+      "historic_numeric_cluster": "K15",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0192",
@@ -6339,7 +6530,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K46"
+      "historic_numeric_cluster": "K46",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0193",
@@ -6372,7 +6564,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K46"
+      "historic_numeric_cluster": "K46",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0194",
@@ -6405,7 +6598,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K46"
+      "historic_numeric_cluster": "K46",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0195",
@@ -6438,7 +6632,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K14"
+      "historic_numeric_cluster": "K14",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0196",
@@ -6471,7 +6666,8 @@
       "method_evidence": [],
       "prior_observation": "evidence map citations support contradict qualify unknown claims audit sources",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K31"
+      "historic_numeric_cluster": "K31",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0197",
@@ -6504,7 +6700,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K19"
+      "historic_numeric_cluster": "K19",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0198",
@@ -6537,7 +6734,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K35"
+      "historic_numeric_cluster": "K35",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0199",
@@ -6570,7 +6768,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K37"
+      "historic_numeric_cluster": "K37",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0200",
@@ -6603,7 +6802,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K37"
+      "historic_numeric_cluster": "K37",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0201",
@@ -6636,7 +6836,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K37"
+      "historic_numeric_cluster": "K37",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0202",
@@ -6669,7 +6870,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K37"
+      "historic_numeric_cluster": "K37",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0203",
@@ -6702,7 +6904,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K20"
+      "historic_numeric_cluster": "K20",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0204",
@@ -6735,7 +6938,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K37"
+      "historic_numeric_cluster": "K37",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0205",
@@ -6768,7 +6972,8 @@
       "method_evidence": [],
       "prior_observation": "technical spec requirements constraints interfaces acceptance criteria",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K37"
+      "historic_numeric_cluster": "K37",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0206",
@@ -6801,7 +7006,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K37"
+      "historic_numeric_cluster": "K37",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0207",
@@ -6834,7 +7040,8 @@
       "method_evidence": [],
       "prior_observation": "documentation drift audit code assertions evidence report read only",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K18"
+      "historic_numeric_cluster": "K18",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0208",
@@ -6867,7 +7074,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K10"
+      "historic_numeric_cluster": "K10",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0209",
@@ -6900,7 +7108,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K15"
+      "historic_numeric_cluster": "K15",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0210",
@@ -6933,7 +7142,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K21"
+      "historic_numeric_cluster": "K21",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0211",
@@ -6966,7 +7176,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0212",
@@ -6999,7 +7210,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K13"
+      "historic_numeric_cluster": "K13",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0213",
@@ -7032,7 +7244,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K12"
+      "historic_numeric_cluster": "K12",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0214",
@@ -7065,7 +7278,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K46"
+      "historic_numeric_cluster": "K46",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0215",
@@ -7098,7 +7312,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K35"
+      "historic_numeric_cluster": "K35",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0216",
@@ -7131,7 +7346,8 @@
       "method_evidence": [],
       "prior_observation": "optimize prompts system developer user instructions templates evals reliability model portability",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K15"
+      "historic_numeric_cluster": "K15",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0217",
@@ -7164,7 +7380,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K35"
+      "historic_numeric_cluster": "K35",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0218",
@@ -7197,7 +7414,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K20"
+      "historic_numeric_cluster": "K20",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0219",
@@ -7230,7 +7448,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K03"
+      "historic_numeric_cluster": "K03",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0220",
@@ -7263,7 +7482,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K38"
+      "historic_numeric_cluster": "K38",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0221",
@@ -7296,7 +7516,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K20"
+      "historic_numeric_cluster": "K20",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0222",
@@ -7329,7 +7550,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K24"
+      "historic_numeric_cluster": "K24",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0223",
@@ -7362,7 +7584,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K15"
+      "historic_numeric_cluster": "K15",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0224",
@@ -7395,7 +7618,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K20"
+      "historic_numeric_cluster": "K20",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0225",
@@ -7428,7 +7652,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K37"
+      "historic_numeric_cluster": "K37",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0226",
@@ -7461,7 +7686,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K38"
+      "historic_numeric_cluster": "K38",
+      "repo": "github/awesome-copilot"
     },
     {
       "id": "WM-X0227",
@@ -7494,7 +7720,8 @@
       "method_evidence": [],
       "prior_observation": "agent prompts semantic compression high salience technical referents conceptual breadth methods choices task structure",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K38"
+      "historic_numeric_cluster": "K38",
+      "repo": "inanna-malick/agent-skills"
     },
     {
       "id": "WM-X0228",
@@ -7527,7 +7754,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K38"
+      "historic_numeric_cluster": "K38",
+      "repo": "inanna-malick/agent-skills"
     },
     {
       "id": "WM-X0229",
@@ -7560,7 +7788,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "kepano/obsidian-skills"
     },
     {
       "id": "WM-X0230",
@@ -7593,7 +7822,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K25"
+      "historic_numeric_cluster": "K25",
+      "repo": "kepano/obsidian-skills"
     },
     {
       "id": "WM-X0231",
@@ -7626,7 +7856,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K27"
+      "historic_numeric_cluster": "K27",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0232",
@@ -7659,7 +7890,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K45"
+      "historic_numeric_cluster": "K45",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0233",
@@ -7692,7 +7924,8 @@
       "method_evidence": [],
       "prior_observation": "audit claims public documentation accuracy code configuration contradictions drift",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K31"
+      "historic_numeric_cluster": "K31",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0234",
@@ -7725,7 +7958,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K18"
+      "historic_numeric_cluster": "K18",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0235",
@@ -7758,7 +7992,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K18"
+      "historic_numeric_cluster": "K18",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0236",
@@ -7791,7 +8026,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K19"
+      "historic_numeric_cluster": "K19",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0237",
@@ -7824,7 +8060,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K19"
+      "historic_numeric_cluster": "K19",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0238",
@@ -7857,7 +8094,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K19"
+      "historic_numeric_cluster": "K19",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0239",
@@ -7890,7 +8128,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K18"
+      "historic_numeric_cluster": "K18",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0240",
@@ -7923,7 +8162,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0241",
@@ -7956,7 +8196,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0242",
@@ -7989,7 +8230,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0243",
@@ -8022,7 +8264,8 @@
       "method_evidence": [],
       "prior_observation": "extract reusable personal writing voice profile from author evidence style and confidence",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K42"
+      "historic_numeric_cluster": "K42",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0244",
@@ -8055,7 +8298,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0245",
@@ -8088,7 +8332,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K22"
+      "historic_numeric_cluster": "K22",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0246",
@@ -8121,7 +8366,8 @@
       "method_evidence": [],
       "prior_observation": "markdown line edit concise accurate clear prose preserve facts tone",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K42"
+      "historic_numeric_cluster": "K42",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0247",
@@ -8154,7 +8400,8 @@
       "method_evidence": [],
       "prior_observation": "proofreading grammar logic flow suggestions no rewriting author wording",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K16"
+      "historic_numeric_cluster": "K16",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0248",
@@ -8187,7 +8434,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K04"
+      "historic_numeric_cluster": "K04",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0249",
@@ -8220,7 +8468,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K20"
+      "historic_numeric_cluster": "K20",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0250",
@@ -8253,7 +8502,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K31"
+      "historic_numeric_cluster": "K31",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0251",
@@ -8286,7 +8536,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K31"
+      "historic_numeric_cluster": "K31",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0252",
@@ -8319,7 +8570,8 @@
       "method_evidence": [],
       "prior_observation": "extract site writing style guide emulate brand voice apply to documents",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K42"
+      "historic_numeric_cluster": "K42",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0253",
@@ -8352,7 +8604,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K24"
+      "historic_numeric_cluster": "K24",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0254",
@@ -8385,7 +8638,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K04"
+      "historic_numeric_cluster": "K04",
+      "repo": "khasky/awesome-agent-skills"
     },
     {
       "id": "WM-X0255",
@@ -8418,7 +8672,8 @@
       "method_evidence": [],
       "prior_observation": "document drafting rewriting readable audience coauthor edit metadata",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K16"
+      "historic_numeric_cluster": "K16",
+      "repo": "matt-riley/agent-skills"
     },
     {
       "id": "WM-X0256",
@@ -8451,7 +8706,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K19"
+      "historic_numeric_cluster": "K19",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0257",
@@ -8484,7 +8740,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K18"
+      "historic_numeric_cluster": "K18",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0258",
@@ -8517,7 +8774,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K23"
+      "historic_numeric_cluster": "K23",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0259",
@@ -8550,7 +8808,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0260",
@@ -8583,7 +8842,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K09"
+      "historic_numeric_cluster": "K09",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0261",
@@ -8616,7 +8876,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K14"
+      "historic_numeric_cluster": "K14",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0262",
@@ -8649,7 +8910,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K36"
+      "historic_numeric_cluster": "K36",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0263",
@@ -8682,7 +8944,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0264",
@@ -8715,7 +8978,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0265",
@@ -8748,7 +9012,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0266",
@@ -8781,7 +9046,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K07"
+      "historic_numeric_cluster": "K07",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0267",
@@ -8814,7 +9080,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K07"
+      "historic_numeric_cluster": "K07",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0268",
@@ -8847,7 +9114,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K36"
+      "historic_numeric_cluster": "K36",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0269",
@@ -8880,7 +9148,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K07"
+      "historic_numeric_cluster": "K07",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0270",
@@ -8913,7 +9182,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K07"
+      "historic_numeric_cluster": "K07",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0271",
@@ -8946,7 +9216,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K07"
+      "historic_numeric_cluster": "K07",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0272",
@@ -8979,7 +9250,8 @@
       "method_evidence": [],
       "prior_observation": "agent instructions context pointers conditional retrieval structured doc steps completion criteria",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K07"
+      "historic_numeric_cluster": "K07",
+      "repo": "mattpocock/skills"
     },
     {
       "id": "WM-X0273",
@@ -9012,7 +9284,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K33"
+      "historic_numeric_cluster": "K33",
+      "repo": "mazrean/agent-skills"
     },
     {
       "id": "WM-X0274",
@@ -9045,7 +9318,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K09"
+      "historic_numeric_cluster": "K09",
+      "repo": "mazrean/agent-skills"
     },
     {
       "id": "WM-X0275",
@@ -9078,7 +9352,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "mazrean/agent-skills"
     },
     {
       "id": "WM-X0276",
@@ -9111,7 +9386,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "mazrean/agent-skills"
     },
     {
       "id": "WM-X0277",
@@ -9144,7 +9420,8 @@
       "method_evidence": [],
       "prior_observation": "project constitution claude md agents md always loaded context minimal instructions",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K12"
+      "historic_numeric_cluster": "K12",
+      "repo": "mazrean/agent-skills"
     },
     {
       "id": "WM-X0278",
@@ -9177,7 +9454,8 @@
       "method_evidence": [],
       "prior_observation": "research grounded technical architecture document component choices",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K08"
+      "historic_numeric_cluster": "K08",
+      "repo": "mazrean/agent-skills"
     },
     {
       "id": "WM-X0279",
@@ -9210,7 +9488,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "msimchowitz/writing-skills"
     },
     {
       "id": "WM-X0280",
@@ -9243,7 +9522,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K42"
+      "historic_numeric_cluster": "K42",
+      "repo": "msimchowitz/writing-skills"
     },
     {
       "id": "WM-X0281",
@@ -9276,7 +9556,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "msimchowitz/writing-skills"
     },
     {
       "id": "WM-X0282",
@@ -9309,7 +9590,8 @@
       "method_evidence": [],
       "prior_observation": "edit prose clarity direct voice remove ai patterns preserve meaning",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K42"
+      "historic_numeric_cluster": "K42",
+      "repo": "msimchowitz/writing-skills"
     },
     {
       "id": "WM-X0283",
@@ -9342,7 +9624,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K33"
+      "historic_numeric_cluster": "K33",
+      "repo": "msimchowitz/writing-skills"
     },
     {
       "id": "WM-X0284",
@@ -9375,7 +9658,8 @@
       "method_evidence": [],
       "prior_observation": "grant proposal rationale impact audience evidence",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "msimchowitz/writing-skills"
     },
     {
       "id": "WM-X0285",
@@ -9408,7 +9692,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "msimchowitz/writing-skills"
     },
     {
       "id": "WM-X0286",
@@ -9441,7 +9726,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K42"
+      "historic_numeric_cluster": "K42",
+      "repo": "msimchowitz/writing-skills"
     },
     {
       "id": "WM-X0287",
@@ -9474,7 +9760,8 @@
       "method_evidence": [],
       "prior_observation": "literature review source comparison synthesis gap citation",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K41"
+      "historic_numeric_cluster": "K41",
+      "repo": "msimchowitz/writing-skills"
     },
     {
       "id": "WM-X0288",
@@ -9507,7 +9794,8 @@
       "method_evidence": [],
       "prior_observation": "global draft editing headings title abstract paragraph transitions coherence argument",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "msimchowitz/writing-skills"
     },
     {
       "id": "WM-X0289",
@@ -9540,7 +9828,8 @@
       "method_evidence": [],
       "prior_observation": "research paper writing claim evidence sections arguments",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K11"
+      "historic_numeric_cluster": "K11",
+      "repo": "msimchowitz/writing-skills"
     },
     {
       "id": "WM-X0290",
@@ -9573,7 +9862,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K13"
+      "historic_numeric_cluster": "K13",
+      "repo": "msimchowitz/writing-skills"
     },
     {
       "id": "WM-X0291",
@@ -9606,7 +9896,8 @@
       "method_evidence": [],
       "prior_observation": "rewrite user prompt preserve style avoid invented context clarify missing details",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K15"
+      "historic_numeric_cluster": "K15",
+      "repo": "msimchowitz/writing-skills"
     },
     {
       "id": "WM-X0292",
@@ -9639,7 +9930,8 @@
       "method_evidence": [],
       "prior_observation": "reviewer response persuasive argument rebuttal revision evidence",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K00"
+      "historic_numeric_cluster": "K00",
+      "repo": "msimchowitz/writing-skills"
     },
     {
       "id": "WM-X0293",
@@ -9672,7 +9964,8 @@
       "method_evidence": [],
       "prior_observation": "sentence rhythm variation mechanics clauses prose cadence flow",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "msimchowitz/writing-skills"
     },
     {
       "id": "WM-X0294",
@@ -9705,7 +9998,8 @@
       "method_evidence": [],
       "prior_observation": "router writing editing specialized smallest relevant skill no unnecessary skills context loads",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "msimchowitz/writing-skills"
     },
     {
       "id": "WM-X0295",
@@ -9738,7 +10032,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K27"
+      "historic_numeric_cluster": "K27",
+      "repo": "nqmn/academic_writer"
     },
     {
       "id": "WM-X0296",
@@ -9771,7 +10066,8 @@
       "method_evidence": [],
       "prior_observation": "idea discovery exploration design dialogue alternate tradeoffs requirements",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K30"
+      "historic_numeric_cluster": "K30",
+      "repo": "obra/superpowers"
     },
     {
       "id": "WM-X0297",
@@ -9804,7 +10100,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K19"
+      "historic_numeric_cluster": "K19",
+      "repo": "obra/superpowers"
     },
     {
       "id": "WM-X0298",
@@ -9837,7 +10134,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K19"
+      "historic_numeric_cluster": "K19",
+      "repo": "obra/superpowers"
     },
     {
       "id": "WM-X0299",
@@ -9870,7 +10168,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K04"
+      "historic_numeric_cluster": "K04",
+      "repo": "obra/superpowers"
     },
     {
       "id": "WM-X0300",
@@ -9903,7 +10202,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K07"
+      "historic_numeric_cluster": "K07",
+      "repo": "obra/superpowers"
     },
     {
       "id": "WM-X0301",
@@ -9936,7 +10236,8 @@
       "method_evidence": [],
       "prior_observation": "implementation plans tasks steps test verification developer instructions",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "obra/superpowers"
     },
     {
       "id": "WM-X0302",
@@ -9969,7 +10270,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "obra/superpowers"
     },
     {
       "id": "WM-X0303",
@@ -10002,7 +10304,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K08"
+      "historic_numeric_cluster": "K08",
+      "repo": "riekelt/technical-writer"
     },
     {
       "id": "WM-X0304",
@@ -10035,7 +10338,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K08"
+      "historic_numeric_cluster": "K08",
+      "repo": "riekelt/technical-writer"
     },
     {
       "id": "WM-X0305",
@@ -10068,7 +10372,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K08"
+      "historic_numeric_cluster": "K08",
+      "repo": "riekelt/technical-writer"
     },
     {
       "id": "WM-X0306",
@@ -10101,7 +10406,8 @@
       "method_evidence": [],
       "prior_observation": "ADR architectural decisions log accepted superseded alternatives immutable decision record",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K08"
+      "historic_numeric_cluster": "K08",
+      "repo": "riekelt/technical-writer"
     },
     {
       "id": "WM-X0307",
@@ -10134,7 +10440,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K08"
+      "historic_numeric_cluster": "K08",
+      "repo": "riekelt/technical-writer"
     },
     {
       "id": "WM-X0308",
@@ -10167,7 +10474,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K08"
+      "historic_numeric_cluster": "K08",
+      "repo": "riekelt/technical-writer"
     },
     {
       "id": "WM-X0309",
@@ -10200,7 +10508,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K08"
+      "historic_numeric_cluster": "K08",
+      "repo": "riekelt/technical-writer"
     },
     {
       "id": "WM-X0310",
@@ -10233,7 +10542,8 @@
       "method_evidence": [],
       "prior_observation": "technical design proposal RFC document decisions rationale alternative benefit risk scope",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K08"
+      "historic_numeric_cluster": "K08",
+      "repo": "riekelt/technical-writer"
     },
     {
       "id": "WM-X0311",
@@ -10266,7 +10576,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K08"
+      "historic_numeric_cluster": "K08",
+      "repo": "riekelt/technical-writer"
     },
     {
       "id": "WM-X0312",
@@ -10299,7 +10610,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K08"
+      "historic_numeric_cluster": "K08",
+      "repo": "riekelt/technical-writer"
     },
     {
       "id": "WM-X0313",
@@ -10332,7 +10644,8 @@
       "method_evidence": [],
       "prior_observation": "operational instructions ordered steps safety rollback troubleshooting procedures",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K08"
+      "historic_numeric_cluster": "K08",
+      "repo": "riekelt/technical-writer"
     },
     {
       "id": "WM-X0314",
@@ -10365,7 +10678,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K15"
+      "historic_numeric_cluster": "K15",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0315",
@@ -10398,7 +10712,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K18"
+      "historic_numeric_cluster": "K18",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0316",
@@ -10431,7 +10746,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K19"
+      "historic_numeric_cluster": "K19",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0317",
@@ -10464,7 +10780,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K13"
+      "historic_numeric_cluster": "K13",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0318",
@@ -10497,7 +10814,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K13"
+      "historic_numeric_cluster": "K13",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0319",
@@ -10530,7 +10848,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K13"
+      "historic_numeric_cluster": "K13",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0320",
@@ -10563,7 +10882,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K13"
+      "historic_numeric_cluster": "K13",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0321",
@@ -10596,7 +10916,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K13"
+      "historic_numeric_cluster": "K13",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0322",
@@ -10629,7 +10950,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K12"
+      "historic_numeric_cluster": "K12",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0323",
@@ -10662,7 +10984,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K06"
+      "historic_numeric_cluster": "K06",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0324",
@@ -10695,7 +11018,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K03"
+      "historic_numeric_cluster": "K03",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0325",
@@ -10728,7 +11052,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0326",
@@ -10761,7 +11086,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K04"
+      "historic_numeric_cluster": "K04",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0327",
@@ -10794,7 +11120,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K05"
+      "historic_numeric_cluster": "K05",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0328",
@@ -10827,7 +11154,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K07"
+      "historic_numeric_cluster": "K07",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0329",
@@ -10860,7 +11188,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K06"
+      "historic_numeric_cluster": "K06",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0330",
@@ -10893,7 +11222,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K06"
+      "historic_numeric_cluster": "K06",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0331",
@@ -10926,7 +11256,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K06"
+      "historic_numeric_cluster": "K06",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0332",
@@ -10959,7 +11290,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K06"
+      "historic_numeric_cluster": "K06",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0333",
@@ -10992,7 +11324,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K06"
+      "historic_numeric_cluster": "K06",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0334",
@@ -11025,7 +11358,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K09"
+      "historic_numeric_cluster": "K09",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0335",
@@ -11058,7 +11392,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0336",
@@ -11091,7 +11426,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0337",
@@ -11124,7 +11460,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0338",
@@ -11157,7 +11494,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0339",
@@ -11190,7 +11528,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "seb1n/awesome-ai-agent-skills"
     },
     {
       "id": "WM-X0340",
@@ -11223,7 +11562,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K43"
+      "historic_numeric_cluster": "K43",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0341",
@@ -11256,7 +11596,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K23"
+      "historic_numeric_cluster": "K23",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0342",
@@ -11289,7 +11630,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K20"
+      "historic_numeric_cluster": "K20",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0343",
@@ -11322,7 +11664,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K33"
+      "historic_numeric_cluster": "K33",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0344",
@@ -11355,7 +11698,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K10"
+      "historic_numeric_cluster": "K10",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0345",
@@ -11388,7 +11732,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K10"
+      "historic_numeric_cluster": "K10",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0346",
@@ -11421,7 +11766,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0347",
@@ -11454,7 +11800,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0348",
@@ -11487,7 +11834,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0349",
@@ -11520,7 +11868,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0350",
@@ -11553,7 +11902,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0351",
@@ -11586,7 +11936,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K23"
+      "historic_numeric_cluster": "K23",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0352",
@@ -11619,7 +11970,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0353",
@@ -11652,7 +12004,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0354",
@@ -11685,7 +12038,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K10"
+      "historic_numeric_cluster": "K10",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0355",
@@ -11718,7 +12072,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K09"
+      "historic_numeric_cluster": "K09",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0356",
@@ -11751,7 +12106,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K29"
+      "historic_numeric_cluster": "K29",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0357",
@@ -11784,7 +12140,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K10"
+      "historic_numeric_cluster": "K10",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0358",
@@ -11817,7 +12174,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K21"
+      "historic_numeric_cluster": "K21",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0359",
@@ -11850,7 +12208,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K26"
+      "historic_numeric_cluster": "K26",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0360",
@@ -11883,7 +12242,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K10"
+      "historic_numeric_cluster": "K10",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0361",
@@ -11916,7 +12276,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K07"
+      "historic_numeric_cluster": "K07",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0362",
@@ -11949,7 +12310,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K26"
+      "historic_numeric_cluster": "K26",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0363",
@@ -11982,7 +12344,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K44"
+      "historic_numeric_cluster": "K44",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0364",
@@ -12015,7 +12378,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K10"
+      "historic_numeric_cluster": "K10",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0365",
@@ -12048,7 +12412,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K21"
+      "historic_numeric_cluster": "K21",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0366",
@@ -12081,7 +12446,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K38"
+      "historic_numeric_cluster": "K38",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0367",
@@ -12114,7 +12480,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K10"
+      "historic_numeric_cluster": "K10",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0368",
@@ -12147,7 +12514,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K26"
+      "historic_numeric_cluster": "K26",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0369",
@@ -12180,7 +12548,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K42"
+      "historic_numeric_cluster": "K42",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0370",
@@ -12213,7 +12582,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K42"
+      "historic_numeric_cluster": "K42",
+      "repo": "social-media-skills/skills"
     },
     {
       "id": "WM-X0371",
@@ -12246,7 +12616,8 @@
       "method_evidence": [],
       "prior_observation": "claude md agents md split monolith progressive disclosure remove contradictions agent instruction files",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K12"
+      "historic_numeric_cluster": "K12",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0372",
@@ -12279,7 +12650,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K36"
+      "historic_numeric_cluster": "K36",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0373",
@@ -12312,7 +12684,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K45"
+      "historic_numeric_cluster": "K45",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0374",
@@ -12345,7 +12718,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K40"
+      "historic_numeric_cluster": "K40",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0375",
@@ -12378,7 +12752,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K13"
+      "historic_numeric_cluster": "K13",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0376",
@@ -12411,7 +12786,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K04"
+      "historic_numeric_cluster": "K04",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0377",
@@ -12444,7 +12820,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K37"
+      "historic_numeric_cluster": "K37",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0378",
@@ -12477,7 +12854,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K39"
+      "historic_numeric_cluster": "K39",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0379",
@@ -12510,7 +12888,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K01"
+      "historic_numeric_cluster": "K01",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0380",
@@ -12543,7 +12922,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K25"
+      "historic_numeric_cluster": "K25",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0381",
@@ -12576,7 +12956,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K13"
+      "historic_numeric_cluster": "K13",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0382",
@@ -12609,7 +12990,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K24"
+      "historic_numeric_cluster": "K24",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0383",
@@ -12642,7 +13024,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K14"
+      "historic_numeric_cluster": "K14",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0384",
@@ -12675,7 +13058,8 @@
       "method_evidence": [],
       "prior_observation": "clarify requirements ambiguities user goals scope constraints criteria",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K37"
+      "historic_numeric_cluster": "K37",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0385",
@@ -12708,7 +13092,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K36"
+      "historic_numeric_cluster": "K36",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0386",
@@ -12741,7 +13126,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K16"
+      "historic_numeric_cluster": "K16",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0387",
@@ -12774,7 +13160,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K25"
+      "historic_numeric_cluster": "K25",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0388",
@@ -12807,7 +13194,8 @@
       "method_evidence": [],
       "prior_observation": "prose style clarity concision edit writing human readable",
       "prior_evidence_level": "body_read",
-      "historic_numeric_cluster": "K42"
+      "historic_numeric_cluster": "K42",
+      "repo": "softaworks/agent-toolkit"
     },
     {
       "id": "WM-X0389",
@@ -12840,7 +13228,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K27"
+      "historic_numeric_cluster": "K27",
+      "repo": "tizzy916/humanities-writing-companion"
     },
     {
       "id": "WM-X0390",
@@ -12873,7 +13262,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "vercel-labs/agent-skills"
     },
     {
       "id": "WM-X0391",
@@ -12906,7 +13296,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K28"
+      "historic_numeric_cluster": "K28",
+      "repo": "wshobson/agents"
     },
     {
       "id": "WM-X0392",
@@ -12939,7 +13330,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K13"
+      "historic_numeric_cluster": "K13",
+      "repo": "wshobson/agents"
     },
     {
       "id": "WM-X0393",
@@ -12972,7 +13364,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K02"
+      "historic_numeric_cluster": "K02",
+      "repo": "wshobson/agents"
     },
     {
       "id": "WM-X0394",
@@ -13005,7 +13398,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K43"
+      "historic_numeric_cluster": "K43",
+      "repo": "wshobson/agents"
     },
     {
       "id": "WM-X0395",
@@ -13038,7 +13432,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K44"
+      "historic_numeric_cluster": "K44",
+      "repo": "wshobson/agents"
     },
     {
       "id": "WM-X0396",
@@ -13071,7 +13466,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K45"
+      "historic_numeric_cluster": "K45",
+      "repo": "wshobson/agents"
     },
     {
       "id": "WM-X0397",
@@ -13104,7 +13500,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K09"
+      "historic_numeric_cluster": "K09",
+      "repo": "wshobson/agents"
     },
     {
       "id": "WM-X0398",
@@ -13137,7 +13534,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K09"
+      "historic_numeric_cluster": "K09",
+      "repo": "wshobson/agents"
     },
     {
       "id": "WM-X0399",
@@ -13170,7 +13568,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K18"
+      "historic_numeric_cluster": "K18",
+      "repo": "wshobson/agents"
     },
     {
       "id": "WM-X0400",
@@ -13203,7 +13602,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K18"
+      "historic_numeric_cluster": "K18",
+      "repo": "wshobson/agents"
     },
     {
       "id": "WM-X0401",
@@ -13236,7 +13636,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K00"
+      "historic_numeric_cluster": "K00",
+      "repo": "wshobson/agents"
     },
     {
       "id": "WM-X0402",
@@ -13269,7 +13670,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K36"
+      "historic_numeric_cluster": "K36",
+      "repo": "wshobson/agents"
     },
     {
       "id": "WM-X0403",
@@ -13302,7 +13704,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K00"
+      "historic_numeric_cluster": "K00",
+      "repo": "wshobson/agents"
     },
     {
       "id": "WM-X0404",
@@ -13335,7 +13738,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K15"
+      "historic_numeric_cluster": "K15",
+      "repo": "wshobson/agents"
     },
     {
       "id": "WM-X0405",
@@ -13368,7 +13772,8 @@
       "method_evidence": [],
       "prior_observation": null,
       "prior_evidence_level": "path_only",
-      "historic_numeric_cluster": "K14"
+      "historic_numeric_cluster": "K14",
+      "repo": "wshobson/agents"
     }
   ]
 }
