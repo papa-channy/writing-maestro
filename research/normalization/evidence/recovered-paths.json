@@ -1,0 +1,229 @@
+{
+  "records": [
+    {
+      "id": "WM-X0101",
+      "repo": "anayy09/claude-research-skills",
+      "path": "evidence-synthesis/SKILL.md",
+      "original_inventory_path": "skills/evidence-synthesis/SKILL.md",
+      "blob_sha": "41ef2ebbfea1bab57cbdfc2cdeef30ecfe4b791a",
+      "status": "BODY_EXTRACTED_PATH_CORRECTED",
+      "description": ">- Plan, run, appraise, and report a formal evidence synthesis as a research design: systematic, scoping, rapid, umbrella, living, diagnostic accuracy, and prediction-model reviews, with a registered protocol, concept-block search construction and PRISMA-S reporting, a screening log with a reconciling PRISMA 2020 flow diagram, risk-of-bias tool selection (RoB 2, ROBINS-I, QUADAS-2, PROBAST+AI, AMSTAR 2, ROBIS), synthesis with or without meta-analysis, GRADE certainty rating, and RAISE-compliant disclosure of AI use. Use when the deliverable is a review with a protocol, a screening log, appraisal, and a reporting guideline: \"systematic review\", \"scoping review\", \"meta-analysis\", \"PRISMA flow diagram\", \"risk of bias\", \"GRADE\", \"how do I report the search\", or a reviewer's methods objection about a review. Do not use for a related-work section, a literature sweep, a reference audit, or a reference diet; those are investigating-sources, which owns the citation checker.",
+      "headings": [
+        {
+          "line": 29,
+          "text": "# Evidence Synthesis"
+        },
+        {
+          "line": 50,
+          "text": "## Four rules with mechanisms behind them"
+        },
+        {
+          "line": 90,
+          "text": "## Step 1: choose the review type before anything else"
+        },
+        {
+          "line": 109,
+          "text": "## Step 2: protocol first"
+        },
+        {
+          "line": 121,
+          "text": "## Step 3: build and report the search"
+        },
+        {
+          "line": 163,
+          "text": "## Step 4: screen with a log"
+        },
+        {
+          "line": 185,
+          "text": "## Step 5: appraise with the right instrument"
+        },
+        {
+          "line": 206,
+          "text": "## Step 6: synthesize, and do not pool by reflex"
+        },
+        {
+          "line": 219,
+          "text": "## Step 7: rate certainty with GRADE, not with a pyramid"
+        },
+        {
+          "line": 231,
+          "text": "## Step 8: verify, then report"
+        },
+        {
+          "line": 257,
+          "text": "## Anti-patterns"
+        },
+        {
+          "line": 276,
+          "text": "## What this skill will not do"
+        },
+        {
+          "line": 285,
+          "text": "## Files"
+        },
+        {
+          "line": 303,
+          "text": "## Key sources"
+        },
+        {
+          "line": 314,
+          "text": "## Loading discipline"
+        }
+      ],
+      "steps": [],
+      "cues": [],
+      "lines": 322
+    },
+    {
+      "id": "WM-X0105",
+      "repo": "anayy09/claude-research-skills",
+      "path": "prose-naturalizer/SKILL.md",
+      "original_inventory_path": "skills/prose-naturalizer/SKILL.md",
+      "blob_sha": "386697340fb648514ef5ee55377bcfae8c99ff76",
+      "status": "BODY_EXTRACTED_PATH_CORRECTED",
+      "description": "| Rewrite AI-sounding text so it reads like the writer without changing what it says. Use when editing or reviewing prose for AI tells: not-X-but-Y contrasts, one-line closers, staged openers, forced triads, dashes everywhere, inflated claims, sales language, stock AI words, bold labels, or filler. Based on Wikipedia's \"Signs of AI writing.\" For blog posts, essays, documentation, README files, emails, and other non-academic prose. Do not load it for a research manuscript, thesis, or response letter: manuscript-writing carries the manuscript subset of these patterns and its own lint, and loading both produces conflicting instructions.",
+      "headings": [
+        {
+          "line": 22,
+          "text": "# Prose Naturalizer: Remove AI Writing Patterns"
+        },
+        {
+          "line": 26,
+          "text": "## Why AI text sounds the way it does"
+        },
+        {
+          "line": 40,
+          "text": "## How to work"
+        },
+        {
+          "line": 49,
+          "text": "### Voice"
+        },
+        {
+          "line": 55,
+          "text": "### What to return"
+        },
+        {
+          "line": 63,
+          "text": "## A. Staging instead of stating"
+        },
+        {
+          "line": 67,
+          "text": "### 1. Not X but Y"
+        },
+        {
+          "line": 84,
+          "text": "### 2. One-line closers and dramatic fragments"
+        },
+        {
+          "line": 105,
+          "text": "### 3. Sayings that sound deep"
+        },
+        {
+          "line": 118,
+          "text": "### 4. Staged run-up before the point"
+        },
+        {
+          "line": 131,
+          "text": "### 5. Arguing with no one"
+        },
+        {
+          "line": 144,
+          "text": "## B. Rhythm by rule"
+        },
+        {
+          "line": 148,
+          "text": "### 6. Forced triads"
+        },
+        {
+          "line": 160,
+          "text": "### 7. Repeated sentence openings"
+        },
+        {
+          "line": 168,
+          "text": "### 8. Dashes as the universal connector"
+        },
+        {
+          "line": 177,
+          "text": "### 9. Stacked qualifiers"
+        },
+        {
+          "line": 186,
+          "text": "### 10. Hyphenated pairs everywhere"
+        },
+        {
+          "line": 195,
+          "text": "### 11. Passive voice and missing subjects"
+        },
+        {
+          "line": 203,
+          "text": "## C. Inflation and borrowed authority"
+        },
+        {
+          "line": 207,
+          "text": "### 12. Overused AI words"
+        },
+        {
+          "line": 216,
+          "text": "### 13. Inflated significance"
+        },
+        {
+          "line": 233,
+          "text": "### 14. Vague connection or association"
+        },
+        {
+          "line": 242,
+          "text": "### 15. Shallow -ing riders"
+        },
+        {
+          "line": 251,
+          "text": "### 16. Sales language"
+        },
+        {
+          "line": 260,
+          "text": "### 17. Borrowed authority"
+        },
+        {
+          "line": 273,
+          "text": "### 18. Avoiding is, are, and has"
+        },
+        {
+          "line": 282,
+          "text": "## D. Formatting by rule"
+        },
+        {
+          "line": 286,
+          "text": "### 19. Bold as decoration"
+        },
+        {
+          "line": 300,
+          "text": "### 20. Decorative headings"
+        },
+        {
+          "line": 313,
+          "text": "### 21. Curly quotation marks"
+        }
+      ],
+      "steps": [
+        {
+          "line": 44,
+          "text": "1. **Mark the tells.** Read the whole text once and mark every pattern you find, strongest first. Look at paragraph shape as well as sentences. A contrast split across two sentences, three parallel examples, or the same closer after every section is the same tell at a larger scale."
+        },
+        {
+          "line": 45,
+          "text": "2. **Draft the rewrite.** Keep every supported claim. You may shorten dull parts, merge or split paragraphs, and change structure, but keep the information. Do not add a fact, name, number, date, quote, or citation unless it comes from the source or the user. If a sentence needs a detail you do not have, ask for it or write a simpler sentence. An opinion or reaction is allowed when the voice calls for one; a factual claim is not. Fiction is exempt because invented detail is the task."
+        },
+        {
+          "line": 46,
+          "text": "3. **Check the draft.** Read it aloud. Ask what still sounds AI-generated. Ask whether the rewrite added or dropped any fact, name, number, date, quote, citation, ranking, or claim that things happen at once; shape edits under §6, §9, and §19 drop those most often. Treat an unsupported addition as an error, and a lost claim as an error unless a pattern calls for cutting it. Then search for the five tells that most often survive a rewrite: a not-X-but-Y contrast, a one-line closer, a dash, a triad, a bold label."
+        },
+        {
+          "line": 47,
+          "text": "4. **Write the final version.** State each point naturally instead of patching flagged phrases one at a time. If a sentence stays awkward, rewrite the paragraph around its main point. Vary sentence length; real writing alternates short and long."
+        }
+      ],
+      "cues": [],
+      "lines": 393
+    }
+  ]
+}
