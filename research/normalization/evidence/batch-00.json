@@ -1,79 +1,1641 @@
 {
   "batch": 0,
-  "extraction_version": "0.1.0",
-  "as_of": "2026-10-28",
+  "extraction_version": "0.1.1",
   "records": [
     {
       "id": "WM-X0003",
+      "repo": "K-Dense-AI/scientific-agent-skills",
       "path": "skills/citation-management/SKILL.md",
-      "status": "FETCH_FAILED",
-      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+      "blob_sha": "b63b589d4d423969a63e032e62c2b74969147c1c",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "citation-management",
+      "description": "Comprehensive citation management for academic research. Search OpenAlex, PubMed, and Google Scholar for papers, extract accurate metadata, validate citations, and generate properly formatted BibTeX entries. This skill should be used when you need to find papers, verify citation information, convert DOIs to BibTeX, or ensure reference accuracy in scientific writing.",
+      "headings": [
+        {
+          "line": 54,
+          "text": "## Core Workflow"
+        },
+        {
+          "line": 60,
+          "text": "### Phase 1: Paper Discovery and Search"
+        },
+        {
+          "line": 83,
+          "text": "### Phase 2: Metadata Extraction"
+        },
+        {
+          "line": 98,
+          "text": "### Phase 2.5: Metadata Enrichment via Web Search (MANDATORY)"
+        },
+        {
+          "line": 125,
+          "text": "### Phase 3: BibTeX Formatting"
+        },
+        {
+          "line": 139,
+          "text": "### Phase 4: Citation Validation"
+        },
+        {
+          "line": 158,
+          "text": "### Phase 5: Integration with Writing Workflow"
+        },
+        {
+          "line": 215,
+          "text": "### Literature Review Skill"
+        }
+      ],
+      "steps": [
+        {
+          "line": 182,
+          "text": "1. **Single source bias**: Only using one database"
+        },
+        {
+          "line": 183,
+          "text": "- **Solution**: Search at least OpenAlex and PubMed, then merge with"
+        },
+        {
+          "line": 186,
+          "text": "2. **Accepting metadata blindly**: Not verifying extracted information"
+        },
+        {
+          "line": 187,
+          "text": "- **Solution**: Spot-check extracted metadata against original sources"
+        },
+        {
+          "line": 189,
+          "text": "3. **Ignoring DOI errors**: Broken or incorrect DOIs in bibliography"
+        },
+        {
+          "line": 190,
+          "text": "- **Solution**: Run validation before final submission"
+        },
+        {
+          "line": 192,
+          "text": "4. **Inconsistent formatting**: Mixed citation key styles, formatting"
+        },
+        {
+          "line": 193,
+          "text": "- **Solution**: Use format_bibtex.py to standardize"
+        },
+        {
+          "line": 195,
+          "text": "5. **Duplicate entries**: Same paper cited multiple times with different keys"
+        },
+        {
+          "line": 196,
+          "text": "- **Solution**: Use duplicate detection in validation"
+        },
+        {
+          "line": 198,
+          "text": "6. **Missing required fields**: Incomplete BibTeX entries (volume, pages, DOI missing)"
+        },
+        {
+          "line": 199,
+          "text": "- **Solution**: Check the publisher record, distinguish missing from not applicable or not yet assigned, and log unresolved fields without inventing metadata."
+        },
+        {
+          "line": 201,
+          "text": "7. **Outdated preprints**: Citing preprint when published version exists"
+        },
+        {
+          "line": 202,
+          "text": "- **Solution**: Check if preprints have been published, update to journal version"
+        },
+        {
+          "line": 204,
+          "text": "8. **Special character issues**: Broken LaTeX compilation due to characters"
+        },
+        {
+          "line": 205,
+          "text": "- **Solution**: Use proper escaping or Unicode in BibTeX"
+        },
+        {
+          "line": 207,
+          "text": "9. **No validation before submission**: Submitting with citation errors"
+        },
+        {
+          "line": 208,
+          "text": "- **Solution**: Always run validation as final check"
+        },
+        {
+          "line": 210,
+          "text": "10. **Manual BibTeX entry**: Typing entries by hand"
+        },
+        {
+          "line": 211,
+          "text": "- **Solution**: Always extract from metadata sources using scripts"
+        },
+        {
+          "line": 219,
+          "text": "- **Literature Review**: Multi-database systematic search and synthesis"
+        },
+        {
+          "line": 220,
+          "text": "- **Citation Management**: Metadata extraction and validation"
+        }
+      ],
+      "cues": [
+        {
+          "line": 67,
+          "text": "python scripts/search_openalex.py \"CRISPR gene editing\" --limit 50 --output results.json"
+        },
+        {
+          "line": 70,
+          "text": "python scripts/search_pubmed.py \"Alzheimer's disease treatment\" --limit 100 --output alz.json"
+        },
+        {
+          "line": 73,
+          "text": "python scripts/search_google_scholar.py \"CRISPR gene editing\" --limit 50 --output scholar.json"
+        },
+        {
+          "line": 78,
+          "text": "enough that it should be a supplement rather than a dependency."
+        },
+        {
+          "line": 91,
+          "text": "python scripts/extract_metadata.py --input identifiers.txt --output citations.bib"
+        },
+        {
+          "line": 131,
+          "text": "python scripts/format_bibtex.py references.bib --output clean.bib --deduplicate"
+        },
+        {
+          "line": 132,
+          "text": "python scripts/format_bibtex.py references.bib --output clean.bib --rekey --deduplicate"
+        },
+        {
+          "line": 135,
+          "text": "Writing is opt-in: without `--output` (or `--in-place`) the result goes to"
+        },
+        {
+          "line": 136,
+          "text": "stdout and the input file is left alone. Use `--rekey` when merging results"
+        }
+      ],
+      "lines": 360
     },
     {
       "id": "WM-X0008",
+      "repo": "K-Dense-AI/scientific-agent-skills",
       "path": "skills/literature-review/SKILL.md",
-      "status": "FETCH_FAILED",
-      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+      "blob_sha": "5178dce6419cee412155e7b9dd523d5b2ef703f5",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "literature-review",
+      "description": "Conducts systematic, scoping, and narrative literature reviews using PubMed, arXiv, bioRxiv, Semantic Scholar, and other appropriate sources. Use for research synthesis, reproducible literature searches, screening, citation checking, or preparing Markdown and PDF reviews. Tracks search coverage, records versus studies, and evidence limitations; supports meta-analysis planning but does not supply a meta-analysis engine.",
+      "headings": [
+        {
+          "line": 19,
+          "text": "# Literature Review"
+        },
+        {
+          "line": 58,
+          "text": "## Core Workflow"
+        },
+        {
+          "line": 204,
+          "text": "## Verification scope"
+        }
+      ],
+      "steps": [
+        {
+          "line": 63,
+          "text": "1. **Planning and scoping** — the question, inclusion and exclusion criteria, and scope."
+        },
+        {
+          "line": 64,
+          "text": "2. **Systematic literature search** — multi-database searching with recorded queries."
+        },
+        {
+          "line": 65,
+          "text": "3. **Screening and selection** — title/abstract then full-text screening with counts kept"
+        },
+        {
+          "line": 67,
+          "text": "4. **Data extraction and quality assessment** — structured extraction and risk-of-bias"
+        },
+        {
+          "line": 69,
+          "text": "5. **Synthesis and analysis** — thematic or quantitative synthesis across studies."
+        },
+        {
+          "line": 70,
+          "text": "6. **Citation verification** — every citation checked against the actual source."
+        },
+        {
+          "line": 71,
+          "text": "7. **Document generation** — assembling the review with a complete bibliography."
+        },
+        {
+          "line": 81,
+          "text": "1. **Pilot the question**: Optionally use `parallel-cli search` for scoping, then test database queries against known eligible reports"
+        },
+        {
+          "line": 82,
+          "text": "2. **Choose complementary sources**: Justify database and registry coverage for the question; no fixed number of databases guarantees completeness"
+        },
+        {
+          "line": 83,
+          "text": "3. **Include preprint servers**: Captures latest unpublished findings"
+        },
+        {
+          "line": 84,
+          "text": "4. **Document everything**: Search strings, dates, result counts for reproducibility — save all parallel-cli output to `sources/`"
+        },
+        {
+          "line": 85,
+          "text": "5. **Test and refine**: Run pilot searches, review results, adjust search terms"
+        },
+        {
+          "line": 86,
+          "text": "6. **Preserve all eligible records**: Citation counts can order exploratory reading but must not determine eligibility or replace risk-of-bias assessment"
+        },
+        {
+          "line": 87,
+          "text": "7. **Verify retrieved content**: Extraction can be incomplete; obtain the actual full report, or record it as not retrieved"
+        },
+        {
+          "line": 90,
+          "text": "1. **Deduplicate records, then link reports**: DOI/title deduplication removes repeated search hits; it does not identify every paper from the same study. Link preprints, journal articles, protocols, and follow"
+        },
+        {
+          "line": 91,
+          "text": "2. **Keep a study-to-report map**: Preserve each source and explain which report supplies each outcome; do not count overlapping participants twice in a meta-analysis."
+        },
+        {
+          "line": 92,
+          "text": "3. **Reconcile PRISMA counts**: Track records screened, reports sought/not retrieved/assessed, reports excluded with reasons, and included studies separately. Report counts can exceed study counts. See the [Coc"
+        },
+        {
+          "line": 95,
+          "text": "1. **Use clear criteria**: Document inclusion/exclusion criteria before screening"
+        },
+        {
+          "line": 96,
+          "text": "2. **Screen systematically**: Title → Abstract → Full text"
+        },
+        {
+          "line": 97,
+          "text": "3. **Document exclusions**: Record reasons for excluding studies"
+        },
+        {
+          "line": 98,
+          "text": "4. **Use independent eligibility decisions**: For systematic reviews, use two reviewers for final full-text eligibility and document disagreement resolution; disclose any single-reviewer limitation"
+        },
+        {
+          "line": 101,
+          "text": "1. **Organize thematically**: Group by themes, NOT by individual studies"
+        }
+      ],
+      "cues": [
+        {
+          "line": 23,
+          "text": "Conduct systematic, comprehensive literature reviews following rigorous academic methodology. Search multiple literature databases, synthesize findings thematically, verify all citations for accuracy, and gener"
+        },
+        {
+          "line": 51,
+          "text": "`google/gemini-3.7-flash`. The output path must end in `.png`. Inspect labels,"
+        },
+        {
+          "line": 84,
+          "text": "4. **Document everything**: Search strings, dates, result counts for reproducibility — save all parallel-cli output to `sources/`"
+        },
+        {
+          "line": 86,
+          "text": "6. **Preserve all eligible records**: Citation counts can order exploratory reading but must not determine eligibility or replace risk-of-bias assessment"
+        },
+        {
+          "line": 90,
+          "text": "1. **Deduplicate records, then link reports**: DOI/title deduplication removes repeated search hits; it does not identify every paper from the same study. Link preprints, journal articles, protocols, and follow"
+        }
+      ],
+      "lines": 230
     },
     {
       "id": "WM-X0015",
+      "repo": "K-Dense-AI/scientific-agent-skills",
       "path": "skills/peer-review/SKILL.md",
-      "status": "FETCH_FAILED",
-      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+      "blob_sha": "d4f3c3e3b5c19fec2518d569ded7e37ac96a964b",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "peer-review",
+      "description": "Prepares evidence-bounded, constructive peer-review drafts and structured manuscript assessments. Supports authorized review of scientific manuscripts, protocols, preprints, or research proposals; reporting-guideline selection; claim–evidence checks; methods, statistics, reproducibility, ethics, figure/table, and citation critique; or revision-response planning.",
+      "headings": [
+        {
+          "line": 12,
+          "text": "# Peer Review"
+        },
+        {
+          "line": 16,
+          "text": "## Mandatory safety boundary"
+        },
+        {
+          "line": 57,
+          "text": "## Intake gate"
+        },
+        {
+          "line": 82,
+          "text": "## Review workflow"
+        },
+        {
+          "line": 151,
+          "text": "### 5. Review methods and statistics"
+        },
+        {
+          "line": 183,
+          "text": "### 6. Review reproducibility and transparency"
+        },
+        {
+          "line": 196,
+          "text": "### 7. Review ethics and integrity"
+        },
+        {
+          "line": 202,
+          "text": "### 8. Review figures, tables, and citations"
+        },
+        {
+          "line": 221,
+          "text": "### 9. Draft actionable comments"
+        }
+      ],
+      "steps": [
+        {
+          "line": 20,
+          "text": "1. Confirm the user is authorized by the publisher, editor, author, or other material owner."
+        },
+        {
+          "line": 21,
+          "text": "2. Check the target venue’s review, confidentiality, co-review, retention, and AI/tool policies."
+        },
+        {
+          "line": 22,
+          "text": "3. Record conflicts, competence limits, requested scope, and specialist-review needs."
+        },
+        {
+          "line": 23,
+          "text": "4. Default to local-only processing."
+        },
+        {
+          "line": 155,
+          "text": "1. Question and target quantity"
+        },
+        {
+          "line": 156,
+          "text": "2. Design and unit of inference"
+        },
+        {
+          "line": 157,
+          "text": "3. Sampling, allocation, controls, masking, and timing"
+        },
+        {
+          "line": 158,
+          "text": "4. Sample-size or precision rationale"
+        },
+        {
+          "line": 159,
+          "text": "5. Inclusion, exclusion, attrition, and missingness"
+        },
+        {
+          "line": 160,
+          "text": "6. Analysis–design alignment and assumptions"
+        },
+        {
+          "line": 161,
+          "text": "7. Multiplicity and prespecification"
+        },
+        {
+          "line": 162,
+          "text": "8. Effect estimates, uncertainty, denominators, and harms"
+        },
+        {
+          "line": 163,
+          "text": "9. Interpretation, causality, and generalizability"
+        }
+      ],
+      "cues": [
+        {
+          "line": 25,
+          "text": "If authorization is unclear, do not inspect or quote the manuscript. Clarify only the unresolved authorization; existing documented authorization need not be requested again. Until resolved, use only the intake"
+        },
+        {
+          "line": 27,
+          "text": "Running a bundled CLI locally does not make the surrounding assistant session local. Treat any manuscript content read into a hosted assistant as external processing when evaluating venue policy and authorizati"
+        },
+        {
+          "line": 41,
+          "text": "Delete local copies and derivatives when policy requires; otherwise retain only what the controlling policy authorizes. Record deletion or retention without copying confidential content into the record."
+        },
+        {
+          "line": 59,
+          "text": "Copy and complete `assets/review_intake_template.json`, then run:"
+        },
+        {
+          "line": 62,
+          "text": "python3 scripts/validate_review_intake.py completed-intake.json"
+        },
+        {
+          "line": 169,
+          "text": "alone does not establish equivalence; an equivalence or non-inferiority claim"
+        },
+        {
+          "line": 194,
+          "text": "Do not claim reproduction unless authorized inputs were actually run with documented commands, environment, and outputs."
+        },
+        {
+          "line": 198,
+          "text": "Check applicable approvals, consent, welfare, privacy, community governance, funding, sponsor role, conflicts, authorship/contribution, registration, biosafety, and dual-use concerns."
+        },
+        {
+          "line": 219,
+          "text": "Start from `assets/citation_references_template.csv`. This checks a restricted, single-line bracketed citation subset and identifier format only; it does not implement the complete Pandoc citation grammar or ve"
+        },
+        {
+          "line": 223,
+          "text": "Generate a private scaffold only after intake passes:"
+        },
+        {
+          "line": 227,
+          "text": "completed-intake.json \\"
+        },
+        {
+          "line": 279,
+          "text": "- `scripts/validate_review_intake.py` — scope, authorization, conflicts, policy, handling"
+        }
+      ],
+      "lines": 318
     },
     {
       "id": "WM-X0022",
+      "repo": "K-Dense-AI/scientific-agent-skills",
       "path": "skills/scientific-writing/SKILL.md",
-      "status": "FETCH_FAILED",
-      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+      "blob_sha": "446993fcd4716ae54ab74bc2a91e3bc5af5235c7",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "scientific-writing",
+      "description": "Drafts, revises, and audits scientific manuscripts or reports with explicit evidence provenance, reporting-guideline coverage, authorship accountability, confidentiality controls, and local consistency checks. Use for manuscript sections, references, declarations, tables, figures, or submission preparation when scientific accuracy and traceability matter.",
+      "headings": [
+        {
+          "line": 75,
+          "text": "## Intake"
+        },
+        {
+          "line": 92,
+          "text": "## Workflow"
+        },
+        {
+          "line": 161,
+          "text": "### 5. Draft without adding facts"
+        },
+        {
+          "line": 177,
+          "text": "### 6. Reconcile methods and results"
+        },
+        {
+          "line": 220,
+          "text": "### 9. Review declarations and open-science statements"
+        },
+        {
+          "line": 285,
+          "text": "## Revision and peer review"
+        }
+      ],
+      "steps": [
+        {
+          "line": 30,
+          "text": "1. explicit authorization from a person or body empowered to grant it; and"
+        },
+        {
+          "line": 31,
+          "text": "2. a documented review of journal, institutional, funder, consent, ethics, contractual,"
+        },
+        {
+          "line": 292,
+          "text": "1. record the comment without exposing it outside the approved boundary;"
+        },
+        {
+          "line": 293,
+          "text": "2. classify it as editorial, scientific, statistical, policy, or unresolved;"
+        },
+        {
+          "line": 294,
+          "text": "3. identify affected claims, evidence, methods, results, and displays;"
+        },
+        {
+          "line": 295,
+          "text": "4. revise the registries before prose when facts change;"
+        },
+        {
+          "line": 296,
+          "text": "5. re-run every affected audit;"
+        },
+        {
+          "line": 297,
+          "text": "6. draft a response that states what changed and where;"
+        },
+        {
+          "line": 298,
+          "text": "7. obtain human approval."
+        }
+      ],
+      "cues": [
+        {
+          "line": 17,
+          "text": "Keep drafting, evidence verification, and submission approval as separate stages."
+        },
+        {
+          "line": 19,
+          "text": "The accountable human authors control scientific decisions and final approval. AI is"
+        },
+        {
+          "line": 35,
+          "text": "metadata needed. De-identification requires expert review; removing obvious names is"
+        },
+        {
+          "line": 47,
+          "text": "- registrations, approvals, consent, ethics statements, participant details, or dates;"
+        },
+        {
+          "line": 69,
+          "text": "- For binary trial outcomes, report group event counts/denominators plus both absolute and relative effects with uncertainty when the reporting guideline requires them. Distinguish risk difference (percentage p"
+        },
+        {
+          "line": 85,
+          "text": "- authorship, CRediT, declarations, and approval records;"
+        },
+        {
+          "line": 100,
+          "text": "--output-dir ./draft-workspace \\"
+        },
+        {
+          "line": 106,
+          "text": "The generator never overwrites files. Its output is explicitly not submission-ready and"
+        },
+        {
+          "line": 123,
+          "text": "The selector is non-scoring. It does not certify quality, compliance, completeness, or"
+        },
+        {
+          "line": 205,
+          "text": "contribution metadata; CRediT does not itself define authorship [SW-S19]."
+        },
+        {
+          "line": 216,
+          "text": "record; it does not implement every venue policy. Do not generate a disclosure from"
+        },
+        {
+          "line": 238,
+          "text": "Figures and tables are optional and provenance-bound. This skill does not generate"
+        },
+        {
+          "line": 298,
+          "text": "7. obtain human approval."
+        },
+        {
+          "line": 348,
+          "text": "All scripts are local, deterministic, bounded, dependency-free, and network-free. See"
+        }
+      ],
+      "lines": 382
     },
     {
       "id": "WM-X0030",
+      "repo": "KalarisLabs/research-agent-skills",
       "path": "skills/citation-verification/SKILL.md",
-      "status": "FETCH_FAILED",
-      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+      "blob_sha": "e5ba6b3d305658cd8bcf018dc64e5673ca695e65",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "citation-verification",
+      "description": "Verify that every reference in a manuscript really exists and matches its metadata, catching hallucinated, corrupted or mismatched citations before submission. Use when checking a .bib file or reference list, after an AI assistant drafted citations, when a DOI may point to the wrong paper, when adding missing DOIs, or before camera-ready. Queries Crossref, OpenAlex and arXiv; zero dependencies.",
+      "headings": [
+        {
+          "line": 14,
+          "text": "# Citation Verification"
+        },
+        {
+          "line": 33,
+          "text": "## Workflow"
+        }
+      ],
+      "steps": [
+        {
+          "line": 24,
+          "text": "1. **Never write a reference from memory.** Every entry must come from a"
+        },
+        {
+          "line": 26,
+          "text": "2. **A reference is verified only when its identifier resolves to a record whose"
+        },
+        {
+          "line": 28,
+          "text": "3. **If you cannot verify a reference, say so.** Mark it `% UNVERIFIED` in the"
+        },
+        {
+          "line": 30,
+          "text": "4. Verify the claim too: open the abstract or the cited section and confirm the"
+        },
+        {
+          "line": 57,
+          "text": "- **Conference papers without DOIs** (NeurIPS, ICML, ICLR, many CS venues): the script"
+        },
+        {
+          "line": 60,
+          "text": "- **Preprint vs published**: if both exist, cite the peer-reviewed version unless"
+        },
+        {
+          "line": 62,
+          "text": "- **Books and chapters**: check ISBN via the publisher or Open Library. Crossref covers many but not all."
+        },
+        {
+          "line": 63,
+          "text": "- **Datasets and software**: verify DataCite DOIs (`https://api.datacite.org/dois/{doi}`) or"
+        },
+        {
+          "line": 65,
+          "text": "- **Retractions**: check each DOI against Retraction Watch data (in Crossref as"
+        },
+        {
+          "line": 67,
+          "text": "- **Non-English or old literature**: absence from these indexes is common. Confirm via"
+        }
+      ],
+      "cues": [
+        {
+          "line": 18,
+          "text": "paper, wrong years, invented co-authors. Citing a paper that does not exist can"
+        },
+        {
+          "line": 49,
+          "text": "| `doi-not-found` | DOI does not resolve anywhere | Typo or fabricated: search by title |"
+        },
+        {
+          "line": 74,
+          "text": "match). Anything `mismatch`, `uncertain` or `not-found` requires the user's"
+        }
+      ],
+      "lines": 82
     },
     {
       "id": "WM-X0033",
+      "repo": "KalarisLabs/research-agent-skills",
       "path": "skills/creative-thinking-for-research/SKILL.md",
-      "status": "FETCH_FAILED",
-      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+      "blob_sha": "8171186f3d564f30759d3fb86317e7b77ac8585f",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "creative-thinking-for-research",
+      "description": "Applies cognitive science frameworks for creative thinking to CS and AI research ideation. Use when seeking genuinely novel research directions by leveraging combinatorial creativity, analogical reasoning, constraint manipulation, and other empirically grounded creative strategies.",
+      "headings": [
+        {
+          "line": 317,
+          "text": "### Phase 1: Map the Space (15 min)"
+        },
+        {
+          "line": 321,
+          "text": "### Phase 2: Generate Disruptions (30 min)"
+        },
+        {
+          "line": 326,
+          "text": "### Phase 3: Deepen Promising Leads (30 min)"
+        },
+        {
+          "line": 331,
+          "text": "### Phase 4: Evaluate (15 min)"
+        }
+      ],
+      "steps": [
+        {
+          "line": 48,
+          "text": "1. **Select two domains** you have at least passing familiarity with"
+        },
+        {
+          "line": 49,
+          "text": "2. **List core primitives** in each domain (5-10 fundamental concepts per domain)"
+        },
+        {
+          "line": 50,
+          "text": "3. **Create a cross-product matrix**: row = concepts from Domain A, column = concepts from Domain B"
+        },
+        {
+          "line": 51,
+          "text": "4. **For each cell**, ask: \"What would it mean to apply A's concept to B's problem?\""
+        },
+        {
+          "line": 52,
+          "text": "5. **Filter**: Which combinations produce a non-trivial, testable research question?"
+        },
+        {
+          "line": 53,
+          "text": "6. **Validate structural depth**: Is the connection mechanistic or merely metaphorical?"
+        },
+        {
+          "line": 91,
+          "text": "1. State your current problem in one sentence"
+        },
+        {
+          "line": 92,
+          "text": "2. Identify the **hidden assumptions** in that statement:"
+        },
+        {
+          "line": 97,
+          "text": "3. For each assumption, **generate the alternative**: \"What if [opposite assumption]?\""
+        },
+        {
+          "line": 98,
+          "text": "4. For each alternative, ask: \"Does this reformulation make the problem easier, harder, or different in a useful way?\""
+        },
+        {
+          "line": 99,
+          "text": "5. A reformulation that makes a hard problem easy is often a publishable insight on its own"
+        },
+        {
+          "line": 102,
+          "text": "- **PageRank**: Reformulated \"find important web pages\" from content analysis to graph eigenvalue problem"
+        },
+        {
+          "line": 103,
+          "text": "- **Dropout**: Reformulated \"prevent overfitting\" from regularization to approximate ensemble"
+        },
+        {
+          "line": 104,
+          "text": "- **Attention**: Reformulated \"handle long sequences\" from remembering everything to selectively querying"
+        },
+        {
+          "line": 124,
+          "text": "1. **Describe your problem** using only relational/causal language (strip domain-specific nouns)"
+        },
+        {
+          "line": 127,
+          "text": "2. **Search for structural matches**: What other systems selectively aggregate from large sets?"
+        },
+        {
+          "line": 129,
+          "text": "3. **Pick the most distant match** with genuine structural fidelity"
+        },
+        {
+          "line": 130,
+          "text": "4. **Map the solution mechanism**: How does the source domain solve this?"
+        },
+        {
+          "line": 131,
+          "text": "5. **Transfer and adapt**: What changes when you bring that mechanism into your domain?"
+        },
+        {
+          "line": 132,
+          "text": "6. **Generate predictions**: The analogy should tell you something you didn't already know"
+        },
+        {
+          "line": 156,
+          "text": "1. **List the constraints** of your current approach (5-10 constraints):"
+        },
+        {
+          "line": 161,
+          "text": "2. **Classify each constraint**:"
+        }
+      ],
+      "cues": [
+        {
+          "line": 38,
+          "text": "**Why it works**: Meta-research consistently shows that breadth of knowledge is a precursor to creative output. People who read across disciplines produce more novel work. The combination itself is the creative"
+        },
+        {
+          "line": 150,
+          "text": "| **Transformational** | Change the rules of the space itself | Dropping the assumption that training requires labels (self-supervised learning) |"
+        },
+        {
+          "line": 158,
+          "text": "- Methodological: \"Requires labeled data\""
+        },
+        {
+          "line": 173,
+          "text": "- \"Training requires human labels\" → dropped → self-supervised learning"
+        },
+        {
+          "line": 238,
+          "text": "2. Add extreme constraints: tiny data, huge dimensionality, adversarial inputs, real-time requirements"
+        },
+        {
+          "line": 251,
+          "text": "Stuart Kauffman's concept, popularized by Steven Johnson: innovation happens at the boundary of what is currently reachable — the **adjacent possible**. New ideas become thinkable once their prerequisites exist"
+        },
+        {
+          "line": 278,
+          "text": "**Timing Signal**: If your idea requires technology that doesn't exist yet, it's beyond the adjacent possible — park it. If your idea could have been done 5 years ago, someone probably did — check the literatur"
+        },
+        {
+          "line": 303,
+          "text": "3. **Seek synthesis**: The resolution often requires a new abstraction that reframes the relationship"
+        }
+      ],
+      "lines": 375
     },
     {
       "id": "WM-X0036",
+      "repo": "KalarisLabs/research-agent-skills",
       "path": "skills/literature-review/SKILL.md",
-      "status": "FETCH_FAILED",
-      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+      "blob_sha": "a8245e01cd277d5f25f575756fb7112330cd55a9",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "literature-review",
+      "description": "Runs systematic literature reviews by searching PubMed, arXiv, bioRxiv, and Semantic Scholar (plus web search via parallel-cli), screening studies, extracting data, synthesizing themes, and verifying citations with verify_citations.py. Produces a markdown and PDF review with a PRISMA-style flow diagram and a bibliography in APA, Nature, or Vancouver style. Use when conducting a systematic or scoping review, synthesizing research on a topic, writing the literature review section of a paper or thesis, identifying research gaps, or checking citations in a review. Not for looking up a single paper or database record; use the specific database skill instead.",
+      "headings": [
+        {
+          "line": 19,
+          "text": "# Literature Review"
+        },
+        {
+          "line": 75,
+          "text": "## Core Workflow"
+        },
+        {
+          "line": 267,
+          "text": "## Agent operating procedure"
+        }
+      ],
+      "steps": [
+        {
+          "line": 43,
+          "text": "1. Generate at minimum ONE schematic or diagram (e.g., PRISMA flow diagram for systematic reviews)"
+        },
+        {
+          "line": 44,
+          "text": "2. Prefer 2-3 figures for comprehensive reviews (search strategy flowchart, thematic synthesis diagram, conceptual framework)"
+        },
+        {
+          "line": 80,
+          "text": "1. **Planning and scoping** — the question, inclusion and exclusion criteria, and scope."
+        },
+        {
+          "line": 81,
+          "text": "2. **Systematic literature search** — multi-database searching with recorded queries."
+        },
+        {
+          "line": 82,
+          "text": "3. **Screening and selection** — title/abstract then full-text screening with counts kept"
+        },
+        {
+          "line": 84,
+          "text": "4. **Data extraction and quality assessment** — structured extraction and risk-of-bias"
+        },
+        {
+          "line": 86,
+          "text": "5. **Synthesis and analysis** — thematic or quantitative synthesis across studies."
+        },
+        {
+          "line": 87,
+          "text": "6. **Citation verification** — every citation checked against the actual source."
+        },
+        {
+          "line": 88,
+          "text": "7. **Document generation** — assembling the review with a complete bibliography."
+        },
+        {
+          "line": 98,
+          "text": "1. **Start with parallel-web**: Use `parallel-cli search` with academic domains for initial broad coverage before querying specialized databases"
+        },
+        {
+          "line": 99,
+          "text": "2. **Use multiple databases** (minimum 3): Ensures comprehensive coverage — parallel-web counts as one source"
+        },
+        {
+          "line": 100,
+          "text": "3. **Include preprint servers**: Captures latest unpublished findings"
+        },
+        {
+          "line": 101,
+          "text": "4. **Document everything**: Search strings, dates, result counts for reproducibility — save all parallel-cli output to `sources/`"
+        },
+        {
+          "line": 102,
+          "text": "5. **Test and refine**: Run pilot searches, review results, adjust search terms"
+        },
+        {
+          "line": 103,
+          "text": "6. **Sort by citations**: When available, sort search results by citation count to surface influential work first"
+        },
+        {
+          "line": 104,
+          "text": "7. **Use parallel-cli extract**: Fetch full content from promising URLs found during search to verify relevance before full-text screening"
+        },
+        {
+          "line": 107,
+          "text": "1. **Use multiple databases** (minimum 3): Ensures comprehensive coverage"
+        },
+        {
+          "line": 108,
+          "text": "2. **Include preprint servers**: Captures latest unpublished findings"
+        },
+        {
+          "line": 109,
+          "text": "3. **Document everything**: Search strings, dates, result counts for reproducibility"
+        },
+        {
+          "line": 110,
+          "text": "4. **Test and refine**: Run pilot searches, review results, adjust search terms"
+        },
+        {
+          "line": 113,
+          "text": "1. **Use clear criteria**: Document inclusion/exclusion criteria before screening"
+        },
+        {
+          "line": 114,
+          "text": "2. **Screen systematically**: Title → Abstract → Full text"
+        }
+      ],
+      "cues": [
+        {
+          "line": 23,
+          "text": "Conduct systematic, comprehensive literature reviews following rigorous academic methodology. Search multiple literature databases, synthesize findings thematically, verify all citations for accuracy, and gener"
+        },
+        {
+          "line": 53,
+          "text": "python scripts/generate_schematic.py \"your diagram description\" -o figures/output.png"
+        },
+        {
+          "line": 60,
+          "text": "- Save outputs in the figures/ directory"
+        },
+        {
+          "line": 101,
+          "text": "4. **Document everything**: Search strings, dates, result counts for reproducibility — save all parallel-cli output to `sources/`"
+        },
+        {
+          "line": 260,
+          "text": "5. **Professional output** in markdown and PDF formats"
+        },
+        {
+          "line": 270,
+          "text": "2. **Pin down the inputs.** Confirm formats, identifiers and parameters from the data or the user. Ask rather than guess any value that changes the result."
+        },
+        {
+          "line": 280,
+          "text": "| A required input, identifier or parameter is ambiguous | Ask the user, or state the assumption explicitly before running. |"
+        }
+      ],
+      "lines": 294
     },
     {
       "id": "WM-X0043",
+      "repo": "KalarisLabs/research-agent-skills",
       "path": "skills/peer-review/SKILL.md",
-      "status": "FETCH_FAILED",
-      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+      "blob_sha": "cb86d043cc8ea1a247161dadb296e023f6dedefd",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "peer-review",
+      "description": "Prepare evidence-bounded, constructive peer-review drafts and structured manuscript assessments. Use for authorized review of scientific manuscripts, protocols, preprints, or research proposals; reporting-guideline selection; claim–evidence checks; methods, statistics, reproducibility, ethics, figure/table, and citation critique; or revision-response planning.",
+      "headings": [
+        {
+          "line": 13,
+          "text": "# Peer Review"
+        },
+        {
+          "line": 17,
+          "text": "## Mandatory safety boundary"
+        },
+        {
+          "line": 56,
+          "text": "## Intake gate"
+        },
+        {
+          "line": 79,
+          "text": "## Review workflow"
+        },
+        {
+          "line": 148,
+          "text": "### 5. Review methods and statistics"
+        },
+        {
+          "line": 173,
+          "text": "### 6. Review reproducibility and transparency"
+        },
+        {
+          "line": 186,
+          "text": "### 7. Review ethics and integrity"
+        },
+        {
+          "line": 192,
+          "text": "### 8. Review figures, tables, and citations"
+        },
+        {
+          "line": 211,
+          "text": "### 9. Draft actionable comments"
+        },
+        {
+          "line": 292,
+          "text": "## Agent operating procedure"
+        }
+      ],
+      "steps": [
+        {
+          "line": 21,
+          "text": "1. Confirm the user is authorized by the publisher, editor, author, or other material owner."
+        },
+        {
+          "line": 22,
+          "text": "2. Check the target venue’s review, confidentiality, co-review, retention, and AI/tool policies."
+        },
+        {
+          "line": 23,
+          "text": "3. Record conflicts, competence limits, requested scope, and specialist-review needs."
+        },
+        {
+          "line": 24,
+          "text": "4. Default to local-only processing."
+        },
+        {
+          "line": 152,
+          "text": "1. Question and target quantity"
+        },
+        {
+          "line": 153,
+          "text": "2. Design and unit of inference"
+        },
+        {
+          "line": 154,
+          "text": "3. Sampling, allocation, controls, masking, and timing"
+        },
+        {
+          "line": 155,
+          "text": "4. Sample-size or precision rationale"
+        },
+        {
+          "line": 156,
+          "text": "5. Inclusion, exclusion, attrition, and missingness"
+        },
+        {
+          "line": 157,
+          "text": "6. Analysis–design alignment and assumptions"
+        },
+        {
+          "line": 158,
+          "text": "7. Multiplicity and prespecification"
+        },
+        {
+          "line": 159,
+          "text": "8. Effect estimates, uncertainty, denominators, and harms"
+        },
+        {
+          "line": 160,
+          "text": "9. Interpretation, causality, and generalizability"
+        },
+        {
+          "line": 294,
+          "text": "1. **Check the environment.** Collect the user's draft, data, figures and target venue before writing anything."
+        },
+        {
+          "line": 295,
+          "text": "2. **Pin down the inputs.** Confirm formats, identifiers and parameters from the data or the user. Ask rather than guess any value that changes the result."
+        },
+        {
+          "line": 296,
+          "text": "3. **Run a small version first.** Draft one section or paragraph and confirm tone, structure and terminology with the user."
+        },
+        {
+          "line": 297,
+          "text": "4. **Execute the full task** using the instructions and references above."
+        },
+        {
+          "line": 298,
+          "text": "5. **Validate the result.** Every claim traces to the user's data or a verified source; numbers match tables and figures; citations are real (`citation-verification`)."
+        },
+        {
+          "line": 299,
+          "text": "6. **Report.** State what was run (versions, commands, parameters), what was checked, and what is still uncertain."
+        }
+      ],
+      "cues": [
+        {
+          "line": 40,
+          "text": "Delete local copies and derivatives when policy requires; otherwise retain only what the controlling policy authorizes. Record deletion or retention without copying confidential content into the record."
+        },
+        {
+          "line": 58,
+          "text": "Copy and complete `assets/review_intake_template.json`, then run:"
+        },
+        {
+          "line": 61,
+          "text": "python3 scripts/validate_review_intake.py completed-intake.json"
+        },
+        {
+          "line": 184,
+          "text": "Do not claim reproduction unless authorized inputs were actually run with documented commands, environment, and outputs."
+        },
+        {
+          "line": 188,
+          "text": "Check applicable approvals, consent, welfare, privacy, community governance, funding, sponsor role, conflicts, authorship/contribution, registration, biosafety, and dual-use concerns."
+        },
+        {
+          "line": 209,
+          "text": "Start from `assets/citation_references_template.csv`. This checks key consistency and identifier format only; it does not verify that a source exists or supports a claim."
+        },
+        {
+          "line": 213,
+          "text": "Generate a private scaffold only after intake passes:"
+        },
+        {
+          "line": 217,
+          "text": "completed-intake.json \\"
+        },
+        {
+          "line": 269,
+          "text": "- `scripts/validate_review_intake.py` — scope, authorization, conflicts, policy, handling"
+        },
+        {
+          "line": 295,
+          "text": "2. **Pin down the inputs.** Confirm formats, identifiers and parameters from the data or the user. Ask rather than guess any value that changes the result."
+        },
+        {
+          "line": 305,
+          "text": "| A required input, identifier or parameter is ambiguous | Ask the user, or state the assumption explicitly before running. |"
+        }
+      ],
+      "lines": 319
     },
     {
       "id": "WM-X0051",
+      "repo": "KalarisLabs/research-agent-skills",
       "path": "skills/scientific-writing/SKILL.md",
-      "status": "FETCH_FAILED",
-      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+      "blob_sha": "46af68267b0e6fc31bda1d1ab51c8eb19540b203",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "scientific-writing",
+      "description": "Draft, revise, and audit scientific manuscripts or reports with explicit evidence provenance, reporting-guideline coverage, authorship accountability, confidentiality controls, and local consistency checks. Use for manuscript sections, references, declarations, tables, figures, or submission preparation when scientific accuracy and traceability matter.",
+      "headings": [
+        {
+          "line": 75,
+          "text": "## Intake"
+        },
+        {
+          "line": 92,
+          "text": "## Workflow"
+        },
+        {
+          "line": 158,
+          "text": "### 5. Draft without adding facts"
+        },
+        {
+          "line": 174,
+          "text": "### 6. Reconcile methods and results"
+        },
+        {
+          "line": 215,
+          "text": "### 9. Review declarations and open-science statements"
+        },
+        {
+          "line": 280,
+          "text": "## Revision and peer review"
+        },
+        {
+          "line": 360,
+          "text": "## Agent operating procedure"
+        }
+      ],
+      "steps": [
+        {
+          "line": 31,
+          "text": "1. explicit authorization from a person or body empowered to grant it; and"
+        },
+        {
+          "line": 32,
+          "text": "2. a documented review of journal, institutional, funder, consent, ethics, contractual,"
+        },
+        {
+          "line": 287,
+          "text": "1. record the comment without exposing it outside the approved boundary;"
+        },
+        {
+          "line": 288,
+          "text": "2. classify it as editorial, scientific, statistical, policy, or unresolved;"
+        },
+        {
+          "line": 289,
+          "text": "3. identify affected claims, evidence, methods, results, and displays;"
+        },
+        {
+          "line": 290,
+          "text": "4. revise the registries before prose when facts change;"
+        },
+        {
+          "line": 291,
+          "text": "5. re-run every affected audit;"
+        },
+        {
+          "line": 292,
+          "text": "6. draft a response that states what changed and where;"
+        },
+        {
+          "line": 293,
+          "text": "7. obtain human approval."
+        },
+        {
+          "line": 362,
+          "text": "1. **Check the environment.** Collect the user's draft, data, figures and target venue before writing anything."
+        },
+        {
+          "line": 363,
+          "text": "2. **Pin down the inputs.** Confirm formats, identifiers and parameters from the data or the user. Ask rather than guess any value that changes the result."
+        },
+        {
+          "line": 364,
+          "text": "3. **Run a small version first.** Draft one section or paragraph and confirm tone, structure and terminology with the user."
+        },
+        {
+          "line": 365,
+          "text": "4. **Execute the full task** using the instructions and references above."
+        },
+        {
+          "line": 366,
+          "text": "5. **Validate the result.** Every claim traces to the user's data or a verified source; numbers match tables and figures; citations are real (`citation-verification`)."
+        },
+        {
+          "line": 367,
+          "text": "6. **Report.** State what was run (versions, commands, parameters), what was checked, and what is still uncertain."
+        }
+      ],
+      "cues": [
+        {
+          "line": 18,
+          "text": "Keep drafting, evidence verification, and submission approval as separate stages."
+        },
+        {
+          "line": 20,
+          "text": "The accountable human authors control scientific decisions and final approval. AI is"
+        },
+        {
+          "line": 36,
+          "text": "metadata needed. De-identification requires expert review; removing obvious names is"
+        },
+        {
+          "line": 48,
+          "text": "- registrations, approvals, consent, ethics statements, participant details, or dates;"
+        },
+        {
+          "line": 85,
+          "text": "- authorship, CRediT, declarations, and approval records;"
+        },
+        {
+          "line": 100,
+          "text": "--output-dir ./draft-workspace \\"
+        },
+        {
+          "line": 106,
+          "text": "The generator never overwrites files. Its output is explicitly not submission-ready and"
+        },
+        {
+          "line": 123,
+          "text": "The selector is non-scoring. It does not certify quality, compliance, completeness, or"
+        },
+        {
+          "line": 202,
+          "text": "contribution metadata; CRediT does not itself define authorship [SW-S19]."
+        },
+        {
+          "line": 233,
+          "text": "Figures and tables are optional and provenance-bound. This skill does not generate"
+        },
+        {
+          "line": 293,
+          "text": "7. obtain human approval."
+        },
+        {
+          "line": 342,
+          "text": "All scripts are local, deterministic, bounded, dependency-free, and network-free. See"
+        },
+        {
+          "line": 363,
+          "text": "2. **Pin down the inputs.** Confirm formats, identifiers and parameters from the data or the user. Ask rather than guess any value that changes the result."
+        },
+        {
+          "line": 373,
+          "text": "| A required input, identifier or parameter is ambiguous | Ask the user, or state the assumption explicitly before running. |"
+        }
+      ],
+      "lines": 387
     },
     {
       "id": "WM-X0052",
+      "repo": "KalarisLabs/research-agent-skills",
       "path": "skills/systematic-review-prisma/SKILL.md",
-      "status": "FETCH_FAILED",
-      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+      "blob_sha": "5135a35620db1381709fe62e4dcada47f9daa4bd",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "systematic-review-prisma",
+      "description": "Plan, run and report systematic reviews and meta-analyses to PRISMA 2020 standards. Use when writing a review protocol (PROSPERO/OSF), building reproducible database search strings (PubMed, Embase, Scopus, Web of Science), deduplicating exports, organizing title/abstract and full-text screening, assessing risk of bias, drawing the PRISMA flow diagram, or completing the PRISMA 2020 checklist. Includes a dedup tool and a checked PRISMA diagram generator.",
+      "headings": [
+        {
+          "line": 14,
+          "text": "# Systematic Reviews with PRISMA 2020"
+        },
+        {
+          "line": 21,
+          "text": "## Phase 1: Protocol (before searching)"
+        },
+        {
+          "line": 31,
+          "text": "## Phase 2: Search"
+        },
+        {
+          "line": 51,
+          "text": "## Phase 3: Deduplicate and screen"
+        },
+        {
+          "line": 68,
+          "text": "## Phase 4: Extraction and risk of bias"
+        },
+        {
+          "line": 76,
+          "text": "## Phase 5: Synthesis"
+        },
+        {
+          "line": 85,
+          "text": "## Phase 6: Report"
+        },
+        {
+          "line": 104,
+          "text": "## Common reasons reviews are rejected"
+        }
+      ],
+      "steps": [
+        {
+          "line": 23,
+          "text": "1. Frame the question with **PICO** (Population, Intervention, Comparator, Outcome);"
+        },
+        {
+          "line": 25,
+          "text": "2. Pre-specify eligibility criteria, primary/secondary outcomes, databases, date"
+        },
+        {
+          "line": 27,
+          "text": "3. Register the protocol **before screening starts**: PROSPERO (health, human outcomes)"
+        },
+        {
+          "line": 29,
+          "text": "4. Use the PRISMA-P checklist to write the protocol. Scoping reviews follow PRISMA-ScR."
+        }
+      ],
+      "cues": [
+        {
+          "line": 58,
+          "text": "The output CSV has `screen_title_abstract`, `screen_full_text` and `exclusion_reason`"
+        }
+      ],
+      "lines": 118
     },
     {
       "id": "WM-X0054",
+      "repo": "KalarisLabs/research-agent-skills",
       "path": "skills/unslop-academic-writing/SKILL.md",
-      "status": "FETCH_FAILED",
-      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+      "blob_sha": "aa0f4de7b43d33df9b7e84d769ec73c233993ab0",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "unslop-academic-writing",
+      "description": "Remove AI slop from research writing so papers, theses, grant proposals, reviews and rebuttals read as written by a careful human expert. Covers stock vocabulary (delve, tapestry, pivotal, underscores), empty emphasis, hedge stacks, formulaic signposting, \"not only X but also Y\" constructions, em-dash pileups, monotone rhythm, and claims vaguer than the data. Use when drafting or revising academic text with an AI assistant, when a draft \"sounds like ChatGPT\", before submission, or to match an author's own voice. Includes a zero-dependency slop linter for Markdown, LaTeX, text and Word files.",
+      "headings": [
+        {
+          "line": 25,
+          "text": "## Workflow"
+        }
+      ],
+      "steps": [
+        {
+          "line": 27,
+          "text": "1. **Measure.** Run the linter on the draft (or a section):"
+        },
+        {
+          "line": 37,
+          "text": "2. **Fix content first, words last.** Work top-down. Polishing vocabulary in a paragraph"
+        },
+        {
+          "line": 48,
+          "text": "3. **Preserve what matters.** Never change numbers, units, citations, technical terms,"
+        },
+        {
+          "line": 52,
+          "text": "4. **Match the author's voice.** Ask for 1-3 pages the author wrote before using AI (a"
+        },
+        {
+          "line": 57,
+          "text": "5. **Re-measure and read aloud.** Target an index under 5 for abstracts and introductions,"
+        },
+        {
+          "line": 63,
+          "text": "1. **Delete the frame, keep the point.** \"It is important to note that X\" → \"X\"."
+        },
+        {
+          "line": 64,
+          "text": "2. **Replace abstraction with the specific thing.** \"a wide range of tasks\" → \"12 of the 14 benchmark tasks\"."
+        },
+        {
+          "line": 65,
+          "text": "3. **Replace evaluation with evidence.** \"a remarkable improvement\" → \"a 9.4-point improvement (95% CI 7.1-11.7)\"."
+        },
+        {
+          "line": 66,
+          "text": "4. **Name the mechanism, not the role.** \"plays a pivotal role in\" → \"is required for\", \"accounts for 40% of\"."
+        },
+        {
+          "line": 67,
+          "text": "5. **One hedge, sized to the evidence.** \"may potentially suggest\" → \"suggests\" (strong data) or \"is consistent with\" (weak data)."
+        },
+        {
+          "line": 68,
+          "text": "6. **State the contrast directly.** \"not only X, but also Y\" → \"X and Y\", or keep only the stronger point."
+        },
+        {
+          "line": 69,
+          "text": "7. **Use the verb.** \"perform an analysis of\" → \"analyse\"; \"provide a description\" → \"describe\"."
+        },
+        {
+          "line": 70,
+          "text": "8. **Let structure replace signposts.** Delete \"Moreover/Furthermore/Additionally\" where the logical relation is clear."
+        },
+        {
+          "line": 71,
+          "text": "9. **Punctuate normally.** Most em dashes become commas, colons, parentheses or full stops."
+        },
+        {
+          "line": 72,
+          "text": "10. **Vary rhythm deliberately.** After two long sentences, write a short one that states the takeaway."
+        }
+      ],
+      "cues": [],
+      "lines": 99
     },
     {
       "id": "WM-X0059",
+      "repo": "addyosmani/agent-skills",
       "path": "skills/context-engineering/SKILL.md",
-      "status": "FETCH_FAILED",
-      "error": "'repository_full_name' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'repository_full_name': {'description': 'Repository in '\n                "
+      "blob_sha": "fb8bb5f85128302b231d301c1201da1e223f6869",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "context-engineering",
+      "description": "Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching between tasks, or when you need to configure rules files and context for a project.",
+      "headings": [
+        {
+          "line": 105,
+          "text": "### Level 4: Error Output"
+        },
+        {
+          "line": 344,
+          "text": "## Verification"
+        }
+      ],
+      "steps": [
+        {
+          "line": 93,
+          "text": "1. Read the file(s) you'll modify"
+        },
+        {
+          "line": 94,
+          "text": "2. Read related test files"
+        },
+        {
+          "line": 95,
+          "text": "3. Find one example of a similar pattern already in the codebase"
+        },
+        {
+          "line": 96,
+          "text": "4. Read any type definitions or interfaces involved"
+        },
+        {
+          "line": 99,
+          "text": "- **Trusted:** Source code, test files, type definitions authored by the project team"
+        },
+        {
+          "line": 100,
+          "text": "- **Verify before acting on:** Configuration files, data fixtures, documentation from external sources, generated files"
+        },
+        {
+          "line": 101,
+          "text": "- **Untrusted:** User-submitted content, third-party API responses, external documentation that may contain instruction-like text"
+        },
+        {
+          "line": 117,
+          "text": "- **Start fresh sessions** when switching between major features"
+        },
+        {
+          "line": 118,
+          "text": "- **Summarize progress** when context is getting long: \"So far we've completed X, Y, Z. Now working on W.\""
+        },
+        {
+          "line": 119,
+          "text": "- **Compact deliberately** — if the tool supports it, compact/summarize before critical work"
+        },
+        {
+          "line": 127,
+          "text": "1. the accepted scope and decisions in the spec or plan;"
+        },
+        {
+          "line": 128,
+          "text": "2. the current task status and the next pending task;"
+        },
+        {
+          "line": 129,
+          "text": "3. the files changed and the working-tree state;"
+        },
+        {
+          "line": 130,
+          "text": "4. the exact verification commands and outcomes;"
+        },
+        {
+          "line": 131,
+          "text": "5. unresolved questions, risks, and required approvals."
+        },
+        {
+          "line": 283,
+          "text": "1. Check existing code for precedent"
+        },
+        {
+          "line": 284,
+          "text": "2. If no precedent exists, **stop and ask**"
+        },
+        {
+          "line": 285,
+          "text": "3. Don't invent requirements — that's the human's job"
+        },
+        {
+          "line": 306,
+          "text": "1. Add Zod schema for task creation — validates title (required) and description (optional)"
+        },
+        {
+          "line": 307,
+          "text": "2. Wire schema into POST /api/tasks route handler"
+        },
+        {
+          "line": 308,
+          "text": "3. Add test for validation error response"
+        }
+      ],
+      "cues": [
+        {
+          "line": 10,
+          "text": "Feed agents the right information at the right time. Context is the single biggest lever for agent output quality — too little and the agent hallucinates, too much and it loses focus. Context engineering is the"
+        },
+        {
+          "line": 15,
+          "text": "- Agent output quality is declining (wrong patterns, hallucinated APIs, ignoring conventions)"
+        },
+        {
+          "line": 32,
+          "text": "│  4. Error Output / Test Results      │ ← Loaded per iteration"
+        },
+        {
+          "line": 40,
+          "text": "Create a rules file that persists across sessions. This is the highest-leverage context you can provide."
+        },
+        {
+          "line": 105,
+          "text": "### Level 4: Error Output"
+        },
+        {
+          "line": 111,
+          "text": "**Wasteful:** Pasting the entire 500-line test output when only one test failed."
+        },
+        {
+          "line": 131,
+          "text": "5. unresolved questions, risks, and required approvals."
+        },
+        {
+          "line": 135,
+          "text": "In the fresh session, read the rules, spec, plan, task status, and actual `git status` before acting. Re-run verification when its recorded baseline is missing, the code has moved, or the next task depends on i"
+        },
+        {
+          "line": 137,
+          "text": "An external harness may automate exit and restart between these boundaries. That loop must treat the artifacts and repository state as the source of truth, preserve human approval gates, and distinguish a compl"
+        },
+        {
+          "line": 200,
+          "text": "The context window is not a filing cabinet — it's a working desk. As a session runs, conversation history, tool output, and exploration accumulate. Most of it becomes deadweight. Budget proactively: waiting unt"
+        },
+        {
+          "line": 208,
+          "text": "| Past failed attempts and their error output | Once you've moved past them — keep the conclusion, not the journey |"
+        },
+        {
+          "line": 209,
+          "text": "| Verbose tool output (long `find` results, full file listings) | After you've extracted what you needed |"
+        },
+        {
+          "line": 216,
+          "text": "- The current error message or failing test output you are actively debugging"
+        },
+        {
+          "line": 226,
+          "text": "After:  \"Import issue traced to a circular dependency in src/lib/db.ts —"
+        },
+        {
+          "line": 312,
+          "text": "This catches wrong directions before you've built on them. It's a 30-second investment that prevents 30-minute rework."
+        },
+        {
+          "line": 319,
+          "text": "| Context flooding | Agent loses focus when loaded with >5,000 lines of non-task-specific context. More files does not mean better output. | Include only what is relevant to the current task. Aim for <2,000 lin"
+        },
+        {
+          "line": 324,
+          "text": "| Context cliff | Waiting until the window is full before managing it — attention fragments and output quality drops abruptly at the limit | Start trimming at 75% capacity; compress rather than cut |"
+        },
+        {
+          "line": 337,
+          "text": "- Agent output doesn't match project conventions"
+        },
+        {
+          "line": 340,
+          "text": "- Agent quality degrades mid-task as the conversation grows — failed attempts, replaced drafts, and verbose tool output are not being trimmed"
+        },
+        {
+          "line": 349,
+          "text": "- [ ] Agent output follows the patterns shown in the rules file"
+        }
+      ],
+      "lines": 354
     }
   ]
 }
