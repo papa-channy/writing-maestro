@@ -1,0 +1,1020 @@
+{
+  "batch": 4,
+  "extraction_version": "0.1.1",
+  "records": [
+    {
+      "id": "WM-X0288",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/non-autoregressive-writing-pass/SKILL.md",
+      "blob_sha": "312e1aca34e8cf7e967cf7f82edf87fd351f932e",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "non-autoregressive-writing-pass",
+      "description": "Revisit a completed draft with global knowledge of its argument, then revise its title, subtitle, headings, paragraph heads, and paragraph-to-paragraph transitions. Use when display text no longer fits the finished work; when openings feel generic, abrupt, weak, or begin with a rejected alternative before reaching the point; when paragraphs are individually clear but do not build on one another; when a finished abstract needs a stronger first sentence; or when final sentences do not close one paragraph naturally or prepare the relation to the next.",
+      "headings": [
+        {
+          "line": 13,
+          "text": "## Wait Until The Draft Is Stable"
+        },
+        {
+          "line": 68,
+          "text": "## Inspect Every Paragraph Boundary"
+        },
+        {
+          "line": 117,
+          "text": "## Invocation Boundary"
+        }
+      ],
+      "steps": [
+        {
+          "line": 108,
+          "text": "1. Read the revised title-and-paragraph-head spine again. Confirm that its"
+        },
+        {
+          "line": 111,
+          "text": "2. Read every ending-to-opening pair at speaking pace."
+        },
+        {
+          "line": 112,
+          "text": "3. Read the full artifact in order and restore any deliberate abruptness or"
+        },
+        {
+          "line": 114,
+          "text": "4. Compare with the source and confirm that the pass changed no claim,"
+        }
+      ],
+      "cues": [
+        {
+          "line": 77,
+          "text": "- the title, subtitle, or heading promises a subject that the opening does not"
+        },
+        {
+          "line": 120,
+          "text": "the requested boundary findings. Do not invoke Humanizer, general-writing,"
+        }
+      ],
+      "lines": 123
+    },
+    {
+      "id": "WM-X0289",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/paper-writing/SKILL.md",
+      "blob_sha": "585ca4c4daba5b634ab330838e504ef3552b74c2",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "paper-writing",
+      "description": "Plan, draft, revise, and structure technical research papers while preserving claims, notation, evidence, citations, and author voice. Use for abstracts, introductions, related work, methods, theory, experiments, results, discussions, conclusions, figures, appendices, LaTeX project organization, or whole-manuscript design.",
+      "headings": [
+        {
+          "line": 23,
+          "text": "## Select The Workflow"
+        }
+      ],
+      "steps": [
+        {
+          "line": 64,
+          "text": "1. Use an example directory explicitly supplied for the current task."
+        },
+        {
+          "line": 65,
+          "text": "2. If no directory was supplied, ask: \"Where is the folder containing the"
+        },
+        {
+          "line": 68,
+          "text": "3. Accept a direct corpus directory under any name. Also accept a parent"
+        },
+        {
+          "line": 70,
+          "text": "4. Confirm that the resolved directory is readable before relying on it."
+        },
+        {
+          "line": 71,
+          "text": "5. If the user answers `none` or the directory is unavailable, use"
+        },
+        {
+          "line": 80,
+          "text": "1. State the practical or scientific problem in one sentence."
+        },
+        {
+          "line": 81,
+          "text": "2. State why the strongest current explanation or method is insufficient."
+        },
+        {
+          "line": 82,
+          "text": "3. State the paper's central claim, demonstrated scope, and main limitation."
+        },
+        {
+          "line": 83,
+          "text": "4. Build a claim-evidence map. Assign every major claim a theorem, controlled"
+        },
+        {
+          "line": 86,
+          "text": "5. Choose the paper architecture from the evidence rather than from a fixed"
+        },
+        {
+          "line": 88,
+          "text": "6. Give each section one question to answer and each paragraph one inferential"
+        },
+        {
+          "line": 90,
+          "text": "7. Design Figure 1 as a compact version of the full argument, then make every"
+        },
+        {
+          "line": 92,
+          "text": "8. Draft from the strongest evidence outward. Write the abstract and title only"
+        },
+        {
+          "line": 156,
+          "text": "1. Read [sentence-style.md](references/sentence-style.md)."
+        },
+        {
+          "line": 157,
+          "text": "2. Treat the current manuscript and any selected example papers as voice"
+        },
+        {
+          "line": 159,
+          "text": "3. Read the sibling"
+        },
+        {
+          "line": 162,
+          "text": "4. Run its complete edit workflow. It invokes Humanizer in embedded mode before"
+        },
+        {
+          "line": 164,
+          "text": "5. Recheck every edited comparison, qualifier, number, citation, symbol, and"
+        },
+        {
+          "line": 166,
+          "text": "6. After the body, conclusion, and limitations are final, return to the"
+        }
+      ],
+      "cues": [],
+      "lines": 181
+    },
+    {
+      "id": "WM-X0291",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/prompt-improving/SKILL.md",
+      "blob_sha": "717287f5f5f626e2367d3a17b9a359f6bda2c50a",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "prompt-improving",
+      "description": "Clarify and rewrite quoted prompts while preserving the user's intent and natural prompting style. Use when the user invokes this skill with a prompt in quotation marks, asks to improve or strengthen a prompt, or wants missing context identified before a rewritten prompt is produced.",
+      "headings": [
+        {
+          "line": 11,
+          "text": "## Workflow"
+        }
+      ],
+      "steps": [
+        {
+          "line": 13,
+          "text": "1. Extract the prompt from the user's quotation marks. Preserve quotation marks"
+        },
+        {
+          "line": 15,
+          "text": "2. If there is no quoted prompt, ask the user to provide one in quotation marks,"
+        },
+        {
+          "line": 18,
+          "text": "3. Read the current conversation for context that already answers likely"
+        },
+        {
+          "line": 20,
+          "text": "4. Identify only missing details that could materially change the rewritten"
+        },
+        {
+          "line": 26,
+          "text": "5. If material information is missing, ask one to three concise clarification"
+        },
+        {
+          "line": 30,
+          "text": "6. Rewrite the prompt with the goal first, followed by only the context,"
+        },
+        {
+          "line": 32,
+          "text": "7. Check that the rewrite preserves the user's intent, does not invent facts,"
+        }
+      ],
+      "cues": [
+        {
+          "line": 25,
+          "text": "- the desired output or level of detail."
+        },
+        {
+          "line": 31,
+          "text": "constraints, and output requirements that improve the result."
+        },
+        {
+          "line": 32,
+          "text": "7. Check that the rewrite preserves the user's intent, does not invent facts,"
+        },
+        {
+          "line": 48,
+          "text": "user's recognizable wording and cadence unless clarity requires a change."
+        }
+      ],
+      "lines": 79
+    },
+    {
+      "id": "WM-X0292",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/rebuttal-writing/SKILL.md",
+      "blob_sha": "5a039413446c5cc30ad191a60c572f24960ee1d6",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "rebuttal-writing",
+      "description": "Draft and edit concise, reviewer-specific author responses in clear academic English. Use for paper rebuttals, response letters, revise-and-resubmit memos, reviewer-response matrices, evidence triage, claim calibration, bounded concessions, or non-defensive rewrites of verbose response prose.",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Select The Workflow"
+        }
+      ],
+      "steps": [
+        {
+          "line": 36,
+          "text": "- **formal but natural:** use standard technical English, not legalistic or"
+        },
+        {
+          "line": 38,
+          "text": "- **confident but bounded:** state supported conclusions directly and mark"
+        },
+        {
+          "line": 40,
+          "text": "- **respectful but not deferential:** engage the concern without praising the"
+        },
+        {
+          "line": 42,
+          "text": "- **candid but not self-defeating:** acknowledge a defect or limitation"
+        },
+        {
+          "line": 44,
+          "text": "- **technical but readable:** prefer ordinary verbs and concrete nouns over"
+        },
+        {
+          "line": 54,
+          "text": "- **Correct:** \"`X` is intentional because...\""
+        },
+        {
+          "line": 55,
+          "text": "- **Concede:** \"This is a typo; the correct expression is...\""
+        },
+        {
+          "line": 56,
+          "text": "- **Narrow:** \"We do not claim X. Our claim is limited to Y.\""
+        },
+        {
+          "line": 57,
+          "text": "- **Qualify:** \"X can be more efficient when it works. Our claim concerns Y.\""
+        },
+        {
+          "line": 58,
+          "text": "- **Bound:** \"We have not evaluated X, so we will restrict the statement to"
+        },
+        {
+          "line": 70,
+          "text": "1. **Verdict:** answer the concern."
+        },
+        {
+          "line": 71,
+          "text": "2. **Distinction:** explain the key reason or correct the premise."
+        },
+        {
+          "line": 72,
+          "text": "3. **Support:** state the relevant result or paper evidence."
+        },
+        {
+          "line": 73,
+          "text": "4. **Boundary or edit:** limit the inference or name the exact revision."
+        },
+        {
+          "line": 190,
+          "text": "1. name the established ingredients;"
+        },
+        {
+          "line": 191,
+          "text": "2. state the exact new formulation, finding, or controlled comparison; and"
+        },
+        {
+          "line": 192,
+          "text": "3. explain what the prior ingredients did not already imply."
+        }
+      ],
+      "cues": [
+        {
+          "line": 97,
+          "text": "- Use explicit contrast: \"X supports Y; it does not establish Z.\""
+        },
+        {
+          "line": 119,
+          "text": "| Supports but does not isolate | \"supports,\" \"suggests,\" or \"is consistent with\" |"
+        },
+        {
+          "line": 124,
+          "text": "Reserve \"shows\" and \"demonstrates\" for direct evidence. \"We believe\" does not"
+        },
+        {
+          "line": 180,
+          "text": "> This supports X in the tested setting; it does not establish Y."
+        }
+      ],
+      "lines": 317
+    },
+    {
+      "id": "WM-X0293",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/writing-cadence/SKILL.md",
+      "blob_sha": "fad25b2e40960539a868ae63e923961fe613cfb9",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "writing-cadence",
+      "description": "Diagnose and revise prose with staccato runs, uniform sentence lengths, repeated openings, mechanical clause structures, repeated contrast formulas, or abstract process framing that hides the actor and delays the real comparison. Use for requests about cadence, rhythm, meter, sentence variety, choppy prose, monotonous prose, or patterns such as \"not X but Y\" and \"treats X as Y, not Z.",
+      "headings": [
+        {
+          "line": 111,
+          "text": "## Invocation Boundary"
+        }
+      ],
+      "steps": [
+        {
+          "line": 58,
+          "text": "1. Identify the point that deserves emphasis in each sentence and paragraph."
+        },
+        {
+          "line": 59,
+          "text": "2. Link backward near the opening with the subject, condition, or established"
+        },
+        {
+          "line": 61,
+          "text": "3. Keep the subject near its verb unless an intervening phrase is truly"
+        },
+        {
+          "line": 63,
+          "text": "4. Name the actor when an abstract process hides who acts. If no review,"
+        },
+        {
+          "line": 66,
+          "text": "5. Place the important new result near syntactic closure when that ordering"
+        },
+        {
+          "line": 68,
+          "text": "6. Join short neighboring sentences when one supplies the other's cause,"
+        },
+        {
+          "line": 70,
+          "text": "7. Split a long sentence when it makes two independent claims, changes"
+        },
+        {
+          "line": 72,
+          "text": "8. Vary openings only when the new opening changes emphasis or improves the"
+        },
+        {
+          "line": 74,
+          "text": "9. Reserve a very short sentence for a conclusion that merits the pause."
+        }
+      ],
+      "cues": [
+        {
+          "line": 13,
+          "text": "requires a full cadence edit or an explanation of the underlying principles."
+        },
+        {
+          "line": 101,
+          "text": "- requires the same breath pattern several times in a row;"
+        },
+        {
+          "line": 114,
+          "text": "findings requested by the caller. Do not invoke Humanizer, general-writing,"
+        },
+        {
+          "line": 116,
+          "text": "so the shared writing pipeline does not cycle."
+        }
+      ],
+      "lines": 117
+    },
+    {
+      "id": "WM-X0294",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/writing/SKILL.md",
+      "blob_sha": "e71e429f8b241e6803eea8a260752c9547dea8b7",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "writing",
+      "description": "Route writing and editing work to the smallest relevant focused skill. Use when a request involves prompts, general prose, AI-pattern removal, academic voice, research abstracts, cadence, semantic usage, human-readable writing guides, presentations, reviewer rebuttals, literature reviews, research papers, grant strategy, or grant proposals and no narrower writing skill has already been selected.",
+      "headings": [],
+      "steps": [
+        {
+          "line": 13,
+          "text": "1. Identify the artifact the user is producing or revising."
+        },
+        {
+          "line": 14,
+          "text": "2. Infer the primary writing job from the artifact and requested outcome."
+        },
+        {
+          "line": 15,
+          "text": "3. Read the selected `SKILL.md` completely."
+        },
+        {
+          "line": 16,
+          "text": "4. Do not read the other sibling skills unless the request has a second,"
+        }
+      ],
+      "cues": [
+        {
+          "line": 8,
+          "text": "Select the primary deliverable, load only the matching sibling skill, and follow"
+        },
+        {
+          "line": 17,
+          "text": "materially distinct deliverable."
+        },
+        {
+          "line": 49,
+          "text": "the Humanizer dependency and pass order. Do not load or run Humanizer a"
+        },
+        {
+          "line": 54,
+          "text": "output. For example, route a presentation about a paper to"
+        },
+        {
+          "line": 56,
+          "text": "- If two outputs are requested, complete them in stages and load each skill only"
+        },
+        {
+          "line": 60,
+          "text": "requirements; it does not override them."
+        }
+      ],
+      "lines": 66
+    },
+    {
+      "id": "WM-X0295",
+      "repo": "nqmn/academic_writer",
+      "path": "SKILL.md",
+      "blob_sha": "27aa16235d8ee09ada947e5df472ce23dbf31d4a",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "academic-writer",
+      "description": "Comprehensive scholarly writing, literature analysis, synthesis, manuscript diagnosis, systematic-review support, and bibliometric-analysis support for Q1-ready academic work. Use when Codex needs to draft or revise manuscript sections, write literature reviews, identify research gaps, analyze a single research paper, synthesize multiple papers, assess whether a draft is Q1-ready, prepare reviewer responses, design SLR/SMS/tertiary-review outputs using Kitchenham, SEGRESS, and PRISMA-aligned logic, or plan bibliometric studies from Web of Science or Scopus exports. Natural-language requests are the primary invocation path. Optional `open-*` routing labels such as `open-rewrite`, `open-review`, `open-diagnose`, `open-analyze`, `open-synthesize`, `open-slr`, `open-bibliometric`, `open-intro`, `open-litreview`, `open-methods`, `open-discussion`, `open-abstract`, and `open-response` may also be used as text conventions.",
+      "headings": [
+        {
+          "line": 82,
+          "text": "### Literature review and synthesis"
+        },
+        {
+          "line": 107,
+          "text": "### Methods"
+        },
+        {
+          "line": 174,
+          "text": "### Reviewer response"
+        },
+        {
+          "line": 184,
+          "text": "### Systematic review and tertiary-study work"
+        },
+        {
+          "line": 303,
+          "text": "## Output rule"
+        }
+      ],
+      "steps": [],
+      "cues": [
+        {
+          "line": 37,
+          "text": "Read `AGENTS.md` first when the task is broad, high-stakes, or requires system-level alignment. Read `runtime/agent_manifest.yml` when deciding whether a module family is part of the intended operating surface."
+        },
+        {
+          "line": 42,
+          "text": "- Apply Q1-level rigor by default unless the user explicitly asks for a rough draft, brainstorming output, or lower-bar review."
+        },
+        {
+          "line": 46,
+          "text": "- Perform an internal self-review pass before returning substantial outputs."
+        },
+        {
+          "line": 48,
+          "text": "- Ask at most one focused clarification question when missing information would materially change the output."
+        },
+        {
+          "line": 105,
+          "text": "Also use the relevant source notes under `methodology/source_notes/` when the task requires stronger theoretical grounding."
+        },
+        {
+          "line": 143,
+          "text": "Load these only when the wording task requires them:"
+        },
+        {
+          "line": 224,
+          "text": "Use these when the task requires stronger section-level control, diagnosis, or polishing discipline:"
+        },
+        {
+          "line": 279,
+          "text": "If any of these appear, revise before returning the output."
+        },
+        {
+          "line": 305,
+          "text": "- Return the requested academic output directly."
+        },
+        {
+          "line": 308,
+          "text": "- For polished outputs, do not stop at a plausible draft. Return the version after self-review and anti-AI cleanup."
+        }
+      ],
+      "lines": 309
+    },
+    {
+      "id": "WM-X0296",
+      "repo": "obra/superpowers",
+      "path": "skills/brainstorming/SKILL.md",
+      "blob_sha": "7f5eef02f894c4f24cea313660c0465ce9c084ed",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "brainstorming",
+      "description": "You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, or planning anything new, in software or out of it (a talk, a business, a renovation).",
+      "headings": [],
+      "steps": [
+        {
+          "line": 22,
+          "text": "- **Everything that matters is in the request** (\"make the icon cornflower"
+        },
+        {
+          "line": 24,
+          "text": "- **Something non-trivial is missing.** Start the conversation."
+        },
+        {
+          "line": 28,
+          "text": "1. Lay out the approaches in a message of their own, and have your"
+        },
+        {
+          "line": 30,
+          "text": "2. Write the design doc, short or full (see Size the Work)."
+        },
+        {
+          "line": 31,
+          "text": "3. Get their approval of that doc."
+        },
+        {
+          "line": 32,
+          "text": "4. Invoke the superpowers:writing-plans skill."
+        },
+        {
+          "line": 51,
+          "text": "- **They've already said what they want** (a spec, a plan, a detailed"
+        },
+        {
+          "line": 64,
+          "text": "- **They haven't:** one open question, in their own terms, about the"
+        },
+        {
+          "line": 74,
+          "text": "- **They asked for it** (by name, by invoking it, or by asking for a"
+        },
+        {
+          "line": 77,
+          "text": "- **They didn't:** they may not want a conversation at all. After your"
+        },
+        {
+          "line": 234,
+          "text": "- **Answered already** by the conversation or the project: put the answer"
+        },
+        {
+          "line": 236,
+          "text": "- **Minor:** a sensible builder could settle it without changing what gets"
+        },
+        {
+          "line": 238,
+          "text": "- **Theirs:** only your human partner can answer it, and the answer changes"
+        }
+      ],
+      "cues": [
+        {
+          "line": 19,
+          "text": "Before you reply, ask yourself: what do I know about what they want, and"
+        },
+        {
+          "line": 26,
+          "text": "Before you start implementing, you must, in order:"
+        },
+        {
+          "line": 31,
+          "text": "3. Get their approval of that doc."
+        },
+        {
+          "line": 38,
+          "text": "## Look Before You Ask"
+        },
+        {
+          "line": 41,
+          "text": "a handoff, files they pointed at, earlier conversation), dig in before your"
+        },
+        {
+          "line": 63,
+          "text": "Specs are often incomplete, so confirm before you build on one."
+        },
+        {
+          "line": 140,
+          "text": "before you write anything up, put the ways of building it in a message"
+        },
+        {
+          "line": 182,
+          "text": "Before you send a chunk, check it: does it describe something they'll"
+        },
+        {
+          "line": 200,
+          "text": "they picked, and why. They pick in the conversation, before you write"
+        },
+        {
+          "line": 271,
+          "text": "| \"They said 'sounds good' to the idea\" | Approval covers what you showed them. A design doc you haven't written isn't approved. |"
+        }
+      ],
+      "lines": 295
+    },
+    {
+      "id": "WM-X0298",
+      "repo": "obra/superpowers",
+      "path": "skills/requesting-code-review/SKILL.md",
+      "blob_sha": "68d338a58ecdd8b77bfbb519b781ef223dbbb842",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "requesting-code-review",
+      "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Requesting Code Review"
+        },
+        {
+          "line": 12,
+          "text": "## When to Request Review"
+        }
+      ],
+      "steps": [],
+      "cues": [],
+      "lines": 96
+    },
+    {
+      "id": "WM-X0301",
+      "repo": "obra/superpowers",
+      "path": "skills/writing-plans/SKILL.md",
+      "blob_sha": "4cf0275d88d67aa4ef09f4bbca9970ed6ff74a00",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "writing-plans",
+      "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+      "headings": [
+        {
+          "line": 43,
+          "text": "## Step Granularity"
+        },
+        {
+          "line": 77,
+          "text": "## Review Focus"
+        },
+        {
+          "line": 140,
+          "text": "## What a Step Contains"
+        },
+        {
+          "line": 163,
+          "text": "## Self-Review"
+        }
+      ],
+      "steps": [
+        {
+          "line": 146,
+          "text": "- **A test step:** the test's name and its assertions, as code, with the"
+        },
+        {
+          "line": 148,
+          "text": "- **A code step:** the exact signature (name, parameters, return type), the"
+        },
+        {
+          "line": 152,
+          "text": "- **A verification step:** the command to run and the output that means it"
+        },
+        {
+          "line": 154,
+          "text": "- **A reference to another task:** that task's Interfaces block says what"
+        },
+        {
+          "line": 191,
+          "text": "- **Subagent-driven** - A fresh subagent implements each task and a fresh reviewer checks it before the next one starts, then a whole-branch review at the end. Most thorough; costs a fresh context per task and "
+        },
+        {
+          "line": 192,
+          "text": "- **Native** - I implement every task myself in this session, the way this harness runs work, then one fresh reviewer on the most capable model checks the whole branch. Cheapest and fastest; no independent revi"
+        },
+        {
+          "line": 201,
+          "text": "- **REQUIRED SUB-SKILL:** Use superpowers:subagent-driven-development"
+        },
+        {
+          "line": 204,
+          "text": "- **REQUIRED SUB-SKILL:** Use superpowers:executing-plans"
+        }
+      ],
+      "cues": [
+        {
+          "line": 39,
+          "text": "deliverable needs them; split only where a reviewer could meaningfully"
+        },
+        {
+          "line": 41,
+          "text": "independently testable deliverable."
+        },
+        {
+          "line": 72,
+          "text": "[The spec's project-wide requirements — version floors, dependency limits,"
+        },
+        {
+          "line": 79,
+          "text": "[The five input classes or failure modes the spec implies but no task's"
+        },
+        {
+          "line": 81,
+          "text": "— one line each, naming the input or condition and the behavior a"
+        },
+        {
+          "line": 84,
+          "text": "meet, and its silence on an input is not permission for that input to"
+        },
+        {
+          "line": 112,
+          "text": "result = function(input)"
+        },
+        {
+          "line": 121,
+          "text": "- [ ] **Step 3: Implement `function(input: InputType) -> ResultType` in `exact/path/to/file.py`**"
+        },
+        {
+          "line": 152,
+          "text": "- **A verification step:** the command to run and the output that means it"
+        },
+        {
+          "line": 155,
+          "text": "to use; the plan does not repeat that task's code."
+        },
+        {
+          "line": 173,
+          "text": "**4. Review Focus:** For each input class or failure mode the spec implies, is there a task whose tests exercise it? The five uncovered ones most likely to bite a person go in the Review Focus section, and each"
+        }
+      ],
+      "lines": 205
+    },
+    {
+      "id": "WM-X0306",
+      "repo": "riekelt/technical-writer",
+      "path": "plugins/technical-writer/skills/recording-decisions/SKILL.md",
+      "blob_sha": "03a5228e8d1980e667a0452712cac2d25487711c",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "recording-decisions",
+      "description": "Use when a decision needs recording - an ADR, a decision log entry, or when someone asks to write down why something was chosen, rejected, or superseded. Encodes the ADR and decision-log formats. Use whenever a choice was made that would otherwise live only in chat, even if nobody says \"ADR\".",
+      "headings": [],
+      "steps": [],
+      "cues": [
+        {
+          "line": 16,
+          "text": "Invoke when a choice has been made and needs recording, when someone asks \"write down why we did this\", or when an existing decision is superseded. Do NOT invoke for a decision still being argued (that is `writ"
+        }
+      ],
+      "lines": 80
+    },
+    {
+      "id": "WM-X0307",
+      "repo": "riekelt/technical-writer",
+      "path": "plugins/technical-writer/skills/reviewing-technical-prose/SKILL.md",
+      "blob_sha": "990b3d8d5023f664955dc3f48dc3ed0866844650",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "reviewing-technical-prose",
+      "description": "Use when reviewing, rewriting, or editing someone else's technical text, when writing a review report on a document, or as the final check before delivering any document. Encodes the severity mapping, the findings format, the what-not-to-flag list, and the delivery checklist. Use before any document ships, even when it looks fine.",
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Reviewing technical prose"
+        },
+        {
+          "line": 64,
+          "text": "## Review reports"
+        },
+        {
+          "line": 74,
+          "text": "## Delivery checklist"
+        }
+      ],
+      "steps": [
+        {
+          "line": 22,
+          "text": "- **BLOCKER**: hard-rule violations (banned dashes, changelog sections, delivery history in prose) and any claim the cited source does not support or that traces to nothing."
+        },
+        {
+          "line": 23,
+          "text": "- **WARNING**: banned constructions, structural defects (question headings, buried conclusions, rearrangeable paragraphs), and claims supported only loosely."
+        },
+        {
+          "line": 24,
+          "text": "- **OBS**: ambiguity, missing polish, and anything an attentive author would likely catch."
+        },
+        {
+          "line": 30,
+          "text": "1. Read the source. Mark every banned construction and word-choice violation."
+        },
+        {
+          "line": 31,
+          "text": "2. Write a version. Read it aloud."
+        },
+        {
+          "line": 32,
+          "text": "3. Ask three control questions:"
+        },
+        {
+          "line": 39,
+          "text": "4. Repair what the control questions surface. An addition and a loss both count as errors, even when the text reads better for it."
+        },
+        {
+          "line": 43,
+          "text": "- **The rewrite keeps the document's language.** A Dutch document comes back in Dutch, with the structural and truth rules applied as always; the English-specific vocabulary checks are replaced by that language"
+        },
+        {
+          "line": 44,
+          "text": "- **When the author is reachable, the diff is the proposal.** Show the rewrite before overwriting their text. Unattended in a repository, the commit is the proposal and review does the same job."
+        }
+      ],
+      "cues": [
+        {
+          "line": 18,
+          "text": "Invoke when reviewing or rewriting someone else's technical text, when producing a findings report on a document, and as the final pass before delivering anything you wrote yourself. Do NOT invoke for code revi"
+        },
+        {
+          "line": 22,
+          "text": "- **BLOCKER**: hard-rule violations (banned dashes, changelog sections, delivery history in prose) and any claim the cited source does not support or that traces to nothing."
+        },
+        {
+          "line": 46,
+          "text": "When the source text asserts nothing recoverable (setups, glosses, meaning-sentences), the correct rewrite is deletion plus a marked gap (`**[input wanted: <the claim the sentence should make>]**`, the claim-le"
+        },
+        {
+          "line": 56,
+          "text": "- A factual contrast: \"the pipeline sets the tag, the developer does not\" is a statement, not antithesis."
+        }
+      ],
+      "lines": 93
+    },
+    {
+      "id": "WM-X0310",
+      "repo": "riekelt/technical-writer",
+      "path": "plugins/technical-writer/skills/writing-design-docs/SKILL.md",
+      "blob_sha": "b154cfb38bdab12922bc29ab9f1d6a5b40d84198",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "writing-design-docs",
+      "description": "Use when writing a proposal, RFC, design document, spec, or migration plan - anything that argues for a change, records a design, or asks readers for input on one. Encodes the proposal skeleton, the Why & What decision box, and the completeness checks. Use whenever a change needs arguing or scoping in writing, even if the user just says \"write up the approach\".",
+      "headings": [],
+      "steps": [
+        {
+          "line": 55,
+          "text": "- **Number chapters** and cite them as `ch. 7.1`."
+        },
+        {
+          "line": 56,
+          "text": "- **Goals and non-goals both.** The non-goals (or \"explicitly not changed\") section states what stays unchanged."
+        },
+        {
+          "line": 57,
+          "text": "- **Definitions before behavior** when a term is ambiguous: pin \"responded\", \"eligible\", \"stale\" before using them."
+        },
+        {
+          "line": 58,
+          "text": "- **A grounding section** pins the facts the design rests on: a fact/source table, checked against a named commit. Separate verified facts from what will be built."
+        },
+        {
+          "line": 59,
+          "text": "- **Appendices** take letters (Appendix A, B) and hold what would bury the main text: config examples, glossaries, inventories."
+        },
+        {
+          "line": 60,
+          "text": "- **A fact lives in one place.** Link to it; never repeat it, not even across documents in the same repo."
+        },
+        {
+          "line": 61,
+          "text": "- **Mark unfinished parts** with `**[DRAFT - input wanted]**` instead of omitting them."
+        },
+        {
+          "line": 62,
+          "text": "- **Open questions get owners**: a name, a role, or an explicit \"to be filled by\"."
+        },
+        {
+          "line": 63,
+          "text": "- **Residual risks and what NOT to do** close the document when the design ships work to others."
+        },
+        {
+          "line": 99,
+          "text": "1. Unresolved placeholders: any literal TBD, TODO, \"fill in later\", or clearly incomplete sentence (a marked `**[DRAFT - input wanted]**` block is deliberate; an unmarked gap is a defect)."
+        },
+        {
+          "line": 100,
+          "text": "2. Missing acceptance criteria: a requirement with no concrete, independently testable success condition."
+        },
+        {
+          "line": 101,
+          "text": "3. Undefined references: a type, endpoint, component, or table mentioned but defined nowhere."
+        },
+        {
+          "line": 102,
+          "text": "4. No verifiable output: a task producing nothing a reviewer could inspect (no file path, no command, no observable behavior)."
+        },
+        {
+          "line": 103,
+          "text": "5. What without how: an outcome with no implementable direction (\"handle errors appropriately\" with no definition of appropriate)."
+        }
+      ],
+      "cues": [
+        {
+          "line": 16,
+          "text": "Invoke for anything that argues for a change or records a design: proposals, RFCs, design docs, specs, migration plans, \"should we\" documents. Do NOT invoke for recording an already-taken decision (`recording-d"
+        },
+        {
+          "line": 50,
+          "text": "*Closing line: which parts are fact and which are proposal, and where input is wanted.*"
+        },
+        {
+          "line": 61,
+          "text": "- **Mark unfinished parts** with `**[DRAFT - input wanted]**` instead of omitting them."
+        },
+        {
+          "line": 75,
+          "text": "> **Why:** [the reasoning. Also name what the choice does NOT solve.]"
+        },
+        {
+          "line": 80,
+          "text": "> **Fallback:** [what survives if this does not work]"
+        },
+        {
+          "line": 84,
+          "text": "- Admitting what the choice does not solve makes the document more credible."
+        },
+        {
+          "line": 86,
+          "text": "- An alternative that appears nowhere else in the document does not belong in the box: the reader would never consider it. One such rejection can be justified; several short ones in a row mean the box is padded"
+        },
+        {
+          "line": 99,
+          "text": "1. Unresolved placeholders: any literal TBD, TODO, \"fill in later\", or clearly incomplete sentence (a marked `**[DRAFT - input wanted]**` block is deliberate; an unmarked gap is a defect)."
+        },
+        {
+          "line": 102,
+          "text": "4. No verifiable output: a task producing nothing a reviewer could inspect (no file path, no command, no observable behavior)."
+        }
+      ],
+      "lines": 106
+    },
+    {
+      "id": "WM-X0313",
+      "repo": "riekelt/technical-writer",
+      "path": "plugins/technical-writer/skills/writing-runbooks/SKILL.md",
+      "blob_sha": "a1bf571712dc0b23cfb2aea85b600c4309f577dc",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "writing-runbooks",
+      "description": "Use when writing operational documentation - runbooks, setup guides, release procedures, migration guides, deprecation guides, troubleshooting entries, or any ordered procedure someone will execute under time pressure. Encodes the runbook skeleton, the risk legend, the symptom-first troubleshooting format, and the migration-guide rules (mapping table, mandatory rollback, deprecation dates, built-in expiry). Use whenever someone will execute the text, even if it is called a \"guide\" or \"setup notes\".",
+      "headings": [],
+      "steps": [
+        {
+          "line": 24,
+          "text": "- **Legend up front** when steps differ in risk, applied to every command: safe to run anytime / operator-only (writes to production) / manual step outside the terminal. Tags combine where a step is more than o"
+        },
+        {
+          "line": 61,
+          "text": "1. **History is the content here, stated positively.** The before/after comparison is the job, not a violation: this is the document class the no-history hard rule explicitly carves out. Write \"the tag now repl"
+        },
+        {
+          "line": 62,
+          "text": "2. **The mapping table is the core artifact.** Old to new per behavior, config key, command, or API, one row each. Prose explains the rows that need it; the table carries the migration."
+        },
+        {
+          "line": 63,
+          "text": "3. **Rollback is mandatory, per step.** Every step names its undo, or states plainly that it is irreversible and what that means for the ordering around it."
+        },
+        {
+          "line": 64,
+          "text": "4. **The deprecation contract carries dates.** What stops working, on which date, what happens to stragglers, and where the escape hatch is until then. \"Will be removed in a future release\" names no date and is"
+        },
+        {
+          "line": 65,
+          "text": "5. **Born with an expiry.** When the migration completes, the owner reclassifies the guide as historical and adds the superseded banner pointing at the current-state documentation, never deleting it silently. S"
+        }
+      ],
+      "cues": [
+        {
+          "line": 18,
+          "text": "Invoke for anything a person will execute: runbooks, setup and release procedures, troubleshooting entries, operational checklists, and the operator-facing strings inside a system. Do NOT invoke for design rati"
+        },
+        {
+          "line": 23,
+          "text": "- Open with what this document is relative to its siblings (\"this doc is the sequence; deep detail per step lives in X\") and state what it does NOT cover."
+        },
+        {
+          "line": 26,
+          "text": "- Version-pinned prerequisites before any command, each with a check command."
+        },
+        {
+          "line": 35,
+          "text": "app sync run --live --approval-token=..."
+        }
+      ],
+      "lines": 70
+    }
+  ]
+}
