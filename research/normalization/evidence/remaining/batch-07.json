@@ -1,0 +1,1153 @@
+{
+  "idx": 7,
+  "records": [
+    {
+      "id": "WM-X0167",
+      "repo": "danjdewhurst/story-skills",
+      "path": "skills/story-init/SKILL.md",
+      "url": "https://github.com/danjdewhurst/story-skills/blob/main/skills/story-init/SKILL.md",
+      "sha": "366286ce629e23b608bbf87ab8881dcf0d512c84",
+      "status": "OK",
+      "description": "This skill should be used when the user asks to \"start a new story\", \"initialize a story project\", \"create a story\", \"new book\", \"set up a story\", or wants to begin a new fiction writing project from scratch. NOT for a sequel or prequel (use series-continuity), or for finding the idea before a project exists (use premise-workshop). ",
+      "intro": "Initialize a new story project with a structured markdown folder layout. Creates the story bible, registries, scene tracking, continuity state, glossary, worldbuilding folders, plot structure, and chapter tracker - all as cross-referenced markdown files with YAML frontmatter. - Starting a new story, book, or fiction project - Setting up the folder structure for an existing story idea - NOT for adding to an existing story project (use the domain-specific skills instead)",
+      "headings": [
+        {
+          "line": 21,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 23,
+          "text": "1. Ask for basic story information (if a `premise-workshop` session produced a premise, logline, genre, and form, reuse them rather than asking again):"
+        },
+        {
+          "line": 25,
+          "text": "- Form: `novel`, `novella`, `novelette`, `short-story`, `flash`, `serial`, `picture-book`, or `chapter-book`. Without `--form`, `story init` writes no `form` and no `target-words`, so if the user doesn't choose, pass `--form novel`"
+        },
+        {
+          "line": 26,
+          "text": "- Genre and sub-genre"
+        },
+        {
+          "line": 27,
+          "text": "- Brief synopsis (2-3 sentences)"
+        },
+        {
+          "line": 28,
+          "text": "- Setting era/time period"
+        },
+        {
+          "line": 29,
+          "text": "- Key themes (2-4)"
+        },
+        {
+          "line": 30,
+          "text": "- POV style (first-person, third-person-limited, third-person-omniscient)"
+        },
+        {
+          "line": 31,
+          "text": "- Tense (past, present, future, mixed)"
+        },
+        {
+          "line": 32,
+          "text": "- Language the book is written in, as a BCP 47 tag: `en`, `en-GB`, `fr`, `es-MX`, `pt-BR`, `de`, `ja`, `zh-Hans`. Add a region only when it matters (spelling, punctuation, or market). If the user writes to you in a language other than English, confir"
+        },
+        {
+          "line": 62,
+          "text": "2. Draft a working premise:"
+        },
+        {
+          "line": 66,
+          "text": "3. Present a summary of what was created and suggest next steps:"
+        },
+        {
+          "line": 67,
+          "text": "- \"Workshop the premise\" (triggers premise-workshop skill) if the premise is still a guess"
+        },
+        {
+          "line": 68,
+          "text": "- \"Add your first character\" (triggers character-management skill)"
+        },
+        {
+          "line": 69,
+          "text": "- \"Start worldbuilding\" (triggers worldbuilding skill)"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 3,
+          "text": "description: This skill should be used when the user asks to \"start a new story\", \"initialize a story project\", \"create a story\", \"new book\", \"set up a story\", or wants to begin a new fiction writing project from scratch. NOT for a sequel or prequel (use series-continuity), or for finding the idea before a project exists (use premise-workshop)."
+        },
+        {
+          "line": 16,
+          "text": "- NOT for adding to an existing story project (use the domain-specific skills instead)"
+        },
+        {
+          "line": 17,
+          "text": "- NOT for a sequel, prequel, or companion to an existing book: use `series-continuity`, which links the projects and carries canon across"
+        },
+        {
+          "line": 18,
+          "text": "- NOT for finding the idea itself: when the user has only a vague notion (\"something about lighthouses\"), several competing ideas, or no premise yet, run the `premise-workshop` skill first, then return here with the chosen premise, form, and genre"
+        },
+        {
+          "line": 32,
+          "text": "- Language the book is written in, as a BCP 47 tag: `en`, `en-GB`, `fr`, `es-MX`, `pt-BR`, `de`, `ja`, `zh-Hans`. Add a region only when it matters (spelling, punctuation, or market). If the user writes to you in a language other than English, confirm rather than assume. Default `en`"
+        },
+        {
+          "line": 52,
+          "text": "`init` also writes a `.gitignore` listing `dist/` (build output), `.story.lock`, leftover `.*.story-*.tmp` and `.story-*.tmp` files, and OS and editor swap files, but only when the project has none. It never edits an existing `.gitignore`; if it prints `note: .gitignore was kept and does not ignore dist/`, tell the user and offer to add a `dist/` line (or remove a `!dist/...` negation)."
+        }
+      ],
+      "source_lines": 92
+    },
+    {
+      "id": "WM-X0168",
+      "repo": "danjdewhurst/story-skills",
+      "path": "skills/story-maintenance/SKILL.md",
+      "url": "https://github.com/danjdewhurst/story-skills/blob/main/skills/story-maintenance/SKILL.md",
+      "sha": "b0a518de2dbf8f3e90349352a7672a7970eec5ec",
+      "status": "OK",
+      "description": "This skill should be used when the user asks to \"validate\", \"reindex\", \"repair registries\", \"check links\", \"run the continuity, pacing, clue, voice, or name checks\", \"count words\", \"summarize a story project\", \"import an existing manuscript\", \"export a manuscript\", \"run a build\", \"generate a diagram\", \"record revision-pass status with `story passes`\", \"run the story CLI\", or wants deterministic maintenance on a Story Skills markdown project. It runs the CLI and reads its output; NOT for judging a finding or revising the story to fix it (use revision-continuity for continuity errors and revision passes, plot-structure for pacing, voice-style for voices and prose, genre-craft for clues and fair play), or for sharing a review copy with readers (use feedback-triage). ",
+      "intro": "Run deterministic maintenance for Story Skills projects. Use the CLI for structure validation, registry rebuilds, word counts, link checks, continuity checks, project reports, next-action reports, pacing, clue, voice, and name checks, revision-pass tracking, Mermaid diagrams, schema migration, entity helpers, manuscript import, and manuscript export and builds. The creative skills still own story decisions; this skill handles mechanical consistency. It runs a check and reports what it found, and fixes mechanical problems such as broken references and stale registries; deciding what a finding means for the story, and revising the story to fix it, belongs to revision-continuity, plot-structure, voice-style, or genre-craft. Prefer the first av",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 18,
+          "text": "3. `node <checkout>/bin/story.js <command>` - only when the user names a Story Skills repository checkout or you are working in one, where `<checkout>` is its path"
+        },
+        {
+          "line": 53,
+          "text": "- `snapshot --restore <name>` only when the user asks to go back to a snapshot. It deletes every project markdown file the snapshot lacks, and removes (`rmdir`) the folders that leaves empty, so show them the `--dry-run` first and restore only with their approval. It saves the project as `before-restore-<id>-<n>` before changing anything and reindexes after; pass on the undo command it prints, then run `story validate`."
+        },
+        {
+          "line": 80,
+          "text": "- `export` only when the user asks for a combined manuscript at a specific path; it includes front and back matter"
+        }
+      ],
+      "source_lines": 111
+    },
+    {
+      "id": "WM-X0169",
+      "repo": "danjdewhurst/story-skills",
+      "path": "skills/submission/SKILL.md",
+      "url": "https://github.com/danjdewhurst/story-skills/blob/main/skills/submission/SKILL.md",
+      "sha": "9c43497b925d82e9c4eafb2a5d5e9deee665bbe4",
+      "status": "OK",
+      "description": "This skill should be used when the user asks to \"write a query letter\", \"query\", \"querying\", \"pitch\", \"blurb\", \"back cover copy\", \"jacket copy\", \"comp titles\", \"comparable titles\", \"synopsis for agents\", \"submit to agents\", \"submission tracker\", \"self-publishing description\", \"retailer description\", \"ready to query\", \"submission readiness check\", \"submit a short story\", \"magazine submission\", \"short-fiction markets\", \"simultaneous submission\", \"reprint rights\", \"order a short story collection\", or wants to prepare and track a finished manuscript's submission to agents, publishers, magazines, anthologies, or retailers. NOT for pitching a series of several books (use series-continuity), or self-publishing production, metadata, or book rights deals (use publishing). The blurb, retailer description, and the rights a short-fiction market buys, such as reprint rights, stay here. ",
+      "intro": "Get a finished manuscript out the door. This skill checks submission readiness, drafts the submission package (query letter, pitch, synopsis, blurb, comp titles), builds the manuscript in submission format, and keeps a tracker of where the book has gone. Package files live under `submission/`",
+      "headings": [
+        {
+          "line": 17,
+          "text": "## Prerequisites",
+          "depth": 2
+        },
+        {
+          "line": 74,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 25,
+          "text": "## Language And Market"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 76,
+          "text": "### 1. Readiness check"
+        },
+        {
+          "line": 90,
+          "text": "1. `story check .` (validate, links, and continuity) has no errors. List"
+        },
+        {
+          "line": 92,
+          "text": "2. `story prose .` shows no avoided spellings, and the user has reviewed"
+        },
+        {
+          "line": 95,
+          "text": "3. No `[TODO` markers remain in chapter prose. `story validate` warns about"
+        },
+        {
+          "line": 97,
+          "text": "4. Open questions and planted promises are resolved, or deliberately left"
+        },
+        {
+          "line": 110,
+          "text": "- code: complete-with-open-promise"
+        },
+        {
+          "line": 120,
+          "text": "5. Every chapter has `status: revised`, `final`, or `complete`. List any"
+        },
+        {
+          "line": 122,
+          "text": "6. The total word count sits inside the range for the category in"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 50,
+          "text": "- NOT for self-publishing production (ISBNs, retailer metadata, print"
+        },
+        {
+          "line": 54,
+          "text": "- NOT for pitching a series of several books or writing its series overview"
+        },
+        {
+          "line": 56,
+          "text": "- NOT for revising the manuscript itself (use `revision-continuity`)"
+        },
+        {
+          "line": 57,
+          "text": "- NOT for reader feedback rounds (use `feedback-triage`)"
+        }
+      ],
+      "source_lines": 322
+    },
+    {
+      "id": "WM-X0171",
+      "repo": "danjdewhurst/story-skills",
+      "path": "skills/verse-craft/SKILL.md",
+      "url": "https://github.com/danjdewhurst/story-skills/blob/main/skills/verse-craft/SKILL.md",
+      "sha": "b7d694f42c22f283acad1050d644b0b01ca15da6",
+      "status": "OK",
+      "description": "This skill should be used when the user asks to \"write a poem\", \"write a limerick\", \"write a sonnet\", \"haiku\", \"villanelle\", \"ballad\", \"song lyrics\", \"a song for my character\", \"a rhyme\", \"rhyming couplets\", \"does this scan\", \"check the meter\", \"fix the rhythm of this poem\", \"rhyme scheme\", \"iambic pentameter\", \"a prophecy in verse\", \"a nursery rhyme\", \"rhyming picture book\", or wants verse written, scanned, or revised, whether inside a story project or as a standalone poem. NOT for accidental rhymes in prose (use line-editing) or permissions for quoting someone else's poem or song lyrics (use editorial-review). ",
+      "intro": "Write, scan, and revise verse: fixed forms such as the limerick, sonnet, haiku, and villanelle; ballads and song lyrics; rhyming picture-book text; and verse that lives inside a story (a character's song, a prophecy, a skipping rhyme). Every claim that a line scans is shown, not",
+      "headings": [
+        {
+          "line": 18,
+          "text": "## Prerequisites",
+          "depth": 2
+        },
+        {
+          "line": 60,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 25,
+          "text": "## When to Use"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 62,
+          "text": "### 1. Mode and constraints"
+        },
+        {
+          "line": 64,
+          "text": "1. Work out the mode: **write** new verse, **critique** a poem, **fix** a"
+        },
+        {
+          "line": 66,
+          "text": "2. Pin the constraints, asking only for what the request leaves open:"
+        },
+        {
+          "line": 70,
+          "text": "3. For story verse, read `story.md` (era, setting, tone), the speaker's"
+        },
+        {
+          "line": 79,
+          "text": "4. Settle the language. For story verse it is `language` in `story.md`"
+        },
+        {
+          "line": 89,
+          "text": "5. For English, ask which accent the verse is scanned in when it matters"
+        },
+        {
+          "line": 95,
+          "text": "1. Draft for sense first: every line must say something a reader would"
+        },
+        {
+          "line": 97,
+          "text": "2. Choose rhyme words that carry meaning; build the line toward the rhyme"
+        },
+        {
+          "line": 100,
+          "text": "3. Keep the syntax natural. Read each line as a sentence: if nobody would"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 34,
+          "text": "- NOT for unintended rhymes or jingles in prose (use `line-editing`)"
+        },
+        {
+          "line": 35,
+          "text": "- NOT for permissions when quoting another writer's poem or lyrics (use"
+        },
+        {
+          "line": 37,
+          "text": "- NOT for a poetry collection as a story project: the CLI checks fiction"
+        },
+        {
+          "line": 72,
+          "text": "and the chapter it goes in. Verse must not state canon the project"
+        },
+        {
+          "line": 170,
+          "text": "Use `node <checkout>/bin/story.js` instead only when the user names a"
+        }
+      ],
+      "source_lines": 195
+    },
+    {
+      "id": "WM-X0173",
+      "repo": "danjdewhurst/story-skills",
+      "path": "skills/worldbuilding/SKILL.md",
+      "url": "https://github.com/danjdewhurst/story-skills/blob/main/skills/worldbuilding/SKILL.md",
+      "sha": "2aa2f3e36ed46dd194370258346837c6fe6281e5",
+      "status": "OK",
+      "description": "This skill should be used when the user asks to \"create a location\", \"add a location\", \"magic system\", \"political system\", \"build the world\", \"add culture\", \"world history\", \"technology system\", \"religion\", \"economy\", \"map\", \"travel times\", \"routes\", \"calendar\", \"moons\", \"seasons\", \"naming language\", \"conlang names\", \"trade routes\", \"supply lines\", \"magic cost\", \"add a glossary term\", \"glossary\", \"invented word\", or wants to develop any aspect of a story's world and setting. NOT for a glossary for translators (use adaptation). ",
+      "intro": "Create and manage world elements for a story project. Locations, systems (magic, politics, technology, etc.), factions, and artifacts are stored as markdown files in the `worldbuilding/` directory with YAML frontmatter, and glossary terms for the world's invented words in `glossary/terms/`. All elements cross-reference characters and other story elements. A story project must already exist (created via the story-init skill). Verify by checking for `story.md` in the project root. 1. Read `story.md` for genre, era, and tone context 2. Read `worldbuilding/_index.md` for existing locations and systems",
+      "headings": [
+        {
+          "line": 12,
+          "text": "## Prerequisites",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 16,
+          "text": "## Creating a Location"
+        }
+      ],
+      "process_evidence": [],
+      "output_evidence": [
+        {
+          "line": 90,
+          "text": "- Description and recognition details"
+        },
+        {
+          "line": 91,
+          "text": "- Function, constraints, and costs"
+        },
+        {
+          "line": 92,
+          "text": "- History and prior owners"
+        },
+        {
+          "line": 93,
+          "text": "- Current owner/location state"
+        },
+        {
+          "line": 96,
+          "text": "1. Save to `worldbuilding/artifacts/{name-kebab}.md`"
+        },
+        {
+          "line": 97,
+          "text": "2. Leave the Artifacts table in `worldbuilding/_index.md` to `story reindex .`; never add a row by hand"
+        },
+        {
+          "line": 98,
+          "text": "3. If an owner or location is listed, verify those files exist and cross-reference back"
+        },
+        {
+          "line": 99,
+          "text": "4. When CLI access is available, run `story reindex .`, `story wordcount . --write`, and `story check .`"
+        },
+        {
+          "line": 101,
+          "text": "## Adding A Glossary Term"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 175
+    },
+    {
+      "id": "WM-X0175",
+      "repo": "getsentry/skills",
+      "path": "skills/claude-settings-audit/SKILL.md",
+      "url": "https://github.com/getsentry/skills/blob/main/skills/claude-settings-audit/SKILL.md",
+      "sha": "bb50ae18d361f26ceecadda878f57ba613cedf7b",
+      "status": "OK",
+      "description": "Analyze a repository to generate recommended Claude Code settings.json permissions. Use when setting up a new project, auditing existing settings, or determining which read-only bash commands to allow. Detects tech stack, build tools, and monorepo structure. ",
+      "intro": "Analyze this repository and generate recommended Claude Code `settings.json` permissions for read-only commands. Run these commands to detect the repository structure: find . -maxdepth 2 \\( -name \"*.toml\" -o -name \"*.json\" -o -name \"*.lock\" -o -name \"*.yaml\" -o -name \"*.yml\" -o -name \"Makefile\" -o -name \"Dockerfile\" -o -name \"*.tf\" \\) 2>/dev/null | head -50 Check for these indicator files:",
+      "headings": [
+        {
+          "line": 10,
+          "text": "## Phase 1: Detect Tech Stack",
+          "depth": 2
+        },
+        {
+          "line": 33,
+          "text": "## Phase 2: Detect Services",
+          "depth": 2
+        },
+        {
+          "line": 49,
+          "text": "## Phase 3: Check Existing Settings",
+          "depth": 2
+        },
+        {
+          "line": 55,
+          "text": "## Phase 4: Generate Recommendations",
+          "depth": 2
+        },
+        {
+          "line": 252,
+          "text": "## Output Format",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 33,
+          "text": "## Phase 2: Detect Services"
+        },
+        {
+          "line": 44,
+          "text": "- `package.json` → check `dependencies` and `devDependencies`"
+        },
+        {
+          "line": 45,
+          "text": "- `pyproject.toml` → check `[project.dependencies]` or `[tool.poetry.dependencies]`"
+        },
+        {
+          "line": 46,
+          "text": "- `Gemfile` → check gem names"
+        },
+        {
+          "line": 47,
+          "text": "- `Cargo.toml` → check `[dependencies]`"
+        },
+        {
+          "line": 49,
+          "text": "## Phase 3: Check Existing Settings"
+        },
+        {
+          "line": 55,
+          "text": "## Phase 4: Generate Recommendations"
+        },
+        {
+          "line": 59,
+          "text": "### Baseline Commands (Always Include)"
+        },
+        {
+          "line": 96,
+          "text": "### Stack-Specific Commands"
+        },
+        {
+          "line": 100,
+          "text": "#### Python (if any Python files or config detected)"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 256,
+          "text": "1. **Summary Table** - What was detected"
+        },
+        {
+          "line": 257,
+          "text": "2. **Recommended settings.json** - Complete JSON ready to copy"
+        },
+        {
+          "line": 258,
+          "text": "3. **MCP Suggestions** - If applicable"
+        },
+        {
+          "line": 259,
+          "text": "4. **Merge Instructions** - If existing settings found"
+        },
+        {
+          "line": 264,
+          "text": "## Detected Tech Stack"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 322
+    },
+    {
+      "id": "WM-X0176",
+      "repo": "getsentry/skills",
+      "path": "skills/code-review/SKILL.md",
+      "url": "https://github.com/getsentry/skills/blob/main/skills/code-review/SKILL.md",
+      "sha": "621007b4da6639b9574e3e0a18054df73a5de807",
+      "status": "OK",
+      "description": "Perform code reviews following Sentry engineering practices. Use when reviewing pull requests, examining code changes, or providing feedback on code quality. Covers security, performance, testing, and design review. ",
+      "intro": "Follow these guidelines when reviewing code for Sentry projects. Look for these issues in code changes: - **Runtime errors**: Potential exceptions, null pointer issues, out-of-bounds access - **Performance**: Unbounded O(n²) operations, N+1 queries, unnecessary allocations",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 103
+    },
+    {
+      "id": "WM-X0178",
+      "repo": "getsentry/skills",
+      "path": "skills/document-api-endpoint/SKILL.md",
+      "url": "https://github.com/getsentry/skills/blob/main/skills/document-api-endpoint/SKILL.md",
+      "sha": "ba51054fc733a50c7429e9ecbd2eedad1419c28a",
+      "status": "OK",
+      "description": "Document and type a Sentry API endpoint. Write or fix @extend_schema decorators, specify response TypedDicts, type request parameters, correct type drift between the declared schema and the runtime response, and validate the generated spec. Use when asked to \"document an endpoint\", \"add OpenAPI docs\", \"add/fix @extend_schema\", \"type an endpoint response\", \"fix the response type\", \"fix type drift\", \"reuse a response type\", \"split an overloaded endpoint\", \"specify the response schema\", \"add a TypedDict response\", \"migrate a legacy api-docs path\", \"fix a parameter type\", or \"make an endpoint public\" / \"promote an endpoint\" (promotion is one section here). ",
+      "intro": "# Document & Type a Sentry API Endpoint Add or fix OpenAPI docs for a Sentry endpoint with drf-spectacular. Full reference is at https://develop.sentry.dev/backend/api/public/, the most useful section to you will be https://develop.sentry.dev/backend/api/public/#5-method-decorator. This skill captures the non-obvious lessons on top of it. Most of the work is making the declared schema match what the endpoint actually returns. Before documenting, identify which endpoint class serves the route and what it does; the MCP tool that calls it is usually the fastest way to confirm its behavior. Promoting a PRIVATE/EXPERIMENTAL endpoint to PUBLIC is one application (see below). 1. Class-level `@extend_schema(tags=[...])` — use the closest existing `",
+      "headings": [
+        {
+          "line": 10,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 12,
+          "text": "1. Class-level `@extend_schema(tags=[...])` — use the closest existing `OPENAPI_TAGS` entry."
+        },
+        {
+          "line": 13,
+          "text": "2. Method-level `@extend_schema(operation_id=..., parameters=[...], responses={...}, examples=...)`."
+        },
+        {
+          "line": 14,
+          "text": "3. Reuse `src/sentry/apidocs/parameters.py` and `examples/*.py`; ensure `owner = ApiOwner.<TEAM>` is set."
+        },
+        {
+          "line": 15,
+          "text": "4. If a legacy `api-docs/paths/**/*.json` covers the path, remove it (see lesson 4)."
+        },
+        {
+          "line": 16,
+          "text": "5. Validate, then verify against the live endpoint (lesson 1)."
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 54
+    },
+    {
+      "id": "WM-X0179",
+      "repo": "getsentry/skills",
+      "path": "skills/gh-review-requests/SKILL.md",
+      "url": "https://github.com/getsentry/skills/blob/main/skills/gh-review-requests/SKILL.md",
+      "sha": "58bd37203e6246413de7c13f9729bfcbb279d523",
+      "status": "OK",
+      "description": "Fetch unread GitHub notifications for open PRs where review is requested from a specified team or opened by a team member. Use when asked to \"find PRs I need to review\", \"show my review requests\", \"what needs my review\", \"fetch GitHub review requests\", or \"check team review queue\". ",
+      "intro": "Fetch unread `review_requested` notifications for open (unmerged) PRs, filtered by a GitHub team. **Requires**: GitHub CLI (`gh`) authenticated. **Requires**: The `uv` CLI for python package management, install guide at https://docs.astral.sh/uv/getting-started/installation/ If the user has not specified a team, ask:",
+      "headings": [
+        {
+          "line": 15,
+          "text": "## Step 1: Identify the Team",
+          "depth": 2
+        },
+        {
+          "line": 23,
+          "text": "## Step 2: Run the Script",
+          "depth": 2
+        },
+        {
+          "line": 35,
+          "text": "### Script output",
+          "depth": 3
+        },
+        {
+          "line": 58,
+          "text": "## Step 3: Present Results",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [
+        {
+          "line": 55,
+          "text": "- `\"review requested from: <Team Name>\"` — the team is a requested reviewer"
+        },
+        {
+          "line": 56,
+          "text": "- `\"opened by: <login>\"` — the PR author is a team member"
+        },
+        {
+          "line": 58,
+          "text": "## Step 3: Present Results"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 80
+    },
+    {
+      "id": "WM-X0180",
+      "repo": "getsentry/skills",
+      "path": "skills/pr-writer/SKILL.md",
+      "url": "https://github.com/getsentry/skills/blob/main/skills/pr-writer/SKILL.md",
+      "sha": "ce4da4c91a7308fa61b40b838aeee559cad2fd41",
+      "status": "OK",
+      "description": "Create or refresh reviewer-facing PR titles and descriptions. Use when opening a PR, updating its title or body, or preparing branch changes for review. ",
+      "intro": "Write the PR body as a cover note for reviewers, not a changelog, template, validation log, or file-by-file summary. Requires authenticated `gh`. Inspect the current branch, working tree, PR, base branch, commits, and full diff:",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 40,
+          "text": "- Explain motivation, risk, tradeoffs, migration, or review focus only when"
+        },
+        {
+          "line": 56,
+          "text": "- Use `!` only when the change breaks an external contract, and explain the"
+        },
+        {
+          "line": 60,
+          "text": "- Keep an existing title only when it still describes the whole diff."
+        },
+        {
+          "line": 87,
+          "text": "Use an aid only when it reduces reviewer reconstruction work:"
+        },
+        {
+          "line": 108,
+          "text": "- Use issue references only when verified from user input, branch names,"
+        }
+      ],
+      "source_lines": 161
+    },
+    {
+      "id": "WM-X0182",
+      "repo": "getsentry/skills",
+      "path": "skills/skill-writer/SKILL.md",
+      "url": "https://github.com/getsentry/skills/blob/main/skills/skill-writer/SKILL.md",
+      "sha": "8aba371f5f4d8005fcbcf3ab3aa68550c5687d53",
+      "status": "OK",
+      "description": "Create, synthesize, and iteratively improve agent skills following the Agent Skills specification. Use when asked to \"create a skill\", \"write a skill\", \"synthesize sources into a skill\", \"improve a skill from positive/negative examples\", \"update a skill\", or \"maintain skill docs and registration\". Handles source capture, precision passes, authoring, registration, and validation. ",
+      "intro": "Use this as the single canonical workflow for skill creation and improvement. Primary success condition: maximize high-value input coverage before authoring while minimizing wasted runtime tokens. Follow the workflow steps in order. Load only the reference files required for the step you are on. `SKILL.md` is the primary router: every bundled reference file should be flat under `references/` and listed here with a direct \"open when...\" reason.",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Core Workflow References",
+          "depth": 2
+        },
+        {
+          "line": 45,
+          "text": "## Workflow Mechanic References",
+          "depth": 2
+        },
+        {
+          "line": 76,
+          "text": "## Step 1: Resolve target, path, and shape",
+          "depth": 2
+        },
+        {
+          "line": 87,
+          "text": "## Step 2: Run synthesis when needed",
+          "depth": 2
+        },
+        {
+          "line": 100,
+          "text": "## Step 3: Run iteration first when improving from outcomes/examples",
+          "depth": 2
+        },
+        {
+          "line": 112,
+          "text": "## Step 4: Author or update skill artifacts",
+          "depth": 2
+        },
+        {
+          "line": 133,
+          "text": "## Step 5: Optimize description quality",
+          "depth": 2
+        },
+        {
+          "line": 141,
+          "text": "## Step 6: Register and validate",
+          "depth": 2
+        },
+        {
+          "line": 149,
+          "text": "## Output format",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 35,
+          "text": "## Artifact Layout References"
+        },
+        {
+          "line": 56,
+          "text": "## Claude Code References"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 45,
+          "text": "## Workflow Mechanic References"
+        },
+        {
+          "line": 116,
+          "text": "1. Write or update `SKILL.md` in imperative voice with trigger-rich description."
+        },
+        {
+          "line": 117,
+          "text": "2. Keep `SKILL.md` as the runtime router, not an encyclopedia."
+        },
+        {
+          "line": 118,
+          "text": "3. Run the pre-edit precision check in `references/authoring-path.md` before creating new sections or files."
+        },
+        {
+          "line": 119,
+          "text": "4. Read `references/reference-architecture.md` before adding bulk instructions or new reference files."
+        },
+        {
+          "line": 120,
+          "text": "5. Create or update `SPEC.md` using `references/spec-template.md` when creating a new skill or materially changing its contract."
+        },
+        {
+          "line": 121,
+          "text": "6. Create focused reference files, scripts, and assets only when each one has a clear \"open when...\" reason and cannot be handled by tightening an existing file."
+        },
+        {
+          "line": 122,
+          "text": "7. If you add a bundled reference file, add a direct routing entry for it in this `SKILL.md`."
+        },
+        {
+          "line": 123,
+          "text": "8. Prefer checklists, tables, templates, and input/output examples over explanatory prose."
+        }
+      ],
+      "boundary_evidence": [
+        {
+          "line": 96,
+          "text": "6. Load example profiles only when they add concrete depth for the selected class or shape."
+        },
+        {
+          "line": 121,
+          "text": "6. Create focused reference files, scripts, and assets only when each one has a clear \"open when...\" reason and cannot be handled by tightening an existing file."
+        }
+      ],
+      "source_lines": 157
+    },
+    {
+      "id": "WM-X0183",
+      "repo": "getsentry/skills",
+      "path": "skills/sred-work-summary/SKILL.md",
+      "url": "https://github.com/getsentry/skills/blob/main/skills/sred-work-summary/SKILL.md",
+      "sha": "dde48210c6588ff3806ab10f788b773690222a5b",
+      "status": "OK",
+      "description": "Go back through the previous year of work and create a Notion doc that groups relevant links into projects that can then be documented as SRED projects. ",
+      "intro": "Collect all the Github PRs, Notion docs and Linear tickets a person completed in a given year. Group the links from all of those into projects. Put everything into a private Notion document and return a link to that document. Before starting make sure that Github, Notion and Linear can be accessed. Notion and Linear should be connected using an MCP. Github can be connected with an MCP, but if you have access to the `gh` CLI tool, you can use that instead. If any of these can't be accessed, prompt the user to grant access before proceeding. The output of this command is the current year.",
+      "headings": [
+        {
+          "line": 10,
+          "text": "## Prerequisites",
+          "depth": 2
+        },
+        {
+          "line": 16,
+          "text": "## Process",
+          "depth": 2
+        },
+        {
+          "line": 18,
+          "text": "### Step 1",
+          "depth": 3
+        },
+        {
+          "line": 28,
+          "text": "### Step 2",
+          "depth": 3
+        },
+        {
+          "line": 56,
+          "text": "### Step 3",
+          "depth": 3
+        },
+        {
+          "line": 65,
+          "text": "### Step 4",
+          "depth": 3
+        },
+        {
+          "line": 85,
+          "text": "### Step 5",
+          "depth": 3
+        },
+        {
+          "line": 95,
+          "text": "### Step 6",
+          "depth": 3
+        },
+        {
+          "line": 127,
+          "text": "### Step 7",
+          "depth": 3
+        },
+        {
+          "line": 131,
+          "text": "### Step 8",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 142
+    },
+    {
+      "id": "WM-X0184",
+      "repo": "github/awesome-copilot",
+      "path": "skills/acquire-codebase-knowledge/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/acquire-codebase-knowledge/SKILL.md",
+      "sha": "0ef102e7a65fecd906998e2b03f86cc435870a46",
+      "status": "OK",
+      "description": "Use this skill when the user explicitly asks to map, document, or onboard into an existing codebase. Trigger for prompts like \"map this codebase\", \"document this architecture\", \"onboard me to this repo\", or \"create codebase docs\". Do not trigger for routine feature implementation, bug fixes, or narrow code edits unless the user asks for repository-level discovery.' ",
+      "intro": "Produces seven populated documents in `docs/codebase/` covering everything needed to work effectively on the project. Only document what is verifiable from files or terminal output — never infer or assume. Before finishing, all of the following must be true: 1. Exactly these files exist in `docs/codebase/`: `STACK.md`, `STRUCTURE.md`, `ARCHITECTURE.md`, `CONVENTIONS.md`, `INTEGRATIONS.md`, `TESTING.md`, `CONCERNS.md`. 2. Every claim is traceable to source files, config, or terminal output.",
+      "headings": [
+        {
+          "line": 22,
+          "text": "## Output Contract (Required)",
+          "depth": 2
+        },
+        {
+          "line": 32,
+          "text": "## Workflow",
+          "depth": 2
+        },
+        {
+          "line": 52,
+          "text": "### Phase 1: Scan and Read Intent",
+          "depth": 3
+        },
+        {
+          "line": 68,
+          "text": "### Phase 2: Investigate",
+          "depth": 3
+        },
+        {
+          "line": 74,
+          "text": "### Phase 3: Populate Templates",
+          "depth": 3
+        },
+        {
+          "line": 88,
+          "text": "### Phase 4: Validate, Repair, Verify",
+          "depth": 3
+        },
+        {
+          "line": 141,
+          "text": "## Enhanced Scan Output Sections",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 37,
+          "text": "- [ ] Phase 1: Run scan, read intent documents"
+        },
+        {
+          "line": 38,
+          "text": "- [ ] Phase 2: Investigate each documentation area"
+        },
+        {
+          "line": 39,
+          "text": "- [ ] Phase 3: Populate all seven docs in docs/codebase/"
+        },
+        {
+          "line": 40,
+          "text": "- [ ] Phase 4: Validate docs, present findings, resolve all [ASK USER] items"
+        },
+        {
+          "line": 43,
+          "text": "## Focus Area Mode"
+        },
+        {
+          "line": 54,
+          "text": "1. Run the scan script from the target project root:"
+        },
+        {
+          "line": 65,
+          "text": "2. Search for `PRD`, `TRD`, `README`, `ROADMAP`, `SPEC`, `DESIGN` files and read them."
+        },
+        {
+          "line": 66,
+          "text": "3. Summarise the stated project intent before reading any source code."
+        },
+        {
+          "line": 68,
+          "text": "### Phase 2: Investigate"
+        },
+        {
+          "line": 74,
+          "text": "### Phase 3: Populate Templates"
+        },
+        {
+          "line": 78,
+          "text": "1. [STACK.md](assets/templates/STACK.md) — language, runtime, frameworks, all dependencies"
+        },
+        {
+          "line": 79,
+          "text": "2. [STRUCTURE.md](assets/templates/STRUCTURE.md) — directory layout, entry points, key files"
+        },
+        {
+          "line": 80,
+          "text": "3. [ARCHITECTURE.md](assets/templates/ARCHITECTURE.md) — layers, patterns, data flow"
+        },
+        {
+          "line": 81,
+          "text": "4. [CONVENTIONS.md](assets/templates/CONVENTIONS.md) — naming, formatting, error handling, imports"
+        },
+        {
+          "line": 82,
+          "text": "5. [INTEGRATIONS.md](assets/templates/INTEGRATIONS.md) — external APIs, databases, auth, monitoring"
+        },
+        {
+          "line": 83,
+          "text": "6. [TESTING.md](assets/templates/TESTING.md) — frameworks, file organization, mocking strategy"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 26,
+          "text": "1. Exactly these files exist in `docs/codebase/`: `STACK.md`, `STRUCTURE.md`, `ARCHITECTURE.md`, `CONVENTIONS.md`, `INTEGRATIONS.md`, `TESTING.md`, `CONCERNS.md`."
+        },
+        {
+          "line": 27,
+          "text": "2. Every claim is traceable to source files, config, or terminal output."
+        },
+        {
+          "line": 28,
+          "text": "3. Unknowns are marked as `[TODO]`; intent-dependent decisions are marked `[ASK USER]`."
+        },
+        {
+          "line": 29,
+          "text": "4. Every document includes a short \"evidence\" list with concrete file paths."
+        },
+        {
+          "line": 30,
+          "text": "5. Final response includes numbered `[ASK USER]` questions and intent-vs-reality divergences."
+        },
+        {
+          "line": 145,
+          "text": "- **CODE METRICS** — Total files, lines of code by language, largest files (complexity signals)"
+        },
+        {
+          "line": 146,
+          "text": "- **CI/CD PIPELINES** — Detected GitHub Actions, GitLab CI, Jenkins, CircleCI, etc."
+        },
+        {
+          "line": 147,
+          "text": "- **CONTAINERS & ORCHESTRATION** — Docker, Docker Compose, Kubernetes, Vagrant configs"
+        },
+        {
+          "line": 148,
+          "text": "- **SECURITY & COMPLIANCE** — Snyk, Dependabot, SECURITY.md, SBOM, security policies"
+        }
+      ],
+      "boundary_evidence": [
+        {
+          "line": 86,
+          "text": "Use `[TODO]` for anything that cannot be determined from code. Use `[ASK USER]` where the right answer requires team intent."
+        },
+        {
+          "line": 173,
+          "text": "- Extended mode: add optional sections only when the repo complexity justifies them."
+        }
+      ],
+      "source_lines": 174
+    },
+    {
+      "id": "WM-X0185",
+      "repo": "github/awesome-copilot",
+      "path": "skills/acreadiness-generate-instructions/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/acreadiness-generate-instructions/SKILL.md",
+      "sha": "6be9341aaa448670594ee22671272e801e3ed574",
+      "status": "OK",
+      "description": "Generate tailored AI agent instruction files via AgentRC instructions command. Produces .github/copilot-instructions.md (default, recommended for Copilot in VS Code) plus optional per-area .instructions.md files with applyTo globs for monorepos. Use after running /acreadiness-assess to close gaps in the AI Tooling pillar.' ",
+      "intro": "# /acreadiness-generate-instructions — write AI agent instructions Use this skill whenever the user wants to **create**, **regenerate**, or **refresh** their custom instructions for AI coding agents (Copilot, Claude, etc.). This is the *Generate* step in AgentRC's **Measure → Generate → Maintain** loop and the single highest-leverage action for the **AI Tooling** pillar. VS Code recognises several instruction file types — AgentRC generates the most common ones: | `.github/copilot-instructions.md` | Always-on, whole workspace | **Default** — VS Code Copilot's native instruction file |",
+      "headings": [
+        {
+          "line": 11,
+          "text": "## Output options",
+          "depth": 2
+        },
+        {
+          "line": 65,
+          "text": "## Steps",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 67,
+          "text": "1. **Pick the target file**. **Default to `.github/copilot-instructions.md`.** Switch to `AGENTS.md` only if the user mentions multi-agent / Claude / Cursor support."
+        },
+        {
+          "line": 68,
+          "text": "2. **Always ask which strategy to use** — `flat` or `nested` — unless the user already specified one in their message or via `--strategy`. Present the trade-off briefly:"
+        },
+        {
+          "line": 69,
+          "text": "- **Flat** *(default)* — one `.github/copilot-instructions.md`. Simple, easy to review in a single PR. Best for small/medium repos with one stack."
+        },
+        {
+          "line": 70,
+          "text": "- **Nested** — hub `.github/copilot-instructions.md` + per-topic `.github/instructions/<topic>.instructions.md` files (each with an `applyTo` glob so VS Code only loads them when relevant). Best for large or multi-stack repos. Add `--claude-md` to al"
+        },
+        {
+          "line": 72,
+          "text": "3. **Detect monorepo areas** by reading `agentrc.config.json`. If areas exist, ask the user whether they want **per-area `.instructions.md` files with `applyTo`** in addition to the root file. Default to \"yes\" when `agentrc.config.json` declares area"
+        },
+        {
+          "line": 73,
+          "text": "4. **Run dry-run first** so the user can preview:"
+        },
+        {
+          "line": 77,
+          "text": "5. **Show a short summary** of what would change — files that would be created or overwritten, area count + their `applyTo` globs, model used (default `claude-sonnet-4.6`)."
+        },
+        {
+          "line": 78,
+          "text": "6. **On confirmation, run the same command without `--dry-run`** (and optionally `--force` if files already exist)."
+        },
+        {
+          "line": 79,
+          "text": "7. **Post-process layout for Copilot output**:"
+        },
+        {
+          "line": 80,
+          "text": "- **If `--output` ends in `copilot-instructions.md` and strategy is `nested`**: move/rewrite AgentRC's `.agents/<topic>.md` files to `.github/instructions/<topic>.instructions.md`. Add frontmatter to each file with an appropriate `applyTo` glob (see "
+        },
+        {
+          "line": 81,
+          "text": "- **If `--areas` was used**: also write `.github/instructions/<area>.instructions.md` for every area, using each area's `paths` from `agentrc.config.json` as the `applyTo` glob (override with `--apply-to` for single-area calls)."
+        },
+        {
+          "line": 82,
+          "text": "- **If `--output AGENTS.md`** was chosen: keep AgentRC's native `.agents/` layout for nested — agent-agnostic readers expect it there."
+        },
+        {
+          "line": 85,
+          "text": "### Topic `applyTo` defaults"
+        },
+        {
+          "line": 97,
+          "text": "8. **Verify** by reading the generated file(s) back and showing the user a 1-paragraph synopsis: stack detected, conventions captured, length, list of `.instructions.md` files with their globs."
+        },
+        {
+          "line": 98,
+          "text": "9. **Suggest next steps**:"
+        },
+        {
+          "line": 99,
+          "text": "- Re-run the `assess` skill to confirm the AI Tooling pillar score improved."
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 22,
+          "text": "## Strategies"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 108
+    },
+    {
+      "id": "WM-X0186",
+      "repo": "github/awesome-copilot",
+      "path": "skills/agent-governance/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/agent-governance/SKILL.md",
+      "sha": "a3c2501676c11fd8433c802b7f1c21d174ff6721",
+      "status": "OK",
+      "description": "Patterns and techniques for adding governance, safety, and trust controls to AI agent systems. Use this skill when: - Building AI agents that call external tools (APIs, databases, file systems) - Implementing policy-based access controls for agent tool usage - Adding semantic intent classification to detect dangerous prompts - Creating trust scoring systems for multi-agent workflows - Building audit trails for agent actions and decisions - Enforcing rate limits, content filters, or tool restrictions on agents - Working with any agent framework (PydanticAI, CrewAI, OpenAI Agents, LangChain, AutoGen)",
+      "intro": "Patterns for adding safety, trust, and policy enforcement to AI agent systems. Governance patterns ensure AI agents operate within defined boundaries — controlling which tools they can call, what content they can process, how much they can do, and maintaining accountability through audit trails. User Request → Intent Classification → Policy Check → Tool Execution → Audit Log                      ↓                      ↓               ↓",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 235,
+          "text": "raise PermissionError(f\"Tool '{tool_name}' requires human approval\")"
+        }
+      ],
+      "source_lines": 570
+    },
+    {
+      "id": "WM-X0187",
+      "repo": "github/awesome-copilot",
+      "path": "skills/ai-prompt-engineering-safety-review/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/ai-prompt-engineering-safety-review/SKILL.md",
+      "sha": "86d8622d384e77056c4065cd616cb9285131d946",
+      "status": "OK",
+      "description": "Comprehensive AI prompt engineering safety review and improvement prompt. Analyzes prompts for safety, bias, security vulnerabilities, and effectiveness while providing detailed improvement recommendations with extensive frameworks, testing methodologies, and educational content.' ",
+      "intro": "# AI Prompt Engineering Safety Review & Improvement You are an expert AI prompt engineer and safety specialist with deep expertise in responsible AI development, bias detection, security analysis, and prompt optimization. Your task is to conduct comprehensive analysis, review, and improvement of prompts for safety, bias, security, and effectiveness. Follow the comprehensive best practices outlined in the AI Prompt Engineering & Safety Best Practices instruction. Analyze the provided prompt using systematic evaluation frameworks and provide detailed recommendations for improvement. Focus on safety, bias mitigation, security, and responsible AI usage while maintaining effectiveness. Provide educational insights and actionable guidance for pro",
+      "headings": [
+        {
+          "line": 68,
+          "text": "## Output Format",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [
+        {
+          "line": 72,
+          "text": "### 🔍 **Prompt Analysis Report**"
+        },
+        {
+          "line": 78,
+          "text": "- **Primary Task:** [Code generation, documentation, analysis, etc.]"
+        },
+        {
+          "line": 79,
+          "text": "- **Complexity Level:** [Simple, Moderate, Complex]"
+        },
+        {
+          "line": 80,
+          "text": "- **Domain:** [Technical, Creative, Analytical, etc.]"
+        },
+        {
+          "line": 83,
+          "text": "- **Harmful Content Risk:** [Low/Medium/High] - [Specific concerns]"
+        },
+        {
+          "line": 84,
+          "text": "- **Bias Detection:** [None/Minor/Major] - [Specific bias types]"
+        },
+        {
+          "line": 85,
+          "text": "- **Privacy Risk:** [Low/Medium/High] - [Specific concerns]"
+        },
+        {
+          "line": 86,
+          "text": "- **Security Vulnerabilities:** [None/Minor/Major] - [Specific vulnerabilities]"
+        },
+        {
+          "line": 89,
+          "text": "- **Clarity:** [Score 1-5] - [Detailed assessment]"
+        }
+      ],
+      "boundary_evidence": [
+        {
+          "line": 187,
+          "text": "- **Dependencies:** [Required context or prerequisites]"
+        }
+      ],
+      "source_lines": 231
+    }
+  ]
+}
