@@ -1,0 +1,808 @@
+{
+  "idx": 14,
+  "records": [
+    {
+      "id": "WM-X0319",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "communication/meeting-transcription/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/communication/meeting-transcription/SKILL.md",
+      "sha": "95fc965d2f32d45ee410e92b969a1053e497c642",
+      "status": "OK",
+      "description": "Transcribe meeting audio with speaker diarization, generate structured summaries with action items, decisions, and follow-ups, and support multiple audio formats and languages. Use when the user requests meeting transcription or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to process meeting audio recordings into structured, actionable documents. The agent handles the full pipeline from raw audio input through speaker diarization, transcription, and intelligent summarization. The output includes a timestamped transcript with speaker labels, a concise summary of key discussion points, a list of decisions made, and clearly assigned action items with owners and deadlines. 1. **Ingest and validate the audio input.** Accept the meeting audio file and verify it is in a supported format: MP3, WAV, M4A, FLAC, OGG, or WebM. Check the file size, duration, and channel count (mono vs. stereo). If the audio is in a non-standard format, convert it to WAV 16kHz mono using FFmpeg or a similar p",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Ingest and validate the audio input.** Accept the meeting audio file and verify it is in a supported format: MP3, WAV, M4A, FLAC, OGG, or WebM. Check the file size, duration, and channel count (mono vs. stereo). If the audio is in a non-standard"
+        },
+        {
+          "line": 18,
+          "text": "2. **Preprocess the audio for quality.** Apply noise reduction to suppress background hum, keyboard clicks, and room echo. Normalize audio levels across the recording so that quiet speakers are boosted and loud segments are attenuated. If the recordi"
+        },
+        {
+          "line": 20,
+          "text": "3. **Perform speaker diarization.** Identify and label distinct speakers throughout the recording. Use voiceprint clustering to distinguish speakers even when they interrupt each other or speak in quick succession. Assign temporary labels (Speaker 1,"
+        },
+        {
+          "line": 22,
+          "text": "4. **Transcribe the audio to text.** Run the preprocessed, diarized audio through a speech-to-text engine (e.g., Whisper, Deepgram, Google Speech-to-Text). Produce a word-level or segment-level transcript with timestamps. Apply punctuation restoratio"
+        },
+        {
+          "line": 24,
+          "text": "5. **Generate the structured summary.** Analyze the full transcript to extract key discussion topics, decisions made, open questions, and action items. Group related discussion segments into thematic sections. For each action item, identify the owner"
+        },
+        {
+          "line": 26,
+          "text": "6. **Format and deliver the output.** Produce the final output in the requested format: Markdown, JSON, or plain text. Include both the full timestamped transcript and the structured summary as separate sections or files. If calendar integration is e"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 151
+    },
+    {
+      "id": "WM-X0320",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "communication/presentation-creation/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/communication/presentation-creation/SKILL.md",
+      "sha": "151074132bba152d52fa0ad27ed3d7debf811e38",
+      "status": "OK",
+      "description": "Create polished, audience-tailored presentations from outlines or documents, with support for Marp, reveal.js, Google Slides, and PPTX output formats. Use when the user requests presentation creation or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to transform raw content — outlines, documents, meeting notes, or data — into professional presentation slide decks. The agent applies slide design principles such as one idea per slide, visual hierarchy, and minimal text to produce decks that are clear, engaging, and presentation-ready. It supports multiple output formats including Marp Markdown, reveal.js HTML, Google Slides, and PPTX. 1. **Gather content and define the audience.** Collect the source material — an outline, a technical document, meeting notes, or a set of talking points. Identify the target audience (executives, engineers, customers, investors) and the presentation goal (inform, persuade, train, pitch). The audience determines vocabulary dept",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Gather content and define the audience.** Collect the source material — an outline, a technical document, meeting notes, or a set of talking points. Identify the target audience (executives, engineers, customers, investors) and the presentation "
+        },
+        {
+          "line": 18,
+          "text": "2. **Structure the narrative arc.** Organize the content into a logical story: opening hook, problem statement, solution or key message, supporting evidence, and closing call to action. Map this arc onto a slide-by-slide outline. A typical 15-minute "
+        },
+        {
+          "line": 20,
+          "text": "3. **Write slide content with minimal text.** For each slide, write a concise headline (under 8 words) that states the takeaway, not the topic. Use \"Revenue grew 40% YoY\" instead of \"Revenue Overview.\" Keep body text to 3-5 bullet points or a single "
+        },
+        {
+          "line": 22,
+          "text": "4. **Suggest visual elements and layout.** For each slide, recommend the appropriate visual treatment: bar chart for comparisons, line chart for trends, flow diagram for processes, screenshot for product demos, icon grid for feature lists, or a full-"
+        },
+        {
+          "line": 24,
+          "text": "5. **Generate the slide deck in the target format.** Produce the complete deck in the requested format. For Marp, output a single Markdown file with `---` slide separators and Marp directives. For reveal.js, output an HTML file with section tags. For"
+        },
+        {
+          "line": 26,
+          "text": "6. **Review and refine.** Check the deck against presentation best practices: no slide exceeds 40 words of body text, every slide has a clear takeaway headline, visual variety prevents monotony (not all bullet-point slides), the opening slide grabs a"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 238
+    },
+    {
+      "id": "WM-X0321",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "communication/report-generation/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/communication/report-generation/SKILL.md",
+      "sha": "a168028e88959de55d155dcb9ea21e154df73901",
+      "status": "OK",
+      "description": "Generate professional reports — sprint retrospectives, financial summaries, analytics dashboards, and incident postmortems — from structured data with templates, charts, and multi-format output. Use when the user requests report generation or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to produce polished, data-driven reports from structured input. The agent accepts data in JSON, CSV, or API response format, applies a report template, generates narrative insights alongside tables and chart specifications, and outputs the final report in Markdown, HTML, or PDF. It supports common report types including sprint retrospectives, financial summaries, analytics dashboards, and incident postmortems. 1. **Ingest and validate the source data.** Accept the input data file or payload in JSON, CSV, YAML, or raw API response format. Validate the schema — check for required fields, correct data types, missing values, and outliers. If the data is incomplete (e.g., a sprint retro JSON missing the velocity fi",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Ingest and validate the source data.** Accept the input data file or payload in JSON, CSV, YAML, or raw API response format. Validate the schema — check for required fields, correct data types, missing values, and outliers. If the data is incomp"
+        },
+        {
+          "line": 20,
+          "text": "3. **Compute metrics and generate insights.** Derive computed metrics from the raw data — percentage changes, averages, rankings, trend directions, and anomaly flags. For a sprint retro, calculate velocity variance and commitment accuracy. For an ana"
+        },
+        {
+          "line": 22,
+          "text": "4. **Populate the report structure.** Fill the template sections with the computed metrics, narrative insights, and formatted data tables. Generate chart specifications (bar, line, pie, or table) for each visualization slot in the template. Use Markd"
+        },
+        {
+          "line": 24,
+          "text": "5. **Format and render the output.** Produce the final report in the requested format. For Markdown, output a clean `.md` file with tables and chart code blocks. For HTML, wrap the Markdown output in a styled template with CSS for print-friendly rend"
+        },
+        {
+          "line": 26,
+          "text": "6. **Review and finalize.** Run a quality check: verify all data points in the report trace back to the source data, ensure no template variables remain unresolved (e.g., `{{quarter}}`), confirm that insights are supported by the numbers, and check t"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 249,
+          "text": "- **Generate narrative insights, not just data dumps.** A table of numbers requires the reader to do analytical work. Pair every data table with a sentence explaining what the data means and why it matters."
+        }
+      ],
+      "source_lines": 261
+    },
+    {
+      "id": "WM-X0322",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "context-engineering/context-compression/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/context-engineering/context-compression/SKILL.md",
+      "sha": "bd0a410565404f8bdbc70ee76f045725fe047184",
+      "status": "OK",
+      "description": "Compress selected context to a target token budget while preserving decisions, evidence, constraints, and unresolved questions. Use when relevant material is already selected but too long; use context-optimization when selection, deduplication, and ordering are also required.\" ",
+      "intro": "Context compression is the process of reducing the size of textual context provided to a language model while retaining the information most essential to the task. As conversations grow longer and retrieved documents grow larger, compression becomes critical for staying within token limits and keeping inference costs manageable without sacrificing answer quality. 1. **Measure the Token Budget**: Determine the model's total context window (e.g., 4K, 32K, 128K tokens) and subtract the tokens reserved for the system prompt, instructions, and the model's generation output. The remainder is your available context budget. If the raw context already fits, compression may be unnecessary. 2. **Score Information Density**: Analyze each paragraph, sen",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Measure the Token Budget**: Determine the model's total context window (e.g., 4K, 32K, 128K tokens) and subtract the tokens reserved for the system prompt, instructions, and the model's generation output. The remainder is your available context "
+        },
+        {
+          "line": 18,
+          "text": "2. **Score Information Density**: Analyze each paragraph, sentence, or chunk of the raw context and assign an information-density score based on how many task-relevant facts it contains per token. Sentences that are purely stylistic, redundant, or of"
+        },
+        {
+          "line": 20,
+          "text": "3. **Select a Compression Strategy**: Choose the most appropriate technique based on the compression ratio needed and the nature of the content:"
+        },
+        {
+          "line": 21,
+          "text": "- *Extractive summarization* — select the most important sentences verbatim."
+        },
+        {
+          "line": 22,
+          "text": "- *Abstractive summarization* — rewrite content in fewer words while preserving meaning."
+        },
+        {
+          "line": 23,
+          "text": "- *Key-point extraction* — pull out only named entities, facts, and figures."
+        },
+        {
+          "line": 24,
+          "text": "- *Selective pruning* — remove low-density sentences, boilerplate, and repeated information."
+        },
+        {
+          "line": 26,
+          "text": "4. **Apply Compression**: Execute the chosen strategy. For aggressive compression (>80% reduction), combine techniques — for example, first prune boilerplate, then abstractively summarize the remainder. For moderate compression (40–60%), extractive s"
+        },
+        {
+          "line": 28,
+          "text": "5. **Validate Information Retention**: Compare the compressed output against the original to ensure no critical facts were lost. A quick validation pass can check that key entities, numbers, and conclusions from the original are still present in the "
+        },
+        {
+          "line": 30,
+          "text": "6. **Assemble the Final Context**: Insert the compressed text into the prompt in place of the raw context. Include a note to the model indicating the context has been summarized, so it can calibrate its confidence accordingly."
+        },
+        {
+          "line": 32,
+          "text": "## Techniques"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 86
+    },
+    {
+      "id": "WM-X0323",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "customer-success/knowledge-base-article-writing/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/customer-success/knowledge-base-article-writing/SKILL.md",
+      "sha": "6d473ad842da71e11e4eceb3e1c4e5ba95929afb",
+      "status": "OK",
+      "description": "Write clear, searchable help center articles and FAQ entries based on support data, product documentation, and common customer questions. Use when the user requests knowledge base article writing or provides relevant inputs for this workflow. ",
+      "intro": "# Knowledge Base Article Writing Produce polished help center articles and FAQ entries that deflect support tickets by giving customers clear, self-serve answers. This skill turns support ticket patterns, product changes, and common questions into structured articles optimized for readability, search, and scannability, following documentation best practices for step-by-step guides, troubleshooting flows, and reference material. 1. **Identify topic from support data** — Mine support ticket trends, search analytics (what customers search for but don't find), and CSM feedback to find the highest-impact topics. Prioritize by ticket volume (articles addressing the top 10 question clusters deflect the most tickets), topic complexity (complex topi",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Identify topic from support data** — Mine support ticket trends, search analytics (what customers search for but don't find), and CSM feedback to find the highest-impact topics. Prioritize by ticket volume (articles addressing the top 10 questio"
+        },
+        {
+          "line": 18,
+          "text": "2. **Research the solution** — Gather the authoritative answer from engineering docs, internal wikis, product specs, and subject matter experts. Test the workflow yourself end-to-end in the product to verify accuracy. Document the exact UI text, butt"
+        },
+        {
+          "line": 20,
+          "text": "3. **Structure the article** — Follow a consistent template: **Title** (action-oriented, matches how customers search), **Summary** (1-2 sentence answer for scanning), **Prerequisites** (what the reader needs before starting), **Steps** (numbered, on"
+        },
+        {
+          "line": 22,
+          "text": "4. **Add visual aids and code examples** — Include screenshots for UI-heavy workflows (annotated with numbered callouts matching the steps), code snippets for API or CLI workflows (with language tags, copy buttons, and expected output), and diagrams "
+        },
+        {
+          "line": 24,
+          "text": "5. **Optimize for search** — Write the title using the exact phrasing customers use (check search analytics). Front-load keywords in the first sentence. Add metadata tags for category, product area, and plan tier. Include common alternate phrasings a"
+        },
+        {
+          "line": 26,
+          "text": "6. **Review for accuracy and clarity** — Have a subject matter expert verify technical accuracy. Run a readability check targeting grade 8 reading level. Ensure every step is testable by someone with no prior context. Check that screenshots match the"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 18,
+          "text": "2. **Research the solution** — Gather the authoritative answer from engineering docs, internal wikis, product specs, and subject matter experts. Test the workflow yourself end-to-end in the product to verify accuracy. Document the exact UI text, button labels, and navigation paths as they appear in the current product version. Note any prerequisites, required permissions, or plan-tier restrictions."
+        }
+      ],
+      "source_lines": 168
+    },
+    {
+      "id": "WM-X0324",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "legal-and-compliance/contract-review/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/legal-and-compliance/contract-review/SKILL.md",
+      "sha": "8683ccd5ee3d471255361ecfe62ed0698de52071",
+      "status": "OK",
+      "description": "Analyze contracts for risks, obligations, key clauses, and generate structured risk reports with severity ratings. Use when the user requests contract review or provides relevant inputs for this workflow. ",
+      "intro": "Analyze legal contracts to identify parties, obligations, risk areas, and problematic clauses. This skill systematically examines contract language for liability exposure, indemnification traps, unfavorable termination terms, IP assignment overreach, and non-compete restrictions. The output is a structured risk report with severity ratings and actionable recommendations. 1. **Receive and Parse Contract** — Ingest the full contract text or relevant excerpts. Identify the contract type (SaaS agreement, employment, freelancer, NDA, MSA, etc.) and establish the reviewing party's perspective (which side of the agreement you represent). Extract metadata such as effective date, governing law, and term length. 2. **Identify Parties and Core Terms**",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Receive and Parse Contract** — Ingest the full contract text or relevant excerpts. Identify the contract type (SaaS agreement, employment, freelancer, NDA, MSA, etc.) and establish the reviewing party's perspective (which side of the agreement y"
+        },
+        {
+          "line": 18,
+          "text": "2. **Identify Parties and Core Terms** — Map all named parties, their roles, and the fundamental exchange of value. Extract key commercial terms including payment structure, deliverables, service levels, and performance metrics. Note any definitions "
+        },
+        {
+          "line": 20,
+          "text": "3. **Flag High-Risk Clauses** — Perform clause-by-clause analysis targeting liability caps (or lack thereof), indemnification scope and triggers, termination rights and cure periods, IP assignment breadth, non-compete and non-solicitation restriction"
+        },
+        {
+          "line": 22,
+          "text": "4. **Summarize Obligations** — Produce a consolidated view of what each party must do, by when, and the consequences of non-performance. Highlight asymmetric obligations where one party bears disproportionate risk or burden."
+        },
+        {
+          "line": 24,
+          "text": "5. **Generate Risk Report** — Compile findings into a structured report with an executive summary, clause-by-clause risk table, overall risk score, and prioritized list of recommended modifications or negotiation points."
+        },
+        {
+          "line": 26,
+          "text": "6. **Suggest Modifications** — For each Critical and High severity finding, draft alternative contract language that better balances risk. Provide brief rationale for why the modification is important and what risk it mitigates."
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 45,
+          "text": "**Executive Summary:** This agreement contains 2 Critical and 3 High severity issues that should be addressed before signing. The liability cap is absent for the vendor while the customer faces unlimited exposure, the IP assignment clause claims ownership of customer-created content, and termination requires 180-day notice with no cure period for the customer. Overall risk score: 7.2/10. We recommend negotiating all Critical items and at least the indemnification clause before execution."
+        }
+      ],
+      "source_lines": 95
+    },
+    {
+      "id": "WM-X0325",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "legal-and-compliance/privacy-policy-drafting/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/legal-and-compliance/privacy-policy-drafting/SKILL.md",
+      "sha": "9d995f4babeccc53eee937d8f419d9cb3e189192",
+      "status": "OK",
+      "description": "Draft privacy-policy language and a review checklist tailored to a business model, data practices, and relevant jurisdictions. Use when the user requests a privacy policy or needs to map disclosures for GDPR, CCPA, or similar frameworks; do not use it to guarantee legal compliance. ",
+      "intro": "Draft legally informed privacy-policy language that addresses potentially applicable privacy frameworks and exposes unresolved business inputs. Treat the result as a working draft and review checklist, not proof of compliance. Verify current law, regulator guidance, product behavior, and jurisdiction with qualified counsel before publication. 1. **Gather Business Information** — Collect details about the business entity (name, jurisdiction, contact info), the product or service offered, target user demographics, and geographic reach. Determine which regulations apply based on where users are located, not just where the business is incorporated. A US-based SaaS serving EU customers must address GDPR. 2. **Identify Data Collection Practices**",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Gather Business Information** — Collect details about the business entity (name, jurisdiction, contact info), the product or service offered, target user demographics, and geographic reach. Determine which regulations apply based on where users "
+        },
+        {
+          "line": 18,
+          "text": "2. **Identify Data Collection Practices** — Map every category of personal data collected: direct inputs (forms, account creation), automatic collection (cookies, analytics, device info, IP addresses), third-party sources (OAuth providers, data broke"
+        },
+        {
+          "line": 20,
+          "text": "3. **Map Legal Requirements** — Cross-reference collected data types against applicable frameworks. GDPR requires lawful basis for each processing activity, CCPA requires disclosure of sale/sharing practices and opt-out mechanisms, COPPA applies if u"
+        },
+        {
+          "line": 22,
+          "text": "4. **Draft Policy Sections** — Generate each section with plain-language explanations alongside legally precise disclosures. Required sections include: data collected and purposes, legal basis for processing (GDPR), data sharing and third parties, co"
+        },
+        {
+          "line": 24,
+          "text": "5. **Review for Compliance Gaps** — Audit the draft against a regulatory checklist. Verify that every data processing activity has a stated legal basis, all required rights are enumerated, contact information for DPO or privacy inquiries is included,"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 3,
+          "text": "description: Draft privacy-policy language and a review checklist tailored to a business model, data practices, and relevant jurisdictions. Use when the user requests a privacy policy or needs to map disclosures for GDPR, CCPA, or similar frameworks; do not use it to guarantee legal compliance."
+        },
+        {
+          "line": 20,
+          "text": "3. **Map Legal Requirements** — Cross-reference collected data types against applicable frameworks. GDPR requires lawful basis for each processing activity, CCPA requires disclosure of sale/sharing practices and opt-out mechanisms, COPPA applies if users under 13 may access the service, and sector-specific rules (HIPAA, FERPA, GLBA) may layer additional requirements. Identify all required policy sections."
+        },
+        {
+          "line": 73,
+          "text": "FitRoute collects precise GPS location data during active workout sessions to map your route and calculate distance. Location tracking begins only when you start a workout and stops when you end it. We do not track your location in the background. You can revoke location permissions at any time through your device settings, though this will prevent route mapping features from functioning."
+        }
+      ],
+      "source_lines": 106
+    },
+    {
+      "id": "WM-X0326",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "marketing-and-seo/content-strategy/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/marketing-and-seo/content-strategy/SKILL.md",
+      "sha": "b9080ae0d2eddc3d2ce04ddc1323f809ec1da75a",
+      "status": "OK",
+      "description": "Develop and execute a content strategy that maps content to audience needs, funnel stages, and business goals through editorial planning and performance analysis. Use when the user requests content strategy or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to build a comprehensive content strategy from the ground up or audit and improve an existing one. The agent defines content pillars aligned to business objectives, maps content types to funnel stages (TOFU/MOFU/BOFU), creates editorial calendars, and establishes a measurement framework. The output is a repeatable system for producing, distributing, and optimizing content that drives traffic, engagement, and conversions. 1. **Audit existing content and define goals.** Inventory all current content assets — blog posts, landing pages, case studies, videos, whitepapers — with their publication dates, traffic, and conversion metrics. Identify top performers, underperformers, and content gaps. Align the strategy to",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Audit existing content and define goals.** Inventory all current content assets — blog posts, landing pages, case studies, videos, whitepapers — with their publication dates, traffic, and conversion metrics. Identify top performers, underperform"
+        },
+        {
+          "line": 18,
+          "text": "2. **Research the target audience and build personas.** Define 2–4 buyer personas with demographics, job roles, pain points, content consumption habits, and preferred channels. Map each persona to their buyer journey stages: awareness (problem recogn"
+        },
+        {
+          "line": 20,
+          "text": "3. **Establish content pillars and topic clusters.** Define 3–5 content pillars — broad themes that align with the product's value proposition and audience needs. Under each pillar, plan a cluster of 8–15 supporting pieces that link back to a compreh"
+        },
+        {
+          "line": 22,
+          "text": "4. **Build the editorial calendar.** Plan content production on a rolling 3-month horizon. For each piece, specify the topic, target keyword, content format (blog, video, infographic, podcast), funnel stage, assigned persona, distribution channels, a"
+        },
+        {
+          "line": 24,
+          "text": "5. **Define distribution and repurposing workflows.** For each content piece, plan the distribution path: organic social posts, email newsletter inclusion, syndication partners, and paid promotion budget. Design repurposing chains — for example, a lo"
+        },
+        {
+          "line": 26,
+          "text": "6. **Set up measurement and iteration cadence.** Define KPIs for each funnel stage: TOFU (traffic, impressions, social shares), MOFU (email signups, content downloads, time on page), BOFU (demo requests, free trial starts, SQLs). Review content perfo"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 87,
+          "text": "- **Highly regulated industries (finance, healthcare).** All content requires compliance review before publication. Build a 2-week legal review buffer into the editorial calendar and maintain an approval workflow."
+        }
+      ],
+      "source_lines": 91
+    },
+    {
+      "id": "WM-X0327",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "marketing-and-seo/keyword-research/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/marketing-and-seo/keyword-research/SKILL.md",
+      "sha": "096d7e3987be3c575a43bde5074f4cb2eb2af30a",
+      "status": "OK",
+      "description": "Conduct comprehensive keyword research to identify high-value search terms, map search intent, and uncover content gaps for SEO and content marketing. Use when the user requests keyword research or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to perform end-to-end keyword research for any niche, product, or content initiative. The agent starts from seed keywords, expands into long-tail variations, classifies search intent, analyzes competitor keyword portfolios, and delivers a prioritized keyword strategy. The output helps content teams, SEO specialists, and product marketers target the right search terms to drive qualified organic traffic. 1. **Collect seed keywords and define scope.** Gather initial seed keywords from the user's product description, existing content, and business goals. Identify the target market, geographic region, and language. Clarify whether the research is for blog content, landing pages, product pages, or paid campaigns, as",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Collect seed keywords and define scope.** Gather initial seed keywords from the user's product description, existing content, and business goals. Identify the target market, geographic region, and language. Clarify whether the research is for bl"
+        },
+        {
+          "line": 18,
+          "text": "2. **Expand into long-tail and related keywords.** Use autocomplete patterns, \"People Also Ask\" queries, and semantic variations to build a broad keyword list. Generate question-based keywords (who, what, how, why), comparison keywords (\"X vs Y\"), an"
+        },
+        {
+          "line": 20,
+          "text": "3. **Gather search metrics for each keyword.** Estimate monthly search volume, keyword difficulty (0–100 scale), cost-per-click for paid reference, and trend direction (rising, stable, declining). Pull click-through rate estimates where available. No"
+        },
+        {
+          "line": 22,
+          "text": "4. **Classify search intent for every keyword.** Categorize each keyword as informational (learn), navigational (find a specific site), commercial investigation (compare options), or transactional (buy/sign up). This mapping determines the correct co"
+        },
+        {
+          "line": 24,
+          "text": "5. **Perform competitor keyword gap analysis.** Identify 3–5 organic competitors and compare their ranking keywords against the user's current keyword portfolio. Highlight keywords where competitors rank but the user does not — these are content gap "
+        },
+        {
+          "line": 26,
+          "text": "6. **Deliver a structured keyword strategy report.** Organize keywords into thematic clusters mapped to content pillars. Prioritize clusters by a composite score of volume, difficulty, intent alignment, and business value. Include specific content re"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 92
+    },
+    {
+      "id": "WM-X0328",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "productivity-and-workflow/note-taking/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/productivity-and-workflow/note-taking/SKILL.md",
+      "sha": "9ea45215fab4a9fe513b3716e46594966390ee08",
+      "status": "OK",
+      "description": "Capture, organize, and retrieve notes efficiently using structured formats, tagging, and file management for meetings, ideas, research, and daily logs. Use when the user requests note taking or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to manage a complete note-taking workflow: creating structured notes, appending to existing ones, organizing notes with tags and categories, searching and retrieving notes by topic, and synthesizing notes into summaries. Notes are stored as Markdown files in a configurable directory, following naming conventions that enable easy browsing and retrieval. The skill supports various note types including meeting notes, daily logs, research notes, idea capture, and project documentation. 1. **Determine the Note Type and Structure:** Based on the user's request, identify the appropriate note type — meeting notes, idea capture, research notes, daily log, or project notes. Each type has a recommended template with rele",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Determine the Note Type and Structure:** Based on the user's request, identify the appropriate note type — meeting notes, idea capture, research notes, daily log, or project notes. Each type has a recommended template with relevant sections (e.g"
+        },
+        {
+          "line": 18,
+          "text": "2. **Create or Locate the Note:** Check if a relevant note already exists by searching the notes directory by filename and content. If the user wants to add to an existing topic, open and append to that note. If it is a new topic, create a new file w"
+        },
+        {
+          "line": 20,
+          "text": "3. **Write Structured Content:** Format the note content using clear Markdown: headings for sections, bullet points for lists, checkboxes for action items, and bold text for key terms. Include metadata at the top (date, tags, related notes) to enable"
+        },
+        {
+          "line": 22,
+          "text": "4. **Organize with Tags and Links:** Add tags to the note's metadata to enable filtering by topic, project, or type. Where relevant, add links to related notes to build a connected knowledge base."
+        },
+        {
+          "line": 24,
+          "text": "5. **Retrieve and Synthesize:** When the user asks for information, search notes by filename, tags, or content. For broad queries (\"What did we discuss about authentication this month?\"), synthesize relevant notes into a summary rather than returning"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 159
+    },
+    {
+      "id": "WM-X0329",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "research-and-knowledge/deep-research/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/research-and-knowledge/deep-research/SKILL.md",
+      "sha": "a31af70130bd989265adf7bb172d0d31af63ee99",
+      "status": "OK",
+      "description": "Conduct in-depth, multi-step research on a given topic by decomposing queries, finding diverse sources, cross-referencing findings, and synthesizing a comprehensive report. Use when the user requests deep research or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to perform rigorous, multi-step research on complex topics. Rather than returning a single search result, the agent decomposes the research question into sub-queries, gathers information from diverse source types (academic papers, industry reports, official documentation, news articles, and expert commentary), cross-references findings for consistency, and synthesizes everything into a structured, citation-backed report. The result is a thorough analysis that surfaces nuance, identifies conflicting viewpoints, and highlights knowledge gaps. 1. **Decompose the Research Query:** Break the user's high-level question into 3-6 targeted sub-queries that cover distinct facets of the topic. Each sub-query should addre",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Decompose the Research Query:** Break the user's high-level question into 3-6 targeted sub-queries that cover distinct facets of the topic. Each sub-query should address a specific angle such as historical context, current state, key players, te"
+        },
+        {
+          "line": 18,
+          "text": "2. **Identify and Gather Sources:** For each sub-query, search across multiple source categories: academic databases, official documentation, reputable news outlets, industry analyst reports, and community forums. Aim for at least 2-3 sources per sub"
+        },
+        {
+          "line": 20,
+          "text": "3. **Extract and Organize Key Findings:** Read each source and extract the core claims, data points, statistics, and expert opinions. Organize findings into a structured outline grouped by theme or sub-query. Tag each finding with its source for trac"
+        },
+        {
+          "line": 22,
+          "text": "4. **Cross-Reference and Validate:** Compare findings across sources to identify consensus, contradictions, and gaps. Flag any claims that appear in only one source or that conflict with the majority of evidence. Note the recency and authority of eac"
+        },
+        {
+          "line": 24,
+          "text": "5. **Synthesize the Report:** Combine validated findings into a coherent narrative. Structure the report with an executive summary, detailed sections for each theme, a discussion of limitations and open questions, and a full reference list. Use clear"
+        },
+        {
+          "line": 26,
+          "text": "6. **Review and Refine:** Re-read the report for logical flow, unsupported claims, and missing context. Verify that all citations are accurate and that the executive summary faithfully reflects the detailed findings. Offer the user suggestions for fu"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 106
+    },
+    {
+      "id": "WM-X0330",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "research-and-knowledge/fact-checking/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/research-and-knowledge/fact-checking/SKILL.md",
+      "sha": "e47adc2fcbf114b77658d72ed3b638d6adb54d30",
+      "status": "OK",
+      "description": "Verify the accuracy of claims and statements by extracting individual assertions, identifying authoritative sources, cross-referencing evidence, and assigning confidence-scored verdicts. Use when the user requests fact checking or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to systematically verify claims and statements. Rather than offering a simple true/false judgment, the agent extracts discrete checkable claims from the input, identifies authoritative sources for each, cross-references evidence, and produces a structured verdict with a confidence score and supporting reasoning. The approach is designed to handle everything from single factual assertions to full articles containing dozens of claims. 1. **Extract Claims:** Parse the input text and isolate individual, verifiable assertions. Each claim should be a single, self-contained statement that can be independently checked. Discard opinions, subjective judgments, and unfalsifiable statements, but note them as \"not checkabl",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Extract Claims:** Parse the input text and isolate individual, verifiable assertions. Each claim should be a single, self-contained statement that can be independently checked. Discard opinions, subjective judgments, and unfalsifiable statements"
+        },
+        {
+          "line": 18,
+          "text": "2. **Classify Claim Types:** Categorize each claim by type — statistical (involves numbers or data), historical (references past events), scientific (references research findings), definitional (defines a term), or attribution (attributes a statement"
+        },
+        {
+          "line": 20,
+          "text": "3. **Identify Authoritative Sources:** For each claim, determine the most appropriate verification sources. Use primary sources whenever possible: official datasets for statistics, peer-reviewed papers for scientific claims, archived transcripts for "
+        },
+        {
+          "line": 22,
+          "text": "4. **Cross-Reference and Evaluate Evidence:** Check each claim against at least two independent sources. Note whether sources corroborate, partially support, or contradict the claim. Assess source credibility by considering authority, recency, method"
+        },
+        {
+          "line": 24,
+          "text": "5. **Assign Verdicts and Confidence Scores:** For each claim, assign a verdict from the scale: **True**, **Mostly True**, **Half True**, **Mostly False**, **False**, or **Unverifiable**. Accompany each verdict with a confidence score (0.0-1.0) reflec"
+        },
+        {
+          "line": 26,
+          "text": "6. **Compile the Fact-Check Report:** Present findings in a structured format: list each claim, its verdict, confidence score, supporting evidence, and source links. Include an overall assessment summarizing the accuracy of the original text."
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 109
+    },
+    {
+      "id": "WM-X0331",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "research-and-knowledge/knowledge-graph-creation/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/research-and-knowledge/knowledge-graph-creation/SKILL.md",
+      "sha": "8255b41b2b80f4eb0fe52f9959d653c534013c9c",
+      "status": "OK",
+      "description": "Build structured knowledge graphs from unstructured text by extracting entities, mapping relationships, generating graph triples, and visualizing the result. Use when the user requests knowledge graph creation or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to transform unstructured text into a structured knowledge graph. The agent extracts entities (people, organizations, technologies, concepts), identifies the relationships between them, generates formal graph triples (subject-predicate-object), and outputs the graph in both a queryable format (Cypher for Neo4j, JSON-LD) and a visual diagram (Mermaid). Knowledge graphs are valuable for understanding complex domains, powering semantic search, detecting implicit connections, and building recommendation systems. 1. **Analyze the Source Material:** Read the input text and determine its domain, scope, and complexity. Identify the types of entities likely present (people, organizations, locations, technical concepts,",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Analyze the Source Material:** Read the input text and determine its domain, scope, and complexity. Identify the types of entities likely present (people, organizations, locations, technical concepts, events, etc.) and the granularity appropriat"
+        },
+        {
+          "line": 18,
+          "text": "2. **Extract Entities:** Identify all named entities and significant concepts in the text. For each entity, record its canonical name, type (person, organization, technology, concept, event, location), and any notable attributes mentioned (e.g., foun"
+        },
+        {
+          "line": 20,
+          "text": "3. **Map Relationships:** For every pair of entities that interact in the text, identify the relationship between them. Express each relationship as a directed triple: (Subject) -[PREDICATE]-> (Object). Choose predicates from a consistent vocabulary "
+        },
+        {
+          "line": 22,
+          "text": "4. **Generate Graph Triples and Schema:** Formalize the extracted data into a structured format. Output triples in one or more of: Cypher CREATE statements for Neo4j, JSON-LD for web interoperability, or a simple CSV of (subject, predicate, object) r"
+        },
+        {
+          "line": 24,
+          "text": "5. **Visualize the Graph:** Produce a human-readable visualization of the graph. Use Mermaid syntax for embedding in Markdown, or describe the layout for tools like D3.js, Gephi, or Neo4j Browser. Highlight central nodes and key relationship clusters"
+        },
+        {
+          "line": 26,
+          "text": "6. **Validate and Refine:** Review the graph for completeness and accuracy. Check for orphan nodes (entities with no relationships), missing relationships implied by the text, and overly generic predicates that could be made more specific. Invite the"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Analyze the Source Material:** Read the input text and determine its domain, scope, and complexity. Identify the types of entities likely present (people, organizations, locations, technical concepts, events, etc.) and the granularity appropriate for the graph. A technical architecture document requires fine-grained component-level entities, while a news article may need coarser actor-level entities."
+        },
+        {
+          "line": 149,
+          "text": "- **Domain-specific terminology:** In specialized domains (medical, legal, financial), entity types and relationship predicates should reflect domain ontologies (e.g., SNOMED CT for medical, FIBO for financial) when the user requires interoperability with existing knowledge bases."
+        }
+      ],
+      "source_lines": 150
+    },
+    {
+      "id": "WM-X0332",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "research-and-knowledge/literature-review/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/research-and-knowledge/literature-review/SKILL.md",
+      "sha": "8333819675434bd74496badf56cd494ba3797359",
+      "status": "OK",
+      "description": "Conduct a structured literature review on a given topic by defining a search strategy, applying inclusion and exclusion criteria, extracting key findings, and synthesizing results into a coherent academic review. Use when the user requests literature review or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to conduct a rigorous, structured literature review following established academic methodology. The agent defines a search strategy with targeted keywords, applies explicit inclusion and exclusion criteria to filter results, extracts key data from selected papers, and synthesizes the findings into a thematic narrative with a summary table and reference list. The workflow is inspired by systematic review practices (including PRISMA-style reporting) and is suitable for academic research, technology landscape analysis, and evidence-based decision making. 1. **Define the Research Question and Scope:** Work with the user to formulate a precise research question using a framework such as PICO (Population, Interventi",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Define the Research Question and Scope:** Work with the user to formulate a precise research question using a framework such as PICO (Population, Intervention, Comparison, Outcome) or a domain-appropriate equivalent. Establish the review's scope"
+        },
+        {
+          "line": 18,
+          "text": "2. **Develop the Search Strategy:** Generate a set of search queries using combinations of primary keywords, synonyms, and Boolean operators. Identify the databases and sources to search (e.g., Google Scholar, Semantic Scholar, arXiv, PubMed, ACM Dig"
+        },
+        {
+          "line": 20,
+          "text": "3. **Screen and Filter Results:** Apply predefined inclusion and exclusion criteria to the search results. Inclusion criteria typically cover topic relevance, publication date range, study type, and language. Exclusion criteria filter out duplicates,"
+        },
+        {
+          "line": 22,
+          "text": "4. **Extract Key Data:** For each included paper, extract structured information: title, authors, year, venue, research question, methodology, key findings, limitations, and relevance to the review question. Store this data in a consistent format (ta"
+        },
+        {
+          "line": 24,
+          "text": "5. **Synthesize Themes and Findings:** Organize extracted data into themes or categories that emerge across papers. Identify areas of consensus, debate, and gaps in the literature. Write a narrative synthesis that connects individual findings into a "
+        },
+        {
+          "line": 26,
+          "text": "6. **Write the Review Document:** Produce the final literature review with these sections: introduction and research question, methodology (search strategy, criteria, PRISMA flow), thematic synthesis, discussion of gaps and future directions, and a c"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 159
+    },
+    {
+      "id": "WM-X0333",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "research-and-knowledge/summarization/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/research-and-knowledge/summarization/SKILL.md",
+      "sha": "c4cdcff220b0a17df769b42427c79bdf3664caba",
+      "status": "OK",
+      "description": "Summarize text using extractive, abstractive, hierarchical, and multi-document techniques, producing concise outputs at configurable detail levels. Use when the user requests summarization or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to condense long-form text into clear, accurate summaries. The agent supports multiple summarization strategies — extractive (selecting key sentences verbatim), abstractive (rewriting in new words), hierarchical (layered summaries at different detail levels), and multi-document (synthesizing across several sources). The skill is designed for technical documents, meeting notes, research papers, articles, and any text where readers need the core information without reading the full content. 1. **Analyze the Input:** Determine the type, length, and structure of the source material. Identify whether it is a single document or multiple documents, whether it has clear sections (headings, chapters) or is unstructured",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Analyze the Input:** Determine the type, length, and structure of the source material. Identify whether it is a single document or multiple documents, whether it has clear sections (headings, chapters) or is unstructured prose, and what domain i"
+        },
+        {
+          "line": 18,
+          "text": "2. **Select the Summarization Strategy:** Choose the approach best suited to the input and the user's needs. Use extractive summarization for factual or legal texts where exact wording matters. Use abstractive summarization for general content where "
+        },
+        {
+          "line": 20,
+          "text": "3. **Identify Key Information:** Regardless of strategy, identify the core claims, findings, decisions, action items, and supporting data in the source. Rank information by importance using signals like: position in the document (introductions and co"
+        },
+        {
+          "line": 22,
+          "text": "4. **Generate the Summary:** Produce the summary at the requested length and detail level. Preserve factual accuracy — never introduce information not present in the source. Maintain the source's logical structure. For hierarchical summaries, produce"
+        },
+        {
+          "line": 24,
+          "text": "5. **Verify Faithfulness:** Compare the summary against the source to ensure no facts are distorted, no critical information is omitted, and no hallucinated content is introduced. Check that numerical data, proper nouns, and causal claims are accurat"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 115
+    },
+    {
+      "id": "WM-X0334",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "sales/proposal-generation/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/sales/proposal-generation/SKILL.md",
+      "sha": "c2446d4e8d8918ede23960abf7d34ce74d37e24c",
+      "status": "OK",
+      "description": "Create tailored sales proposals and RFP responses that address prospect needs, articulate solution value, and include pricing, timelines, and social proof. Use when the user requests proposal generation or provides relevant inputs for this workflow. ",
+      "intro": "Generate compelling, customized sales proposals and RFP responses from prospect requirements. This skill analyzes buyer needs, maps your solution to their pain points, structures executive summaries, pricing tables, implementation timelines, and weaves in relevant case studies to maximize win rates. 1. **Analyze Requirements or RFP** — Parse the prospect's RFP document, requirements list, or briefing notes to extract mandatory criteria, evaluation weightings, submission formatting rules, and any compliance requirements. Categorize items as must-have vs. nice-to-have and flag disqualification risks early. 2. **Research the Prospect** — Gather firmographic data (revenue, headcount, industry vertical), recent news, strategic initiatives, and k",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Analyze Requirements or RFP** — Parse the prospect's RFP document, requirements list, or briefing notes to extract mandatory criteria, evaluation weightings, submission formatting rules, and any compliance requirements. Categorize items as must-"
+        },
+        {
+          "line": 18,
+          "text": "2. **Research the Prospect** — Gather firmographic data (revenue, headcount, industry vertical), recent news, strategic initiatives, and known technology stack. Identify the decision-making unit — economic buyer, champion, technical evaluator — and t"
+        },
+        {
+          "line": 20,
+          "text": "3. **Draft the Executive Summary** — Write a concise summary (250–400 words) that mirrors the prospect's language, restates their core challenge, positions your solution as the best fit, and previews quantified business outcomes. This section sells t"
+        },
+        {
+          "line": 22,
+          "text": "4. **Detail Solution and Pricing** — Map each requirement to a specific product capability or service offering. Build a pricing table with line items, optional tiers, and volume discounts. Include an implementation timeline with milestones, dependenc"
+        },
+        {
+          "line": 24,
+          "text": "5. **Add Case Studies and Social Proof** — Select 2–3 case studies from similar industries or company sizes. For each, include the customer's challenge, the solution deployed, and measurable results (revenue lift, cost savings, time-to-value). Append"
+        },
+        {
+          "line": 26,
+          "text": "6. **Format and Finalize the Deliverable** — Assemble the proposal into the required format (PDF, DOCX, slide deck). Apply brand guidelines, insert a table of contents, add appendices for technical specs or SLAs, and run a compliance checklist to ens"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 33,
+          "text": "> Generate a sales proposal for Acme Corp, a 500-person logistics company evaluating our warehouse management SaaS. Their RFP requires cloud deployment, real-time inventory tracking, and ERP integration. Budget range is $80K–$120K/year. Include executive summary, solution mapping, pricing, timeline, and at least two case studies."
+        }
+      ],
+      "source_lines": 104
+    }
+  ]
+}
