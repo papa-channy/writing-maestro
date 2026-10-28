@@ -25,7 +25,7 @@ The evidence/abstraction distinction matters:
 - `functional_profiles.json`: canonical 405 profile records, including original SHA and epistemic confidence.
 - `functional_profiles_compact.json`: smaller 405-row form for browsing and comparison.
 - `functional_matrix.csv`: Excel-compatible tabular I/P/O comparison.
-- `similarity_neighbors.csv`: 300 most similar pairs ranked by term similarity; do not interpret as quality scores.
+- `similarity_neighbors.csv`: Up to 204 above-threshold similarity neighbors ranked by term similarity (204 pass the current >0.08 inclusion threshold); do not interpret as quality scores.
 - `source_duplicate_groups.json`: identical Git blob detection. Zero duplicate blobs were found at the snapshot; similar variants may still share upstream lineage.
 
 ## Interpretation

@@ -46,7 +46,7 @@ Git blob SHA equality reported zero exact duplicate source files in this snapsho
 - [Full 405 profiles](../normalization/functional_profiles.json)
 - [Compact 405 profiles](../normalization/functional_profiles_compact.json)
 - [Comparable CSV](../normalization/functional_matrix.csv)
-- [300 similarity neighbors](../normalization/similarity_neighbors.csv)
+- [204 above-threshold similarity neighbors](../normalization/similarity_neighbors.csv)
 - [Source normalization README](../normalization/README.md)
 
 Status: **source retrieval 405/405 complete; semantic validation of 305 automatic signatures not complete; no finalists approved.**
