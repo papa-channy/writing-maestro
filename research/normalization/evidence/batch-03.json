@@ -1,0 +1,1357 @@
+{
+  "batch": 3,
+  "extraction_version": "0.1.1",
+  "records": [
+    {
+      "id": "WM-X0243",
+      "repo": "khasky/awesome-agent-skills",
+      "path": "skills/awesome-content-voice/SKILL.md",
+      "blob_sha": "65cfa32ff35a7d3201889b90cf66fa160c8df698",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "awesome-content-voice",
+      "description": "Builds a reusable profile of the user's own writing voice from their posts, files, samples or an interview, for other skills to read. Use when asked to learn the user's voice.",
+      "headings": [
+        {
+          "line": 31,
+          "text": "## Phase 0 — Destination and consent"
+        },
+        {
+          "line": 37,
+          "text": "## Phase 1 — Collect evidence"
+        },
+        {
+          "line": 81,
+          "text": "## Phase 2 — Analyze from disk"
+        },
+        {
+          "line": 95,
+          "text": "## Phase 3 — Interview, and the cold-start path"
+        },
+        {
+          "line": 111,
+          "text": "## Phase 4 — Write the profile"
+        },
+        {
+          "line": 144,
+          "text": "## Phase 5 — Calibration"
+        },
+        {
+          "line": 154,
+          "text": "## Verification"
+        }
+      ],
+      "steps": [
+        {
+          "line": 59,
+          "text": "1. The user's own posts on their platforms — profile URLs handed to this skill are this source, not source 4: a link to the user's own account on a platform means \"learn from what I posted there\", and routing i"
+        },
+        {
+          "line": 73,
+          "text": "3. Pasted text — saved to disk on arrival like everything else."
+        },
+        {
+          "line": 74,
+          "text": "4. A website — call the Skill tool with \"awesome-style-mimic\" for its Learn mode and treat the guide it returns as one more evidence source. A crawled site is a *brand* voice: when it is the user's own site it "
+        },
+        {
+          "line": 75,
+          "text": "5. Nothing — the interview plus an archetype (Phase 3)."
+        },
+        {
+          "line": 99,
+          "text": "1. Who is writing — first person singular · first person plural (team or company) · a persona distinct from the author."
+        },
+        {
+          "line": 100,
+          "text": "2. Audience — who reads this, in the user's own words."
+        },
+        {
+          "line": 101,
+          "text": "3. What this voice is for — the reason someone follows it: teaching, shipping in public, opinion, curation, reporting."
+        },
+        {
+          "line": 102,
+          "text": "4. Register floor and ceiling — how casual it may get, how formal it must stay, and where the line moves per platform."
+        },
+        {
+          "line": 103,
+          "text": "5. Off limits — subjects, claims, or moves this voice never makes."
+        },
+        {
+          "line": 104,
+          "text": "6. Protected habits — anything the user knows about their own writing that an editor keeps trying to remove. Feeds the personal-tics section directly."
+        },
+        {
+          "line": 105,
+          "text": "7. Reference points (optional) — authors, feeds, or publications whose voice they admire. Recorded as *aspiration*, in its own labeled section, never mixed into the observed profile."
+        }
+      ],
+      "cues": [
+        {
+          "line": 63,
+          "text": "The cheapest level is chosen per platform, not for the run. Finding that two of seven platforms answer over a public API does not lower the requirement for the other five, and it is not a reason to start collec"
+        },
+        {
+          "line": 77,
+          "text": "Every collected text is dumped to `voice/.work/<name>/sources/` and analyzed from disk. Bulk sample text never enters the conversation context — context compaction must not be able to lose the evidence a profil"
+        },
+        {
+          "line": 142,
+          "text": "- The profile is not a ban list. It describes a voice; it does not accumulate every rule the author could follow. Leave slack: ordinary sentences and plain paragraphs are part of a human voice, and a profile th"
+        }
+      ],
+      "lines": 172
+    },
+    {
+      "id": "WM-X0244",
+      "repo": "khasky/awesome-agent-skills",
+      "path": "skills/awesome-copywriting/SKILL.md",
+      "blob_sha": "07339dab8d5ebef70757e6ea6dfd57fdb65d8d27",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "awesome-copywriting",
+      "description": "Writes short product copy: headlines, titles, meta and store descriptions, buttons, empty states, error messages, subject lines, CTAs. Use when asked for such copy.",
+      "headings": [
+        {
+          "line": 17,
+          "text": "## Security boundary"
+        },
+        {
+          "line": 46,
+          "text": "## The intake"
+        },
+        {
+          "line": 96,
+          "text": "## Output contract"
+        },
+        {
+          "line": 106,
+          "text": "## The audit, before delivering"
+        },
+        {
+          "line": 128,
+          "text": "## Verification"
+        }
+      ],
+      "steps": [
+        {
+          "line": 40,
+          "text": "1. What is this person feeling at the exact moment the line reaches them? Not the demographic — the person in that moment. Mid-task and annoyed at the interruption. Anxious because a payment just failed. Skepti"
+        },
+        {
+          "line": 42,
+          "text": "2. What is the simplest way to say this? If you cannot describe what the thing does in the words you would use across a kitchen table, you do not understand it well enough to write about it yet — keep asking th"
+        },
+        {
+          "line": 50,
+          "text": "1. Who exactly is this for. Role, situation, what they already tried, what they would type into a search box at 11pm. \"Founders\" is not an answer; \"a seed-stage founder doing their own outreach who has stopped "
+        },
+        {
+          "line": 51,
+          "text": "2. What category the reader files this under. The mental shelf: a CRM, a note app, a newsletter about pricing. Category decides who you are compared against, which promises are table stakes, and which are surpr"
+        },
+        {
+          "line": 52,
+          "text": "3. The story. The real moment behind the copy: what happened, what it cost, what changed, with real numbers and real wording. Only the user can supply this, and it is exactly what the no-invention rule protects"
+        },
+        {
+          "line": 100,
+          "text": "1. Deliver variants across different angles, not variations of one line. For a headline: 5–10, spanning number · question · contradiction · outcome · named enemy · how-to. For microcopy: 3–5. Plain list, no pre"
+        },
+        {
+          "line": 101,
+          "text": "2. Lead with your pick, and justify it by the reader's state, never by craft. \"She has been burned by this exact promise before, and #3 is the only one that sounds like it was written by someone who was there\" "
+        },
+        {
+          "line": 102,
+          "text": "3. Keep commentary on each variant short. The options are the deliverable."
+        },
+        {
+          "line": 103,
+          "text": "4. Name what was assumed. Any variant resting on a fact the user did not supply is marked, or it does not ship."
+        },
+        {
+          "line": 104,
+          "text": "5. One variant of English across the whole set. American spelling is the default; it yields to a variant the user named, to a voice profile or brand guide that fixes one, and to the product's own existing copy,"
+        }
+      ],
+      "cues": [
+        {
+          "line": 13,
+          "text": "Write the lines a product ships on its own surfaces. This skill produces copy; it does not edit prose that already exists and it does not judge a page's layout."
+        },
+        {
+          "line": 44,
+          "text": "Write both answers down before the first variant. A brief that cannot produce them is not ready, and the intake below is how you finish it."
+        },
+        {
+          "line": 54,
+          "text": "### Probe for quality, not for filled fields"
+        },
+        {
+          "line": 60,
+          "text": "| ICP | You cannot name one thing about this reader that would surprise a colleague | \"What do they complain about, in their words?\" · \"What have they already tried that failed?\" · \"Who is this explicitly not f"
+        },
+        {
+          "line": 64,
+          "text": "Never write around a gap you noticed. Where there is no user to ask — another skill is calling this one as a step — write from what exists and name what was missing beside the output, so the caller can see whic"
+        },
+        {
+          "line": 102,
+          "text": "3. Keep commentary on each variant short. The options are the deliverable."
+        },
+        {
+          "line": 103,
+          "text": "4. Name what was assumed. Any variant resting on a fact the user did not supply is marked, or it does not ship."
+        },
+        {
+          "line": 118,
+          "text": "Pass 2 — hand the copy to the de-slop catalog. Persuasive writing is where promotional vocabulary, forced triples and manufactured contrast concentrate, so the more persuasive the ask, the harder this pass matt"
+        },
+        {
+          "line": 121,
+          "text": "- No curiosity gap the copy does not close. Withhold the answer, never the subject: \"The billing bug that only fired on leap days\" works; \"You won't believe what we found\" does not."
+        },
+        {
+          "line": 130,
+          "text": "The final report states, with evidence rather than intent: which surface was written, the reader state named for it, the intake answers used and which of the three quality probes had to be re-asked, whether the"
+        },
+        {
+          "line": 134,
+          "text": "- Drafting before the two questions are written down, or before the intake fills the gap you noticed."
+        },
+        {
+          "line": 135,
+          "text": "- Treating a filled field as a good answer: generic input, accepted quietly, is the single largest source of generic copy."
+        }
+      ],
+      "lines": 145
+    },
+    {
+      "id": "WM-X0246",
+      "repo": "khasky/awesome-agent-skills",
+      "path": "skills/awesome-document-style/SKILL.md",
+      "blob_sha": "d268059a6feda7fc5123e0683dd8835a260e6132",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "awesome-document-style",
+      "description": "Line-edits Markdown documents into clear, specific, publication-ready prose: cuts bloat and template structure, fixes vague wording and number style. Use when asked to edit, tighten or polish a document.",
+      "headings": [
+        {
+          "line": 21,
+          "text": "## Input rules"
+        },
+        {
+          "line": 135,
+          "text": "## Pass 5: Output format"
+        }
+      ],
+      "steps": [
+        {
+          "line": 113,
+          "text": "1. What concrete fact, instruction, example, or decision does this add?"
+        },
+        {
+          "line": 114,
+          "text": "2. Could this paragraph apply unchanged to 100 other documents?"
+        },
+        {
+          "line": 115,
+          "text": "3. Does the sentence claim more than the source or context supports?"
+        },
+        {
+          "line": 116,
+          "text": "4. Does it assert causation without evidence (post-hoc)? \"Launched in Q3, so adoption rose\" is a logic error — either supply the proof (\"adoption rose 25% the next month, driven by the onboarding change\") or do"
+        },
+        {
+          "line": 117,
+          "text": "5. Is the heading specific enough for a reader scanning the page?"
+        },
+        {
+          "line": 118,
+          "text": "6. Are names, filenames, variables, and section labels unambiguous?"
+        },
+        {
+          "line": 119,
+          "text": "7. Is each concept named by one term throughout? Two names for one thing read as two things: pick the term the document uses most (or the one its glossary or the product defines) and apply it everywhere. Is eac"
+        },
+        {
+          "line": 120,
+          "text": "8. Will this content drift? Screenshots, UI step lists, and hardcoded version numbers go stale fastest — flag them with a TODO comment if you cannot verify they are current."
+        },
+        {
+          "line": 121,
+          "text": "9. Would a scanning reader find the answer in 15 seconds? Check the headings, code-block placement, and the first 100 words."
+        }
+      ],
+      "cues": [
+        {
+          "line": 105,
+          "text": "Density fails in both directions. A paragraph trimmed until it lost the caveat, the next step or the one number the reader came for is a defect, the same as a padded one; cut filler, not content. And a rewrite "
+        },
+        {
+          "line": 135,
+          "text": "## Pass 5: Output format"
+        },
+        {
+          "line": 137,
+          "text": "Never hard-wrap paragraphs to a fixed width (see Pass 2): one paragraph is one line. If the input arrives already hard-wrapped, reflow it to that style — do not preserve the broken wrapping."
+        }
+      ],
+      "lines": 158
+    },
+    {
+      "id": "WM-X0247",
+      "repo": "khasky/awesome-agent-skills",
+      "path": "skills/awesome-grammar-check/SKILL.md",
+      "blob_sha": "b6f09727e558e45407b6b9170972d3be6b588e1b",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "awesome-grammar-check",
+      "description": "Proofreads prose and reports grammar, logic and flow issues as suggestions without rewriting the text. Use when asked to proofread or copy-edit while keeping the author's wording.",
+      "headings": [
+        {
+          "line": 20,
+          "text": "## Inputs"
+        },
+        {
+          "line": 56,
+          "text": "## Output"
+        },
+        {
+          "line": 74,
+          "text": "## Example output"
+        }
+      ],
+      "steps": [
+        {
+          "line": 58,
+          "text": "1. Summary line — error counts by category (Grammar N · Logic N · Flow N), and whether the text reads as ready / needs-work."
+        },
+        {
+          "line": 59,
+          "text": "2. Top fixes — the few highest-impact ones first, each labeled Critical / High / Medium, so the author fixes what matters before the long tail."
+        },
+        {
+          "line": 60,
+          "text": "3. Full table — `# | Location (quote) | Category | Issue | Suggested fix | Why`. Keep the suggestion minimal and quote the span; do not rewrite surrounding text. Explain the \"Why\" in plain terms, no grammar jar"
+        },
+        {
+          "line": 61,
+          "text": "4. Objective/tone check (only if `objective` was given) — one line on whether the text serves its purpose and the tone fits the audience."
+        },
+        {
+          "line": 79,
+          "text": "1. Critical — \"adoption rose because we shipped in Q3\": cause asserted from sequence. Give the mechanism or the number."
+        },
+        {
+          "line": 80,
+          "text": "2. High — \"most users prefer the new flow\": no figure behind it. Supply the number or cut the claim."
+        },
+        {
+          "line": 81,
+          "text": "3. Medium — paragraph 2 reaches its point in sentence four. Lead with it."
+        }
+      ],
+      "cues": [
+        {
+          "line": 13,
+          "text": "Advisory copy-editor. It suggests, it does not rewrite — the author keeps the pen. It scans prose across three named categories, returns located fixes with a reason, leads with the few that matter, and checks t"
+        }
+      ],
+      "lines": 87
+    },
+    {
+      "id": "WM-X0252",
+      "repo": "khasky/awesome-agent-skills",
+      "path": "skills/awesome-style-mimic/SKILL.md",
+      "blob_sha": "d90a10df840c0780aee2df7d819ac825c4ed80c0",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "awesome-style-mimic",
+      "description": "Learns a website's writing style by crawling it in a live browser, writes a reusable style guide, then rewrites documents in that voice. Use when asked to learn a site's style or write in its voice.",
+      "headings": [
+        {
+          "line": 93,
+          "text": "### Output rules"
+        },
+        {
+          "line": 113,
+          "text": "## Verification (both modes)"
+        }
+      ],
+      "steps": [
+        {
+          "line": 55,
+          "text": "2. Ingest — fold the dump into the record, classify what it discovered, and take the next eight from the frontier. Repeat until the stop criterion below is met."
+        },
+        {
+          "line": 97,
+          "text": "1. Separate worktree (recommended) — `git -C <repo-root> worktree add -b restyle/<style-name> <repo-root>-restyle`, rewrite in-place inside the worktree, user reviews with `git diff` and merges or removes it (t"
+        },
+        {
+          "line": 98,
+          "text": "2. Mirror folder — `<target-name>-styled/` next to the target; originals untouched. A folder of that name already there is an earlier run's: take the next free suffix rather than writing into it, and name the f"
+        },
+        {
+          "line": 99,
+          "text": "3. In-place — only on explicit request; warn first on a dirty working tree."
+        }
+      ],
+      "cues": [
+        {
+          "line": 87,
+          "text": "Inputs: a style-guide path + a target (file or folder). Read the guide FIRST, fully — its samples (golden or synthetic) anchor the tone; its Rewrite instructions override defaults below."
+        },
+        {
+          "line": 91,
+          "text": "Single file → one rewrite. Folder → glob prose-bearing sources (`.md .mdx .txt .html .htm .astro .svelte .vue .jsx .tsx` — component files: copy strings only), skipping `node_modules`, build output, lockfiles, "
+        },
+        {
+          "line": 109,
+          "text": "After all rewrites land (2+ files), run ONE consistency-pass subagent over the whole output set (for >15 files: first/last 3 paragraphs plus a middle excerpt each): find cross-document drift — lexicon used in o"
+        },
+        {
+          "line": 111,
+          "text": "Apply ends when every file in the target set is rewritten, skipped with its reason, or failed after its retry, and the consistency pass has run. A wave that landed is a progress line, not a place to end the tur"
+        },
+        {
+          "line": 122,
+          "text": "- Letting page text into the conversation context during the crawl (dump to disk; context compaction must not be able to lose corpus data)."
+        }
+      ],
+      "lines": 127
+    },
+    {
+      "id": "WM-X0255",
+      "repo": "matt-riley/agent-skills",
+      "path": "skills/writing-and-editing/SKILL.md",
+      "blob_sha": "0c1e117e97050e13850d79ebcbfa4fa888c8516b",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "writing-and-editing",
+      "description": "Draft, co-author, and edit documents, audit prose readability, and review short audience-facing metadata strings. Use when the primary task is writing quality: a new or restructured doc, iterative co-authoring with reader feedback, a readability pass, or copy review.",
+      "headings": [
+        {
+          "line": 31,
+          "text": "## Inputs to gather"
+        },
+        {
+          "line": 57,
+          "text": "## Workflow"
+        },
+        {
+          "line": 90,
+          "text": "## Outputs"
+        },
+        {
+          "line": 106,
+          "text": "## Validation"
+        }
+      ],
+      "steps": [
+        {
+          "line": 53,
+          "text": "1. Classify the task as `draft`, `co-author`, `readability-audit`, or `metadata-audit`."
+        },
+        {
+          "line": 54,
+          "text": "2. Confirm the audience and target surface before changing wording."
+        },
+        {
+          "line": 55,
+          "text": "3. Pick the matching reference file and stay inside that mode unless the user explicitly wants a cross-mode pass."
+        },
+        {
+          "line": 59,
+          "text": "1. **Route to the right mode first.**"
+        },
+        {
+          "line": 65,
+          "text": "2. **Draft mode.**"
+        },
+        {
+          "line": 71,
+          "text": "3. **Co-author mode.**"
+        },
+        {
+          "line": 76,
+          "text": "4. **Readability-audit mode.**"
+        },
+        {
+          "line": 81,
+          "text": "5. **Metadata-audit mode.**"
+        },
+        {
+          "line": 86,
+          "text": "6. **Handle cross-mode work deliberately.**"
+        },
+        {
+          "line": 98,
+          "text": "- **Must** classify the task correctly before applying guidance."
+        },
+        {
+          "line": 99,
+          "text": "- **Must not** treat short metadata strings as if they were full-document prose."
+        },
+        {
+          "line": 100,
+          "text": "- **Must not** treat a settled readability audit as an excuse to redesign the whole document unless the user asks."
+        },
+        {
+          "line": 101,
+          "text": "- **Must not** replace planning, prompt-sharpening, or GitHub-surface skills when those are the true deliverables."
+        },
+        {
+          "line": 102,
+          "text": "- **Should** keep drafting iterative and outline-first."
+        },
+        {
+          "line": 103,
+          "text": "- **Should** keep readability feedback evidence-based and specific."
+        },
+        {
+          "line": 104,
+          "text": "- **Should** keep metadata feedback terse, concrete, and surface-aware."
+        }
+      ],
+      "cues": [
+        {
+          "line": 26,
+          "text": "- The main deliverable is an implementation plan, rollout plan, or reviewer-gated plan artifact — use [`implementation-review`](../implementation-review/SKILL.md)."
+        },
+        {
+          "line": 29,
+          "text": "- The output is primarily code, config, generated files, or a structured workflow handoff artifact rather than human-facing prose."
+        },
+        {
+          "line": 31,
+          "text": "## Inputs to gather"
+        },
+        {
+          "line": 44,
+          "text": "- Whether the user wants review-only output or an actual rewrite."
+        },
+        {
+          "line": 92,
+          "text": "- A mode-specific deliverable: drafted document sections, a readability audit with evidence and score, or concrete metadata rewrites."
+        },
+        {
+          "line": 99,
+          "text": "- **Must not** treat short metadata strings as if they were full-document prose."
+        },
+        {
+          "line": 100,
+          "text": "- **Must not** treat a settled readability audit as an excuse to redesign the whole document unless the user asks."
+        },
+        {
+          "line": 101,
+          "text": "- **Must not** replace planning, prompt-sharpening, or GitHub-surface skills when those are the true deliverables."
+        },
+        {
+          "line": 108,
+          "text": "- Confirm the chosen mode matches the actual deliverable."
+        },
+        {
+          "line": 111,
+          "text": "- In metadata-audit mode, keep the output actionable in seconds and provide rewrites only where needed."
+        }
+      ],
+      "lines": 126
+    },
+    {
+      "id": "WM-X0260",
+      "repo": "mattpocock/skills",
+      "path": "skills/engineering/to-spec/SKILL.md",
+      "blob_sha": "3f52599ae2a4347aee5a07432c2707518e691a7f",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "to-spec",
+      "description": "Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed.",
+      "headings": [
+        {
+          "line": 11,
+          "text": "## Process"
+        }
+      ],
+      "steps": [
+        {
+          "line": 13,
+          "text": "1. Explore the repo to understand the current state of the codebase, if you haven't already. Use the project's domain glossary vocabulary throughout the spec, and respect any ADRs in the area you're touching."
+        },
+        {
+          "line": 15,
+          "text": "2. Sketch out the seams at which you're going to test the feature. Existing seams should be preferred to new ones. Use the highest seam possible. If new seams are needed, propose them at the highest point you c"
+        },
+        {
+          "line": 19,
+          "text": "3. Write the spec using the template below, then publish it to the project issue tracker. Apply the `ready-for-agent` triage label - no need for additional triage."
+        },
+        {
+          "line": 35,
+          "text": "1. As an <actor>, I want a <feature>, so that <benefit>"
+        },
+        {
+          "line": 38,
+          "text": "1. As a mobile bank customer, I want to see balance on my accounts, so that I can make better informed decisions about my spending"
+        }
+      ],
+      "cues": [],
+      "lines": 76
+    },
+    {
+      "id": "WM-X0272",
+      "repo": "mattpocock/skills",
+      "path": "skills/productivity/writing-for-agents/SKILL.md",
+      "blob_sha": "a37608daf6e835e767deecfb498facecaaba82ba",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "writing-for-agents",
+      "description": "Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md.",
+      "headings": [
+        {
+          "line": 45,
+          "text": "## Steps and completion criteria"
+        }
+      ],
+      "steps": [
+        {
+          "line": 16,
+          "text": "- **Front-load the leading word**: the pointer is where it does its triggering work."
+        },
+        {
+          "line": 17,
+          "text": "- **One trigger per branch.** Synonyms that rename a single branch are one branch written twice; collapse them and keep only genuinely distinct branches."
+        },
+        {
+          "line": 24,
+          "text": "- **Context load** is the cost of always-loaded material on the agent's window: an `AGENTS.md` line, a skill description, anything sitting in context every turn, spending tokens and attention whether or not it "
+        },
+        {
+          "line": 25,
+          "text": "- **Cognitive load** is the cost on the human: which documents exist and when to reach for each. The human is the index. Not a cost to minimise: it is the price of human agency; spend it where human judgement m"
+        },
+        {
+          "line": 33,
+          "text": "1. **In-file step** is the primary tier: what the agent does, in order."
+        },
+        {
+          "line": 34,
+          "text": "2. **In-file reference** is consulted on demand. Often a legitimately flat peer-set (every rule of a review on one rung), which is a fine arrangement, not a smell."
+        },
+        {
+          "line": 35,
+          "text": "3. **Disclosed reference** is pushed out into a separate file, reached by a context pointer, loaded only when the pointer fires. Spans a sibling file in the same folder through fully external reference that liv"
+        },
+        {
+          "line": 50,
+          "text": "- **Demand**: how much it requires. \"Every modified model accounted for\" forces thorough work where \"produce a change list\" does not. Demand drives **legwork** (the digging the agent does within the work, laten"
+        },
+        {
+          "line": 58,
+          "text": "- **By sequence**: split a run of steps where the post-completion steps tempt the agent to rush the one in front of it. Keeping them out of view drives more legwork on the current task. Beware the reverse: merg"
+        }
+      ],
+      "cues": [
+        {
+          "line": 6,
+          "text": "Reference for writing any document an agent consumes: a skill, an `AGENTS.md` / `CLAUDE.md`, a doc reached by a pointer. The packaging differs; the writing does not: the same levers make each one predictable, s"
+        },
+        {
+          "line": 25,
+          "text": "- **Cognitive load** is the cost on the human: which documents exist and when to reach for each. The human is the index. Not a cost to minimise: it is the price of human agency; spend it where human judgement m"
+        },
+        {
+          "line": 41,
+          "text": "**Co-location** is the within-file companion: where the ladder decides _how far down_ a piece sits, co-location decides _what sits beside it_ once there. Keep a concept's definition, rules, and caveats under on"
+        },
+        {
+          "line": 50,
+          "text": "- **Demand**: how much it requires. \"Every modified model accounted for\" forces thorough work where \"produce a change list\" does not. Demand drives **legwork** (the digging the agent does within the work, laten"
+        },
+        {
+          "line": 79,
+          "text": "- The **environment** is a source of truth too (`package.json` scripts, config files, the directory layout, `--help` output), and a document that restates it is a **cache**: a copy of a lookup, earning its load"
+        }
+      ],
+      "lines": 82
+    },
+    {
+      "id": "WM-X0274",
+      "repo": "mazrean/agent-skills",
+      "path": "skills/writing-feature-spec/SKILL.md",
+      "blob_sha": "1f37c95bc9aeacb00966972621fc7fe9133d9f29",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "writing-feature-spec",
+      "description": "Creates feature specifications (PRD) as Agent Skills with progressive disclosure. Use when writing product requirements, feature specs, user stories, acceptance criteria, or when starting spec-driven development for a new feature. The PRD is output as a skill directory with SKILL.md and reference files.",
+      "headings": [
+        {
+          "line": 21,
+          "text": "## Output Structure"
+        }
+      ],
+      "steps": [
+        {
+          "line": 17,
+          "text": "- **Auto-discovery**: Claude finds the spec via skill metadata without searching"
+        },
+        {
+          "line": 18,
+          "text": "- **Progressive disclosure**: SKILL.md body = core spec (L3), reference files = deep context (L4)"
+        },
+        {
+          "line": 19,
+          "text": "- **Token efficiency**: Only loaded when the feature is relevant to the conversation"
+        },
+        {
+          "line": 50,
+          "text": "- **FR-1**: [Imperative statement: \"The system SHALL...\"]"
+        },
+        {
+          "line": 52,
+          "text": "- **FR-2**: [Imperative statement]"
+        },
+        {
+          "line": 57,
+          "text": "- **NFR-1**: [Measurable quality attribute]"
+        },
+        {
+          "line": 142,
+          "text": "- **Self-contained**: Understandable without reading anything else"
+        },
+        {
+          "line": 143,
+          "text": "- **Decision-enabling**: Claude can determine relevance from description alone"
+        },
+        {
+          "line": 144,
+          "text": "- **Concrete**: Specific capability, not vague aspiration"
+        },
+        {
+          "line": 157,
+          "text": "1. Determine what code to write"
+        },
+        {
+          "line": 158,
+          "text": "2. Generate test cases from acceptance criteria"
+        },
+        {
+          "line": 159,
+          "text": "3. Verify completeness"
+        },
+        {
+          "line": 163,
+          "text": "- **FR-1**: Handle notifications properly with good performance"
+        },
+        {
+          "line": 166,
+          "text": "- **FR-1**: The system SHALL deliver push notifications within 5 seconds"
+        },
+        {
+          "line": 239,
+          "text": "1. Create skills/prd-{feature}/ directory with references/ subdirectory"
+        },
+        {
+          "line": 240,
+          "text": "2. Write SKILL.md with template (TL;DR first)"
+        },
+        {
+          "line": 241,
+          "text": "3. Write references/BACKGROUND.md for deep context"
+        },
+        {
+          "line": 242,
+          "text": "4. Write references/RULES.md for code-area constraints"
+        },
+        {
+          "line": 243,
+          "text": "5. Review -> refine description for discoverability"
+        },
+        {
+          "line": 244,
+          "text": "6. Create technical design (writing-technical-design skill)"
+        },
+        {
+          "line": 245,
+          "text": "7. Extract L2 rules from RULES.md to .claude/rules/"
+        },
+        {
+          "line": 246,
+          "text": "8. Create implementation task commands (writing-implementation-tasks skill)"
+        }
+      ],
+      "cues": [
+        {
+          "line": 21,
+          "text": "## Output Structure"
+        },
+        {
+          "line": 207,
+          "text": "Extract from references/RULES.md after approval"
+        },
+        {
+          "line": 221,
+          "text": "After spec approval, extract code-area constraints from `references/RULES.md` into `.claude/rules/`:"
+        }
+      ],
+      "lines": 271
+    },
+    {
+      "id": "WM-X0277",
+      "repo": "mazrean/agent-skills",
+      "path": "skills/writing-project-constitution/SKILL.md",
+      "blob_sha": "39eb828e839990d5b55b9fe903ad0cac4b3d9d79",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "writing-project-constitution",
+      "description": "Creates project constitution files (CLAUDE.md/AGENTS.md) that serve as always-loaded context for coding agents. Use when setting up a new project for spec-driven development, configuring agent instructions, writing CLAUDE.md or AGENTS.md, or establishing project-wide coding standards and constraints.",
+      "headings": [
+        {
+          "line": 204,
+          "text": "## Workflow"
+        }
+      ],
+      "steps": [
+        {
+          "line": 207,
+          "text": "1. Create CLAUDE.md (and/or AGENTS.md) at project root"
+        },
+        {
+          "line": 208,
+          "text": "2. Add build/test commands first (most universally needed)"
+        },
+        {
+          "line": 209,
+          "text": "3. Add tech stack summary (one line per technology)"
+        },
+        {
+          "line": 210,
+          "text": "4. Add coding standards (only project-specific ones)"
+        },
+        {
+          "line": 211,
+          "text": "5. Add boundaries (always/ask-first/never)"
+        },
+        {
+          "line": 212,
+          "text": "6. Extract area-specific rules to L2 conditional files"
+        },
+        {
+          "line": 213,
+          "text": "7. Add active spec references as features are planned"
+        },
+        {
+          "line": 214,
+          "text": "8. Review total line count -- cut anything over 200 lines"
+        },
+        {
+          "line": 215,
+          "text": "9. Validate: read the file and ask \"is EVERY line needed on EVERY request?\""
+        }
+      ],
+      "cues": [
+        {
+          "line": 8,
+          "text": "Create constitution files (CLAUDE.md / AGENTS.md) that are **always loaded into the agent's context window on every request**. This is the most expensive context layer -- every token here is consumed on every i"
+        },
+        {
+          "line": 30,
+          "text": "## What Belongs Here (and What Does NOT)"
+        },
+        {
+          "line": 41,
+          "text": "### MUST NOT include (move elsewhere):"
+        },
+        {
+          "line": 145,
+          "text": "For multi-agent projects, create both files. They can share content or reference each other. See [CROSS-AGENT.md](references/CROSS-AGENT.md) for detailed patterns."
+        }
+      ],
+      "lines": 237
+    },
+    {
+      "id": "WM-X0278",
+      "repo": "mazrean/agent-skills",
+      "path": "skills/writing-technical-design/SKILL.md",
+      "blob_sha": "5c4c3a8038092adcbb377f1105605e77aab13b1e",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "writing-technical-design",
+      "description": "Creates agent-optimized technical design documents backed by deep research of every technical component. Each component (library, framework, protocol, service) is investigated via web search / official docs and distilled into its own Agent Skill under skills/tech-{component}/, so future implementation sessions auto-load the relevant knowledge. Use when writing technical designs, architecture docs, defining system components, or making technology choices for spec-driven development.",
+      "headings": [
+        {
+          "line": 18,
+          "text": "## Outputs"
+        },
+        {
+          "line": 55,
+          "text": "## Workflow"
+        },
+        {
+          "line": 68,
+          "text": "## Deep Research Phase"
+        },
+        {
+          "line": 72,
+          "text": "### Step 1 — Enumerate components to research"
+        },
+        {
+          "line": 84,
+          "text": "### Step 2 — Research each component"
+        },
+        {
+          "line": 104,
+          "text": "### Step 3 — Package each component as an Agent Skill"
+        }
+      ],
+      "steps": [
+        {
+          "line": 58,
+          "text": "1. Read the approved feature spec (skills/prd-{feature}/SKILL.md)"
+        },
+        {
+          "line": 59,
+          "text": "2. Draft the Decision Summary: list candidate technologies per decision area"
+        },
+        {
+          "line": 60,
+          "text": "3. DEEP RESEARCH each candidate and each confirmed component"
+        },
+        {
+          "line": 62,
+          "text": "4. Record findings as skills/tech-{component}/SKILL.md (one skill per component)"
+        },
+        {
+          "line": 63,
+          "text": "5. Write the design doc (specs/design-{feature}.md) referencing those skills"
+        },
+        {
+          "line": 64,
+          "text": "6. Extract L2 coding constraints to .claude/rules/"
+        },
+        {
+          "line": 65,
+          "text": "7. Set status: \"draft\" → review → \"approved\""
+        },
+        {
+          "line": 88,
+          "text": "1. **Identity & version** — current stable version, release date, support status."
+        },
+        {
+          "line": 89,
+          "text": "2. **Authoritative docs** — fetch the official reference, not blog posts."
+        },
+        {
+          "line": 90,
+          "text": "3. **API surface you will actually use** — function/struct names, options, error types."
+        },
+        {
+          "line": 91,
+          "text": "4. **Operational characteristics** — throughput, latency, memory, failure modes."
+        },
+        {
+          "line": 92,
+          "text": "5. **Known pitfalls** — deprecated patterns, breaking changes, surprising defaults."
+        },
+        {
+          "line": 93,
+          "text": "6. **Integration pattern** — idiomatic way to wire it into the stack chosen at L1."
+        },
+        {
+          "line": 94,
+          "text": "7. **Alternatives rejected** — what else was on the table and why not."
+        },
+        {
+          "line": 185,
+          "text": "- **Responsibility**: [Single sentence]"
+        },
+        {
+          "line": 186,
+          "text": "- **Location**: `path/to/component/`"
+        },
+        {
+          "line": 187,
+          "text": "- **Interface**: [Key method signatures]"
+        },
+        {
+          "line": 188,
+          "text": "- **Depends on**: [Other components]"
+        },
+        {
+          "line": 189,
+          "text": "- **Research**: `skills/tech-{name}/SKILL.md`"
+        },
+        {
+          "line": 223,
+          "text": "- **Approach**: [Description]"
+        },
+        {
+          "line": 224,
+          "text": "- **Rejected because**: [Specific reason tied to requirements]"
+        },
+        {
+          "line": 225,
+          "text": "- **Research note**: see `skills/tech-{alternative}/SKILL.md` if a digest was produced"
+        }
+      ],
+      "cues": [
+        {
+          "line": 8,
+          "text": "Create a technical design doc **plus** a set of per-component Agent Skills that capture the deep-research findings used to justify each technology choice. Implementation-time agents then auto-discover only the "
+        },
+        {
+          "line": 246,
+          "text": "Agents implement against interface contracts. Use real type definitions, not prose — prose requires interpretation, code is unambiguous."
+        },
+        {
+          "line": 250,
+          "text": "Write data models as executable DDL with CHECK constraints and indexes. Agents use these directly to create migration files."
+        }
+      ],
+      "lines": 306
+    },
+    {
+      "id": "WM-X0282",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/general-writing/SKILL.md",
+      "blob_sha": "9ae8219798fcc0565f891cd4bd650e911903ca27",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "general-writing",
+      "description": "Edit drafts into clearer, sharper, more human prose while preserving the writer's meaning and personal voice, or audit prose for specific AI-slop patterns without rewriting it. Use for general writing, line editing, clarity and voice revisions, concision, directness, AI-sounding prose, or requests to detect whether writing reads like AI.",
+      "headings": [
+        {
+          "line": 72,
+          "text": "## Review structural text separately"
+        },
+        {
+          "line": 278,
+          "text": "## Workflow"
+        }
+      ],
+      "steps": [
+        {
+          "line": 92,
+          "text": "- **Preserve the writer's real voice.** Notice the draft's vocabulary, cadence,"
+        },
+        {
+          "line": 95,
+          "text": "- **Write for a particular reader.** Make structure, detail, and emphasis serve"
+        },
+        {
+          "line": 98,
+          "text": "- **Make the minimum effective edit.** Fix AI patterns, errors, repetition, and"
+        },
+        {
+          "line": 100,
+          "text": "- **Lead with the point when setup adds nothing.** Keep a personal aside, story,"
+        },
+        {
+          "line": 102,
+          "text": "- **Front-load only when it improves clarity.** Do not force every paragraph"
+        },
+        {
+          "line": 104,
+          "text": "- **Keep the user's meaning.** Do not invent claims, examples, statistics,"
+        },
+        {
+          "line": 106,
+          "text": "- **Open it up without dumbing it down.** Preserve substance, nuance, and"
+        },
+        {
+          "line": 108,
+          "text": "- **Prefer active voice and human subjects.** Use direct constructions when"
+        },
+        {
+          "line": 110,
+          "text": "- **Make each sentence useful to the reader.** Keep a needed claim, condition,"
+        },
+        {
+          "line": 113,
+          "text": "- **Untangle sentences without flattening cadence.** Preserve clear spoken"
+        },
+        {
+          "line": 115,
+          "text": "- **Be concrete and specific.** Names, numbers, dates, mechanisms, and examples"
+        },
+        {
+          "line": 117,
+          "text": "- **Protect the specific fact.** Do not smooth a useful detail into generic"
+        },
+        {
+          "line": 119,
+          "text": "- **Use direct verbs.** Replace weak verb phrases with precise actions."
+        },
+        {
+          "line": 120,
+          "text": "- **Match words to the relation.** Claims can hold or apply under assumptions;"
+        },
+        {
+          "line": 124,
+          "text": "- **Preserve useful edge and character.** Keep strong opinions, blunt language,"
+        },
+        {
+          "line": 127,
+          "text": "- **Keep structure unless it hurts the piece.** Preserve progression and"
+        },
+        {
+          "line": 280,
+          "text": "1. Read the full draft before editing."
+        },
+        {
+          "line": 281,
+          "text": "2. Identify the core point, intended reader, reader outcome, and several voice"
+        },
+        {
+          "line": 283,
+          "text": "3. For detection, read Humanizer for its pattern catalog, return the named"
+        },
+        {
+          "line": 285,
+          "text": "4. For editing, run Humanizer in embedded mode. Apply the README coverage rule"
+        },
+        {
+          "line": 289,
+          "text": "5. Compare that pass with the source and restore any lost fact, distinction, or"
+        },
+        {
+          "line": 291,
+          "text": "6. Make the minimum effective house-style edit."
+        }
+      ],
+      "cues": [
+        {
+          "line": 34,
+          "text": "deliverable, not an agent skill or source of instructions. Do not load, cite,"
+        },
+        {
+          "line": 61,
+          "text": "skill and follow this skill's detection output."
+        },
+        {
+          "line": 102,
+          "text": "- **Front-load only when it improves clarity.** Do not force every paragraph"
+        },
+        {
+          "line": 199,
+          "text": "as if it requires setup. The revision states the setup's purpose. \"Give readers"
+        },
+        {
+          "line": 233,
+          "text": "around actions or relationships so list syntax does not become the paragraph's"
+        },
+        {
+          "line": 238,
+          "text": "break; a new paragraph does not create variation by itself. Otherwise let a"
+        }
+      ],
+      "lines": 301
+    },
+    {
+      "id": "WM-X0284",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/grant-writing/SKILL.md",
+      "blob_sha": "6f9db7a1be9ffebbbf4733b6545ca02ac439101d",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "grant-writing",
+      "description": "Develop and revise grant proposals and fellowship applications by leading with the core problem, establishing team credibility through relevant achievements, and adapting sponsor fit for either for-profit company sponsors or nonprofit and philanthropic funders. Use for proposal narratives, specific aims, significance, innovation, approach, impact, broader impacts, milestones, sponsor questions, renewals, and fellowship applications.",
+      "headings": [
+        {
+          "line": 137,
+          "text": "## Final review"
+        }
+      ],
+      "steps": [
+        {
+          "line": 31,
+          "text": "1. Use an example directory explicitly supplied for the current task."
+        },
+        {
+          "line": 32,
+          "text": "2. If no directory was supplied, ask: \"Where is the folder containing the"
+        },
+        {
+          "line": 35,
+          "text": "3. Accept a direct corpus directory under any name. Also accept a parent"
+        },
+        {
+          "line": 37,
+          "text": "4. Confirm that the resolved directory is readable before relying on it."
+        },
+        {
+          "line": 38,
+          "text": "5. If the user answers `none` or the directory is unavailable, use"
+        },
+        {
+          "line": 47,
+          "text": "1. Read the solicitation, evaluation criteria, instructions, templates, and"
+        },
+        {
+          "line": 49,
+          "text": "2. Classify the primary funder:"
+        },
+        {
+          "line": 50,
+          "text": "- **For-profit or company-sponsored:** center operational or strategic value,"
+        },
+        {
+          "line": 52,
+          "text": "- **Nonprofit or philanthropic:** center the funder's vision, the scientific"
+        },
+        {
+          "line": 54,
+          "text": "3. Map every required question and scoring criterion to an explicit response."
+        },
+        {
+          "line": 55,
+          "text": "4. Identify the audience's technical depth, decision authority, and likely"
+        },
+        {
+          "line": 57,
+          "text": "5. Flag missing facts, evidence, commitments, or compliance details before"
+        },
+        {
+          "line": 64,
+          "text": "1. **Core problem and stakes.** State what is failing, blocked, or newly"
+        },
+        {
+          "line": 66,
+          "text": "2. **Why now.** Explain the change in capability, scale, evidence, or urgency"
+        },
+        {
+          "line": 68,
+          "text": "3. **Limits of current approaches.** Identify the precise obstacle. Do not use a"
+        },
+        {
+          "line": 70,
+          "text": "4. **Objective or thesis.** State the proposal's central idea in one or two"
+        },
+        {
+          "line": 72,
+          "text": "5. **Team credibility.** Select prior achievements that prove the team can"
+        },
+        {
+          "line": 74,
+          "text": "6. **Approach.** Give enough technical detail to establish plausibility,"
+        },
+        {
+          "line": 76,
+          "text": "7. **Execution and evaluation.** Define phases, milestones, risks, tests,"
+        },
+        {
+          "line": 78,
+          "text": "8. **Impact and fit.** Explain why success matters under the funder's actual"
+        },
+        {
+          "line": 80,
+          "text": "9. **Support requested.** State what the funding enables and why those resources"
+        },
+        {
+          "line": 139,
+          "text": "1. Confirm that the opening motivates the problem before describing the"
+        }
+      ],
+      "cues": [
+        {
+          "line": 62,
+          "text": "Use this default sequence unless the application form requires another order:"
+        },
+        {
+          "line": 77,
+          "text": "outputs, and measures of success."
+        },
+        {
+          "line": 98,
+          "text": "- Return to the core problem at major transitions so phases and deliverables"
+        }
+      ],
+      "lines": 151
+    },
+    {
+      "id": "WM-X0287",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/literature-review/SKILL.md",
+      "blob_sha": "09a9adf85c70960a05b4f924a1a6dd2cf5f2f70f",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "literature-review",
+      "description": "Research, structure, draft, and verify source-grounded literature reviews, surveys, and related-work syntheses. Use for mapping a research area, comparing model or method lineages, reconstructing training recipes, building evidence tables, identifying disclosed and missing details, maintaining a living review, or writing a cited literature-review section or standalone LaTeX report.",
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Literature Review"
+        },
+        {
+          "line": 12,
+          "text": "## Set The Review Contract"
+        }
+      ],
+      "steps": [
+        {
+          "line": 17,
+          "text": "1. State the review question and intended reader."
+        },
+        {
+          "line": 18,
+          "text": "2. Record the retrieval cutoff date."
+        },
+        {
+          "line": 19,
+          "text": "3. Define the unit of analysis: paper, model family, release, checkpoint,"
+        },
+        {
+          "line": 21,
+          "text": "4. State inclusion and exclusion rules."
+        },
+        {
+          "line": 22,
+          "text": "5. Define the comparison axes before reading results."
+        },
+        {
+          "line": 23,
+          "text": "6. Clarify whether \"all\" means every family, every named release, or every"
+        },
+        {
+          "line": 38,
+          "text": "1. Versioned papers and appendices."
+        },
+        {
+          "line": 39,
+          "text": "2. Official repositories, model cards, data cards, and release notes."
+        },
+        {
+          "line": 40,
+          "text": "3. Official project pages or technical blogs."
+        },
+        {
+          "line": 41,
+          "text": "4. Independent papers that reproduce, compare, or critique the work."
+        },
+        {
+          "line": 42,
+          "text": "5. Secondary summaries only for discovery or clearly attributed context."
+        },
+        {
+          "line": 91,
+          "text": "1. state one synthesis claim;"
+        },
+        {
+          "line": 92,
+          "text": "2. identify the sources or releases being compared;"
+        },
+        {
+          "line": 93,
+          "text": "3. cite the evidence near the claim;"
+        },
+        {
+          "line": 94,
+          "text": "4. distinguish reported fact from interpretation; and"
+        },
+        {
+          "line": 95,
+          "text": "5. end with a supported consequence, boundary, or unresolved question."
+        }
+      ],
+      "cues": [
+        {
+          "line": 109,
+          "text": "For a research-paper or LaTeX deliverable, read the sibling"
+        },
+        {
+          "line": 153,
+          "text": "is the canonical deliverable; do not leave it only under `build/`. Report the"
+        }
+      ],
+      "lines": 156
+    }
+  ]
+}
