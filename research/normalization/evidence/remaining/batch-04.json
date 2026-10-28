@@ -1,0 +1,1128 @@
+{
+  "idx": 4,
+  "records": [
+    {
+      "id": "WM-X0113",
+      "repo": "anthropics/skills",
+      "path": "skills/internal-comms/SKILL.md",
+      "url": "https://github.com/anthropics/skills/blob/main/skills/internal-comms/SKILL.md",
+      "sha": "56ea935b74f371bfeb4c7d3c19d5139df866e73b",
+      "status": "OK",
+      "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.). ",
+      "intro": "To write internal communications, use this skill for: - 3P updates (Progress, Plans, Problems) To write any internal communication: 1. **Identify the communication type** from the request 2. **Load the appropriate guideline file** from the `examples/` directory:",
+      "headings": [
+        {
+          "line": 7,
+          "text": "## When to use this skill",
+          "depth": 2
+        },
+        {
+          "line": 17,
+          "text": "## How to use this skill",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 21,
+          "text": "1. **Identify the communication type** from the request"
+        },
+        {
+          "line": 22,
+          "text": "2. **Load the appropriate guideline file** from the `examples/` directory:"
+        },
+        {
+          "line": 23,
+          "text": "- `examples/3p-updates.md` - For Progress/Plans/Problems team updates"
+        },
+        {
+          "line": 24,
+          "text": "- `examples/company-newsletter.md` - For company-wide newsletters"
+        },
+        {
+          "line": 25,
+          "text": "- `examples/faq-answers.md` - For answering frequently asked questions"
+        },
+        {
+          "line": 26,
+          "text": "- `examples/general-comms.md` - For anything else that doesn't explicitly match one of the above"
+        },
+        {
+          "line": 27,
+          "text": "3. **Follow the specific instructions** in that file for formatting, tone, and content gathering"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 33
+    },
+    {
+      "id": "WM-X0114",
+      "repo": "anthropics/skills",
+      "path": "skills/pdf/SKILL.md",
+      "url": "https://github.com/anthropics/skills/blob/main/skills/pdf/SKILL.md",
+      "status": "FAILED",
+      "error": "TypeError: Cannot read properties of undefined (reading 'trim')"
+    },
+    {
+      "id": "WM-X0115",
+      "repo": "anthropics/skills",
+      "path": "skills/skill-creator/SKILL.md",
+      "url": "https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md",
+      "sha": "65b3a402dbd09b8e83f9d637c6b553875189085c",
+      "status": "OK",
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy. ",
+      "intro": "A skill for creating new skills and iteratively improving them. At a high level, the process of creating a skill goes like this: - Decide what you want the skill to do and roughly how it should do it - Write a draft of the skill - Create a few test prompts and run claude-with-access-to-the-skill on them",
+      "headings": [
+        {
+          "line": 32,
+          "text": "## Communicating with the user",
+          "depth": 2
+        },
+        {
+          "line": 169,
+          "text": "### Step 1: Spawn all runs (with-skill AND baseline) in the same turn",
+          "depth": 3
+        },
+        {
+          "line": 199,
+          "text": "### Step 2: While runs are in progress, draft assertions",
+          "depth": 3
+        },
+        {
+          "line": 207,
+          "text": "### Step 3: As runs complete, capture timing data",
+          "depth": 3
+        },
+        {
+          "line": 221,
+          "text": "### Step 4: Grade, aggregate, and launch the viewer",
+          "depth": 3
+        },
+        {
+          "line": 253,
+          "text": "### What the user sees in the viewer",
+          "depth": 3
+        },
+        {
+          "line": 267,
+          "text": "### Step 5: Read the feedback",
+          "depth": 3
+        },
+        {
+          "line": 296,
+          "text": "### How to think about improvements",
+          "depth": 3
+        },
+        {
+          "line": 337,
+          "text": "### Step 1: Generate trigger eval queries",
+          "depth": 3
+        },
+        {
+          "line": 360,
+          "text": "### Step 2: Review with user",
+          "depth": 3
+        },
+        {
+          "line": 375,
+          "text": "### Step 3: Run the optimization loop",
+          "depth": 3
+        },
+        {
+          "line": 402,
+          "text": "### Step 4: Apply the result",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 300,
+          "text": "2. **Keep the prompt lean.** Remove things that aren't pulling their weight. Make sure to read the transcripts, not just the final outputs — if it looks like the skill is making the model waste a bunch of time doing things that are unproductive, you can try ge"
+        },
+        {
+          "line": 304,
+          "text": "4. **Look for repeated work across test cases.** Read the transcripts from the test runs and notice if the subagents all independently wrote similar helper scripts or took the same multi-step approach to something. If all 3 test cases resulted in the subagent "
+        },
+        {
+          "line": 308,
+          "text": "### The iteration loop"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 113,
+          "text": "This goes without saying, but skills must not contain malware, exploit code, or any content that could compromise system security. A skill's contents should not surprise the user in their intent if described. Don't go along with requests to create misleading skills or skills designed to facilitate unauthorized access, data exfiltration, or other malicious activities. Things like a \"roleplay as an XYZ\" are OK though."
+        },
+        {
+          "line": 329,
+          "text": "This is optional, requires subagents, and most users won't need it. The human review loop is usually sufficient."
+        },
+        {
+          "line": 432,
+          "text": "**Description optimization**: This section requires the `claude` CLI tool (specifically `claude -p`) which is only available in Claude Code. Skip it if you're on Claude.ai."
+        }
+      ],
+      "source_lines": 486
+    },
+    {
+      "id": "WM-X0116",
+      "repo": "coreyhaines31/marketingskills",
+      "path": "skills/ab-testing/SKILL.md",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/ab-testing/SKILL.md",
+      "sha": "66dce73bafdccd835ea13fd2555811285c207b0d",
+      "status": "OK",
+      "description": "When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the user mentions \"A/B test,\" \"split test,\" \"experiment,\" \"test this change,\" \"variant copy,\" \"multivariate test,\" \"hypothesis,\" \"should I test this,\" \"which version is better,\" \"test two versions,\" \"statistical significance,\" \"how long should I run this test,\" \"growth experiments,\" \"experiment velocity,\" \"experiment backlog,\" \"ICE score,\" \"experimentation program,\" or \"experiment playbook.\" Use this whenever someone is comparing two approaches and wants to measure which performs better, or when they want to build a systematic experimentation practice. For tracking implementation, see analytics. For page-level conversion optimization, see cro. ",
+      "intro": "You are an expert in experimentation and A/B testing. Your goal is to help design tests that produce statistically valid, actionable results. **Check for product marketing context first:** If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Before designing a test, understand: 1. **Test Context** - What are you trying to improve? What change are you considering?",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 332,
+          "text": "- Stopping early"
+        },
+        {
+          "line": 333,
+          "text": "- Changing things mid-test"
+        },
+        {
+          "line": 334,
+          "text": "- Not checking implementation"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 163,
+          "text": "- No flicker, requires dev work"
+        }
+      ],
+      "source_lines": 359
+    },
+    {
+      "id": "WM-X0117",
+      "repo": "coreyhaines31/marketingskills",
+      "path": "skills/ad-creative/SKILL.md",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/SKILL.md",
+      "sha": "888beed0b913726e79e81201323a6acb4f879dc9",
+      "status": "OK",
+      "description": "When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,' 'creative testing,' 'write me some ads,' 'Facebook ad copy,' 'Google ad headlines,' 'LinkedIn ad text,' 'static ads,' 'ad templates,' 'iMessage ad,' 'ChatGPT ad,' 'creative strategy,' 'creative roadmap,' 'creative retro,' 'hook writing,' 'creative review page,' 'motion video ad,' 'faceless video ad,' 'UGC ad,' 'greenscreen ad,' 'TikTok/Reels ad format,' 'Meta ad format tier list,' or 'creative format taxonomy.' Use it to produce or iterate ad copy at scale. Copy avoids AI tells like 'it's not X, it's Y' reveals. For campaign strategy and targeting, see ads. For landing page copy, see copywriting. Test hypotheses must be falsifiable, naming the metric, the comparison, and the expected direction.\" ",
+      "intro": "You are an expert performance creative strategist. Your goal is to generate high-performing ad creative at scale — headlines, descriptions, and primary text that drive clicks and conversions — and iterate based on real performance data. **Check for product marketing context first:** If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Check its **Learnings** section before drafting: angles, offers, and formats already tested there shouldn't be re-proposed as new ideas, and active lessons apply unless the user says otherwise. Gather this context (ask if not provided):",
+      "headings": [
+        {
+          "line": 75,
+          "text": "## Grounded Inputs",
+          "depth": 2
+        },
+        {
+          "line": 187,
+          "text": "### Step 1: Define Your Angles",
+          "depth": 3
+        },
+        {
+          "line": 204,
+          "text": "### Step 2: Generate Variations per Angle",
+          "depth": 3
+        },
+        {
+          "line": 212,
+          "text": "### Step 3: Validate Against Specs",
+          "depth": 3
+        },
+        {
+          "line": 216,
+          "text": "### Step 4: Organize for Upload",
+          "depth": 3
+        },
+        {
+          "line": 226,
+          "text": "### Step 1: Analyze Winners",
+          "depth": 3
+        },
+        {
+          "line": 235,
+          "text": "### Step 2: Analyze Losers",
+          "depth": 3
+        },
+        {
+          "line": 242,
+          "text": "### Step 3: Generate New Variations",
+          "depth": 3
+        },
+        {
+          "line": 250,
+          "text": "### Step 4: Document the Iteration",
+          "depth": 3
+        },
+        {
+          "line": 328,
+          "text": "## Output Formats",
+          "depth": 2
+        },
+        {
+          "line": 330,
+          "text": "### Standard Output",
+          "depth": 3
+        },
+        {
+          "line": 348,
+          "text": "### Bulk CSV Output",
+          "depth": 3
+        },
+        {
+          "line": 357,
+          "text": "### Static Batch Output (Mode 3)",
+          "depth": 3
+        },
+        {
+          "line": 394,
+          "text": "## Batch Generation Workflow",
+          "depth": 2
+        },
+        {
+          "line": 442,
+          "text": "### Workflow: Pull Data, Analyze, Generate",
+          "depth": 3
+        },
+        {
+          "line": 448,
+          "text": "# 2. Analyze output (identify top/bottom performers)",
+          "depth": 1
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 89,
+          "text": "- **Winning ads** carry the hooks, structures, and angles already proven for this brand"
+        },
+        {
+          "line": 90,
+          "text": "- **Reviews** carry the exact language buyers use for pain, transformation, and unexpected benefits — pull copy from them verbatim rather than paraphrasing"
+        },
+        {
+          "line": 91,
+          "text": "- **Ad comments** are the most-skipped and highest-value input: objections (\"but does it work for X?\") become FAQ Card ads, and unprompted praise surfaces angles you didn't write"
+        },
+        {
+          "line": 94,
+          "text": "- Every concept cites its source (which review, winning ad, or comment it traces to)"
+        },
+        {
+          "line": 95,
+          "text": "- No invented claims, stats, or testimonials — ever"
+        },
+        {
+          "line": 96,
+          "text": "- If `inputs/winning-ads/` or `inputs/reviews/` is empty, stop and ask the user to populate it before generating. Do not generate ungrounded concepts as a fallback."
+        },
+        {
+          "line": 97,
+          "text": "- Inputs decay: refresh `inputs/winning-ads/` as new ads scale; refresh `inputs/reviews/` and `inputs/comments/` monthly"
+        },
+        {
+          "line": 101,
+          "text": "## Platform Specs"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 398,
+          "text": "### 1. Break into sub-tasks"
+        },
+        {
+          "line": 399,
+          "text": "- **Headline generation** — Focused on click-through"
+        },
+        {
+          "line": 400,
+          "text": "- **Description generation** — Focused on conversion"
+        },
+        {
+          "line": 401,
+          "text": "- **Primary text generation** — Focused on engagement (Meta/LinkedIn)"
+        },
+        {
+          "line": 403,
+          "text": "### 2. Generate in waves"
+        },
+        {
+          "line": 404,
+          "text": "- Wave 1: Core angles (3-5 angles, 5 variations each)"
+        },
+        {
+          "line": 405,
+          "text": "- Wave 2: Extended variations on top 2 angles"
+        },
+        {
+          "line": 406,
+          "text": "- Wave 3: Wild card angles (contrarian, emotional, specific)"
+        },
+        {
+          "line": 408,
+          "text": "### 3. Quality filter"
+        },
+        {
+          "line": 409,
+          "text": "- Remove anything over character limit"
+        },
+        {
+          "line": 410,
+          "text": "- Remove duplicates or near-duplicates"
+        },
+        {
+          "line": 411,
+          "text": "- Flag anything that might violate platform policies"
+        },
+        {
+          "line": 412,
+          "text": "- Ensure headline/description combinations make sense together"
+        },
+        {
+          "line": 416,
+          "text": "## Common Mistakes"
+        },
+        {
+          "line": 445,
+          "text": "# 1. Pull recent ad performance"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 330,
+          "text": "### Standard Output"
+        },
+        {
+          "line": 335,
+          "text": "## Angle: [Pain Point — Manual Reporting]"
+        },
+        {
+          "line": 335,
+          "text": "## Angle: [Pain Point — Manual Reporting]"
+        },
+        {
+          "line": 357,
+          "text": "### Static Batch Output (Mode 3)"
+        },
+        {
+          "line": 370,
+          "text": "### Creative Review Page (client / stakeholder approval)"
+        },
+        {
+          "line": 449,
+          "text": "# 3. Feed winning patterns into this skill"
+        }
+      ],
+      "boundary_evidence": [
+        {
+          "line": 115,
+          "text": "- Pin headlines to positions only when necessary (reduces optimization)"
+        }
+      ],
+      "source_lines": 477
+    },
+    {
+      "id": "WM-X0118",
+      "repo": "coreyhaines31/marketingskills",
+      "path": "skills/ads/SKILL.md",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/SKILL.md",
+      "sha": "a864cbc9090984e9f74110fb38da0ceb2b577d6e",
+      "status": "OK",
+      "description": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'LinkedIn ads,' 'ad budget,' 'cost per click,' 'ad spend,' 'should I run ads,' 'ABM,' 'account-based marketing,' 'B2B ads,' 'lead quality,' 'negative keywords,' 'Performance Max,' 'thought leader ads,' 'when should I kill an ad,' 'search terms report,' 'wasted spend,' or 'is this campaign working.' Use this for campaign strategy, audience targeting, bidding, and optimization. For bulk ad creative generation and iteration, see ad-creative. For landing page optimization, see cro. For outbound to target accounts, see cold-email. For pixels, CAPI, and tracking audits, see conversion-tracking. End every recommendation with facts, hypotheses, and missing data, and label unavailable inputs MISSING instead of estimating them.\" ",
+      "intro": "You are an expert performance marketer with direct access to ad platform accounts. Your goal is to help create, optimize, and scale paid advertising campaigns that drive efficient customer acquisition. **Check for product marketing context first:** If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Check its **Paid Ads** section for targets, floors, conversion definitions, and what you may change, and its **Learnings** section before proposing tests: angles, audiences, and offers already tested there shouldn't come back as new ideas. Gather this context (ask if not provided):",
+      "headings": [
+        {
+          "line": 402,
+          "text": "## Google RSA Output Spec (mandatory when generating RSAs)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 266,
+          "text": "### Retargeting Windows"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 406,
+          "text": "## Audit & Recommendation Guardrails"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 478
+    },
+    {
+      "id": "WM-X0119",
+      "repo": "coreyhaines31/marketingskills",
+      "path": "skills/ai-seo/SKILL.md",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/SKILL.md",
+      "sha": "547cc3228eaecb70713efc903a98e990477bec80",
+      "status": "OK",
+      "description": "When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,' 'generative engine optimization,' 'LLM optimization,' 'AI Overviews,' 'optimize for ChatGPT,' 'optimize for Perplexity,' 'AI citations,' 'AI visibility,' 'zero-click search,' 'how do I show up in AI answers,' 'LLM mentions,' 'optimize for Claude/Gemini,' 'llms.txt,' 'llms-full.txt,' 'OKF,' 'Open Knowledge Format,' 'knowledge bundle,' 'agent-readable site,' 'agent readiness,' 'is my site agent-ready,' 'WebMCP,' 'do listicles still work for AI,' 'ChatGPT stopped citing comparison pages,' 'how do LLMs see our brand,' 'LinkedIn for AEO,' or 'AI citation format shift.' Use this whenever someone wants their content to be cited or surfaced by AI assistants and AI search engines. For traditional technical and on-page SEO audits, see seo-audit. For structured data implementation, see schema.\" ",
+      "intro": "You are an expert in AI search optimization — the practice of making content discoverable, extractable, and citable by AI systems including Google AI Overviews, ChatGPT, Perplexity, Claude, Gemini, and Copilot. Your goal is to help users get their content cited as a source in AI-generated answers. Start with this skill's core workflow. Open a reference when the user's question needs that detail; read additional references only when their topics are relevant. | User questions | Local reference | | Why can an agent not read our site? Are bot access, discovery files, or HTML blocking it? | [Agent readiness](references/agent-readiness.md) | | AI barely shows up in referrals. How do we measure delayed visits, branded search, and pipeline from AI answers? | [AI attribution](references/ai-attribution.md) |",
+      "headings": [
+        {
+          "line": 136,
+          "text": "### Step 1: Check AI Answers for Your Key Queries",
+          "depth": 3
+        },
+        {
+          "line": 153,
+          "text": "### Step 2: Analyze Citation Patterns",
+          "depth": 3
+        },
+        {
+          "line": 164,
+          "text": "### Step 3: Content Extractability Check",
+          "depth": 3
+        },
+        {
+          "line": 181,
+          "text": "### Step 4: AI Bot Access Check",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 14,
+          "text": "Start with this skill's core workflow. Open a reference when the user's question needs that detail; read additional references only when their topics are relevant."
+        }
+      ],
+      "source_lines": 501
+    },
+    {
+      "id": "WM-X0120",
+      "repo": "coreyhaines31/marketingskills",
+      "path": "skills/analytics/SKILL.md",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/analytics/SKILL.md",
+      "sha": "6ce2434e0da93a599fb83dec539844869d376f93",
+      "status": "OK",
+      "description": "When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions \"set up tracking,\" \"GA4,\" \"Google Analytics,\" \"event tracking,\" \"UTM parameters,\" \"tag manager,\" \"GTM,\" \"analytics implementation,\" \"tracking plan,\" \"how do I measure this,\" \"Mixpanel,\" \"Segment,\" \"are my events firing,\" or \"analytics isn't working.\" Use this whenever someone asks how to know if something is working or wants to measure marketing results. For getting conversions into ad platforms (pixels, conversion tags, CAPI, server-side) and verifying they arrived, see conversion-tracking. For choosing attribution models, comparing multi-touch/MMM/incrementality, or reconciling conflicting numbers across tools, see attribution. For A/B test measurement, see ab-testing. Rate metrics divide matching closed windows — never full-period spend by partial-period results. ",
+      "intro": "You are an expert in analytics implementation and measurement. Your goal is to help set up tracking that provides actionable insights for marketing and product decisions. **Check for product marketing context first:** If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Before implementing tracking, understand: 1. **Business Context** - What decisions will this data inform? What are key conversions?",
+      "headings": [
+        {
+          "line": 306,
+          "text": "## Output Format",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [
+        {
+          "line": 308,
+          "text": "### Tracking Plan Document"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 371
+    },
+    {
+      "id": "WM-X0121",
+      "repo": "coreyhaines31/marketingskills",
+      "path": "skills/aso/SKILL.md",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/aso/SKILL.md",
+      "sha": "7a994f3b1e87334de82ab340ba016824df346585",
+      "status": "OK",
+      "description": "When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO audit,' 'app store optimization,' 'optimize my app listing,' 'improve app visibility,' 'app store ranking,' 'audit my listing,' 'why aren't people downloading my app,' 'improve my app conversion,' 'keyword optimization for app,' or 'compare my app to competitors.' Use when the user shares an App Store or Google Play URL and wants to improve it.\" ",
+      "intro": "Analyze App Store and Google Play listings against ASO best practices. Fetches live listing data, scores metadata, visuals, and ratings, then produces a - User shares an App Store or Google Play URL - User asks to audit or optimize an app listing - User wants to compare their app against competitors",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## When to Use",
+          "depth": 2
+        },
+        {
+          "line": 28,
+          "text": "## Phase 1 — Identify Store & Fetch",
+          "depth": 2
+        },
+        {
+          "line": 104,
+          "text": "## Phase 1.5 — Assess Brand Maturity",
+          "depth": 2
+        },
+        {
+          "line": 143,
+          "text": "## Phase 2 — Score Each Dimension",
+          "depth": 2
+        },
+        {
+          "line": 179,
+          "text": "## Phase 3 — Competitor Comparison (Optional)",
+          "depth": 2
+        },
+        {
+          "line": 193,
+          "text": "## Phase 4 — Generate Report",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 30,
+          "text": "### Detect store type from URL"
+        },
+        {
+          "line": 40,
+          "text": "### Fetch the listing"
+        },
+        {
+          "line": 46,
+          "text": "- App name (title) — 30 char limit"
+        },
+        {
+          "line": 47,
+          "text": "- Subtitle — 30 char limit"
+        },
+        {
+          "line": 48,
+          "text": "- Description (long) — not indexed for search, but matters for conversion"
+        },
+        {
+          "line": 49,
+          "text": "- Promotional text — 170 chars, updatable without new release"
+        },
+        {
+          "line": 50,
+          "text": "- Category (primary + secondary)"
+        },
+        {
+          "line": 51,
+          "text": "- Screenshots (count, order, caption text)"
+        },
+        {
+          "line": 52,
+          "text": "- Preview video (presence, duration)"
+        },
+        {
+          "line": 53,
+          "text": "- Rating (average + count)"
+        },
+        {
+          "line": 54,
+          "text": "- Recent reviews (visible ones)"
+        },
+        {
+          "line": 55,
+          "text": "- Price / in-app purchases"
+        },
+        {
+          "line": 56,
+          "text": "- Developer name"
+        },
+        {
+          "line": 57,
+          "text": "- Last updated date"
+        },
+        {
+          "line": 58,
+          "text": "- Version history notes"
+        },
+        {
+          "line": 61,
+          "text": "- Languages / localizations listed"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 315
+    },
+    {
+      "id": "WM-X0122",
+      "repo": "coreyhaines31/marketingskills",
+      "path": "skills/attribution/SKILL.md",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/attribution/SKILL.md",
+      "sha": "679e2684415ac2a5cfc382a46d25052e49df229a",
+      "status": "OK",
+      "description": "When the user wants to figure out which marketing actually drives conversions and revenue, choose or interpret an attribution model, or reconcile conflicting numbers across tools. Also use when the user mentions \"attribution,\" \"attribution model,\" \"first-touch vs last-touch,\" \"multi-touch,\" \"which channel drives revenue,\" \"what's my real CAC,\" \"my dashboards disagree,\" \"Google/Meta says X but GA says Y,\" \"media mix model,\" \"MMM,\" \"incrementality,\" \"geo lift,\" \"holdout test,\" \"how did you hear about us,\" \"self-reported attribution,\" \"dark social,\" or wants to instrument attribution themselves — \"stitch my bookings to their source,\" \"SavvyCal/Calendly attribution,\" \"close the identify gap,\" \"track conversions on a third-party domain,\" \"first-party / self-hosted attribution.\" For event tracking setup and UTMs, see analytics. For ad-platform pixels/CAPI and conversion tracking, see conversion-tracking. For pipeline and CRM revenue reporting, see revops. For the AI-search attribution blind spot, see ai-seo. ",
+      "intro": "You help users answer the hardest question in marketing: **which of my efforts actually caused this conversion and this revenue?** Attribution is where marketers lose the most money — to channels that look good in one dashboard and terrible in another, to \"direct\" and \"branded search\" that hide the real source, and to models that quietly encode an opinion as if it were fact. This skill has two pillars. Know which one the user needs before you dive in: - **(A) Interpretation** — choosing an attribution model, picking a measurement approach, and *reconciling the conflicting numbers* your tools report. This applies to everyone, even with zero engineering. - **(B) Own your attribution (first-party)** — instrumenting and stitching attribution *yourself* when you control the site/app. This is the build track. Use it when the user says \"I want to track this myself\" or is hitting a conversion th",
+      "headings": [
+        {
+          "line": 176,
+          "text": "## Output format",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 17,
+          "text": "Most requests start with (A). Reach for (B) only when they control the surface and want to build."
+        }
+      ],
+      "source_lines": 228
+    },
+    {
+      "id": "WM-X0123",
+      "repo": "coreyhaines31/marketingskills",
+      "path": "skills/churn-prevention/SKILL.md",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/churn-prevention/SKILL.md",
+      "sha": "2cb8beed89c105207c10b88bc5371848b140f838",
+      "status": "OK",
+      "description": "When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies. Also use when the user mentions 'churn,' 'cancel flow,' 'offboarding,' 'save offer,' 'dunning,' 'failed payment recovery,' 'win-back,' 'retention,' 'exit survey,' 'pause subscription,' 'involuntary churn,' 'people keep canceling,' 'churn rate is too high,' 'how do I keep users,' or 'customers are leaving.' Use this whenever someone is losing subscribers or wants to build systems to prevent it. For post-cancel win-back email sequences, see emails. For in-app upgrade paywalls, see paywalls.\" ",
+      "intro": "You are an expert in SaaS retention and churn prevention. Your goal is to help reduce both voluntary churn (customers choosing to cancel) and involuntary churn (failed payments) through well-designed cancel flows, dynamic save offers, proactive retention, and dunning strategies. **Check for product marketing context first:** If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Gather this context (ask if not provided): ### 1. Current Churn Situation",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 435
+    },
+    {
+      "id": "WM-X0124",
+      "repo": "coreyhaines31/marketingskills",
+      "path": "skills/co-marketing/SKILL.md",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/co-marketing/SKILL.md",
+      "sha": "dddee717713ca6d2b87032d148779305f396148d",
+      "status": "OK",
+      "description": "When the user wants to find co-marketing partners, plan joint campaigns, or brainstorm partnership opportunities. Use when the user says 'co-marketing,' 'partner marketing,' 'joint campaign,' 'who should we partner with,' 'integration marketing,' 'cross-promotion,' 'collaborate with another company,' 'partnership ideas,' or 'co-brand.' For customer referral programs, see referrals. For launch-specific partnerships, see launch.\" ",
+      "intro": "You are a co-marketing strategist who helps SaaS companies identify ideal partners and brainstorm high-impact joint campaigns. **Check for product marketing context first:** If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. - Finding potential co-marketing partners - Brainstorming campaign ideas with a specific partner",
+      "headings": [
+        {
+          "line": 15,
+          "text": "## When to Use This Skill",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 184,
+          "text": "### Cold Outreach Template"
+        },
+        {
+          "line": 202,
+          "text": "### What to Prepare for the Call"
+        },
+        {
+          "line": 204,
+          "text": "1. **Account overlap data** (if available via Crossbeam/Reveal)"
+        },
+        {
+          "line": 205,
+          "text": "2. **2-3 specific campaign ideas** (not just \"let's do something\")"
+        },
+        {
+          "line": 206,
+          "text": "3. **Your audience metrics** (list size, traffic, engagement)"
+        },
+        {
+          "line": 207,
+          "text": "4. **Examples of past partnerships** (shows you can execute)"
+        },
+        {
+          "line": 208,
+          "text": "5. **Clear ask** (what you want from them, what you'll provide)"
+        },
+        {
+          "line": 212,
+          "text": "## Structuring the Partnership"
+        },
+        {
+          "line": 271,
+          "text": "- [ ] Create shared assets (landing page, content, etc.)"
+        },
+        {
+          "line": 272,
+          "text": "- [ ] Coordinate promotion schedules"
+        },
+        {
+          "line": 273,
+          "text": "- [ ] Brief both teams on talking points"
+        },
+        {
+          "line": 275,
+          "text": "### Post-Campaign"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 311
+    },
+    {
+      "id": "WM-X0125",
+      "repo": "coreyhaines31/marketingskills",
+      "path": "skills/cold-email/SKILL.md",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/cold-email/SKILL.md",
+      "sha": "ac9ff9ce2529b0c5c0f332294872dc2daf7de045",
+      "status": "OK",
+      "description": "Write and run B2B cold outbound that gets replies, from cold emails and follow-ups to sending setup, LinkedIn, multichannel cadences, and reply handling. Use when the user mentions \"cold email,\" \"cold outreach,\" \"outbound,\" \"prospecting email,\" \"SDR emails,\" \"follow-up sequence,\" \"nobody's replying,\" \"email deliverability,\" \"sending domains,\" \"warm up inboxes,\" \"LinkedIn outreach,\" \"connection request message,\" \"multichannel sequence,\" \"cadence,\" \"cold call,\" \"voicemail,\" \"handle replies,\" \"AI SDR,\" \"teardown outreach,\" or \"product-led outbound.\" Send from secondary domains, verify lists first, turn off open tracking, and stop every channel when a prospect replies. Copy avoids AI tells like 'it's not X, it's Y' reveals. For building the list and account research, see prospecting. For lifecycle email, see emails. For call scripts and sales collateral, see sales-enablement. ",
+      "intro": "You are an expert in cold outbound. Your goal is to write emails that sound like they came from a sharp, thoughtful human — not a sales machine following a template — and to make sure they reach the inbox, work alongside the other channels, and turn replies into meetings. **Check for product marketing context first:** If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Understand the situation (ask if not provided): 1. **Who are you writing to?** — Role, company, why them specifically",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 215
+    },
+    {
+      "id": "WM-X0126",
+      "repo": "coreyhaines31/marketingskills",
+      "path": "skills/community-marketing/SKILL.md",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/community-marketing/SKILL.md",
+      "sha": "426ddcaa9b380dd39b9dc38d66349b7ec7c911a5",
+      "status": "OK",
+      "description": "Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a community strategy, grow a Discord or Slack community, manage a forum or subreddit, build brand advocates, increase word-of-mouth, drive community-led growth, engage users post-signup, or turn customers into evangelists. Trigger phrases: \\\"build a community,\\\" \\\"community strategy,\\\" \\\"Discord community,\\\" \\\"Slack community,\\\" \\\"community-led growth,\\\" \\\"brand advocates,\\\" \\\"user community,\\\" \\\"forum strategy,\\\" \\\"community engagement,\\\" \\\"grow our community,\\\" \\\"ambassador program,\\\" \\\"community flywheel.\\\"\" ",
+      "intro": "You are an expert community builder and community-led growth strategist. Your goal is to help the user design, launch, and grow a community that creates genuine value for members while driving measurable business outcomes. **Check for product marketing context first:** If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered. Understand the situation (ask if not provided): 1. **What is the product or brand?** — What problem does it solve, who uses it",
+      "headings": [
+        {
+          "line": 101,
+          "text": "## Community Models & Scaling Phases",
+          "depth": 2
+        },
+        {
+          "line": 144,
+          "text": "## Output Formats",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 19,
+          "text": "1. **What is the product or brand?** — What problem does it solve, who uses it"
+        },
+        {
+          "line": 20,
+          "text": "2. **What community platform(s) are in play?** — Discord, Slack, Circle, Reddit, Facebook Groups, forum, etc."
+        },
+        {
+          "line": 21,
+          "text": "3. **What stage is the community at?** — Pre-launch, 0–100 members, 100–1k, scaling, or established"
+        },
+        {
+          "line": 22,
+          "text": "4. **What is the primary community goal?** — Retention, activation, word-of-mouth, support deflection, product feedback, revenue"
+        },
+        {
+          "line": 23,
+          "text": "5. **Who is the ideal community member?** — Role, motivation, what they hope to get from joining"
+        },
+        {
+          "line": 29,
+          "text": "## Community Strategy Principles"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 105,
+          "text": "- **The 4 community models** (plus the common blend) — Support-Driven (GreenPal), Product-Development (Ydata), Education/Enablement (LiveAgent), Founder-Led (Bento, Postaga) — each with a \"best when…\" fit test tied to a primary goal."
+        },
+        {
+          "line": 106,
+          "text": "- **The Notion benchmark** — 300+ ambassadors, 1M+ template downloads, 25% of new users from community referrals. The north star for community-led growth at scale."
+        },
+        {
+          "line": 107,
+          "text": "- **The scaling-phase role shift** — Community Architect (0–100) → Manager (100–1,000) → Enabler (1,000+), and what to focus on in each."
+        },
+        {
+          "line": 113,
+          "text": "## Platform Selection Guide"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 148,
+          "text": "- **Community Strategy Doc** — Platform choice, identity definition, core loop, 90-day launch plan"
+        },
+        {
+          "line": 149,
+          "text": "- **Channel Architecture** — Recommended channels/categories with purpose and posting guidelines for each"
+        },
+        {
+          "line": 150,
+          "text": "- **New Member Journey** — Welcome sequence: pinned post, DM template, first-week prompts"
+        },
+        {
+          "line": 151,
+          "text": "- **Community Ritual Calendar** — Weekly/monthly recurring events and threads"
+        },
+        {
+          "line": 152,
+          "text": "- **Ambassador Program Brief** — Criteria, benefits, outreach template, tracking plan"
+        },
+        {
+          "line": 153,
+          "text": "- **Health Audit Report** — Current metrics, diagnosis, top 3 priorities to fix"
+        },
+        {
+          "line": 159,
+          "text": "## Task-Specific Questions"
+        }
+      ],
+      "boundary_evidence": [
+        {
+          "line": 119,
+          "text": "| Circle | Creator or course-based communities; clean UX | Less organic discovery; requires driving traffic |"
+        }
+      ],
+      "source_lines": 176
+    },
+    {
+      "id": "WM-X0127",
+      "repo": "coreyhaines31/marketingskills",
+      "path": "skills/competitor-profiling/SKILL.md",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/competitor-profiling/SKILL.md",
+      "sha": "63fc39fc9bbc937018ad88fe3f5700ca8adefa88",
+      "status": "OK",
+      "description": "When the user wants to research, profile, or analyze competitors from their URLs. Also use when the user mentions 'competitor profile,' 'competitor research,' 'competitor analysis,' 'profile this competitor,' 'analyze competitor,' 'competitive intelligence,' 'competitor deep dive,' 'who are my competitors,' 'competitor landscape,' 'competitor dossier,' 'competitive audit,' or 'research these competitors.' Input is a list of competitor URLs. Output is structured competitor profile markdown files. For creating comparison/alternative pages from profiles, see competitors. For sales-specific battle cards, see sales-enablement. For researching accounts you're selling to, see prospecting.\" ",
+      "intro": "You are an expert competitive intelligence analyst. Your goal is to take a list of competitor URLs and produce comprehensive, structured competitor profile documents by combining live site scraping with SEO and market data. **Check for product marketing context first:** If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered. Before profiling, confirm: 1. **Competitor URLs** — the list of competitor website URLs to profile",
+      "headings": [
+        {
+          "line": 64,
+          "text": "### 5. Untrusted Input",
+          "depth": 3
+        },
+        {
+          "line": 100,
+          "text": "## Research Process",
+          "depth": 2
+        },
+        {
+          "line": 102,
+          "text": "### Phase 1: Site Scraping (Firecrawl or WebFetch)",
+          "depth": 3
+        },
+        {
+          "line": 108,
+          "text": "#### Step 1: Map the site",
+          "depth": 4
+        },
+        {
+          "line": 126,
+          "text": "#### Step 2: Scrape key pages",
+          "depth": 4
+        },
+        {
+          "line": 148,
+          "text": "#### Step 3: Scrape competitor reviews (optional but high-value)",
+          "depth": 4
+        },
+        {
+          "line": 160,
+          "text": "### Phase 2: SEO & Market Data (DataForSEO or Ubersuggest)",
+          "depth": 3
+        },
+        {
+          "line": 204,
+          "text": "### Phase 3: Synthesis",
+          "depth": 3
+        },
+        {
+          "line": 210,
+          "text": "## Output Format",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 69,
+          "text": "## Saving Raw Data"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 102,
+          "text": "### Phase 1: Site Scraping (Firecrawl or WebFetch)"
+        },
+        {
+          "line": 108,
+          "text": "#### Step 1: Map the site"
+        },
+        {
+          "line": 118,
+          "text": "- Pricing page"
+        },
+        {
+          "line": 119,
+          "text": "- Features / product pages"
+        },
+        {
+          "line": 120,
+          "text": "- About / company page"
+        },
+        {
+          "line": 121,
+          "text": "- Blog (top-level, for content strategy signals)"
+        },
+        {
+          "line": 122,
+          "text": "- Customers / case studies page"
+        },
+        {
+          "line": 123,
+          "text": "- Integrations page"
+        },
+        {
+          "line": 124,
+          "text": "- Changelog / what's new (if exists)"
+        },
+        {
+          "line": 126,
+          "text": "#### Step 2: Scrape key pages"
+        },
+        {
+          "line": 148,
+          "text": "#### Step 3: Scrape competitor reviews (optional but high-value)"
+        },
+        {
+          "line": 151,
+          "text": "- G2 reviews page for the competitor"
+        },
+        {
+          "line": 152,
+          "text": "- Capterra reviews page"
+        },
+        {
+          "line": 153,
+          "text": "- Product Hunt launch page"
+        },
+        {
+          "line": 154,
+          "text": "- TrustRadius profile"
+        },
+        {
+          "line": 108,
+          "text": "#### Step 1: Map the site"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 212,
+          "text": "### Profile Document Structure"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 442
+    },
+    {
+      "id": "WM-X0128",
+      "repo": "coreyhaines31/marketingskills",
+      "path": "skills/competitors/SKILL.md",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/competitors/SKILL.md",
+      "sha": "bd0f0f49a616e9386a40020b7d6bc6c3c5520676",
+      "status": "OK",
+      "description": "When the user wants to create competitor comparison or alternative pages for SEO and buyer-facing use. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' 'competitive landing pages,' 'how do we compare to X,' 'competitor teardown,' 'audit our competitor pages,' 'are our comparison pages out of date,' or 'competitive asset audit.' Use this for any content that positions your product against competitors. Covers four formats: singular alternative, plural alternatives, you vs competitor, and competitor vs competitor. For auditing existing claims (not researching competitors from scratch, which is competitor-profiling; not technical SEO on these pages, which is seo-audit), use the asset audit here. For internal battle cards and sales-specific competitor docs, see sales-enablement.\" ",
+      "intro": "# Competitor & Alternative Pages You are an expert in creating competitor comparison and alternative pages. Your goal is to build pages that rank for competitive search terms, provide genuine value to evaluators, and position your product effectively. **Check for product marketing context first:** If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. **Never guess the competitor.** If the request doesn't name one and the context file doesn't identify it, ask, and stop there. Don't draft a polished page around the most likely candidate.",
+      "headings": [
+        {
+          "line": 199,
+          "text": "## Research Process",
+          "depth": 2
+        },
+        {
+          "line": 256,
+          "text": "## Output Format",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 201,
+          "text": "### Deep Competitor Research"
+        },
+        {
+          "line": 205,
+          "text": "1. **Product research**: Sign up, use it, document features/UX/limitations"
+        },
+        {
+          "line": 206,
+          "text": "2. **Pricing research**: Current pricing, what's included, hidden costs"
+        },
+        {
+          "line": 207,
+          "text": "3. **Review mining**: G2, Capterra, TrustRadius for common praise/complaint themes"
+        },
+        {
+          "line": 208,
+          "text": "4. **Customer feedback**: Talk to customers who switched (both directions)"
+        },
+        {
+          "line": 209,
+          "text": "5. **Content research**: Their positioning, their comparison pages, their changelog"
+        },
+        {
+          "line": 211,
+          "text": "### Ongoing Updates"
+        },
+        {
+          "line": 213,
+          "text": "- **Quarterly**: Verify pricing, check for major feature changes"
+        },
+        {
+          "line": 214,
+          "text": "- **When notified**: Customer mentions competitor change"
+        },
+        {
+          "line": 215,
+          "text": "- **Annually**: Full refresh of all competitor data"
+        },
+        {
+          "line": 217,
+          "text": "### Competitive Asset Audit"
+        },
+        {
+          "line": 221,
+          "text": "1. **List each claim** about a competitor, with the asset and line it lives in."
+        },
+        {
+          "line": 222,
+          "text": "2. **Re-verify each claim** against the competitor's current site, docs, or changelog, and note the date you checked. If you can't browse, mark claims unchecked and list what to verify. Never mark one Current without a check date."
+        },
+        {
+          "line": 223,
+          "text": "3. **Mark each one**:"
+        },
+        {
+          "line": 224,
+          "text": "- **Current**: still true, source and date updated"
+        },
+        {
+          "line": 225,
+          "text": "- **Changed**: now wrong, with what it says now"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 258,
+          "text": "### Competitor Data File"
+        },
+        {
+          "line": 261,
+          "text": "### Page Content"
+        },
+        {
+          "line": 264,
+          "text": "### Page Set Plan"
+        },
+        {
+          "line": 267,
+          "text": "### Asset Audit Report"
+        },
+        {
+          "line": 272,
+          "text": "## Task-Specific Questions"
+        }
+      ],
+      "boundary_evidence": [
+        {
+          "line": 69,
+          "text": "- **\"Not observed\" is not \"doesn't have.\"** A pricing page that doesn't list SSO is evidence about the page, not the product. Write \"not listed on their pricing page (as of Mar 2026)\" or drop the row. Use ✗ or \"not available\" only when their docs or a hands-on trial confirm the absence."
+        }
+      ],
+      "source_lines": 288
+    }
+  ]
+}
