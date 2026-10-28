@@ -55,6 +55,7 @@ To check profile integrity and regenerate the CSV (from the repo root):
 ```bash
 python3 tools/export_functional_matrix.py --check-only
 python3 tools/export_functional_matrix.py
+python3 tools/rank_functional_neighbors.py
 ```
 
 The JSON profile is canonical; CSV is a generated comparison view. Any unreviewed or unread candidate remains in the registry *candidate inventory*, not in an approved runtime registry.
