@@ -1,0 +1,575 @@
+{
+  "idx": 3,
+  "records": [
+    {
+      "id": "WM-X0093",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/wiki-query/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/wiki-query/SKILL.md",
+      "sha": "4133c1f94fde28c45f64175338efb83c248e93bb",
+      "status": "OK",
+      "description": "Query the LLM Wiki — reads index.md first, drills into 3-10 relevant pages, synthesizes an answer with inline [[wikilink]] citations, and offers to file the answer back as a new comparison or synthesis page. Usage /wiki-query \"<question>\" ",
+      "intro": "<!-- canonical copy: engineering/llm-wiki/commands/wiki-query.md — keep in sync (root copy uses repo-root-relative script paths) --> Ask the wiki a question. The librarian reads `index.md` first, picks relevant pages across categories, synthesizes an answer with citations, and offers to file the answer back into the wiki so your explorations compound. /wiki-query \"<your question>\" /wiki-query \"what does the wiki say about sparse autoencoders?\" /wiki-query \"compare monosemanticity and polysemanticity across my sources\"",
+      "headings": [
+        {
+          "line": 30,
+          "text": "## Output formats",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 60
+    },
+    {
+      "id": "WM-X0094",
+      "repo": "alirezarezvani/claude-skills",
+      "path": "c-level-advisor/skills/company-os/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/skills/company-os/SKILL.md",
+      "sha": "9b5d7d91c72af8ad38e57a41485619ea8176f60c",
+      "status": "OK",
+      "description": "The meta-framework for how a company runs — the connective tissue between all C-suite roles. Covers operating system selection (EOS, Scaling Up, OKR-native, hybrid), accountability charts, scorecards, meeting pulse, issue resolution, and 90-day rocks. Use when setting up company operations, selecting a management framework, designing meeting rhythms, building accountability systems, implementing OKRs, or when user mentions EOS, Scaling Up, operating system, L10 meetings, rocks, scorecard, accountability chart, or quarterly planning.\" ",
+      "intro": "# Company Operating System The operating system is the collection of tools, rhythms, and agreements that determine how the company functions. Every company has one — most just don't know what it is. Making it explicit makes it improvable. operating system, EOS, Entrepreneurial Operating System, Scaling Up, Rockefeller Habits, OKR, Holacracy, L10 meeting, rocks, scorecard, accountability chart, issues list, IDS, meeting pulse, quarterly planning, weekly scorecard, management framework, company rhythm, traction, Gino Wickman, Verne Harnish Most operational dysfunction isn't a people problem — it's a system problem. When: - The same issues recur every week: no issue resolution system",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 237
+    },
+    {
+      "id": "WM-X0095",
+      "repo": "alirezarezvani/claude-skills",
+      "path": "c-level-advisor/skills/competitive-intel/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/skills/competitive-intel/SKILL.md",
+      "sha": "4903607353bfc30cd5fedc9c3ac6c18ce4fcfb9d",
+      "status": "OK",
+      "description": "Systematic competitor tracking that feeds CMO positioning, CRO battlecards, and CPO roadmap decisions. Use when analyzing competitors, building sales battlecards, tracking market moves, positioning against alternatives, or when user mentions competitive intelligence, competitive analysis, competitor research, battlecards, win/loss, or market positioning.\" ",
+      "intro": "# Competitive Intelligence Systematic competitor tracking. Not obsession — intelligence that drives real decisions. competitive intelligence, competitor analysis, battlecard, win/loss analysis, competitive positioning, competitive tracking, market intelligence, competitor research, SWOT, competitive map, feature gap analysis, competitive strategy Ask in natural language for the deliverable you need: > \"Map our competitive landscape\" — direct, indirect, and future competitors",
+      "headings": [
+        {
+          "line": 84,
+          "text": "### Layer 4: Output Formats",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [
+        {
+          "line": 95,
+          "text": "### Layer 5: Intelligence Cadence"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 204
+    },
+    {
+      "id": "WM-X0096",
+      "repo": "alirezarezvani/claude-skills",
+      "path": "c-level-advisor/skills/context-engine/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/skills/context-engine/SKILL.md",
+      "sha": "4762a40f8d4d3706cb0711c039613bb651b640a1",
+      "status": "OK",
+      "description": "Loads and manages company context for all C-suite advisor skills. Reads ~/.claude/company-context.md, detects stale context (older than 90 days), enriches context during conversations, and enforces privacy/anonymization rules before external API calls. Use when starting any C-suite advisor session, when context looks stale or missing, or before sending company data to an external service.\" ",
+      "intro": "The memory layer for C-suite advisors. Every advisor skill loads this first. Context is what turns generic advice into specific insight. company context, context loading, context engine, company profile, advisor context, stale context, context refresh, privacy, anonymization ## Load Protocol (Run at Start of Every C-Suite Session) **Step 1 — Check for context file:** `~/.claude/company-context.md` - Exists → proceed to Step 2",
+      "headings": [
+        {
+          "line": 84,
+          "text": "### Safe to use externally (with anonymization)",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 129,
+          "text": "Missing required fields: note gaps, work around in session, ask in-session only when critical."
+        }
+      ],
+      "source_lines": 135
+    },
+    {
+      "id": "WM-X0097",
+      "repo": "alirezarezvani/claude-skills",
+      "path": "c-level-advisor/skills/culture-architect/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/skills/culture-architect/SKILL.md",
+      "sha": "c1f808471578859789fc43fa1c39eb19defb7b00",
+      "status": "OK",
+      "description": "Build, measure, and evolve company culture as operational behavior — not wall posters. Covers mission/vision/values workshops, values-to-behaviors translation, culture code creation, culture health assessment, and cultural rituals by stage. Use when building company values, assessing culture health, designing cultural rituals, creating culture codes, handling culture clashes, or when user mentions culture, values, culture debt, founder culture, or culture code.\" ",
+      "intro": "Culture is what you DO, not what you SAY. This skill builds culture as an operational system — observable behaviors, measurable health, and rituals that scale. culture, company culture, values, mission, vision, culture code, cultural rituals, culture health, values-to-behaviors, founder culture, culture debt, value-washing, culture assessment, culture survey, Netflix culture deck, HubSpot culture code, psychological safety, culture scaling **Culture = (What you reward) + (What you tolerate) + (What you celebrate)** If your values say \"transparency\" but you punish bearers of bad news — your real value is \"optics.\" Culture is not aspirational. It's descriptive. The work is closing the gap between stated and actual. ### 1. Mission / Vision / Values Workshop",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 109,
+          "text": "- Onboarding buddy program: cultural transmission now requires intentional effort"
+        }
+      ],
+      "source_lines": 168
+    },
+    {
+      "id": "WM-X0098",
+      "repo": "alirezarezvani/claude-skills",
+      "path": "c-level-advisor/skills/decision-logger/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/skills/decision-logger/SKILL.md",
+      "sha": "e62151411ef2134a62ed4ea65eab544df3b8dda1",
+      "status": "OK",
+      "description": "Two-layer memory architecture for board meeting decisions. Manages raw transcripts (Layer 1) and approved decisions (Layer 2). Use when logging decisions after a board meeting, reviewing past decisions with /decision-logger decisions, or checking overdue action items with /decision-logger review. Invoked automatically by the board-meeting skill after Phase 5 founder approval.\" ",
+      "intro": "Two-layer memory system. Layer 1 stores everything. Layer 2 stores only what the founder approved. Future meetings read Layer 2 only — this prevents hallucinated consensus from past debates bleeding into new deliberations. decision log, memory, approved decisions, action items, board minutes, /decision-logger decisions, /decision-logger review, conflict detection, DO_NOT_RESURFACE python scripts/decision_tracker.py --demo             # See sample output python scripts/decision_tracker.py --summary          # Overview + overdue python scripts/decision_tracker.py --overdue          # Past-deadline actions",
+      "headings": [
+        {
+          "line": 119,
+          "text": "## Logging Workflow (Post Phase 5)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 121,
+          "text": "1. Founder approves synthesis"
+        },
+        {
+          "line": 122,
+          "text": "2. Write Layer 1 raw transcript → `~/.claude/decisions/raw/YYYY-MM-DD-<slug>.md`"
+        },
+        {
+          "line": 123,
+          "text": "3. Check conflicts against `~/.claude/decisions/approved/decisions.md`"
+        },
+        {
+          "line": 124,
+          "text": "4. Surface conflicts → wait for founder resolution"
+        },
+        {
+          "line": 125,
+          "text": "5. Write the approved record to `~/.claude/decisions/approved/YYYY-MM-DD-<slug>.md` and append to the index `decisions.md`"
+        },
+        {
+          "line": 126,
+          "text": "6. Confirm: decisions logged, actions tracked, DO_NOT_RESURFACE flags added"
+        },
+        {
+          "line": 130,
+          "text": "## Marking Actions Complete"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 155
+    },
+    {
+      "id": "WM-X0099",
+      "repo": "alirezarezvani/claude-skills",
+      "path": "c-level-advisor/skills/internal-narrative/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/skills/internal-narrative/SKILL.md",
+      "sha": "4ef4b25aff80b930ad2ce49da162afa647b4e154",
+      "status": "OK",
+      "description": "Build and maintain one coherent company story across all audiences — employees, investors, customers, candidates, and partners. Detects narrative contradictions and ensures the same truth is framed for each audience's needs. Use when preparing investor updates, all-hands presentations, board communications, recruiting narratives, crisis communications, or when user mentions company narrative, messaging consistency, storytelling, all-hands, investor update, or crisis communication.\" ",
+      "intro": "# Internal Narrative Builder One company. Many audiences. Same truth — different lenses. Narrative inconsistency is trust erosion. This skill builds and maintains coherent communication across every stakeholder group. narrative, company story, internal communication, investor update, all-hands, board communication, crisis communication, messaging, storytelling, narrative consistency, audience translation, founder narrative, employee communication, candidate narrative, partner communication **The same fact lands differently depending on who hears it and what they need.** \"We're shifting resources from Product A to Product B\" means:",
+      "headings": [
+        {
+          "line": 37,
+          "text": "### Step 1: Build the Core Narrative",
+          "depth": 3
+        },
+        {
+          "line": 54,
+          "text": "### Step 2: Audience Translation Matrix",
+          "depth": 3
+        },
+        {
+          "line": 72,
+          "text": "### Step 3: Contradiction Detection",
+          "depth": 3
+        },
+        {
+          "line": 91,
+          "text": "### Step 4: Audience-Specific Communication Cadence",
+          "depth": 3
+        },
+        {
+          "line": 105,
+          "text": "### Step 5: All-Hands Structure and Cadence",
+          "depth": 3
+        },
+        {
+          "line": 123,
+          "text": "### Step 6: Crisis Communication",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 198
+    },
+    {
+      "id": "WM-X0100",
+      "repo": "alirezarezvani/claude-skills",
+      "path": "c-level-advisor/skills/strategic-alignment/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/skills/strategic-alignment/SKILL.md",
+      "sha": "165f6132af1cf21530efb759b89fc246260200f9",
+      "status": "OK",
+      "description": "Cascades strategy from boardroom to individual contributor. Detects and fixes misalignment between company goals and team execution. Covers strategy articulation, cascade mapping, orphan goal detection, silo identification, communication gap analysis, and realignment protocols. Use when teams are pulling in different directions, OKRs don't connect, departments optimize locally at company expense, or when user mentions alignment, strategy cascade, silo, conflicting OKRs, or strategy communication.\" ",
+      "intro": "# Strategic Alignment Engine Strategy fails at the cascade, not the boardroom. This skill detects misalignment before it becomes dysfunction and builds systems that keep strategy connected from CEO to individual contributor. strategic alignment, strategy cascade, OKR alignment, orphan OKRs, conflicting goals, silos, communication gap, department alignment, alignment checker, strategy articulation, cross-functional, goal cascade, misalignment, alignment score python scripts/alignment_checker.py    # Check OKR alignment: orphans, conflicts, coverage gaps The alignment problem: **The further a goal gets from the strategy that created it, the less likely it reflects the original intent.** This is the organizational telephone game. It happens at every stage. The question is how bad it is and how to fix it.",
+      "headings": [
+        {
+          "line": 32,
+          "text": "### Step 1: Strategy Articulation Test",
+          "depth": 3
+        },
+        {
+          "line": 46,
+          "text": "### Step 2: Cascade Mapping",
+          "depth": 3
+        },
+        {
+          "line": 65,
+          "text": "### Step 3: Alignment Detection",
+          "depth": 3
+        },
+        {
+          "line": 84,
+          "text": "### Step 4: Silo Identification",
+          "depth": 3
+        },
+        {
+          "line": 106,
+          "text": "### Step 5: Communication Gap Analysis",
+          "depth": 3
+        },
+        {
+          "line": 124,
+          "text": "### Step 6: Realignment Protocol",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 195
+    },
+    {
+      "id": "WM-X0102",
+      "repo": "anayy09/claude-research-skills",
+      "path": "skills/investigating-sources/SKILL.md",
+      "url": "https://github.com/anayy09/claude-research-skills/blob/main/skills/investigating-sources/SKILL.md",
+      "status": "FAILED",
+      "error": "NOT_FOUND: Error code: NOT_FOUND; Error: GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"stat"
+    },
+    {
+      "id": "WM-X0103",
+      "repo": "anayy09/claude-research-skills",
+      "path": "skills/manuscript-editor/SKILL.md",
+      "url": "https://github.com/anayy09/claude-research-skills/blob/main/skills/manuscript-editor/SKILL.md",
+      "status": "FAILED",
+      "error": "NOT_FOUND: Error code: NOT_FOUND; Error: GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"stat"
+    },
+    {
+      "id": "WM-X0104",
+      "repo": "anayy09/claude-research-skills",
+      "path": "skills/manuscript-writing/SKILL.md",
+      "url": "https://github.com/anayy09/claude-research-skills/blob/main/skills/manuscript-writing/SKILL.md",
+      "status": "FAILED",
+      "error": "NOT_FOUND: Error code: NOT_FOUND; Error: GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"stat"
+    },
+    {
+      "id": "WM-X0106",
+      "repo": "anayy09/claude-research-skills",
+      "path": "skills/research-ideation/SKILL.md",
+      "url": "https://github.com/anayy09/claude-research-skills/blob/main/skills/research-ideation/SKILL.md",
+      "status": "FAILED",
+      "error": "NOT_FOUND: Error code: NOT_FOUND; Error: GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"stat"
+    },
+    {
+      "id": "WM-X0107",
+      "repo": "anayy09/claude-research-skills",
+      "path": "skills/submission-reviewer/SKILL.md",
+      "url": "https://github.com/anayy09/claude-research-skills/blob/main/skills/submission-reviewer/SKILL.md",
+      "status": "FAILED",
+      "error": "NOT_FOUND: Error code: NOT_FOUND; Error: GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"stat"
+    },
+    {
+      "id": "WM-X0109",
+      "repo": "anthropics/claude-plugins-official",
+      "path": "plugins/hookify/skills/writing-rules/SKILL.md",
+      "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/hookify/skills/writing-rules/SKILL.md",
+      "sha": "58f9e6d1b4f37f52f936372ba0c65ab627fcf4e0",
+      "status": "OK",
+      "description": "This skill should be used when the user asks to \"create a hookify rule\", \"write a hook rule\", \"configure hookify\", \"add a hookify rule\", or needs guidance on hookify rule syntax and patterns. ",
+      "intro": "Hookify rules are markdown files with YAML frontmatter that define patterns to watch for and messages to show when those patterns match. Rules are stored in `.claude/hookify.{rule-name}.local.md` files. event: bash|file|stop|prompt|all pattern: regex-pattern-here Message to show Claude when this rule triggers. Can include markdown formatting, warnings, suggestions, etc.",
+      "headings": [
+        {
+          "line": 300,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 302,
+          "text": "### Creating a Rule"
+        },
+        {
+          "line": 304,
+          "text": "1. Identify unwanted behavior"
+        },
+        {
+          "line": 305,
+          "text": "2. Determine which tool is involved (Bash, Edit, etc.)"
+        },
+        {
+          "line": 306,
+          "text": "3. Choose event type (bash, file, stop, etc.)"
+        },
+        {
+          "line": 307,
+          "text": "4. Write regex pattern"
+        },
+        {
+          "line": 308,
+          "text": "5. Create `.claude/hookify.{name}.local.md` file in project root"
+        },
+        {
+          "line": 309,
+          "text": "6. Test immediately - rules are read dynamically on next tool use"
+        },
+        {
+          "line": 311,
+          "text": "### Refining a Rule"
+        },
+        {
+          "line": 313,
+          "text": "1. Edit the `.local.md` file"
+        },
+        {
+          "line": 314,
+          "text": "2. Adjust pattern or message"
+        },
+        {
+          "line": 315,
+          "text": "3. Test immediately - changes take effect on next tool use"
+        },
+        {
+          "line": 317,
+          "text": "### Disabling a Rule"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 279,
+          "text": "- YAML quoted strings: `\"pattern\"` requires double backslashes `\\\\s`"
+        }
+      ],
+      "source_lines": 375
+    },
+    {
+      "id": "WM-X0110",
+      "repo": "anthropics/claude-plugins-official",
+      "path": "plugins/plugin-dev/skills/skill-development/SKILL.md",
+      "url": "https://github.com/anthropics/claude-plugins-official/blob/main/plugins/plugin-dev/skills/skill-development/SKILL.md",
+      "sha": "1cb3bd90b29d0469d25c5df9ad72741ac1e2c4cd",
+      "status": "OK",
+      "description": "This skill should be used when the user wants to \"create a skill\", \"add a skill to plugin\", \"write a new skill\", \"improve skill description\", \"organize skill content\", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Claude Code plugins. ",
+      "intro": "# Skill Development for Claude Code Plugins This skill provides guidance for creating effective skills for Claude Code plugins. Skills are modular, self-contained packages that extend Claude's capabilities by providing specialized knowledge, workflows, and tools. Think of them as \"onboarding guides\" for specific domains or tasks—they transform Claude from a general-purpose agent into a specialized agent",
+      "headings": [
+        {
+          "line": 87,
+          "text": "## Skill Creation Process",
+          "depth": 2
+        },
+        {
+          "line": 91,
+          "text": "### Step 1: Understanding the Skill with Concrete Examples",
+          "depth": 3
+        },
+        {
+          "line": 108,
+          "text": "### Step 2: Planning the Reusable Skill Contents",
+          "depth": 3
+        },
+        {
+          "line": 137,
+          "text": "### Step 3: Create Skill Structure",
+          "depth": 3
+        },
+        {
+          "line": 148,
+          "text": "### Step 4: Edit the Skill",
+          "depth": 3
+        },
+        {
+          "line": 212,
+          "text": "### Step 5: Validate and Test",
+          "depth": 3
+        },
+        {
+          "line": 232,
+          "text": "### Step 6: Iterate",
+          "depth": 3
+        },
+        {
+          "line": 621,
+          "text": "## Implementation Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 364,
+          "text": "### Imperative/Infinitive Form"
+        },
+        {
+          "line": 382,
+          "text": "### Third-Person in Description"
+        },
+        {
+          "line": 397,
+          "text": "### Objective, Instructional Language"
+        },
+        {
+          "line": 415,
+          "text": "## Validation Checklist"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 91,
+          "text": "### Step 1: Understanding the Skill with Concrete Examples"
+        },
+        {
+          "line": 99,
+          "text": "- \"What functionality should the image-editor skill support? Editing, rotating, anything else?\""
+        },
+        {
+          "line": 100,
+          "text": "- \"Can you give some examples of how this skill would be used?\""
+        },
+        {
+          "line": 101,
+          "text": "- \"I can imagine users asking for things like 'Remove the red-eye from this image' or 'Rotate this image'. Are there other ways you imagine this skill being used?\""
+        },
+        {
+          "line": 102,
+          "text": "- \"What would a user say that should trigger this skill?\""
+        },
+        {
+          "line": 108,
+          "text": "### Step 2: Planning the Reusable Skill Contents"
+        },
+        {
+          "line": 112,
+          "text": "1. Considering how to execute on the example from scratch"
+        },
+        {
+          "line": 113,
+          "text": "2. Identifying what scripts, references, and assets would be helpful when executing these workflows repeatedly"
+        },
+        {
+          "line": 117,
+          "text": "1. Rotating a PDF requires re-writing the same code each time"
+        },
+        {
+          "line": 118,
+          "text": "2. A `scripts/rotate_pdf.py` script would be helpful to store in the skill"
+        },
+        {
+          "line": 122,
+          "text": "1. Writing a frontend webapp requires the same boilerplate HTML/React each time"
+        },
+        {
+          "line": 123,
+          "text": "2. An `assets/hello-world/` template containing the boilerplate HTML/React project files would be helpful to store in the skill"
+        },
+        {
+          "line": 127,
+          "text": "1. Querying BigQuery requires re-discovering the table schemas and relationships each time"
+        },
+        {
+          "line": 128,
+          "text": "2. A `references/schema.md` file documenting the table schemas would be helpful to store in the skill"
+        },
+        {
+          "line": 131,
+          "text": "1. Developers repeatedly need to validate hooks.json and test hook scripts"
+        },
+        {
+          "line": 132,
+          "text": "2. `scripts/validate-hook-schema.sh` and `scripts/test-hook.sh` utilities would be helpful"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 64,
+          "text": "- **Benefits**: Keeps SKILL.md lean, loaded only when Claude determines it's needed"
+        },
+        {
+          "line": 93,
+          "text": "Skip this step only when the skill's usage patterns are already clearly understood. It remains valuable even when working with an existing skill."
+        },
+        {
+          "line": 117,
+          "text": "1. Rotating a PDF requires re-writing the same code each time"
+        },
+        {
+          "line": 122,
+          "text": "1. Writing a frontend webapp requires the same boilerplate HTML/React each time"
+        },
+        {
+          "line": 127,
+          "text": "1. Querying BigQuery requires re-discovering the table schemas and relationships each time"
+        },
+        {
+          "line": 488,
+          "text": "**Why good:** Progressive disclosure, detailed content loaded only when needed"
+        }
+      ],
+      "source_lines": 638
+    },
+    {
+      "id": "WM-X0112",
+      "repo": "anthropics/skills",
+      "path": "skills/docx/SKILL.md",
+      "url": "https://github.com/anthropics/skills/blob/main/skills/docx/SKILL.md",
+      "sha": "fb954a460a1ea2294e9595e87fecce8df043eeba",
+      "status": "OK",
+      "description": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files) or Word templates (.dotx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', '.dotx', or requests to produce professional documents with formatting like tables of contents, headings, page numbers, or letterheads. Also use when extracting or reorganizing content from .docx or .dotx files, inserting or replacing images in documents, performing find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a 'report', 'memo', 'letter', 'template', or similar deliverable as a Word or .docx file, use this skill. Do NOT use for PDFs, spreadsheets, Google Docs, or general coding tasks unrelated to document generation.\" ",
+      "intro": "# DOCX creation, editing, and analysis A `.docx` is a ZIP archive of XML files. Choose your approach by task: | **Create** a new document | Write a `docx` (npm) script — see gotchas below | | **Edit** an existing document | `unzip` → edit `word/document.xml` → `zip` (docx-js cannot open existing files) | | **Read** content | `pandoc -t markdown file.docx` |",
+      "headings": [
+        {
+          "line": 35,
+          "text": "## Verify the output",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [
+        {
+          "line": 47,
+          "text": "## Editing existing documents"
+        }
+      ],
+      "boundary_evidence": [
+        {
+          "line": 28,
+          "text": "- **`ImageRun` requires `type:`** (`\"png\"`, `\"jpg\"`, …)."
+        }
+      ],
+      "source_lines": 92
+    }
+  ]
+}
