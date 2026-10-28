@@ -31,7 +31,7 @@
 | [`WM-X0015` peer-review](https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/peer-review/SKILL.md) | 기밀 원고 사전 승인과 로컬 검수 게이트를 갖춘 철저한 심사 초안. submission-reviewer는 제출 전 논문·특허의 독창성·준비도와 수정 우선순위에 더 직접적. 정식 익명 심사 환경에서는 0015가 더 적합할 수 있음 | RESERVE |
 | [`WM-X0301` writing-plans](https://github.com/obra/superpowers/blob/main/skills/writing-plans/SKILL.md) | 작은 테스트/커밋 단위로 분해하는 코드 에이전트 계획. 0203은 정해진 문서 스키마·식별자·검증 조건 등 자동 처리형 계획에 집중. Superpowers 실행체계와 결합되면 0301 교체가 유리할 수 있음 | RESERVE |
 | [`WM-X0196` build-evidence-map](https://github.com/github/awesome-copilot/blob/main/skills/build-evidence-map/SKILL.md) | 근거의 지지/반박/한정/미확인을 그래프형 `.doubt.json`으로 분리해 차별화. Node 검증기와 특수 스키마가 필수이고 현재 조사/근거 합성 계열이 일부 근접 | RESERVE |
-| [`WM-X0395` social-evidence-research](https://github.com/wshobson/agents/blob/main/plugins/research/skills/social-evidence-research/SKILL.md) | 소셜 증언 수집 근거의 반복/범위 관리가 전문적이지만 이번에는 일반 조사·사실검증을 먼저 보완 | RESERVE |
+| [`WM-X0395` social-evidence-research](https://github.com/wshobson/agents/blob/main/plugins/content-marketing/skills/social-evidence-research/SKILL.md) | 소셜 증언 수집 근거의 반복/범위 관리가 전문적이지만 이번에는 일반 조사·사실검증을 먼저 보완 | RESERVE |
 | [`WM-X0345` carousel-writer](https://github.com/social-media-skills/skills/blob/main/skills/carousel-writer/SKILL.md) | 고유한 멀티슬라이드 산출을 가짐. 다만 브랜드 프로필·훅 등의 동반 스킬 의존 및 좁은 출력 매체로 후순위 | RESERVE |
 
 ## 특히 확인된 의존 관계
