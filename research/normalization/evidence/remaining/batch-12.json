@@ -1,0 +1,622 @@
+{
+  "idx": 12,
+  "records": [
+    {
+      "id": "WM-X0266",
+      "repo": "mattpocock/skills",
+      "path": "skills/productivity/grill-me/SKILL.md",
+      "url": "https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md",
+      "sha": "3947ff9c4ad980d14fc07fccbf659d47c114e81d",
+      "status": "OK",
+      "description": "A relentless interview to sharpen a plan or design. ",
+      "intro": "Call the Skill tool with \"grilling\".",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 8
+    },
+    {
+      "id": "WM-X0267",
+      "repo": "mattpocock/skills",
+      "path": "skills/productivity/grilling/SKILL.md",
+      "url": "https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md",
+      "sha": "df69d9936880cd3314c28858c6c52f48db23b856",
+      "status": "OK",
+      "description": "Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases. ",
+      "intro": "Interview the user relentlessly until you reach a shared understanding. Map this as a **design tree**: every decision branches into the decisions that hang off it. Work the tree in **rounds**. The **frontier** is every decision whose prerequisites are already settled: the questions you can ask _now_ without guessing at answers you haven't heard yet. Ask the whole frontier in one round: number each question and give your recommended answer. Then wait for the user's answers before the next round. ❓ **Q1** - **<question title>**: <question body, might be multiple paragraphs, including multiple choices> ❓ **Q2** - **<question title>**: <question body, might be multiple paragraphs, including multiple choices>",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 8,
+          "text": "Work the tree in **rounds**. The **frontier** is every decision whose prerequisites are already settled: the questions you can ask _now_ without guessing at answers you haven't heard yet. Ask the whole frontier in one round: number each question and give your recommended answer. Then wait for the user's answers before the next round."
+        },
+        {
+          "line": 28,
+          "text": "Finding _facts_ is your job, never the user's. When a frontier question needs a fact from the environment (filesystem, tools, etc.), dispatch a sub-agent to find it; don't ask the user for anything you could look up yourself. Don't block on it: a running exploration is an unsettled prerequisite, so only the questions downstream of it wait for the sub-agent to report; ask the rest of the frontier now. The _decisions_ are the user's: put each to them and wait."
+        }
+      ],
+      "source_lines": 31
+    },
+    {
+      "id": "WM-X0268",
+      "repo": "mattpocock/skills",
+      "path": "skills/productivity/handoff/SKILL.md",
+      "url": "https://github.com/mattpocock/skills/blob/main/skills/productivity/handoff/SKILL.md",
+      "sha": "a224edc643a20ddb989f9bca1547440169159810",
+      "status": "OK",
+      "description": "Compact the current conversation into a handoff document for another agent to pick up. ",
+      "intro": "Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save to the temporary directory of the user's OS (`$TMPDIR`, else `/tmp`; `%TEMP%` on Windows) - not the current workspace. Include a \"suggested skills\" section in the document, naming which skills the next agent should call the Skill tool for. Do not duplicate content already captured in other artifacts (specs, plans, ADRs, issues, commits, diffs). Reference them by path or URL instead. Redact any sensitive information, such as API keys, passwords, or personally identifiable information.",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 17
+    },
+    {
+      "id": "WM-X0269",
+      "repo": "mattpocock/skills",
+      "path": "skills/productivity/teach/SKILL.md",
+      "url": "https://github.com/mattpocock/skills/blob/main/skills/productivity/teach/SKILL.md",
+      "sha": "493fa3bae0dada971c4dfb965790e56920b1dced",
+      "status": "OK",
+      "description": "Teach the user a new skill or concept, within this workspace. ",
+      "intro": "The user has asked you to teach them something. This is a stateful request - they intend to learn the topic over multiple sessions. Treat the current directory as a teaching workspace. Workspace paths (`./lessons/` and the rest) resolve from the directory `/teach` was run in; only the `*-FORMAT.md` links resolve from this skill's folder. The state of their learning is captured in this directory in several files: - `MISSION.md`: A document capturing the _reason_ the user is interested in the topic. This should be used to ground all teaching. Use the format in [MISSION-FORMAT.md](./MISSION-FORMAT.md). - `./reference/*.html`: A directory of reference materials. These are the compressed learnings from the lessons - cheat sheets, reference algor",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 141
+    },
+    {
+      "id": "WM-X0270",
+      "repo": "mattpocock/skills",
+      "path": "skills/productivity/to-questionnaire/SKILL.md",
+      "url": "https://github.com/mattpocock/skills/blob/main/skills/productivity/to-questionnaire/SKILL.md",
+      "sha": "dadd0c00d6a350acaa15bb9ca1b96b20ead684ca",
+      "status": "OK",
+      "description": "Turn a decision you can't fully answer into a questionnaire for someone else to fill in. ",
+      "intro": "Turn something the user can't answer alone into a **questionnaire**: a Markdown document they hand to one person to fill in async, or fill out together over a meeting. The recipient holds knowledge the user lacks; the questionnaire pulls it out of them. **Grill the send, not the subject.** Interview the user only about the _send_, which they can always answer: who it goes to, and what they need back. The questions in the document then target the **gap** between what the recipient knows and what the user needs. 1. **Who is it going to?** Ask, in one exchange, the recipient's role, expertise, and relationship to the user. This fixes the questionnaire's tone and how much context it must carry. Done when you know who the recipient is and what t",
+      "headings": [
+        {
+          "line": 34,
+          "text": "## How to answer",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 38,
+          "text": "## <Theme heading>"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 55
+    },
+    {
+      "id": "WM-X0271",
+      "repo": "mattpocock/skills",
+      "path": "skills/productivity/wait-what/SKILL.md",
+      "url": "https://github.com/mattpocock/skills/blob/main/skills/productivity/wait-what/SKILL.md",
+      "sha": "9b15cd1a7dda0854ca093e29e3e0de57e241b2ac",
+      "status": "OK",
+      "description": "Stop. That last message did not land: re-pitch it.\" ",
+      "intro": "Wait, I don't understand where you've got to here. Re-pitch that: give me a little bit of context, talk in ASD-STE100 Simplified Technical English, and use the ubiquitous language from `GLOSSARY.md` (follow `GLOSSARY-MAP.md` to the right one if the repo has more than one).",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 8
+    },
+    {
+      "id": "WM-X0273",
+      "repo": "mazrean/agent-skills",
+      "path": "skills/planning-wsh-improvements/SKILL.md",
+      "url": "https://github.com/mazrean/agent-skills/blob/main/skills/planning-wsh-improvements/SKILL.md",
+      "status": "FAILED",
+      "error": "TypeError: Cannot read properties of undefined (reading 'trim')"
+    },
+    {
+      "id": "WM-X0275",
+      "repo": "mazrean/agent-skills",
+      "path": "skills/writing-implementation-tasks/SKILL.md",
+      "url": "https://github.com/mazrean/agent-skills/blob/main/skills/writing-implementation-tasks/SKILL.md",
+      "sha": "6377ceb2f1b0dc387fd5eea85714c337dad54f1a",
+      "status": "OK",
+      "description": "Creates implementation tasks as Claude Code custom slash commands with dependency ordering and atomic scope. Use when breaking down features into executable task commands, planning implementation order, defining task dependencies, or when user mentions task breakdown, implementation plan, or work decomposition for spec-driven development. ",
+      "intro": "# Writing Implementation Tasks as Commands Create implementation task breakdowns as Claude Code custom slash commands. Each task becomes an invokable `/command` that guides the agent through a single atomic implementation step. **Use this skill when** breaking a feature spec and technical design into implementable tasks, planning implementation order, or defining what to build next. **Supporting files:** [CONTEXT-LAYERS.md](references/CONTEXT-LAYERS.md) for layer mapping details, [EXAMPLES.md](references/EXAMPLES.md) for complete examples.",
+      "headings": [
+        {
+          "line": 22,
+          "text": "## Output Structure",
+          "depth": 2
+        },
+        {
+          "line": 52,
+          "text": "## Execution Steps",
+          "depth": 2
+        },
+        {
+          "line": 85,
+          "text": "## Output Description",
+          "depth": 2
+        },
+        {
+          "line": 114,
+          "text": "## Scope",
+          "depth": 2
+        },
+        {
+          "line": 123,
+          "text": "## Steps",
+          "depth": 2
+        },
+        {
+          "line": 196,
+          "text": "### Task Scope: Atomic and Committable",
+          "depth": 3
+        },
+        {
+          "line": 212,
+          "text": "## Scope",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 54,
+          "text": "1. Read the **Progress** checklist below — `- [x]` entries are the source of"
+        },
+        {
+          "line": 56,
+          "text": "2. For the first `- [ ]` task, cross-check that it really is pending:"
+        },
+        {
+          "line": 57,
+          "text": "- The **Verify** commands do not yet pass, AND"
+        },
+        {
+          "line": 58,
+          "text": "- No matching Conventional Commits commit exists"
+        },
+        {
+          "line": 60,
+          "text": "3. If a checklist entry disagrees with git state (e.g. `- [x]` but no commit,"
+        },
+        {
+          "line": 63,
+          "text": "4. Report progress summary and recommend the next task command to run."
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 33,
+          "text": "## Template: Overview Command"
+        },
+        {
+          "line": 89,
+          "text": "## Template: Task Command"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 390
+    },
+    {
+      "id": "WM-X0276",
+      "repo": "mazrean/agent-skills",
+      "path": "skills/writing-isucon-arch-subagent-tasks/SKILL.md",
+      "url": "https://github.com/mazrean/agent-skills/blob/main/skills/writing-isucon-arch-subagent-tasks/SKILL.md",
+      "sha": "2a1b0d1ae283c7edd658754d100de4b17f57c628",
+      "status": "OK",
+      "description": "Decomposes the apply-skill produced by designing-isucon-architecture into atomic tasks, materializes one Claude Code subagent per task, and emits a dispatcher slash command that fires the subagents in dependency order (parallel where the graph allows). Use when an applying-isucon-arch-<slug> skill exists and the team wants the architecture rollout to run as orchestrated subagent jobs rather than a single linear human-driven session, or when the user asks to \"create subagents for this ISUCON design\", \"wire the ISUCON apply-skill into Claude Code agents\", or \"split the rollout into parallel agent tasks\". ",
+      "intro": "# Writing ISUCON Arch Rollout as Subagent Tasks Turns an existing `applying-isucon-arch-<slug>/` skill (the artifact that `designing-isucon-architecture` produces) into three runnable artifacts: 1. A **task graph** — atomic units of the architecture rollout, ordered by",
+      "headings": [
+        {
+          "line": 51,
+          "text": "## Workflow",
+          "depth": 2
+        },
+        {
+          "line": 53,
+          "text": "### Phase 0 — Verify inputs (sequential, 2 min)",
+          "depth": 3
+        },
+        {
+          "line": 67,
+          "text": "### Phase 1 — Decompose the apply-skill into tasks (sequential, 10–20 min)",
+          "depth": 3
+        },
+        {
+          "line": 103,
+          "text": "### Phase 2 — Build the dependency graph (sequential, 5 min)",
+          "depth": 3
+        },
+        {
+          "line": 119,
+          "text": "### Phase 3 — Emit subagent files (sequential, 15–25 min)",
+          "depth": 3
+        },
+        {
+          "line": 143,
+          "text": "### Phase 4 — Emit the dispatcher and overview commands (sequential, 10 min)",
+          "depth": 3
+        },
+        {
+          "line": 161,
+          "text": "### Phase 5 — Hand-off",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 55,
+          "text": "1. Confirm the input skill exists:"
+        },
+        {
+          "line": 59,
+          "text": "2. Confirm `docs/isucon-arch/DESIGN.md`, `BASELINE.md`, `CONSTRAINTS.md` are"
+        },
+        {
+          "line": 61,
+          "text": "3. Pick the slug. It MUST match the apply-skill's slug exactly. The output"
+        },
+        {
+          "line": 67,
+          "text": "### Phase 1 — Decompose the apply-skill into tasks (sequential, 10–20 min)"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 53,
+          "text": "### Phase 0 — Verify inputs (sequential, 2 min)"
+        },
+        {
+          "line": 55,
+          "text": "1. Confirm the input skill exists:"
+        },
+        {
+          "line": 59,
+          "text": "2. Confirm `docs/isucon-arch/DESIGN.md`, `BASELINE.md`, `CONSTRAINTS.md` are"
+        },
+        {
+          "line": 61,
+          "text": "3. Pick the slug. It MUST match the apply-skill's slug exactly. The output"
+        },
+        {
+          "line": 67,
+          "text": "### Phase 1 — Decompose the apply-skill into tasks (sequential, 10–20 min)"
+        },
+        {
+          "line": 73,
+          "text": "- **Phase A → Topology**: one task per instance role (e.g. `topology-isu1`,"
+        },
+        {
+          "line": 76,
+          "text": "- **Phase B → Schema**: one task per related DDL group. If `SCHEMA.md` lists"
+        },
+        {
+          "line": 81,
+          "text": "- **Phase C → Cache**: split into `cache-warmup` (in-process map seed +"
+        },
+        {
+          "line": 85,
+          "text": "- **Phase D → Endpoints**: one task per top-5 endpoint, in alp-baseline rank"
+        },
+        {
+          "line": 88,
+          "text": "- **Phase E → Deploy**: one task per concern: `deploy-systemd`,"
+        },
+        {
+          "line": 55,
+          "text": "1. Confirm the input skill exists:"
+        },
+        {
+          "line": 59,
+          "text": "2. Confirm `docs/isucon-arch/DESIGN.md`, `BASELINE.md`, `CONSTRAINTS.md` are"
+        },
+        {
+          "line": 61,
+          "text": "3. Pick the slug. It MUST match the apply-skill's slug exactly. The output"
+        },
+        {
+          "line": 67,
+          "text": "### Phase 1 — Decompose the apply-skill into tasks (sequential, 10–20 min)"
+        },
+        {
+          "line": 73,
+          "text": "- **Phase A → Topology**: one task per instance role (e.g. `topology-isu1`,"
+        },
+        {
+          "line": 76,
+          "text": "- **Phase B → Schema**: one task per related DDL group. If `SCHEMA.md` lists"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 220,
+          "text": "- [ ] Input apply-skill present and complete (six files)."
+        },
+        {
+          "line": 221,
+          "text": "- [ ] Task table covers every section of `SCHEMA.md`, `CACHE.md`,"
+        },
+        {
+          "line": 224,
+          "text": "- [ ] Dependency DAG is acyclic and has at least one source node and one"
+        },
+        {
+          "line": 226,
+          "text": "- [ ] Every subagent embeds its slice (no \"see X.md\" handwaving)."
+        },
+        {
+          "line": 227,
+          "text": "- [ ] Every subagent has a Pre-check, Scope, Steps, Verify, Update Overview,"
+        },
+        {
+          "line": 229,
+          "text": "- [ ] `overview.md` lists every task with a `- [ ]` checkbox and renders the"
+        },
+        {
+          "line": 231,
+          "text": "- [ ] `dispatch.md` reads the same task list and respects the Depends on"
+        },
+        {
+          "line": 233,
+          "text": "- [ ] Total task count is ≤ 12 (split further only if a single task exceeds"
+        },
+        {
+          "line": 235,
+          "text": "- [ ] Subagent and command directory names match the slug from the"
+        }
+      ],
+      "boundary_evidence": [
+        {
+          "line": 140,
+          "text": "the dispatcher hands it a slice that requires touching another phase, that"
+        }
+      ],
+      "source_lines": 237
+    },
+    {
+      "id": "WM-X0279",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/abstract-writing/SKILL.md",
+      "url": "https://github.com/msimchowitz/writing-skills/blob/main/for-agents/abstract-writing/SKILL.md",
+      "sha": "b01ab21bc2141edc20ff29141bb44fd9e8d25877",
+      "status": "OK",
+      "description": "Draft, revise, or diagnose research-paper abstracts as compact arguments written for readers rather than section-by-section summaries. Use for an abstract-only request, a conference or journal abstract, an arXiv abstract, or an abstract that reads like a contribution inventory, paper announcement, or compressed table of contents. ",
+      "intro": "Write the abstract so that a reader can understand the paper's central problem, answer, evidence, and demonstrated scope without seeing the rest of the manuscript. Do not give every section or contribution equal space. 1. Read the current abstract and the title.",
+      "headings": [
+        {
+          "line": 75,
+          "text": "## Protect The Claim Boundary",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 134
+    },
+    {
+      "id": "WM-X0280",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/academic-voice/SKILL.md",
+      "url": "https://github.com/msimchowitz/writing-skills/blob/main/for-agents/academic-voice/SKILL.md",
+      "sha": "d6f005227761c0e4e5f862d6a89ff66a66fb5942",
+      "status": "OK",
+      "description": "Write or revise prose in the voice of a thoughtful, careful, precise academic who cares deeply about reader understanding and writes with personality and purpose. Use for research exposition, scholarly articles, textbook-style explanations, academic summaries, or drafts that should avoid corporate, LinkedIn, Reddit, and GitHub register. ",
+      "intro": "Write like an academic who is thoughtful, careful, and precise, and who cares deeply about making the material clear and easy for the reader to understand. Write with personality and purpose. Avoid corporate, LinkedIn, Reddit, and - Develop an argument for an intelligent reader. Supply the context needed for",
+      "headings": [
+        {
+          "line": 87,
+          "text": "## Invocation Boundary",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 67,
+          "text": "the reader. Use direct instructions only when the artifact is a manual,"
+        }
+      ],
+      "source_lines": 92
+    },
+    {
+      "id": "WM-X0281",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/better-usage/SKILL.md",
+      "url": "https://github.com/msimchowitz/writing-skills/blob/main/for-agents/better-usage/SKILL.md",
+      "sha": "cced376ef937f77f5d7855543c8a59af354cd556",
+      "status": "OK",
+      "description": "Diagnose and repair semantically mismatched word combinations while preserving the intended claim. Use when prose is grammatical but a verb does not literally fit its subject or object, a claim or section is given an action it cannot perform, an abstract relation is hidden by vague personification, an abstract process hides the actor or implies a review that the source does not establish, or replacing one verb still leaves a sloppy relation that needs an intermediate noun. ",
+      "intro": "Choose words that express the relation the sentence actually asserts. A sentence can be grammatical and still sound wrong because its subject cannot perform the named action, its object or complement does not fit the relation expressed by the verb, or an important intermediate has been omitted.",
+      "headings": [
+        {
+          "line": 81,
+          "text": "## Invocation Boundary",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 50,
+          "text": "Insert an intermediate only when it names a real part of the relation. Do not"
+        }
+      ],
+      "source_lines": 87
+    },
+    {
+      "id": "WM-X0283",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/grant-planning/SKILL.md",
+      "url": "https://github.com/msimchowitz/writing-skills/blob/main/for-agents/grant-planning/SKILL.md",
+      "sha": "f722d22b4963464e376ceb05054f56f00fa653fd",
+      "status": "OK",
+      "description": "Ideate, structure, compare, and select grant narratives before application drafting. Use for grant strategy, story options, concept notes, project framing, scientific questions, literature and arXiv source review, combinations of applicants' prior work, team differentiation, feasibility arguments, scope decisions, outcomes, risks, or replanning an existing proposal before writing final application prose. ",
+      "intro": "Plan the scientific argument before drafting application answers. Produce a decision document that explains why the problem matters, why this team can make unusual progress, and why the proposed scope is executable. ## Load supporting skills selectively",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 156,
+          "text": "implementation details during planning. Include technical detail only when it"
+        }
+      ],
+      "source_lines": 190
+    },
+    {
+      "id": "WM-X0285",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/humanizer/SKILL.md",
+      "url": "https://github.com/msimchowitz/writing-skills/blob/main/for-agents/humanizer/SKILL.md",
+      "sha": "accad07f498f5f57e0b6460e74591d057bd96b2b",
+      "status": "OK",
+      "description": "Remove signs of AI-generated writing from text. Use when editing or reviewing text to make it sound more natural and human-written. Based on Wikipedia's comprehensive \"Signs of AI writing\" guide. Detects and fixes patterns including: inflated symbolism, promotional language, superficial -ing analyses, vague attributions, em dash overuse, rule of three, AI vocabulary words, passive voice, negative parallelisms, question-word clause wrappers, mechanical relative clauses, readerless corporate shorthand, loose catalogs, list sprawl, semantically mismatched relations, uneven cadence, mechanical paragraph endings, weak topic sentences, broken paragraph transitions, register mismatch, and filler phrases.",
+      "intro": "# Humanizer: Remove AI Writing Patterns You are a writing editor that identifies and removes signs of AI-generated text to make writing sound more natural and human. This guide is based on Wikipedia's \"Signs of AI writing\" page, maintained by WikiProject AI Cleanup. 1. **Identify AI patterns** - Scan the complete artifact for the patterns listed below. 2. **Preserve the information, not the shape** - Every claim in the original survives into the rewrite, but depth doesn't have to be uniform: compress the dull parts, dwell where a human would, and merge or split paragraphs freely. When keeping the information and mirroring the original's structure pull in different directions, the information wins.",
+      "headings": [
+        {
+          "line": 479,
+          "text": "## Process and Output",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 481,
+          "text": "1. Read the input carefully and identify every instance of the patterns above. Inventory the title, subtitle, abstract, section and subsection headings, captions, callout titles, and other reader-visible labels before reviewing the body."
+        },
+        {
+          "line": 483,
+          "text": "3. Read and apply the sibling [better-usage skill](../better-usage/SKILL.md) to the draft. Name a missing intermediate when changing the verb alone does not repair the relation."
+        },
+        {
+          "line": 484,
+          "text": "4. Read and apply the sibling [academic-voice skill](../academic-voice/SKILL.md). Classify the genre first: apply its reader-minded precision and anti-corporate checks by default, but use a scholarly register only for academic or expository prose. Do"
+        },
+        {
+          "line": 485,
+          "text": "5. Read and apply the sibling [writing-cadence skill](../writing-cadence/SKILL.md) last. Treat short runs, uniform lengths, repeated openings, repeated contrast frames, and mechanical paragraph endings as diagnostics rather than automatic failures. D"
+        },
+        {
+          "line": 486,
+          "text": "6. Read and apply the sibling [non-autoregressive writing pass](../non-autoregressive-writing-pass/SKILL.md) after the complete draft is stable. Read the title, subtitle, headings, and paragraph heads as a spine, then read every paragraph ending besi"
+        },
+        {
+          "line": 488,
+          "text": "8. Revise into a **final rewrite** that addresses them. Scan the abstract, structural text, and body once more for question-word clause wrappers, mechanical relative clauses, readerless corporate shorthand, mismatched relations, loose catalogs, repea"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 242,
+          "text": "### 21. Knowledge-Cutoff Disclaimers and Speculative Gap-Filling"
+        },
+        {
+          "line": 481,
+          "text": "1. Read the input carefully and identify every instance of the patterns above. Inventory the title, subtitle, abstract, section and subsection headings, captions, callout titles, and other reader-visible labels before reviewing the body."
+        },
+        {
+          "line": 483,
+          "text": "3. Read and apply the sibling [better-usage skill](../better-usage/SKILL.md) to the draft. Name a missing intermediate when changing the verb alone does not repair the relation."
+        },
+        {
+          "line": 484,
+          "text": "4. Read and apply the sibling [academic-voice skill](../academic-voice/SKILL.md). Classify the genre first: apply its reader-minded precision and anti-corporate checks by default, but use a scholarly register only for academic or expository prose. Do"
+        },
+        {
+          "line": 485,
+          "text": "5. Read and apply the sibling [writing-cadence skill](../writing-cadence/SKILL.md) last. Treat short runs, uniform lengths, repeated openings, repeated contrast frames, and mechanical paragraph endings as diagnostics rather than automatic failures. D"
+        },
+        {
+          "line": 486,
+          "text": "6. Read and apply the sibling [non-autoregressive writing pass](../non-autoregressive-writing-pass/SKILL.md) after the complete draft is stable. Read the title, subtitle, headings, and paragraph heads as a spine, then read every paragraph ending besi"
+        },
+        {
+          "line": 488,
+          "text": "8. Revise into a **final rewrite** that addresses them. Scan the abstract, structural text, and body once more for question-word clause wrappers, mechanical relative clauses, readerless corporate shorthand, mismatched relations, loose catalogs, repea"
+        }
+      ],
+      "boundary_evidence": [
+        {
+          "line": 30,
+          "text": "4. **Match the voice** - Fit the intended tone (formal, casual, technical). Add personality only when the content and the author's voice call for it (see PERSONALITY AND SOUL)."
+        },
+        {
+          "line": 51,
+          "text": "**Apply this section only when the content and the author's voice call for it** - blog posts, essays, opinion, personal writing. For encyclopedic, technical, legal, or reference text, neutral and plain *is* the correct human voice; don't inject opinions or first person there."
+        },
+        {
+          "line": 291,
+          "text": "**Problem:** AI hyphenates these uniformly, including in predicate position (`the report is high-quality`). Humans hyphenate inconsistently — typically only when the compound is attributive (`a high-quality report`) and often dropping the hyphen otherwise (`the report is high quality`). Keep attributive-position hyphens; drop them when the compound follows the noun."
+        },
+        {
+          "line": 404,
+          "text": "The before sentence treats the result as if it requires setup and forces the relation into a mechanical passive. The revision states what the setup is for. \"Give readers only the setup they need to interpret the result\" also works when the reader should be explicit. Keep a relative clause when it identifies an important actor, assigns responsibility, or expresses a distinction that a shorter construction would lose."
+        },
+        {
+          "line": 445,
+          "text": "- **Common transition words in isolation.** *Additionally*, *moreover*, *consequently* are AI-coded only when piled up. One *however* is not a tell."
+        },
+        {
+          "line": 447,
+          "text": "- **Em dashes alone.** Many editors and journalists use them often. Em dashes are evidence only when paired with formulaic sales-y rhythm."
+        },
+        {
+          "line": 448,
+          "text": "- **One short emphatic sentence.** Humans use clipped sentences to land a point. Flag staccato drama only when several short fragments appear in a row and inflate the tone."
+        }
+      ],
+      "source_lines": 501
+    },
+    {
+      "id": "WM-X0286",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/improve-human-writing-guide/SKILL.md",
+      "url": "https://github.com/msimchowitz/writing-skills/blob/main/for-agents/improve-human-writing-guide/SKILL.md",
+      "sha": "ff4cc3619ac05efee83ede86300c1d9b0d6b4080",
+      "status": "OK",
+      "description": "Create, revise, audit, compile, and publish human-readable writing guides while keeping them separate from agent-facing skills. Use for the bundled human writing guide, other LaTeX or PDF writing manuals, or requests to turn writing-skill knowledge into instructions for people. Includes corpus-based voice matching, ordered Humanizer and general-writing passes, rendered-PDF verification, README maintenance, and the required named top-level PDF publication step. ",
+      "intro": "Write for people. Keep the guide's prose and examples in the human-facing project; keep agent procedures in this skill. ## Load Only The Relevant Guidance 1. Read the target guide in full, including its source, README, and current",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 106,
+          "text": "the prose must not describe an interface the template no longer has."
+        }
+      ],
+      "source_lines": 174
+    },
+    {
+      "id": "WM-X0290",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/presentation-making/SKILL.md",
+      "url": "https://github.com/msimchowitz/writing-skills/blob/main/for-agents/presentation-making/SKILL.md",
+      "status": "FAILED",
+      "error": "TypeError: Cannot read properties of undefined (reading 'trim')"
+    }
+  ]
+}
