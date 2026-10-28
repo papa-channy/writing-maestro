@@ -1,0 +1,1219 @@
+{
+  "records": [
+    {
+      "id": "WM-X0102",
+      "repo": "anayy09/claude-research-skills",
+      "path": "investigating-sources/SKILL.md",
+      "url": "https://github.com/anayy09/claude-research-skills/blob/main/investigating-sources/SKILL.md",
+      "sha": "08d54ff01992998dae9c9ab4c237dc09a58a47b1",
+      "status": "RECOVERED",
+      "description": "Citation-honest research assistant: research reports, literature reviews, annotated bibliographies, fact-checks, and source-verification audits. Every factual claim is traced to a real, verifiable source, and fabricated or unconfirmable citations are caught rather than emitted. Use whenever the user asks to research a topic, review the literature, synthesize evidence, verify or fact-check claims, check whether sources or DOIs are real, build a bibliography, wants a report \"with citations\", wants sources graded for quality, or wants a vague question scoped into an answerable one. Searches the peer-reviewed literature first (IEEE, Springer Nature, Elsevier, ACM, Wiley, PubMed) and cites the published version of record rather than a preprint. Also use for \"add a summary table of related work\" and \"trim the references to N, preprints first\". Owns the collection's citation checker; a formal review with a protocol, screening log, and appraisal is evidence-synthesis.",
+      "intro": "A research assistant that treats **citation integrity as non-negotiable** and is **honest about what it can and cannot verify**. It replaces vibe-citing and plausible-sounding references with sources that have been checked, graded, and The core promise: no claim goes into a deliverable without a source behind it,",
+      "headings": [
+        {
+          "line": 98,
+          "text": "## The workflow",
+          "depth": 2
+        },
+        {
+          "line": 125,
+          "text": "### 1. SCOPE",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 105,
+          "text": "1. SCOPE      Frame the question, boundaries, and success criteria"
+        },
+        {
+          "line": 106,
+          "text": "2. SEARCH     Gather candidate sources (web_search, MCP connectors, files)"
+        },
+        {
+          "line": 107,
+          "text": "3. VERIFY     Confirm each source exists; grade its quality; flag problems"
+        },
+        {
+          "line": 108,
+          "text": "4. SYNTHESIZE Integrate across sources; surface agreement and conflict"
+        },
+        {
+          "line": 109,
+          "text": "5. CHALLENGE  Look for the strongest objection and disconfirming evidence"
+        },
+        {
+          "line": 110,
+          "text": "6. COMPOSE    Write the deliverable with inline, traceable citations"
+        },
+        {
+          "line": 111,
+          "text": "7. AUDIT      Run the integrity checks before delivering"
+        },
+        {
+          "line": 116,
+          "text": "- `brief`: SCOPE → SEARCH → VERIFY → COMPOSE → AUDIT"
+        },
+        {
+          "line": 117,
+          "text": "- `report`: all seven"
+        },
+        {
+          "line": 118,
+          "text": "- `lit-review`: SCOPE → SEARCH → VERIFY → SYNTHESIZE → COMPOSE → AUDIT"
+        },
+        {
+          "line": 119,
+          "text": "- `fact-check`: SCOPE → SEARCH → VERIFY → COMPOSE → AUDIT (per claim)"
+        },
+        {
+          "line": 120,
+          "text": "- `verify`: VERIFY → AUDIT (operates on sources the user already has)"
+        },
+        {
+          "line": 121,
+          "text": "- `systematic`: all seven, with SEARCH and VERIFY following the PRISMA protocol"
+        },
+        {
+          "line": 123,
+          "text": "- `scope`: SCOPE only, iteratively, until the question is answerable"
+        },
+        {
+          "line": 136,
+          "text": "### 2. SEARCH"
+        },
+        {
+          "line": 145,
+          "text": "1. **Domain databases** through available MCP connectors (PubMed, Europe PMC,"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 260,
+          "text": "If a check fails, fix it and re-run. Deliver only when the loop is clean."
+        }
+      ],
+      "source_lines": 380
+    },
+    {
+      "id": "WM-X0103",
+      "repo": "anayy09/claude-research-skills",
+      "path": "manuscript-editor/SKILL.md",
+      "url": "https://github.com/anayy09/claude-research-skills/blob/main/manuscript-editor/SKILL.md",
+      "sha": "20f6673d6dd9bd5af0bbcb45b9187029121b23d0",
+      "status": "RECOVERED",
+      "description": "Manuscript-level editorial discipline for research papers: what belongs in the manuscript versus the response to reviewers versus internal notes, how to make the smallest complete change, and how to keep a paper coherent across revision rounds. Use whenever the user pastes or points at reviewer, editor, or external-review comments (a decision letter, \"Reviewer 2 says\", an \"External Review\"), asks for a consolidated reviewer checklist, is drafting the response-to-reviewers letter (including \"format the response letter as a PDF\"), preparing a resubmission or camera-ready, working a manuscript that lives in Word, saying the manuscript reads like patches, repeats itself, or \"is horrendously long\", asking to \"cut it to N pages\", or wanting a whole-manuscript consistency, redundancy, or structure check. Also when drafting a full manuscript, so structure matches the venue and article type. Pairs with manuscript-writing (sentences) and build-check (page count).",
+      "intro": "A manuscript that has been through three rounds of review is often worse written than the first submission, even though every individual change was justified. Each reviewer comment became a paragraph. Each paragraph explained why it existed. Points got restated where the reviewer happened to look",
+      "headings": [
+        {
+          "line": 55,
+          "text": "## Scope, and what belongs elsewhere",
+          "depth": 2
+        },
+        {
+          "line": 176,
+          "text": "## Workflow for a revision round",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 178,
+          "text": "### 1. Parse and inventory before touching anything"
+        },
+        {
+          "line": 206,
+          "text": "### 2. Triage the comments into atomic items"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 114,
+          "text": "| D. Reader management | \"This must not be read as\", \"a reader's first suspicion is\", \"no part of our argument rests on\", \"we are not claiming\" | State the claim's scope once; the reader is not instructed |"
+        }
+      ],
+      "source_lines": 510
+    },
+    {
+      "id": "WM-X0104",
+      "repo": "anayy09/claude-research-skills",
+      "path": "manuscript-writing/SKILL.md",
+      "url": "https://github.com/anayy09/claude-research-skills/blob/main/manuscript-writing/SKILL.md",
+      "sha": "e23f76be86bc74e37aababeaa890266f4b115488",
+      "status": "RECOVERED",
+      "description": "Use whenever the user asks you to write, rewrite, edit, or extend academic research prose: paper sections (introduction, related work, method, results, discussion, conclusion), thesis chapters, rebuttals and response letters, conference or journal submissions, and technical reports. Also use it for \"make this sound less like AI wrote it\", \"remove the em dashes\", \"there are AI-like sentences in the manuscript\", \"tighten this paragraph\", \"write the related work\", \"help me phrase this contribution\", a tell sweep before submission, and any request to produce or repair scholarly writing that has to read as if a working researcher wrote it. This skill carries the manuscript subset of prose-naturalizer's patterns, so do not load that skill for a manuscript. Do not use for casual summaries, blog posts, marketing copy, or code. For revision rounds and whole-manuscript coherence checks, pair it with manuscript-editor, which decides what changes; this skill writes the sentences.",
+      "intro": "The output should read like it was written by someone who did the work, cares about being right, and is writing to be understood by a skeptical reviewer in the same field. That person is not trying to sound impressive. They are trying to make a claim, support it, and be honest about where it breaks.",
+      "headings": [
+        {
+          "line": 44,
+          "text": "## Scope, and what belongs elsewhere",
+          "depth": 2
+        },
+        {
+          "line": 352,
+          "text": "## Before returning output",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [
+        {
+          "line": 362,
+          "text": "## Loading discipline"
+        }
+      ],
+      "boundary_evidence": [
+        {
+          "line": 300,
+          "text": "claim. Keep a contrast only when the negative half corrects a belief the"
+        }
+      ],
+      "source_lines": 370
+    },
+    {
+      "id": "WM-X0106",
+      "repo": "anayy09/claude-research-skills",
+      "path": "research-ideation/SKILL.md",
+      "url": "https://github.com/anayy09/claude-research-skills/blob/main/research-ideation/SKILL.md",
+      "sha": "24a14dfd1fdc17d483f10ec2bb255aa5e0ec4929",
+      "status": "RECOVERED",
+      "description": "Act as a research strategist: read the user's existing research assets (papers, projects, code, datasets, preliminary or negative results, open questions) and produce ranked research directions, each with a verified novelty delta, a falsifiable claim, the minimum evidence set that makes it publishable, an experiment plan from the current state to a submission-ready paper, and honest risks. Use whenever the user asks what to work on next, what the paper should claim, how to turn a project, prototype, side result, or failed experiment into a publication, how to get a paper out of existing results, what is novel enough to publish, how to plan a thesis or multi-paper agenda, whether an idea is worth doing, or how to strengthen an idea they have. Also use when someone shares a repo or results table and asks where to take it, or plans the next paper against a deadline. Prefer this over free-form brainstorming: ideas must be grounded in real assets and checked against real prior work.",
+      "intro": "Generate research directions that are worth doing and can actually be finished. The output is not a list of topics. It is a small set of candidate papers, each one anchored to a falsifiable claim, a verified gap in the literature, the specific assets the user already has, and the shortest honest path from where",
+      "headings": [
+        {
+          "line": 41,
+          "text": "## Scope, and what belongs elsewhere",
+          "depth": 2
+        },
+        {
+          "line": 59,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 61,
+          "text": "### 1. Build the asset inventory before generating anything"
+        },
+        {
+          "line": 75,
+          "text": "- **Anomalies.** Any result the user found surprising, could not explain, or set"
+        },
+        {
+          "line": 79,
+          "text": "- **Sunk evidence.** Experiments already run that are not yet claimed by any"
+        },
+        {
+          "line": 86,
+          "text": "### 2. Pick the mode"
+        },
+        {
+          "line": 99,
+          "text": "### 3. Generate candidates with the operators, not from memory"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 82,
+          "text": "Ask for what is missing only when it changes the ranking. If the user gave no"
+        }
+      ],
+      "source_lines": 261
+    },
+    {
+      "id": "WM-X0107",
+      "repo": "anayy09/claude-research-skills",
+      "path": "submission-reviewer/SKILL.md",
+      "url": "https://github.com/anayy09/claude-research-skills/blob/main/submission-reviewer/SKILL.md",
+      "sha": "22a4d1c9832add119e9b55346fb04e6072acbced",
+      "status": "RECOVERED",
+      "description": "Act as a fair, constructive peer reviewer for a research paper or patent submission. Reads the full text, judges novelty, rigor, practical application, and publication or filing readiness against a weighted rubric, then returns a score out of 100, ranked actionable fixes, and a projected score if those fixes land. Use whenever a manuscript, preprint, thesis chapter, abstract, invention disclosure, or patent draft is supplied and the user asks for a review, score, feedback, second opinion, or pre-submission check, or asks whether the work is novel enough, publishable, patentable, ready to submit, what a reviewer would say, or how to improve it. Also when screening someone else's submission for a lab, journal, or committee, when the user asks for an \"adversarial review\", an \"external review\", or \"a score out of 100\", and when a previous report is pasted with \"re-run the reviewer pass\". Judge honestly, including a blocking flaw, but never without a repair path.",
+      "intro": "Review a paper or a patent the way a good senior reviewer does: read what is actually claimed, check whether the evidence supports it, score it against a fixed rubric, and say what would make it stronger. The reviewer's job is to make the submission publishable, not to decide whether the author deserves it.",
+      "headings": [
+        {
+          "line": 39,
+          "text": "## Scope, and what belongs elsewhere",
+          "depth": 2
+        },
+        {
+          "line": 64,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 66,
+          "text": "### 1. Read the whole submission"
+        },
+        {
+          "line": 77,
+          "text": "### 2. Classify the submission and pick the rubric"
+        },
+        {
+          "line": 87,
+          "text": "### 3. Build the claim map before judging anything"
+        },
+        {
+          "line": 91,
+          "text": "- **Central claim.** The one sentence the paper or patent stands on."
+        },
+        {
+          "line": 92,
+          "text": "- **Scope of the claim.** Which population, dataset, domain, or operating"
+        },
+        {
+          "line": 94,
+          "text": "- **Evidence offered.** What experiment, proof, ablation, or worked example is"
+        },
+        {
+          "line": 96,
+          "text": "- **Delta over the closest prior work.** Named work, not a category."
+        },
+        {
+          "line": 102,
+          "text": "### 4. Check novelty against actual prior art"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 57,
+          "text": "`ml-eval-statistics` when a fix requires a significance test, a confidence"
+        }
+      ],
+      "source_lines": 261
+    },
+    {
+      "id": "WM-X0114",
+      "repo": "anthropics/skills",
+      "path": "skills/pdf/SKILL.md",
+      "url": "https://github.com/anthropics/skills/blob/main/skills/pdf/SKILL.md",
+      "sha": "d3e046a5ae107a6cb23cfb16c219837094ab35d3",
+      "status": "RECOVERED",
+      "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill. ",
+      "intro": "This guide covers essential PDF processing operations using Python libraries and command-line tools. For advanced features, JavaScript libraries, and detailed examples, see REFERENCE.md. If you need to fill out a PDF form, read FORMS.md and follow its instructions. from pypdf import PdfReader, PdfWriter reader = PdfReader(\"document.pdf\") print(f\"Pages: {len(reader.pages)}\")",
+      "headings": [
+        {
+          "line": 7,
+          "text": "# PDF Processing Guide",
+          "depth": 1
+        },
+        {
+          "line": 276,
+          "text": "# This extracts all images as output_prefix-000.jpg, output_prefix-001.jpg, etc.",
+          "depth": 1
+        },
+        {
+          "line": 309,
+          "text": "## Next Steps",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 13,
+          "text": "## Quick Start"
+        },
+        {
+          "line": 311,
+          "text": "- For advanced pypdfium2 usage, see REFERENCE.md"
+        },
+        {
+          "line": 312,
+          "text": "- For JavaScript libraries (pdf-lib), see REFERENCE.md"
+        },
+        {
+          "line": 313,
+          "text": "- If you need to fill out a PDF form, follow the instructions in FORMS.md"
+        },
+        {
+          "line": 314,
+          "text": "- For troubleshooting guides, see REFERENCE.md"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 279,
+          "text": "### Password Protection"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 315
+    },
+    {
+      "id": "WM-X0145",
+      "repo": "coreyhaines31/marketingskills",
+      "path": "skills/public-relations/SKILL.md",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/public-relations/SKILL.md",
+      "sha": "8d22dda1818030da53554531d23f1b78547b93a6",
+      "status": "RECOVERED",
+      "description": "When the user wants help with public relations, earned media, press coverage, journalist outreach, or media strategy (not pull requests). Also use when the user mentions 'PR,' 'press,' 'press release,' 'media outreach,' 'pitch a journalist,' 'get featured,' 'media list,' 'media kit,' 'press kit,' 'newsjacking,' 'news hijack,' 'HARO,' 'Qwoted,' 'Featured,' 'reporter request,' 'tech press,' 'TechCrunch,' 'thought leadership placement,' 'op-ed,' 'guest article,' 'press contacts,' 'podcast prep,' 'podcast guest,' 'prep me for this podcast,' 'how do I get press,' 'PR crisis,' 'crisis communications,' 'respond to backlash,' 'we got hacked,' 'data breach statement,' or 'holding statement.' Also covers crisis response when something goes wrong. For startup/SaaS/AI directory submissions, see directory-submissions. For product launches, see launch. For social-media engagement, see social. For cold-email outreach to prospects, see cold-email.\" ",
+      "intro": "# Public Relations & Earned Media You are an expert in earned media for software products. Your goal is to help the user get covered by journalists, podcasts, and newsletters — efficiently, with respect for the people on the other end of the pitch. **Check for product marketing context first:** If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.",
+      "headings": [
+        {
+          "line": 133,
+          "text": "## Common Workflows",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 135,
+          "text": "### \"Help me newsjack [trending story]\""
+        },
+        {
+          "line": 138,
+          "text": "### \"Find journalists who cover [beat]\""
+        },
+        {
+          "line": 141,
+          "text": "### \"What's worth pitching this week?\""
+        },
+        {
+          "line": 144,
+          "text": "### \"What's my story angle?\" / \"How do I get press with no news?\""
+        },
+        {
+          "line": 147,
+          "text": "### \"Respond to this HARO query\""
+        },
+        {
+          "line": 150,
+          "text": "### \"I'm going on [podcast] next week — help me prep\""
+        },
+        {
+          "line": 153,
+          "text": "### \"Build my press page\""
+        },
+        {
+          "line": 156,
+          "text": "### \"Get us more backlinks\""
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 158
+    },
+    {
+      "id": "WM-X0189",
+      "repo": "github/awesome-copilot",
+      "path": "skills/audit-integrity/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/audit-integrity/SKILL.md",
+      "sha": "a001f9eb9c777d55763e6a14db172fd04cee601a",
+      "status": "RECOVERED",
+      "description": "Enforce output quality, evidence verification, and quality gates across security audits. Use this skill when you perform SAST, SCA, threat modeling, or security code reviews. Use this skill to verify code locations and taint traces for all findings. Use this skill to prevent the suppression of valid security findings. Use this skill to evaluate reports against quality thresholds (score ≥ 8/10) before delivery.\" ",
+      "intro": "Enforce output quality, intellectual honesty, and continuous improvement across security audits and code reviews. - Perform security analyses, threat models, code reviews, or quality audits. - Validate that every finding has verified code evidence and taint flow. - Prevent the suppression or rationalization of security findings.",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 39,
+          "text": "1. **Before analysis**: If scope or policy is not clear, read [references/clarification-protocol.md](references/clarification-protocol.md). Ask a maximum of 2 targeted questions."
+        },
+        {
+          "line": 40,
+          "text": "2. **During analysis**: Follow [references/non-negotiable-behaviors.md](references/non-negotiable-behaviors.md). At each triage decision, consult [references/anti-rationalization-guard.md](references/anti-rationalization-guard.md)."
+        },
+        {
+          "line": 41,
+          "text": "3. **On tool or search failure**: Follow [references/retry-protocol.md](references/retry-protocol.md). Do not assume code is secure without verification."
+        },
+        {
+          "line": 42,
+          "text": "4. **After initial analysis**: Complete a second pass with the checklist in [references/self-critique-loop.md](references/self-critique-loop.md). Verify taint traces and manifest coverage."
+        },
+        {
+          "line": 43,
+          "text": "5. **Before delivery**: Score the draft report using [references/self-reflection-quality-gate.md](references/self-reflection-quality-gate.md). All categories must score ≥ 8."
+        },
+        {
+          "line": 44,
+          "text": "6. **Final delivery**: Record lessons and memories using [references/self-learning-system.md](references/self-learning-system.md)."
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 45
+    },
+    {
+      "id": "WM-X0197",
+      "repo": "github/awesome-copilot",
+      "path": ".github/skills/code-review/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/.github/skills/code-review/SKILL.md",
+      "sha": "4fe5c851635464cc3280fcd12130065adab5252d",
+      "status": "RECOVERED",
+      "description": "Review pull requests for repository fit, meaningful value, trustworthy provenance, differentiation, and maintainability in awesome-copilot.' ",
+      "intro": "Use this skill when reviewing pull requests in this repository. Apply the deterministic checklists in `.github/copilot-instructions.md` first, then use this skill for the editorial and repository-fit judgments that cannot be Validate frontmatter as YAML and check the required metadata, not quote style.",
+      "headings": [
+        {
+          "line": 176,
+          "text": "## Review output",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [
+        {
+          "line": 181,
+          "text": "- identify the affected file and line when possible"
+        },
+        {
+          "line": 182,
+          "text": "- explain the concrete impact on users or maintainers"
+        },
+        {
+          "line": 183,
+          "text": "- cite the repository rule, existing resource, or evidence behind the finding"
+        },
+        {
+          "line": 184,
+          "text": "- recommend the smallest useful correction"
+        },
+        {
+          "line": 192,
+          "text": "## Review-policy changes"
+        }
+      ],
+      "boundary_evidence": [
+        {
+          "line": 115,
+          "text": "Flag marketing-heavy framing only when there is concrete evidence, such as:"
+        }
+      ],
+      "source_lines": 200
+    },
+    {
+      "id": "WM-X0198",
+      "repo": "github/awesome-copilot",
+      "path": "skills/copilot-instructions-blueprint-generator/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/copilot-instructions-blueprint-generator/SKILL.md",
+      "sha": "007547da846438a11e812ff26bfb96929085f03c",
+      "status": "RECOVERED",
+      "description": "Technology-agnostic blueprint generator for creating comprehensive copilot-instructions.md files that guide GitHub Copilot to produce code consistent with project standards, architecture patterns, and exact technology versions by analyzing existing codebase patterns and avoiding assumptions.' ",
+      "intro": "# Copilot Instructions Blueprint Generator ${PROJECT_TYPE=\"Auto-detect|.NET|Java|JavaScript|TypeScript|React|Angular|Python|Multiple|Other\"} <!-- Primary technology --> ${ARCHITECTURE_STYLE=\"Layered|Microservices|Monolithic|Domain-Driven|Event-Driven|Serverless|Mixed\"} <!-- Architectural approach --> ${CODE_QUALITY_FOCUS=\"Maintainability|Performance|Security|Accessibility|Testability|All\"} <!-- Quality priorities -->",
+      "headings": [
+        {
+          "line": 292,
+          "text": "## Expected Output",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 121,
+          "text": "- Document according to patterns observed in the codebase"
+        },
+        {
+          "line": 122,
+          "text": "- Follow existing patterns for documenting non-obvious behavior"
+        },
+        {
+          "line": 123,
+          "text": "- Use the same format for parameter descriptions as existing code` : \"\"}"
+        },
+        {
+          "line": 127,
+          "text": "- Match the XML/JSDoc style and completeness of existing comments"
+        },
+        {
+          "line": 128,
+          "text": "- Document parameters, returns, and exceptions in the same style"
+        },
+        {
+          "line": 129,
+          "text": "- Follow existing patterns for usage examples"
+        },
+        {
+          "line": 130,
+          "text": "- Match class-level documentation style and content` : \"\"}"
+        },
+        {
+          "line": 134,
+          "text": "- Match the style and completeness of the best-documented code"
+        },
+        {
+          "line": 135,
+          "text": "- Document exactly as the most thoroughly documented files do"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 143,
+          "text": "- Match the exact structure and style of existing unit tests"
+        },
+        {
+          "line": 144,
+          "text": "- Follow the same naming conventions for test classes and methods"
+        },
+        {
+          "line": 145,
+          "text": "- Use the same assertion patterns found in existing tests"
+        },
+        {
+          "line": 146,
+          "text": "- Apply the same mocking approach used in the codebase"
+        },
+        {
+          "line": 147,
+          "text": "- Follow existing patterns for test isolation` : \"\"}"
+        },
+        {
+          "line": 151,
+          "text": "- Follow the same integration test patterns found in the codebase"
+        },
+        {
+          "line": 152,
+          "text": "- Match existing patterns for test data setup and teardown"
+        },
+        {
+          "line": 153,
+          "text": "- Use the same approach for testing component interactions"
+        },
+        {
+          "line": 154,
+          "text": "- Follow existing patterns for verifying system behavior` : \"\"}"
+        },
+        {
+          "line": 158,
+          "text": "- Match the existing E2E test structure and patterns"
+        },
+        {
+          "line": 159,
+          "text": "- Follow established patterns for UI testing"
+        },
+        {
+          "line": 160,
+          "text": "- Apply the same approach for verifying user journeys` : \"\"}"
+        },
+        {
+          "line": 164,
+          "text": "- Follow TDD patterns evident in the codebase"
+        },
+        {
+          "line": 165,
+          "text": "- Match the progression of test cases seen in existing code"
+        },
+        {
+          "line": 166,
+          "text": "- Apply the same refactoring patterns after tests pass` : \"\"}"
+        },
+        {
+          "line": 170,
+          "text": "- Match the existing Given-When-Then structure in tests"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 295
+    },
+    {
+      "id": "WM-X0221",
+      "repo": "github/awesome-copilot",
+      "path": "skills/structured-autonomy-plan/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/structured-autonomy-plan/SKILL.md",
+      "sha": "312210daa2797cc4411ff1e08ee2aaa4b4eacfa6",
+      "status": "RECOVERED",
+      "description": "Structured Autonomy Planning Prompt' ",
+      "intro": "You are a Project Planning Agent that collaborates with users to design development plans. A development plan defines a clear path to implement the user's request. During this step you will **not write any code**. Instead, you will research, analyze, and outline a plan. Assume that this entire plan will be implemented in a single pull request (PR) on a dedicated branch. Your job is to define the plan in steps that correspond to individual commits within that PR. ## Step 1: Research and Gather Context",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Step 1: Research and Gather Context",
+          "depth": 2
+        },
+        {
+          "line": 22,
+          "text": "## Step 2: Determine Commits",
+          "depth": 2
+        },
+        {
+          "line": 29,
+          "text": "## Step 3: Plan Generation",
+          "depth": 2
+        },
+        {
+          "line": 51,
+          "text": "## Implementation Steps",
+          "depth": 2
+        },
+        {
+          "line": 53,
+          "text": "### Step 1: {Step Name} [SIMPLE features have only this step]",
+          "depth": 3
+        },
+        {
+          "line": 58,
+          "text": "### Step 2: {Step Name} [COMPLEX features continue]",
+          "depth": 3
+        },
+        {
+          "line": 63,
+          "text": "### Step 3: {Step Name}",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 53,
+          "text": "### Step 1: {Step Name} [SIMPLE features have only this step]"
+        },
+        {
+          "line": 58,
+          "text": "### Step 2: {Step Name} [COMPLEX features continue]"
+        },
+        {
+          "line": 63,
+          "text": "### Step 3: {Step Name}"
+        },
+        {
+          "line": 72,
+          "text": "1. **Code Context:** Semantic search for related features, existing patterns, affected services"
+        },
+        {
+          "line": 73,
+          "text": "2. **Documentation:** Read existing feature documentation, architecture decisions in codebase"
+        },
+        {
+          "line": 74,
+          "text": "3. **Dependencies:** Research any external APIs, libraries, or Windows APIs needed. Use #context7 if available to read relevant documentation. ALWAYS READ THE DOCUMENTATION FIRST."
+        },
+        {
+          "line": 75,
+          "text": "4. **Patterns:** Identify how similar features are implemented in ResizeMe"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 82
+    },
+    {
+      "id": "WM-X0229",
+      "repo": "kepano/obsidian-skills",
+      "path": "skills/defuddle/SKILL.md",
+      "url": "https://github.com/kepano/obsidian-skills/blob/main/skills/defuddle/SKILL.md",
+      "sha": "c1c9b1ba572cb725cb616ccd2d36f1737c65f18e",
+      "status": "RECOVERED",
+      "description": "Extract clean Markdown from HTML pages with Defuddle CLI. ",
+      "intro": "Use Defuddle CLI to extract clean readable content from web pages. Prefer over WebFetch for standard web pages — it removes navigation, ads, and clutter, reducing token usage. If not installed: `npm install -g defuddle` Always use `--md` for markdown output: defuddle parse <url> --md -o content.md",
+      "headings": [
+        {
+          "line": 34,
+          "text": "## Output formats",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 42
+    },
+    {
+      "id": "WM-X0251",
+      "repo": "khasky/awesome-agent-skills",
+      "path": "skills/awesome-slop-audit/SKILL.md",
+      "url": "https://github.com/khasky/awesome-agent-skills/blob/main/skills/awesome-slop-audit/SKILL.md",
+      "sha": "3adda77245e3e794bea2ebf0df99c7a7f9fa417f",
+      "status": "RECOVERED",
+      "description": "Read-only audit of a repository for AI-slop markers in code, comments, tests, docs and CI, each verified against the code and ranked. Use when asked to find AI slop or machine-written code.\" ",
+      "intro": "This skill reads and reports. It never edits. Every fix its findings call for — the comment rewrite, the rename, the drift-pair unification, the CI template extraction — is executed by `awesome-code-cleanup`, which owns the editing bar, the behavior-preserving proof and the regression gate. Splitting it this way is what lets the catalog below range over docs and CI without a second skill rewriting the same line. A slop marker is anything that makes a reader think \"a machine wrote this and nobody read it\". Three classes, in descending order of harm: 1. Lies — statements the code disproves: a comment claiming \"three use sites\" over five, a README documenting a 15s default the code sets to 13s, a rationale explaining a mechanism that no longer",
+      "headings": [
+        {
+          "line": 112,
+          "text": "## Phase 0 — Recon",
+          "depth": 2
+        },
+        {
+          "line": 121,
+          "text": "## Phase 1 — Audit (read-only)",
+          "depth": 2
+        },
+        {
+          "line": 136,
+          "text": "## Phase 2 — Report and handoff",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 114,
+          "text": "1. Snapshot `git status` / `git diff --stat`. Already-dirty files are the user's WIP: exclude them from the audit and say so. Auditing a half-written file reports findings against code the author is still moving, and the fix pass that receives the re"
+        },
+        {
+          "line": 115,
+          "text": "2. Scope to tracked files; exclude generated (`__generated__`, codegen, locks), vendored, data tables, locale trees, binary assets."
+        },
+        {
+          "line": 116,
+          "text": "3. Read the repo's rules (AGENTS.md / CLAUDE.md / CONTRIBUTING): formatter width, comment policy, and — critical for public repos — disclosure rules. Carry them into the report: wording protected for disclosure reasons (credentials, backend mechanics"
+        },
+        {
+          "line": 121,
+          "text": "## Phase 1 — Audit (read-only)"
+        },
+        {
+          "line": 125,
+          "text": "- Per finding: `file:line | category# | evidence quote ≤10 words | suggested fix | risk low/med/high | strength Strong / Worth-exploring / Speculative`. Be honest about Speculative — most findings in a healthy repo are."
+        },
+        {
+          "line": 126,
+          "text": "- Repeated patterns aggregate to one line with a count and file list, never N copies."
+        },
+        {
+          "line": 127,
+          "text": "- Verified non-findings: which categories came back empty, and what was checked to prove it (constants recounted, callers grepped, claims re-derived)."
+        },
+        {
+          "line": 128,
+          "text": "- Per-category counts and a 3-line density verdict: low / medium / high, and whether the repo reads machine-written or hand-maintained."
+        },
+        {
+          "line": 136,
+          "text": "## Phase 2 — Report and handoff"
+        },
+        {
+          "line": 142,
+          "text": "- Which findings are not fixable as written. A test title a CI `--grep` filter or a snapshot directory keys on, a literal compared against product UI or locale strings, a helper serialized into a page that cannot gain imports: record the constraint n"
+        },
+        {
+          "line": 143,
+          "text": "- Which findings are behavior changes wearing cleanup clothes. A drift-pair unification decides which of two behaviors survives. Say so on the finding so it is never bundled into a cleanup diff."
+        },
+        {
+          "line": 144,
+          "text": "- The exact scope each finding sits in. File, line, category number. A fix pass runs on the user's selection, and the categories left out stay unfixed by design."
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 149
+    },
+    {
+      "id": "WM-X0254",
+      "repo": "khasky/awesome-agent-skills",
+      "path": "skills/awesome-translate-ru-en/SKILL.md",
+      "url": "https://github.com/khasky/awesome-agent-skills/blob/main/skills/awesome-translate-ru-en/SKILL.md",
+      "sha": "f3c55cb810e0e3a6499187586717a610deba964b",
+      "status": "RECOVERED",
+      "description": "Translates Russian text of any genre into natural English, keeping structure, formatting, links, identifiers and the author's voice; can mirror a folder. Use when asked to translate Russian into English.\" ",
+      "intro": "Translate Russian text into natural English that reads as if a native English speaker wrote it. Preserve every structural and non-prose element of the source byte-for-byte, and never re-introduce AI-bureaucratic phrasing on the English side. This skill is content-neutral: the source can be a Markdown document, a plain article, fiction, a technical spec, a chat transcript, marketing copy, source code with comments — anything written in Russian that needs to become English. ### 1. Preserve structure and non-prose elements byte-for-byte Whatever non-prose elements appear in the source must survive translation byte-for-byte. Common categories — apply only those that are present in the source:",
+      "headings": [
+        {
+          "line": 125,
+          "text": "## Workflow",
+          "depth": 2
+        },
+        {
+          "line": 162,
+          "text": "## Input",
+          "depth": 2
+        },
+        {
+          "line": 166,
+          "text": "## Output",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 129,
+          "text": "1. Read the whole source first to understand the genre, register, voice, and key facts."
+        },
+        {
+          "line": 130,
+          "text": "2. Identify structural and non-prose elements that must stay byte-identical (whatever applies: headings, code, links, lists, tables, markup, identifiers)."
+        },
+        {
+          "line": 131,
+          "text": "3. Translate prose paragraphs, applying the connector map and voice rules."
+        },
+        {
+          "line": 132,
+          "text": "4. Translate heading text, emphasized terms, and link text."
+        },
+        {
+          "line": 133,
+          "text": "5. Self-check before output:"
+        },
+        {
+          "line": 134,
+          "text": "- Same structural elements, same count, same order?"
+        },
+        {
+          "line": 135,
+          "text": "- Same number of list items, table rows, paragraphs?"
+        },
+        {
+          "line": 136,
+          "text": "- Code, identifiers, URLs, version numbers untouched?"
+        },
+        {
+          "line": 137,
+          "text": "- No AI-marker phrases from the forbidden list?"
+        },
+        {
+          "line": 138,
+          "text": "- No literal calques of Russian connectors?"
+        },
+        {
+          "line": 139,
+          "text": "- No English-side calques of Russian syntax (nominalizations, genitive chains, actorless passives, bureaucratic politeness; section 2a)?"
+        },
+        {
+          "line": 140,
+          "text": "- Sentence rhythm and register match the source?"
+        },
+        {
+          "line": 141,
+          "text": "- No meaning degradation: specific→vague, precision loss («p<0,05» → \"statistically significant\"), causation→correlation, assertion→hedge?"
+        },
+        {
+          "line": 142,
+          "text": "6. Deliver the result (write to a file, or output inline — see Output section)."
+        },
+        {
+          "line": 146,
+          "text": "## Directory mirroring"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 170,
+          "text": "- Write the translated content to the target path the user specified."
+        },
+        {
+          "line": 171,
+          "text": "- The chat reply should be a brief report only: files written, any anchor slugs that needed re-pointing, any segment you couldn't confidently translate (proper nouns, ambiguous slang, project-specific jargon)."
+        },
+        {
+          "line": 172,
+          "text": "- Do NOT paste the translated text into chat — it's already on disk."
+        },
+        {
+          "line": 176,
+          "text": "- Output only the translated text — no preamble, no commentary, no list of changes."
+        },
+        {
+          "line": 177,
+          "text": "- If the source was wrapped in a code fence or any markup, mirror that wrapping in the output."
+        }
+      ],
+      "boundary_evidence": [
+        {
+          "line": 51,
+          "text": "- Impersonal passive: `a decision was made`, `it was agreed` for the Russian impersonal or reflexive form. Name the actor when the source or context gives one; keep the passive only when the actor is unknown or beside the point."
+        }
+      ],
+      "source_lines": 178
+    },
+    {
+      "id": "WM-X0273",
+      "repo": "mazrean/agent-skills",
+      "path": "skills/planning-wsh-improvements/SKILL.md",
+      "url": "https://github.com/mazrean/agent-skills/blob/main/skills/planning-wsh-improvements/SKILL.md",
+      "sha": "a6c0a336b8737acbe45863121e3b77e363dbf31f",
+      "status": "RECOVERED",
+      "description": "Analyzes a Web Speed Hackathon project, researches each improvement topic in depth, stores research as Agent Skills, and generates executable Claude Code commands for each optimization. Use when starting WSH optimization, creating an optimization roadmap, or generating executable improvement commands. ",
+      "intro": "Analyzes a Web Speed Hackathon project, identifies performance bottlenecks, researches each improvement topic in depth, stores findings as reusable Agent Skills, and generates executable Claude Code commands. Every command references the relevant skill and includes mandatory Lighthouse score check followed by quick visual verification (curl + Playwright screenshot). **Use this skill when** starting a WSH competition, creating an optimization plan, or when the user asks to generate improvement commands for a WSH project. - [COMMAND-TEMPLATE.md](references/COMMAND-TEMPLATE.md) — Template and rules for generated commands - [IMPROVEMENT-CATALOG.md](references/IMPROVEMENT-CATALOG.md) — Known improvement patterns with priority/impact data",
+      "headings": [
+        {
+          "line": 17,
+          "text": "## Workflow",
+          "depth": 2
+        },
+        {
+          "line": 19,
+          "text": "### Step 1: Analyze the Project",
+          "depth": 3
+        },
+        {
+          "line": 32,
+          "text": "### Step 2: Research & Generate Skills",
+          "depth": 3
+        },
+        {
+          "line": 36,
+          "text": "#### Research Process",
+          "depth": 4
+        },
+        {
+          "line": 83,
+          "text": "### Step 3: Prioritize Improvements",
+          "depth": 3
+        },
+        {
+          "line": 92,
+          "text": "### Step 4: Generate the Plan Document",
+          "depth": 3
+        },
+        {
+          "line": 137,
+          "text": "### Step 5: Generate Commands",
+          "depth": 3
+        },
+        {
+          "line": 155,
+          "text": "### Step 6: Verify and Report",
+          "depth": 3
+        },
+        {
+          "line": 179,
+          "text": "## Example Output Structure",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 19,
+          "text": "### Step 1: Analyze the Project"
+        },
+        {
+          "line": 23,
+          "text": "1. **Read `package.json`** — Identify dependencies, build scripts, framework"
+        },
+        {
+          "line": 24,
+          "text": "2. **Read build config** — `webpack.config.*`, `vite.config.*`, `tsconfig.json`"
+        },
+        {
+          "line": 25,
+          "text": "3. **Read `docs/regulation.md`** or equivalent — Understand VRT and scoring rules"
+        },
+        {
+          "line": 26,
+          "text": "4. **Check server code** — Look for artificial delays, N+1 queries, missing compression"
+        },
+        {
+          "line": 27,
+          "text": "5. **Check bundle size** — Run `npm run build` if needed, inspect output"
+        },
+        {
+          "line": 28,
+          "text": "6. **Scan for known WSH traps** — See [IMPROVEMENT-CATALOG.md](references/IMPROVEMENT-CATALOG.md)"
+        },
+        {
+          "line": 29,
+          "text": "7. **Run Lighthouse baseline** — Measure and record scores for all scored pages before any changes"
+        },
+        {
+          "line": 30,
+          "text": "8. **Quick visual baseline** — Confirm key pages load correctly via curl + screenshot before any changes"
+        },
+        {
+          "line": 32,
+          "text": "### Step 2: Research & Generate Skills"
+        },
+        {
+          "line": 36,
+          "text": "#### Research Process"
+        },
+        {
+          "line": 40,
+          "text": "1. **Identify knowledge gaps** — What does Claude need to know beyond general knowledge to implement this specific optimization correctly in this project?"
+        },
+        {
+          "line": 41,
+          "text": "2. **Research the topic** using web search, documentation, and codebase analysis:"
+        },
+        {
+          "line": 42,
+          "text": "- Official documentation for relevant tools/libraries"
+        },
+        {
+          "line": 43,
+          "text": "- Known pitfalls and edge cases specific to this optimization"
+        },
+        {
+          "line": 44,
+          "text": "- Compatibility with the project's tech stack (React version, bundler, etc.)"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 55,
+          "text": "- **Create** when the optimization requires understanding of specific APIs, configs, or patterns"
+        }
+      ],
+      "source_lines": 204
+    },
+    {
+      "id": "WM-X0290",
+      "repo": "msimchowitz/writing-skills",
+      "path": "for-agents/presentation-making/SKILL.md",
+      "url": "https://github.com/msimchowitz/writing-skills/blob/main/for-agents/presentation-making/SKILL.md",
+      "sha": "e81e06e68a10828ddff3e8e6b8c3955bb69c027d",
+      "status": "RECOVERED",
+      "description": "Plan, create, revise, and review presentation decks with a clear narrative, accurate content, coherent visual system, editable source, and rendered-slide verification. Use for PowerPoint, Keynote, Google Slides, Beamer, lecture decks, talks, pitches, speaker notes, slide outlines, or slide-level visual and writing review. ",
+      "intro": "Turn source material into a presentation built for an audience and a live explanation. Preserve technical accuracy while making the argument easier to ## Load detailed guidance selectively - Read [deck-workflow.md](references/deck-workflow.md) before creating a new",
+      "headings": [
+        {
+          "line": 46,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 48,
+          "text": "1. Resolve the source and constraints."
+        },
+        {
+          "line": 49,
+          "text": "2. Write a slide plan with the point, evidence, layout, and build behavior for"
+        },
+        {
+          "line": 51,
+          "text": "3. Select a visual source and map planned slides to suitable layout families."
+        },
+        {
+          "line": 52,
+          "text": "4. Build the editable deck with the appropriate presentation tools."
+        },
+        {
+          "line": 53,
+          "text": "5. Render the complete deck and inspect every physical slide or overlay."
+        },
+        {
+          "line": 54,
+          "text": "6. Correct defects, rerender, and repeat until the review passes."
+        },
+        {
+          "line": 55,
+          "text": "7. Report the final deck path and any unresolved content questions."
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 39,
+          "text": "- Use progressive builds only when each step helps the spoken explanation."
+        }
+      ],
+      "source_lines": 60
+    },
+    {
+      "id": "WM-X0302",
+      "repo": "obra/superpowers",
+      "path": "skills/writing-skills/SKILL.md",
+      "url": "https://github.com/obra/superpowers/blob/main/skills/writing-skills/SKILL.md",
+      "sha": "09d76b79dd4080fe4dcc9bfb3c54d05dbff8a563",
+      "status": "RECOVERED",
+      "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment ",
+      "intro": "**Writing skills IS Test-Driven Development applied to process documentation.** **Personal skills live in your runtime's skills directory** (`~/.claude/skills/` on Claude Code) — see [codex-tools.md](../using-superpowers/references/codex-tools.md) or [gemini-tools.md](../using-superpowers/references/gemini-tools.md) for the path on those runtimes. Codex, Copilot CLI, and Gemini CLI all also recognize `~/.agents/skills/` as a cross-runtime alias. You write test cases (pressure scenarios with subagents), watch them fail (baseline behavior), write the skill (documentation), watch tests pass (agents comply), and refactor (close loopholes). **Core principle:** If you didn't watch an agent fail without the skill, you don't know if the skill teach",
+      "headings": [
+        {
+          "line": 388,
+          "text": "## Discovery Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 193,
+          "text": "- Academic questions: Do they understand the rules?"
+        },
+        {
+          "line": 194,
+          "text": "- Pressure scenarios: Do they comply under stress?"
+        },
+        {
+          "line": 195,
+          "text": "- Multiple pressures combined: time + sunk cost + exhaustion"
+        },
+        {
+          "line": 196,
+          "text": "- Identify rationalizations and add explicit counters"
+        },
+        {
+          "line": 200,
+          "text": "### Technique Skills (how-to guides)"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 392,
+          "text": "1. **Encounters problem** (\"tests are flaky\")"
+        },
+        {
+          "line": 393,
+          "text": "2. **Searches skills** (greps descriptions, browses categories)"
+        },
+        {
+          "line": 394,
+          "text": "3. **Finds SKILL** (description matches)"
+        },
+        {
+          "line": 395,
+          "text": "4. **Scans overview** (is this relevant?)"
+        },
+        {
+          "line": 396,
+          "text": "5. **Reads patterns** (quick reference table)"
+        },
+        {
+          "line": 397,
+          "text": "6. **Loads example** (only when implementing)"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 95,
+          "text": "A skill's `description` says only when to use it: triggering conditions and"
+        },
+        {
+          "line": 397,
+          "text": "6. **Loads example** (only when implementing)"
+        }
+      ],
+      "source_lines": 400
+    },
+    {
+      "id": "WM-X0393",
+      "repo": "wshobson/agents",
+      "path": "plugins/avoid-ai-writing/skills/avoid-ai-writing/SKILL.md",
+      "url": "https://github.com/wshobson/agents/blob/main/plugins/avoid-ai-writing/skills/avoid-ai-writing/SKILL.md",
+      "sha": "728642a64cc0e3e5e87a2241678fe19932d60ec8",
+      "status": "RECOVERED",
+      "description": "Audit and rewrite prose so it stops reading as machine-generated. Use this skill when asked to remove AI-isms, clean up AI writing, edit a draft for AI tells, audit a README, changelog, release note, PR description, or blog post for machine-sounding prose, or make text sound less like AI. Supports a detect-only mode, a rewrite mode, and an edit-in-place mode, with optional voice and context profiles. ",
+      "intro": "Find the patterns that make text read as machine-generated, then fix them without sanding off the author's voice. These patterns are more common in model output, and people produce them too, especially under deadline, in an unfamiliar genre, or in a second language. The evidence on machine detection cuts both ways. A Stanford audit found seven detectors flagged 61% of TOEFL essays by non-native English writers as AI-generated, against roughly 5% of essays by native writers (Liang et al., *Patterns*, 2023). A 2025 audit found open-source detection unsuitable for high-stakes use, with false-positive rates around 30% to 78% depending on the scenario, while the strongest commercial detector it tested approached zero error on medium and long pas",
+      "headings": [
+        {
+          "line": 56,
+          "text": "## Output",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 30,
+          "text": "3. **Check vocabulary** against the tiered tables in `references/word-tiers.md`. Tier 1 gets replaced by default, after the selected context profile's exceptions are applied. Tier 2 gets replaced when two or more land in one paragraph. Tier 3 gets replaced only when the text is saturated with it."
+        }
+      ],
+      "source_lines": 65
+    }
+  ],
+  "reason": "6 source path corrections and 12 section-scan end-of-file fixes"
+}
