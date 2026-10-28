@@ -1,0 +1,722 @@
+{
+  "idx": 15,
+  "records": [
+    {
+      "id": "WM-X0335",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "writing-and-content/blog-post-writing/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/writing-and-content/blog-post-writing/SKILL.md",
+      "sha": "7978c9b234a6d5729a193e1c6186c6ea397de4c4",
+      "status": "OK",
+      "description": "Write high-quality, SEO-optimized blog posts in multiple formats including how-to guides, listicles, opinion pieces, and case studies, with structured outlines, hooks, and calls-to-action. Use when the user requests blog post writing or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to write well-structured, engaging, and SEO-optimized blog posts across multiple content types — how-to guides, listicles, opinion pieces, case studies, and thought leadership articles. The agent handles the full lifecycle from topic research and outlining through drafting, SEO optimization, and final review, producing publish-ready content tailored to the target audience and brand voice. 1. **Research the Topic and Keywords**    Investigate the topic to understand its scope, current discourse, and search intent. Identify a primary keyword and 3-5 secondary keywords to target. Analyze the top-ranking content for the primary keyword to understand what angle, depth, and format performs well. Determine whether th",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Research the Topic and Keywords**"
+        },
+        {
+          "line": 19,
+          "text": "2. **Choose the Content Format**"
+        },
+        {
+          "line": 22,
+          "text": "3. **Build the Outline**"
+        },
+        {
+          "line": 25,
+          "text": "4. **Write the Draft**"
+        },
+        {
+          "line": 28,
+          "text": "5. **Optimize for SEO**"
+        },
+        {
+          "line": 31,
+          "text": "6. **Review and Polish**"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 110
+    },
+    {
+      "id": "WM-X0336",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "writing-and-content/copywriting/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/writing-and-content/copywriting/SKILL.md",
+      "sha": "0ffe9752e008d7ab1d787bfc9a2cd772e061fbd9",
+      "status": "OK",
+      "description": "Write compelling, persuasive marketing and sales copy using proven frameworks like AIDA, PAS, BAB, and 4Ps, with tone and voice customization, CTA optimization, and A/B variant generation. Use when the user requests copywriting or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to write persuasive marketing and sales copy that drives action. The agent applies proven copywriting frameworks — AIDA (Attention, Interest, Desire, Action), PAS (Problem, Agitation, Solution), BAB (Before, After, Bridge), and 4Ps (Promise, Picture, Proof, Push) — and adapts tone, voice, and structure to the brand, audience, and channel. It supports landing pages, email campaigns, social media ads, product descriptions, and more. 1. **Define the Objective and Audience**    Clarify the primary goal: drive conversions, generate leads, increase brand awareness, or nurture existing customers. Identify the target audience — their pain points, desires, language patterns, and stage in the buyer's journey (awareness,",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Define the Objective and Audience**"
+        },
+        {
+          "line": 19,
+          "text": "2. **Select a Copywriting Framework**"
+        },
+        {
+          "line": 22,
+          "text": "3. **Establish Tone and Voice**"
+        },
+        {
+          "line": 25,
+          "text": "4. **Draft the Copy**"
+        },
+        {
+          "line": 28,
+          "text": "5. **Optimize the CTA**"
+        },
+        {
+          "line": 31,
+          "text": "6. **Generate A/B Variants**"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 29,
+          "text": "Replace generic phrases like \"Submit\" or \"Click Here\" with benefit-driven language like \"Start Your Free Trial.\" Consider the commitment level — a free trial CTA differs from a $5,000 enterprise demo request. Use urgency elements only when they are truthful."
+        }
+      ],
+      "source_lines": 105
+    },
+    {
+      "id": "WM-X0337",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "writing-and-content/proofreading/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/writing-and-content/proofreading/SKILL.md",
+      "sha": "d6a7993ba94d6c1580f50eeceac9fcdc2eb45578",
+      "status": "OK",
+      "description": "Proofread and correct text for grammar, spelling, punctuation, style, clarity, and consistency, with support for multiple style guides and readability analysis. Use when the user requests proofreading or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to systematically proofread text, catching errors in grammar, spelling, punctuation, style, and consistency. The agent applies a structured multi-pass review process, supports standard style guides (AP, Chicago, APA, or custom house styles), and provides readability scoring alongside tone analysis. Output includes both the corrected text and an annotated summary of every change made.    Scan the text for grammatical errors including subject-verb agreement, incorrect tense usage, dangling modifiers, sentence fragments, run-on sentences, and misplaced clauses. Fix each error and record the original phrasing alongside the correction. Pay special attention to complex sentences where multiple clauses may introduce ",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Grammar Check**"
+        },
+        {
+          "line": 19,
+          "text": "2. **Spelling and Word Choice**"
+        },
+        {
+          "line": 22,
+          "text": "3. **Punctuation and Mechanics**"
+        },
+        {
+          "line": 25,
+          "text": "4. **Style and Consistency**"
+        },
+        {
+          "line": 28,
+          "text": "5. **Clarity and Readability**"
+        },
+        {
+          "line": 31,
+          "text": "6. **Tone Analysis and Final Review**"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 123
+    },
+    {
+      "id": "WM-X0338",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "writing-and-content/technical-writing/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/writing-and-content/technical-writing/SKILL.md",
+      "sha": "d1bdb02ac3cd335307e1565b939a3fb1ffbff0d5",
+      "status": "OK",
+      "description": "Write clear, concise, and accurate technical documentation including API references, user guides, tutorials, changelogs, and architecture docs, tailored to the target audience. Use when the user requests technical writing or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to produce high-quality technical documentation across a range of formats — API references, user guides, getting-started tutorials, changelogs, architecture decision records, and more. The agent analyzes the target audience, structures information logically, applies consistent formatting standards, and ensures every document is accurate, scannable, and actionable. 1. **Identify Document Type and Audience**    Determine which type of document is needed (API reference, tutorial, user guide, changelog, architecture doc) and who will read it (beginner developers, experienced engineers, end users, stakeholders). Adjust vocabulary, depth, and assumed prerequisites accordingly. A tutorial for beginners should explain",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Identify Document Type and Audience**"
+        },
+        {
+          "line": 19,
+          "text": "2. **Gather Source Material**"
+        },
+        {
+          "line": 22,
+          "text": "3. **Design the Document Structure**"
+        },
+        {
+          "line": 25,
+          "text": "4. **Write the Content**"
+        },
+        {
+          "line": 28,
+          "text": "5. **Add Navigation and Cross-References**"
+        },
+        {
+          "line": 31,
+          "text": "6. **Review for Accuracy and Completeness**"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 17,
+          "text": "Determine which type of document is needed (API reference, tutorial, user guide, changelog, architecture doc) and who will read it (beginner developers, experienced engineers, end users, stakeholders). Adjust vocabulary, depth, and assumed prerequisites accordingly. A tutorial for beginners should explain every step; an API reference for senior engineers should be terse and precise."
+        },
+        {
+          "line": 29,
+          "text": "Insert a table of contents for long documents, anchor links between related sections, and links to prerequisite or follow-up documentation. Add \"Next steps\" sections at the end of tutorials."
+        }
+      ],
+      "source_lines": 132
+    },
+    {
+      "id": "WM-X0339",
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "path": "writing-and-content/translation/SKILL.md",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills/blob/main/writing-and-content/translation/SKILL.md",
+      "sha": "bedbc2a3a4aea2480ef13fa0c18f68df70d46e57",
+      "status": "OK",
+      "description": "Translate text between languages with cultural adaptation, terminology consistency, and support for multiple document types including technical docs, marketing copy, and UI strings. Use when the user requests translation or provides relevant inputs for this workflow. ",
+      "intro": "This skill enables an AI agent to translate text between languages while preserving meaning, tone, and context. It goes beyond word-for-word substitution by handling idiomatic expressions, cultural nuance, domain-specific terminology, and formality registers. The agent can translate technical documentation, marketing copy, UI strings, legal text, and general prose, adapting output to the conventions of the target locale.    Examine the source text to determine its domain (technical, marketing, legal, casual), register (formal, informal, neutral), and intended audience. Identify any idiomatic expressions, culturally specific references, or humor that will require adaptation rather than literal translation. Note the document format (plain tex",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "1. **Analyze Source Context**"
+        },
+        {
+          "line": 19,
+          "text": "2. **Research Terminology**"
+        },
+        {
+          "line": 22,
+          "text": "3. **Translate the Content**"
+        },
+        {
+          "line": 25,
+          "text": "4. **Localize Cultural References**"
+        },
+        {
+          "line": 28,
+          "text": "5. **Review for Accuracy and Fluency**"
+        },
+        {
+          "line": 31,
+          "text": "6. **Deliver with Annotations**"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 104
+    },
+    {
+      "id": "WM-X0340",
+      "repo": "social-media-skills/skills",
+      "path": "skills/analytics-and-reporting/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/analytics-and-reporting/SKILL.md",
+      "sha": "7ca61b4775fb1b15f2e22ef8f97e8c443cc6c47f",
+      "status": "OK",
+      "description": "Social media analytics and reporting — read native platform data honestly and turn it into next actions. Use when someone wants to \"check my analytics,\" \"see how my posts are doing,\" \"build a social media report,\" \"which content is working,\" \"what metrics/KPIs should I track,\" or to turn performance data into next steps. Measures goal-mapped SIGNAL metrics (saves, shares, watch time/retention, engagement-rate-by-reach, follower-growth-rate, CTR, conversions) — not vanity (followers/impressions/likes) — and closes the loop. Uses the METER framework. Reads brand-profile + social-strategy (goals) first. Reads WoopSocial post analytics for TikTok, LinkedIn, Facebook, Instagram, Pinterest, YouTube, and Bluesky; native dashboards otherwise. It NEVER fabricates a metric. Feeds content-recycling, experimentation, competitor-analysis, and every growth skill. Distinct from goals-and-kpis (sets targets) and experimentation (runs tests).",
+      "intro": "The **measurement keystone** — read native platform data, turn it into goal-mapped insight, and close the loop. Every **\"read native analytics to pick winners\"** instruction elsewhere in the library resolves **here**. WoopSocial post analytics covers **TikTok, LinkedIn, Facebook, Instagram, Pinterest, YouTube, and Bluesky**. Everything else still comes from **native dashboards**, and the agent **interprets, never fabricates.**",
+      "headings": [
+        {
+          "line": 56,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 91
+    },
+    {
+      "id": "WM-X0341",
+      "repo": "social-media-skills/skills",
+      "path": "skills/audience-research/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/audience-research/SKILL.md",
+      "sha": "26e782d706ee59cfff37a371902928fdedcc46f0",
+      "status": "OK",
+      "description": "Use to develop a deep, usable understanding of who a brand creates content for — sharp enough that every content skill resonates with them specifically. Run when the user says \"who's my audience,\" \"audience research,\" \"target audience,\" \"build a persona,\" \"customer profile,\" \"ideal customer profile\" / \"ICP,\" \"who am I talking to,\" \"understand my followers,\" or before content work that needs more audience depth than the brand-profile sketch. Reads brand-profile first and goes deeper: jobs-to-be-done, pains, objections, and the audience's ACTUAL language (voice-of-customer), grounded in real sources where possible — never demographic theater. Produces an audience.md that content-pillars, batch-content-plan, and the content skills read. Works for any business.",
+      "intro": "Knowing the audience deeply is the highest-leverage input to good content. You can have perfect voice and clean mechanics and still get ignored if the content doesn't speak to what the audience actually wants, in words they actually use. This skill builds that understanding — and writes it down so every other skill can use it.",
+      "headings": [
+        {
+          "line": 43,
+          "text": "## Step 0 — Read the foundation first",
+          "depth": 2
+        },
+        {
+          "line": 48,
+          "text": "## Step 1 — Gather evidence (don't invent)",
+          "depth": 2
+        },
+        {
+          "line": 62,
+          "text": "## Step 2 — Define sharp segments (1–3), and buyer vs follower",
+          "depth": 2
+        },
+        {
+          "line": 73,
+          "text": "## Step 3 — Capture the content-relevant dimensions",
+          "depth": 2
+        },
+        {
+          "line": 87,
+          "text": "## Step 4 — Build the language bank",
+          "depth": 2
+        },
+        {
+          "line": 93,
+          "text": "## Step 5 — Write the artifact",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [
+        {
+          "line": 99,
+          "text": "## Quality bar — self-check"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 139
+    },
+    {
+      "id": "WM-X0342",
+      "repo": "social-media-skills/skills",
+      "path": "skills/batch-content-plan/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/batch-content-plan/SKILL.md",
+      "sha": "10863051011876f693c6b7b407b61e4e01af4c0d",
+      "status": "OK",
+      "description": "Use to plan and produce a full batch of social media content for a period — a week or a month — in one session: strategically balanced, on-brand, mapped to a calendar, and ready to schedule. Run when the user says \"plan my content,\" \"a month of posts,\" \"batch my content,\" \"plan the week,\" \"fill my calendar,\" or wants many posts planned at once in one sitting. Reads brand-profile, voice, and content-pillars first, and produces a brief for each post that the content skills (caption-writer, reels-script, hook-writer) execute. As a BRIDGE skill it then confirms and hands the batch to scheduling-and-queue. Builds a balanced mix — never all-promotion — matched to the user's real capacity. Suggests cadence but does not claim analytics-based timing (not a best-time model). For the ongoing recurring system — which pillars/formats post on which days, the living \"content calendar\" — use content-calendar; this skill fills one specific period of that system with actual post briefs.",
+      "intro": "This skill turns \"I need to post consistently\" into a finished, ready-to-schedule batch — a week or a month of content, planned in one sitting. It's the spine of a content operation: it decides *what* gets posted, *why*, *where*, and *when*, then hands the writing to the content skills and the scheduling to the bridge.",
+      "headings": [
+        {
+          "line": 39,
+          "text": "## Step 0 — Read the foundation first",
+          "depth": 2
+        },
+        {
+          "line": 46,
+          "text": "## Step 1 — Set the parameters",
+          "depth": 2
+        },
+        {
+          "line": 58,
+          "text": "## Step 2 — Establish pillars and the content mix",
+          "depth": 2
+        },
+        {
+          "line": 66,
+          "text": "## Step 3 — Lay out the calendar",
+          "depth": 2
+        },
+        {
+          "line": 73,
+          "text": "## Step 4 — Fill each slot with a brief",
+          "depth": 2
+        },
+        {
+          "line": 82,
+          "text": "## Step 5 — Build in repurposing",
+          "depth": 2
+        },
+        {
+          "line": 89,
+          "text": "## Step 6 — Confirm, then schedule (bridge)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 139
+    },
+    {
+      "id": "WM-X0343",
+      "repo": "social-media-skills/skills",
+      "path": "skills/campaign-and-launch-planning/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/campaign-and-launch-planning/SKILL.md",
+      "sha": "f2eb8f6b7c10e0ee642929c4db79369e6c9cbf9a",
+      "status": "OK",
+      "description": "Plan and orchestrate a product launch or social media campaign end to end — the multi-week arc, channel by channel. Use when someone wants to plan a launch, product drop, campaign, big announcement, waitlist/pre-launch push, or coordinated multi-platform moment. Plans a time-boxed campaign as ONE story across three phases (tease -> launch -> sustain) toward a single goal, and schedules the coordinated social posts via WoopSocial. Uses the STORY framework. Reads brand-profile + goals-and-kpis first. WoopSocial schedules + publishes the social posts on the timeline; the waitlist/hub, email sequence, checkout, paid ads, press/creator outreach, and livestream are external/native, and conversion/ROI come from native analytics + the store (never fabricated). Urgency must be credible (no fake countdowns/scarcity). Distinct from content-calendar (the ongoing always-on cadence) and goals-and-kpis (the targets a campaign serves).",
+      "intro": "A **strategy/orchestration skill** — plan the time-boxed campaign (goal, phases, week-by-week map, the brief, the posts) and let **WoopSocial schedule + publish the coordinated social posts** on the timeline. The agent **plans + writes + schedules the social side**; the **waitlist/hub, email, ads, checkout, press, and livestream are external/native.**",
+      "headings": [
+        {
+          "line": 64,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 101
+    },
+    {
+      "id": "WM-X0344",
+      "repo": "social-media-skills/skills",
+      "path": "skills/caption-writer/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/caption-writer/SKILL.md",
+      "sha": "0aefac79f02507394d4430d2e54eff3c9d3ac738",
+      "status": "OK",
+      "description": "Use to write platform-native social media captions (post copy) in the brand's voice — the words that accompany a post on Instagram, LinkedIn, TikTok, Facebook, X/Twitter, Threads, Pinterest, YouTube, or Bluesky. Run when the user says \"write a caption,\" \"caption this,\" \"post copy,\" \"write the copy for this photo/video/Reel,\" \"IG caption,\" \"what should I write for this post,\" or needs the words to go with a visual. Reads brand-profile and voice first so captions sound like the brand, not generic AI. For long-form LinkedIn thought-leadership posts use linkedin-post-writer; for X/Threads multi-post threads use thread-writer; for video scripts use the video skills. This skill writes the caption itself.",
+      "intro": "A caption is not a description of the post. It's the part of the post that does the *work* — it stops the scroll, earns attention, and drives one action. Done well it carries the post; done generically it sinks even great visuals under emoji and hashtag noise. Two principles run through everything here:",
+      "headings": [
+        {
+          "line": 32,
+          "text": "## Step 0 — Read the foundation first (required)",
+          "depth": 2
+        },
+        {
+          "line": 39,
+          "text": "## Step 1 — Establish four inputs",
+          "depth": 2
+        },
+        {
+          "line": 52,
+          "text": "## Step 2 — Choose the format, then the goal-driven structure",
+          "depth": 2
+        },
+        {
+          "line": 59,
+          "text": "## Step 3 — Write the first line first",
+          "depth": 2
+        },
+        {
+          "line": 66,
+          "text": "## Step 4 — Build the body and one CTA",
+          "depth": 2
+        },
+        {
+          "line": 75,
+          "text": "## Step 5 — Mechanics: hashtags, links, formatting",
+          "depth": 2
+        },
+        {
+          "line": 81,
+          "text": "## Step 6 — Deliver options, recommend one",
+          "depth": 2
+        },
+        {
+          "line": 87,
+          "text": "## Quality bar — self-check before delivering",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 43,
+          "text": "- **Platform** — the mechanics are different on each (see `references/platforms.md`)."
+        },
+        {
+          "line": 44,
+          "text": "- **The asset** — what's in the photo/video/carousel? The caption complements the visual; it"
+        },
+        {
+          "line": 46,
+          "text": "- **The goal** — awareness, comments, saves, clicks/traffic, community, or conversion."
+        },
+        {
+          "line": 47,
+          "text": "- **The topic / point** — what this specific post is about, and the one idea it lands."
+        },
+        {
+          "line": 52,
+          "text": "## Step 2 — Choose the format, then the goal-driven structure"
+        }
+      ],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 130
+    },
+    {
+      "id": "WM-X0345",
+      "repo": "social-media-skills/skills",
+      "path": "skills/carousel-writer/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/carousel-writer/SKILL.md",
+      "sha": "28bfb4eadce3a91e46e6c579f7afb7bbd9e4993b",
+      "status": "OK",
+      "description": "Use to write a carousel — a swipeable multi-slide post (Instagram carousel, LinkedIn document/PDF carousel, or TikTok photo carousel) — one of the highest-save, highest-dwell formats. Run when the user says \"write a carousel,\" \"carousel post,\" \"slides for X,\" \"LinkedIn document/PDF post,\" \"swipe post,\" \"turn this into a carousel,\" or wants multi-slide teaching or story content. Reads brand-profile and voice first; the cover slide hooks and promises the swipe (via hook-writer); each slide advances one idea and earns the next swipe; ends on a save-leaning CTA. Specifies the design direction and bundles an image-generation prompt pack (Nano Banana / Ideogram) for the slide visuals. Hands the caption to caption-writer and scheduling to scheduling-and-queue.",
+      "intro": "A carousel is a swipeable teaching-or-story post — and one of the best formats there is for **saves** and **dwell time** (both strong ranking signals). But it only works if people swipe, and they only swipe if each slide earns the next. So this skill is opinionated about the cover, the one-idea-per-slide discipline, and keeping slides legible — not dumping paragraphs onto",
+      "headings": [
+        {
+          "line": 35,
+          "text": "## Step 0 — Read the foundation first",
+          "depth": 2
+        },
+        {
+          "line": 40,
+          "text": "## Step 1 — Lock the idea, goal, and platform",
+          "depth": 2
+        },
+        {
+          "line": 47,
+          "text": "## Step 2 — Write the cover slide (hook + promise)",
+          "depth": 2
+        },
+        {
+          "line": 53,
+          "text": "## Step 3 — Architect the carousel",
+          "depth": 2
+        },
+        {
+          "line": 60,
+          "text": "## Step 4 — Write the slides",
+          "depth": 2
+        },
+        {
+          "line": 66,
+          "text": "## Step 5 — Land the payoff and a save-leaning CTA",
+          "depth": 2
+        },
+        {
+          "line": 72,
+          "text": "## Step 6 — Specify the visuals (design direction + image pack)",
+          "depth": 2
+        },
+        {
+          "line": 83,
+          "text": "## Step 7 — Hand off",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 127
+    },
+    {
+      "id": "WM-X0346",
+      "repo": "social-media-skills/skills",
+      "path": "skills/content-audit/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/content-audit/SKILL.md",
+      "sha": "977bc0589b5aff30810095cf14de454506562ddd",
+      "status": "OK",
+      "description": "Audit an existing social media account and its content — the retrospective reality-check of what's working and what isn't. Use when someone wants to \"audit my content/account,\" \"what's working and what isn't,\" \"clean up my profile/feed,\" \"I post a lot but it's not working,\" or to triage an existing account before replanning. Produces a keep/kill/refresh triage, maps pillar coverage, catches voice drift, and fixes profile fundamentals — then a quick-wins-vs-long-term roadmap. Uses the AUDIT framework. Reads brand-profile + content-pillars + social-strategy (the plan) and analytics-and-reporting (the data) first. It reads WoopSocial post analytics on covered platforms and native dashboards otherwise, scores on signal not vanity, recommends rather than auto-deletes, and never fabricates. Feeds content-recycling, content-pillars, profile-optimization, voice-builder, and social-strategy. Distinct from analytics-and-reporting (ongoing measurement) and competitor-analysis (rivals).",
+      "intro": "The **retrospective bridge** — read how an existing account has performed and turn it into a keep/kill/ refresh roadmap that feeds the forward plan. It **reads** (via `analytics-and-reporting`) and **recommends**; the human and other skills **act**. ## The POV: activity isn't progress",
+      "headings": [
+        {
+          "line": 53,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 53,
+          "text": "## Honest scope (never violate)"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 85
+    },
+    {
+      "id": "WM-X0347",
+      "repo": "social-media-skills/skills",
+      "path": "skills/content-calendar/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/content-calendar/SKILL.md",
+      "sha": "ff8c8f73625f6a05cb0c75a27aa018557ed1e7dc",
+      "status": "OK",
+      "description": "Use to build a content calendar — a sustainable, repeatable posting rhythm and recurring structure (which pillars/formats post on which days, on which platforms), derived from strategy and pillars. Run when the user says \"content calendar,\" \"editorial calendar,\" \"social media calendar,\" \"posting schedule,\" \"content plan\" (ongoing), \"what should I post each week,\" \"build me a posting routine/cadence,\" or wants a repeatable system rather than one period's posts. Reads social-strategy, content-pillars, and brand-profile first; sizes cadence to real capacity; builds a recurring skeleton of buckets and named series with room reserved for reactive/trend content; sets the planning rhythm (batch, buffer, review). Hands a period's briefs to batch-content-plan, content to the writing skills, and scheduling to scheduling-and-queue. For filling one specific week/month with actual posts use batch-content-plan; for higher-level channel/goal choices use social-strategy.",
+      "intro": "A content calendar isn't a blank grid you fill by heroics — it's a **sustainable operating rhythm**: a recurring structure that generates posts so you're never staring at an empty page, at a cadence you can actually hold. Two ideas drive everything here: 1. **Cadence equals capacity.** The number-one reason calendars fail is overcommitting. A",
+      "headings": [
+        {
+          "line": 36,
+          "text": "## Step 0 — Read the foundation first",
+          "depth": 2
+        },
+        {
+          "line": 42,
+          "text": "## Step 1 — Size the cadence to real capacity",
+          "depth": 2
+        },
+        {
+          "line": 49,
+          "text": "## Step 2 — Build the recurring skeleton",
+          "depth": 2
+        },
+        {
+          "line": 55,
+          "text": "## Step 3 — Design one or two recurring series",
+          "depth": 2
+        },
+        {
+          "line": 60,
+          "text": "## Step 4 — Anchor dates + reserve reactive room",
+          "depth": 2
+        },
+        {
+          "line": 66,
+          "text": "## Step 5 — Set the operating rhythm",
+          "depth": 2
+        },
+        {
+          "line": 72,
+          "text": "## Step 6 — Deliver + hand off",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 121
+    },
+    {
+      "id": "WM-X0348",
+      "repo": "social-media-skills/skills",
+      "path": "skills/content-pillars/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/content-pillars/SKILL.md",
+      "sha": "d85551db98f6930cd62e0f83a43a01b768af2c22",
+      "status": "OK",
+      "description": "Use to define a brand's content pillars — the 3–5 recurring themes it posts about — the strategic backbone between the brand profile and the content calendar. Run when the user says \"content pillars,\" \"content buckets,\" \"what should I post about,\" \"content themes,\" \"content strategy,\" \"pillars,\" or before planning a batch or calendar. Reads brand-profile first and derives pillars from positioning, point of view, audience, and proof — real ownable themes, never generic \"educational / behind-the-scenes / promotional\" buckets (those are intents and formats, not pillars). Produces a content-pillars.md that batch-content-plan and the content skills read. Works for any business: B2B, ecommerce, local, personal brand, nonprofit.",
+      "intro": "Content pillars are the few recurring **themes** a brand returns to — the strategic layer between *who the brand is* (`brand-profile`) and *what it posts this week* (`batch-content-plan`). Good pillars make a feed coherent, ownable, and infinitely easy to plan; their absence is why so many brands post random things that add up to nothing.",
+      "headings": [
+        {
+          "line": 41,
+          "text": "## Step 0 — Read the foundation first",
+          "depth": 2
+        },
+        {
+          "line": 47,
+          "text": "## Step 1 — Mine the brand profile for raw material",
+          "depth": 2
+        },
+        {
+          "line": 59,
+          "text": "## Step 2 — Generate candidate pillars",
+          "depth": 2
+        },
+        {
+          "line": 64,
+          "text": "## Step 3 — Test and select 3–5",
+          "depth": 2
+        },
+        {
+          "line": 76,
+          "text": "## Step 4 — Define each pillar",
+          "depth": 2
+        },
+        {
+          "line": 83,
+          "text": "## Step 5 — Balance the mix",
+          "depth": 2
+        },
+        {
+          "line": 95,
+          "text": "## Step 6 — Write the artifact",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [
+        {
+          "line": 101,
+          "text": "## Quality bar — self-check"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 140
+    },
+    {
+      "id": "WM-X0349",
+      "repo": "social-media-skills/skills",
+      "path": "skills/content-recycling/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/content-recycling/SKILL.md",
+      "sha": "506280198ce337efdd3c90ccdc7100818d46d963",
+      "status": "OK",
+      "description": "Content recycling — resurface, update, and repost proven evergreen content over time. Use when someone wants to \"get more mileage out of old posts,\" \"recycle/repost our best content,\" \"resurface evergreen pieces,\" \"update and republish an old post,\" or build a recycling queue of proven winners. Recycles the INSIGHT refreshed (new hook/format/updated data) on a deliberate cadence — never an identical repost. Distinct from cross-platform-repurposing (same moment, many platforms) and captions-and-clipping (long-form -> short clips). Reads brand-profile + voice-builder first. The agent drafts the refresh; a human reviews; WoopSocial schedules/publishes (delete+recreate, no update); winners on the covered platforms are picked from WoopSocial post analytics; nothing is fabricated.",
+      "intro": "The **time-axis** reuse discipline — turn a *proven evergreen* asset into multiple cycles, **refreshed each time** so it's a new asset, not a stale duplicate. The agent drafts the refresh; a human reviews; **scheduling-and-queue → WoopSocial** publishes. ## The POV: recycle the insight, not the artifact",
+      "headings": [
+        {
+          "line": 61,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [
+        {
+          "line": 28,
+          "text": "## Read these first"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 84
+    },
+    {
+      "id": "WM-X0350",
+      "repo": "social-media-skills/skills",
+      "path": "skills/content-research-and-sourcing/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/content-research-and-sourcing/SKILL.md",
+      "sha": "061cc6afe1b2697533234f88b68afc9bea208d2c",
+      "status": "OK",
+      "description": "The research-and-sourcing craft — verify the substance of a piece before it publishes: trace stats to primary sources, kill zombie stats, catch AI-hallucinated citations, and attribute properly on social. Use when someone has a stat-heavy draft to make publish-ready, wants to check if a viral statistic is real, asks how to cite sources, used AI research output, or is making health/finance claims. Uses the FACTS framework. Reads brand-profile + the piece's format skill first. AI-supplied citations are guilty until verified; a working link is not verification; aggregators are leads, not the source; where none exists, reframe as owned observation or commission data. The agent verifies where it has search; the human clicks links where it doesn't; verification happens before scheduling; WoopSocial publishes. Never invents studies or reuses retracted stats. Distinct from idea-generation, data-and-original-research, quote-cards, and infographic-and-data-viz.",
+      "intro": "# content-research-and-sourcing The **verification craft** — find the load-bearing claims, ascend to the primary source, check freshness and context, test AI output hard, and show your sources. The agent verifies where it has search; the **human clicks where it doesn't**; verification happens **before scheduling**; **WoopSocial publishes**. (Craft skill",
+      "headings": [
+        {
+          "line": 69,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 106
+    }
+  ]
+}
