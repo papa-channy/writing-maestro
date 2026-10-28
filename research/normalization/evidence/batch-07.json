@@ -1,0 +1,608 @@
+{
+  "batch": 7,
+  "extraction_version": "0.1.1",
+  "records": [
+    {
+      "id": "WM-X0053",
+      "repo": "KalarisLabs/research-agent-skills",
+      "path": "skills/systems-paper-writing/SKILL.md",
+      "blob_sha": "c709073916aa97279a03ab3d225298f673f41513",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "systems-paper-writing",
+      "description": "Provides paragraph-level structural blueprints for 10-12 page systems papers targeting OSDI, SOSP, ASPLOS, NSDI, and EuroSys. Covers page budgets per section, writing patterns (gap analysis, observation-driven, contribution list, thesis formula), evaluation structure, venue checklists, reviewer guidelines, deadlines, and LaTeX templates for OSDI, NSDI, ASPLOS, and SOSP. Use when planning the section and page layout of a systems paper. Use when drafting an introduction, motivation, design, or evaluation section. Use when checking a draft against venue page limits and a pre-submission checklist. Use when anticipating how systems reviewers will assess a paper. Use when looking up conference formats or deadlines. For NeurIPS/ICML/ICLR papers or citation verification, use ml-paper-writing instead.",
+      "headings": [
+        {
+          "line": 220,
+          "text": "## Workflow: Structuring a New Systems Paper"
+        }
+      ],
+      "steps": [
+        {
+          "line": 36,
+          "text": "1. **Levin & Redell** — \"How (and How Not) to Write a Good Systems Paper\" (SOSP'83 PC Chairs, USENIX/ACM SIGOPS)"
+        },
+        {
+          "line": 37,
+          "text": "2. **Irene Zhang** (MSR/UW) — \"Hints on how to write an SOSP paper\" (SOSP/OSDI PC)"
+        },
+        {
+          "line": 38,
+          "text": "3. **Gernot Heiser** (UNSW, seL4) — Style Guide + Paper Writing Talk"
+        },
+        {
+          "line": 39,
+          "text": "4. **Timothy Roscoe** (ETH Zürich) — \"Writing reviews for systems conferences\""
+        },
+        {
+          "line": 40,
+          "text": "5. **Mike Dahlin** (UT Austin/Google) — \"Giving a Conference Talk\""
+        },
+        {
+          "line": 41,
+          "text": "6. **Yi Ding** — \"How to write good systems papers?\""
+        },
+        {
+          "line": 42,
+          "text": "7. **hzwer & DingXiaoH** — WritingAIPaper (GitHub 1.3k+ stars)"
+        },
+        {
+          "line": 80,
+          "text": "1. **Problem statement** (~0.5 page) — Establish the domain and why it matters. Use concrete numbers (cluster sizes, workload statistics, latency requirements)."
+        },
+        {
+          "line": 81,
+          "text": "2. **Gap analysis** (~0.5 page) — Enumerate specific gaps G1–Gn in existing systems. Each gap is one sentence with evidence."
+        },
+        {
+          "line": 82,
+          "text": "3. **Key insight** (1 paragraph) — The thesis statement: \"X is better for applications Y running in environment Z.\" (Irene Zhang formula)"
+        },
+        {
+          "line": 83,
+          "text": "4. **Contributions** (~0.5 page) — Numbered list of 3–5 concrete contributions. Each contribution is testable and maps to a section."
+        },
+        {
+          "line": 93,
+          "text": "1. **Technical background** (~0.5 page) — Define terms and systems the reader needs. Follow Gernot Heiser's \"define-before-use\" principle."
+        },
+        {
+          "line": 94,
+          "text": "2. **Production observations** (~0.5–1 page) — Present Observation 1, 2, 3 from real data or measurements. Each observation leads to a design insight."
+        },
+        {
+          "line": 102,
+          "text": "1. **System architecture overview** (~0.5 page) — Architecture diagram first (Yi Ding: \"draw a picture first\"). One-paragraph walkthrough of major components and data flow."
+        },
+        {
+          "line": 103,
+          "text": "2. **Module-by-module design** (~2–2.5 pages) — Each subsection: what the module does, the design choice made, alternatives considered, and why this choice wins."
+        },
+        {
+          "line": 104,
+          "text": "3. **Design alternatives and trade-offs** (~0.5–1 page) — For each major decision, explicitly discuss what was not chosen and why."
+        },
+        {
+          "line": 110,
+          "text": "1. **Prototype description** — Language, framework, LOC, integration with existing systems."
+        },
+        {
+          "line": 111,
+          "text": "2. **Key engineering decisions** — Non-obvious implementation choices worth documenting."
+        },
+        {
+          "line": 119,
+          "text": "1. **Experimental setup** (~0.5 page) — Hardware, baselines, workloads, metrics. Enough detail to reproduce."
+        },
+        {
+          "line": 120,
+          "text": "2. **End-to-end comparison** (~1–1.5 pages) — X vs baselines for application Y on environment Z. Main performance results."
+        },
+        {
+          "line": 121,
+          "text": "3. **Microbenchmarks / Ablation** (~1–1.5 pages) — Isolate each design decision's contribution. Ablation experiments decompose the gains."
+        },
+        {
+          "line": 122,
+          "text": "4. **Scalability** (~0.5 page) — Show behavior as problem size, cluster size, or load increases."
+        }
+      ],
+      "cues": [],
+      "lines": 273
+    },
+    {
+      "id": "WM-X0055",
+      "repo": "YerayL/Science-Research-Writing-Skills",
+      "path": "Science-Research-Writing-Skills/SKILL.md",
+      "blob_sha": "7c89cd8f6454e098cd4ed62c8b0efc02ebebe8ca",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "Science-Research-Writing-Skills",
+      "description": "Active writing assistant for STEMM research papers, dissertations, and journal manuscripts. Based on Glasman-Deal's \\\"Science Research Writing\\\" (2nd Ed., Imperial College Press). Use this skill whenever the user mentions writing, drafting, revising, polishing, or reviewing any section of an academic paper (Abstract, Introduction, Methods, Results, Discussion, Conclusion, Title), talks about journal submission, needs help with academic English or science writing, wants to improve manuscript flow or argument structure, or asks about verb tense, certainty language, or narrative scaffold in research writing. Also triggers for reverse-engineering published articles to build writing models.",
+      "headings": [
+        {
+          "line": 33,
+          "text": "### Mode 1: Revise & Polish"
+        },
+        {
+          "line": 57,
+          "text": "### Mode 2: Draft from Notes"
+        },
+        {
+          "line": 78,
+          "text": "### Mode 3: Diagnostic Review"
+        },
+        {
+          "line": 152,
+          "text": "### Step 1: [Component 1 name]"
+        },
+        {
+          "line": 157,
+          "text": "### Step 2: [Component 2 name]"
+        },
+        {
+          "line": 162,
+          "text": "### Complete Draft"
+        },
+        {
+          "line": 217,
+          "text": "### Methods (6 components)"
+        },
+        {
+          "line": 336,
+          "text": "## Important: Before You Output"
+        }
+      ],
+      "steps": [
+        {
+          "line": 20,
+          "text": "1. **Takes your input** — draft text, raw notes, results data, bullet points, or just a section name"
+        },
+        {
+          "line": 21,
+          "text": "2. **Diagnoses what you need** — revision, drafting, review, or guidance"
+        },
+        {
+          "line": 22,
+          "text": "3. **Applies the book's frameworks** — generic models, certainty continuum, verb tense strategy, narrative wrap, sentence linking"
+        },
+        {
+          "line": 23,
+          "text": "4. **Produces concrete output** — improved text, a structured draft, a diagnostic report with fixes, or a step-by-step writing plan"
+        },
+        {
+          "line": 37,
+          "text": "1. Identify the section type (Introduction, Methods, Results, Discussion, Conclusion, Abstract)"
+        },
+        {
+          "line": 38,
+          "text": "2. Read the relevant reference file(s) for detailed guidance"
+        },
+        {
+          "line": 39,
+          "text": "3. Apply the section's generic model — check if all functional components are present"
+        },
+        {
+          "line": 40,
+          "text": "4. Fix verb tenses per the verb tense strategy"
+        },
+        {
+          "line": 41,
+          "text": "5. Calibrate certainty language to match evidence strength"
+        },
+        {
+          "line": 42,
+          "text": "6. Add evaluative comments to naked data/claims"
+        },
+        {
+          "line": 43,
+          "text": "7. Strengthen sentence linking (this/these + noun, repetition linkage, signal words)"
+        },
+        {
+          "line": 44,
+          "text": "8. Check achievement/contribution language (Discussion/Conclusion)"
+        },
+        {
+          "line": 45,
+          "text": "9. Add missing \"happy words\" at key positions"
+        },
+        {
+          "line": 46,
+          "text": "10. **Output**: The revised text, followed by a brief \"What I Changed\" summary"
+        },
+        {
+          "line": 61,
+          "text": "1. Identify which section(s) the user needs"
+        },
+        {
+          "line": 62,
+          "text": "2. Read the relevant reference file(s)"
+        },
+        {
+          "line": 63,
+          "text": "3. Map the user's raw material onto the appropriate generic model components"
+        },
+        {
+          "line": 64,
+          "text": "4. Draft complete prose following the model's structure"
+        },
+        {
+          "line": 65,
+          "text": "5. Use appropriate verb tenses, linking strategies, and vocabulary from the book"
+        },
+        {
+          "line": 66,
+          "text": "6. Flag any missing information the user needs to supply (with specific questions)"
+        },
+        {
+          "line": 67,
+          "text": "7. **Output**: The draft, with [bracketed placeholders] for missing information, followed by questions for the user"
+        },
+        {
+          "line": 82,
+          "text": "1. Identify the section type"
+        }
+      ],
+      "cues": [
+        {
+          "line": 20,
+          "text": "1. **Takes your input** — draft text, raw notes, results data, bullet points, or just a section name"
+        },
+        {
+          "line": 23,
+          "text": "4. **Produces concrete output** — improved text, a structured draft, a diagnostic report with fixes, or a step-by-step writing plan"
+        },
+        {
+          "line": 25,
+          "text": "The book's concepts are the engine, not the product. You'll see them applied in the output, with brief annotations explaining key changes."
+        },
+        {
+          "line": 46,
+          "text": "10. **Output**: The revised text, followed by a brief \"What I Changed\" summary"
+        },
+        {
+          "line": 67,
+          "text": "7. **Output**: The draft, with [bracketed placeholders] for missing information, followed by questions for the user"
+        },
+        {
+          "line": 90,
+          "text": "9. **Output**: A structured diagnostic report with severity ratings and specific fixes"
+        },
+        {
+          "line": 115,
+          "text": "6. **Output**: A reusable writing model derived from the target article, with vocabulary bank"
+        },
+        {
+          "line": 140,
+          "text": "5. After all components are collected, output the complete draft"
+        },
+        {
+          "line": 163,
+          "text": "[After all components collected, output the full section draft here]"
+        },
+        {
+          "line": 336,
+          "text": "## Important: Before You Output"
+        },
+        {
+          "line": 339,
+          "text": "1. **Am I outputting improved text, or just describing concepts?** → If the latter, switch modes. The primary output should always be the user's writing, improved."
+        },
+        {
+          "line": 342,
+          "text": "4. **Did I flag what's missing?** → If the user's input lacks a component from the generic model, don't silently skip it. Flag it and ask."
+        }
+      ],
+      "lines": 343
+    },
+    {
+      "id": "WM-X0056",
+      "repo": "YuanZHAO321/Academic-Writing",
+      "path": "SKILL.md",
+      "blob_sha": "c87b7135dcd12f45cbf2052338f52fe12bb25b34",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "academic-writing",
+      "description": "Academic and scientific writing coach — covers structuring papers (title, abstract,   introduction, literature synthesis, methods, results, discussion,   conclusions), paragraph/sentence/word-level editing, figures and tables,   citations, revision and submission checklists, responding to peer review,   writing referee reports, authorship and ethics, ESL guidance, and scientific   presentations (slides, talks, posters, Q&A). Use this skill whenever the   user is writing, revising, translating, or polishing a journal manuscript,   thesis, dissertation, conference abstract, extended abstract, response to   reviewers, referee report, cover letter, or academic talk/poster — or asks   to \"improve/edit/tighten my paper\", \"make this more academic\", \"写论文\",   \"修改论文\", \"润色\", \"投稿\", \"审稿意见\", \"回复审稿人\", or \"学术报告/海报\" —   even if they don't say \"academic writing\" explicitly.",
+      "headings": [],
+      "steps": [
+        {
+          "line": 27,
+          "text": "1. Identify the task type, then read the matching reference file(s) before"
+        },
+        {
+          "line": 40,
+          "text": "2. When *editing* someone's text, work top-down through the"
+        },
+        {
+          "line": 45,
+          "text": "3. When *reviewing or critiquing*, use the feedback sandwich (positives →"
+        },
+        {
+          "line": 55,
+          "text": "1. **Organization** — sections, order of argument, one purpose per document"
+        },
+        {
+          "line": 56,
+          "text": "2. **Paragraphs** — one theme each, topic sentence, coherence between them"
+        },
+        {
+          "line": 57,
+          "text": "3. **Sentences** — concision, precision, active verbs, parallel structure"
+        },
+        {
+          "line": 58,
+          "text": "4. **Words** — exact word, no redundancy; spelling, punctuation"
+        },
+        {
+          "line": 65,
+          "text": "1. **Readers are nonlinear.** Most read only title → abstract → figures →"
+        },
+        {
+          "line": 68,
+          "text": "2. **Introduction = context → problem (the hook: a conflict, gap, paradox) →"
+        },
+        {
+          "line": 71,
+          "text": "3. **Logical order of argument:** data → results → interpretation →"
+        },
+        {
+          "line": 74,
+          "text": "4. **One paragraph, one theme.** Coherence via repetition of key words,"
+        },
+        {
+          "line": 80,
+          "text": "5. **Prefer active voice and action verbs**; passive is fine when the agent"
+        },
+        {
+          "line": 84,
+          "text": "6. **Concision is interpreted as intelligence.** Delete words that add no"
+        },
+        {
+          "line": 87,
+          "text": "7. **Precision over vagueness.** Replace weak nouns (factor, role, nature,"
+        },
+        {
+          "line": 92,
+          "text": "8. **Honesty builds credibility.** State assumptions, limitations, and"
+        },
+        {
+          "line": 97,
+          "text": "9. **Figures earn their place.** \"The fool collects facts; the wise man"
+        },
+        {
+          "line": 101,
+          "text": "10. **Revision is the job.** Good authors make dozens of passes. Read aloud;"
+        }
+      ],
+      "cues": [
+        {
+          "line": 20,
+          "text": "Core creed: **We write for our audience, not for ourselves.** Every rule below"
+        }
+      ],
+      "lines": 120
+    },
+    {
+      "id": "WM-X0057",
+      "repo": "addyosmani/agent-skills",
+      "path": "skills/code-review-and-quality/SKILL.md",
+      "blob_sha": "08209ff2208d2883d48d945f7754c428b77f8d87",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "code-review-and-quality",
+      "description": "Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use when you need to assess code quality across multiple dimensions before it enters the main branch. Use when asked to review a diff or a pull request, even when the diff is pasted inline.",
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Code Review and Quality"
+        },
+        {
+          "line": 22,
+          "text": "## The Five-Axis Review"
+        },
+        {
+          "line": 140,
+          "text": "## Review Process"
+        },
+        {
+          "line": 142,
+          "text": "### Step 1: Understand the Context"
+        },
+        {
+          "line": 152,
+          "text": "### Step 2: Review the Tests First"
+        },
+        {
+          "line": 166,
+          "text": "### Step 3: Review the Implementation"
+        },
+        {
+          "line": 179,
+          "text": "### Step 4: Categorize Findings"
+        },
+        {
+          "line": 195,
+          "text": "### Step 5: Verify the Verification"
+        },
+        {
+          "line": 207,
+          "text": "## Multi-Model Review Pattern"
+        },
+        {
+          "line": 251,
+          "text": "## Review Speed"
+        },
+        {
+          "line": 271,
+          "text": "## Honesty in Review"
+        },
+        {
+          "line": 304,
+          "text": "## The Review Checklist"
+        },
+        {
+          "line": 307,
+          "text": "## Review: [PR/Change title]"
+        },
+        {
+          "line": 342,
+          "text": "### Verification"
+        },
+        {
+          "line": 387,
+          "text": "## Verification"
+        }
+      ],
+      "steps": [
+        {
+          "line": 44,
+          "text": "- **Could this be done in fewer lines?** (1000 lines where 100 suffice is a failure)"
+        },
+        {
+          "line": 45,
+          "text": "- **Are abstractions earning their complexity?** (Don't generalize until the third use case)"
+        },
+        {
+          "line": 48,
+          "text": "- **Is a new conditional bolted onto an unrelated flow?** That's a design smell, not a nit — push the logic into its own helper, state, or policy instead of tangling an existing path."
+        },
+        {
+          "line": 49,
+          "text": "- **Do repeated conditionals on the same shape appear?** They signal a missing model or dispatcher. A \"temporary\" branch is usually permanent debt."
+        },
+        {
+          "line": 60,
+          "text": "- **Does this refactor reduce complexity or just relocate it?** Count the concepts a reader must hold to follow the change. If a \"cleaner\" version leaves that count unchanged, it isn't cleaner — prefer the rest"
+        },
+        {
+          "line": 61,
+          "text": "- **Is feature-specific logic leaking into a shared or general-purpose module?** Keep logic in its owning layer, reuse the existing canonical helper instead of a near-duplicate, and don't normalize architectura"
+        },
+        {
+          "line": 62,
+          "text": "- **Are type boundaries explicit?** Question gratuitous `any`/`unknown`/optional/casts and silent fallbacks that paper over an unclear invariant — making the boundary explicit often makes the surrounding contro"
+        },
+        {
+          "line": 92,
+          "text": "- **Replace a chain of conditionals** with a typed model or an explicit dispatcher."
+        },
+        {
+          "line": 93,
+          "text": "- **Collapse duplicate branches** into a single clearer flow."
+        },
+        {
+          "line": 94,
+          "text": "- **Separate orchestration from business logic** so each reads on its own."
+        },
+        {
+          "line": 95,
+          "text": "- **Move feature-specific logic** out of a shared module into the package that owns the concept."
+        },
+        {
+          "line": 96,
+          "text": "- **Reuse the canonical helper** instead of a bespoke near-duplicate."
+        },
+        {
+          "line": 97,
+          "text": "- **Make a type boundary explicit** so downstream branching disappears."
+        },
+        {
+          "line": 98,
+          "text": "- **Delete a pass-through wrapper** that adds indirection without clarifying the API."
+        },
+        {
+          "line": 99,
+          "text": "- **Extract a helper, or split a large file** into focused modules."
+        },
+        {
+          "line": 172,
+          "text": "1. Correctness: Does this code do what the test says it should?"
+        },
+        {
+          "line": 173,
+          "text": "2. Readability: Can I understand this without help?"
+        },
+        {
+          "line": 174,
+          "text": "3. Architecture: Does this fit the system?"
+        },
+        {
+          "line": 175,
+          "text": "4. Security: Any vulnerabilities?"
+        },
+        {
+          "line": 176,
+          "text": "5. Performance: Any bottlenecks?"
+        },
+        {
+          "line": 237,
+          "text": "1. Identify code that is now unreachable or unused"
+        },
+        {
+          "line": 238,
+          "text": "2. List it explicitly"
+        }
+      ],
+      "cues": [
+        {
+          "line": 12,
+          "text": "**The approval standard:** Approve a change when it definitely improves overall code health, even if it isn't perfect. Perfect code doesn't exist — the goal is continuous improvement. Don't block a change becau"
+        },
+        {
+          "line": 68,
+          "text": "- Is user input validated and sanitized?"
+        },
+        {
+          "line": 72,
+          "text": "- Are outputs encoded to prevent XSS?"
+        },
+        {
+          "line": 257,
+          "text": "- **Prioritize fast individual responses** over quick final approval. Quick feedback reduces frustration even if multiple rounds are needed"
+        },
+        {
+          "line": 281,
+          "text": "## Dependency Discipline"
+        },
+        {
+          "line": 283,
+          "text": "Part of code review is dependency review:"
+        },
+        {
+          "line": 285,
+          "text": "**Before adding any dependency:**"
+        },
+        {
+          "line": 287,
+          "text": "2. How large is the dependency? (Check bundle impact.)"
+        },
+        {
+          "line": 292,
+          "text": "**Rule:** Prefer standard library and existing utilities over new dependencies. Every dependency is a liability."
+        },
+        {
+          "line": 294,
+          "text": "**Upgrading an existing dependency** is a code change like any other, and the riskiest upgrades are the ones merged in bulk with a message like \"bump deps.\" Review them with the same discipline:"
+        },
+        {
+          "line": 297,
+          "text": "2. **One dependency per change.** Upgrade and merge them individually (or in small related groups). When a bulk bump breaks the build, you've lost which package did it; a single-package change makes the cause o"
+        },
+        {
+          "line": 298,
+          "text": "3. **Let the tests decide.** The upgrade is verified by a green suite before *and* after, not by \"it installed.\" If coverage around the dependency's behavior is thin, that gap is the real finding — add a test f"
+        },
+        {
+          "line": 332,
+          "text": "- [ ] Input validated at boundaries"
+        },
+        {
+          "line": 368,
+          "text": "| \"I'll upgrade everything in one PR to save time\" | A bulk bump that breaks the build hides which package did it. One dependency per change keeps the cause and the revert clean. |"
+        },
+        {
+          "line": 396,
+          "text": "- [ ] Dependency upgrades were reviewed against their changelog, isolated per package, and verified by a green suite with the lockfile diff reviewed"
+        }
+      ],
+      "lines": 399
+    }
+  ]
+}
