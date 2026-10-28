@@ -1,0 +1,462 @@
+{
+  "idx": 16,
+  "records": [
+    {
+      "id": "WM-X0351",
+      "repo": "social-media-skills/skills",
+      "path": "skills/data-and-original-research/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/data-and-original-research/SKILL.md",
+      "sha": "a82bd0a390731ebe1f0d473f1de4fde25285b10c",
+      "status": "OK",
+      "description": "The original-research / data-study content type — turn proprietary data, a survey, a public-dataset analysis, or an experiment into the most linkable and AI-citable asset you can publish. Use when someone wants to build authority with original data, run a \"state of X\" survey or industry study, turn proprietary/customer data into a publishable stat, or get cited by journalists and AI search (GEO). Uses the PROVE framework. Reads brand-profile + audience-research first. The agent designs the study (question, method, analysis plan) and frames the findings (headline stat, report, social cuts); the human/tool gathers the real data; WoopSocial publishes the finished cuts. Feeds ai-search-optimization + social-seo, the format writers, and infographic-and-data-viz. NEVER fabricates data, stats, or methodology; discloses method + limits. Distinct from educational-content-and-how-to (existing knowledge), analytics-and-reporting (internal performance), competitor-analysis, and trend-jacking.",
+      "intro": "The **original-data content type** — find a question inside a data void, run a sound method, analyse it honestly, voice the one finding that travels, and engineer it for citation. A study people *have to cite*; the **format writers** turn it into cuts, **WoopSocial publishes**, and recurring studies map into the **content-calendar.** ## The POV: own a number and the internet has to come to you",
+      "headings": [
+        {
+          "line": 62,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 98
+    },
+    {
+      "id": "WM-X0352",
+      "repo": "social-media-skills/skills",
+      "path": "skills/educational-content-and-how-to/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/educational-content-and-how-to/SKILL.md",
+      "sha": "898ee21fb34cb0fb13c31dd6ceff0347cc4f8fb2",
+      "status": "OK",
+      "description": "The teach-to-grow content type -- pick a genuinely useful topic, teach ONE thing completely, structure it as a clear lesson, keep it accurate, and route it to the right format. Use when someone wants to teach their audience, make a how-to / tutorial / step-by-step / explainer / myth-buster, build authority content, or earn saves. Uses the TEACH framework. Reads brand-profile + audience-research + content-pillars first. Feeds the format writers (carousel-writer, reels-script, tiktok-script, thread-writer, caption-writer), hook-writer, the design/image tools, and lead-magnets/social-selling-and-dm; WoopSocial publishes + schedules the series. Accuracy is non-negotiable: cite sources, stay within real expertise, YMYL care, never fabricate steps or stats; measure saves/sends, not likes. Distinct from carousel-writer (the format it pairs with), reels-script/tiktok-script/thread-writer (other formats), storytelling-and-narrative (narrative vs didactic), and content-pillars (which topics).",
+      "intro": "# educational-content-and-how-to The **teach-to-grow content type** — pick a useful topic, teach **one thing completely + accurately**, structure it, and route it to the right format. The agent **teaches**; the **format writers build it**; **WoopSocial publishes + serializes.**",
+      "headings": [
+        {
+          "line": 66,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 104
+    },
+    {
+      "id": "WM-X0353",
+      "repo": "social-media-skills/skills",
+      "path": "skills/email-and-newsletter/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/email-and-newsletter/SKILL.md",
+      "sha": "037248a0ed1b0d9117cf4b5d771ed4065a03ecdf",
+      "status": "OK",
+      "description": "Email and newsletter strategy for creators and brands — the owned-audience layer that social feeds. Use when someone wants to \"start/grow a newsletter,\" \"build an email list,\" \"turn followers into subscribers,\" \"should I use Substack/beehiiv/LinkedIn,\" \"repurpose my newsletter into social (or vice versa),\" or build the audience layer social can't take away. Runs email (habit) + a web archive (discovery) off the same work and loops content social<->email. Uses the INBOX framework. Reads brand-profile + voice-builder + content-pillars first. WoopSocial does NOT send email — the agent strategizes and drafts, the ESP is external and human-run, WoopSocial publishes only the social side; metrics come from the ESP + GA4, never fabricated; consent + unsubscribe required. Distinct from link-in-bio-and-traffic (capture), cross-platform-repurposing (same-moment), and lead-magnets-and-funnels (the magnet).",
+      "intro": "The **owned channel** — the newsletter is the audience layer social can't take away, plus the email↔social loop. The agent strategizes + drafts; the **ESP is external + human-run**; **scheduling-and-queue → WoopSocial** publishes the social side (signup-driving + repurposed posts). ## The POV: own the audience, run two surfaces",
+      "headings": [
+        {
+          "line": 56,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 87
+    },
+    {
+      "id": "WM-X0354",
+      "repo": "social-media-skills/skills",
+      "path": "skills/hook-writer/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/hook-writer/SKILL.md",
+      "sha": "f16cbfaa07d2faff82feb7b0d981f8369abe6572",
+      "status": "OK",
+      "description": "Use to write the hook — the opening that earns attention — for any social content: a caption's first line, a video's first three seconds, a carousel cover slide, a thread opener, a YouTube title, or an email subject. Run when the user says \"write a hook,\" \"hook for this,\" \"opening line,\" \"first three seconds,\" \"cover slide,\" \"make this scroll-stopping,\" or when good content keeps getting ignored. Reads brand-profile and voice first so hooks sound like the brand, not viral-bait templates. Hooks must be TRUE to the content that follows — this skill extracts the hook from the post's strongest element and never overpromises. For full captions use caption-writer; for full video scripts use the video skills. This writes the opening itself.",
+      "intro": "The hook is the highest-leverage line in any piece of content. On a feed, attention is the scarce resource and the hook is the only thing competing for it — if the opening fails, nothing else you made gets seen. A great hook can carry mediocre content; a weak hook buries Two ideas run through everything here:",
+      "headings": [
+        {
+          "line": 35,
+          "text": "## Step 0 — Read the foundation first",
+          "depth": 2
+        },
+        {
+          "line": 41,
+          "text": "## Step 1 — Pin the format and its cutoff",
+          "depth": 2
+        },
+        {
+          "line": 54,
+          "text": "## Step 2 — Find the hook *in the content*",
+          "depth": 2
+        },
+        {
+          "line": 68,
+          "text": "## Step 3 — Generate many, across different mechanisms",
+          "depth": 2
+        },
+        {
+          "line": 75,
+          "text": "## Step 4 — Score and select",
+          "depth": 2
+        },
+        {
+          "line": 82,
+          "text": "## Step 5 — Tune to format and voice; confirm the payoff",
+          "depth": 2
+        },
+        {
+          "line": 89,
+          "text": "## Deliver options, recommend one",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 135
+    },
+    {
+      "id": "WM-X0355",
+      "repo": "social-media-skills/skills",
+      "path": "skills/idea-generation-and-ideation/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/idea-generation-and-ideation/SKILL.md",
+      "sha": "f1969c3da33bb288ab2929bd7ea636875d898744",
+      "status": "OK",
+      "description": "The idea-system craft — never run out of content ideas by running a system instead of waiting for inspiration. Use when someone is out of ideas, stares at a blank calendar, asks where good ideas come from, wants an idea bank/backlog, feels their AI-generated ideas sound like everyone else's, or thinks their niche is \"boring.\" Uses the SPARK framework. Reads brand-profile + social-strategy + content-pillars + audience-research first. The audience is the idea engine (comments/DMs/FAQs clustered into themes); AI expands real signals, it doesn't discover them; systems beat muses; trends are a timing filter, not a source. The agent clusters/expands/scores; the HUMAN supplies proprietary signals and decides; WoopSocial publishes the content, not ideas. Never rewords competitor posts, invents audience questions, or fabricates probe results. Distinct from social-strategy/content-pillars, audience-research, cross-platform-repurposing/ content-recycling, and the format skills.",
+      "intro": "The **idea system** — stock the inputs, produce in volume, angle it to the brand, rank + bank, kick-test before production. The agent clusters, expands, and scores; the **human supplies the proprietary signals and decides what gets made**; the executed content publishes via **WoopSocial**. (Craft skill — no tool file.) ## The POV: run a system, not a muse — and feed it what only you have",
+      "headings": [
+        {
+          "line": 69,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 106
+    },
+    {
+      "id": "WM-X0356",
+      "repo": "social-media-skills/skills",
+      "path": "skills/interactive-content/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/interactive-content/SKILL.md",
+      "sha": "912d7861a1c922b2445b5397e74b07949e43b719",
+      "status": "OK",
+      "description": "The participation content format — polls, quizzes, Q&A / scoped AMAs, this-or-that, emoji sliders, question boxes, caption-this, Add-Yours, and challenges. Use when someone wants interactive posts, Story stickers, a poll/quiz/AMA, a challenge or contest, or to turn passive scrollers into participants. Low-friction taps are high-value algorithmic signals, and every interaction doubles as audience research. Uses the REACT framework. Reads brand-profile + audience-research + voice-builder first. The agent designs the mechanic, questions, copy, and the close-the-loop plan; the HUMAN adds native interactive elements in-app — stickers and live AMAs are NATIVE-ONLY (WoopSocial cannot attach stickers or read results); WoopSocial publishes the feed-post versions. NEVER fabricates or rigs results or fakes participation; consent before sharing anyone's answer. Distinct from community-management, reply-and-comment-writer, livestream-and-realtime, and ugc-and-influencer.",
+      "intro": "The **participation format** — give a reason to participate, make the first tap effortless, ask something specific, close the loop, and turn responses into content + insight. The agent designs the mechanic; the **human adds native stickers in-app**; **WoopSocial publishes** the feed-post versions. (Every interaction doubles as ## The POV: participation beats consumption — but only if the ask does a job",
+      "headings": [
+        {
+          "line": 63,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 103
+    },
+    {
+      "id": "WM-X0357",
+      "repo": "social-media-skills/skills",
+      "path": "skills/linkedin-post-writer/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/linkedin-post-writer/SKILL.md",
+      "sha": "73a9fd7a2057d3fbb0b482d371051d0357aa9d7e",
+      "status": "OK",
+      "description": "Use to write a LinkedIn post — professional, thought-leadership, or founder/personal-brand content optimized for LinkedIn's specific mechanics (dwell time, early comments, the \"see more\" hook). Run when the user says \"write a LinkedIn post,\" \"LinkedIn,\" \"post this on LinkedIn,\" \"thought leadership post,\" \"founder post,\" or wants professional/B2B social content. Reads brand-profile and voice first, uses hook-writer for the opening line that must win the \"see more\" expand, formats for dwell, drives genuine comments, and routes links to the first comment to protect reach. Avoids LinkedIn cringe (broetry, engagement bait). This is the single-post craft: to \"grow on LinkedIn\" or set the account strategy use linkedin-growth; for company-page strategy use linkedin-company-pages; for general captions use caption-writer; for X threads use thread-writer; for the carousel slides use carousel-writer.",
+      "intro": "LinkedIn is its own game, and posts written like generic social captions underperform on it. The algorithm rewards two things above all — **dwell time** (how long people actually spend on the post) and **early, meaningful comments** — and the format has its own rules: the \"…see more\" hook, whitespace that makes long posts readable, links that suppress reach, and personal voices that",
+      "headings": [
+        {
+          "line": 36,
+          "text": "## Step 0 — Read the foundation first",
+          "depth": 2
+        },
+        {
+          "line": 42,
+          "text": "## Step 1 — Lock the idea, goal, and who's posting",
+          "depth": 2
+        },
+        {
+          "line": 51,
+          "text": "## Step 2 — Write the \"see more\" hook",
+          "depth": 2
+        },
+        {
+          "line": 57,
+          "text": "## Step 3 — Structure for dwell",
+          "depth": 2
+        },
+        {
+          "line": 64,
+          "text": "## Step 4 — Write the body",
+          "depth": 2
+        },
+        {
+          "line": 70,
+          "text": "## Step 5 — Close for comments + one soft CTA",
+          "depth": 2
+        },
+        {
+          "line": 77,
+          "text": "## Step 6 — Mechanics",
+          "depth": 2
+        },
+        {
+          "line": 87,
+          "text": "## Deliver options, recommend one",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 133
+    },
+    {
+      "id": "WM-X0358",
+      "repo": "social-media-skills/skills",
+      "path": "skills/platform-specs-and-validation/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/platform-specs-and-validation/SKILL.md",
+      "sha": "d85950540fdfb494ca71932ccd9e9106e4ef5f37",
+      "status": "OK",
+      "description": "Platform specs and publish validation — per-platform requirements and the validate-before-publish step for multi-platform fan-out. Use when fanning a post out to multiple platforms, when a post is getting rejected, when mapping per-platform postType/required fields, or to run the validate-before-publish step. Encodes the per-platform postType enums, required-field matrices, and media rules from the OpenAPI spec, and runs POST /posts/validate so a post lands correctly on every target. Uses the CHECK framework. The keystone the per-platform format skills point to. WoopSocial validates + publishes atomically and has no update endpoint; the agent maps fields and fixes spec violations, but human-judgment calls (disclosure truthfulness, privacy intent) stay with the person; metrics never fabricated. Distinct from the per-platform format skills (one platform's content) and scheduling-and-queue (timing).",
+      "intro": "# platform-specs-and-validation The **cross-cutting publish-readiness skill** — make a post correct on **every** target (required fields, media rules, limits) and run the **validate-before-publish** loop. It's the **keystone the format skills point to.** The agent **maps fields + fixes spec violations + validates**; **WoopSocial validates and",
+      "headings": [
+        {
+          "line": 55,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 88
+    },
+    {
+      "id": "WM-X0359",
+      "repo": "social-media-skills/skills",
+      "path": "skills/reels-script/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/reels-script/SKILL.md",
+      "sha": "96ed6cab8d8bee48fc53b54b0d22b8a04d4b9185",
+      "status": "OK",
+      "description": "Use to write an Instagram Reels script — a native, sound-off-first short-video script optimized for Instagram's discovery engine, built around a 3-second hook, watch-through, and sends (DM shares). Run when the user says \"Reels script,\" \"Instagram Reel,\" \"make a Reel,\" \"Reel hook,\" \"trial reel,\" or wants short-form video for Instagram specifically. Reads brand-profile and voice first; writes the muted version first; structures for watch-through + sends; places IG-search keywords; picks original vs trending audio (trending audio is added natively in-app — not via WoopSocial); briefs the cover frame; outputs a production doc (shot - on-screen text - spoken - audio - timing) plus a Veo prompt pack for faceless/b-roll shots. The generic scripting craft lives in short-form-video-script; for TikTok use tiktok-script; for Shorts use youtube-shorts; hands the caption to caption-writer, publishing to instagram-reels-publishing, and scheduling to scheduling-and-queue.",
+      "intro": "Reels are Instagram's **discovery engine**: most Reel reach comes from **non-followers**, decided by how viewers respond — not by follower count. But Reels are not TikToks with a different logo: 1. **The hook window is ~3 seconds** — they decide whether a Reel is pushed wider or throttled.    Layer it: verbal + on-screen text + visual.",
+      "headings": [
+        {
+          "line": 37,
+          "text": "## Step 0 — Read the foundation first",
+          "depth": 2
+        },
+        {
+          "line": 42,
+          "text": "## Step 1 — Lock the concept, goal, and length tier",
+          "depth": 2
+        },
+        {
+          "line": 50,
+          "text": "## Step 2 — Decide the audio (and write sound-off anyway)",
+          "depth": 2
+        },
+        {
+          "line": 57,
+          "text": "## Step 3 — Write the 3-second hook",
+          "depth": 2
+        },
+        {
+          "line": 64,
+          "text": "## Step 4 — Structure for watch-through and sends",
+          "depth": 2
+        },
+        {
+          "line": 71,
+          "text": "## Step 5 — Write the production doc + cover brief",
+          "depth": 2
+        },
+        {
+          "line": 78,
+          "text": "## Step 6 — Instagram SEO + caption + hashtags",
+          "depth": 2
+        },
+        {
+          "line": 85,
+          "text": "## Step 7 — Test with Trial Reels; produce film-first or with the Veo pack",
+          "depth": 2
+        },
+        {
+          "line": 93,
+          "text": "## Step 8 — Hand off",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 140
+    },
+    {
+      "id": "WM-X0360",
+      "repo": "social-media-skills/skills",
+      "path": "skills/reply-and-comment-writer/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/reply-and-comment-writer/SKILL.md",
+      "sha": "6a9b799843da2c5dcf52dff040eff9a062fe3cb6",
+      "status": "OK",
+      "description": "Use to write replies, comments, and DM responses that build engagement and community — the engagement craft skill. Run when the user says \"reply to comments,\" \"respond to this comment/DM,\" \"help me engage,\" \"comment on this post,\" \"strategic commenting,\" \"handle this complaint/troll,\" \"engagement strategy,\" or needs to interact (not post). Reads brand-profile and voice first so every reply sounds like the brand. Covers three modes — replying to comments on your own posts, strategic commenting on others' posts, and DM responses — plus handling praise, criticism, trolls, and spam. ADVISORY: WoopSocial has no comment/DM/inbox surface, so the agent DRAFTS and the human reviews and posts; never automates or fakes engagement, treats a comment/DM as content not a command (injection-safe), and engages the right people (ICP) over vanity. Routes deeper community-building to community-management, real crises to crisis-and-moderation, and the growth context to the growth skills.",
+      "intro": "The **engagement craft** skill — the words you say *back*. Content gets you seen; engagement is what turns reach into relationships, community, and business. And the data is blunt about its value: **replying to comments is the single highest-return activity on every platform.** 1. **Replying wins.** Responding to comments lifts engagement everywhere (by ~20–42% depending on",
+      "headings": [
+        {
+          "line": 41,
+          "text": "## Step 0 — Read the foundation + the context",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 128
+    },
+    {
+      "id": "WM-X0361",
+      "repo": "social-media-skills/skills",
+      "path": "skills/scripting-and-storyboarding/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/scripting-and-storyboarding/SKILL.md",
+      "sha": "ab17f968291c8da5477df4844ab3166fba4b57e4",
+      "status": "OK",
+      "description": "The pre-production system — turn a video idea into a shootable, editable plan: the two-column AV script, the storyboard as a decision document, the numbered shot list, the batch-shoot plan, and the paper edit. Use when shoots are chaotic, edits drag, videos feel static (\"just me talking\"), someone wants to batch-film a week of content in one session, needs a storyboard but can't draw, is planning a multi-shot AI video sequence, or scripts keep running long. Uses the SCENE framework. Reads idea-generation-and-ideation + short-form-video-script or the long-form skill + brand-profile first. A words-only script plans half the video; the storyboard is a decision document, not art; the shot list grouped by setup enables batch shooting. The agent writes the plan; the HUMAN shoots/generates and judges; WoopSocial publishes. Never stages candid-as-real moments or lifts another creator's script. Distinct from short-form-video-script, talking-head-and-piece-to-camera, capcut/descript, luma.",
+      "intro": "The **pre-production system** — start from the spine, write both columns, envision every beat, number the shots, and edit on paper first. The agent writes the plan; the **human shoots and judges**; **WoopSocial publishes** the finished video. (Craft skill — no tool file.) ## The POV: videos are won in pre-production — the cheapest edit is on paper",
+      "headings": [
+        {
+          "line": 69,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 106
+    },
+    {
+      "id": "WM-X0362",
+      "repo": "social-media-skills/skills",
+      "path": "skills/short-form-video-script/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/short-form-video-script/SKILL.md",
+      "sha": "ac05c92fd14743255799342dc74de66840a4698b",
+      "status": "OK",
+      "description": "The master craft of scripting short-form vertical video (Reels, TikTok, Shorts) for watch-through. Use when someone wants a short-form video script, a Reel/TikTok/Short script, help with hooks, retention, pacing, the ending/loop, sound-off captions, or fixing early drop-off. Watch-through, not likes, rules short-form; the script's only job is to be un-skippable. Uses the WATCH framework. Reads brand-profile + voice-builder first; pulls the 'what' from the content-angle skills and the hook from hook-writer. The agent writes the script (spoken lines + on-screen text + beat/shot direction + hook variants + CTA); the human shoots/performs/edits; WoopSocial publishes the finished file. Routes platform specifics to reels-script / tiktok-script / youtube-shorts; pairs with talking-head-and-piece-to-camera. NEVER bait-and-switches the hook or fabricates a stat. Distinct from hook-writer, captions-and-clipping, and ai-video/veo-3/heygen (which generate the video this scripts).",
+      "intro": "The **master scripting craft** for short-form vertical video — win the first 3 seconds, arc with open loops, write for sound-off *and* sound-on, cash the hook's promise, and hold the loop. The **platform skills** specialize it, the **human** shoots it, **WoopSocial publishes** the finished file. ## The POV: the script's only job is to be un-skippable",
+      "headings": [
+        {
+          "line": 60,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 98
+    },
+    {
+      "id": "WM-X0363",
+      "repo": "social-media-skills/skills",
+      "path": "skills/social-proof-and-testimonials/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/social-proof-and-testimonials/SKILL.md",
+      "sha": "b960dbfd944bb489698e60c9e8bc41dd0ad970f0",
+      "status": "OK",
+      "description": "The proof content type — turn real customer reviews, testimonials, UGC, case studies, and results into believable, objection-matched social content that converts. Use when someone wants to share testimonials, post reviews, turn happy customers or a case study into content, reshare UGC, build social proof, or add proof at a decision point. Uses the VOUCH framework. Reads brand-profile + audience-research first. The agent curates + frames REAL proof, matched to the buyer objection; the human sources the proof and secures consent/rights; WoopSocial publishes. Feeds the format writers, design-and-templates, and the placement skills. NEVER fabricate, AI-generate, inflate, or deceptively suppress reviews/testimonials; disclose paid/gifted/insider connections (FTC); get consent + likeness rights; never guarantee conversions. Distinct from ugc-and-influencer (sources/manages creators), storytelling-and-narrative (the narrative craft), and data-and-original-research (originates stats).",
+      "intro": "# social-proof-and-testimonials The **proof content type** — vet real proof, match it to the objection, unearth the specifics, cast the customer as the hero, and hand it across formats + placements. The **format writers** turn it into cuts, **WoopSocial publishes**, and proof gets placed where doubt is highest.",
+      "headings": [
+        {
+          "line": 63,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 98
+    },
+    {
+      "id": "WM-X0364",
+      "repo": "social-media-skills/skills",
+      "path": "skills/story-writer/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/story-writer/SKILL.md",
+      "sha": "d673633ecb7a12746f1053d85d1ef3cc0ae471b2",
+      "status": "OK",
+      "description": "Writes Instagram/Facebook Stories as a content type. Use when someone wants \"a Story\" / \"Stories,\" \"an IG/FB Story sequence,\" \"Story ideas,\" interactive sticker content (polls, quizzes, question boxes, countdowns, link stickers), a Close Friends drop, a behind-the-scenes or daily-update sequence, or to turn a post into Stories. Stories are the relationship-deepening surface (not reach) — optimise for completion + interaction. Uses the FRAME framework. Reads brand-profile + voice-builder first. The agent drafts frames + sticker copy; WoopSocial schedules/publishes base frames (IG+FB); interactive stickers and DM replies are handled natively in-app by a human; metrics come from native Insights; nothing is fabricated. Distinct from reels-script (reach video) and carousel-writer (Feed swipe).",
+      "intro": "The **ephemeral Stories** content type — interactive frame sequences for Instagram/Facebook's relationship surface. The agent drafts the frames + sticker copy; a human adds native interactive elements and replies in DMs; **scheduling-and-queue → WoopSocial** publishes the base frames. ## The POV: relationship engine, not reach",
+      "headings": [
+        {
+          "line": 50,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 79
+    },
+    {
+      "id": "WM-X0365",
+      "repo": "social-media-skills/skills",
+      "path": "skills/storytelling-and-narrative/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/storytelling-and-narrative/SKILL.md",
+      "sha": "77e5e514dc48420bcc75ae8d50da9fd34fdd3330",
+      "status": "OK",
+      "description": "The narrative-craft layer -- apply story structure (tension, transformation, resolution) to make any social content stick and travel. Use when someone wants to tell their brand/founder/customer story, make a flat post land, build an emotional or narrative-driven piece, or structure a story across formats. Uses the BEATS framework. Reads brand-profile + voice-builder first. The agent finds the real story, structures the arc (setup -> turning point -> payoff; audience = hero, brand = guide), anchors concrete specifics, and shapes it to the format. Feeds the format writers (reels-script, carousel-writer, linkedin-post-writer, thread-writer, caption-writer) and hook-writer; serialized arcs map into content-calendar; WoopSocial publishes. NOT the IG/FB Stories format (that's story-writer). Never fabricates a customer story or testimonial; never guarantees virality. Distinct from story-writer, hook-writer (the opening it pairs with), the format writers, and campaign-and-launch-planning.",
+      "intro": "The **narrative-craft layer** — find the real story, structure the arc, anchor it in specifics, land the meaning, shape it to the format. A craft layer that **feeds the format writers**; **WoopSocial publishes**; serialized arcs map into the **content-calendar.** ## The POV: people share feeling + meaning, not information",
+      "headings": [
+        {
+          "line": 62,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 98
+    },
+    {
+      "id": "WM-X0366",
+      "repo": "social-media-skills/skills",
+      "path": "skills/text-post-and-microblog/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/text-post-and-microblog/SKILL.md",
+      "sha": "89d20abda0eda2b560db983a3fcc2db1c7d66318",
+      "status": "OK",
+      "description": "The master craft of the standalone text post / microblog (LinkedIn, X/Twitter, Threads, Bluesky, Facebook text posts). Use when someone wants to write a text post, a LinkedIn post, a short written update, a microblog, or fix a post that flopped / reads as a wall of text / has a weak opening line. A text post has nowhere to hide -- the words are everything, and the first ~140-210 characters (the 'see more' fold) are most of the job. Uses the LINES framework. Reads brand-profile + voice-builder + hook-writer first; pulls the 'what' from the content-angle skills. The agent writes the post; the human approves; WoopSocial publishes to supported platforms, routing specifics to linkedin-post-writer / threads-post / thread-writer. NEVER fabricates a stat/story/metric or uses engagement-bait; avoids AI-slop over-formatting. No native multi-post threads; Reddit/Mastodon are advisory-only. Distinct from caption-writer, thread-writer, and the content-angle skills (WHAT vs this HOW).",
+      "intro": "The **master craft of the written post** — lead with the line that earns the tap, isolate one idea, use negative space, earn the read, and spark a reply. The **platform skills** specialize it, the **human** approves, and **WoopSocial publishes** to supported text platforms. (The text peer of `short-form-video-script`.) ## The POV: a text post has nowhere to hide",
+      "headings": [
+        {
+          "line": 63,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 101
+    }
+  ]
+}
