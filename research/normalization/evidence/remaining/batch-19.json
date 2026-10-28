@@ -1,0 +1,46 @@
+{
+  "idx": 19,
+  "records": [
+    {
+      "id": "WM-X0405",
+      "repo": "wshobson/agents",
+      "path": "plugins/plugin-eval/skills/evaluation-methodology/SKILL.md",
+      "url": "https://github.com/wshobson/agents/blob/main/plugins/plugin-eval/skills/evaluation-methodology/SKILL.md",
+      "sha": "a7678a1b6f990aeba3dfd0aa697949e6bb92591d",
+      "status": "OK",
+      "description": "PluginEval quality methodology, covering dimensions, rubrics, and scoring formulas. Use this skill when understanding how plugin quality is measured, when interpreting a low score on a specific dimension, when deciding how to improve a skill's triggering accuracy or orchestration fitness, when setting score thresholds for your marketplace, or when explaining quality badges to external partners like Neon.\" ",
+      "intro": "PluginEval scores a skill or a plugin from 0 to 100 by combining up to three layers. The static layer is a lint. It's fast and deterministic, and it's useful for checking structure. The LLM judge and Monte Carlo layers are experimental, not validated against human labels, so treat their numbers as rough signals. For the trace-based eval program, see `evals/README.md` at the",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 18,
+          "text": "## Evaluation depths"
+        },
+        {
+          "line": 30,
+          "text": "## Static layer (lint)"
+        },
+        {
+          "line": 35,
+          "text": "- `frontmatter_quality` (feeds `triggering_accuracy`)"
+        },
+        {
+          "line": 36,
+          "text": "- `orchestration_wiring` (feeds `orchestration_fitness`)"
+        },
+        {
+          "line": 37,
+          "text": "- `progressive_disclosure`, `structural_completeness`, `token_efficiency`, `ecosystem_coherence`"
+        },
+        {
+          "line": 38,
+          "text": "- `harness_portability`"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 163
+    }
+  ]
+}
