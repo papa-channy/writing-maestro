@@ -1,0 +1,608 @@
+{
+  "as_of": "2026-10-28",
+  "selection": "all prior body reads and pair comparison members first, then repository-round-robin sampling of remaining skill names. Sampling is not clustering.",
+  "first_pass_count": 74,
+  "additional_count": 26,
+  "queue": [
+    {
+      "rank": 1,
+      "id": "WM-X0003",
+      "path": "skills/citation-management/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 2,
+      "id": "WM-X0008",
+      "path": "skills/literature-review/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 3,
+      "id": "WM-X0015",
+      "path": "skills/peer-review/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 4,
+      "id": "WM-X0022",
+      "path": "skills/scientific-writing/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 5,
+      "id": "WM-X0030",
+      "path": "skills/citation-verification/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 6,
+      "id": "WM-X0033",
+      "path": "skills/creative-thinking-for-research/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 7,
+      "id": "WM-X0036",
+      "path": "skills/literature-review/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 8,
+      "id": "WM-X0043",
+      "path": "skills/peer-review/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 9,
+      "id": "WM-X0051",
+      "path": "skills/scientific-writing/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 10,
+      "id": "WM-X0052",
+      "path": "skills/systematic-review-prisma/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 11,
+      "id": "WM-X0054",
+      "path": "skills/unslop-academic-writing/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 12,
+      "id": "WM-X0059",
+      "path": "skills/context-engineering/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 13,
+      "id": "WM-X0060",
+      "path": "skills/documentation-and-adrs/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 14,
+      "id": "WM-X0061",
+      "path": "skills/doubt-driven-development/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 15,
+      "id": "WM-X0062",
+      "path": "skills/idea-refine/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 16,
+      "id": "WM-X0063",
+      "path": "skills/interview-me/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 17,
+      "id": "WM-X0065",
+      "path": "skills/source-driven-development/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 18,
+      "id": "WM-X0070",
+      "path": "plugins/core-skills/skills/process-business-writing/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 19,
+      "id": "WM-X0101",
+      "path": "skills/evidence-synthesis/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 20,
+      "id": "WM-X0105",
+      "path": "skills/prose-naturalizer/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 21,
+      "id": "WM-X0108",
+      "path": "plugins/claude-md-management/skills/claude-md-improver/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 22,
+      "id": "WM-X0111",
+      "path": "skills/doc-coauthoring/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 23,
+      "id": "WM-X0131",
+      "path": "skills/copywriting/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 24,
+      "id": "WM-X0151",
+      "path": "skills/chapter-writing/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 25,
+      "id": "WM-X0158",
+      "path": "skills/line-editing/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 26,
+      "id": "WM-X0160",
+      "path": "skills/premise-workshop/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 27,
+      "id": "WM-X0162",
+      "path": "skills/reader-panel/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 28,
+      "id": "WM-X0165",
+      "path": "skills/scene-craft/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 29,
+      "id": "WM-X0170",
+      "path": "skills/theme-craft/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 30,
+      "id": "WM-X0172",
+      "path": "skills/voice-style/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 31,
+      "id": "WM-X0174",
+      "path": "skills/blog-writing-guide/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 32,
+      "id": "WM-X0177",
+      "path": "skills/doc-coauthoring/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 33,
+      "id": "WM-X0181",
+      "path": "skills/prompt-optimizer/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 34,
+      "id": "WM-X0191",
+      "path": "skills/boost-prompt/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 35,
+      "id": "WM-X0196",
+      "path": "skills/build-evidence-map/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 36,
+      "id": "WM-X0205",
+      "path": "skills/create-specification/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 37,
+      "id": "WM-X0207",
+      "path": "skills/docs-sync-audit/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 38,
+      "id": "WM-X0216",
+      "path": "skills/prompt-optimizer/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 39,
+      "id": "WM-X0227",
+      "path": "skills/write-agent-prompts/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 40,
+      "id": "WM-X0233",
+      "path": "skills/awesome-claims-audit/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 41,
+      "id": "WM-X0243",
+      "path": "skills/awesome-content-voice/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 42,
+      "id": "WM-X0244",
+      "path": "skills/awesome-copywriting/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 43,
+      "id": "WM-X0246",
+      "path": "skills/awesome-document-style/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 44,
+      "id": "WM-X0247",
+      "path": "skills/awesome-grammar-check/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 45,
+      "id": "WM-X0252",
+      "path": "skills/awesome-style-mimic/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 46,
+      "id": "WM-X0255",
+      "path": "skills/writing-and-editing/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 47,
+      "id": "WM-X0260",
+      "path": "skills/engineering/to-spec/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 48,
+      "id": "WM-X0272",
+      "path": "skills/productivity/writing-for-agents/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 49,
+      "id": "WM-X0274",
+      "path": "skills/writing-feature-spec/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 50,
+      "id": "WM-X0277",
+      "path": "skills/writing-project-constitution/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 51,
+      "id": "WM-X0278",
+      "path": "skills/writing-technical-design/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 52,
+      "id": "WM-X0282",
+      "path": "for-agents/general-writing/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 53,
+      "id": "WM-X0284",
+      "path": "for-agents/grant-writing/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 54,
+      "id": "WM-X0287",
+      "path": "for-agents/literature-review/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 55,
+      "id": "WM-X0288",
+      "path": "for-agents/non-autoregressive-writing-pass/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 56,
+      "id": "WM-X0289",
+      "path": "for-agents/paper-writing/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 57,
+      "id": "WM-X0291",
+      "path": "for-agents/prompt-improving/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 58,
+      "id": "WM-X0292",
+      "path": "for-agents/rebuttal-writing/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 59,
+      "id": "WM-X0293",
+      "path": "for-agents/writing-cadence/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 60,
+      "id": "WM-X0294",
+      "path": "for-agents/writing/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 61,
+      "id": "WM-X0295",
+      "path": "SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 62,
+      "id": "WM-X0296",
+      "path": "skills/brainstorming/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 63,
+      "id": "WM-X0298",
+      "path": "skills/requesting-code-review/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 64,
+      "id": "WM-X0301",
+      "path": "skills/writing-plans/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 65,
+      "id": "WM-X0306",
+      "path": "plugins/technical-writer/skills/recording-decisions/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 66,
+      "id": "WM-X0307",
+      "path": "plugins/technical-writer/skills/reviewing-technical-prose/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 67,
+      "id": "WM-X0310",
+      "path": "plugins/technical-writer/skills/writing-design-docs/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 68,
+      "id": "WM-X0313",
+      "path": "plugins/technical-writer/skills/writing-runbooks/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 69,
+      "id": "WM-X0371",
+      "path": "skills/agent-md-refactor/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 70,
+      "id": "WM-X0384",
+      "path": "skills/requirements-clarity/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 71,
+      "id": "WM-X0388",
+      "path": "skills/writing-clearly-and-concisely/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 72,
+      "id": "WM-X0389",
+      "path": "SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 73,
+      "id": "WM-X0396",
+      "path": "plugins/documentation-generation/skills/architecture-decision-records/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 74,
+      "id": "WM-X0401",
+      "path": "plugins/incident-response/skills/incident-runbook-templates/SKILL.md",
+      "reason": "prior_primary_body_or_pair"
+    },
+    {
+      "rank": 75,
+      "id": "WM-X0001",
+      "path": "SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 76,
+      "id": "WM-X0009",
+      "path": "skills/markdown-mermaid-writing/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 77,
+      "id": "WM-X0010",
+      "path": "skills/market-research-reports/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 78,
+      "id": "WM-X0017",
+      "path": "skills/research-grants/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 79,
+      "id": "WM-X0018",
+      "path": "skills/research-lookup/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 80,
+      "id": "WM-X0021",
+      "path": "skills/scientific-critical-thinking/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 81,
+      "id": "WM-X0024",
+      "path": "skills/ara-research-manager/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 82,
+      "id": "WM-X0025",
+      "path": "skills/ara-rigor-reviewer/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 83,
+      "id": "WM-X0026",
+      "path": "skills/autoresearch/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 84,
+      "id": "WM-X0028",
+      "path": "skills/brainstorming-research-ideas/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 85,
+      "id": "WM-X0029",
+      "path": "skills/citation-management/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 86,
+      "id": "WM-X0032",
+      "path": "skills/cover-letter-to-editor/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 87,
+      "id": "WM-X0034",
+      "path": "skills/firecrawl-research-index/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 88,
+      "id": "WM-X0037",
+      "path": "skills/markdown-mermaid-writing/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 89,
+      "id": "WM-X0038",
+      "path": "skills/market-research-reports/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 90,
+      "id": "WM-X0039",
+      "path": "skills/ml-paper-writing/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 91,
+      "id": "WM-X0044",
+      "path": "skills/rebuttal-and-response-to-reviewers/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 92,
+      "id": "WM-X0045",
+      "path": "skills/research-agent-skills/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 93,
+      "id": "WM-X0046",
+      "path": "skills/research-grants/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 94,
+      "id": "WM-X0047",
+      "path": "skills/research-knowledge-graph/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 95,
+      "id": "WM-X0048",
+      "path": "skills/research-lookup/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 96,
+      "id": "WM-X0050",
+      "path": "skills/scientific-critical-thinking/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 97,
+      "id": "WM-X0053",
+      "path": "skills/systems-paper-writing/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 98,
+      "id": "WM-X0055",
+      "path": "Science-Research-Writing-Skills/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 99,
+      "id": "WM-X0056",
+      "path": "SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    },
+    {
+      "rank": 100,
+      "id": "WM-X0057",
+      "path": "skills/code-review-and-quality/SKILL.md",
+      "reason": "repository_round_robin_diversity"
+    }
+  ]
+}
