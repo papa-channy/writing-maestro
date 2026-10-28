@@ -1,0 +1,1078 @@
+{
+  "idx": 8,
+  "records": [
+    {
+      "id": "WM-X0188",
+      "repo": "github/awesome-copilot",
+      "path": "skills/architecture-blueprint-generator/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/architecture-blueprint-generator/SKILL.md",
+      "sha": "a9a24b0e85fbd1d2e39851cc12ec266f3a55794d",
+      "status": "OK",
+      "description": "Comprehensive project architecture blueprint generator that analyzes codebases to create detailed architectural documentation. Automatically detects technology stacks and architectural patterns, generates visual diagrams, documents implementation patterns, and provides extensible blueprints for maintaining architectural consistency and guiding new development.' ",
+      "intro": "# Comprehensive Project Architecture Blueprint Generator ${PROJECT_TYPE=\"Auto-detect|.NET|Java|React|Angular|Python|Node.js|Flutter|Other\"} <!-- Primary technology --> ${ARCHITECTURE_PATTERN=\"Auto-detect|Clean Architecture|Microservices|Layered|MVVM|MVC|Hexagonal|Event-Driven|Serverless|Monolithic|Other\"} <!-- Primary architectural pattern --> ${DIAGRAM_TYPE=\"C4|UML|Flow|Component|None\"} <!-- Architecture diagram type -->",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 323
+    },
+    {
+      "id": "WM-X0189",
+      "repo": "github/awesome-copilot",
+      "path": "skills/audit-integrity/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/audit-integrity/SKILL.md",
+      "status": "FAILED",
+      "error": "TypeError: Cannot read properties of undefined (reading 'trim')"
+    },
+    {
+      "id": "WM-X0190",
+      "repo": "github/awesome-copilot",
+      "path": "skills/autoresearch/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/autoresearch/SKILL.md",
+      "sha": "ad54af302bb47c0c3ac7848271d610bf268c9661",
+      "status": "OK",
+      "description": "Autonomous iterative experimentation loop for any programming task. Guides the user through defining goals, measurable metrics, and scope constraints, then runs an autonomous loop of code changes, testing, measuring, and keeping/discarding results. Inspired by Karpathy''s autoresearch. USE FOR: autonomous improvement, iterative optimization, experiment loop, auto research, performance tuning, automated experimentation, hill climbing, try things automatically, optimize code, run experiments, autonomous coding loop. DO NOT USE FOR: one-shot tasks, simple bug fixes, code review, or tasks without a measurable metric.' ",
+      "intro": "# Autoresearch: Autonomous Iterative Experimentation An autonomous experimentation loop for any programming task. You define the goal and how to measure it; the agent iterates autonomously -- modifying code, running experiments, measuring results, and keeping or discarding changes -- until interrupted. This skill is inspired by [Karpathy's autoresearch](https://github.com/karpathy/autoresearch), generalized from ML training to **any programming task with a measurable outcome**. 1. **DO** guide the user through the Setup phase interactively before starting the loop.",
+      "headings": [
+        {
+          "line": 34,
+          "text": "## Phase 1: Setup (Interactive)",
+          "depth": 2
+        },
+        {
+          "line": 70,
+          "text": "### 1.3 Define the Scope",
+          "depth": 3
+        },
+        {
+          "line": 140,
+          "text": "## Phase 2: Branch & Baseline",
+          "depth": 2
+        },
+        {
+          "line": 164,
+          "text": "## Phase 3: Experiment Loop",
+          "depth": 2
+        },
+        {
+          "line": 230,
+          "text": "## Phase 4: Reporting",
+          "depth": 2
+        },
+        {
+          "line": 261,
+          "text": "### Git Workflow",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 39,
+          "text": "### 1.1 Define the Goal"
+        },
+        {
+          "line": 51,
+          "text": "### 1.2 Define the Metric"
+        },
+        {
+          "line": 66,
+          "text": "- `METRIC_COMMAND`: the command to run"
+        },
+        {
+          "line": 67,
+          "text": "- `METRIC_EXTRACTION`: how to extract the numeric metric from output"
+        },
+        {
+          "line": 68,
+          "text": "- `METRIC_DIRECTION`: `lower_is_better` or `higher_is_better`"
+        },
+        {
+          "line": 70,
+          "text": "### 1.3 Define the Scope"
+        },
+        {
+          "line": 79,
+          "text": "- `IN_SCOPE_FILES`: files/dirs the agent may edit"
+        },
+        {
+          "line": 80,
+          "text": "- `OUT_OF_SCOPE_FILES`: files/dirs that must not be modified"
+        },
+        {
+          "line": 82,
+          "text": "### 1.4 Define Constraints"
+        },
+        {
+          "line": 144,
+          "text": "1. **Create a branch**: Propose a tag based on today's date (e.g., `autoresearch/mar17`)."
+        },
+        {
+          "line": 147,
+          "text": "2. **Read in-scope files**: Read all files that are in scope to build full context of the current state."
+        },
+        {
+          "line": 149,
+          "text": "3. **Initialize results.tsv**: Create `results.tsv` in the repo root with the header row:"
+        },
+        {
+          "line": 155,
+          "text": "4. **Run the baseline**: Execute the metric command on the current unmodified code."
+        },
+        {
+          "line": 158,
+          "text": "5. **Report baseline** to the user:"
+        },
+        {
+          "line": 164,
+          "text": "## Phase 3: Experiment Loop"
+        },
+        {
+          "line": 167,
+          "text": "- `MAX_EXPERIMENTS` is reached, OR"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 80,
+          "text": "- `OUT_OF_SCOPE_FILES`: files/dirs that must not be modified"
+        }
+      ],
+      "source_lines": 276
+    },
+    {
+      "id": "WM-X0192",
+      "repo": "github/awesome-copilot",
+      "path": "skills/breakdown-epic-pm/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/breakdown-epic-pm/SKILL.md",
+      "sha": "91e5f2fb2a78f7c60e1209f0f989618631afa34d",
+      "status": "OK",
+      "description": "Prompt for creating an Epic Product Requirements Document (PRD) for a new epic. This PRD will be used as input for generating a technical architecture specification.' ",
+      "intro": "# Epic Product Requirements Document (PRD) Prompt Act as an expert Product Manager for a large-scale SaaS platform. Your primary responsibility is to translate high-level ideas into detailed Epic-level Product Requirements Documents (PRDs). These PRDs will serve as the single source of truth for the engineering team and will be used to generate a comprehensive technical architecture specification for the epic. Review the user's request for a new epic and generate a thorough PRD. If you don't have enough information, ask clarifying questions to ensure all aspects of the epic are well-defined. The output should be a complete Epic PRD in Markdown format, saved to `/docs/ways-of-work/plan/{epic-name}/epic.md`.",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Output Format",
+          "depth": 2
+        },
+        {
+          "line": 47,
+          "text": "#### 7. Out of Scope",
+          "depth": 4
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 14,
+          "text": "## Output Format"
+        },
+        {
+          "line": 18,
+          "text": "### PRD Structure"
+        },
+        {
+          "line": 20,
+          "text": "#### 1. Epic Name"
+        },
+        {
+          "line": 22,
+          "text": "- A clear, concise, and descriptive name for the epic."
+        },
+        {
+          "line": 26,
+          "text": "- **Problem:** Describe the user problem or business need this epic addresses (3-5 sentences)."
+        },
+        {
+          "line": 27,
+          "text": "- **Solution:** Explain how this epic solves the problem at a high level."
+        },
+        {
+          "line": 28,
+          "text": "- **Impact:** What are the expected outcomes or metrics to be improved (e.g., user engagement, conversion rate, revenue)?"
+        },
+        {
+          "line": 30,
+          "text": "#### 3. User Personas"
+        },
+        {
+          "line": 32,
+          "text": "- Describe the target user(s) for this epic."
+        }
+      ],
+      "process_evidence": [],
+      "output_evidence": [
+        {
+          "line": 18,
+          "text": "### PRD Structure"
+        },
+        {
+          "line": 20,
+          "text": "#### 1. Epic Name"
+        },
+        {
+          "line": 22,
+          "text": "- A clear, concise, and descriptive name for the epic."
+        },
+        {
+          "line": 26,
+          "text": "- **Problem:** Describe the user problem or business need this epic addresses (3-5 sentences)."
+        },
+        {
+          "line": 27,
+          "text": "- **Solution:** Explain how this epic solves the problem at a high level."
+        },
+        {
+          "line": 28,
+          "text": "- **Impact:** What are the expected outcomes or metrics to be improved (e.g., user engagement, conversion rate, revenue)?"
+        },
+        {
+          "line": 30,
+          "text": "#### 3. User Personas"
+        },
+        {
+          "line": 32,
+          "text": "- Describe the target user(s) for this epic."
+        },
+        {
+          "line": 34,
+          "text": "#### 4. High-Level User Journeys"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 59
+    },
+    {
+      "id": "WM-X0193",
+      "repo": "github/awesome-copilot",
+      "path": "skills/breakdown-feature-prd/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/breakdown-feature-prd/SKILL.md",
+      "sha": "f758cc4388bb4df4020a3c0222baae5f000f3578",
+      "status": "OK",
+      "description": "Prompt for creating Product Requirements Documents (PRDs) for new features, based on an Epic.' ",
+      "intro": "Act as an expert Product Manager for a large-scale SaaS platform. Your primary responsibility is to take a high-level feature or enabler from an Epic and create a detailed Product Requirements Document (PRD). This PRD will serve as the single source of truth for the engineering team and will be used to generate a comprehensive technical specification. Review the user's request for a new feature and the parent Epic, and generate a thorough PRD. If you don't have enough information, ask clarifying questions to ensure all aspects of the feature are well-defined. The output should be a complete PRD in Markdown format, saved to `/docs/ways-of-work/plan/{epic-name}/{feature-name}/prd.md`. - A clear, concise, and descriptive name for the feature.",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Output Format",
+          "depth": 2
+        },
+        {
+          "line": 53,
+          "text": "#### 8. Out of Scope",
+          "depth": 4
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 45,
+          "text": "- **Functional Requirements:** A detailed, bulleted list of what the system must do. Be specific and unambiguous."
+        },
+        {
+          "line": 46,
+          "text": "- **Non-Functional Requirements:** A bulleted list of constraints and quality attributes (e.g., performance, security, accessibility, data privacy)."
+        },
+        {
+          "line": 48,
+          "text": "#### 7. Acceptance Criteria"
+        }
+      ],
+      "process_evidence": [],
+      "output_evidence": [
+        {
+          "line": 18,
+          "text": "### PRD Structure"
+        },
+        {
+          "line": 20,
+          "text": "#### 1. Feature Name"
+        },
+        {
+          "line": 22,
+          "text": "- A clear, concise, and descriptive name for the feature."
+        },
+        {
+          "line": 26,
+          "text": "- Link to the parent Epic PRD and Architecture documents."
+        },
+        {
+          "line": 30,
+          "text": "- **Problem:** Describe the user problem or business need this feature addresses (3-5 sentences)."
+        },
+        {
+          "line": 31,
+          "text": "- **Solution:** Explain how this feature solves the problem."
+        },
+        {
+          "line": 32,
+          "text": "- **Impact:** What are the expected outcomes or metrics to be improved (e.g., user engagement, conversion rate, etc.)?"
+        },
+        {
+          "line": 34,
+          "text": "#### 4. User Personas"
+        },
+        {
+          "line": 36,
+          "text": "- Describe the target user(s) for this feature."
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 62
+    },
+    {
+      "id": "WM-X0194",
+      "repo": "github/awesome-copilot",
+      "path": "skills/breakdown-plan/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/breakdown-plan/SKILL.md",
+      "sha": "9200260a4a433347c7083684f5fcdcd2492c5b62",
+      "status": "OK",
+      "description": "Issue Planning and Automation prompt that generates comprehensive project plans with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking.' ",
+      "intro": "# GitHub Issue Planning & Project Automation Prompt Act as a senior Project Manager and DevOps specialist with expertise in Agile methodology and GitHub project management. Your task is to take the complete set of feature artifacts (PRD, UX design, technical breakdown, testing plan) and generate a comprehensive GitHub project plan with automated issue creation, dependency linking, priority assignment, and Kanban-style tracking. ## GitHub Project Management Best Practices - **Epic**: Large business capability spanning multiple features (milestone level)",
+      "headings": [
+        {
+          "line": 31,
+          "text": "## Input Requirements",
+          "depth": 2
+        },
+        {
+          "line": 47,
+          "text": "## Output Format",
+          "depth": 2
+        },
+        {
+          "line": 493,
+          "text": "### Process Efficiency Metrics",
+          "depth": 3
+        },
+        {
+          "line": 501,
+          "text": "### Project Delivery Metrics",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 35,
+          "text": "### Core Feature Documents"
+        },
+        {
+          "line": 37,
+          "text": "1. **Feature PRD**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}.md`"
+        },
+        {
+          "line": 38,
+          "text": "2. **Technical Breakdown**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/technical-breakdown.md`"
+        },
+        {
+          "line": 39,
+          "text": "3. **Implementation Plan**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/implementation-plan.md`"
+        },
+        {
+          "line": 41,
+          "text": "### Related Planning Prompts"
+        },
+        {
+          "line": 43,
+          "text": "- **Test Planning**: Use `plan-test` prompt for comprehensive test strategy, quality assurance planning, and test issue creation"
+        },
+        {
+          "line": 44,
+          "text": "- **Architecture Planning**: Use `plan-epic-arch` prompt for system architecture and technical design"
+        },
+        {
+          "line": 45,
+          "text": "- **Feature Planning**: Use `plan-feature-prd` prompt for detailed feature requirements and specifications"
+        },
+        {
+          "line": 47,
+          "text": "## Output Format"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 495,
+          "text": "- **Issue Creation Time**: <1 hour to create full feature breakdown"
+        },
+        {
+          "line": 496,
+          "text": "- **Dependency Resolution**: <24 hours to resolve blocking dependencies"
+        },
+        {
+          "line": 497,
+          "text": "- **Status Update Accuracy**: >95% automated status transitions working correctly"
+        },
+        {
+          "line": 498,
+          "text": "- **Documentation Completeness**: 100% of issues have required template fields"
+        },
+        {
+          "line": 499,
+          "text": "- **Cross-Team Collaboration**: <2 business days for external dependency resolution"
+        },
+        {
+          "line": 501,
+          "text": "### Project Delivery Metrics"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 51,
+          "text": "1. **Project Plan**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/project-plan.md`"
+        },
+        {
+          "line": 52,
+          "text": "2. **Issue Creation Checklist**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/issues-checklist.md`"
+        },
+        {
+          "line": 54,
+          "text": "### Project Plan Structure"
+        },
+        {
+          "line": 56,
+          "text": "#### 1. Project Overview"
+        },
+        {
+          "line": 58,
+          "text": "- **Feature Summary**: Brief description and business value"
+        },
+        {
+          "line": 59,
+          "text": "- **Success Criteria**: Measurable outcomes and KPIs"
+        },
+        {
+          "line": 60,
+          "text": "- **Key Milestones**: Breakdown of major deliverables without timelines"
+        },
+        {
+          "line": 61,
+          "text": "- **Risk Assessment**: Potential blockers and mitigation strategies"
+        },
+        {
+          "line": 63,
+          "text": "#### 2. Work Item Hierarchy"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 510
+    },
+    {
+      "id": "WM-X0195",
+      "repo": "github/awesome-copilot",
+      "path": "skills/bug-reproduction-brief/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/bug-reproduction-brief/SKILL.md",
+      "sha": "add9ca292293ef860cb4cab05063b922c49d3c1f",
+      "status": "OK",
+      "description": "Turn a vague, intermittent, or environment-specific bug report into a minimal evidence-backed reproduction before proposing a fix.' ",
+      "intro": "Use this skill when a bug report is incomplete, intermittent, environment-specific, or mixed with an assumed cause. The goal is to prove the smallest observable failure before diagnosis or repair begins. ## 1. Record the observed failure Capture the exact error, incorrect output, timestamp, affected route or command, and the smallest known input. Preserve relevant logs without secrets or personal data. Label second-hand descriptions as unverified. Record only facts you can inspect:",
+      "headings": [
+        {
+          "line": 52,
+          "text": "## Output",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 86
+    },
+    {
+      "id": "WM-X0197",
+      "repo": "github/awesome-copilot",
+      "path": "skills/code-review/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/code-review/SKILL.md",
+      "status": "FAILED",
+      "error": "NOT_FOUND: Error code: NOT_FOUND; Error: GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-cont"
+    },
+    {
+      "id": "WM-X0198",
+      "repo": "github/awesome-copilot",
+      "path": "skills/copilot-instructions-blueprint-generator/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/copilot-instructions-blueprint-generator/SKILL.md",
+      "status": "FAILED",
+      "error": "TypeError: Cannot read properties of undefined (reading 'trim')"
+    },
+    {
+      "id": "WM-X0199",
+      "repo": "github/awesome-copilot",
+      "path": "skills/create-architectural-decision-record/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/create-architectural-decision-record/SKILL.md",
+      "sha": "be10104faded844c01d0f5b1f82e8c9fca15ba20",
+      "status": "OK",
+      "description": "Create an Architectural Decision Record (ADR) document for AI-optimized decision documentation.' ",
+      "intro": "# Create Architectural Decision Record Create an ADR document for `${input:DecisionTitle}` using structured formatting optimized for AI consumption and human readability. - **Context**: `${input:Context}` - **Decision**: `${input:Decision}`",
+      "headings": [
+        {
+          "line": 10,
+          "text": "## Inputs",
+          "depth": 2
+        },
+        {
+          "line": 17,
+          "text": "## Input Validation",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 12,
+          "text": "- **Context**: `${input:Context}`"
+        },
+        {
+          "line": 13,
+          "text": "- **Decision**: `${input:Decision}`"
+        },
+        {
+          "line": 14,
+          "text": "- **Alternatives**: `${input:Alternatives}`"
+        },
+        {
+          "line": 15,
+          "text": "- **Stakeholders**: `${input:Stakeholders}`"
+        },
+        {
+          "line": 17,
+          "text": "## Input Validation"
+        },
+        {
+          "line": 20,
+          "text": "## Requirements"
+        },
+        {
+          "line": 22,
+          "text": "- Use precise, unambiguous language"
+        },
+        {
+          "line": 23,
+          "text": "- Follow standardized ADR format with front matter"
+        },
+        {
+          "line": 24,
+          "text": "- Include both positive and negative consequences"
+        }
+      ],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 98
+    },
+    {
+      "id": "WM-X0200",
+      "repo": "github/awesome-copilot",
+      "path": "skills/create-github-issue-feature-from-specification/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/create-github-issue-feature-from-specification/SKILL.md",
+      "sha": "0a95a108d2c66e733d92b91547272aa84a04c0f7",
+      "status": "OK",
+      "description": "Create GitHub Issue for feature request from specification file using feature_request.yml template.' ",
+      "intro": "# Create GitHub Issue from Specification Create GitHub Issue for the specification at `${file}`. 1. Analyze specification file to extract requirements 2. Check existing issues using `search_issues`",
+      "headings": [
+        {
+          "line": 10,
+          "text": "## Process",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 19,
+          "text": "- Single issue for the complete specification"
+        },
+        {
+          "line": 20,
+          "text": "- Clear title identifying the specification"
+        },
+        {
+          "line": 21,
+          "text": "- Include only changes required by the specification"
+        },
+        {
+          "line": 22,
+          "text": "- Verify against existing issues before creation"
+        },
+        {
+          "line": 24,
+          "text": "## Issue Content"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 12,
+          "text": "1. Analyze specification file to extract requirements"
+        },
+        {
+          "line": 13,
+          "text": "2. Check existing issues using `search_issues`"
+        },
+        {
+          "line": 14,
+          "text": "3. Create new issue using `create_issue` or update existing with `update_issue`"
+        },
+        {
+          "line": 15,
+          "text": "4. Use `feature_request.yml` template (fallback to default)"
+        },
+        {
+          "line": 17,
+          "text": "## Requirements"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 29
+    },
+    {
+      "id": "WM-X0201",
+      "repo": "github/awesome-copilot",
+      "path": "skills/create-github-issues-feature-from-implementation-plan/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/create-github-issues-feature-from-implementation-plan/SKILL.md",
+      "sha": "e0d8662b1a44bae83df371f11382ff543cfa8b9d",
+      "status": "OK",
+      "description": "Create GitHub Issues from implementation plan phases using feature_request.yml or chore_request.yml templates.' ",
+      "intro": "# Create GitHub Issue from Implementation Plan Create GitHub Issues for the implementation plan at `${file}`. 1. Analyze plan file to identify phases 2. Check existing issues using `search_issues`",
+      "headings": [
+        {
+          "line": 10,
+          "text": "## Process",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 19,
+          "text": "- One issue per implementation phase"
+        },
+        {
+          "line": 20,
+          "text": "- Clear, structured titles and descriptions"
+        },
+        {
+          "line": 21,
+          "text": "- Include only changes required by the plan"
+        },
+        {
+          "line": 22,
+          "text": "- Verify against existing issues before creation"
+        },
+        {
+          "line": 24,
+          "text": "## Issue Content"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 12,
+          "text": "1. Analyze plan file to identify phases"
+        },
+        {
+          "line": 13,
+          "text": "2. Check existing issues using `search_issues`"
+        },
+        {
+          "line": 14,
+          "text": "3. Create new issue per phase using `create_issue` or update existing with `update_issue`"
+        },
+        {
+          "line": 15,
+          "text": "4. Use `feature_request.yml` or `chore_request.yml` templates (fallback to default)"
+        },
+        {
+          "line": 17,
+          "text": "## Requirements"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 29
+    },
+    {
+      "id": "WM-X0202",
+      "repo": "github/awesome-copilot",
+      "path": "skills/create-github-issues-for-unmet-specification-requirements/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/create-github-issues-for-unmet-specification-requirements/SKILL.md",
+      "sha": "54c469f3d571948b2896a61b1ccf532a94b49495",
+      "status": "OK",
+      "description": "Create GitHub Issues for unimplemented requirements from specification files using feature_request.yml template.' ",
+      "intro": "# Create GitHub Issues for Unmet Specification Requirements Create GitHub Issues for unimplemented requirements in the specification at `${file}`. 1. Analyze specification file to extract all requirements 2. Check codebase implementation status for each requirement",
+      "headings": [
+        {
+          "line": 10,
+          "text": "## Process",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 12,
+          "text": "1. Analyze specification file to extract all requirements"
+        },
+        {
+          "line": 13,
+          "text": "2. Check codebase implementation status for each requirement"
+        },
+        {
+          "line": 14,
+          "text": "3. Search existing issues using `search_issues` to avoid duplicates"
+        },
+        {
+          "line": 15,
+          "text": "4. Create new issue per unimplemented requirement using `create_issue`"
+        },
+        {
+          "line": 16,
+          "text": "5. Use `feature_request.yml` template (fallback to default)"
+        },
+        {
+          "line": 18,
+          "text": "## Requirements"
+        },
+        {
+          "line": 20,
+          "text": "- One issue per unimplemented requirement from specification"
+        },
+        {
+          "line": 21,
+          "text": "- Clear requirement ID and description mapping"
+        },
+        {
+          "line": 22,
+          "text": "- Include implementation guidance and acceptance criteria"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 12,
+          "text": "1. Analyze specification file to extract all requirements"
+        },
+        {
+          "line": 13,
+          "text": "2. Check codebase implementation status for each requirement"
+        },
+        {
+          "line": 14,
+          "text": "3. Search existing issues using `search_issues` to avoid duplicates"
+        },
+        {
+          "line": 15,
+          "text": "4. Create new issue per unimplemented requirement using `create_issue`"
+        },
+        {
+          "line": 16,
+          "text": "5. Use `feature_request.yml` template (fallback to default)"
+        },
+        {
+          "line": 18,
+          "text": "## Requirements"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 36
+    },
+    {
+      "id": "WM-X0203",
+      "repo": "github/awesome-copilot",
+      "path": "skills/create-implementation-plan/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/create-implementation-plan/SKILL.md",
+      "sha": "4540a479c34d298d5f7e78f24d0806652411fcf8",
+      "status": "OK",
+      "description": "Create a new implementation plan file for new features, refactoring existing code or upgrading packages, design, architecture or infrastructure.' ",
+      "intro": "Your goal is to create a new implementation plan file for `${input:PlanPurpose}`. Your output must be machine-readable, deterministic, and structured for autonomous execution by other AI systems or humans. This prompt is designed for AI-to-AI communication and automated processing. All instructions must be interpreted literally and executed systematically without human interpretation or clarification. - Generate implementation plans that are fully executable by AI agents or humans - Use deterministic language with zero ambiguity",
+      "headings": [
+        {
+          "line": 27,
+          "text": "## Phase Architecture",
+          "depth": 2
+        },
+        {
+          "line": 44,
+          "text": "## Output File Specifications",
+          "depth": 2
+        },
+        {
+          "line": 124,
+          "text": "## 2. Implementation Steps",
+          "depth": 2
+        },
+        {
+          "line": 126,
+          "text": "### Implementation Phase 1",
+          "depth": 3
+        },
+        {
+          "line": 136,
+          "text": "### Implementation Phase 2",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 18,
+          "text": "- Generate implementation plans that are fully executable by AI agents or humans"
+        },
+        {
+          "line": 19,
+          "text": "- Use deterministic language with zero ambiguity"
+        },
+        {
+          "line": 20,
+          "text": "- Structure all content for automated parsing and execution"
+        },
+        {
+          "line": 21,
+          "text": "- Ensure complete self-containment with no external dependencies for understanding"
+        },
+        {
+          "line": 23,
+          "text": "## Plan Structure Requirements"
+        },
+        {
+          "line": 27,
+          "text": "## Phase Architecture"
+        },
+        {
+          "line": 117,
+          "text": "- **REQ-001**: Requirement 1"
+        },
+        {
+          "line": 118,
+          "text": "- **SEC-001**: Security Requirement 1"
+        },
+        {
+          "line": 119,
+          "text": "- **[3 LETTERS]-001**: Other Requirement 1"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "## Core Requirements"
+        },
+        {
+          "line": 29,
+          "text": "- Each phase must have measurable completion criteria"
+        },
+        {
+          "line": 30,
+          "text": "- Tasks within phases must be executable in parallel unless dependencies are specified"
+        },
+        {
+          "line": 31,
+          "text": "- All task descriptions must include specific file paths, function names, and exact implementation details"
+        },
+        {
+          "line": 32,
+          "text": "- No task should require human interpretation or decision-making"
+        },
+        {
+          "line": 34,
+          "text": "## AI-Optimized Implementation Standards"
+        },
+        {
+          "line": 126,
+          "text": "### Implementation Phase 1"
+        },
+        {
+          "line": 128,
+          "text": "- GOAL-001: [Describe the goal of this phase, e.g., \"Implement feature X\", \"Refactor module Y\", etc.]"
+        },
+        {
+          "line": 136,
+          "text": "### Implementation Phase 2"
+        },
+        {
+          "line": 138,
+          "text": "- GOAL-002: [Describe the goal of this phase, e.g., \"Implement feature X\", \"Refactor module Y\", etc.]"
+        },
+        {
+          "line": 146,
+          "text": "## 3. Alternatives"
+        },
+        {
+          "line": 128,
+          "text": "- GOAL-001: [Describe the goal of this phase, e.g., \"Implement feature X\", \"Refactor module Y\", etc.]"
+        },
+        {
+          "line": 136,
+          "text": "### Implementation Phase 2"
+        },
+        {
+          "line": 138,
+          "text": "- GOAL-002: [Describe the goal of this phase, e.g., \"Implement feature X\", \"Refactor module Y\", etc.]"
+        },
+        {
+          "line": 146,
+          "text": "## 3. Alternatives"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 46,
+          "text": "- Save implementation plan files in `/plan/` directory"
+        },
+        {
+          "line": 47,
+          "text": "- Use naming convention: `[purpose]-[component]-[version].md`"
+        },
+        {
+          "line": 48,
+          "text": "- Purpose prefixes: `upgrade|refactor|feature|data|infrastructure|process|architecture|design`"
+        },
+        {
+          "line": 49,
+          "text": "- Example: `upgrade-system-command-4.md`, `feature-auth-module-1.md`"
+        },
+        {
+          "line": 50,
+          "text": "- File must be valid Markdown with proper front matter structure"
+        },
+        {
+          "line": 52,
+          "text": "## Mandatory Template Structure"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 186
+    },
+    {
+      "id": "WM-X0204",
+      "repo": "github/awesome-copilot",
+      "path": "skills/create-readme/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/create-readme/SKILL.md",
+      "sha": "686e10d517b319520049a485c87cffea23ee6b9f",
+      "status": "OK",
+      "description": "Create a README.md file for the project' ",
+      "intro": "You're a senior expert software engineer with extensive experience in open source projects. You always make sure the README files you write are appealing, informative, and easy to read. 1. Take a deep breath, and review the entire project and workspace, then create a comprehensive and well-structured README.md file for the project. 2. Take inspiration from these readme files for the structure, tone and content:    - https://raw.githubusercontent.com/Azure-Samples/serverless-chat-langchainjs/refs/heads/main/README.md",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 22
+    },
+    {
+      "id": "WM-X0206",
+      "repo": "github/awesome-copilot",
+      "path": "skills/create-technical-spike/SKILL.md",
+      "url": "https://github.com/github/awesome-copilot/blob/main/skills/create-technical-spike/SKILL.md",
+      "sha": "bac8a01d6251010f639fbab6a15038a43afca047",
+      "status": "OK",
+      "description": "Create time-boxed technical spike documents for researching and resolving critical development decisions before implementation.' ",
+      "intro": "# Create Technical Spike Document Create time-boxed technical spike documents for researching critical questions that must be answered before development can proceed. Each spike focuses on a specific technical decision with clear deliverables and timelines. Create individual files in `${input:FolderPath|docs/spikes}` directory. Name each file using the pattern: `[category]-[short-description]-spike.md` (e.g., `api-copilot-integration-spike.md`, `performance-realtime-audio-spike.md`). category: \"${input:Category|Technical}\"",
+      "headings": [
+        {
+          "line": 27,
+          "text": "# ${input:SpikeTitle}",
+          "depth": 1
+        },
+        {
+          "line": 203,
+          "text": "### Phase 1: Information Gathering",
+          "depth": 3
+        },
+        {
+          "line": 209,
+          "text": "### Phase 2: Validation & Testing",
+          "depth": 3
+        },
+        {
+          "line": 215,
+          "text": "### Phase 3: Decision & Documentation",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 39,
+          "text": "## Research Question(s)"
+        },
+        {
+          "line": 45,
+          "text": "- [Related question 1]"
+        },
+        {
+          "line": 46,
+          "text": "- [Related question 2]"
+        },
+        {
+          "line": 47,
+          "text": "- [Related question 3]"
+        },
+        {
+          "line": 49,
+          "text": "## Investigation Plan"
+        },
+        {
+          "line": 51,
+          "text": "### Research Tasks"
+        },
+        {
+          "line": 53,
+          "text": "- [ ] [Specific research task 1]"
+        },
+        {
+          "line": 54,
+          "text": "- [ ] [Specific research task 2]"
+        },
+        {
+          "line": 55,
+          "text": "- [ ] [Specific research task 3]"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 205,
+          "text": "1. **Search existing documentation** using search/fetch tools"
+        },
+        {
+          "line": 206,
+          "text": "2. **Analyze codebase** for existing patterns and constraints"
+        },
+        {
+          "line": 207,
+          "text": "3. **Research external resources** (APIs, libraries, examples)"
+        },
+        {
+          "line": 209,
+          "text": "### Phase 2: Validation & Testing"
+        },
+        {
+          "line": 211,
+          "text": "1. **Create focused prototypes** to test specific hypotheses"
+        },
+        {
+          "line": 212,
+          "text": "2. **Run targeted experiments** to validate assumptions"
+        },
+        {
+          "line": 213,
+          "text": "3. **Document test results** with supporting evidence"
+        },
+        {
+          "line": 215,
+          "text": "### Phase 3: Decision & Documentation"
+        },
+        {
+          "line": 217,
+          "text": "1. **Synthesize findings** into clear recommendations"
+        },
+        {
+          "line": 218,
+          "text": "2. **Document implementation guidance** for development team"
+        },
+        {
+          "line": 219,
+          "text": "3. **Create follow-up tasks** for implementation"
+        },
+        {
+          "line": 221,
+          "text": "## Tools Usage"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 231
+    }
+  ]
+}
