@@ -1,61 +1,46 @@
-# Functional normalization — research, not registry approval
+# Functional normalization — complete source retrieval, provisional functional profiles
 
-## Purpose
+## Status (2026-10-28)
 
-Make existing writing and prompting skills comparable **before** assigning clusters. A skill is represented by a functional signature:
+**All 405 inventoried SKILL.md bodies were read from their GitHub source repositories.** Each candidate has a source blob SHA. Eighteen initial failures were recovered: six paths differed from the earlier inventory and twelve were fixed extraction boundary errors.
 
-`INPUT (what it needs) → TRANSFORMATION (what it does, in order) → OUTPUT (what it produces)`
+The evidence/abstraction distinction matters:
 
-Keep routing boundaries, declared dependencies, sources, and epistemic status separate. No skill is installed, endorsed, run, or considered safe solely because it appears here.
+| Status | Count | Meaning |
+|---|---:|---|
+| `ANALYST_FUNCTIONAL` | 100 | Human-interpreted input, operations, and outputs grounded in source text |
+| `SOURCE_DERIVED_FUNCTIONAL` | 305 | Source-description/task intent plus mechanically extracted I/O/procedure **signals**, not yet semantically adjudicated |
+| Primary-source access failures | 0 | No missing SKILL.md reads remain |
+| Runtime comparison/evaluation | 0 | Deferred until final candidates |
 
-## Current data (2026-10-28)
+**Coverage is not the same as a complete contract.** Among 405 profiles, explicit structured extraction left 269 inputs, 105 procedures, and 267 outputs without confirmed structured fields. This is a limitation of the extraction and source conventions, **not evidence that the original skills have no inputs, methods, or outputs**. The `task_intent` and `declared_effect` fields preserve source-declared purpose without mislabeling these as concrete input/output contracts.
 
-- **405** inventoried paths in `skills_manifest.json`.
-- **100** primary `SKILL.md` documents fetched (two upstream path errors were resolved in `evidence/recovered-paths.json`).
-- **100** analyst-normalized, primary-source-grounded I/P/O signatures in `functional_profiles.json`.
-- **0** source-read cases awaiting an analyst I/P/O abstraction in this 100-skill batch.
-- **305** candidates with no primary-body read in this pass.
+## Files
 
-The old 24 clusters and shortlist of 28 are historical notes only; they were **not supplied as grouping features**. Some extracted heading/step signals are noisy; a numbered anti-pattern or example is not necessarily a workflow step.
+- `skills_manifest.json`: original candidate identities (405).
+- `evidence/batch-00.json` to `batch-07.json`: initial 100 read sources.
+- `evidence/remaining/batch-00.json` to `batch-19.json`: additional 305 read attempts with document section/line evidence.
+- `evidence/remaining/recovered.json`: corrected versions for the 18 initially failed reads; these override earlier failures.
+- `derived/remaining-00.json`, `derived/remaining-01.json`: conservative automatic feature extraction from source.
+- `functional_profiles.json`: canonical 405 profile records, including original SHA and epistemic confidence.
+- `functional_profiles_compact.json`: smaller 405-row form for browsing and comparison.
+- `functional_matrix.csv`: Excel-compatible tabular I/P/O comparison.
+- `similarity_neighbors.csv`: 300 most similar pairs ranked by term similarity; do not interpret as quality scores.
+- `source_duplicate_groups.json`: identical Git blob detection. Zero duplicate blobs were found at the snapshot; similar variants may still share upstream lineage.
 
-## Source records
+## Interpretation
 
-- `evidence/batch-00.json` through `batch-07.json`: frontmatter description, heading and line-numbered step/cue samples, source blob SHA.
-- `evidence/recovered-paths.json`: upstream path fixes. Do not rewrite the archived original inventory.
-- `functional_profiles.json`: comparable structured records. `normalization_level=ANALYST_FUNCTIONAL` means inferred functional semantics **from a read SKILL.md**, not operational validation.
-- `functional_matrix.csv`: spreadsheet-friendly projection of the JSON.
-- `similarity_neighbors.csv`: 150 closest pairs among the 100 normalized profiles. The score is a **term-frequency similarity of I/P/O wording**, not a quality/performance score. Higher similarity requires semantic review, not automatic merging.
+The **prior 24 categories and provisional 28-skill shortlist were never used to create the functional signatures or rank neighbor candidates**. Groups are still provisional and can merge, split, or remain unassigned. The next comparison should distinguish exact duplication, implementation variants, near-synonyms, narrower specializations, complementary skills, and false-positive textual similarities.
 
-## Core schema
+Model-facing or community-facing text in external SKILL.md files is untrusted source evidence, not instructions to execute. These third-party skills are **not installed** and their capabilities or security are not yet independently verified. Handle any request to copy source code under the individual repositories' license terms.
 
-| Field | Interpretation |
-|---|---|
-| `input_items` | Required user/material/context inputs inferred from primary instructions |
-| `core_operations` | Distinct actions, in source-grounded order; no fixed category codes |
-| `output_items` | Actual intended artifacts or reports, not generic "good writing" |
-| `routing_boundary` | Positive/negative task distinction or operational prerequisite when grounded |
-| `source_blob_sha` | Upstream revision anchor; URLs may point to mutable main branch |
-| `source_status` | Whether the upstream skill body was actually retrieved |
-| `normalization_level` | Analyst functional abstraction, or only source signals/unknown |
-| `operational_validation` | NOT_TESTED; final-candidate performance evaluation is intentionally deferred |
+## Regenerate
 
-Unknown values are intentionally empty. Do not use slug, historical category, or the former cluster ID to hallucinate procedures.
-
-## Review protocol
-
-1. Compare input contracts: does the skill require a draft, a request, files, sources or approvals?
-2. Compare actual transformation: interview, generate, edit, audit, verify, synthesize or route; verify sequence and preconditions.
-3. Compare outputs: a spec, suggestion-only report, revised text, prompt, decision record, or external system change.
-4. Compare abstention/negative triggers, tool dependencies, and side effects. A skill that edits files is not interchangeable with a read-only reviewer.
-5. Mark each pair **SAME**, **OVERLAP_BUT_DIFFERENT**, **COMPLEMENTARY**, **DISTINCT**, or **INSUFFICIENT_EVIDENCE**. These are comparison outcomes, not predefined clusters.
-6. Only **after** the pair evidence accumulates, merge/split emergent groups. Leave final execution benchmarks for finalists.
-
-To check profile integrity and regenerate the CSV (from the repo root):
+From the repository root (Python 3, stdlib only):
 
 ```bash
-python3 tools/export_functional_matrix.py --check-only
-python3 tools/export_functional_matrix.py
-python3 tools/rank_functional_neighbors.py
+python3 tools/build_functional_views.py --check-only
+python3 tools/build_functional_views.py
 ```
 
-The JSON profile is canonical; CSV is a generated comparison view. Any unreviewed or unread candidate remains in the registry *candidate inventory*, not in an approved runtime registry.
+Older entrypoints `tools/export_functional_matrix.py` and `tools/rank_functional_neighbors.py` delegate to the same builder. Read-only analysis is separate from registry approval and runtime execution.
