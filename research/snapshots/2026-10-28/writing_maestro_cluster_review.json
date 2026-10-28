@@ -1,0 +1,999 @@
+{
+  "project": "writing-maestro",
+  "snapshot_date": "2026-10-28",
+  "status": "PROVISIONAL_RESEARCH_NOT_INSTALLED",
+  "method": {
+    "stage1": "405 unique (repo,path) skills, title + path + selected observed description Tfidf/SVD/KMeans, 48 raw neighborhoods; original category excluded",
+    "stage2": "post-hoc semantic grouping only for 28 individually inspected anchors; 24 named families, not exhaustive clustering of 405",
+    "data_gaps": [
+      "most 405 SKILL.md bodies unread",
+      "cross-repo identical content hashes not checked",
+      "community discussion not per-skill objective benchmark",
+      "no with/without evaluation or license audit",
+      "skill descriptions can misrepresent capabilities"
+    ]
+  },
+  "total_inventory": 405,
+  "distinct_repos": 31,
+  "raw_neighborhoods": [
+    {
+      "id": "K00",
+      "count": 8,
+      "examples": "open-notebook, rebuttal-and-response-to-reviewers, attribution, revision-continuity, series-continuity, rebuttal-writing, incident-runbook-templates",
+      "reviewed_examples": "rebuttal-writing",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K01",
+      "count": 18,
+      "examples": "what-if-oracle, cs-engineer-grill, cs-quality-regulatory, cs-ux-researcher, okr, persona, product-manager",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K02",
+      "count": 17,
+      "examples": "manuscript-writing, writing-rules, chapter-writing, writing-beats, writing-fragments, writing-shape, writing-implementation-tasks",
+      "reviewed_examples": "grant-writing, non-autoregressive-writing-pass, writing-cadence, writing, writing-plans",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K03",
+      "count": 8,
+      "examples": "peer-review, peer-review, systematic-review-prisma, evidence-synthesis, editorial-review, gh-review-requests, security-review",
+      "reviewed_examples": "peer-review, peer-review, systematic-review-prisma, evidence-synthesis",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K04",
+      "count": 8,
+      "examples": "using-agent-skills, content-strategy, feedback-triage, awesome-humanize-en, awesome-translate-ru-en, using-superpowers, content-strategy",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K05",
+      "count": 10,
+      "examples": "co-marketing, community-marketing, influencer-marketing, marketing-council, marketing-ideas, marketing-loops, marketing-plan",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K06",
+      "count": 9,
+      "examples": "knowledge-distillation, research-knowledge-graph, acquire-codebase-knowledge, knowledge-base-article-writing, deep-research, fact-checking, knowledge-graph-creation",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K07",
+      "count": 10,
+      "examples": "ad-creative, grill-me, grilling, teach, to-questionnaire, wait-what, writing-for-agents",
+      "reviewed_examples": "writing-for-agents",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K08",
+      "count": 12,
+      "examples": "writing-technical-design, diagramming-processes, documenting-contracts, documenting-legacy-codebases, recording-decisions, reviewing-technical-prose, technical-writing",
+      "reviewed_examples": "writing-technical-design, recording-decisions, writing-design-docs, writing-runbooks",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K09",
+      "count": 7,
+      "examples": "hypothesis-generation, to-spec, writing-feature-spec, proposal-generation, idea-generation-and-ideation, changelog-automation, openapi-spec-generation",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K10",
+      "count": 10,
+      "examples": "pr-writer, skill-writer, documentation-writer, caption-writer, carousel-writer, hook-writer, linkedin-post-writer",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K11",
+      "count": 8,
+      "examples": "bgpt-paper-search, paper-lookup, bgpt-paper-search, ml-paper-writing, paper-corpus-rag, paper-lookup, systems-paper-writing",
+      "reviewed_examples": "paper-writing",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K12",
+      "count": 10,
+      "examples": "citation-management, citation-management, context-engineering, claude-md-improver, adaptation, character-management, memory-merger",
+      "reviewed_examples": "context-engineering, claude-md-improver, writing-project-constitution, agent-md-refactor",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K13",
+      "count": 10,
+      "examples": "meeting-minutes, presentation-making, chatbot-conversation-design, email-drafting, meeting-transcription, presentation-creation, report-generation",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K14",
+      "count": 16,
+      "examples": "consciousness-council, experimental-design, paperclip, parallel-web, scholar-evaluation, autoresearch, docx",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K15",
+      "count": 9,
+      "examples": "prompt-optimizer, ai-prompt-engineering-safety-review, boost-prompt, finalize-agent-prompt, prompt-optimizer, tldr-prompt, prompt-improving",
+      "reviewed_examples": "prompt-optimizer, prompt-optimizer, prompt-improving",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K16",
+      "count": 9,
+      "examples": "user-story, copy-editing, line-editing, story-init, story-maintenance, document-api-endpoint, awesome-grammar-check",
+      "reviewed_examples": "line-editing, awesome-grammar-check, writing-and-editing",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K17",
+      "count": 4,
+      "examples": "genre-craft, scene-craft, theme-craft, verse-craft",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K18",
+      "count": 9,
+      "examples": "documentation-and-adrs, docs-sync-audit, awesome-code-docs, awesome-code-explainer, awesome-code-standards, grill-with-docs, code-documentation",
+      "reviewed_examples": "docs-sync-audit",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K19",
+      "count": 10,
+      "examples": "code-review-and-quality, code-review, code-review, awesome-code-review-feedback, awesome-code-review-jury, awesome-code-review, code-review",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K20",
+      "count": 7,
+      "examples": "sprint-plan, create-implementation-plan, refactor-plan, structured-autonomy-plan, update-implementation-plan, awesome-plan-simplify, batch-content-plan",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K21",
+      "count": 7,
+      "examples": "internal-narrative, internal-comms, lead-magnets, reader-panel, gen-specs-as-issues, platform-specs-and-validation, storytelling-and-narrative",
+      "reviewed_examples": "reader-panel",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K22",
+      "count": 5,
+      "examples": "doc-coauthoring, ab-testing, plot-structure, doc-coauthoring, awesome-design-doc",
+      "reviewed_examples": "doc-coauthoring, doc-coauthoring",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K23",
+      "count": 15,
+      "examples": "research-grants, research-lookup, ara-research-manager, creative-thinking-for-research, firecrawl-research-index, research-agent-skills, research-grants",
+      "reviewed_examples": "creative-thinking-for-research",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K24",
+      "count": 3,
+      "examples": "test-gap-audit, awesome-test-gap-audit, qa-test-planner",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K25",
+      "count": 5,
+      "examples": "markdown-mermaid-writing, markdown-mermaid-writing, obsidian-markdown, mermaid-diagrams, web-to-markdown",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K26",
+      "count": 4,
+      "examples": "video, reels-script, short-form-video-script, tiktok-script",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K27",
+      "count": 5,
+      "examples": "personal-academic-writing-skill, Academic-Writing, awesome-agents-md-generator, academic_writer, humanities-writing-companion",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K28",
+      "count": 5,
+      "examples": "ara-rigor-reviewer, cs-karpathy-reviewer, submission-reviewer, submission, multi-reviewer-patterns",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K29",
+      "count": 17,
+      "examples": "content-strategist, cs-content-creator, awesome-content-campaign, awesome-content-publisher, awesome-content-repurpose, blog-post-writing, copywriting",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K30",
+      "count": 8,
+      "examples": "scientific-brainstorming, scientific-critical-thinking, scientific-writing, brainstorming-research-ideas, scientific-brainstorming, scientific-critical-thinking, scientific-writing",
+      "reviewed_examples": "scientific-writing, scientific-writing, brainstorming",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K31",
+      "count": 8,
+      "examples": "ai-seo, seo-audit, claude-settings-audit, audit-integrity, build-evidence-map, awesome-claims-audit, awesome-seo-audit",
+      "reviewed_examples": "build-evidence-map, awesome-claims-audit",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K32",
+      "count": 7,
+      "examples": "cs-wiki-ingestor, cs-wiki-librarian, cs-wiki-linter, wiki-ingest, wiki-init, wiki-lint, wiki-query",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K33",
+      "count": 5,
+      "examples": "planning-and-task-breakdown, launch, planning-wsh-improvements, grant-planning, campaign-and-launch-planning",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K34",
+      "count": 5,
+      "examples": "constraint-driven-development, doubt-driven-development, source-driven-development, spec-driven-development, skill-development",
+      "reviewed_examples": "doubt-driven-development",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K35",
+      "count": 4,
+      "examples": "architecture-blueprint-generator, copilot-instructions-blueprint-generator, project-workflow-analysis-blueprint-generator, readme-blueprint-generator",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K36",
+      "count": 5,
+      "examples": "claude-handoff, handoff, backend-to-frontend-handoff-docs, session-handoff, on-call-handoff-patterns",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K37",
+      "count": 10,
+      "examples": "create-architectural-decision-record, create-github-issue-feature-from-specification, create-github-issues-feature-from-implementation-plan, create-github-issues-for-unmet-specification-requirements, create-readme, create-specification, create-technical-spike",
+      "reviewed_examples": "create-specification, requirements-clarity",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K38",
+      "count": 5,
+      "examples": "signal-write, write-coding-standards-from-file, write-agent-prompts, write-plans, text-post-and-microblog",
+      "reviewed_examples": "write-agent-prompts",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K39",
+      "count": 27,
+      "examples": "exa-search, markitdown, pyzotero, citation-verification, cover-letter-to-editor, idea-refine, interview-me",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K40",
+      "count": 8,
+      "examples": "competitive-matrix, company-os, competitive-intel, context-engine, culture-architect, decision-logger, strategic-alignment",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K41",
+      "count": 3,
+      "examples": "literature-review, literature-review, literature-review",
+      "reviewed_examples": "literature-review, literature-review, literature-review",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K42",
+      "count": 13,
+      "examples": "unslop-academic-writing, prose-naturalizer, voice-style, blog-writing-guide, awesome-content-voice, awesome-document-style, awesome-style-mimic",
+      "reviewed_examples": "unslop-academic-writing, prose-naturalizer, voice-style, blog-writing-guide, awesome-content-voice, awesome-document-style, awesome-style-mimic, general-writing, writing-clearly-and-concisely",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K43",
+      "count": 6,
+      "examples": "analytics-data-storytelling, analytics-descriptive, process-business-writing, analytics, analytics-and-reporting, data-storytelling",
+      "reviewed_examples": "process-business-writing",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K44",
+      "count": 3,
+      "examples": "social, social-proof-and-testimonials, social-evidence-research",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K45",
+      "count": 5,
+      "examples": "aso, competitors, awesome-architecture-audit, c4-architecture, architecture-decision-records",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K46",
+      "count": 5,
+      "examples": "prd, breakdown-epic-pm, breakdown-feature-prd, breakdown-plan, prd",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    },
+    {
+      "id": "K47",
+      "count": 3,
+      "examples": "market-research-reports, clinical-reports, market-research-reports",
+      "reviewed_examples": "",
+      "method": "unsupervised_title_similarity",
+      "status": "SEARCH_NEIGHBORHOOD_NOT_VALIDATED_CLUSTER"
+    }
+  ],
+  "provisional_functional_clusters": [
+    {
+      "id": "C01",
+      "label": "에이전트 지시문 설계",
+      "definition": "기존 맥락을 압축해 에이전트가 선택할 행동·판단 경계를 전달",
+      "members": [
+        "inanna-malick/agent-skills:write-agent-prompts",
+        "getsentry/skills:prompt-optimizer"
+      ],
+      "rationale": "전자는 고밀도 의미 설계, 후자는 평가·반복 최적화"
+    },
+    {
+      "id": "C02",
+      "label": "프롬프트 개정·명확화",
+      "definition": "사용자 요청의 의도를 보존하면서 입력·출력·제약의 모호함을 줄임",
+      "members": [
+        "msimchowitz/writing-skills:prompt-improving"
+      ],
+      "rationale": "기존 프롬프트의 최소 변경에 특화"
+    },
+    {
+      "id": "C03",
+      "label": "요구사항 질문·범위 확정",
+      "definition": "작성 전에 미정의 요구·제약·승인 기준을 좁혀 명세 가능 상태로 만듦",
+      "members": [
+        "softaworks/agent-toolkit:requirements-clarity"
+      ],
+      "rationale": "과잉 인터뷰와 범용 PRD 강제를 경계"
+    },
+    {
+      "id": "C04",
+      "label": "에이전트 운영 컨텍스트 문서",
+      "definition": "CLAUDE.md/AGENTS.md 내용과 포인터, 로드 조건, 권한 경계 설계",
+      "members": [
+        "mattpocock/skills:writing-for-agents"
+      ],
+      "rationale": "명령 실행을 바꾸는 문장에 집중"
+    },
+    {
+      "id": "C05",
+      "label": "지시문 문서 재구획",
+      "definition": "비대한 에이전트 안내서를 정본·참조로 분리하고 모순·중복을 제거",
+      "members": [
+        "softaworks/agent-toolkit:agent-md-refactor"
+      ],
+      "rationale": "새 문서 작성과 기존 문서 구조정비를 구분"
+    },
+    {
+      "id": "C06",
+      "label": "협업적 문서 초안·독자 테스트",
+      "definition": "컨텍스트 수집, 아웃라인, 초안, 독자 이해도 테스트",
+      "members": [
+        "anthropics/skills:doc-coauthoring"
+      ],
+      "rationale": "진행시간이 증가할 수 있어 큰 문서에 우선 적용"
+    },
+    {
+      "id": "C07",
+      "label": "요구·계약 명세",
+      "definition": "요구조건·인터페이스·검증 조건이 분명한 명세 산출",
+      "members": [
+        "github/awesome-copilot:create-specification"
+      ],
+      "rationale": "고정 템플릿의 프로젝트 적합성 사전 확인"
+    },
+    {
+      "id": "C08",
+      "label": "설계 제안·대안 논증",
+      "definition": "제안과 사실, 비용과 이익, 대안과 잔여 리스크를 분리",
+      "members": [
+        "riekelt/technical-writer:writing-design-docs"
+      ],
+      "rationale": "technical-writing 의존성 필수"
+    },
+    {
+      "id": "C09",
+      "label": "확정된 결정 보존",
+      "definition": "이미 결정된 내용과 그 근거·대안·후속 변경을 불변 기록",
+      "members": [
+        "riekelt/technical-writer:recording-decisions"
+      ],
+      "rationale": "technical-writing 의존성 필수"
+    },
+    {
+      "id": "C10",
+      "label": "실행 절차·운영 가이드",
+      "definition": "실행 단계, 실패 대응, 롤백 및 실제 검증 상태를 명시",
+      "members": [
+        "riekelt/technical-writer:writing-runbooks"
+      ],
+      "rationale": "실행된 적 없는 절차는 초안으로 표시"
+    },
+    {
+      "id": "C11",
+      "label": "문서-근거 드리프트 감사",
+      "definition": "문서의 주장과 실제 코드·설정을 대조해 불일치를 식별",
+      "members": [
+        "github/awesome-copilot:docs-sync-audit",
+        "khasky/awesome-agent-skills:awesome-claims-audit"
+      ],
+      "rationale": "전자는 문서 전반, 후자는 공개 검증가능 주장 중심"
+    },
+    {
+      "id": "C12",
+      "label": "논거-근거 관계 모델링",
+      "definition": "주장·반박·조건·미확인을 추적 가능한 근거 구조로 분해",
+      "members": [
+        "github/awesome-copilot:build-evidence-map"
+      ],
+      "rationale": "자료 수집과 논증 설계를 혼동하지 않음"
+    },
+    {
+      "id": "C13",
+      "label": "기술 문장 검수·최소 수정",
+      "definition": "문서 결함을 위치·심각도·근거와 함께 판정하고 필요한 만큼만 수정",
+      "members": [
+        "riekelt/technical-writer:reviewing-technical-prose"
+      ],
+      "rationale": "technical-writing 의존성 필수"
+    },
+    {
+      "id": "C14",
+      "label": "독립적 반증·설계 압박",
+      "definition": "현재 가설의 숨은 가정과 반례를 fresh-context로 공격적으로 검증",
+      "members": [
+        "addyosmani/agent-skills:doubt-driven-development"
+      ],
+      "rationale": "실행비용·에이전트 의존성 주의"
+    },
+    {
+      "id": "C15",
+      "label": "연구 근거 통합·문헌 합성",
+      "definition": "연구 질문에 대해 비교·평가·근거 합성을 실시",
+      "members": [
+        "anayy09/claude-research-skills:evidence-synthesis",
+        "msimchowitz/writing-skills:literature-review"
+      ],
+      "rationale": "체계적 리뷰와 일반 서술적 리뷰의 검증 깊이가 다름"
+    },
+    {
+      "id": "C16",
+      "label": "서지 사실 검증",
+      "definition": "참고문헌 DOI·저자·제목·연도 실재 여부를 외부 DB에 대조",
+      "members": [
+        "KalarisLabs/research-agent-skills:citation-verification"
+      ],
+      "rationale": "네트워크 필수, 서지 사실이 논증 타당성 보장은 아님"
+    },
+    {
+      "id": "C17",
+      "label": "명료한 일반 글 편집",
+      "definition": "문장 명료성·중복·과장 표현을 저자 의미 보존 아래 개선",
+      "members": [
+        "msimchowitz/writing-skills:general-writing",
+        "khasky/awesome-agent-skills:awesome-document-style"
+      ],
+      "rationale": "전자는 목소리/AI 패턴, 후자는 Markdown 편집"
+    },
+    {
+      "id": "C18",
+      "label": "저자 목소리 프로파일링",
+      "definition": "저자 글을 분석해 재사용 가능한 문체 증거와 제한점을 기록",
+      "members": [
+        "khasky/awesome-agent-skills:awesome-content-voice"
+      ],
+      "rationale": "샘플 부족 시 확신 부족을 표현해야 함"
+    },
+    {
+      "id": "C19",
+      "label": "완성 원고의 거시적 문장 연결",
+      "definition": "완성된 전체 논증을 참조해 제목·문단 첫문장·전환을 재검토",
+      "members": [
+        "msimchowitz/writing-skills:non-autoregressive-writing-pass"
+      ],
+      "rationale": "초안 안정 전 수행 시 비효율"
+    },
+    {
+      "id": "C20",
+      "label": "장면 단위 서사 구성",
+      "definition": "픽션의 장면 목적·시점·갈등·정보 배치를 설계",
+      "members": [
+        "danjdewhurst/story-skills:scene-craft"
+      ],
+      "rationale": "스토리 프로젝트 맥락 의존; 일반 정책 문서에는 부적합"
+    },
+    {
+      "id": "C21",
+      "label": "서사 아이디어 검증",
+      "definition": "착상을 로그라인·갈등·반논제로 구체화해 이야기 가능성 검토",
+      "members": [
+        "danjdewhurst/story-skills:premise-workshop"
+      ],
+      "rationale": "창작 전용, 일반 기술 브레인스토밍과 경계 다름"
+    },
+    {
+      "id": "C22",
+      "label": "인문 논증·해석 글쓰기",
+      "definition": "정교한 개념 구분과 저자 해석을 보존하는 비판적 작문",
+      "members": [
+        "tizzy916/humanities-writing-companion:humanities-writing-companion"
+      ],
+      "rationale": "인문학 맥락에서 강점을 가짐"
+    },
+    {
+      "id": "C23",
+      "label": "설득형 제품 카피",
+      "definition": "독자의 의사결정과 전환 행동을 목표로 카피 구성",
+      "members": [
+        "coreyhaines31/marketingskills:copywriting"
+      ],
+      "rationale": "제품 마케팅 컨텍스트에 적합; 정책 글쓰기에 남용 금지"
+    },
+    {
+      "id": "C24",
+      "label": "과학적 글쓰기·주장 검증",
+      "definition": "연구 주장·실증 근거·인용의 경계를 유지하며 논문 작성",
+      "members": [
+        "K-Dense-AI/scientific-agent-skills:scientific-writing"
+      ],
+      "rationale": "문헌 기반 글쓰기와 정책 프롬프트 작성 구분"
+    }
+  ],
+  "shortlisted": [
+    {
+      "cluster_id": "C01",
+      "cluster_label": "에이전트 지시문 설계",
+      "cluster_definition": "기존 맥락을 압축해 에이전트가 선택할 행동·판단 경계를 전달",
+      "skill": "write-agent-prompts",
+      "repo": "inanna-malick/agent-skills",
+      "source_url": "https://github.com/inanna-malick/agent-skills/blob/main/skills/write-agent-prompts/SKILL.md",
+      "observed_microcluster": "K38",
+      "why_shortlisted": "전자는 고밀도 의미 설계, 후자는 평가·반복 최적화",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C01",
+      "cluster_label": "에이전트 지시문 설계",
+      "cluster_definition": "기존 맥락을 압축해 에이전트가 선택할 행동·판단 경계를 전달",
+      "skill": "prompt-optimizer",
+      "repo": "getsentry/skills",
+      "source_url": "https://github.com/getsentry/skills/blob/main/skills/prompt-optimizer/SKILL.md",
+      "observed_microcluster": "K15",
+      "why_shortlisted": "전자는 고밀도 의미 설계, 후자는 평가·반복 최적화",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C02",
+      "cluster_label": "프롬프트 개정·명확화",
+      "cluster_definition": "사용자 요청의 의도를 보존하면서 입력·출력·제약의 모호함을 줄임",
+      "skill": "prompt-improving",
+      "repo": "msimchowitz/writing-skills",
+      "source_url": "https://github.com/msimchowitz/writing-skills/blob/main/for-agents/prompt-improving/SKILL.md",
+      "observed_microcluster": "K15",
+      "why_shortlisted": "기존 프롬프트의 최소 변경에 특화",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C03",
+      "cluster_label": "요구사항 질문·범위 확정",
+      "cluster_definition": "작성 전에 미정의 요구·제약·승인 기준을 좁혀 명세 가능 상태로 만듦",
+      "skill": "requirements-clarity",
+      "repo": "softaworks/agent-toolkit",
+      "source_url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/requirements-clarity/SKILL.md",
+      "observed_microcluster": "K37",
+      "why_shortlisted": "과잉 인터뷰와 범용 PRD 강제를 경계",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C04",
+      "cluster_label": "에이전트 운영 컨텍스트 문서",
+      "cluster_definition": "CLAUDE.md/AGENTS.md 내용과 포인터, 로드 조건, 권한 경계 설계",
+      "skill": "writing-for-agents",
+      "repo": "mattpocock/skills",
+      "source_url": "https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL.md",
+      "observed_microcluster": "K07",
+      "why_shortlisted": "명령 실행을 바꾸는 문장에 집중",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C05",
+      "cluster_label": "지시문 문서 재구획",
+      "cluster_definition": "비대한 에이전트 안내서를 정본·참조로 분리하고 모순·중복을 제거",
+      "skill": "agent-md-refactor",
+      "repo": "softaworks/agent-toolkit",
+      "source_url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/agent-md-refactor/SKILL.md",
+      "observed_microcluster": "K12",
+      "why_shortlisted": "새 문서 작성과 기존 문서 구조정비를 구분",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C06",
+      "cluster_label": "협업적 문서 초안·독자 테스트",
+      "cluster_definition": "컨텍스트 수집, 아웃라인, 초안, 독자 이해도 테스트",
+      "skill": "doc-coauthoring",
+      "repo": "anthropics/skills",
+      "source_url": "https://github.com/anthropics/skills/blob/main/skills/doc-coauthoring/SKILL.md",
+      "observed_microcluster": "K22",
+      "why_shortlisted": "진행시간이 증가할 수 있어 큰 문서에 우선 적용",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C07",
+      "cluster_label": "요구·계약 명세",
+      "cluster_definition": "요구조건·인터페이스·검증 조건이 분명한 명세 산출",
+      "skill": "create-specification",
+      "repo": "github/awesome-copilot",
+      "source_url": "https://github.com/github/awesome-copilot/blob/main/skills/create-specification/SKILL.md",
+      "observed_microcluster": "K37",
+      "why_shortlisted": "고정 템플릿의 프로젝트 적합성 사전 확인",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C08",
+      "cluster_label": "설계 제안·대안 논증",
+      "cluster_definition": "제안과 사실, 비용과 이익, 대안과 잔여 리스크를 분리",
+      "skill": "writing-design-docs",
+      "repo": "riekelt/technical-writer",
+      "source_url": "https://github.com/riekelt/technical-writer/blob/main/plugins/technical-writer/skills/writing-design-docs/SKILL.md",
+      "observed_microcluster": "K08",
+      "why_shortlisted": "technical-writing 의존성 필수",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "technical-writing",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C09",
+      "cluster_label": "확정된 결정 보존",
+      "cluster_definition": "이미 결정된 내용과 그 근거·대안·후속 변경을 불변 기록",
+      "skill": "recording-decisions",
+      "repo": "riekelt/technical-writer",
+      "source_url": "https://github.com/riekelt/technical-writer/blob/main/plugins/technical-writer/skills/recording-decisions/SKILL.md",
+      "observed_microcluster": "K08",
+      "why_shortlisted": "technical-writing 의존성 필수",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "technical-writing",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C10",
+      "cluster_label": "실행 절차·운영 가이드",
+      "cluster_definition": "실행 단계, 실패 대응, 롤백 및 실제 검증 상태를 명시",
+      "skill": "writing-runbooks",
+      "repo": "riekelt/technical-writer",
+      "source_url": "https://github.com/riekelt/technical-writer/blob/main/plugins/technical-writer/skills/writing-runbooks/SKILL.md",
+      "observed_microcluster": "K08",
+      "why_shortlisted": "실행된 적 없는 절차는 초안으로 표시",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "technical-writing",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C11",
+      "cluster_label": "문서-근거 드리프트 감사",
+      "cluster_definition": "문서의 주장과 실제 코드·설정을 대조해 불일치를 식별",
+      "skill": "docs-sync-audit",
+      "repo": "github/awesome-copilot",
+      "source_url": "https://github.com/github/awesome-copilot/blob/main/skills/docs-sync-audit/SKILL.md",
+      "observed_microcluster": "K18",
+      "why_shortlisted": "전자는 문서 전반, 후자는 공개 검증가능 주장 중심",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C11",
+      "cluster_label": "문서-근거 드리프트 감사",
+      "cluster_definition": "문서의 주장과 실제 코드·설정을 대조해 불일치를 식별",
+      "skill": "awesome-claims-audit",
+      "repo": "khasky/awesome-agent-skills",
+      "source_url": "https://github.com/khasky/awesome-agent-skills/blob/main/skills/awesome-claims-audit/SKILL.md",
+      "observed_microcluster": "K31",
+      "why_shortlisted": "전자는 문서 전반, 후자는 공개 검증가능 주장 중심",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C12",
+      "cluster_label": "논거-근거 관계 모델링",
+      "cluster_definition": "주장·반박·조건·미확인을 추적 가능한 근거 구조로 분해",
+      "skill": "build-evidence-map",
+      "repo": "github/awesome-copilot",
+      "source_url": "https://github.com/github/awesome-copilot/blob/main/skills/build-evidence-map/SKILL.md",
+      "observed_microcluster": "K31",
+      "why_shortlisted": "자료 수집과 논증 설계를 혼동하지 않음",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C13",
+      "cluster_label": "기술 문장 검수·최소 수정",
+      "cluster_definition": "문서 결함을 위치·심각도·근거와 함께 판정하고 필요한 만큼만 수정",
+      "skill": "reviewing-technical-prose",
+      "repo": "riekelt/technical-writer",
+      "source_url": "https://github.com/riekelt/technical-writer/blob/main/plugins/technical-writer/skills/reviewing-technical-prose/SKILL.md",
+      "observed_microcluster": "K08",
+      "why_shortlisted": "technical-writing 의존성 필수",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "technical-writing",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C14",
+      "cluster_label": "독립적 반증·설계 압박",
+      "cluster_definition": "현재 가설의 숨은 가정과 반례를 fresh-context로 공격적으로 검증",
+      "skill": "doubt-driven-development",
+      "repo": "addyosmani/agent-skills",
+      "source_url": "https://github.com/addyosmani/agent-skills/blob/main/skills/doubt-driven-development/SKILL.md",
+      "observed_microcluster": "K34",
+      "why_shortlisted": "실행비용·에이전트 의존성 주의",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C15",
+      "cluster_label": "연구 근거 통합·문헌 합성",
+      "cluster_definition": "연구 질문에 대해 비교·평가·근거 합성을 실시",
+      "skill": "evidence-synthesis",
+      "repo": "anayy09/claude-research-skills",
+      "source_url": "https://github.com/anayy09/claude-research-skills/blob/main/skills/evidence-synthesis/SKILL.md",
+      "observed_microcluster": "K03",
+      "why_shortlisted": "체계적 리뷰와 일반 서술적 리뷰의 검증 깊이가 다름",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C15",
+      "cluster_label": "연구 근거 통합·문헌 합성",
+      "cluster_definition": "연구 질문에 대해 비교·평가·근거 합성을 실시",
+      "skill": "literature-review",
+      "repo": "msimchowitz/writing-skills",
+      "source_url": "https://github.com/msimchowitz/writing-skills/blob/main/for-agents/literature-review/SKILL.md",
+      "observed_microcluster": "K41",
+      "why_shortlisted": "체계적 리뷰와 일반 서술적 리뷰의 검증 깊이가 다름",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C16",
+      "cluster_label": "서지 사실 검증",
+      "cluster_definition": "참고문헌 DOI·저자·제목·연도 실재 여부를 외부 DB에 대조",
+      "skill": "citation-verification",
+      "repo": "KalarisLabs/research-agent-skills",
+      "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/citation-verification/SKILL.md",
+      "observed_microcluster": "K39",
+      "why_shortlisted": "네트워크 필수, 서지 사실이 논증 타당성 보장은 아님",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C17",
+      "cluster_label": "명료한 일반 글 편집",
+      "cluster_definition": "문장 명료성·중복·과장 표현을 저자 의미 보존 아래 개선",
+      "skill": "general-writing",
+      "repo": "msimchowitz/writing-skills",
+      "source_url": "https://github.com/msimchowitz/writing-skills/blob/main/for-agents/general-writing/SKILL.md",
+      "observed_microcluster": "K42",
+      "why_shortlisted": "전자는 목소리/AI 패턴, 후자는 Markdown 편집",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C17",
+      "cluster_label": "명료한 일반 글 편집",
+      "cluster_definition": "문장 명료성·중복·과장 표현을 저자 의미 보존 아래 개선",
+      "skill": "awesome-document-style",
+      "repo": "khasky/awesome-agent-skills",
+      "source_url": "https://github.com/khasky/awesome-agent-skills/blob/main/skills/awesome-document-style/SKILL.md",
+      "observed_microcluster": "K42",
+      "why_shortlisted": "전자는 목소리/AI 패턴, 후자는 Markdown 편집",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C18",
+      "cluster_label": "저자 목소리 프로파일링",
+      "cluster_definition": "저자 글을 분석해 재사용 가능한 문체 증거와 제한점을 기록",
+      "skill": "awesome-content-voice",
+      "repo": "khasky/awesome-agent-skills",
+      "source_url": "https://github.com/khasky/awesome-agent-skills/blob/main/skills/awesome-content-voice/SKILL.md",
+      "observed_microcluster": "K42",
+      "why_shortlisted": "샘플 부족 시 확신 부족을 표현해야 함",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C19",
+      "cluster_label": "완성 원고의 거시적 문장 연결",
+      "cluster_definition": "완성된 전체 논증을 참조해 제목·문단 첫문장·전환을 재검토",
+      "skill": "non-autoregressive-writing-pass",
+      "repo": "msimchowitz/writing-skills",
+      "source_url": "https://github.com/msimchowitz/writing-skills/blob/main/for-agents/non-autoregressive-writing-pass/SKILL.md",
+      "observed_microcluster": "K02",
+      "why_shortlisted": "초안 안정 전 수행 시 비효율",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C20",
+      "cluster_label": "장면 단위 서사 구성",
+      "cluster_definition": "픽션의 장면 목적·시점·갈등·정보 배치를 설계",
+      "skill": "scene-craft",
+      "repo": "danjdewhurst/story-skills",
+      "source_url": "https://github.com/danjdewhurst/story-skills/blob/main/skills/scene-craft/SKILL.md",
+      "observed_microcluster": "K17",
+      "why_shortlisted": "스토리 프로젝트 맥락 의존; 일반 정책 문서에는 부적합",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Story-project prerequisites; not general-purpose writing"
+    },
+    {
+      "cluster_id": "C21",
+      "cluster_label": "서사 아이디어 검증",
+      "cluster_definition": "착상을 로그라인·갈등·반논제로 구체화해 이야기 가능성 검토",
+      "skill": "premise-workshop",
+      "repo": "danjdewhurst/story-skills",
+      "source_url": "https://github.com/danjdewhurst/story-skills/blob/main/skills/premise-workshop/SKILL.md",
+      "observed_microcluster": "K39",
+      "why_shortlisted": "창작 전용, 일반 기술 브레인스토밍과 경계 다름",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Story-project prerequisites; not general-purpose writing"
+    },
+    {
+      "cluster_id": "C22",
+      "cluster_label": "인문 논증·해석 글쓰기",
+      "cluster_definition": "정교한 개념 구분과 저자 해석을 보존하는 비판적 작문",
+      "skill": "humanities-writing-companion",
+      "repo": "tizzy916/humanities-writing-companion",
+      "source_url": "https://github.com/tizzy916/humanities-writing-companion/blob/main/SKILL.md",
+      "observed_microcluster": "K27",
+      "why_shortlisted": "인문학 맥락에서 강점을 가짐",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C23",
+      "cluster_label": "설득형 제품 카피",
+      "cluster_definition": "독자의 의사결정과 전환 행동을 목표로 카피 구성",
+      "skill": "copywriting",
+      "repo": "coreyhaines31/marketingskills",
+      "source_url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/copywriting/SKILL.md",
+      "observed_microcluster": "K39",
+      "why_shortlisted": "제품 마케팅 컨텍스트에 적합; 정책 글쓰기에 남용 금지",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    },
+    {
+      "cluster_id": "C24",
+      "cluster_label": "과학적 글쓰기·주장 검증",
+      "cluster_definition": "연구 주장·실증 근거·인용의 경계를 유지하며 논문 작성",
+      "skill": "scientific-writing",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-writing/SKILL.md",
+      "observed_microcluster": "K30",
+      "why_shortlisted": "문헌 기반 글쓰기와 정책 프롬프트 작성 구분",
+      "status": "STRUCTURE_REVIEWED_NOT_BENCHMARKED",
+      "requires": "",
+      "limitation": "Must check full runtime dependencies / permissions; compare with runner-up"
+    }
+  ],
+  "required_dependency": [
+    {
+      "repo": "riekelt/technical-writer",
+      "name": "technical-writing",
+      "reason": "Required by its three document-type skills; include at deploy time but not a separate function winner"
+    }
+  ]
+}
