@@ -1,0 +1,1340 @@
+{
+  "idx": 17,
+  "records": [
+    {
+      "id": "WM-X0367",
+      "repo": "social-media-skills/skills",
+      "path": "skills/thread-writer/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/thread-writer/SKILL.md",
+      "sha": "5305ef4bb4cb945927114d3fc96e5bb24c6bdc4c",
+      "status": "OK",
+      "description": "Use to write a thread — a connected sequence of posts on X/Twitter or Threads that tells one story or makes one argument across multiple posts. Run when the user says \"write a thread,\" \"turn this into a thread,\" \"X thread,\" \"Twitter thread,\" \"thread about X,\" or has a multi-beat idea that won't fit one post. Reads brand-profile and voice first, uses hook-writer for the opening post (which must hook AND promise the payoff), builds one cohesive idea where every post earns the next, and lands a close with one CTA. Knows when a single post beats a thread. Naming trap: \"write a thread\" means this multi-post chain; \"post on/to Threads\" means a single post on Meta's Threads app — use threads-post for that. For a single caption use caption-writer; for just the opening hook use hook-writer.",
+      "intro": "A thread is a retention machine in text: a sequence of posts where each one has to earn the next, or the reader drops off. Done well it's one of the best formats for depth, saves, and follower growth on X. Done lazily — a blog chopped into arbitrary chunks — it's worse than a single post. Three principles run through it:",
+      "headings": [
+        {
+          "line": 34,
+          "text": "## Step 0 — Read the foundation first",
+          "depth": 2
+        },
+        {
+          "line": 39,
+          "text": "## Step 1 — Lock one idea, the payoff, and check it should be a thread",
+          "depth": 2
+        },
+        {
+          "line": 48,
+          "text": "## Step 2 — Write the opener (hook + promise)",
+          "depth": 2
+        },
+        {
+          "line": 55,
+          "text": "## Step 3 — Architect the thread",
+          "depth": 2
+        },
+        {
+          "line": 62,
+          "text": "## Step 4 — Write the body posts",
+          "depth": 2
+        },
+        {
+          "line": 68,
+          "text": "## Step 5 — Land the close and one CTA",
+          "depth": 2
+        },
+        {
+          "line": 74,
+          "text": "## Step 6 — Format for the platform",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 121
+    },
+    {
+      "id": "WM-X0368",
+      "repo": "social-media-skills/skills",
+      "path": "skills/tiktok-script/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/tiktok-script/SKILL.md",
+      "sha": "2ad26fa2c60b1d0eb0dcbb8cb336e317ac56195c",
+      "status": "OK",
+      "description": "Use to write a TikTok script — a native, sound-aware short-video script optimized for TikTok's discovery engine (the FYP), built around a brutal 1-second hook, watch-time, and rewatches. Run when the user says \"TikTok script,\" \"TikTok video,\" \"script for TikTok,\" \"make a TikTok,\" \"storytime,\" \"TikTok hook,\" or wants short-form video for TikTok specifically. Reads brand-profile and voice first; rides a trending sound/format where it genuinely fits (live trend research goes to trend-jacking); structures for completion + rewatch; optimizes for TikTok search; outputs a production doc (shot - on-screen text - spoken - sound - timing) plus a Veo prompt pack for faceless/b-roll shots (native filming often beats AI on TikTok). For Instagram Reels use reels-script; for YouTube Shorts use youtube-shorts; for the platform-agnostic scripting craft use short-form-video-script; hands caption to caption-writer and scheduling to scheduling-and-queue.",
+      "intro": "TikTok is the purest **discovery engine** in social: the For You Page decides reach from how people respond to the video, not from your follower count — so every TikTok has to earn its reach from scratch. That makes the rules specific, and different from Reels: 1. **The hook is brutal — ~1 second.** Stop the scroll instantly on three channels (verbal +",
+      "headings": [
+        {
+          "line": 35,
+          "text": "## Step 0 — Read the foundation first",
+          "depth": 2
+        },
+        {
+          "line": 40,
+          "text": "## Step 1 — Lock the concept, goal, and format",
+          "depth": 2
+        },
+        {
+          "line": 47,
+          "text": "## Step 2 — Decide the sound",
+          "depth": 2
+        },
+        {
+          "line": 53,
+          "text": "## Step 3 — Write the 1-second hook",
+          "depth": 2
+        },
+        {
+          "line": 59,
+          "text": "## Step 4 — Structure for watch-time and the loop",
+          "depth": 2
+        },
+        {
+          "line": 65,
+          "text": "## Step 5 — Write the production doc",
+          "depth": 2
+        },
+        {
+          "line": 70,
+          "text": "## Step 6 — TikTok SEO + caption + hashtags",
+          "depth": 2
+        },
+        {
+          "line": 76,
+          "text": "## Step 7 — Production: film-first, or the Veo pack",
+          "depth": 2
+        },
+        {
+          "line": 83,
+          "text": "## Step 8 — Hand off",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 129
+    },
+    {
+      "id": "WM-X0369",
+      "repo": "social-media-skills/skills",
+      "path": "skills/voice-builder/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/voice-builder/SKILL.md",
+      "sha": "bfb30dda93a4d1af67dd47ca5217a393e6fb43e3",
+      "status": "OK",
+      "description": "Use to build a reusable voice guide (voice.md) by analyzing a person's or brand's ACTUAL writing samples — so every other social skill can write in their exact voice instead of generic AI prose. Run this when the user says \"build my voice,\" \"sound like me,\" \"capture my tone,\" \"analyze my writing,\" \"train on my posts,\" \"ghostwrite in my voice,\" or when content keeps coming out off-voice or generic. Requires real writing samples; if there are none, use brand-profile's voice interview instead. Works for anyone: founders, creators, executives who are ghostwritten, and brands. Read brand-profile first; this skill produces the deeper voice.md that complements it. This skill DEFINES the voice; to apply it per piece — tone shifts, style edits, de-AI-ing a draft — use writing-style-and-tone.",
+      "intro": "This skill turns real writing into a **reproducible voice** — a `voice.md` that any downstream skill (or human) can write from and produce posts indistinguishable from the The core principle: **voice is extracted from evidence, not described in adjectives.** \"Punchy and authentic\" is unwritable — it tells a writer nothing. \"Opens with a one-line",
+      "headings": [
+        {
+          "line": 40,
+          "text": "## Step 0 — Read `brand-profile` first",
+          "depth": 2
+        },
+        {
+          "line": 46,
+          "text": "## Step 1 — Gather the right samples",
+          "depth": 2
+        },
+        {
+          "line": 57,
+          "text": "## Step 2 — Analyze across the six layers (with evidence)",
+          "depth": 2
+        },
+        {
+          "line": 72,
+          "text": "## Step 3 — Distill the voice fingerprint",
+          "depth": 2
+        },
+        {
+          "line": 79,
+          "text": "## Step 4 — Write `voice.md`",
+          "depth": 2
+        },
+        {
+          "line": 86,
+          "text": "## Step 5 — Validate with the voice test (do not skip)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 143
+    },
+    {
+      "id": "WM-X0370",
+      "repo": "social-media-skills/skills",
+      "path": "skills/writing-style-and-tone/SKILL.md",
+      "url": "https://github.com/social-media-skills/skills/blob/main/skills/writing-style-and-tone/SKILL.md",
+      "sha": "413326643182193bf8d0c00e85580f1e18a4cbc3",
+      "status": "OK",
+      "description": "The writing-craft skill — style and tone as applied technique: rhythm, specificity, tone modulation, and the edit passes that make writing read as human. Use when someone's posts \"sound like ChatGPT,\" a draft needs a style edit, they ask how to write differently per platform or moment without losing the brand voice, writing is grammatically perfect but exhausting, a manager wants em dashes banned or detector scores chased, or any AI-assisted draft needs its mandatory quality pass. Uses the STYLE framework. Reads voice-builder + brand-profile + the format skill first. Tells must be read as a cluster with judgment — no single marker proves AI, and detectors misflag real writers; the winning move is substance so owned the question never arises. Voice is identity; tone is register. The agent drafts; the HUMAN supplies lived specifics and final say; never invents anecdotes or staged typos. Distinct from voice-builder, hook-writer, the format skills, and content-research-and-sourcing.",
+      "intro": "The **writing craft** — sound like someone, tune tone to the moment, yank the dead weight, let the rhythm breathe, and edit against the tells intelligently. The agent drafts and edits in the voice; the **human supplies the lived specifics and the final call**; **WoopSocial publishes**. (Craft skill — no tool file.) ## The POV: the tells are symptoms — the disease is saying what anyone could say",
+      "headings": [
+        {
+          "line": 70,
+          "text": "## Honest scope (never violate)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 107
+    },
+    {
+      "id": "WM-X0372",
+      "repo": "softaworks/agent-toolkit",
+      "path": "skills/backend-to-frontend-handoff-docs/SKILL.md",
+      "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/backend-to-frontend-handoff-docs/SKILL.md",
+      "sha": "faac6deae23181932ac60da2d94e30a1e7f735fa",
+      "status": "OK",
+      "description": "Create API handoff documentation for frontend developers. Use when backend work is complete and needs to be documented for frontend integration, or user says 'create handoff', 'document API', 'frontend handoff', or 'API documentation'. ",
+      "intro": "> **No Chat Output**: Produce the handoff document only. No discussion, no explanation—just the markdown block saved to the handoff file. You are a backend developer completing API work. Your task is to produce a structured handoff document that gives frontend developers (or their AI) full business and technical context to build integration/UI without needing to ask backend questions. > **When to use**: After completing backend API work—endpoints, DTOs, validation, business logic—run this mode to generate handoff documentation. > **Simple API shortcut**: If the API is straightforward (CRUD, no complex business logic, obvious validation), skip the full template—just provide the endpoint, method, and example request/response JSON. Frontend ca",
+      "headings": [
+        {
+          "line": 19,
+          "text": "## Inputs",
+          "depth": 2
+        },
+        {
+          "line": 24,
+          "text": "## Workflow",
+          "depth": 2
+        },
+        {
+          "line": 31,
+          "text": "## Output Format",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 20,
+          "text": "- Completed API code (endpoints, controllers, services, DTOs, validation)."
+        },
+        {
+          "line": 21,
+          "text": "- Related business context from the task/user story."
+        },
+        {
+          "line": 22,
+          "text": "- Any constraints, edge cases, or gotchas discovered during implementation."
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 26,
+          "text": "1. **Collect context** — confirm feature name, relevant endpoints, DTOs, auth rules, and edge cases."
+        },
+        {
+          "line": 27,
+          "text": "2. **Create/update handoff file** — write the document to `.claude/docs/ai/<feature-name>/api-handoff.md`. Increment the iteration suffix (`-v2`, `-v3`, …) if rerunning after feedback."
+        },
+        {
+          "line": 28,
+          "text": "3. **Paste template** — fill every section below with concrete data. Omit subsections only when truly not applicable (note why)."
+        },
+        {
+          "line": 29,
+          "text": "4. **Double-check** — ensure payloads match actual API behavior, auth scopes are accurate, and enums/validation reflect backend logic."
+        },
+        {
+          "line": 31,
+          "text": "## Output Format"
+        },
+        {
+          "line": 46,
+          "text": "- **Purpose**: [1 line: what it does]"
+        },
+        {
+          "line": 47,
+          "text": "- **Auth**: [required role/permission, or \"public\"]"
+        },
+        {
+          "line": 48,
+          "text": "- **Request**:"
+        },
+        {
+          "line": 54,
+          "text": "- **Response** (success):"
+        },
+        {
+          "line": 60,
+          "text": "- **Response** (error): [HTTP codes and shapes, e.g., 422 validation, 404 not found]"
+        },
+        {
+          "line": 61,
+          "text": "- **Notes**: [edge cases, rate limits, pagination, sorting, anything non-obvious]"
+        },
+        {
+          "line": 65,
+          "text": "## Data Models / DTOs"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 28,
+          "text": "3. **Paste template** — fill every section below with concrete data. Omit subsections only when truly not applicable (note why)."
+        },
+        {
+          "line": 122,
+          "text": "Write the final markdown into the handoff file only—do not echo it in chat. (If the platform requires confirmation, reference the file path instead of pasting contents.)"
+        }
+      ],
+      "source_lines": 123
+    },
+    {
+      "id": "WM-X0373",
+      "repo": "softaworks/agent-toolkit",
+      "path": "skills/c4-architecture/SKILL.md",
+      "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/c4-architecture/SKILL.md",
+      "sha": "ed972bca7f564609ee246e2ddf912b71a073b917",
+      "status": "OK",
+      "description": "Generate architecture documentation using C4 model Mermaid diagrams. Use when asked to create architecture diagrams, document system architecture, visualize software structure, create C4 diagrams, or generate context/container/component/deployment diagrams. Triggers include \"architecture diagram\", \"C4 diagram\", \"system context\", \"container diagram\", \"component diagram\", \"deployment diagram\", \"document architecture\", \"visualize architecture\". ",
+      "intro": "# C4 Architecture Documentation Generate software architecture documentation using C4 model diagrams in Mermaid syntax. 1. **Understand scope** - Determine which C4 level(s) are needed based on audience 2. **Analyze codebase** - Explore the system to identify components, containers, and relationships",
+      "headings": [
+        {
+          "line": 10,
+          "text": "## Workflow",
+          "depth": 2
+        },
+        {
+          "line": 272,
+          "text": "## Output Location",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 12,
+          "text": "1. **Understand scope** - Determine which C4 level(s) are needed based on audience"
+        },
+        {
+          "line": 13,
+          "text": "2. **Analyze codebase** - Explore the system to identify components, containers, and relationships"
+        },
+        {
+          "line": 14,
+          "text": "3. **Generate diagrams** - Create Mermaid C4 diagrams at appropriate abstraction levels"
+        },
+        {
+          "line": 15,
+          "text": "4. **Document** - Write diagrams to markdown files with explanatory context"
+        },
+        {
+          "line": 17,
+          "text": "## C4 Diagram Levels"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 275,
+          "text": "- `c4-context.md` - System context diagram"
+        },
+        {
+          "line": 276,
+          "text": "- `c4-containers.md` - Container diagram"
+        },
+        {
+          "line": 277,
+          "text": "- `c4-components-{feature}.md` - Component diagrams per feature"
+        },
+        {
+          "line": 278,
+          "text": "- `c4-deployment.md` - Deployment diagram"
+        },
+        {
+          "line": 279,
+          "text": "- `c4-dynamic-{flow}.md` - Dynamic diagrams for specific flows"
+        },
+        {
+          "line": 281,
+          "text": "## Audience-Appropriate Detail"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 296
+    },
+    {
+      "id": "WM-X0374",
+      "repo": "softaworks/agent-toolkit",
+      "path": "skills/crafting-effective-readmes/SKILL.md",
+      "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/crafting-effective-readmes/SKILL.md",
+      "sha": "a6c30d955cb7b1f4ab1c70fd65295c6c58e3be1b",
+      "status": "OK",
+      "description": "Use when writing or improving README files. Not all READMEs are the same — provides templates and guidance matched to your audience and project type. ",
+      "intro": "READMEs answer questions your audience will have. Different audiences need different information - a contributor to an OSS project needs different context than future-you opening a config folder. **Always ask:** Who will read this, and what do they need to know? **Ask:** \"What README task are you working on?\" | **Creating** | New project, no README yet |",
+      "headings": [
+        {
+          "line": 14,
+          "text": "## Process",
+          "depth": 2
+        },
+        {
+          "line": 16,
+          "text": "### Step 1: Identify the Task",
+          "depth": 3
+        },
+        {
+          "line": 27,
+          "text": "### Step 2: Task-Specific Questions",
+          "depth": 3
+        },
+        {
+          "line": 51,
+          "text": "### Step 3: Always Ask",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 16,
+          "text": "### Step 1: Identify the Task"
+        },
+        {
+          "line": 27,
+          "text": "### Step 2: Task-Specific Questions"
+        },
+        {
+          "line": 30,
+          "text": "1. What type of project? (see Project Types below)"
+        },
+        {
+          "line": 31,
+          "text": "2. What problem does this solve in one sentence?"
+        },
+        {
+          "line": 32,
+          "text": "3. What's the quickest path to \"it works\"?"
+        },
+        {
+          "line": 33,
+          "text": "4. Anything notable to highlight?"
+        },
+        {
+          "line": 36,
+          "text": "1. What needs documenting?"
+        },
+        {
+          "line": 37,
+          "text": "2. Where should it go in the existing structure?"
+        },
+        {
+          "line": 38,
+          "text": "3. Who needs this info most?"
+        },
+        {
+          "line": 41,
+          "text": "1. What changed?"
+        },
+        {
+          "line": 42,
+          "text": "2. Read current README, identify stale sections"
+        },
+        {
+          "line": 43,
+          "text": "3. Propose specific edits"
+        },
+        {
+          "line": 46,
+          "text": "1. Read current README"
+        },
+        {
+          "line": 47,
+          "text": "2. Check against actual project state (package.json, main files, etc.)"
+        },
+        {
+          "line": 48,
+          "text": "3. Flag outdated sections"
+        },
+        {
+          "line": 49,
+          "text": "4. Update \"Last reviewed\" date if present"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 79
+    },
+    {
+      "id": "WM-X0375",
+      "repo": "softaworks/agent-toolkit",
+      "path": "skills/daily-meeting-update/SKILL.md",
+      "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/daily-meeting-update/SKILL.md",
+      "sha": "190b0702d226c00a591fb6c25f027f4370eec676",
+      "status": "OK",
+      "description": "Interactive daily standup/meeting update generator. Use when user says 'daily', 'standup', 'scrum update', 'status update', 'what did I do yesterday', 'prepare for meeting', 'morning update', or 'team sync'. Pulls activity from GitHub, Jira, and Claude Code session history. Conducts 4-question interview (yesterday, today, blockers, discussion topics) and generates formatted Markdown update.\" ",
+      "intro": "Generate a daily standup/meeting update through an **interactive interview**. Never assume tools are configured—ask first. ┌─────────────────────────────────────────────────────┐ │ Phase 1: DETECT & OFFER INTEGRATIONS                │ │ • Check: Claude Code history? gh CLI? jira CLI?     │",
+      "headings": [
+        {
+          "line": 13,
+          "text": "## Workflow",
+          "depth": 2
+        },
+        {
+          "line": 43,
+          "text": "## Phase 1: Detect & Offer Integrations",
+          "depth": 2
+        },
+        {
+          "line": 45,
+          "text": "### Step 1: Silent Detection",
+          "depth": 3
+        },
+        {
+          "line": 57,
+          "text": "### Step 2: Offer GitHub/Jira Integrations (if available)",
+          "depth": 3
+        },
+        {
+          "line": 95,
+          "text": "### Step 3: Pull GitHub/Jira Data (if approved)",
+          "depth": 3
+        },
+        {
+          "line": 106,
+          "text": "### Step 4: Offer Claude Code History",
+          "depth": 3
+        },
+        {
+          "line": 159,
+          "text": "## Phase 2: Interview (with insights)",
+          "depth": 2
+        },
+        {
+          "line": 235,
+          "text": "## Phase 3: Generate Update",
+          "depth": 2
+        },
+        {
+          "line": 355,
+          "text": "## Output Example",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 43,
+          "text": "## Phase 1: Detect & Offer Integrations"
+        },
+        {
+          "line": 45,
+          "text": "### Step 1: Silent Detection"
+        },
+        {
+          "line": 57,
+          "text": "### Step 2: Offer GitHub/Jira Integrations (if available)"
+        },
+        {
+          "line": 69,
+          "text": "- \"Yes, pull the info\""
+        },
+        {
+          "line": 70,
+          "text": "- \"No, I'll provide everything manually\""
+        },
+        {
+          "line": 79,
+          "text": "- \"Just the current directory\" (if in a git repo)"
+        },
+        {
+          "line": 80,
+          "text": "- \"I'll list the repos\" → user provides list"
+        },
+        {
+          "line": 91,
+          "text": "- \"Yes, pull my tickets\""
+        },
+        {
+          "line": 165,
+          "text": "### Question 1: Yesterday"
+        },
+        {
+          "line": 171,
+          "text": "- Merged PR #123: fix login timeout"
+        },
+        {
+          "line": 172,
+          "text": "- 3 commits in backend-api"
+        },
+        {
+          "line": 173,
+          "text": "- Reviewed PR #456 (approved)"
+        },
+        {
+          "line": 185,
+          "text": "- \"Can you give more details about X?\""
+        },
+        {
+          "line": 186,
+          "text": "- \"Did you complete anything specific?\""
+        },
+        {
+          "line": 188,
+          "text": "### Question 2: Today"
+        },
+        {
+          "line": 194,
+          "text": "- [Text input - user types freely]"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 409
+    },
+    {
+      "id": "WM-X0376",
+      "repo": "softaworks/agent-toolkit",
+      "path": "skills/feedback-mastery/SKILL.md",
+      "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/feedback-mastery/SKILL.md",
+      "sha": "4f2c6adb3af9fe9e22b72967979be0971845a333",
+      "status": "OK",
+      "description": "Navigate difficult conversations and deliver constructive feedback using structured frameworks. Covers the Preparation-Delivery-Follow-up model and Situation-Behavior-Impact (SBI) feedback technique. Use when preparing for difficult conversations, giving feedback, or managing conflicts. ",
+      "intro": "This skill provides frameworks for navigating difficult workplace conversations and delivering effective feedback. Whether you're addressing performance issues, resolving conflicts, or giving constructive feedback, these structured approaches lead to better outcomes. **Core insight:** Research shows that employees who approach difficult conversations with preparation and a clear framework are **60% more likely to reach a positive resolution** than those who engage without a plan. - Preparing to give feedback to a colleague or direct report - Addressing performance issues or missed expectations",
+      "headings": [
+        {
+          "line": 30,
+          "text": "### The Preparation-Delivery-Follow-up Model",
+          "depth": 3
+        },
+        {
+          "line": 52,
+          "text": "## Preparation Phase",
+          "depth": 2
+        },
+        {
+          "line": 54,
+          "text": "### Step 1: Understand the Issue",
+          "depth": 3
+        },
+        {
+          "line": 63,
+          "text": "### Step 2: Define Your Goals",
+          "depth": 3
+        },
+        {
+          "line": 77,
+          "text": "### Step 3: Manage Your Emotions",
+          "depth": 3
+        },
+        {
+          "line": 93,
+          "text": "## Delivery Phase",
+          "depth": 2
+        },
+        {
+          "line": 95,
+          "text": "### The Three-Step Delivery Formula",
+          "depth": 3
+        },
+        {
+          "line": 135,
+          "text": "## Follow-up Phase",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 54,
+          "text": "### Step 1: Understand the Issue"
+        },
+        {
+          "line": 58,
+          "text": "- **What exactly is the problem?** (Be specific, not vague)"
+        },
+        {
+          "line": 59,
+          "text": "- **How does it impact the team, project, or company?**"
+        },
+        {
+          "line": 60,
+          "text": "- **Have I gathered all relevant facts?**"
+        },
+        {
+          "line": 61,
+          "text": "- **Is this a pattern or a one-time event?**"
+        },
+        {
+          "line": 63,
+          "text": "### Step 2: Define Your Goals"
+        },
+        {
+          "line": 77,
+          "text": "### Step 3: Manage Your Emotions"
+        },
+        {
+          "line": 81,
+          "text": "- [ ] Am I calm and in control?"
+        },
+        {
+          "line": 82,
+          "text": "- [ ] Have I separated facts from personal frustrations?"
+        },
+        {
+          "line": 83,
+          "text": "- [ ] Have I considered their perspective?"
+        },
+        {
+          "line": 84,
+          "text": "- [ ] Can I present this without accusation?"
+        },
+        {
+          "line": 93,
+          "text": "## Delivery Phase"
+        },
+        {
+          "line": 95,
+          "text": "### The Three-Step Delivery Formula"
+        },
+        {
+          "line": 97,
+          "text": "1. **Open with neutrality and intent**"
+        },
+        {
+          "line": 98,
+          "text": "2. **Present the issue using facts, not blame**"
+        },
+        {
+          "line": 99,
+          "text": "3. **Encourage dialogue and solutions**"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 293
+    },
+    {
+      "id": "WM-X0377",
+      "repo": "softaworks/agent-toolkit",
+      "path": "skills/frontend-to-backend-requirements/SKILL.md",
+      "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/frontend-to-backend-requirements/SKILL.md",
+      "sha": "09352d3b900ef551bce8c4a5df80eb9b386091c6",
+      "status": "OK",
+      "description": "Document frontend data needs for backend developers. Use when frontend needs to communicate API requirements to backend, or user says 'backend requirements', 'what data do I need', 'API requirements', or is describing data needs for a UI. ",
+      "intro": "You are a frontend developer documenting what data you need from backend. You describe the **what**, not the **how**. Backend owns implementation details. > **No Chat Output**: ALL responses go to `.claude/docs/ai/<feature-name>/backend-requirements.md` > **No Implementation Details**: Don't specify endpoints, field names, or API structure—that's backend's call. This mode is for frontend devs to communicate data needs:",
+      "headings": [
+        {
+          "line": 39,
+          "text": "## Workflow",
+          "depth": 2
+        },
+        {
+          "line": 41,
+          "text": "### Step 1: Describe the Feature",
+          "depth": 3
+        },
+        {
+          "line": 49,
+          "text": "### Step 2: List Data Needs",
+          "depth": 3
+        },
+        {
+          "line": 67,
+          "text": "### Step 3: Surface Uncertainties",
+          "depth": 3
+        },
+        {
+          "line": 76,
+          "text": "### Step 4: Leave Room for Discussion",
+          "depth": 3
+        },
+        {
+          "line": 85,
+          "text": "## Output Format",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 18,
+          "text": "- What data do I need to render this screen?"
+        },
+        {
+          "line": 19,
+          "text": "- What actions should the user be able to perform?"
+        },
+        {
+          "line": 20,
+          "text": "- What business rules affect the UI?"
+        },
+        {
+          "line": 21,
+          "text": "- What states and errors should I handle?"
+        },
+        {
+          "line": 27,
+          "text": "## What You Own vs. What Backend Owns"
+        },
+        {
+          "line": 41,
+          "text": "### Step 1: Describe the Feature"
+        },
+        {
+          "line": 45,
+          "text": "1. **What is this?** — Screen, flow, component"
+        },
+        {
+          "line": 46,
+          "text": "2. **Who uses it?** — User type, permissions"
+        },
+        {
+          "line": 47,
+          "text": "3. **What's the goal?** — What does success look like?"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 41,
+          "text": "### Step 1: Describe the Feature"
+        },
+        {
+          "line": 45,
+          "text": "1. **What is this?** — Screen, flow, component"
+        },
+        {
+          "line": 46,
+          "text": "2. **Who uses it?** — User type, permissions"
+        },
+        {
+          "line": 47,
+          "text": "3. **What's the goal?** — What does success look like?"
+        },
+        {
+          "line": 49,
+          "text": "### Step 2: List Data Needs"
+        },
+        {
+          "line": 54,
+          "text": "- What information appears on screen?"
+        },
+        {
+          "line": 55,
+          "text": "- What's the relationship between pieces?"
+        },
+        {
+          "line": 56,
+          "text": "- What determines visibility/state?"
+        },
+        {
+          "line": 59,
+          "text": "- What can the user do?"
+        },
+        {
+          "line": 60,
+          "text": "- What's the expected outcome?"
+        },
+        {
+          "line": 61,
+          "text": "- What feedback should they see?"
+        },
+        {
+          "line": 64,
+          "text": "- Loading, empty, error, success"
+        },
+        {
+          "line": 65,
+          "text": "- Edge cases (partial data, expired, etc.)"
+        },
+        {
+          "line": 67,
+          "text": "### Step 3: Surface Uncertainties"
+        },
+        {
+          "line": 70,
+          "text": "- Business rules you don't fully understand"
+        },
+        {
+          "line": 71,
+          "text": "- Edge cases you're not sure how to handle"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 194
+    },
+    {
+      "id": "WM-X0378",
+      "repo": "softaworks/agent-toolkit",
+      "path": "skills/humanizer/SKILL.md",
+      "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/humanizer/SKILL.md",
+      "sha": "1b77b4ed35014bba2a7ed746c1a0750840768759",
+      "status": "OK",
+      "description": "Remove signs of AI-generated writing from text. Use when editing or reviewing text to make it sound more natural and human-written. Based on Wikipedia's comprehensive \"Signs of AI writing\" guide. Detects and fixes patterns including: inflated symbolism, promotional language, superficial -ing analyses, vague attributions, em dash overuse, rule of three, AI vocabulary words, negative parallelisms, and excessive conjunctive phrases.",
+      "intro": "# Humanizer: Remove AI Writing Patterns You are a writing editor that identifies and removes signs of AI-generated text to make writing sound more natural and human. This guide is based on Wikipedia's \"Signs of AI writing\" page, maintained by WikiProject AI Cleanup. 1. **Identify AI patterns** - Scan for the patterns listed below 2. **Rewrite problematic sections** - Replace AI-isms with natural alternatives",
+      "headings": [
+        {
+          "line": 50,
+          "text": "### How to add voice:",
+          "depth": 3
+        },
+        {
+          "line": 394,
+          "text": "## Process",
+          "depth": 2
+        },
+        {
+          "line": 407,
+          "text": "## Output Format",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 64,
+          "text": "### Before (clean but soulless):"
+        },
+        {
+          "line": 396,
+          "text": "1. Read the input text carefully"
+        },
+        {
+          "line": 397,
+          "text": "2. Identify all instances of the patterns above"
+        },
+        {
+          "line": 398,
+          "text": "3. Rewrite each problematic section"
+        },
+        {
+          "line": 399,
+          "text": "4. Ensure the revised text:"
+        },
+        {
+          "line": 400,
+          "text": "- Sounds natural when read aloud"
+        },
+        {
+          "line": 401,
+          "text": "- Varies sentence structure naturally"
+        },
+        {
+          "line": 402,
+          "text": "- Uses specific details over vague claims"
+        },
+        {
+          "line": 403,
+          "text": "- Maintains appropriate tone for context"
+        },
+        {
+          "line": 404,
+          "text": "- Uses simple constructions (is/are/has) where appropriate"
+        },
+        {
+          "line": 405,
+          "text": "5. Present the humanized version"
+        },
+        {
+          "line": 407,
+          "text": "## Output Format"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 330,
+          "text": "### 20. Knowledge-Cutoff Disclaimers"
+        },
+        {
+          "line": 410,
+          "text": "1. The rewritten text"
+        },
+        {
+          "line": 411,
+          "text": "2. A brief summary of changes made (optional, if helpful)"
+        },
+        {
+          "line": 415,
+          "text": "## Full Example"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 440
+    },
+    {
+      "id": "WM-X0379",
+      "repo": "softaworks/agent-toolkit",
+      "path": "skills/lesson-learned/SKILL.md",
+      "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/lesson-learned/SKILL.md",
+      "sha": "e358582cc398ba0c02b9a2cc2ae13b29d3e6ba59",
+      "status": "OK",
+      "description": "Analyze recent code changes via git history and extract software engineering lessons. Use when the user asks 'what is the lesson here?', 'what can I learn from this?', 'engineering takeaway', 'what did I just learn?', 'reflect on this code', or wants to extract principles from recent work.\" ",
+      "intro": "Extract specific, grounded software engineering lessons from actual code changes. Not a lecture -- a mirror. Show the user what their code already demonstrates. **Load the principles reference first.** 1. Read `references/se-principles.md` to have the principle catalog available 2. Optionally read `references/anti-patterns.md` if you suspect the changes include areas for improvement",
+      "headings": [
+        {
+          "line": 20,
+          "text": "## Phase 1: Determine Scope",
+          "depth": 2
+        },
+        {
+          "line": 36,
+          "text": "## Phase 2: Gather Changes",
+          "depth": 2
+        },
+        {
+          "line": 44,
+          "text": "## Phase 3: Analyze",
+          "depth": 2
+        },
+        {
+          "line": 56,
+          "text": "## Phase 4: Present the Lesson",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 14,
+          "text": "1. Read `references/se-principles.md` to have the principle catalog available"
+        },
+        {
+          "line": 15,
+          "text": "2. Optionally read `references/anti-patterns.md` if you suspect the changes include areas for improvement"
+        },
+        {
+          "line": 16,
+          "text": "3. Determine the scope of analysis (see Phase 1)"
+        },
+        {
+          "line": 20,
+          "text": "## Phase 1: Determine Scope"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 32,
+          "text": "- If on a feature branch: analyze branch commits vs main"
+        },
+        {
+          "line": 33,
+          "text": "- If on main: analyze the last 5 commits"
+        },
+        {
+          "line": 34,
+          "text": "- If the user provides a different scope, use that"
+        },
+        {
+          "line": 36,
+          "text": "## Phase 2: Gather Changes"
+        },
+        {
+          "line": 38,
+          "text": "1. Run `git log` with the determined scope to get the commit list and messages"
+        },
+        {
+          "line": 39,
+          "text": "2. Run `git diff` for the full diff of the scope"
+        },
+        {
+          "line": 40,
+          "text": "3. If the diff is large (>500 lines), use `git diff --stat` first, then selectively read the top 3-5 most-changed files"
+        },
+        {
+          "line": 41,
+          "text": "4. **Read commit messages carefully** -- they contain intent that raw diffs miss"
+        },
+        {
+          "line": 42,
+          "text": "5. Only read changed files. Do not read the entire repo."
+        },
+        {
+          "line": 44,
+          "text": "## Phase 3: Analyze"
+        },
+        {
+          "line": 49,
+          "text": "- **Structural decisions** -- How was the code organized? Why those boundaries?"
+        },
+        {
+          "line": 50,
+          "text": "- **Trade-offs made** -- What was gained vs. sacrificed? (readability vs. performance, DRY vs. clarity, speed vs. correctness)"
+        },
+        {
+          "line": 51,
+          "text": "- **Problems solved** -- What was the before/after? What made the \"after\" better?"
+        },
+        {
+          "line": 52,
+          "text": "- **Missed opportunities** -- Where could the code improve? (present gently as \"next time, consider...\")"
+        },
+        {
+          "line": 56,
+          "text": "## Phase 4: Present the Lesson"
+        },
+        {
+          "line": 61,
+          "text": "## Lesson: [Principle Name]"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 106
+    },
+    {
+      "id": "WM-X0380",
+      "repo": "softaworks/agent-toolkit",
+      "path": "skills/mermaid-diagrams/SKILL.md",
+      "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/mermaid-diagrams/SKILL.md",
+      "sha": "6ecbbaf9854ada56cc8e01cde47915e3c34277b7",
+      "status": "OK",
+      "description": "Comprehensive guide for creating software diagrams using Mermaid syntax. Use when users need to create, visualize, or document software through diagrams including class diagrams (domain modeling, object-oriented design), sequence diagrams (application flows, API interactions, code execution), flowcharts (processes, algorithms, user journeys), entity relationship diagrams (database schemas), C4 architecture diagrams (system context, containers, components), state diagrams, git graphs, pie charts, gantt charts, or any other diagram type. Triggers include requests to \"diagram\", \"visualize\", \"model\", \"map out\", \"show the flow\", or when explaining system architecture, database design, code structure, or user/application flows. ",
+      "intro": "Create professional software diagrams using Mermaid's text-based syntax. Mermaid renders diagrams from simple text definitions, making diagrams version-controllable, easy to update, and maintainable alongside code. All Mermaid diagrams follow this pattern: - First line declares diagram type (e.g., `classDiagram`, `sequenceDiagram`, `flowchart`) - Line breaks and indentation improve readability but aren't required",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [
+        {
+          "line": 177,
+          "text": "- `layout: elk` - Advanced layout for complex diagrams (requires integration)"
+        }
+      ],
+      "source_lines": 218
+    },
+    {
+      "id": "WM-X0381",
+      "repo": "softaworks/agent-toolkit",
+      "path": "skills/professional-communication/SKILL.md",
+      "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/professional-communication/SKILL.md",
+      "sha": "d8b50a2d9d28afb2a567db5dcd68ce4f35446044",
+      "status": "OK",
+      "description": "Guide technical communication for software developers. Covers email structure, team messaging etiquette, meeting agendas, and adapting messages for technical vs non-technical audiences. Use when drafting professional messages, preparing meeting communications, or improving written communication. ",
+      "intro": "This skill provides frameworks and guidance for effective professional communication in software development contexts. Whether you're writing an email to stakeholders, crafting a team chat message, or preparing meeting agendas, these principles help you communicate clearly and build professional credibility. **Core principle:** Effective communication isn't about proving how much you know - it's about ensuring your message is received and understood. - Writing emails to teammates, managers, or stakeholders - Crafting team chat messages or async communications",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 268
+    },
+    {
+      "id": "WM-X0382",
+      "repo": "softaworks/agent-toolkit",
+      "path": "skills/qa-test-planner/SKILL.md",
+      "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/qa-test-planner/SKILL.md",
+      "sha": "a2699325a92f96817a590a5c36699c21cb3545d8",
+      "status": "OK",
+      "description": "Generate comprehensive test plans, manual test cases, regression test suites, and bug reports for QA engineers. Includes Figma MCP integration for design validation. ",
+      "intro": "A comprehensive skill for QA engineers to create test plans, generate manual test cases, build regression test suites, validate designs against Figma, and document bugs effectively. > **Activation:** This skill is triggered only when explicitly called by name (e.g., `/qa-test-planner`, `qa-test-planner`, or `use the skill qa-test-planner`). \"Create a test plan for the user authentication feature\" \"Generate manual test cases for the checkout flow\"",
+      "headings": [
+        {
+          "line": 106,
+          "text": "## Core Deliverables",
+          "depth": 2
+        },
+        {
+          "line": 206,
+          "text": "### Test Steps",
+          "depth": 3
+        },
+        {
+          "line": 258,
+          "text": "## Test Scope",
+          "depth": 2
+        },
+        {
+          "line": 313,
+          "text": "## Test Deliverables",
+          "depth": 2
+        },
+        {
+          "line": 346,
+          "text": "## Steps to Reproduce",
+          "depth": 2
+        },
+        {
+          "line": 387,
+          "text": "### Design Validation Workflow",
+          "depth": 3
+        },
+        {
+          "line": 549,
+          "text": "## Next Steps",
+          "depth": 2
+        },
+        {
+          "line": 572,
+          "text": "### Phase 1: Planning",
+          "depth": 3
+        },
+        {
+          "line": 579,
+          "text": "### Phase 2: Test Design",
+          "depth": 3
+        },
+        {
+          "line": 586,
+          "text": "### Phase 3: Execution",
+          "depth": 3
+        },
+        {
+          "line": 593,
+          "text": "### Phase 4: Reporting",
+          "depth": 3
+        },
+        {
+          "line": 676,
+          "text": "### Test Steps",
+          "depth": 3
+        },
+        {
+          "line": 724,
+          "text": "### Test Steps",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 207,
+          "text": "1. [Action to perform]"
+        },
+        {
+          "line": 210,
+          "text": "2. [Action to perform]"
+        },
+        {
+          "line": 213,
+          "text": "3. [Action to perform]"
+        },
+        {
+          "line": 216,
+          "text": "### Test Data"
+        },
+        {
+          "line": 347,
+          "text": "1. [Specific step]"
+        },
+        {
+          "line": 348,
+          "text": "2. [Specific step]"
+        },
+        {
+          "line": 349,
+          "text": "3. [Specific step]"
+        },
+        {
+          "line": 351,
+          "text": "## Expected Behavior"
+        },
+        {
+          "line": 390,
+          "text": "- Figma MCP server configured"
+        },
+        {
+          "line": 391,
+          "text": "- Access to Figma design files"
+        },
+        {
+          "line": 392,
+          "text": "- Figma URLs for components/pages"
+        },
+        {
+          "line": 396,
+          "text": "1. **Get Design Specs from Figma**"
+        },
+        {
+          "line": 401,
+          "text": "- Dimensions (width, height)"
+        },
+        {
+          "line": 402,
+          "text": "- Colors (background, text, border)"
+        },
+        {
+          "line": 403,
+          "text": "- Typography (font, size, weight)"
+        },
+        {
+          "line": 404,
+          "text": "- Spacing (padding, margin)"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 108,
+          "text": "### 1. Test Plans"
+        },
+        {
+          "line": 109,
+          "text": "- Test scope and objectives"
+        },
+        {
+          "line": 110,
+          "text": "- Testing approach and strategy"
+        },
+        {
+          "line": 111,
+          "text": "- Environment requirements"
+        },
+        {
+          "line": 112,
+          "text": "- Entry/exit criteria"
+        },
+        {
+          "line": 113,
+          "text": "- Risk assessment"
+        },
+        {
+          "line": 114,
+          "text": "- Timeline and milestones"
+        },
+        {
+          "line": 116,
+          "text": "### 2. Manual Test Cases"
+        },
+        {
+          "line": 117,
+          "text": "- Step-by-step instructions"
+        }
+      ],
+      "boundary_evidence": [
+        {
+          "line": 11,
+          "text": "> **Activation:** This skill is triggered only when explicitly called by name (e.g., `/qa-test-planner`, `qa-test-planner`, or `use the skill qa-test-planner`)."
+        }
+      ],
+      "source_lines": 758
+    },
+    {
+      "id": "WM-X0383",
+      "repo": "softaworks/agent-toolkit",
+      "path": "skills/reducing-entropy/SKILL.md",
+      "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/reducing-entropy/SKILL.md",
+      "sha": "9d521f36c30fd490616b40e9f74b890ba2bb9496",
+      "status": "OK",
+      "description": "Manual-only skill for minimizing total codebase size. Only activate when explicitly requested by user. Measures success by final code amount, not effort. Bias toward deletion. ",
+      "intro": "More code begets more code. Entropy accumulates. This skill biases toward the smallest possible codebase. **Core question:** \"What does the codebase look like *after*?\" **Load at least one mindset from `references/`** 1. List the files in the reference directory",
+      "headings": [],
+      "input_evidence": [
+        {
+          "line": 16,
+          "text": "1. List the files in the reference directory"
+        },
+        {
+          "line": 17,
+          "text": "2. Read frontmatter descriptions to pick which applies"
+        },
+        {
+          "line": 18,
+          "text": "3. Load at least one"
+        },
+        {
+          "line": 19,
+          "text": "4. State which you loaded and its core principle"
+        }
+      ],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 82
+    }
+  ]
+}
