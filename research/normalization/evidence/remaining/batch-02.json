@@ -1,0 +1,902 @@
+{
+  "idx": 2,
+  "records": [
+    {
+      "id": "WM-X0077",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/cs-ux-researcher/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-ux-researcher/SKILL.md",
+      "sha": "07dd97c110d36680c8e43ec061a7cb8239ce00cf",
+      "status": "OK",
+      "description": "UX research agent for research planning, persona generation, journey mapping, and usability test analysis. Use when product decisions need user evidence — e.g., planning interview scripts and recruiting criteria for a discovery study, or synthesizing usability-test sessions into prioritized findings and updated personas. ",
+      "intro": "The cs-ux-researcher agent is a specialized user experience research agent focused on research planning, persona creation, journey mapping, and usability test analysis. This agent orchestrates the ux-researcher-designer skill alongside the product-manager-toolkit to ensure product decisions are grounded in validated user insights. This agent is designed for UX researchers, product designers wearing the research hat, and product managers who need structured frameworks for conducting user research, synthesizing findings, and translating insights into actionable product requirements. By combining persona generation with customer interview analysis, the agent bridges the gap between raw user data and design decisions. The cs-ux-researcher agent ensures that user needs drive product development. It provides methodological rigor for research planning, data-driven persona creation, systematic j",
+      "headings": [
+        {
+          "line": 95,
+          "text": "## Workflows",
+          "depth": 2
+        },
+        {
+          "line": 97,
+          "text": "### Workflow 1: Research Plan Creation",
+          "depth": 3
+        },
+        {
+          "line": 126,
+          "text": "# Use the research plan template",
+          "depth": 0
+        },
+        {
+          "line": 156,
+          "text": "### Workflow 2: Persona Generation",
+          "depth": 3
+        },
+        {
+          "line": 211,
+          "text": "# Full persona generation workflow",
+          "depth": 1
+        },
+        {
+          "line": 215,
+          "text": "# Step 1: Analyze interviews",
+          "depth": 1
+        },
+        {
+          "line": 222,
+          "text": "# Step 2: Review persona methodology",
+          "depth": 1
+        },
+        {
+          "line": 225,
+          "text": "# Step 3: Generate personas",
+          "depth": 1
+        },
+        {
+          "line": 228,
+          "text": "# Step 4: Review example format",
+          "depth": 1
+        },
+        {
+          "line": 232,
+          "text": "### Workflow 3: Journey Mapping",
+          "depth": 3
+        },
+        {
+          "line": 289,
+          "text": "# Journey mapping workflow",
+          "depth": 1
+        },
+        {
+          "line": 304,
+          "text": "### Workflow 4: Usability Test Analysis",
+          "depth": 3
+        },
+        {
+          "line": 375,
+          "text": "# Usability test analysis workflow",
+          "depth": 1
+        },
+        {
+          "line": 437,
+          "text": "# Process new interviews",
+          "depth": 1
+        },
+        {
+          "line": 476,
+          "text": "# Developer handoff process",
+          "depth": 1
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 97,
+          "text": "### Workflow 1: Research Plan Creation"
+        },
+        {
+          "line": 102,
+          "text": "1. **Define Research Questions** - Identify what needs to be learned:"
+        },
+        {
+          "line": 103,
+          "text": "- What are the top 3-5 questions stakeholders need answered?"
+        },
+        {
+          "line": 104,
+          "text": "- What do we already know from existing data?"
+        },
+        {
+          "line": 105,
+          "text": "- What assumptions need validation?"
+        },
+        {
+          "line": 106,
+          "text": "- What decisions will this research inform?"
+        },
+        {
+          "line": 108,
+          "text": "2. **Select Methodology** - Choose the right approach:"
+        },
+        {
+          "line": 102,
+          "text": "1. **Define Research Questions** - Identify what needs to be learned:"
+        },
+        {
+          "line": 103,
+          "text": "- What are the top 3-5 questions stakeholders need answered?"
+        },
+        {
+          "line": 104,
+          "text": "- What do we already know from existing data?"
+        },
+        {
+          "line": 105,
+          "text": "- What assumptions need validation?"
+        },
+        {
+          "line": 106,
+          "text": "- What decisions will this research inform?"
+        },
+        {
+          "line": 108,
+          "text": "2. **Select Methodology** - Choose the right approach:"
+        },
+        {
+          "line": 113,
+          "text": "- **Exploratory** (interviews, contextual inquiry): When learning about problem space"
+        },
+        {
+          "line": 114,
+          "text": "- **Evaluative** (usability testing, A/B tests): When validating solutions"
+        },
+        {
+          "line": 115,
+          "text": "- **Generative** (diary studies, card sorting): When discovering new opportunities"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 531
+    },
+    {
+      "id": "WM-X0078",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/cs-wiki-ingestor/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-wiki-ingestor/SKILL.md",
+      "sha": "c4f828b5f8ca959b2d09c346504226773b8913fa",
+      "status": "OK",
+      "description": "Dispatched sub-agent that ingests a new source into an LLM Wiki vault. Reads the source, proposes TL;DR and key claims, identifies which entity/concept/synthesis pages will be touched, flags contradictions with existing pages, and — after user confirmation — writes the source summary, updates cross-references across 5-15 pages, regenerates the index, and appends a standardized log entry. Spawn when the user says \"ingest this\", \"add this paper/article/book to the wiki\", or drops a file into raw/. ",
+      "intro": "You are a disciplined wiki maintainer. A user has dropped a new source into the `raw/` layer of an LLM Wiki vault and asked you to ingest it. Your job is to read it, discuss it with the user, and integrate it into the `wiki/` layer — touching every relevant entity, concept, and synthesis page, flagging contradictions, updating the index, and appending to the log. You are spawned **per-ingest**, not as a long-running agent. You do one source at a time. - Path to a source file (must be inside the vault's `raw/` layer) - The current state of `wiki/` (especially `index.md`) - The vault's `CLAUDE.md` or `AGENTS.md` schema",
+      "headings": [
+        {
+          "line": 17,
+          "text": "## Inputs",
+          "depth": 2
+        },
+        {
+          "line": 23,
+          "text": "## Workflow",
+          "depth": 2
+        },
+        {
+          "line": 33,
+          "text": "### 3. Discuss (user in the loop)",
+          "depth": 3
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 19,
+          "text": "- Path to a source file (must be inside the vault's `raw/` layer)"
+        },
+        {
+          "line": 20,
+          "text": "- The current state of `wiki/` (especially `index.md`)"
+        },
+        {
+          "line": 21,
+          "text": "- The vault's `CLAUDE.md` or `AGENTS.md` schema"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 33,
+          "text": "### 3. Discuss (user in the loop)"
+        },
+        {
+          "line": 35,
+          "text": "- Title, authors, date"
+        },
+        {
+          "line": 36,
+          "text": "- 2-3 sentence TL;DR"
+        },
+        {
+          "line": 37,
+          "text": "- Key claims (3-7 bullets)"
+        },
+        {
+          "line": 38,
+          "text": "- **Which existing wiki pages you plan to touch** (bulleted wikilinks)"
+        },
+        {
+          "line": 39,
+          "text": "- **Any contradictions** with existing pages"
+        },
+        {
+          "line": 40,
+          "text": "- Whether this is a fresh ingest or a **merge** (summary page exists)"
+        },
+        {
+          "line": 44,
+          "text": "### 4. Write the source summary"
+        },
+        {
+          "line": 47,
+          "text": "If the page exists (merge mode), append a new `## Re-ingest <date>` section at the bottom."
+        },
+        {
+          "line": 49,
+          "text": "### 5. Update every relevant page"
+        },
+        {
+          "line": 51,
+          "text": "- **If the page exists:** update \"Key claims\", \"Appears in\" / \"Used in\", increment `sources:`, set `updated:` to today"
+        },
+        {
+          "line": 52,
+          "text": "- **If not:** create a stub page from the appropriate template with at least the minimum (title, summary, one key fact, link back to this source)"
+        },
+        {
+          "line": 56,
+          "text": "### 6. Flag contradictions"
+        },
+        {
+          "line": 59,
+          "text": "### 7. Update synthesis pages"
+        },
+        {
+          "line": 62,
+          "text": "### 8. Regenerate the index"
+        },
+        {
+          "line": 65,
+          "text": "### 9. Log the ingest"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 88
+    },
+    {
+      "id": "WM-X0079",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/cs-wiki-librarian/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-wiki-librarian/SKILL.md",
+      "sha": "8a510161fa4e859fd995a4296cc6aaa793081230",
+      "status": "OK",
+      "description": "Dispatched sub-agent that answers queries against an LLM Wiki vault. Reads index.md first, drills into 3-10 relevant pages across categories, synthesizes an answer with inline [[wikilink]] citations, and offers to file the answer back into the wiki as a new comparison or synthesis page. Spawn when the user asks a substantive question the wiki might answer, says \"what does the wiki say about X\", \"compare A and B across my sources\", or wants to explore a topic. ",
+      "intro": "You answer questions against an LLM Wiki vault. You prioritize reading over re-deriving — the wiki already contains pre-synthesized knowledge with cross-references and citations. Your job is to find the right pages, read them, and compose an answer that cites them properly. You also **file good answers back** into the wiki so explorations compound. You are spawned **per-query**, not as a long-running agent. - The current state of `wiki/` (especially `index.md`) Follow `engineering/llm-wiki/skills/llm-wiki/references/query-workflow.md`. Summary: ### 1. Read `index.md` first",
+      "headings": [
+        {
+          "line": 17,
+          "text": "## Inputs",
+          "depth": 2
+        },
+        {
+          "line": 22,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [
+        {
+          "line": 19,
+          "text": "- The user's question"
+        },
+        {
+          "line": 20,
+          "text": "- The current state of `wiki/` (especially `index.md`)"
+        }
+      ],
+      "process_evidence": [
+        {
+          "line": 26,
+          "text": "### 1. Read `index.md` first"
+        },
+        {
+          "line": 28,
+          "text": "- `synthesis/` for the big picture"
+        },
+        {
+          "line": 29,
+          "text": "- `concepts/` for definitions"
+        },
+        {
+          "line": 30,
+          "text": "- `sources/` for evidence"
+        },
+        {
+          "line": 31,
+          "text": "- `entities/` for context"
+        },
+        {
+          "line": 32,
+          "text": "- `comparisons/` for explicit contrasts"
+        },
+        {
+          "line": 34,
+          "text": "### 2. Read the picked pages in full"
+        },
+        {
+          "line": 37,
+          "text": "### 3. Follow wikilinks opportunistically"
+        },
+        {
+          "line": 40,
+          "text": "### 4. Fall back to search if needed"
+        },
+        {
+          "line": 48,
+          "text": "### 5. Synthesize the answer"
+        },
+        {
+          "line": 50,
+          "text": "- **Direct answer** — 1-3 sentences"
+        },
+        {
+          "line": 51,
+          "text": "- **Supporting detail** — organized thematically"
+        },
+        {
+          "line": 52,
+          "text": "- **Inline citations** — `[[sources/xxx]]` wikilinks throughout; every claim links to its source"
+        },
+        {
+          "line": 53,
+          "text": "- **Related pages** — 3-5 wikilinks at the end"
+        },
+        {
+          "line": 55,
+          "text": "### 6. Offer to file the answer back"
+        },
+        {
+          "line": 62,
+          "text": "- Pick the right category (most often `comparisons/` or `synthesis/`)"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 82
+    },
+    {
+      "id": "WM-X0080",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/cs-wiki-linter/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-wiki-linter/SKILL.md",
+      "sha": "325d908b6f23af91e8d0c354d4b4032f1173666a",
+      "status": "OK",
+      "description": "Dispatched sub-agent that runs a periodic health check on an LLM Wiki vault. Runs mechanical checks via scripts (orphans, broken links, stale pages, missing frontmatter, duplicate titles, log gaps), does semantic checks (contradictions, stale claims, cross-reference gaps, concepts missing their own page), and produces a markdown report with suggested actions. Spawn weekly, after batch ingests, or when the user says \"check the wiki\" / \"lint my wiki\" / \"audit the vault\". ",
+      "intro": "You are the wiki's auditor. You run periodic health checks and surface problems for the user to fix — contradictions, orphans, stale pages, missing cross-references, concepts lacking their own page. You do NOT silently auto-fix structural issues; you report and suggest. The user decides what to fix. You are spawned **per-lint-pass**, not as a long-running agent. Follow `engineering/llm-wiki/skills/llm-wiki/references/lint-workflow.md`. Three passes. ### Pass 1 — Mechanical (scripts) python <plugin>/scripts/lint_wiki.py --vault . --json > /tmp/lint.json",
+      "headings": [
+        {
+          "line": 17,
+          "text": "## Workflow",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 21,
+          "text": "### Pass 1 — Mechanical (scripts)"
+        },
+        {
+          "line": 31,
+          "text": "- Orphans (zero inbound links)"
+        },
+        {
+          "line": 32,
+          "text": "- Broken links (wikilinks pointing to non-existent pages)"
+        },
+        {
+          "line": 33,
+          "text": "- Stale pages (`updated:` older than 90 days)"
+        },
+        {
+          "line": 34,
+          "text": "- Missing frontmatter (pages without title/category/summary)"
+        },
+        {
+          "line": 35,
+          "text": "- Duplicate titles"
+        },
+        {
+          "line": 36,
+          "text": "- Log gap (no entries in 14+ days)"
+        },
+        {
+          "line": 37,
+          "text": "- Connected components (more than 1 = disconnected islands)"
+        },
+        {
+          "line": 38,
+          "text": "- Hubs (high-fan-out or high-fan-in pages)"
+        },
+        {
+          "line": 39,
+          "text": "- Sinks (no outbound links)"
+        },
+        {
+          "line": 41,
+          "text": "### Pass 2 — Semantic (you read and think)"
+        },
+        {
+          "line": 55,
+          "text": "### Pass 3 — Report"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 103
+    },
+    {
+      "id": "WM-X0081",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/okr/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/okr/SKILL.md",
+      "sha": "60efbe552cafbb4ce456ed2341b1d8f290930f2c",
+      "status": "OK",
+      "description": "Generate OKR cascades from company strategy to team objectives. Usage: /okr generate <strategy>\" ",
+      "intro": "Generate cascaded OKR frameworks from company-level strategy down to team-level key results. /okr generate <strategy>                                     Generate OKR cascade Supported strategies: `growth`, `retention`, `revenue`, `innovation`, `operational` Pass a strategy keyword directly. The generator produces company, department, and team-level OKRs aligned to the chosen strategy. /okr generate growth --json",
+      "headings": [
+        {
+          "line": 18,
+          "text": "## Input Format",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 38
+    },
+    {
+      "id": "WM-X0082",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/persona/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/persona/SKILL.md",
+      "sha": "37ef9ca85ab977bf620839cf5f1a913bb1538134",
+      "status": "OK",
+      "description": "Generate data-driven user personas for UX research and product design. Usage: /persona generate [options]\" ",
+      "intro": "Generate structured user personas with demographics, goals, pain points, and behavioral patterns. /persona generate                                            Generate persona (interactive) /persona generate json                                       Generate persona as JSON Interactive mode prompts for product context. Alternatively, provide context inline: > Product: B2B project management tool",
+      "headings": [
+        {
+          "line": 17,
+          "text": "## Input Format",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 41
+    },
+    {
+      "id": "WM-X0083",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/prd/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/prd/SKILL.md",
+      "sha": "a8c3f80c3f3d116fe870e16730e5827e7d795508",
+      "status": "OK",
+      "description": "Gated PRD generation — interrogates problem, user, and metric before drafting; refuses to draft on unknowns. Usage: /prd <feature-or-problem>\" ",
+      "intro": "Generate a concise, evidence-gated product requirements document for `$ARGUMENTS`. `$ARGUMENTS` is the feature, initiative, or problem statement. If empty, ask for it before doing anything else. ## Phase 1 — Forcing Questions (before any drafting) Walk these one at a time. Do not batch them. Each answer feeds a required PRD section. 1. **Problem** — What user problem does this solve, and how do you know it exists? (Evidence: support tickets, interview quotes, funnel data — \"the CEO wants it\" is not evidence.)",
+      "headings": [
+        {
+          "line": 19,
+          "text": "## Phase 1 — Forcing Questions (before any drafting)",
+          "depth": 2
+        },
+        {
+          "line": 33,
+          "text": "## Phase 2 — Draft (required-sections checklist)",
+          "depth": 2
+        },
+        {
+          "line": 48,
+          "text": "## Phase 3 — Prioritization hook (optional)",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 23,
+          "text": "1. **Problem** — What user problem does this solve, and how do you know it exists? (Evidence: support tickets, interview quotes, funnel data — \"the CEO wants it\" is not evidence.)"
+        },
+        {
+          "line": 24,
+          "text": "2. **User** — Who specifically has this problem? (Segment, role, frequency of pain. \"Everyone\" is a non-answer.)"
+        },
+        {
+          "line": 25,
+          "text": "3. **Metric** — What single number moves if this works, by how much, measured where?"
+        },
+        {
+          "line": 26,
+          "text": "4. **Alternatives** — What do these users do today instead? Why is that not good enough?"
+        },
+        {
+          "line": 27,
+          "text": "5. **Non-goals** — What adjacent asks are explicitly out of scope for v1?"
+        },
+        {
+          "line": 29,
+          "text": "## Drafting Gate (hard refusal)"
+        },
+        {
+          "line": 37,
+          "text": "- [ ] Problem statement (with the evidence from Q1)"
+        },
+        {
+          "line": 38,
+          "text": "- [ ] Target user and segment (from Q2)"
+        },
+        {
+          "line": 39,
+          "text": "- [ ] Goals and explicit non-goals (from Q5)"
+        },
+        {
+          "line": 40,
+          "text": "- [ ] User stories with acceptance criteria"
+        },
+        {
+          "line": 41,
+          "text": "- [ ] Success metric + threshold + measurement source (from Q3)"
+        },
+        {
+          "line": 42,
+          "text": "- [ ] Alternatives considered / \"do nothing\" baseline (from Q4)"
+        },
+        {
+          "line": 43,
+          "text": "- [ ] Scope, dependencies, and timeline assumptions"
+        },
+        {
+          "line": 44,
+          "text": "- [ ] Open questions and risks"
+        },
+        {
+          "line": 48,
+          "text": "## Phase 3 — Prioritization hook (optional)"
+        },
+        {
+          "line": 56,
+          "text": "## Repo Assets (verified paths)"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 67
+    },
+    {
+      "id": "WM-X0084",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/product-manager/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/product-manager/SKILL.md",
+      "sha": "5f28924f17d86527858c0349965c626be345e000",
+      "status": "OK",
+      "description": "Ships outcomes, not features. Writes specs engineers actually read. Prioritizes ruthlessly. Kills darlings when the data says so. Operates at the intersection of user needs, business goals, and engineering reality. Use when product work needs ruthless prioritization and a success metric — e.g., turning vague stakeholder asks into a 2-page spec, or deciding which of three competing roadmap bets to fund this quarter. (For framework-heavy RICE/PRD tooling, see cs-product-manager.) ",
+      "intro": "You've shipped 12 major launches. You've also killed 3 products that weren't working — hardest decisions, best outcomes. You learned that discovery matters more than delivery, that the best PRD is 2 pages not 20, and that \"the CEO wants it\" is never a user need. You operate at the intersection of three forces: what users actually need (not what they say they want), what the business needs to grow, and what engineering can realistically build this quarter. When those three conflict, you make the trade-off explicit and let data decide. **Outcomes over outputs.** \"We shipped 14 features\" means nothing. \"We reduced time-to-value from 3 days to 30 minutes\" means everything. Define the success metric before writing a single story. **Cheapest test wins.** Before building anything, ask: what's the cheapest way to validate this? A fake door test beats a prototype. A prototype beats an MVP. An MVP",
+      "headings": [
+        {
+          "line": 57,
+          "text": "## When to Use Me",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 77
+    },
+    {
+      "id": "WM-X0085",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/project-health/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/project-health/SKILL.md",
+      "sha": "0f86103e82f321e325b29994b59922a9479071ae",
+      "status": "OK",
+      "description": "Portfolio health dashboard and risk matrix analysis. Usage: /project-health <dashboard|risk> [options]\" ",
+      "intro": "Generate portfolio health dashboards and risk matrices for project oversight. /project-health dashboard <project_data.json>                Portfolio health dashboard /project-health risk <risk_data.json>                        Risk matrix analysis \"project_name\": \"Platform Rewrite\", \"schedule\": {\"planned_end\": \"2026-06-30\", \"projected_end\": \"2026-07-15\", \"milestones_hit\": 4, \"milestones_total\": 6},",
+      "headings": [
+        {
+          "line": 18,
+          "text": "## Input Format",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 45
+    },
+    {
+      "id": "WM-X0086",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/retro/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/retro/SKILL.md",
+      "sha": "f325d2e0ede478376c714ffbaf1d481544b4467b",
+      "status": "OK",
+      "description": "Analyze sprint retrospectives for patterns and action item tracking. Usage: /retro analyze <retro_data.json>\" ",
+      "intro": "Analyze retrospective data for recurring themes, sentiment trends, and action item effectiveness. /retro analyze <retro_data.json>                             Full retrospective analysis \"sprint_name\": \"Sprint 24\", \"went_well\": [\"CI pipeline improvements\", \"Pair programming sessions\"], \"improvements\": [\"Too many meetings\", \"Flaky integration tests\"],",
+      "headings": [
+        {
+          "line": 16,
+          "text": "## Input Format",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 43
+    },
+    {
+      "id": "WM-X0087",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/rice/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/rice/SKILL.md",
+      "sha": "3bc94228539b813192db876ff93abeee874bbb08",
+      "status": "OK",
+      "description": "RICE feature prioritization with scoring and capacity planning. Usage: /rice prioritize <features.csv> [options]\" ",
+      "intro": "Prioritize features using RICE scoring (Reach, Impact, Confidence, Effort) with optional capacity constraints. /rice prioritize <features.csv>                              Score and rank features /rice prioritize <features.csv> --capacity 20                Rank with effort capacity limit feature,reach,impact,confidence,effort SSO integration,3000,2,0.7,5",
+      "headings": [
+        {
+          "line": 17,
+          "text": "## Input Format",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 40
+    },
+    {
+      "id": "WM-X0088",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/sprint-plan/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/sprint-plan/SKILL.md",
+      "sha": "ab487f766ac801561467a28e73d4ede6ded86429",
+      "status": "OK",
+      "description": "Capacity-gated sprint planning — runs capacity math, carry-over check, and a definition-of-ready gate before committing scope. Usage: /sprint-plan <goal> [capacity]\" ",
+      "intro": "Create a sprint plan for `$ARGUMENTS` with explicit capacity math, a carry-over check, and a definition-of-ready gate. The first token(s) of `$ARGUMENTS` are the sprint goal; a trailing number is treated as team capacity (story points or person-days). If no capacity is given, compute it in Phase 1 — never invent it. /sprint-plan <goal> [capacity] # e.g. /sprint-plan \"Checkout v2 ready for beta\" 34 ## Phase 1 — Capacity Math (do the arithmetic, show it) 1. **Raw capacity** = team size × working days in sprint × focus factor (default 0.7; ask if unknown)",
+      "headings": [
+        {
+          "line": 18,
+          "text": "## Phase 1 — Capacity Math (do the arithmetic, show it)",
+          "depth": 2
+        },
+        {
+          "line": 26,
+          "text": "## Phase 2 — Carry-Over Check (before adding anything new)",
+          "depth": 2
+        },
+        {
+          "line": 33,
+          "text": "## Phase 3 — Definition-of-Ready Gate (per story)",
+          "depth": 2
+        },
+        {
+          "line": 49,
+          "text": "## Phase 4 — Output Structure",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 20,
+          "text": "1. **Raw capacity** = team size × working days in sprint × focus factor (default 0.7; ask if unknown)"
+        },
+        {
+          "line": 21,
+          "text": "2. **Deductions** — subtract, explicitly and line by line: holidays/PTO, on-call/support rotation, ceremonies (~10%), known interrupts"
+        },
+        {
+          "line": 22,
+          "text": "3. **Velocity cross-check** — compare against the rolling average of the last 3 sprints' *completed* (not committed) points. If computed capacity exceeds trailing velocity by >15%, plan to trailing velocity and say so."
+        },
+        {
+          "line": 26,
+          "text": "## Phase 2 — Carry-Over Check (before adding anything new)"
+        },
+        {
+          "line": 28,
+          "text": "1. List every item carried over from the last sprint (not Done at sprint close)"
+        },
+        {
+          "line": 29,
+          "text": "2. Re-estimate *remaining* effort — never carry the original estimate"
+        },
+        {
+          "line": 30,
+          "text": "3. Carry-over consumes capacity **first**; new scope only gets what is left"
+        },
+        {
+          "line": 31,
+          "text": "4. If carry-over exceeds ~30% of capacity, flag it as a systemic over-commitment signal and recommend a smaller commitment this sprint, not a bigger push"
+        },
+        {
+          "line": 33,
+          "text": "## Phase 3 — Definition-of-Ready Gate (per story)"
+        },
+        {
+          "line": 37,
+          "text": "- [ ] User story has a clear actor, action, and outcome (INVEST-compliant)"
+        },
+        {
+          "line": 38,
+          "text": "- [ ] Acceptance criteria written and testable"
+        },
+        {
+          "line": 39,
+          "text": "- [ ] Estimated by the team (not by the planner alone)"
+        },
+        {
+          "line": 40,
+          "text": "- [ ] Dependencies identified and either resolved or scheduled"
+        },
+        {
+          "line": 41,
+          "text": "- [ ] Small enough to finish within the sprint (split if not)"
+        },
+        {
+          "line": 49,
+          "text": "## Phase 4 — Output Structure"
+        },
+        {
+          "line": 51,
+          "text": "- **Sprint goal** — one sentence; everything committed must serve it"
+        }
+      ],
+      "output_evidence": [
+        {
+          "line": 51,
+          "text": "- **Sprint goal** — one sentence; everything committed must serve it"
+        },
+        {
+          "line": 52,
+          "text": "- **Capacity table** — from Phase 1"
+        },
+        {
+          "line": 53,
+          "text": "- **Carry-over** — from Phase 2, listed first in committed scope"
+        },
+        {
+          "line": 54,
+          "text": "- **Committed scope** — stories that passed the DoR gate, summing to ≤ planning number"
+        },
+        {
+          "line": 55,
+          "text": "- **Stretch scope** — clearly separated; pulled only if committed scope finishes"
+        },
+        {
+          "line": 56,
+          "text": "- **Risks and dependencies** — with named owners"
+        },
+        {
+          "line": 57,
+          "text": "- **DoR exceptions** — empty if the gate was honored; otherwise justify each"
+        },
+        {
+          "line": 59,
+          "text": "## Repo Assets (verified paths)"
+        }
+      ],
+      "boundary_evidence": [],
+      "source_lines": 70
+    },
+    {
+      "id": "WM-X0089",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/user-story/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/user-story/SKILL.md",
+      "sha": "30a32fd57522354346a5cf39a494abac8d61e291",
+      "status": "OK",
+      "description": "Generate user stories with acceptance criteria and sprint planning. Usage: /user-story <generate|sprint> [options]\" ",
+      "intro": "Generate structured user stories with acceptance criteria, story points, and sprint capacity planning. /user-story generate                                         Generate user stories (interactive) /user-story sprint <capacity>                                Plan sprint with story point capacity Interactive mode prompts for feature context. For sprint planning, provide capacity as story points: > Feature: User authentication",
+      "headings": [
+        {
+          "line": 7,
+          "text": "# /user-story",
+          "depth": 1
+        },
+        {
+          "line": 18,
+          "text": "## Input Format",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 45
+    },
+    {
+      "id": "WM-X0090",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/wiki-ingest/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/wiki-ingest/SKILL.md",
+      "sha": "addbab0bad01df613187f68bb55e3ff0a5c618db",
+      "status": "OK",
+      "description": "Ingest a source file from raw/ into the LLM Wiki — read, discuss, write summary page, update cross-references across 5-15 pages, regenerate index, append to log. Usage /wiki-ingest <path-to-source> ",
+      "intro": "<!-- canonical copy: engineering/llm-wiki/commands/wiki-ingest.md — keep in sync (root copy uses repo-root-relative script paths) --> Ingest a new source into the LLM Wiki. This is the most-used command. The flow: read the source → discuss TL;DR and key claims with you → write a source summary page → update every relevant entity and concept page → flag contradictions → update `index.md` → append to `log.md`. A typical ingest touches **5-15 wiki pages**. You (the user) are in the loop: the ingestor proposes changes and waits for your confirmation before writing. /wiki-ingest raw/papers/monosemanticity.pdf",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 54
+    },
+    {
+      "id": "WM-X0091",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/wiki-init/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/wiki-init/SKILL.md",
+      "sha": "1f88611dd4b52971e529f54680ecfefe1fbd6ee4",
+      "status": "OK",
+      "description": "Bootstrap a fresh LLM Wiki vault with the three-layer structure, schema files, and starter templates. Usage /wiki-init <path> --topic \"<topic>\" [--tool all|claude-code|codex|cursor|antigravity] ",
+      "intro": "<!-- canonical copy: engineering/llm-wiki/commands/wiki-init.md — keep in sync --> Bootstrap a new LLM Wiki vault. Creates `raw/`, `wiki/{entities,concepts,sources,comparisons,synthesis}`, the index and log, and installs the schema file(s) for your LLM CLI of choice. /wiki-init <path> --topic \"<one-line topic>\" /wiki-init <path> --topic \"<topic>\" --tool <claude-code|codex|cursor|antigravity|opencode|gemini-cli|all> /wiki-init <path> --topic \"<topic>\" --force    # overwrite non-empty dir",
+      "headings": [
+        {
+          "line": 48,
+          "text": "## Next steps",
+          "depth": 2
+        }
+      ],
+      "input_evidence": [],
+      "process_evidence": [
+        {
+          "line": 51,
+          "text": "1. Open the vault in Obsidian"
+        },
+        {
+          "line": 52,
+          "text": "2. Drop a source into `raw/`"
+        },
+        {
+          "line": 53,
+          "text": "3. Run `/wiki-ingest raw/<your-file>`"
+        }
+      ],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 62
+    },
+    {
+      "id": "WM-X0092",
+      "repo": "alirezarezvani/claude-skills",
+      "path": ".gemini/skills/wiki-lint/SKILL.md",
+      "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/wiki-lint/SKILL.md",
+      "sha": "6a69eb18ca025f3331108297e5a09ddfad8e6f58",
+      "status": "OK",
+      "description": "Run a health check on the LLM Wiki vault — mechanical checks (orphans, broken links, stale pages, missing frontmatter, log gap, duplicates) plus semantic checks (contradictions, cross-reference gaps, concepts missing their own page). Outputs a markdown report with suggested actions. Usage /wiki-lint [--stale-days N] [--log-gap-days N] ",
+      "intro": "<!-- canonical copy: engineering/llm-wiki/commands/wiki-lint.md — keep in sync (root copy uses repo-root-relative script paths) --> Health-check the wiki. Surfaces orphan pages, broken wikilinks, stale claims, missing frontmatter, contradictions, and structural drift. **Reports, doesn't silently fix** — you decide what to change. Run this weekly, after batch ingests, and always before sharing the wiki. /wiki-lint --stale-days 60 /wiki-lint --log-gap-days 7",
+      "headings": [],
+      "input_evidence": [],
+      "process_evidence": [],
+      "output_evidence": [],
+      "boundary_evidence": [],
+      "source_lines": 85
+    }
+  ]
+}
