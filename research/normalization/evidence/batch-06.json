@@ -1,0 +1,1629 @@
+{
+  "batch": 6,
+  "extraction_version": "0.1.1",
+  "records": [
+    {
+      "id": "WM-X0026",
+      "repo": "KalarisLabs/research-agent-skills",
+      "path": "skills/autoresearch/SKILL.md",
+      "blob_sha": "a84d2d837efae5f8d55a7e5ecb693de9bc4e51a0",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "autoresearch",
+      "description": "Orchestrates end-to-end autonomous AI research projects using a two-loop architecture. The inner loop runs rapid experiment iterations with clear optimization targets. The outer loop synthesizes results, identifies patterns, and steers research direction. Routes to domain-specific skills for execution, supports continuous agent operation via Claude Code /loop and OpenClaw heartbeat, and produces research presentations and papers. Use when starting a research project, running autonomous experiments, or managing a multi-hypothesis research effort.",
+      "headings": [],
+      "steps": [
+        {
+          "line": 57,
+          "text": "- **`src/`**: When you write useful code (plotting functions, data loaders, evaluation helpers), move it here so it can be reused across experiments. Don't duplicate code in every experiment directory."
+        },
+        {
+          "line": 58,
+          "text": "- **`data/`**: Save raw result data (metric CSVs, training logs, small outputs) here in a structured way. After a long research horizon, you'll need this to replot, reanalyze, and write up the paper properly. N"
+        },
+        {
+          "line": 91,
+          "text": "- **Return to literature** when results surprise you, assumptions break, or you need context for a new direction — always save what you find to `literature/`"
+        },
+        {
+          "line": 92,
+          "text": "- **Brainstorm new ideas** using `21-research-ideation/` skills when you're stuck or when results open unexpected questions"
+        },
+        {
+          "line": 93,
+          "text": "- **Pivot the question entirely** if experiments reveal the original question was wrong or less interesting than what you found"
+        },
+        {
+          "line": 101,
+          "text": "1. **Search literature** for the research question. Use multiple sources — never stop at one:"
+        },
+        {
+          "line": 102,
+          "text": "- **Exa MCP** (`web_search_exa`) if available — best for broad discovery and finding relevant papers quickly"
+        },
+        {
+          "line": 103,
+          "text": "- **Semantic Scholar** (`pip install semanticscholar`) — best for ML/AI papers, citation graphs, and specific paper lookup. See `20-ml-paper-writing` skill's `references/citation-workflow.md` for complete API c"
+        },
+        {
+          "line": 104,
+          "text": "- **arXiv** (`pip install arxiv`) — best for recent preprints and open-access papers"
+        },
+        {
+          "line": 105,
+          "text": "- **CrossRef** — best for DOI lookup and BibTeX retrieval"
+        },
+        {
+          "line": 110,
+          "text": "2. **Identify gaps** from the literature"
+        },
+        {
+          "line": 114,
+          "text": "3. **Form initial hypotheses** — invoke `21-research-ideation/` skills"
+        },
+        {
+          "line": 119,
+          "text": "4. **Define the evaluation**"
+        },
+        {
+          "line": 124,
+          "text": "5. **Record** in research-state.yaml, log the bootstrap in research-log.md"
+        },
+        {
+          "line": 130,
+          "text": "- **Optimization**: make a metric go up/down (val_loss, accuracy, throughput). Think Karpathy's autoresearch."
+        },
+        {
+          "line": 131,
+          "text": "- **Discovery**: test mechanistic hypotheses about why something works. The metric is a measurement (does grokking happen faster? does entropy increase before forgetting?), not just a target to optimize."
+        },
+        {
+          "line": 134,
+          "text": "1.  Pick the highest-priority untested hypothesis"
+        },
+        {
+          "line": 135,
+          "text": "2.  Write a protocol: what change, what prediction, why"
+        },
+        {
+          "line": 138,
+          "text": "3.  Run the experiment (invoke the relevant domain skill)"
+        },
+        {
+          "line": 139,
+          "text": "4.  Sanity check before trusting results:"
+        },
+        {
+          "line": 143,
+          "text": "5.  Measure the proxy metric"
+        },
+        {
+          "line": 144,
+          "text": "6.  Record in experiments/{hypothesis-slug}/"
+        }
+      ],
+      "cues": [
+        {
+          "line": 51,
+          "text": "│       ├── results/          # Raw outputs, metrics, logs"
+        },
+        {
+          "line": 58,
+          "text": "- **`data/`**: Save raw result data (metric CSVs, training logs, small outputs) here in a structured way. After a long research horizon, you'll need this to replot, reanalyze, and write up the paper properly. N"
+        },
+        {
+          "line": 108,
+          "text": "**Save everything to `literature/`**: For every paper you find, save a summary to `literature/` — title, authors, year, key findings, relevance to your question, and the URL/DOI. Create one file per paper and a"
+        },
+        {
+          "line": 229,
+          "text": "Note: coherent negative results are a valid contribution. \"X does NOT work because Y\" is publishable if the reasoning is rigorous."
+        },
+        {
+          "line": 302,
+          "text": "- Before requesting human input on a decision"
+        },
+        {
+          "line": 329,
+          "text": "**Hard rule**: Protocol commits MUST precede result commits. Never combine them. The git history is your lightweight pre-registration — it proves what you planned before you saw results. Don't commit after ever"
+        },
+        {
+          "line": 348,
+          "text": "- **Lock before you run**: Commit your experiment protocol to git before executing. This proves your plan existed before you saw results. Never combine protocol + results in one commit."
+        },
+        {
+          "line": 353,
+          "text": "- **Never stop**: Don't wait for human approval on routine decisions. If a skill or tool suggests collaboration, adapt and keep going. Find the best path forward autonomously. The human will see your progress r"
+        },
+        {
+          "line": 376,
+          "text": "- The real contribution requires synthesis beyond the metric"
+        }
+      ],
+      "lines": 419
+    },
+    {
+      "id": "WM-X0028",
+      "repo": "KalarisLabs/research-agent-skills",
+      "path": "skills/brainstorming-research-ideas/SKILL.md",
+      "blob_sha": "a0e1882385dabdc11a5363bb6c25152398347d39",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "brainstorming-research-ideas",
+      "description": "Guides researchers through structured ideation frameworks to discover high-impact research directions. Use when exploring new problem spaces, pivoting between projects, or seeking novel angles on existing work.",
+      "headings": [
+        {
+          "line": 172,
+          "text": "### 6. Failure Analysis and Boundary Probing"
+        },
+        {
+          "line": 290,
+          "text": "## Integrated Brainstorming Workflow"
+        },
+        {
+          "line": 294,
+          "text": "### Phase 1: Diverge (Generate Candidates)"
+        },
+        {
+          "line": 305,
+          "text": "### Phase 2: Converge (Filter and Rank)"
+        },
+        {
+          "line": 319,
+          "text": "### Phase 3: Refine (Sharpen the Winner)"
+        }
+      ],
+      "steps": [
+        {
+          "line": 50,
+          "text": "1. Write down your idea in one sentence"
+        },
+        {
+          "line": 51,
+          "text": "2. Classify it: Is this problem-first or solution-first?"
+        },
+        {
+          "line": 52,
+          "text": "3. If problem-first → verify the problem matters (who suffers? how much?)"
+        },
+        {
+          "line": 53,
+          "text": "4. If solution-first → identify at least two genuine problems it addresses"
+        },
+        {
+          "line": 54,
+          "text": "5. For either mode, articulate the gap: what cannot be done today that this enables?"
+        },
+        {
+          "line": 74,
+          "text": "1. State your current research focus in one sentence"
+        },
+        {
+          "line": 75,
+          "text": "2. Move UP: What is the general principle behind this? What class of problems does this belong to?"
+        },
+        {
+          "line": 76,
+          "text": "3. Move DOWN: What is the most specific, constrained instance of this? What happens at the extreme?"
+        },
+        {
+          "line": 77,
+          "text": "4. Move SIDEWAYS: Where else does this pattern appear in a different field?"
+        },
+        {
+          "line": 78,
+          "text": "5. For each new level, ask: Is this a publishable contribution on its own?"
+        },
+        {
+          "line": 81,
+          "text": "- **Current**: \"Improving retrieval accuracy for RAG systems\""
+        },
+        {
+          "line": 83,
+          "text": "- **Down**: \"How does retrieval accuracy degrade when documents are adversarially perturbed?\""
+        },
+        {
+          "line": 84,
+          "text": "- **Sideways**: \"Database query optimization uses similar relevance ranking—what can we borrow?\""
+        },
+        {
+          "line": 104,
+          "text": "1. Pick your research area"
+        },
+        {
+          "line": 105,
+          "text": "2. List the top 3-5 desiderata (things everyone wants)"
+        },
+        {
+          "line": 106,
+          "text": "3. Identify pairs that are commonly treated as trade-offs"
+        },
+        {
+          "line": 107,
+          "text": "4. For each pair, ask: Is this trade-off fundamental or an artifact of current methods?"
+        },
+        {
+          "line": 108,
+          "text": "5. If artifact → the reconciliation IS your research contribution"
+        },
+        {
+          "line": 109,
+          "text": "6. If fundamental → characterizing the Pareto frontier is itself valuable"
+        },
+        {
+          "line": 123,
+          "text": "- **Structural fidelity**: The mapping must hold at the level of underlying mechanisms, not just surface similarity"
+        },
+        {
+          "line": 124,
+          "text": "- **Non-obvious connection**: If the link is well-known, the novelty is gone"
+        },
+        {
+          "line": 125,
+          "text": "- **Testable predictions**: The analogy should generate concrete hypotheses"
+        }
+      ],
+      "cues": [
+        {
+          "line": 177,
+          "text": "- **Distributional**: What happens with out-of-distribution inputs?"
+        },
+        {
+          "line": 377,
+          "text": "3. **Walk through frameworks interactively**: Apply each framework step-by-step, asking the researcher for domain-specific inputs"
+        }
+      ],
+      "lines": 393
+    },
+    {
+      "id": "WM-X0029",
+      "repo": "KalarisLabs/research-agent-skills",
+      "path": "skills/citation-management/SKILL.md",
+      "blob_sha": "1da3952859e51557a5d96a419ec4c43e47ed4491",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "citation-management",
+      "description": "Searches OpenAlex, PubMed, and Google Scholar, extracts metadata from DOIs, PMIDs, PMCIDs, arXiv IDs, and URLs via CrossRef, PubMed, and arXiv, then formats, deduplicates, and validates BibTeX files using bundled Python scripts (search_openalex.py, extract_metadata.py, format_bibtex.py, validate_citations.py, doi_to_bibtex.py). Use when converting DOIs or PMIDs to BibTeX, finding papers on a topic, filling missing volume, pages, or DOI fields, cleaning or merging .bib files with duplicate entries, or checking a bibliography for errors before submission. Not for systematic review search methodology or synthesis; use literature-review for that.",
+      "headings": [
+        {
+          "line": 52,
+          "text": "## Core Workflow"
+        },
+        {
+          "line": 58,
+          "text": "### Phase 1: Paper Discovery and Search"
+        },
+        {
+          "line": 81,
+          "text": "### Phase 2: Metadata Extraction"
+        },
+        {
+          "line": 97,
+          "text": "### Phase 2.5: Metadata Enrichment via Web Search (MANDATORY)"
+        },
+        {
+          "line": 122,
+          "text": "### Phase 3: BibTeX Formatting"
+        },
+        {
+          "line": 136,
+          "text": "### Phase 4: Citation Validation"
+        },
+        {
+          "line": 155,
+          "text": "### Phase 5: Integration with Writing Workflow"
+        },
+        {
+          "line": 207,
+          "text": "### Literature Review Skill"
+        }
+      ],
+      "steps": [
+        {
+          "line": 174,
+          "text": "1. **Single source bias**: Only using one database"
+        },
+        {
+          "line": 175,
+          "text": "- **Solution**: Search at least OpenAlex and PubMed, then merge with"
+        },
+        {
+          "line": 178,
+          "text": "2. **Accepting metadata blindly**: Not verifying extracted information"
+        },
+        {
+          "line": 179,
+          "text": "- **Solution**: Spot-check extracted metadata against original sources"
+        },
+        {
+          "line": 181,
+          "text": "3. **Ignoring DOI errors**: Broken or incorrect DOIs in bibliography"
+        },
+        {
+          "line": 182,
+          "text": "- **Solution**: Run validation before final submission"
+        },
+        {
+          "line": 184,
+          "text": "4. **Inconsistent formatting**: Mixed citation key styles, formatting"
+        },
+        {
+          "line": 185,
+          "text": "- **Solution**: Use format_bibtex.py to standardize"
+        },
+        {
+          "line": 187,
+          "text": "5. **Duplicate entries**: Same paper cited multiple times with different keys"
+        },
+        {
+          "line": 188,
+          "text": "- **Solution**: Use duplicate detection in validation"
+        },
+        {
+          "line": 190,
+          "text": "6. **Missing required fields**: Incomplete BibTeX entries (volume, pages, DOI missing)"
+        },
+        {
+          "line": 191,
+          "text": "- **Solution**: Run Phase 2.5 metadata enrichment — web search for every missing field before proceeding. NEVER leave an @article entry without volume, pages, and DOI."
+        },
+        {
+          "line": 193,
+          "text": "7. **Outdated preprints**: Citing preprint when published version exists"
+        },
+        {
+          "line": 194,
+          "text": "- **Solution**: Check if preprints have been published, update to journal version"
+        },
+        {
+          "line": 196,
+          "text": "8. **Special character issues**: Broken LaTeX compilation due to characters"
+        },
+        {
+          "line": 197,
+          "text": "- **Solution**: Use proper escaping or Unicode in BibTeX"
+        },
+        {
+          "line": 199,
+          "text": "9. **No validation before submission**: Submitting with citation errors"
+        },
+        {
+          "line": 200,
+          "text": "- **Solution**: Always run validation as final check"
+        },
+        {
+          "line": 202,
+          "text": "10. **Manual BibTeX entry**: Typing entries by hand"
+        },
+        {
+          "line": 203,
+          "text": "- **Solution**: Always extract from metadata sources using scripts"
+        },
+        {
+          "line": 211,
+          "text": "- **Literature Review**: Multi-database systematic search and synthesis"
+        },
+        {
+          "line": 212,
+          "text": "- **Citation Management**: Metadata extraction and validation"
+        }
+      ],
+      "cues": [
+        {
+          "line": 65,
+          "text": "python scripts/search_openalex.py \"CRISPR gene editing\" --limit 50 --output results.json"
+        },
+        {
+          "line": 68,
+          "text": "python scripts/search_pubmed.py \"Alzheimer's disease treatment\" --limit 100 --output alz.json"
+        },
+        {
+          "line": 71,
+          "text": "python scripts/search_google_scholar.py \"CRISPR gene editing\" --limit 50 --output scholar.json"
+        },
+        {
+          "line": 76,
+          "text": "enough that it should be a supplement rather than a dependency."
+        },
+        {
+          "line": 89,
+          "text": "python scripts/extract_metadata.py --input identifiers.txt --output citations.bib"
+        },
+        {
+          "line": 128,
+          "text": "python scripts/format_bibtex.py references.bib --output clean.bib --deduplicate"
+        },
+        {
+          "line": 129,
+          "text": "python scripts/format_bibtex.py references.bib --output clean.bib --rekey --deduplicate"
+        },
+        {
+          "line": 132,
+          "text": "Writing is opt-in: without `--output` (or `--in-place`) the result goes to"
+        },
+        {
+          "line": 133,
+          "text": "stdout and the input file is left alone. Use `--rekey` when merging results"
+        }
+      ],
+      "lines": 338
+    },
+    {
+      "id": "WM-X0032",
+      "repo": "KalarisLabs/research-agent-skills",
+      "path": "skills/cover-letter-to-editor/SKILL.md",
+      "blob_sha": "c42597c92dc37793590282635e2d12f002050e40",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "cover-letter-to-editor",
+      "description": "Write journal submission cover letters, presubmission inquiries, transfer requests, and reviewer suggestion or exclusion lists that help a manuscript get past editorial triage. Use when submitting a paper to a journal, pitching a manuscript to an editor (presubmission enquiry), transferring after rejection, explaining a resubmission or appeal, or preparing the editor-facing parts of a submission such as the significance pitch, suggested reviewers and conflicts. Not for job or fellowship application letters.",
+      "headings": [],
+      "steps": [
+        {
+          "line": 28,
+          "text": "1. **Opening**: manuscript title, article type, journal. One sentence."
+        },
+        {
+          "line": 29,
+          "text": "2. **The finding and why it matters**, 2-4 sentences: the problem, what you found (with the key number),"
+        },
+        {
+          "line": 31,
+          "text": "3. **Why this journal**: connect to the journal's readership and scope, and cite recent papers it"
+        },
+        {
+          "line": 33,
+          "text": "4. **What is new vs. prior work**: one or two sentences, concrete (larger cohort, first causal"
+        },
+        {
+          "line": 35,
+          "text": "5. **Declarations** the journal asks for: not under consideration elsewhere, all authors approved,"
+        },
+        {
+          "line": 37,
+          "text": "6. **Reviewers**: suggested reviewers (name, institution, email, expertise, *no* conflicts: not"
+        },
+        {
+          "line": 39,
+          "text": "7. Sign-off by the corresponding author with contact details."
+        },
+        {
+          "line": 67,
+          "text": "- **Presubmission inquiry** (Nature Portfolio, PLOS Biology, Cell Press and others): abstract +"
+        },
+        {
+          "line": 69,
+          "text": "- **Transfer after rejection**: mention the previous journal and decision. If reviews transfer,"
+        },
+        {
+          "line": 71,
+          "text": "- **Resubmission after reject-and-resubmit**: list the main changes and link to the full response"
+        },
+        {
+          "line": 73,
+          "text": "- **Appeal**: only for clear reviewer error or misunderstanding of central points. Be factual,"
+        }
+      ],
+      "cues": [
+        {
+          "line": 18,
+          "text": "readers need *this* result now. It does not summarize the abstract."
+        }
+      ],
+      "lines": 87
+    },
+    {
+      "id": "WM-X0034",
+      "repo": "KalarisLabs/research-agent-skills",
+      "path": "skills/firecrawl-research-index/SKILL.md",
+      "blob_sha": "eea4e2b0454d3d89b7119d80057c8985f1daefbb",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "firecrawl-research-index",
+      "description": "Query Firecrawl Research Index paper endpoints for topic discovery, source metadata, question-matched passages, and citation-neighbor expansion. Use when a researcher explicitly asks for Firecrawl Research or its hosted arXiv and biomedical paper records.",
+      "headings": [
+        {
+          "line": 70,
+          "text": "## Evidence workflow"
+        }
+      ],
+      "steps": [
+        {
+          "line": 72,
+          "text": "1. Record the exact question, search date, query, filters, requested `k`, and"
+        },
+        {
+          "line": 74,
+          "text": "2. Screen titles and abstracts for relevance. An abstract is a lead, not"
+        },
+        {
+          "line": 76,
+          "text": "3. For a candidate claim, read passages from the relevant paper. If no passage"
+        },
+        {
+          "line": 79,
+          "text": "4. Verify bibliographic metadata and any important number against the source"
+        },
+        {
+          "line": 81,
+          "text": "5. Return a small evidence table: paper title, year, DOI/PMID/arXiv ID, why it"
+        }
+      ],
+      "cues": [
+        {
+          "line": 40,
+          "text": "403 for an IP that requires authentication. In that case, use a user-provided"
+        }
+      ],
+      "lines": 94
+    },
+    {
+      "id": "WM-X0037",
+      "repo": "KalarisLabs/research-agent-skills",
+      "path": "skills/markdown-mermaid-writing/SKILL.md",
+      "blob_sha": "988c5267def3ddef09bc74767f1034c94c62b006",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "markdown-mermaid-writing",
+      "description": "Writes scientific documents and documentation as markdown with embedded Mermaid diagrams as the canonical, git-diffable source format. Covers a markdown style guide, a Mermaid style guide, 24 Mermaid diagram type references (flowchart, sequence, ER, Gantt, state, mindmap, radar, sankey, XY chart, and others), and 9 templates (research paper, status report, decision record, how-to, pull request, issue, kanban, presentation, project documentation). Use when writing a report, manuscript, README, or analysis in markdown. Use when adding a workflow, pipeline, timeline, or architecture diagram to a document. Use when choosing the right Mermaid diagram type or fixing Mermaid syntax such as radar-beta or xychart-beta. Use when starting from a document template or checking citations and heading rules. Not for scatter plots of real data or photorealistic images; use Python plotting or scientific-schematics for those.",
+      "headings": [
+        {
+          "line": 67,
+          "text": "### The three-phase workflow"
+        },
+        {
+          "line": 133,
+          "text": "## 🔧 Core workflow"
+        },
+        {
+          "line": 135,
+          "text": "### Step 1: Identify the document type"
+        },
+        {
+          "line": 151,
+          "text": "### Step 2: Read the style guide"
+        },
+        {
+          "line": 165,
+          "text": "### Step 3: Pick the diagram type and read its guide"
+        },
+        {
+          "line": 183,
+          "text": "### Step 4: Write the document"
+        },
+        {
+          "line": 187,
+          "text": "### Step 5: Commit as text"
+        },
+        {
+          "line": 264,
+          "text": "### With `literature-review`"
+        },
+        {
+          "line": 273,
+          "text": "### With any skill that produces output documents"
+        },
+        {
+          "line": 327,
+          "text": "## Agent operating procedure"
+        }
+      ],
+      "steps": [
+        {
+          "line": 157,
+          "text": "- **One H1 per document** — the title. Never more."
+        },
+        {
+          "line": 158,
+          "text": "- **Emoji on H2 headings only** — one emoji per H2, none in H3/H4"
+        },
+        {
+          "line": 159,
+          "text": "- **Cite everything** — every external claim gets a footnote `[^N]` with full URL"
+        },
+        {
+          "line": 160,
+          "text": "- **Bold sparingly** — max 2-3 bold terms per paragraph, never full sentences"
+        },
+        {
+          "line": 161,
+          "text": "- **Horizontal rule after every `</details>`** — mandatory"
+        },
+        {
+          "line": 162,
+          "text": "- **Tables over prose** for comparisons, configurations, structured data"
+        },
+        {
+          "line": 163,
+          "text": "- **Diagrams over walls of text** — if it describes flow, structure, or relationships, add Mermaid"
+        },
+        {
+          "line": 178,
+          "text": "- **No `%%{init}` directives** — breaks GitHub dark mode"
+        },
+        {
+          "line": 179,
+          "text": "- **No inline `style`** — use `classDef` only"
+        },
+        {
+          "line": 180,
+          "text": "- **One emoji per node max** — at the start of the label"
+        },
+        {
+          "line": 181,
+          "text": "- **`snake_case` node IDs** — match the label"
+        },
+        {
+          "line": 214,
+          "text": "- **Use `radar-beta`** not `radar` (the bare keyword doesn't exist)"
+        },
+        {
+          "line": 215,
+          "text": "- **Use `axis`** to define dimensions, **not** `x-axis`"
+        },
+        {
+          "line": 216,
+          "text": "- **Use `curve`** to define data series, **not** quoted labels with colon"
+        },
+        {
+          "line": 217,
+          "text": "- **No `accTitle`/`accDescr`** — radar-beta doesn't support accessibility annotations; always add a descriptive italic paragraph above the diagram"
+        },
+        {
+          "line": 247,
+          "text": "1. Create the concept as Mermaid in .md (this skill — Phase 1)"
+        },
+        {
+          "line": 248,
+          "text": "2. Describe the same concept to scientific-schematics for a polished PNG (Phase 3)"
+        },
+        {
+          "line": 249,
+          "text": "3. Commit both — the .md as source, the PNG as a supplementary figure"
+        },
+        {
+          "line": 258,
+          "text": "1. Use scientific-writing to draft the manuscript"
+        },
+        {
+          "line": 259,
+          "text": "2. For every figure that shows a workflow, architecture, or relationship:"
+        },
+        {
+          "line": 261,
+          "text": "3. Use scientific-schematics only for figures that truly need photorealistic/complex rendering"
+        },
+        {
+          "line": 315,
+          "text": "- **Source**: https://github.com/SuperiorByteWorks-LLC/agent-project"
+        }
+      ],
+      "cues": [
+        {
+          "line": 25,
+          "text": "valuable than any image. It is text, so it diffs cleanly in git. It requires no build step."
+        },
+        {
+          "line": 45,
+          "text": "- Generating **any output that will be version-controlled** — if it's going into git, it should be markdown"
+        },
+        {
+          "line": 46,
+          "text": "- Working with **any other skill** — this skill defines the documentation layer that wraps every other output"
+        },
+        {
+          "line": 72,
+          "text": "accDescr: Phase 1 Mermaid in markdown is always required and is the source of truth. Phases 2 and 3 are optional downstream conversions for polished output."
+        },
+        {
+          "line": 77,
+          "text": "out[\"📊 Final Deliverable\"]"
+        },
+        {
+          "line": 87,
+          "text": "classDef output fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d"
+        },
+        {
+          "line": 273,
+          "text": "### With any skill that produces output documents"
+        },
+        {
+          "line": 330,
+          "text": "2. **Pin down the inputs.** Confirm formats, identifiers and parameters from the data or the user. Ask rather than guess any value that changes the result."
+        },
+        {
+          "line": 340,
+          "text": "| A required input, identifier or parameter is ambiguous | Ask the user, or state the assumption explicitly before running. |"
+        }
+      ],
+      "lines": 353
+    },
+    {
+      "id": "WM-X0038",
+      "repo": "KalarisLabs/research-agent-skills",
+      "path": "skills/market-research-reports/SKILL.md",
+      "blob_sha": "8350756a9c1fe5361b9befebbe49d88567e140c0",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "market-research-reports",
+      "description": "Build evidence-traceable market research reports and assumption-driven market sizing or forecast scenarios. Use for market definition, industry and customer evidence, competitive landscapes, TAM/SAM/SOM reconciliation, forecast sensitivity, and auditable report scaffolds.",
+      "headings": [
+        {
+          "line": 48,
+          "text": "## Workflow"
+        },
+        {
+          "line": 281,
+          "text": "### 10. Draft and review"
+        },
+        {
+          "line": 341,
+          "text": "## Agent operating procedure"
+        }
+      ],
+      "steps": [
+        {
+          "line": 32,
+          "text": "1. **Define before sizing.** Fix product, customer, geography, channel, period,"
+        },
+        {
+          "line": 34,
+          "text": "2. **Map every claim.** Every factual or quantitative claim has a claim ID and"
+        },
+        {
+          "line": 36,
+          "text": "3. **Separate statement types.** Distinguish facts, estimates, calculations,"
+        },
+        {
+          "line": 38,
+          "text": "4. **Prefer primary evidence.** Use official statistics, regulator records,"
+        },
+        {
+          "line": 41,
+          "text": "5. **Preserve uncertainty.** Retain source conflicts, revisions, scenario"
+        },
+        {
+          "line": 43,
+          "text": "6. **Keep methods reproducible.** Use local structured inputs and deterministic"
+        },
+        {
+          "line": 45,
+          "text": "7. **Collect lawfully and ethically.** No deception, PII disclosure, access"
+        },
+        {
+          "line": 75,
+          "text": "1. primary law, regulator decision, official filing, or official statistic;"
+        },
+        {
+          "line": 76,
+          "text": "2. original company filing or attributable first-party disclosure;"
+        },
+        {
+          "line": 77,
+          "text": "3. transparent survey/study with inspectable methods;"
+        },
+        {
+          "line": 78,
+          "text": "4. institutional or peer-reviewed research using identifiable primary data;"
+        },
+        {
+          "line": 79,
+          "text": "5. industry association data with disclosed coverage;"
+        },
+        {
+          "line": 80,
+          "text": "6. reputable secondary synthesis;"
+        },
+        {
+          "line": 81,
+          "text": "7. lawfully accessed paid estimate with inspectable scope and method;"
+        },
+        {
+          "line": 82,
+          "text": "8. news/commentary for leads or attributable events."
+        },
+        {
+          "line": 343,
+          "text": "1. **Check the environment.** Collect the user's draft, data, figures and target venue before writing anything."
+        },
+        {
+          "line": 344,
+          "text": "2. **Pin down the inputs.** Confirm formats, identifiers and parameters from the data or the user. Ask rather than guess any value that changes the result."
+        },
+        {
+          "line": 345,
+          "text": "3. **Run a small version first.** Draft one section or paragraph and confirm tone, structure and terminology with the user."
+        },
+        {
+          "line": 346,
+          "text": "4. **Execute the full task** using the instructions and references above."
+        },
+        {
+          "line": 347,
+          "text": "5. **Validate the result.** Every claim traces to the user's data or a verified source; numbers match tables and figures; citations are real (`citation-verification`)."
+        },
+        {
+          "line": 348,
+          "text": "6. **Report.** State what was run (versions, commands, parameters), what was checked, and what is still uncertain."
+        }
+      ],
+      "cues": [
+        {
+          "line": 17,
+          "text": "Create decision-focused market reports whose claims, calculations, assumptions,"
+        },
+        {
+          "line": 19,
+          "text": "evidence. There is no required length, chapter count, visual count, or output"
+        },
+        {
+          "line": 43,
+          "text": "6. **Keep methods reproducible.** Use local structured inputs and deterministic"
+        },
+        {
+          "line": 59,
+          "text": "- revenue/expenditure, gross output/value added, units, capacity, users, or"
+        },
+        {
+          "line": 64,
+          "text": "- permitted data sources, primary research, confidentiality, and output format."
+        },
+        {
+          "line": 124,
+          "text": "- one end-of-paragraph citation does not support unrelated sentences;"
+        },
+        {
+          "line": 126,
+          "text": "- a calculation cites its inputs, not a source that never published the result;"
+        },
+        {
+          "line": 151,
+          "text": "- gross output and value added;"
+        },
+        {
+          "line": 270,
+          "text": "- do not force chained-dollar additivity;"
+        },
+        {
+          "line": 284,
+          "text": "only to organize questions; do not force scores or a fixed number of factors."
+        },
+        {
+          "line": 337,
+          "text": "reject oversized or malformed input, do not follow symlink inputs, do not"
+        },
+        {
+          "line": 338,
+          "text": "overwrite outputs without explicit permission, and make no network, LLM, image,"
+        },
+        {
+          "line": 344,
+          "text": "2. **Pin down the inputs.** Confirm formats, identifiers and parameters from the data or the user. Ask rather than guess any value that changes the result."
+        },
+        {
+          "line": 354,
+          "text": "| A required input, identifier or parameter is ambiguous | Ask the user, or state the assumption explicitly before running. |"
+        }
+      ],
+      "lines": 362
+    },
+    {
+      "id": "WM-X0039",
+      "repo": "KalarisLabs/research-agent-skills",
+      "path": "skills/ml-paper-writing/SKILL.md",
+      "blob_sha": "6f974cbc143b1249ff7a044b50f6133635114180",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "ml-paper-writing",
+      "description": "Write publication-ready ML/AI papers for NeurIPS, ICML, ICLR, ACL, AAAI, COLM. Use when drafting papers from research repos, structuring arguments, verifying citations, or preparing camera-ready submissions. For systems venues (OSDI, NSDI, ASPLOS, SOSP), use systems-paper-writing instead.",
+      "headings": [
+        {
+          "line": 92,
+          "text": "## Workflow 0: Starting from a Research Repository"
+        },
+        {
+          "line": 162,
+          "text": "## Paper Structure Workflow"
+        },
+        {
+          "line": 164,
+          "text": "### Workflow 1: Writing a Complete Paper (Iterative)"
+        },
+        {
+          "line": 301,
+          "text": "## Citation Workflow (Hallucination Prevention)"
+        },
+        {
+          "line": 314,
+          "text": "### Workflow 2: Adding Citations"
+        },
+        {
+          "line": 410,
+          "text": "## Troubleshooting, Reviewer Criteria and Figures"
+        }
+      ],
+      "steps": [
+        {
+          "line": 25,
+          "text": "1. **Understand the project** by exploring the repo, results, and existing documentation"
+        },
+        {
+          "line": 26,
+          "text": "2. **Deliver a complete first draft** when confident about the contribution"
+        },
+        {
+          "line": 27,
+          "text": "3. **Search literature** using web search and APIs to find relevant citations"
+        },
+        {
+          "line": 28,
+          "text": "4. **Refine through feedback cycles** when the scientist provides input"
+        },
+        {
+          "line": 29,
+          "text": "5. **Ask for clarification** only when genuinely uncertain about key decisions"
+        },
+        {
+          "line": 99,
+          "text": "- **Starting from a research repo** to write a paper"
+        },
+        {
+          "line": 100,
+          "text": "- **Drafting or revising** specific sections"
+        },
+        {
+          "line": 101,
+          "text": "- **Finding and verifying citations** for related work"
+        },
+        {
+          "line": 102,
+          "text": "- **Formatting** for conference submission"
+        },
+        {
+          "line": 103,
+          "text": "- **Resubmitting** to a different venue (format conversion)"
+        },
+        {
+          "line": 104,
+          "text": "- **Iterating** on drafts with scientist feedback"
+        },
+        {
+          "line": 206,
+          "text": "1. What you achieved: \"We introduce...\", \"We prove...\", \"We demonstrate...\""
+        },
+        {
+          "line": 207,
+          "text": "2. Why this is hard and important"
+        },
+        {
+          "line": 208,
+          "text": "3. How you do it (with specialist keywords for discoverability)"
+        },
+        {
+          "line": 209,
+          "text": "4. What evidence you have"
+        },
+        {
+          "line": 210,
+          "text": "5. Your most remarkable number/result"
+        },
+        {
+          "line": 433,
+          "text": "- **ML/AI**: ICML 2026, ICLR 2026, NeurIPS 2025, ACL/EMNLP, AAAI 2026, COLM 2025"
+        },
+        {
+          "line": 434,
+          "text": "- **Systems** (OSDI, NSDI, ASPLOS, SOSP): See [systems-paper-writing](../systems-paper-writing/) skill"
+        },
+        {
+          "line": 437,
+          "text": "- **VS Code/Cursor**: Install LaTeX Workshop extension + TeX Live → Save to auto-compile"
+        },
+        {
+          "line": 438,
+          "text": "- **Command line**: `latexmk -pdf main.tex` or `pdflatex` + `bibtex` workflow"
+        },
+        {
+          "line": 439,
+          "text": "- **Online**: Upload to [Overleaf](https://overleaf.com)"
+        }
+      ],
+      "cues": [
+        {
+          "line": 28,
+          "text": "4. **Refine through feedback cycles** when the scientist provides input"
+        },
+        {
+          "line": 56,
+          "text": "% EXPLICIT PLACEHOLDER - requires human verification"
+        },
+        {
+          "line": 106,
+          "text": "**Always remember**: First drafts are starting points for discussion, not final outputs."
+        },
+        {
+          "line": 130,
+          "text": "**Only block for input when:**"
+        },
+        {
+          "line": 184,
+          "text": "**This step requires explicit confirmation from the scientist.**"
+        },
+        {
+          "line": 188,
+          "text": "- What was not obvious or present before your work?"
+        },
+        {
+          "line": 437,
+          "text": "- **VS Code/Cursor**: Install LaTeX Workshop extension + TeX Live → Save to auto-compile"
+        }
+      ],
+      "lines": 463
+    },
+    {
+      "id": "WM-X0044",
+      "repo": "KalarisLabs/research-agent-skills",
+      "path": "skills/rebuttal-and-response-to-reviewers/SKILL.md",
+      "blob_sha": "2732dc7852308802fb10de3333b653b64b65a753",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "rebuttal-and-response-to-reviewers",
+      "description": "Plan and write responses to peer review, including journal \"response to reviewers\" letters for revise-and-resubmit, conference rebuttals under strict length limits (OpenReview/ICLR, NeurIPS, ICML, ACL ARR, CVPR), author responses to meta-reviews, and appeals. Use when a user receives reviews, must triage reviewer comments, draft point-by-point replies, decide what new experiments to run, disagree respectfully with a reviewer, or track manuscript changes for a revision. For authors answering reviews of their own manuscript; to write a review of someone else's paper, use peer-review instead.",
+      "headings": [
+        {
+          "line": 14,
+          "text": "# Responding to Reviewers"
+        },
+        {
+          "line": 20,
+          "text": "## Step 1: Triage (before writing anything)"
+        },
+        {
+          "line": 38,
+          "text": "## Step 2: Do the work, then write"
+        },
+        {
+          "line": 43,
+          "text": "## Step 3: Reply patterns"
+        },
+        {
+          "line": 77,
+          "text": "## Step 4: Cover note to the editor (journals)"
+        }
+      ],
+      "steps": [
+        {
+          "line": 63,
+          "text": "1. Acknowledge the underlying concern (\"We understand the concern that ...\")."
+        },
+        {
+          "line": 64,
+          "text": "2. Give evidence: data, citations, a small additional analysis, or a precise explanation."
+        },
+        {
+          "line": 65,
+          "text": "3. Make a concession where honest: a clarification in the text or a stated limitation."
+        }
+      ],
+      "cues": [],
+      "lines": 95
+    },
+    {
+      "id": "WM-X0045",
+      "repo": "KalarisLabs/research-agent-skills",
+      "path": "skills/research-agent-skills/SKILL.md",
+      "blob_sha": "cbe9850691c29cc5c24ec420fb5999b356109ac3",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "research-agent-skills",
+      "description": "Navigate the Research Agent Skills collection by Kalaris Labs for academia across AI, machine learning, biology, chemistry, medicine, physics, and academic writing. Use when a researcher needs to choose a field of study, identify relevant specialist SKILL.md files, or coordinate a cross-disciplinary research workflow. For a narrow task with a matching specialist skill already available, use that skill directly.",
+      "headings": [],
+      "steps": [
+        {
+          "line": 20,
+          "text": "1. Identify the research deliverable and domain. Examples include a literature"
+        },
+        {
+          "line": 22,
+          "text": "2. Read only the relevant section of [the bundled skill index](references/catalog.md)."
+        },
+        {
+          "line": 24,
+          "text": "3. Read the selected specialists' `SKILL.md` files if they are available in the"
+        },
+        {
+          "line": 27,
+          "text": "4. Keep claims and citations tied to checked sources. A skill's presence does"
+        }
+      ],
+      "cues": [
+        {
+          "line": 20,
+          "text": "1. Identify the research deliverable and domain. Examples include a literature"
+        },
+        {
+          "line": 35,
+          "text": "- [ ] Which research field and deliverable does the researcher need?"
+        },
+        {
+          "line": 43,
+          "text": "does not replace any specialist's scripts or references."
+        }
+      ],
+      "lines": 44
+    },
+    {
+      "id": "WM-X0046",
+      "repo": "KalarisLabs/research-agent-skills",
+      "path": "skills/research-grants/SKILL.md",
+      "blob_sha": "b867b427610b6e18f6c258807ec2e55e838b1b74",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "research-grants",
+      "description": "Guides writing of competitive research grant proposals for NSF, NIH, DOE, DARPA, and Taiwan NSTC. Covers agency-specific formatting and review criteria, specific aims, project descriptions, significance and innovation narratives, broader impacts, budgets and justifications, timelines, biosketches, and the NSTC CM03 form. Use when drafting a proposal for one of these agencies. Use when writing specific aims or broader impacts statements. Use when preparing a budget justification or milestone plan. Use when responding to a solicitation, BAA, or reviewer comments in a resubmission. Use when checking a draft against page limits and submission requirements. For general manuscript writing, use a scientific writing skill instead.",
+      "headings": [
+        {
+          "line": 128,
+          "text": "## Review Criteria, Writing Principles, and Proposal Types"
+        },
+        {
+          "line": 181,
+          "text": "## Workflow for Grant Development"
+        },
+        {
+          "line": 183,
+          "text": "### Phase 1: Planning and Preparation (2-6 months before deadline)"
+        },
+        {
+          "line": 200,
+          "text": "### Phase 2: Drafting (2-3 months before deadline)"
+        },
+        {
+          "line": 217,
+          "text": "### Phase 3: Internal Review (1-2 months before deadline)"
+        },
+        {
+          "line": 232,
+          "text": "### Phase 4: Finalization (2-4 weeks before deadline)"
+        },
+        {
+          "line": 249,
+          "text": "### Phase 5: Submission (1 week before deadline)"
+        },
+        {
+          "line": 300,
+          "text": "## Agent operating procedure"
+        }
+      ],
+      "steps": [
+        {
+          "line": 49,
+          "text": "- **Preferred:** Use the **scientific-schematics** skill (`--doc-type grant`) for AI-generated diagrams from a natural-language description"
+        },
+        {
+          "line": 50,
+          "text": "- **Alternative:** Build figures in your usual tools (matplotlib, Illustrator, PowerPoint, etc.)"
+        },
+        {
+          "line": 114,
+          "text": "- **CM03 Form**: The core technical proposal format."
+        },
+        {
+          "line": 115,
+          "text": "- **Bilingual**: Abstract required in both Chinese and English."
+        },
+        {
+          "line": 116,
+          "text": "- **Innovation & Feasibility**: Primary review focus."
+        },
+        {
+          "line": 117,
+          "text": "- **Preliminary Data**: Highly critical for credibility."
+        },
+        {
+          "line": 118,
+          "text": "- **Research Architecture Diagram**: A mandatory visual element for clarity."
+        },
+        {
+          "line": 143,
+          "text": "1. **Failing to Address Review Criteria**: Not explicitly discussing significance, innovation, approach, etc."
+        },
+        {
+          "line": 144,
+          "text": "2. **Mismatch with Agency Mission**: Proposing research that doesn't align with agency goals"
+        },
+        {
+          "line": 145,
+          "text": "3. **Unclear Significance**: Failing to articulate why the research matters"
+        },
+        {
+          "line": 146,
+          "text": "4. **Insufficient Innovation**: Incremental work presented as transformative"
+        },
+        {
+          "line": 147,
+          "text": "5. **Vague Objectives**: Goals that are not specific or measurable"
+        },
+        {
+          "line": 151,
+          "text": "1. **Poor Organization**: Lack of clear structure and flow"
+        },
+        {
+          "line": 152,
+          "text": "2. **Excessive Jargon**: Inaccessible to broader review panel"
+        },
+        {
+          "line": 153,
+          "text": "3. **Verbosity**: Unnecessarily complex or wordy writing"
+        },
+        {
+          "line": 154,
+          "text": "4. **Missing Context**: Assuming reviewers know your field deeply"
+        },
+        {
+          "line": 155,
+          "text": "5. **Inconsistent Terminology**: Using different terms for same concept"
+        },
+        {
+          "line": 159,
+          "text": "1. **Inadequate Methods**: Insufficient detail to judge feasibility"
+        },
+        {
+          "line": 160,
+          "text": "2. **Overly Ambitious**: Too much proposed for timeline/budget"
+        },
+        {
+          "line": 161,
+          "text": "3. **No Preliminary Data**: For mechanisms requiring demonstrated feasibility"
+        },
+        {
+          "line": 162,
+          "text": "4. **Poor Timeline**: Unrealistic or poorly justified schedule"
+        },
+        {
+          "line": 163,
+          "text": "5. **Misaligned Budget**: Budget doesn't support proposed activities"
+        }
+      ],
+      "cues": [
+        {
+          "line": 92,
+          "text": "- Often requires cost sharing or industry partnerships"
+        },
+        {
+          "line": 105,
+          "text": "- Often requires multiple phases (feasibility, development, demonstration)"
+        },
+        {
+          "line": 252,
+          "text": "- Institutional review and approval"
+        },
+        {
+          "line": 298,
+          "text": "**Final Note**: Grant writing is both an art and a science. Success requires not only excellent research ideas but also clear communication, strategic positioning, and meticulous attention to detail. Start earl"
+        },
+        {
+          "line": 303,
+          "text": "2. **Pin down the inputs.** Confirm formats, identifiers and parameters from the data or the user. Ask rather than guess any value that changes the result."
+        },
+        {
+          "line": 313,
+          "text": "| A required input, identifier or parameter is ambiguous | Ask the user, or state the assumption explicitly before running. |"
+        }
+      ],
+      "lines": 327
+    },
+    {
+      "id": "WM-X0047",
+      "repo": "KalarisLabs/research-agent-skills",
+      "path": "skills/research-knowledge-graph/SKILL.md",
+      "blob_sha": "7ec4a191c2c2530d607fd0b64ac3d3bace414e8f",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "research-knowledge-graph",
+      "description": "Turn a bibliography or literature corpus into a knowledge graph of papers, authors, venues, topics and citation links, then analyze it (citation clusters, key papers, bridging work, research gaps) or export it to Neo4j, Gephi, NetworkX, Obsidian or Markdown-graph tools such as graphify. Use when mapping a research field, building a citation network, finding influential or bridging papers, or visualizing how a literature connects. Zero-dependency builder with optional OpenAlex enrichment.",
+      "headings": [],
+      "steps": [
+        {
+          "line": 49,
+          "text": "1. Seed with 5-20 core papers."
+        },
+        {
+          "line": 50,
+          "text": "2. Backward: collect each seed's `referenced_works` from OpenAlex. Forward: query"
+        },
+        {
+          "line": 52,
+          "text": "3. Keep candidates cited by ≥2 seeds (co-citation), export them to `.bib`, rebuild."
+        },
+        {
+          "line": 53,
+          "text": "4. Stop when a round adds few new highly connected papers. Report the rounds and thresholds (reproducibility)."
+        },
+        {
+          "line": 69,
+          "text": "- **High in-degree** within the corpus = foundational for *this* literature (not globally important)."
+        },
+        {
+          "line": 70,
+          "text": "- **High betweenness** = bridges clusters, often the best papers to read for synthesis sections."
+        },
+        {
+          "line": 71,
+          "text": "- **Communities** = candidate subsections of a review. Name each by its top topics and most cited paper."
+        },
+        {
+          "line": 72,
+          "text": "- **Sparse links between clusters that share topics** = a potential research gap worth stating (and verifying)."
+        }
+      ],
+      "cues": [
+        {
+          "line": 32,
+          "text": "CSL-JSON (`.json`, exported by Zotero or `reference-manager-interop`) also works as input."
+        },
+        {
+          "line": 34,
+          "text": "| Output | Use it with |"
+        }
+      ],
+      "lines": 96
+    },
+    {
+      "id": "WM-X0048",
+      "repo": "KalarisLabs/research-agent-skills",
+      "path": "skills/research-lookup/SKILL.md",
+      "blob_sha": "79081cabd2cc8a027c8b9f8a28ebe3bcc437ebb5",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "research-lookup",
+      "description": "Compile current scholarly evidence for a scientific manuscript or research brief. Use when the user explicitly asks to gather literature, references, background evidence, competing findings, or a manuscript research packet. Uses Parallel Search by default, Parallel Extract for source verification, Parallel Research for explicitly deep/exhaustive work, optional explicit Parallel Chat, and optional Perplexity only when requested or allowed as a failure fallback.",
+      "headings": [
+        {
+          "line": 69,
+          "text": "## Recommended manuscript workflow"
+        },
+        {
+          "line": 147,
+          "text": "### 4. Review the manuscript research packet"
+        },
+        {
+          "line": 308,
+          "text": "## Output compatibility"
+        }
+      ],
+      "steps": [
+        {
+          "line": 119,
+          "text": "1. recent peer-reviewed primary studies"
+        },
+        {
+          "line": 120,
+          "text": "2. systematic reviews, meta-analyses, and consensus evidence"
+        },
+        {
+          "line": 121,
+          "text": "3. seminal and foundational publications"
+        },
+        {
+          "line": 122,
+          "text": "4. methods, protocols, validation, benchmarks, and mechanisms"
+        },
+        {
+          "line": 123,
+          "text": "5. contradictory, null, negative, replication, and limitation evidence"
+        },
+        {
+          "line": 124,
+          "text": "6. an unrestricted companion search when filtered passes do not reach the target"
+        },
+        {
+          "line": 165,
+          "text": "- **Introduction:** establish background, importance, and the unresolved gap."
+        },
+        {
+          "line": 166,
+          "text": "- **Methods rationale:** cite precedent for protocols, measures, models, comparators,"
+        },
+        {
+          "line": 168,
+          "text": "- **Discussion:** compare findings with supporting and conflicting work; discuss"
+        },
+        {
+          "line": 170,
+          "text": "- **Results:** use only the user's study data. Never present external literature as"
+        },
+        {
+          "line": 180,
+          "text": "1. Deduplicate by DOI, PMID, canonical URL, and normalized title."
+        },
+        {
+          "line": 181,
+          "text": "2. Exclude retracted or withdrawn sources from claim support."
+        },
+        {
+          "line": 182,
+          "text": "3. Clearly identify preprints and lower confidence pending peer review."
+        },
+        {
+          "line": 183,
+          "text": "4. Prefer direct topical relevance and appropriate study design."
+        },
+        {
+          "line": 184,
+          "text": "5. Treat systematic reviews/meta-analyses and directly relevant controlled studies as"
+        },
+        {
+          "line": 186,
+          "text": "6. Use citation counts, author reputation, and journal prestige only as secondary"
+        },
+        {
+          "line": 189,
+          "text": "7. Preserve contradictory and null evidence rather than optimizing for agreement."
+        },
+        {
+          "line": 190,
+          "text": "8. Do not invent missing authors, venues, effect sizes, DOIs, or conclusions."
+        },
+        {
+          "line": 191,
+          "text": "9. Do not pad a shortfall with weak or duplicate records. Report the gap and refine"
+        },
+        {
+          "line": 193,
+          "text": "10. Do not claim full-text review when only an abstract or paywalled landing page was"
+        },
+        {
+          "line": 323,
+          "text": "- **`parallel-cli` missing:** install the pinned CLI version above."
+        },
+        {
+          "line": 324,
+          "text": "- **Authentication error:** run `parallel-cli auth`, then `parallel-cli login` if"
+        }
+      ],
+      "cues": [
+        {
+          "line": 66,
+          "text": "- `--batch`, `--json`, `-o/--output`, the `ResearchLookup` class, progress output,"
+        },
+        {
+          "line": 217,
+          "text": "Deep Research produces a synthesized report; it does not replace the Search + Extract"
+        },
+        {
+          "line": 235,
+          "text": "containing citations, reasoning, and confidence. Chat requires `PARALLEL_API_KEY`"
+        },
+        {
+          "line": 237,
+          "text": "does not provide the script with that key."
+        },
+        {
+          "line": 264,
+          "text": "For a current fact or technical lookup that does not need 60 academic references:"
+        },
+        {
+          "line": 305,
+          "text": "`PARALLEL_API_KEY`. The explicit Chat backend always requires `PARALLEL_API_KEY` in"
+        },
+        {
+          "line": 308,
+          "text": "## Output compatibility"
+        },
+        {
+          "line": 318,
+          "text": "the parent directory for `-o/--output` when needed. Errors remain inside each query's"
+        }
+      ],
+      "lines": 341
+    },
+    {
+      "id": "WM-X0050",
+      "repo": "KalarisLabs/research-agent-skills",
+      "path": "skills/scientific-critical-thinking/SKILL.md",
+      "blob_sha": "422860c70d4ad408e49dbf638c7d5b670bff15a9",
+      "status": "BODY_EXTRACTED",
+      "frontmatter_name": "scientific-critical-thinking",
+      "description": "Evaluate scientific claims and evidence quality. Use for assessing experimental design validity, identifying biases and confounders, applying evidence grading frameworks (GRADE, Cochrane Risk of Bias), or teaching critical analysis. Best for understanding evidence quality, identifying flaws. For formal peer review writing use peer-review.",
+      "headings": [
+        {
+          "line": 78,
+          "text": "### General Approach"
+        },
+        {
+          "line": 184,
+          "text": "## Agent operating procedure"
+        }
+      ],
+      "steps": [
+        {
+          "line": 42,
+          "text": "- **Preferred:** Use the **scientific-schematics** skill for AI-generated diagrams from a natural-language description"
+        },
+        {
+          "line": 43,
+          "text": "- **Alternative:** Build figures in your usual tools (draw.io, PowerPoint, matplotlib, etc.)"
+        },
+        {
+          "line": 60,
+          "text": "1. **Methodology critique** — design, controls, confounding, and whether the method can"
+        },
+        {
+          "line": 62,
+          "text": "2. **Bias detection** — selection, measurement, publication, and cognitive biases."
+        },
+        {
+          "line": 63,
+          "text": "3. **Statistical analysis evaluation** — power, multiplicity, p-value misuse, effect sizes."
+        },
+        {
+          "line": 64,
+          "text": "4. **Evidence quality assessment** — study hierarchy, replication, and strength of inference."
+        },
+        {
+          "line": 65,
+          "text": "5. **Logical fallacy identification** — the fallacies that recur in scientific argument."
+        },
+        {
+          "line": 66,
+          "text": "6. **Research design guidance** — how to strengthen a design before data collection."
+        },
+        {
+          "line": 67,
+          "text": "7. **Claim evaluation** — separating what was shown from what is being asserted."
+        },
+        {
+          "line": 80,
+          "text": "1. **Be Constructive**"
+        },
+        {
+          "line": 86,
+          "text": "2. **Be Specific**"
+        },
+        {
+          "line": 92,
+          "text": "3. **Be Proportionate**"
+        },
+        {
+          "line": 98,
+          "text": "4. **Apply Consistent Standards**"
+        },
+        {
+          "line": 104,
+          "text": "5. **Consider Context**"
+        },
+        {
+          "line": 114,
+          "text": "1. **Summary:** Brief overview of what was evaluated"
+        },
+        {
+          "line": 115,
+          "text": "2. **Strengths:** What was done well (important for credibility and learning)"
+        },
+        {
+          "line": 116,
+          "text": "3. **Concerns:** Issues organized by severity"
+        },
+        {
+          "line": 120,
+          "text": "4. **Specific Recommendations:** Actionable suggestions for improvement"
+        },
+        {
+          "line": 121,
+          "text": "5. **Overall Assessment:** Balanced conclusion about evidence quality and what can be concluded"
+        },
+        {
+          "line": 131,
+          "text": "- **Acknowledge uncertainty:** \"This could be X or Y; additional information needed is Z\""
+        },
+        {
+          "line": 132,
+          "text": "- **Ask clarifying questions:** \"Was [methodological detail] done? This affects interpretation.\""
+        },
+        {
+          "line": 133,
+          "text": "- **Provide conditional assessments:** \"If X was done, then Y follows; if not, then Z is concern\""
+        }
+      ],
+      "cues": [
+        {
+          "line": 187,
+          "text": "2. **Pin down the inputs.** Confirm formats, identifiers and parameters from the data or the user. Ask rather than guess any value that changes the result."
+        },
+        {
+          "line": 197,
+          "text": "| A required input, identifier or parameter is ambiguous | Ask the user, or state the assumption explicitly before running. |"
+        }
+      ],
+      "lines": 211
+    }
+  ]
+}
