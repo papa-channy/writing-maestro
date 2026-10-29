@@ -5,7 +5,7 @@ A skill-orchestration project for selecting **existing third-party writing and p
 ## Current state
 - Orchestrator: `skills/writing-maestro/` (`SKILL.md`, `feedback.md`, `scripts/`), installed as a symlink at `~/.claude/skills/writing-maestro`.
 - Invoke the `writing-maestro` skill with a writing task (new text, edit, review, or repo docs): it asks once for combinations and drafts per combination, then hands back parallel drafts under `writing-drafts/` without ranking.
-- Skill registry: `skills/writing-maestro/registry.md` (67 skills), validated by `scripts/registry_check.py`; combinations are checked by `scripts/combo_check.py`.
+- Skill registry: `skills/writing-maestro/registry.md` (67 skills), validated by `skills/writing-maestro/scripts/registry_check.py`; combinations are checked by `skills/writing-maestro/scripts/combo_check.py`.
 
 ## Research archive
 - `research/snapshots/2026-10-28/`: preserved candidate inventories and previous research artifacts.
