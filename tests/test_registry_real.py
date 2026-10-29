@@ -69,3 +69,30 @@ def test_cluster_column_matches_primary():
         aspect, owners = cells[0].strip(), {c.strip() for c in cells[3].split(",") if c.strip()}
         expected = {n for n, s in reg.skills.items() if aspect in s.primary}
         assert owners == expected, aspect
+
+
+# --- closure evaluation (companions a member invokes on its own) ---
+
+def test_paper_writing_plus_prose_naturalizer_conflicts():
+    # paper-writing → general-writing → humanizer owns ai-tells; prose-naturalizer owns it too.
+    assert check_combo(load(), ["paper-writing", "prose-naturalizer"]).ok is False
+
+
+def test_design_docs_plus_general_writing_conflicts():
+    # writing-design-docs → technical-writing owns prose-edit and ai-tells.
+    assert check_combo(load(), ["writing-design-docs", "general-writing"]).ok is False
+
+
+def test_design_docs_plus_reviewing_prose_ok():
+    # Both bring the same technical-writing; one source is not a conflict.
+    r = check_combo(load(), ["writing-design-docs", "reviewing-technical-prose"])
+    assert r.ok, r.conflicts
+
+
+def test_copywriting_plus_blog_conflicts():
+    assert check_combo(load(), ["copywriting", "blog-post-writing"]).ok is False
+
+
+def test_doc_type_siblings_conflict():
+    # Both require technical-writing, but neither sequences the other: two skeletons.
+    assert check_combo(load(), ["writing-design-docs", "writing-runbooks"]).ok is False

@@ -24,22 +24,37 @@ class ComboResult:
     missing_commands: list[str] = field(default_factory=list)
 
 
-def _connected_via_requires(reg: Registry, a: str, b: str, combo: list[str]) -> bool:
-    """Undirected, transitive connectivity over `requires` edges inside the combo."""
-    members = set(combo)
-    adj: dict[str, set[str]] = {n: set() for n in members}
-    for n in members:
-        for r in reg.skills[n].requires:
-            if r in members:
-                adj[n].add(r)
-                adj[r].add(n)
-    seen, stack = {a}, [a]
-    while stack:
-        for nxt in adj[stack.pop()]:
-            if nxt not in seen:
-                seen.add(nxt)
-                stack.append(nxt)
-    return b in seen
+def _closure(reg: Registry, name: str) -> list[str]:
+    """Transitive `필수 동반` of `name` (registered skills only), BFS order, excluding itself."""
+    seen, order, queue = {name}, [], list(reg.skills[name].requires)
+    while queue:
+        r = queue.pop(0)
+        if r in seen or r not in reg.skills:
+            continue
+        seen.add(r)
+        order.append(r)
+        queue.extend(reg.skills[r].requires)
+    return order
+
+
+def _coordinated(reg: Registry, a: str, b: str, nodes: set[str]) -> bool:
+    """Same bundle and coordinated: some skill in `nodes` reaches both a and b along
+    `requires` edges (reflexive, transitive). A caller sequences the companions it invokes;
+    two siblings that merely share a common companion (e.g. two doc-type skills that both
+    require technical-writing) are not coordinated with each other."""
+    ba, bb = reg.skills[a].bundle, reg.skills[b].bundle
+    if ba is None or ba != bb:
+        return False
+    for c in nodes:
+        reach, stack = {c}, [c]
+        while stack:
+            for r in reg.skills[stack.pop()].requires:
+                if r in nodes and r not in reach:
+                    reach.add(r)
+                    stack.append(r)
+        if a in reach and b in reach:
+            return True
+    return False
 
 
 def check_combo(reg: Registry, skills: list[str], check_runtime: bool = False) -> ComboResult:
@@ -49,28 +64,47 @@ def check_combo(reg: Registry, skills: list[str], check_runtime: bool = False) -
         if s not in reg.skills:
             conflicts.append(f"unknown skill {s}")
 
-    # Rule 2: forbidden pairs, regardless of which side declared them
+    # Companions each member invokes on its own (not combo members, but their rules apply).
+    closure = {m: _closure(reg, m) for m in known}
+    nodes = set(known).union(*closure.values()) if known else set()
+
+    # Rule 2: forbidden pairs. A member forbidding another member conflicts either way;
+    # a member forbidding a skill inside another member's closure conflicts unless that
+    # skill is also inside the forbidding member's own closure.
     for i, a in enumerate(known):
         for b in known[i + 1:]:
             if b in reg.skills[a].forbids or a in reg.skills[b].forbids:
                 conflicts.append(f"forbidden pair {a}+{b}")
+    for a in known:
+        for s in reg.skills[a].forbids:
+            if s in known or s in closure[a]:
+                continue
+            for b in known:
+                if b != a and s in closure[b]:
+                    conflicts.append(f"forbidden pair {a}+{s}(via {b})")
 
-    # Rule 3: primary overlap, unless bundle companions linked by `requires`
-    owners: dict[str, list[str]] = {}
-    for s in known:
-        for asp in reg.skills[s].primary:
-            owners.setdefault(asp, []).append(s)
-    for asp, names in owners.items():
+    # Rule 3: primary overlap over members and their closures. Each aspect collects
+    # distinct source skills owning it as primary, attributed to the member(s) that bring them.
+    owners: dict[str, dict[str, list[str]]] = {}
+    for m in known:
+        for src in [m] + closure[m]:
+            for asp in reg.skills[src].primary:
+                attributed = owners.setdefault(asp, {}).setdefault(src, [])
+                if m not in attributed:
+                    attributed.append(m)
+    for asp, sources in owners.items():
+        names = list(sources)
+        involved: set[str] = set()
         for i, a in enumerate(names):
             for b in names[i + 1:]:
-                sa, sb = reg.skills[a], reg.skills[b]
-                companions = (
-                    sa.bundle is not None
-                    and sa.bundle == sb.bundle
-                    and _connected_via_requires(reg, a, b, known)
-                )
-                if not companions:
-                    conflicts.append(f"primary overlap {asp}: {a}, {b}")
+                if _coordinated(reg, a, b, nodes):
+                    continue
+                # Sources brought only by one and the same member are coordinated by that member.
+                if any(x != y for x in sources[a] for y in sources[b]):
+                    involved.update(sources[a])
+                    involved.update(sources[b])
+        if involved:
+            conflicts.append(f"primary overlap {asp}: {', '.join(m for m in known if m in involved)}")
 
     # Rule 4: generation skills
     required_by_others = {
@@ -98,8 +132,8 @@ def check_combo(reg: Registry, skills: list[str], check_runtime: bool = False) -
                 secondary_aspects.append(asp)
     for asp in secondary_aspects:
         holders = [s for s in known if asp in reg.skills[s].secondary]
-        primary_owners = owners.get(asp, [])
-        winner = primary_owners[0] if primary_owners else holders[-1]
+        primary_members = [m for m in known if any(m in ms for ms in owners.get(asp, {}).values())]
+        winner = primary_members[0] if primary_members else holders[-1]
         precedence[asp] = winner
         ignored.extend((s, asp) for s in holders if s != winner)
 

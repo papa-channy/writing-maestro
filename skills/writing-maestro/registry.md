@@ -7,6 +7,7 @@ writing-maestro가 매 호출 새로 읽는 스킬 목록이다. 앞부분은 �
 - **스킬 추가**: `~/.claude/skills/<이름>/`에 설치하고 설치 매니페스트에 올린 뒤, `## 스킬` 아래에 `### <이름>` 항목을 다른 항목과 같은 필드 순서로 쓴다. 주 측면은 그 스킬의 본업으로 결과물에서 정하는 측면, 부 측면은 원문에 규칙이 있지만 본업이 아닌 측면이다. 주·부 측면, 필수 동반, 금지 짝마다 `근거`에 `<키> "<원문 인용>"` 쌍을 하나씩 ` / `로 이어 붙인다(인용 안에 ` / 단어 "` 형태는 쓰지 않는다). 사용자 정보 없이는 결과가 안 나올 때만 단계에 `clarify`를 넣는다. 측면 표의 '주 측면 스킬' 칸도 함께 고친다.
 - **스킬 제거**: 항목을 지우고, 측면 표와 묶음 표에서 이름을 지운다. 다른 스킬의 `필수 동반`에 남아 있으면 검증이 실패한다.
 - **새 측면**: 두 스킬이 동시에 다르게 지시하면 결과가 흔들리는 결과물 속성일 때만 만든다. id는 소문자 ascii 슬러그.
+- **재생성 주의**: `research/registry-build/build_registry.py`를 다시 돌리면 이 파일의 손 편집이 덮어써진다. 고칠 때는 `research/registry-build/assignments.py`를 고친 뒤 다시 만들거나, 이 파일만 직접 고치고 스크립트는 돌리지 않는다.
 - **검증**: 고친 뒤 다음을 돌려 `OK <n> skills`를 확인한다. 조합 하나를 따져 보려면 `combo_check.py`를 쓴다.
 
 ```
@@ -36,11 +37,11 @@ python3 skills/writing-maestro/scripts/combo_check.py --registry skills/writing-
 | topic-plan | 주제·기획 선정 | 무엇을 쓸지(콘텐츠 필러, 연구 방향)를 고르고 순위를 매기는 일. 한 편의 골격(structure)과는 다른 층이다. | content-strategy, research-ideation |
 | evidence | 근거·출처 | 주장마다 어떤 근거를 대는지, 근거 없는 주장을 어떻게 표시하는지, 주장 강도를 근거에 맞추는 규칙. 조사·근거 지도 스킬이 주 소유자이고, 초안 스킬의 '지어내지 말라' 규칙은 부 측면이다. | build-evidence-map, docs-sync-audit, evidence-synthesis, investigating-sources, literature-review, scientific-writing |
 | citation-check | 서지 검증 | 참고문헌이 실재하고 메타데이터가 맞는지 확인하는 일. 근거 조직(evidence)과 나눈 이유: 검증 방식이 달라도 결과가 흔들리지 않으므로, 근거를 조직하는 초안 스킬과 검증 스킬을 한 조합에 넣을 수 있게 한다. | citation-verification |
-| structure | 전체 구조·논증 흐름 | 문서 골격(섹션 구성·순서·템플릿)과 논증 순서. 초안 스킬은 저마다 자기 산출물의 골격을 정하므로, 두 초안 스킬은 대개 여기서 갈린다. | abstract-writing, agent-md-refactor, awesome-content-repurpose, blog-post-writing, chatbot-conversation-design, crafting-effective-readmes, create-implementation-plan, create-specification, data-storytelling, doc-coauthoring, documenting-contracts, literature-review, paper-writing, rebuttal-and-response-to-reviewers, recording-decisions, short-form-video-script, writing-design-docs, writing-runbooks |
+| structure | 전체 구조·논증 흐름 | 문서 골격(섹션 구성·순서·템플릿)과 논증 순서. 초안 스킬은 저마다 자기 산출물의 골격을 정하므로, 두 초안 스킬은 대개 여기서 갈린다. | abstract-writing, agent-md-refactor, awesome-content-repurpose, blog-post-writing, chatbot-conversation-design, copywriting, crafting-effective-readmes, create-implementation-plan, create-specification, data-storytelling, doc-coauthoring, documenting-contracts, literature-review, paper-writing, rebuttal-and-response-to-reviewers, recording-decisions, short-form-video-script, writing-design-docs, writing-runbooks |
 | flow | 문단 흐름·제목 척추 | 제목·소제목·문단 첫 문장·문단 끝·문단 사이 전환. 골격(structure)은 그대로 두고 다듬는 층이다. | non-autoregressive-writing-pass |
 | prose-edit | 문장 문체·교정 | 문장 단위의 명료성·간결성·어휘 호응·리듬·문법. 리듬(문장 길이)도 여기에 넣는다: 리듬만 따로 지시하는 스킬은 writing-cadence 하나뿐이고 그마저 humanizer가 부른다. | academic-voice, better-usage, general-writing, line-editing, reviewing-technical-prose, technical-writing, writing-cadence |
 | ai-tells | AI식 표현 제거 | 대조 반전(not X but Y), 3항 나열, 엠대시, AI 어휘, 상투 도입·결말처럼 기계 티가 나는 패턴의 금지·제거 목록. 목록이 스킬마다 다르므로 한 시안에서는 한 목록만 따른다. | general-writing, humanizer, prose-naturalizer, reviewing-technical-prose, technical-writing |
-| voice | 저자·브랜드 목소리 | 누구의 목소리로 쓰는가: 보이스 프로필(voice.md, brand-profile.md), 학술 레지스터, 작가·인물 목소리 보존, 문서 어조. | academic-voice, awesome-content-voice, brand-profile, line-editing, voice-builder, voice-style |
+| voice | 저자·브랜드 목소리 | 누구의 목소리로 쓰는가: 보이스 프로필(voice.md, brand-profile.md), 학술 레지스터, 작가·인물 목소리 보존, 문서 어조. | awesome-content-voice, brand-profile, line-editing, voice-builder, voice-style |
 | hook | 도입·훅 | 첫 줄, 영상 첫 3초, 제목줄, 메일 첫 문장처럼 독자를 붙잡는 오프닝. | hook-writer |
 | persuasion | 독자 설득·전환 | 가치 제안, 혜택, CTA, 요청 하나, 피치처럼 독자를 행동으로 옮기는 설계. | cold-email, copywriting, research-grants, submission |
 | format | 포맷·채널 규격 | 길이·글자 수 한도, 고정 템플릿과 front matter, 파일 위치·이름, 플랫폼·검색(SEO) 규격, 출력 포장 형식. | awesome-content-repurpose, blog-post-writing, create-implementation-plan, create-specification, short-form-video-script, submission |
@@ -87,13 +88,13 @@ python3 skills/writing-maestro/scripts/combo_check.py --registry skills/writing-
 
 `combo_check.py`가 다음을 결정적으로 판정한다.
 
-1. **금지 짝**: 어느 쪽이 적었든 함께 넣지 않는다.
-2. **주 측면 배제**: 주 측면이 겹치는 두 스킬은 함께 넣지 않는다. 예외: 같은 묶음이고 조합 안에서 `필수 동반`으로 이어져 있으면(방향 무관, 여러 단계 연결 허용) 원문이 순서를 조율하므로 허용한다.
-3. **생성 스킬 최대 3개**: 단계가 `clarify`·`check`만이 아닌 스킬이 생성 스킬이다. 조합 안 다른 스킬의 `필수 동반`인 스킬은 세지 않는다.
+1. **금지 짝**: 어느 쪽이 적었든 두 구성원을 함께 넣지 않는다. 구성원 A가 금지한 스킬 S가 다른 구성원 B의 닫힘에 있어도 충돌이다(`forbidden pair A+S(via B)`). 단 S가 A 자신의 닫힘에 있으면(예: paper-writing은 humanizer를 금지하지만 general-writing을 거쳐 스스로 부른다) 이 경유 충돌은 면제한다.
+2. **주 측면 배제(동반 포함)**: 각 구성원의 `필수 동반`을 끝까지 따라간 닫힘(조건부 동반 포함, 자기 자신 제외)까지 함께 본다. 구성원이 직접 넣지 않아도 그 동반 스킬의 규칙이 시안에 들어가기 때문이다(예: writing-design-docs → technical-writing의 문장 규칙, paper-writing → general-writing → humanizer의 AI식 표현 목록). 측면마다 그것을 주 측면으로 가진 서로 다른 출처 스킬을 모으고, 출처가 둘 이상이며 그 출처끼리 조율되어 있지 않으면 `primary overlap <측면>: <그 출처를 들여온 구성원들>` 충돌이다. 두 구성원이 같은 출처 하나를 들여오는 것(예: writing-design-docs와 reviewing-technical-prose가 둘 다 technical-writing을 부름)은 충돌이 아니다. 조율 = 같은 묶음이고, (구성원 ∪ 닫힘) 안의 어떤 스킬이 `필수 동반`을 따라 두 출처 모두에 닿는다(한 출처가 다른 출처를 부르는 경우 포함, 여러 단계 허용). 부르는 쪽이 순서를 짜기 때문이다. 공통 동반을 함께 부를 뿐인 형제(writing-design-docs와 writing-runbooks가 둘 다 technical-writing을 부름)는 서로 조율되지 않으므로 둘의 골격(structure)은 충돌이다.
+3. **생성 스킬 최대 3개**: 단계가 `clarify`·`check`만이 아닌 구성원이 생성 스킬이다. 조합 안 다른 구성원의 `필수 동반`인 구성원은 세지 않는다. 닫힘에만 있는 동반 스킬은 구성원이 아니므로 세지 않는다.
 4. **명확화 전용 스킬은 조합에 넣지 않는다**: 단계가 `clarify`뿐인 스킬은 ② 명확화 단계로 보낸다.
-5. **우선순위**: 한 스킬의 부 측면이 다른 구성원의 주 측면이면 그 측면은 주 측면 스킬을 따른다. 주 측면 소유자 없이 부 측면끼리만 겹치면 조합 순서상 뒤 스킬을 따른다. 시안 지시에 "측면별 따를 스킬"로 적는다.
+5. **우선순위**: 구성원의 부 측면은 그 측면을 주 측면으로 가진 구성원(자기 자신 또는 닫힘이 소유)을 따른다(앞선 구성원 우선). 그런 구성원이 없으면 그 측면을 부 측면으로 가진 구성원 중 조합 순서상 뒤 스킬을 따른다. 시안 지시에 "측면별 따를 스킬"로 적는다.
 
-`필수 동반`은 자동 포함이 아니다. 조합에는 오케스트레이터가 직접 순서를 짜는 스킬만 넣고, 구성원이 스스로 부르는 동반 스킬(예: general-writing → humanizer)은 넣지 않는다. 동반 관계는 묶음 예외와 생성 스킬 수 계산에만 쓴다. 산출 파일 규약이 다른 두 보이스 프로필(`voice.md` vs `voice/<name>.md`)은 한 시안에서 하나만 쓴다.
+`필수 동반`은 자동 포함이 아니다. 조합에는 오케스트레이터가 직접 순서를 짜는 스킬만 넣고, 구성원이 스스로 부르는 동반 스킬(예: general-writing → humanizer)은 넣지 않는다. 동반 관계는 충돌·우선순위를 닫힘까지 따지는 데(규칙 1·2·5)와 생성 스킬 수 계산에 쓴다. 산출 파일 규약이 다른 두 보이스 프로필(`voice.md` vs `voice/<name>.md`)은 한 시안에서 하나만 쓴다.
 
 ## 스킬
 
@@ -124,8 +125,8 @@ python3 skills/writing-maestro/scripts/combo_check.py --registry skills/writing-
 - 맞는 상황: 연구 설명문, 학술 논문, 교재식 설명, 학술 요약, 기업·LinkedIn·Reddit·GitHub 어조를 피해야 하는 초안.
 - 맞지 않는 상황: 매뉴얼·절차서 같은 지시문(직접 지시는 그런 장르에서만), 캐주얼·법률·개인 글을 저널 문체로 바꾸는 일, 다른 스킬 파이프라인 호출(호출 경계에서 금지).
 - 고유 접근: 추상 명사 압축을 학술적 엄밀함으로 착각하지 않도록 행위자와 관계를 이름 붙이고, 차용된 레지스터 네 가지(기업, LinkedIn, Reddit, GitHub)를 명시적으로 제거한다.
-- 주 측면: voice, prose-edit
-- 부 측면: evidence, ai-tells, flow
+- 주 측면: prose-edit
+- 부 측면: voice, evidence, ai-tells, flow
 - 단계: prose
 - 과제 종류: new, edit
 - 묶음: msimchowitz
@@ -134,8 +135,8 @@ python3 skills/writing-maestro/scripts/combo_check.py --registry skills/writing-
 - 실행 요건: 필수: 없음 | 선택: 없음
 - 필수 명령: 없음
 - 상태 파일: 없음
-- 주의: 매니페스트 이슈 없음(READY). forbids는 다른 스킬이 호출했을 때의 호출 경계 규칙이다(단독 사용 시 해당 없음). 판단: 원문의 'Do not invoke Humanizer …' 줄은 humanizer가 이 스킬을 부를 때 파이프라인을 다시 부르지 말라는 재귀 방지 규칙이라 금지 짝으로 적지 않았다. humanizer(general-writing 경유 포함)가 이미 이 스킬을 적용하므로 그런 조합에 따로 넣으면 중복이다. 예외: paper-writing이 학술 산문 초안에서 academic-voice를 직접 부르는 경우.
-- 근거: voice "Write like an academic who is thoughtful, careful, and precise" / prose-edit "Do not mistake abstraction for rigor." / evidence "Distinguish evidence, interpretation, and conjecture." / ai-tells "Remove LinkedIn cadence: manufactured hooks, one-line lessons, motivational closure" / flow "Prefer connected exposition to a stack of directives, slogans, headings, or equally weighted bullets."
+- 주의: 매니페스트 이슈 없음(READY). forbids는 다른 스킬이 호출했을 때의 호출 경계 규칙이다(단독 사용 시 해당 없음). 판단: 원문의 'Do not invoke Humanizer …' 줄은 humanizer가 이 스킬을 부를 때 파이프라인을 다시 부르지 말라는 재귀 방지 규칙이라 금지 짝으로 적지 않았다. humanizer(general-writing 경유 포함)가 이미 이 스킬을 적용하므로 그런 조합에 따로 넣으면 중복이다. 예외: paper-writing이 학술 산문 초안에서 academic-voice를 직접 부르는 경우. 학술 레지스터(voice)는 부 측면으로 둔다: humanizer가 이 스킬을 학술·설명문일 때만 레지스터로 적용하고(캐주얼·기술·개인 글은 바꾸지 않음) 사용자 샘플이 규칙보다 우선하므로, 주 측면으로 두면 humanizer·general-writing을 거쳐 브랜드·작가 목소리 스킬(hook-writer, line-editing 등)과의 조합이 모두 막힌다.
+- 근거: prose-edit "Do not mistake abstraction for rigor." / voice "Write like an academic who is thoughtful, careful, and precise" / evidence "Distinguish evidence, interpretation, and conjecture." / ai-tells "Remove LinkedIn cadence: manufactured hooks, one-line lessons, motivational closure" / flow "Prefer connected exposition to a stack of directives, slogans, headings, or equally weighted bullets."
 
 ### agent-md-refactor
 - id: WM-X0371
@@ -214,7 +215,7 @@ python3 skills/writing-maestro/scripts/combo_check.py --registry skills/writing-
 - 실행 요건: 필수: 없음 | 선택: references/compatibility-examples.md (전체 의미 사용 패스 시)
 - 필수 명령: 없음
 - 상태 파일: 없음
-- 주의: 매니페스트: 동반 스킬, SHA가 선택 목록에 없어 현재 HEAD 설치. humanizer 3단계가 호출하므로 단독 라우팅 대상이 아니다. forbids는 호출 경계 규칙(다른 스킬이 호출했을 때 파이프라인 재호출 금지). 판단: 원문의 'Do not invoke Humanizer …' 줄은 humanizer가 이 스킬을 부를 때 파이프라인을 다시 부르지 말라는 재귀 방지 규칙이라 금지 짝으로 적지 않았다. humanizer(general-writing 경유 포함)가 이미 이 스킬을 적용하므로 그런 조합에 따로 넣으면 중복이다. 예외: paper-writing이 학술 산문 초안에서 academic-voice를 직접 부르는 경우.
+- 주의: 매니페스트: 동반 스킬, SHA가 선택 목록에 없어 현재 HEAD 설치. humanizer 3단계가 호출하므로 단독 라우팅 대상이 아니다. forbids는 호출 경계 규칙(다른 스킬이 호출했을 때 파이프라인 재호출 금지). 판단: 원문의 'Do not invoke Humanizer …' 줄은 humanizer가 이 스킬을 부를 때 파이프라인을 다시 부르지 말라는 재귀 방지 규칙이라 금지 짝으로 적지 않았다. humanizer(general-writing 경유 포함)가 이미 이 스킬을 적용하므로 그런 조합에 따로 넣으면 중복이다.
 - 근거: prose-edit "Choose words that express the relation the sentence actually asserts." / evidence "Recheck epistemic force."
 
 ### blog-post-writing
@@ -424,7 +425,7 @@ python3 skills/writing-maestro/scripts/combo_check.py --registry skills/writing-
 - 맞는 상황: '카피 써줘', '이 카피 개선', 헤드라인, CTA, 가치 제안, 'AI 같다/사람처럼' 요청.
 - 맞지 않는 상황: 이메일 카피(emails), 팝업(popups), 기존 카피 편집(copy-editing), 보너스와 보증 같은 오퍼 설계(offers).
 - 고유 접근: 상황 진단(A 공백, B 목소리 보존, C 부분 수정) 후 단위별로 후보를 만들어 고정하고, 세 질문 게이트와 AI 티 금지 목록으로 검증하며, 근거 없는 주장은 거절하고 해제 조건을 명시한다.
-- 주 측면: persuasion
+- 주 측면: persuasion, structure
 - 부 측면: prose-edit, ai-tells, evidence, format
 - 단계: draft
 - 과제 종류: new, edit
@@ -435,7 +436,7 @@ python3 skills/writing-maestro/scripts/combo_check.py --registry skills/writing-
 - 필수 명령: 없음
 - 상태 파일: .agents/product-marketing.md 또는 .claude/product-marketing.md (읽기 전용, 있을 때만)
 - 주의: 매니페스트: 조건부 product-marketing 파일, 관련 스킬(copy-editing, cro, emails, popups, ab-testing)은 참고 언급만이며 미설치. 영어 마케팅 페이지 중심. 자체 AI 티 금지 규칙은 부 측면(ai-tells)으로 두어, humanizer·prose-naturalizer 같은 ai-tells 주 소유자와 조합되면 그쪽 규칙을 따른다.
-- 근거: persuasion "[Action Verb] + [What They Get] + [Qualifier if needed]" / prose-edit "If you have to choose between clear and creative, choose clear." / ai-tells "**Contrast reveals.**" / evidence "flag missing proof as `[NEED: ...]` rather than inventing it." / format "For headlines and CTAs, provide 2-3 options:"
+- 근거: persuasion "[Action Verb] + [What They Get] + [Qualifier if needed]" / structure "Each section should advance one argument. Build a logical flow down the page." / prose-edit "If you have to choose between clear and creative, choose clear." / ai-tells ""It's not X, it's Y." "Not because X. Because Y." "Not just X, but Y." State Y directly, with the reason." / evidence "flag missing proof as `[NEED: ...]` rather than inventing it." / format "For headlines and CTAs, provide 2-3 options:"
 
 ### crafting-effective-readmes
 - id: WM-X0374
@@ -605,7 +606,7 @@ python3 skills/writing-maestro/scripts/combo_check.py --registry skills/writing-
 - 맞지 않는 상황: 초안 없이 새로 쓰기(초안을 먼저 요청), 사실·주장·통계 창작, 독자용 human-writing-guide 디렉터리 로드(에이전트 컨텍스트에 넣지 말라고 명시).
 - 고유 접근: Humanizer를 임베디드 모드로 먼저 돌린 뒤 이 스킬을 최종 하우스 스타일 패스로 적용하고, eval.md 체크리스트로 직접 검증한다. 탐지 요청에는 패턴명과 인용만 반환한다.
 - 주 측면: prose-edit, ai-tells
-- 부 측면: flow, evidence
+- 부 측면: flow, evidence, voice, format
 - 단계: prose
 - 과제 종류: new, edit, review, docs
 - 묶음: msimchowitz
@@ -615,7 +616,7 @@ python3 skills/writing-maestro/scripts/combo_check.py --registry skills/writing-
 - 필수 명령: 없음
 - 상태 파일: 없음
 - 주의: 매니페스트 노트: ../../for-humans/human-writing-guide/ 를 참조하나 이는 사람용 가이드라 미설치이며 로드하지 말라고 명시됨. 형제 스킬(abstract-writing, academic-voice, humanizer 등)은 ~/.claude/skills에서 해석된다. 초안이 없으면 먼저 요청해야 하므로 단독 호출 시 입력 확인 필요. Humanizer 안에서 better-usage, academic-voice, writing-cadence, non-autoregressive-writing-pass가 이미 적용되므로 중복 실행 금지.
-- 근거: prose-edit "Make the minimum effective edit." / ai-tells "Ban these unless quoted or technically necessary: delve, foster, leverage" / flow "Do not treat display text as metadata." / evidence "Do not invent claims, examples, statistics, quotations, or opinions." / humanizer "For editing requests, read the sibling [Humanizer skill](../humanizer/SKILL.md) and invoke it in embedded"
+- 근거: prose-edit "Make the minimum effective edit." / ai-tells "Ban these unless quoted or technically necessary: delve, foster, leverage" / flow "Do not treat display text as metadata." / evidence "Do not invent claims, examples, statistics, quotations, or opinions." / voice "**Preserve the writer's real voice.**" / format "return the full edited draft plus a short **What changed** section." / humanizer "For editing requests, read the sibling [Humanizer skill](../humanizer/SKILL.md) and invoke it in embedded"
 
 ### genre-craft
 - id: companion
@@ -675,7 +676,7 @@ python3 skills/writing-maestro/scripts/combo_check.py --registry skills/writing-
 - 필수 명령: 없음
 - 상태 파일: scripts/validate-package.py (패키지 검증용, 출력에 무관)
 - 주의: 매니페스트: 동반 스킬(companion), SHA가 선택 목록에 없어 현재 HEAD(214981f)를 설치, 자체 LICENSE 파일 있음. 요청된 필수 항목에 better-usage와 writing-cadence만 언급됐지만 원문 프로세스 3~6단계가 academic-voice와 non-autoregressive-writing-pass도 읽고 적용하라고 명시해 네 개 모두 requires에 기록. academic-voice는 학술·설명문일 때만 학술 레지스터를 쓰고, 캐주얼·법률·기술·개인 글은 저널 문체로 바꾸지 않는다. 임베디드 모드에서는 최종 텍스트만 출력. 판단: 동반 네 스킬은 humanizer가 스스로 순서대로 적용한다. 오케스트레이터가 따로 조합에 넣지 않는다.
-- 근거: ai-tells "Identify AI patterns" / evidence "The rewrite must not contain any fact, name, number, date, quote, or citation that isn't in the source text." / flow "Mechanical Paragraph Endings" / voice "A sample outranks this skill's style rules" / better-usage "Read and apply the sibling [better-usage skill](../better-usage/SKILL.md) to the draft." / academic-voice "Read and apply the sibling [academic-voice skill](../academic-voice/SKILL.md)." / writing-cadence "Read and apply the sibling [writing-cadence skill](../writing-cadence/SKILL.md) last." / non-autoregressive-writing-pass "Read and apply the sibling [non-autoregressive writing pass](../non-autoregressive-writing-pass/SKILL.md)"
+- 근거: ai-tells "**Identify AI patterns** - Scan the complete artifact for the patterns listed below." / evidence "The rewrite must not contain any fact, name, number, date, quote, or citation that isn't in the source text." / flow "End where the reasoning arrives: on a supported consequence, boundary, unresolved tension, or concrete fact." / voice "A sample outranks this skill's style rules" / better-usage "Read and apply the sibling [better-usage skill](../better-usage/SKILL.md) to the draft." / academic-voice "Read and apply the sibling [academic-voice skill](../academic-voice/SKILL.md)." / writing-cadence "Read and apply the sibling [writing-cadence skill](../writing-cadence/SKILL.md) last." / non-autoregressive-writing-pass "Read and apply the sibling [non-autoregressive writing pass](../non-autoregressive-writing-pass/SKILL.md)"
 
 ### idea-refine
 - id: WM-X0062
@@ -794,7 +795,7 @@ python3 skills/writing-maestro/scripts/combo_check.py --registry skills/writing-
 - 실행 요건: 필수: 안정된 완성 초안 | 선택: 없음
 - 필수 명령: 없음
 - 상태 파일: 없음
-- 주의: 매니페스트 이슈 없음(READY). 상태: 완성 초안 이후에 실행. forbids는 다른 스킬이 호출했을 때의 호출 경계 규칙. Humanizer 프로세스 6단계에서 이미 포함되어 호출되므로 humanizer와 중복 실행 금지. 판단: 원문의 'Do not invoke Humanizer …' 줄은 humanizer가 이 스킬을 부를 때 파이프라인을 다시 부르지 말라는 재귀 방지 규칙이라 금지 짝으로 적지 않았다. humanizer(general-writing 경유 포함)가 이미 이 스킬을 적용하므로 그런 조합에 따로 넣으면 중복이다. 예외: paper-writing이 학술 산문 초안에서 academic-voice를 직접 부르는 경우.
+- 주의: 매니페스트 이슈 없음(READY). 상태: 완성 초안 이후에 실행. forbids는 다른 스킬이 호출했을 때의 호출 경계 규칙. Humanizer 프로세스 6단계에서 이미 포함되어 호출되므로 humanizer와 중복 실행 금지. 판단: 원문의 'Do not invoke Humanizer …' 줄은 humanizer가 이 스킬을 부를 때 파이프라인을 다시 부르지 말라는 재귀 방지 규칙이라 금지 짝으로 적지 않았다. humanizer(general-writing 경유 포함)가 이미 이 스킬을 적용하므로 그런 조합에 따로 넣으면 중복이다.
 - 근거: flow "Name their relation: continuation, cause, consequence, contrast" / evidence "Preserve facts, citations, qualifications, notation, examples, and deliberate voice." / prose-edit "Prefer lexical continuity and a clear logical relation to formulaic connectors"
 
 ### paper-writing
@@ -1374,7 +1375,7 @@ python3 skills/writing-maestro/scripts/combo_check.py --registry skills/writing-
 - 실행 요건: 필수: 없음 | 선택: references/cadence-principles.md (전체 리듬 편집 시)
 - 필수 명령: 없음
 - 상태 파일: 없음
-- 주의: 매니페스트: 동반 스킬, SHA가 선택 목록에 없어 현재 HEAD 설치. humanizer 5단계가 마지막 순서로 호출한다. forbids는 호출 경계 규칙으로, 이 스킬이 다른 파이프라인 스킬을 호출하지 말라는 의미다. 판단: 원문의 'Do not invoke Humanizer …' 줄은 humanizer가 이 스킬을 부를 때 파이프라인을 다시 부르지 말라는 재귀 방지 규칙이라 금지 짝으로 적지 않았다. humanizer(general-writing 경유 포함)가 이미 이 스킬을 적용하므로 그런 조합에 따로 넣으면 중복이다. 예외: paper-writing이 학술 산문 초안에서 academic-voice를 직접 부르는 경우.
+- 주의: 매니페스트: 동반 스킬, SHA가 선택 목록에 없어 현재 HEAD 설치. humanizer 5단계가 마지막 순서로 호출한다. forbids는 호출 경계 규칙으로, 이 스킬이 다른 파이프라인 스킬을 호출하지 말라는 의미다. 판단: 원문의 'Do not invoke Humanizer …' 줄은 humanizer가 이 스킬을 부를 때 파이프라인을 다시 부르지 말라는 재귀 방지 규칙이라 금지 짝으로 적지 않았다. humanizer(general-writing 경유 포함)가 이미 이 스킬을 적용하므로 그런 조합에 따로 넣으면 중복이다.
 - 근거: prose-edit "Shape rhythm around meaning and emphasis." / ai-tells "Mark every contrast built from a reusable difference template" / flow "Do not append a summary, slogan, generic implication, or sentence about the document"
 
 ### writing-design-docs

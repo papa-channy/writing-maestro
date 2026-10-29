@@ -97,3 +97,59 @@ def test_cli_json(tmp_path):
     good = subprocess.run(cmd + ["copywriting", "humanizer"], capture_output=True, text=True, cwd=tmp_path)
     assert good.returncode == 0
     assert json.loads(good.stdout)["precedence"] == {"ai-tells": "humanizer"}
+
+
+# --- closure evaluation: rules of companions a member invokes on its own ---
+
+def _copy_requires_humanizer(text=TEXT):
+    return variant("copywriting", "- 필수 동반: 없음", "- 필수 동반: humanizer", text=text)
+
+
+def test_closure_overlap_conflict():
+    # copywriting itself owns only persuasion, but its companion humanizer owns ai-tells.
+    reg2 = parse_registry(_copy_requires_humanizer())
+    r = check_combo(reg2, ["copywriting", "prose-naturalizer"])
+    assert not r.ok
+    assert "primary overlap ai-tells: copywriting, prose-naturalizer" in r.conflicts
+
+
+def test_shared_single_source_not_conflict():
+    # general-writing and copywriting both bring the same humanizer: one source, no conflict.
+    reg2 = parse_registry(_copy_requires_humanizer())
+    r = check_combo(reg2, ["general-writing", "copywriting"])
+    assert r.ok, r.conflicts
+
+
+def test_closure_precedence_winner():
+    # copywriting's secondary ai-tells follows general-writing, whose closure (humanizer) owns it.
+    r = check_combo(reg, ["copywriting", "general-writing"])
+    assert r.ok, r.conflicts
+    assert r.precedence["ai-tells"] == "general-writing"
+    assert ("copywriting", "ai-tells") in r.ignored
+
+
+def test_forbids_via_closure():
+    reg2 = parse_registry(variant("prose-naturalizer", "- 금지 짝: manuscript-writing", "- 금지 짝: humanizer"))
+    r = check_combo(reg2, ["prose-naturalizer", "general-writing"])
+    assert not r.ok
+    assert "forbidden pair prose-naturalizer+humanizer(via general-writing)" in r.conflicts
+
+
+def test_own_closure_forbids_exempt():
+    # general-writing forbids humanizer but already invokes it itself (own closure).
+    t = variant("general-writing", "- 금지 짝: 없음", "- 금지 짝: humanizer")
+    reg2 = parse_registry(_copy_requires_humanizer(t))
+    assert check_combo(reg2, ["general-writing"]).ok
+    r = check_combo(reg2, ["general-writing", "copywriting"])
+    assert not any(c.startswith("forbidden pair") for c in r.conflicts), r.conflicts
+
+
+def test_siblings_sharing_a_companion_not_coordinated():
+    # Same bundle, both require humanizer, both own prose-edit: sharing a companion
+    # does not mean either one sequences the other.
+    t = _copy_requires_humanizer()
+    t = variant("copywriting", "- 묶음: 없음", "- 묶음: msimchowitz", text=t)
+    t = variant("copywriting", "- 주 측면: persuasion", "- 주 측면: persuasion, prose-edit", text=t)
+    r = check_combo(parse_registry(t), ["general-writing", "copywriting"])
+    assert not r.ok
+    assert "primary overlap prose-edit: general-writing, copywriting" in r.conflicts

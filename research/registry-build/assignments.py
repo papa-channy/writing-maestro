@@ -103,7 +103,7 @@ TASK_TYPE_EXTRA = {
 }
 
 RECURSION_GUARD = ("원문의 'Do not invoke Humanizer …' 줄은 humanizer가 이 스킬을 부를 때 파이프라인을 다시 부르지 말라는 재귀 방지 규칙이라 금지 짝으로 적지 않았다. "
-                   "humanizer(general-writing 경유 포함)가 이미 이 스킬을 적용하므로 그런 조합에 따로 넣으면 중복이다. 예외: paper-writing이 학술 산문 초안에서 academic-voice를 직접 부르는 경우.")
+                   "humanizer(general-writing 경유 포함)가 이미 이 스킬을 적용하므로 그런 조합에 따로 넣으면 중복이다.")
 
 SKILLS = {
     "abstract-writing": dict(
@@ -118,12 +118,12 @@ SKILLS = {
     ),
     "academic-voice": dict(
         stages=["prose"], bundle="msimchowitz",
-        P=[("voice", "Write like an academic who is thoughtful, careful, and precise"),
-           ("prose-edit", "Do not mistake abstraction for rigor.")],
-        S=[("evidence", "Distinguish evidence, interpretation, and conjecture."),
+        P=[("prose-edit", "Do not mistake abstraction for rigor.")],
+        S=[("voice", "Write like an academic who is thoughtful, careful, and precise"),
+           ("evidence", "Distinguish evidence, interpretation, and conjecture."),
            ("ai-tells", "Remove LinkedIn cadence: manufactured hooks, one-line lessons, motivational closure"),
            ("flow", "Prefer connected exposition to a stack of directives, slogans, headings, or equally weighted bullets.")],
-        note=RECURSION_GUARD,
+        note=RECURSION_GUARD + " 예외: paper-writing이 학술 산문 초안에서 academic-voice를 직접 부르는 경우. 학술 레지스터(voice)는 부 측면으로 둔다: humanizer가 이 스킬을 학술·설명문일 때만 레지스터로 적용하고(캐주얼·기술·개인 글은 바꾸지 않음) 사용자 샘플이 규칙보다 우선하므로, 주 측면으로 두면 humanizer·general-writing을 거쳐 브랜드·작가 목소리 스킬(hook-writer, line-editing 등)과의 조합이 모두 막힌다.",
     ),
     "agent-md-refactor": dict(
         stages=["draft"],
@@ -233,9 +233,10 @@ SKILLS = {
     ),
     "copywriting": dict(
         stages=["draft"],
-        P=[("persuasion", "[Action Verb] + [What They Get] + [Qualifier if needed]")],
+        P=[("persuasion", "[Action Verb] + [What They Get] + [Qualifier if needed]"),
+           ("structure", "Each section should advance one argument. Build a logical flow down the page.")],
         S=[("prose-edit", "If you have to choose between clear and creative, choose clear."),
-           ("ai-tells", "**Contrast reveals.**"),
+           ("ai-tells", '"It\'s not X, it\'s Y." "Not because X. Because Y." "Not just X, but Y." State Y directly, with the reason.'),
            ("evidence", "flag missing proof as `[NEED: ...]` rather than inventing it."),
            ("format", "For headlines and CTAs, provide 2-3 options:")],
         caution_override="매니페스트: 조건부 product-marketing 파일, 관련 스킬(copy-editing, cro, emails, popups, ab-testing)은 참고 언급만이며 미설치. 영어 마케팅 페이지 중심. 자체 AI 티 금지 규칙은 부 측면(ai-tells)으로 두어, humanizer·prose-naturalizer 같은 ai-tells 주 소유자와 조합되면 그쪽 규칙을 따른다.",
@@ -304,7 +305,9 @@ SKILLS = {
         P=[("prose-edit", "Make the minimum effective edit."),
            ("ai-tells", "Ban these unless quoted or technically necessary: delve, foster, leverage")],
         S=[("flow", "Do not treat display text as metadata."),
-           ("evidence", "Do not invent claims, examples, statistics, quotations, or opinions.")],
+           ("evidence", "Do not invent claims, examples, statistics, quotations, or opinions."),
+           ("voice", "**Preserve the writer's real voice.**"),
+           ("format", "return the full edited draft plus a short **What changed** section.")],
     ),
     "genre-craft": dict(
         stages=["genre"], bundle="story-skills",
@@ -321,9 +324,9 @@ SKILLS = {
     ),
     "humanizer": dict(
         stages=["prose"], bundle="msimchowitz",
-        P=[("ai-tells", "Identify AI patterns")],
+        P=[("ai-tells", "**Identify AI patterns** - Scan the complete artifact for the patterns listed below.")],
         S=[("evidence", "The rewrite must not contain any fact, name, number, date, quote, or citation that isn't in the source text."),
-           ("flow", "Mechanical Paragraph Endings"),
+           ("flow", "End where the reasoning arrives: on a supported consequence, boundary, unresolved tension, or concrete fact."),
            ("voice", "A sample outranks this skill's style rules")],
         note="동반 네 스킬은 humanizer가 스스로 순서대로 적용한다. 오케스트레이터가 따로 조합에 넣지 않는다.",
     ),
