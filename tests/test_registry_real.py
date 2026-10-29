@@ -98,3 +98,11 @@ def test_copywriting_plus_blog_conflicts():
 def test_doc_type_siblings_conflict():
     # Both require technical-writing, but neither sequences the other: two skeletons.
     assert check_combo(load(), ["writing-design-docs", "writing-runbooks"]).ok is False
+
+
+def test_companion_secondary_format_ignored():
+    # writing-design-docs → technical-writing holds format as secondary; translation holds it itself.
+    r = check_combo(load(), ["translation", "writing-design-docs"])
+    assert r.ok, r.conflicts
+    assert r.precedence["format"] == "writing-design-docs"
+    assert ("translation", "format") in r.ignored

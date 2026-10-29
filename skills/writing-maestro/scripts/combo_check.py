@@ -125,20 +125,22 @@ def check_combo(reg: Registry, skills: list[str], check_runtime: bool = False) -
         if reg.skills[s].stages == ["clarify"]:
             conflicts.append(f"clarify-stage skill in combo: {s}")
 
-    # Rule 6: precedence for secondary aspects
+    # Rule 6: precedence for secondary aspects. Like primary owners, secondary holders are
+    # evaluated over each member and its closure and credited to the member (combo order).
+    holders: dict[str, list[str]] = {}
+    for m in known:
+        for src in [m] + closure[m]:
+            for asp in reg.skills[src].secondary:
+                held = holders.setdefault(asp, [])
+                if m not in held:
+                    held.append(m)
     precedence: dict[str, str] = {}
     ignored: list[tuple[str, str]] = []
-    secondary_aspects = []
-    for s in known:
-        for asp in reg.skills[s].secondary:
-            if asp not in secondary_aspects:
-                secondary_aspects.append(asp)
-    for asp in secondary_aspects:
-        holders = [s for s in known if asp in reg.skills[s].secondary]
+    for asp, held in holders.items():
         primary_members = [m for m in known if any(m in ms for ms in owners.get(asp, {}).values())]
-        winner = primary_members[0] if primary_members else holders[-1]
+        winner = primary_members[0] if primary_members else held[-1]
         precedence[asp] = winner
-        ignored.extend((s, asp) for s in holders if s != winner)
+        ignored.extend((s, asp) for s in held if s != winner and s not in primary_members)
 
     # Rule 7: runtime commands
     missing: list[str] = []

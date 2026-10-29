@@ -153,3 +153,51 @@ def test_siblings_sharing_a_companion_not_coordinated():
     r = check_combo(parse_registry(t), ["general-writing", "copywriting"])
     assert not r.ok
     assert "primary overlap prose-edit: general-writing, copywriting" in r.conflicts
+
+
+# --- rule 6 over closures: secondary aspects carried by companions ---
+
+def test_single_secondary_holder_in_precedence_not_ignored():
+    # voice is held as secondary only by general-writing and owned by nobody: precedence only.
+    r = check_combo(reg, ["general-writing", "copywriting"])
+    assert r.ok, r.conflicts
+    assert r.precedence["voice"] == "general-writing"
+    assert not [x for x in r.ignored if x[1] == "voice"]
+
+
+def _voice_via_companion():
+    # general-writing no longer holds voice itself; its companion humanizer does.
+    t = variant("general-writing", "- 부 측면: voice", "- 부 측면: 없음")
+    t = variant("humanizer", "- 부 측면: 없음", "- 부 측면: voice", text=t)
+    return parse_registry(variant("copywriting", "- 부 측면: ai-tells", "- 부 측면: ai-tells, voice", text=t))
+
+
+def test_companion_secondary_overlap_ignored():
+    reg2 = _voice_via_companion()
+    r = check_combo(reg2, ["general-writing", "copywriting"])
+    assert r.ok, r.conflicts
+    assert r.precedence["voice"] == "copywriting"
+    assert ("general-writing", "voice") in r.ignored
+    r = check_combo(reg2, ["copywriting", "general-writing"])
+    assert r.precedence["voice"] == "general-writing"
+    assert ("copywriting", "voice") in r.ignored
+    assert ("general-writing", "voice") not in r.ignored
+
+
+def test_companion_secondary_yields_to_primary_owner():
+    # humanizer (general-writing's companion) holds persuasion as secondary; copywriting owns it.
+    reg2 = parse_registry(variant("humanizer", "- 부 측면: 없음", "- 부 측면: persuasion"))
+    r = check_combo(reg2, ["general-writing", "copywriting"])
+    assert r.precedence["persuasion"] == "copywriting"
+    assert r.ignored.count(("general-writing", "persuasion")) == 1
+    assert ("copywriting", "persuasion") not in r.ignored
+
+
+def test_primary_owner_never_ignored():
+    # Both members bring humanizer (owner of ai-tells); copywriting also holds ai-tells as
+    # secondary. The winner is the first primary member; copywriting is a primary member too.
+    reg2 = parse_registry(_copy_requires_humanizer())
+    r = check_combo(reg2, ["general-writing", "copywriting"])
+    assert r.ok, r.conflicts
+    assert r.precedence["ai-tells"] == "general-writing"
+    assert ("copywriting", "ai-tells") not in r.ignored
