@@ -1,4 +1,7 @@
+#!/usr/bin/env python3
 """Deterministic conflict and precedence checker for writing-skill combinations."""
+from __future__ import annotations
+
 import argparse
 import json
 import shutil
