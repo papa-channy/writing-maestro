@@ -19,7 +19,7 @@ def reg_from(text):
 
 
 def test_parse_fixture():
-    reg = parse_registry(FIXTURE.read_text())
+    reg = parse_registry(FIXTURE.read_text(encoding="utf-8"))
     assert set(reg.aspects) == {"prose-edit", "ai-tells", "persuasion", "voice"}
     assert len(reg.stages) == 6
     assert reg.skills["general-writing"].primary == ["prose-edit"]
@@ -35,13 +35,13 @@ def test_parse_fixture():
 
 def test_fixture_valid(tmp_path):
     make_dirs(tmp_path)
-    reg = parse_registry(FIXTURE.read_text())
+    reg = parse_registry(FIXTURE.read_text(encoding="utf-8"))
     assert validate(reg, set(ALL), tmp_path) == []
 
 
 def errors(tmp_path, old, new, installed=None):
     make_dirs(tmp_path)
-    text = FIXTURE.read_text()
+    text = FIXTURE.read_text(encoding="utf-8")
     assert old in text
     reg = parse_registry(text.replace(old, new, 1))
     return validate(reg, installed or set(ALL), tmp_path)
@@ -64,13 +64,13 @@ def test_missing_field(tmp_path):
 
 def test_missing_install_dir(tmp_path):
     make_dirs(tmp_path, ALL - {"copywriting"})
-    reg = parse_registry(FIXTURE.read_text())
+    reg = parse_registry(FIXTURE.read_text(encoding="utf-8"))
     assert "copywriting: not installed" in validate(reg, set(ALL), tmp_path)
 
 
 def test_unregistered_installed_skill(tmp_path):
     make_dirs(tmp_path)
-    reg = parse_registry(FIXTURE.read_text())
+    reg = parse_registry(FIXTURE.read_text(encoding="utf-8"))
     assert "extra: installed but not in registry" in validate(reg, ALL | {"extra"}, tmp_path)
 
 
@@ -81,7 +81,7 @@ def test_requires_unknown_skill(tmp_path):
 
 def test_plugin_skill_skips_dir_check(tmp_path):
     make_dirs(tmp_path, ALL - {"copywriting"})
-    text = FIXTURE.read_text().replace(
+    text = FIXTURE.read_text(encoding="utf-8").replace(
         "### copywriting\n- id: WM-X0200\n- 출처: example/skills `copywriting/SKILL.md` @ def5678, MIT",
         "### copywriting\n- id: WM-X0200\n- 출처: plugin anthropic-skills",
     )
@@ -97,5 +97,16 @@ def test_unknown_stage_and_task_type(tmp_path):
 
 def test_forbids_unregistered_allowed(tmp_path):
     make_dirs(tmp_path)
-    reg = parse_registry(FIXTURE.read_text())
+    reg = parse_registry(FIXTURE.read_text(encoding="utf-8"))
     assert not [e for e in validate(reg, set(ALL), tmp_path) if "manuscript-writing" in e]
+
+
+def test_evidence_with_inner_quotes():
+    text = FIXTURE.read_text(encoding="utf-8").replace(
+        'ai-tells "Drafts never use AI tells"',
+        'ai-tells "never use "it\'s not X, it\'s Y" reveals" / persuasion "tail"',
+        1,
+    )
+    ev = parse_registry(text).skills["copywriting"].evidence
+    assert ev["ai-tells"] == 'never use "it\'s not X, it\'s Y" reveals'
+    assert ev["persuasion"] == "tail"

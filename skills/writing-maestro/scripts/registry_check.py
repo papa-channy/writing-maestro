@@ -11,7 +11,7 @@ from registry_lib import parse_registry, validate
 
 
 def installed_from_manifest(path: Path) -> set[str]:
-    data = json.loads(path.read_text())
+    data = json.loads(path.read_text(encoding="utf-8"))
     names = {
         Path(s["installed_dir"]).name
         for s in data["skills"]
@@ -26,7 +26,7 @@ def main() -> int:
     ap.add_argument("--manifest", required=True, type=Path)
     ap.add_argument("--skills-dir", type=Path, default=Path("~/.claude/skills"))
     args = ap.parse_args()
-    reg = parse_registry(args.registry.read_text())
+    reg = parse_registry(args.registry.read_text(encoding="utf-8"))
     errs = validate(reg, installed_from_manifest(args.manifest), args.skills_dir.expanduser())
     if errs:
         print("\n".join(errs))

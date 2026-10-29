@@ -14,7 +14,8 @@ REQUIRED_FIELDS = [
     "실행 요건", "필수 명령", "상태 파일", "주의", "근거",
 ]
 _FIELD_RE = re.compile(r"^-\s*([^:]+?)\s*:\s*(.*)$")
-_EVIDENCE_RE = re.compile(r'([\w-]+)\s+"([^"]*)"')
+_EVIDENCE_SPLIT_RE = re.compile(r'\s+/\s+(?=[\w-]+\s+")')
+_EVIDENCE_PAIR_RE = re.compile(r'^([\w-]+)\s+"(.*)"\s*$')
 
 
 @dataclass
@@ -70,6 +71,16 @@ def _sections(text: str, prefix: str) -> dict[str, list[str]]:
     return out
 
 
+def _parse_evidence(value: str) -> dict[str, str]:
+    """`<key> "<quote>" / <key> "<quote>"` -> {key: quote}. 인용 안의 `"`는 허용한다."""
+    out: dict[str, str] = {}
+    for part in _EVIDENCE_SPLIT_RE.split(value.strip()):
+        m = _EVIDENCE_PAIR_RE.match(part.strip())
+        if m:
+            out[m.group(1)] = m.group(2)
+    return out
+
+
 def _build_skill(name: str, lines: list[str]) -> Skill:
     f: dict[str, str] = {}
     for ln in lines:
@@ -88,7 +99,7 @@ def _build_skill(name: str, lines: list[str]) -> Skill:
         requires=_list(f.get("필수 동반", "")),
         forbids=_list(f.get("금지 짝", "")),
         commands=_list(f.get("필수 명령", "")),
-        evidence={k: v for k, v in _EVIDENCE_RE.findall(f.get("근거", ""))},
+        evidence=_parse_evidence(f.get("근거", "")),
         fields=f,
     )
 
