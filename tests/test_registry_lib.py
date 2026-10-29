@@ -1,0 +1,101 @@
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "skills" / "writing-maestro" / "scripts"))
+
+from registry_lib import parse_registry, validate  # noqa: E402
+
+FIXTURE = Path(__file__).parent / "fixtures" / "registry_min.md"
+ALL = {"general-writing", "humanizer", "prose-naturalizer", "copywriting"}
+
+
+def make_dirs(tmp_path, names=ALL):
+    for n in names:
+        (tmp_path / n).mkdir(exist_ok=True)
+
+
+def reg_from(text):
+    return parse_registry(text)
+
+
+def test_parse_fixture():
+    reg = parse_registry(FIXTURE.read_text())
+    assert set(reg.aspects) == {"prose-edit", "ai-tells", "persuasion", "voice"}
+    assert len(reg.stages) == 6
+    assert reg.skills["general-writing"].primary == ["prose-edit"]
+    assert reg.skills["general-writing"].requires == ["humanizer"]
+    assert reg.skills["prose-naturalizer"].forbids == ["manuscript-writing"]
+    assert reg.skills["humanizer"].wm_id == "companion"
+    assert reg.skills["humanizer"].bundle == "msimchowitz"
+    assert reg.skills["copywriting"].bundle is None
+    assert reg.skills["copywriting"].commands == []
+    assert reg.skills["general-writing"].evidence["voice"].startswith("preserving")
+    assert reg.bundles["msimchowitz"] == ["general-writing", "humanizer"]
+
+
+def test_fixture_valid(tmp_path):
+    make_dirs(tmp_path)
+    reg = parse_registry(FIXTURE.read_text())
+    assert validate(reg, set(ALL), tmp_path) == []
+
+
+def errors(tmp_path, old, new, installed=None):
+    make_dirs(tmp_path)
+    text = FIXTURE.read_text()
+    assert old in text
+    reg = parse_registry(text.replace(old, new, 1))
+    return validate(reg, installed or set(ALL), tmp_path)
+
+
+def test_unknown_aspect(tmp_path):
+    errs = errors(tmp_path, "- 주 측면: prose-edit\n", "- 주 측면: nope\n")
+    assert "general-writing: unknown aspect nope" in errs
+
+
+def test_missing_evidence(tmp_path):
+    errs = errors(tmp_path, ' / voice "preserving the writer\'s meaning and personal voice"', "")
+    assert "general-writing: no evidence for voice" in errs
+
+
+def test_missing_field(tmp_path):
+    errs = errors(tmp_path, "- 단계: prose\n- 과제 종류: new, edit, docs\n", "- 과제 종류: new, edit, docs\n")
+    assert "general-writing: missing field 단계" in errs
+
+
+def test_missing_install_dir(tmp_path):
+    make_dirs(tmp_path, ALL - {"copywriting"})
+    reg = parse_registry(FIXTURE.read_text())
+    assert "copywriting: not installed" in validate(reg, set(ALL), tmp_path)
+
+
+def test_unregistered_installed_skill(tmp_path):
+    make_dirs(tmp_path)
+    reg = parse_registry(FIXTURE.read_text())
+    assert "extra: installed but not in registry" in validate(reg, ALL | {"extra"}, tmp_path)
+
+
+def test_requires_unknown_skill(tmp_path):
+    errs = errors(tmp_path, "- 필수 동반: humanizer\n", "- 필수 동반: ghost\n")
+    assert "general-writing: requires unknown skill ghost" in errs
+
+
+def test_plugin_skill_skips_dir_check(tmp_path):
+    make_dirs(tmp_path, ALL - {"copywriting"})
+    text = FIXTURE.read_text().replace(
+        "### copywriting\n- id: WM-X0200\n- 출처: example/skills `copywriting/SKILL.md` @ def5678, MIT",
+        "### copywriting\n- id: WM-X0200\n- 출처: plugin anthropic-skills",
+    )
+    reg = parse_registry(text)
+    assert validate(reg, set(ALL), tmp_path) == []
+
+
+def test_unknown_stage_and_task_type(tmp_path):
+    errs = errors(tmp_path, "- 단계: prose\n- 과제 종류: new, edit, docs", "- 단계: zzz\n- 과제 종류: new, bogus, docs")
+    assert "general-writing: unknown stage zzz" in errs
+    assert "general-writing: unknown task type bogus" in errs
+
+
+def test_forbids_unregistered_allowed(tmp_path):
+    make_dirs(tmp_path)
+    reg = parse_registry(FIXTURE.read_text())
+    assert not [e for e in validate(reg, set(ALL), tmp_path) if "manuscript-writing" in e]
