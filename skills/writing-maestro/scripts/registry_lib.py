@@ -153,7 +153,7 @@ def install_warnings(reg: Registry, installed: set[str], skills_dir: Path) -> li
     실행 불가이고, 매니페스트에만 있는 스킬은 후보가 될 수 없을 뿐이다."""
     warns: list[str] = []
     for name, s in reg.skills.items():
-        if "plugin" in s.fields.get("출처", ""):
+        if s.fields.get("출처", "").startswith("plugin"):
             continue
         causes = []
         if name not in installed:

@@ -132,3 +132,13 @@ def test_evidence_with_inner_quotes():
     ev = parse_registry(text).skills["copywriting"].evidence
     assert ev["ai-tells"] == 'never use "it\'s not X, it\'s Y" reveals'
     assert ev["persuasion"] == "tail"
+
+
+def test_plugins_path_in_repo_source_is_not_plugin(tmp_path):
+    # A repo source whose path contains "plugins/" is a normal install, not a plugin copy.
+    make_dirs(tmp_path, ALL - {"copywriting"})
+    text = FIXTURE.read_text(encoding="utf-8").replace(
+        "example/skills `copywriting/SKILL.md`", "example/skills `plugins/x/skills/copywriting/SKILL.md`", 1
+    )
+    reg = parse_registry(text)
+    assert install_warnings(reg, set(ALL), tmp_path) == ["copywriting: not installed (dir missing)"]
