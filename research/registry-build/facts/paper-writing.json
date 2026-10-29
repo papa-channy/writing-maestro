@@ -1,0 +1,107 @@
+{
+  "name": "paper-writing",
+  "wm_id": "WM-X0289",
+  "source": "msimchowitz/writing-skills for-agents/paper-writing/SKILL.md @214981f, MIT",
+  "role": "기술 연구 논문을 주장, 표기, 근거, 인용, 저자 목소리를 보존하며 계획·작성·수정·구조화한다.",
+  "fits": "초록, 도입, 관련 연구, 방법, 이론, 실험, 결과, 논의, 결론, 그림, 부록, LaTeX 프로젝트 구성, 전체 원고 설계.",
+  "not_fits": "인용·실험·정량 결과·정리 조건·신규성 주장의 창작, 사람용 human-writing-guide를 스킬처럼 라우팅하는 일, 문헌 조사 자체(literature-review 영역).",
+  "unique_approach": "주장-근거 지도와 paper-plan을 먼저 세우고 가장 강한 근거부터 바깥으로 쓰며, 마지막에 general-writing을 산문 집행자로 돌리고 본문 확정 후 초록을 재점검한다.",
+  "directives": [
+    {
+      "topic": "논증 우선, 문장은 나중(문제, 중심 주장, 주장-근거 지도)",
+      "main": true,
+      "quote": "Build a claim-evidence map."
+    },
+    {
+      "topic": "주장 중심 섹션 구조와 정보성 섹션 제목",
+      "main": true,
+      "quote": "Prefer informative section titles that state the result or question."
+    },
+    {
+      "topic": "직접적 기술 음성: we 능동태, 비교 대상·지표·체제 명시",
+      "main": true,
+      "quote": "Use active first-person verbs: \"we show,\" \"we find,\" \"we compare,\" and \"we hypothesize.\""
+    },
+    {
+      "topic": "근거 동사 등급",
+      "main": true,
+      "quote": "Use \"shows\" or \"demonstrates\" only for direct evidence; use \"supports,\" \"suggests,\" or \"is consistent with\" for partial evidence."
+    },
+    {
+      "topic": "초록은 목차 압축이 아닌 독자의 첫 논증",
+      "main": true,
+      "quote": "Treat the abstract as a reader's first encounter with the argument, not as a compressed table of contents."
+    },
+    {
+      "topic": "기술적 무결성: 표기, 가정, 정리 한정사, 인용, 보정된 불확실성 보존",
+      "main": true,
+      "quote": "Preserve notation, assumptions, theorem quantifiers, experimental settings, citations, and calibrated uncertainty."
+    },
+    {
+      "topic": "인용·실험·정량 결과·정리 조건·신규성 창작 금지",
+      "main": true,
+      "quote": "Never invent citations, experiments, quantitative results, theorem conditions, novelty claims, or completed revisions."
+    },
+    {
+      "topic": "결론에 새 기여 도입 금지, 부록으로 구현 세부 이동",
+      "main": false,
+      "quote": "End with supported scope, concrete limitations, and open questions. Do not introduce a new contribution in the conclusion."
+    },
+    {
+      "topic": "강조(굵게·기울임)는 논증 구조 노출용으로만",
+      "main": false,
+      "quote": "Use bold or italics to expose argumentative structure, not to decorate most sentences."
+    },
+    {
+      "topic": "LaTeX 프로젝트 구조: <project-name>-main.tex, body/ appendix/ 분리",
+      "main": false,
+      "quote": "Rename its `paper-main.tex` entry point to a stable, descriptive `<project-name>-main.tex` before drafting."
+    },
+    {
+      "topic": "최종 음성 패스: general-writing으로 산문 집행, 이후 주장 경계 재확인",
+      "main": true,
+      "quote": "Use `general-writing` as the prose enforcer, not as authority to simplify away technical meaning."
+    },
+    {
+      "topic": "문장 스타일: 한 문장 한 추론, 정량 문장 순서",
+      "main": false,
+      "quote": "Default to a declarative sentence with the main subject and verb near the front:"
+    }
+  ],
+  "requires": [
+    {
+      "skill": "academic-voice",
+      "quote": "For other drafting or revision of scholarly prose, read the sibling [academic-voice skill](../academic-voice/SKILL.md) before the relevant paper-specific references."
+    },
+    {
+      "skill": "general-writing",
+      "quote": "Read the sibling [general-writing skill](../general-writing/SKILL.md) and its [evaluation checklist](../general-writing/references/eval.md)."
+    },
+    {
+      "skill": "abstract-writing",
+      "quote": "For an abstract-only request, read and follow the sibling [abstract-writing skill](../abstract-writing/SKILL.md)."
+    }
+  ],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit",
+    "docs"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [],
+    "optional": [
+      "예시 논문 폴더(사용자에게 위치를 묻고 'none' 허용)",
+      "LaTeX 툴체인(새 LaTeX 프로젝트일 때)"
+    ]
+  },
+  "commands": [],
+  "state_files": [
+    "paper-plan.md (프로젝트에 복사)",
+    "<project-name>-main.tex, body/, appendix/, preamble/, references.bib (LaTeX 스켈레톤)",
+    "assets/ 아웃라인·figure-storyboard 템플릿"
+  ],
+  "cautions": "매니페스트: ../../for-humans/human-writing-guide/ 는 사람용이라 미설치이며 스킬처럼 라우팅하지 말라고 명시됨(없으면 번들 참조 사용). 형제 스킬 링크는 ~/.claude/skills에서 해석됨. 선택적 예시 논문 폴더는 런타임에 사용자에게 요청하며 저장소 상위나 홈에서 추측 탐색 금지. requires 중 abstract-writing은 초록만 요청일 때, academic-voice는 초록 외 드래프팅일 때, general-writing은 최종 음성 패스 때 조건부로 필요하다. Humanizer는 general-writing이 호출하므로 별도 실행 금지."
+}

@@ -1,0 +1,90 @@
+{
+  "name": "recording-decisions",
+  "wm_id": "WM-X0306",
+  "source": "riekelt/technical-writer plugins/technical-writer/skills/recording-decisions/SKILL.md @85e5372, MIT",
+  "role": "이미 내려진 결정을 ADR(Nygard 형식) 또는 경량 결정 로그 항목으로 기록하는 스킬. 추가 전용, 수락된 결정은 불변.",
+  "fits": "선택이 이미 이루어져 기록해야 할 때, '왜 이렇게 했는지 적어달라'는 요청, 기존 결정을 대체할 때, 채팅에만 남은 결정.",
+  "not_fits": "아직 논쟁 중인 결정(writing-design-docs 영역).",
+  "unique_approach": "Negative 결과 필드 필수, 대안마다 가장 강한 반대 논거 기록, append-only 규칙, 채팅은 영속 근거가 아니므로 커밋 후 인용.",
+  "directives": [
+    {
+      "topic": "ADR 구조 (Nygard: Status, Date, Deciders, Context, Decision, Consequences, Alternatives, References)",
+      "main": true,
+      "quote": "Nygard format. One decision per ADR."
+    },
+    {
+      "topic": "Negative 결과는 필수, 비울 수 없음",
+      "main": true,
+      "quote": "**Negative is mandatory and may not be empty.**"
+    },
+    {
+      "topic": "대안마다 가장 강한 찬성 논거 기록 (허수아비 금지)",
+      "main": true,
+      "quote": "Each alternative carries its strongest argument for; a rejection without it is a strawman."
+    },
+    {
+      "topic": "경량 결정 로그 형식 (명령형 제목, Why, Instead of)",
+      "main": true,
+      "quote": "For the running log a full ADR would kill."
+    },
+    {
+      "topic": "추가 전용: 수락된 결정은 수정 금지, 대체 항목으로 정정",
+      "main": true,
+      "quote": "Append-only. A wrong entry gets a new dated entry that supersedes it, never an edit."
+    },
+    {
+      "topic": "결정은 능동태로 서술",
+      "main": false,
+      "quote": "Active voice: \"We release on tags\", not \"it was decided that\"."
+    },
+    {
+      "topic": "상대 날짜를 절대 날짜로 변환, 날짜 표기",
+      "main": false,
+      "quote": "Convert relative dates to absolute."
+    },
+    {
+      "topic": "이유(why) 기록, 부정적 결과와 미지수 명시",
+      "main": true,
+      "quote": "Record the why, not only the what."
+    },
+    {
+      "topic": "인용 전에 먼저 기록, 채팅은 영속 출처 아님",
+      "main": true,
+      "quote": "A chat session is not a durable source."
+    },
+    {
+      "topic": "답변되지 않은 반대 의견은 소유자와 함께 부정적 결과로 기록, 반박 창작 금지",
+      "main": false,
+      "quote": "the writer never invents a rebuttal and never withholds a decision its owner has declared."
+    },
+    {
+      "topic": "범위 가드 문구(형제 문서와 겹칠 때)",
+      "main": false,
+      "quote": "Scope guard at the top when a sibling could overlap"
+    }
+  ],
+  "requires": [
+    {
+      "skill": "technical-writing",
+      "quote": "**REQUIRED BACKGROUND:** the `technical-writing` skill"
+    }
+  ],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "docs"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [
+      "technical-writing skill"
+    ],
+    "optional": []
+  },
+  "commands": [],
+  "state_files": [
+    "ADR files / decision log (repository, append-only)"
+  ],
+  "cautions": "매니페스트 notes: technical-writing 필수 배경(설치됨). 결정자 이름을 모르면 fill-before-filing으로 표시해야 한다."
+}

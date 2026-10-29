@@ -1,0 +1,80 @@
+{
+  "name": "create-specification",
+  "wm_id": "WM-X0205",
+  "source": "github/awesome-copilot skills/create-specification/SKILL.md @b6483db, MIT",
+  "role": "솔루션 구성요소의 요구사항, 제약, 인터페이스를 생성형 AI가 쓰기 좋게 정의하는 명세 파일(/spec/spec-*.md)을 만든다.",
+  "fits": "명확하고 모호하지 않으며 자기완결적인 AI 소비용 명세 문서가 필요할 때.",
+  "not_fits": "원문에 명시된 제외 대상은 없음. 구현 단계 계획(create-implementation-plan)이나 일반 설명 산문에는 맞지 않는다.",
+  "unique_approach": "11개 섹션 고정 템플릿과 REQ/SEC/CON/GUD/PAT/AC 식별자, Given-When-Then 수용 기준, 'what not how' 의존성 서술을 요구한다.",
+  "directives": [
+    {
+      "topic": "AI용 명세 문체: 정밀하고 명시적이며 모호하지 않게",
+      "main": true,
+      "quote": "Use precise, explicit, and unambiguous language."
+    },
+    {
+      "topic": "요구사항·제약·권고 구분",
+      "main": true,
+      "quote": "Clearly distinguish between requirements, constraints, and recommendations."
+    },
+    {
+      "topic": "고정 템플릿과 front matter 구조",
+      "main": true,
+      "quote": "Specification files must follow the template below, ensuring that all sections are filled out appropriately."
+    },
+    {
+      "topic": "관용구와 은유 금지, 문맥 의존 참조 금지",
+      "main": false,
+      "quote": "Avoid idioms, metaphors, or context-dependent references."
+    },
+    {
+      "topic": "약어·전문용어 정의",
+      "main": false,
+      "quote": "Define all acronyms and domain-specific terms."
+    },
+    {
+      "topic": "예시와 경계 사례 포함",
+      "main": false,
+      "quote": "Include examples and edge cases where applicable."
+    },
+    {
+      "topic": "자기완결성, 외부 맥락 비의존",
+      "main": false,
+      "quote": "Ensure the document is self-contained and does not rely on external context."
+    },
+    {
+      "topic": "수용 기준은 테스트 가능하게(Given-When-Then)",
+      "main": true,
+      "quote": "Define clear, testable acceptance criteria for each requirement using Given-When-Then format where appropriate."
+    },
+    {
+      "topic": "파일 위치·이름 규칙",
+      "main": true,
+      "quote": "The specification should be saved in the `/spec/` directory"
+    },
+    {
+      "topic": "의존성은 how가 아닌 what, 패키지 버전 회피",
+      "main": false,
+      "quote": "Focus on **what** is needed rather than **how** it's implemented."
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "docs"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [
+      "specification purpose (${input:SpecPurpose} placeholder)"
+    ],
+    "optional": []
+  },
+  "commands": [],
+  "state_files": [
+    "/spec/spec-[a-z0-9-]+.md (output)"
+  ],
+  "cautions": "SKILL.md에 ${input:SpecPurpose} 플레이스홀더가 그대로 남아 있다(VS Code Copilot 문법). 템플릿 테스트 섹션 예시가 .NET(MSTest 등)에 치우쳐 있다. 산출물은 AI 소비용 기계 판독 명세이므로 사람용 산문 규칙과 충돌할 수 있다."
+}

@@ -1,0 +1,90 @@
+{
+  "name": "premise-workshop",
+  "wm_id": "WM-X0160",
+  "source": "danjdewhurst/story-skills skills/premise-workshop/SKILL.md @e44c97c, MIT",
+  "role": "프로젝트 생성 전에 불씨(이미지·what-if·인물·배경)를 what-if, 로그라인, premise/counter-premise, 이해관계, 형식, 제목, 비교 도서 점검으로 시험된 전제로 다듬고 story-init에 브리프로 넘기는 스킬.",
+  "fits": "이야기 아이디어 브레인스토밍, 전제 개발과 강도 점검, 로그라인 워크숍, 단편/중편/장편 형식 선택, 제목 아이디어 등 project 이전 단계.",
+  "not_fits": "이미 쓴 책의 통제 아이디어·주제는 theme-craft, 프로젝트 폴더 생성은 story-init, 전제 확정 후 아웃라인은 plot-structure(또는 discovery-drafting), 투고용 비교 도서·피치·블러브는 submission.",
+  "unique_approach": "작가가 아이디어의 주인임을 전제로 옵션과 테스트만 제시(결정하지 않음)하며, 8-12개 what-if, 로그라인 스트레스 테스트(pass/weak/fail), 3단계 이해관계, 형식 추천, 제목 5개 숏리스트를 거쳐 한 화면 브리프로 story-init에 인계한다.",
+  "directives": [
+    {
+      "topic": "불씨를 작가의 말 그대로 포착하고 개선하지 않음",
+      "main": true,
+      "quote": "Ask what the user has, in their words, and do not improve it yet."
+    },
+    {
+      "topic": "불씨에서 8-12개 what-if 생성",
+      "main": true,
+      "quote": "produce 8-12 short what-ifs"
+    },
+    {
+      "topic": "로그라인 레시피와 스트레스 테스트(pass/weak/fail)",
+      "main": true,
+      "quote": "Report each test as pass, weak, or fail"
+    },
+    {
+      "topic": "premise는 통제 아이디어(value+cause), 로그라인은 Synopsis에",
+      "main": false,
+      "quote": "`premise` in `story.md` is always the controlling idea (value + cause). The logline goes in the Synopsis section."
+    },
+    {
+      "topic": "3단계 이해관계(외적·관계적·내적) 구체화",
+      "main": false,
+      "quote": "At least two levels must be concrete and personal."
+    },
+    {
+      "topic": "범위에 맞는 형식(novel/novella/short-story 등) 추천, 결정은 사용자",
+      "main": false,
+      "quote": "The user decides."
+    },
+    {
+      "topic": "제목 브레인스토밍과 이름 충돌 검사",
+      "main": false,
+      "quote": "Titles and names are provisional until `story names` passes."
+    },
+    {
+      "topic": "옵션만 제시, 평결·결정을 내리지 않음",
+      "main": false,
+      "quote": "Present options, not verdicts."
+    },
+    {
+      "topic": "비교 도서·저자·시장 사실을 출처 없이 검증된 것처럼 제시 금지",
+      "main": false,
+      "quote": "Never present a comparable title, author, prize, or market fact as verified without a source."
+    },
+    {
+      "topic": "작품 언어로 워크숍하고 해당 시장의 비교작 사용",
+      "main": false,
+      "quote": "workshop in that language: what-ifs, loglines, and titles are drafted in it, and comps come from the market that reads it."
+    },
+    {
+      "topic": "원 불씨 문구를 노트에 보존",
+      "main": false,
+      "quote": "Keep the spark's original wording in the notes."
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": true,
+  "task_types": [
+    "new"
+  ],
+  "stage_hint": "clarify",
+  "requirements": {
+    "required": [],
+    "optional": [
+      "story CLI (프로젝트 생성 후 names/check 및 init 인계)",
+      "웹 검색(비교 도서 존재 검증; 없으면 unverified 표시)",
+      "theme-craft/references/controlling-idea.md 와 story-init/references/title-logline.md 참조"
+    ]
+  },
+  "commands": [
+    "story",
+    "node"
+  ],
+  "state_files": [
+    "premise-notes.md (현재 디렉터리, 프로젝트 폴더 밖; init 후 notes/premise-notes.md로 이동 제안)",
+    "story.md (premise, counter-premise, language, ## Notes)"
+  ],
+  "cautions": "Story Skills 번들 공통: `story` CLI(node>=18, npm 의존성 없음; bun 불필요)에 의존하며 manifest 상 상태 READY, 제한 없음. 상대 파일 참조는 모두 해결됨. 스토리 프로젝트(story.md 기준) 마크다운 폴더 구조와 YAML frontmatter 규칙을 따라야 하며, 소설 프로젝트 파일에 쓰는 스킬이므로 일반 산문/문서 작업에는 맞지 않음. web 검색이 없으면 비교 도서 목록은 unverified로 표시. 형식별 길이 기본값은 영어 단어 수 기준. 이 스킬은 theme-craft의 controlling-idea 레퍼런스를 참조하지만 필수는 아님."
+}

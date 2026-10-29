@@ -1,0 +1,115 @@
+{
+  "name": "genre-craft",
+  "wm_id": "companion",
+  "source": "danjdewhurst/story-skills skills/genre-craft/SKILL.md @e44c97c, MIT",
+  "role": "장르별 구조 팩(미스터리 페어플레이·단서 원장, 로맨스 비트·HEA, 스릴러 시한, 호러, MG/YA, SF, 판타지, 역사, 코미디, 연재)을 점검 가능한 규칙·원장·감사로 적용한다.",
+  "fits": "지원 장르로 이야기를 시작하거나 재분류할 때, 단서·시계·시즌 목표 같은 장르의 하중 요소를 계획할 때, 초고를 장르 계약에 맞춰 감사할 때.",
+  "not_fits": "퇴고 패스로서의 단서 점검은 revision-continuity, 줄 단위 장르 목소리는 better-writing 스킬의 장르 작업(구조 팩이 아님), 순문학은 팩으로 제공하지 않는다.",
+  "unique_approach": "장르 계약을 clue ledger(continuity/clues/), 약속 원장, season-goal·episode-question 같은 프런트매터 필드로 인코딩해 story clues·story pacing·story timeline으로 검증하고, 팩마다 끝에 감사 체크리스트를 둔다.",
+  "directives": [
+    {
+      "topic": "장르 팩 선택과 다중 장르 계약 조정(어느 장르가 구간별로 우세한지 사용자와 결정해 story.md에 기록)",
+      "main": true,
+      "quote": "Multi-genre stories: load each applicable pack; where packs conflict"
+    },
+    {
+      "topic": "미스터리: 페어플레이, 단서·레드 헤링 원장, planted가 payoff에 앞설 것",
+      "main": true,
+      "quote": "Clue `planted` must precede `payoff`"
+    },
+    {
+      "topic": "로맨스 비트와 HEA/HFN 독자 계약, 블랙 모먼트",
+      "main": true,
+      "quote": "Widely-published romance beat concepts (paraphrased), HEA/HFN reader contract, the black moment"
+    },
+    {
+      "topic": "스릴러: 약속한 시한은 지킨다, 모든 장면에 date/time, 챕터 끝 훅",
+      "main": true,
+      "quote": "Thriller: log every promised deadline in `continuity/promises/` and"
+    },
+    {
+      "topic": "호러: 공포(dread)·테러·징그러움 순서, 괴물 규칙 조기 제시, 회복 구간",
+      "main": true,
+      "quote": "Dread vs. terror vs. gross-out ordering, the uncanny, monster rules stated early, recovery periods"
+    },
+    {
+      "topic": "MG/YA: 분량 규범, 연령에 맞는 목소리·판돈, 성인 개입 최소화, 콘텐츠 경계",
+      "main": true,
+      "quote": "MG/YA: record `target-words:` in `story.md` and check the category"
+    },
+    {
+      "topic": "SF: 사변 요소는 하중을 지고 규칙·비용·한계를 클라이맥스 전에 명시",
+      "main": true,
+      "quote": "Sci-fi: write the speculative element's rules, costs, and limits in"
+    },
+    {
+      "topic": "판타지: 퀘스트 구조, 마법의 규칙·비용·한계를 클라이맥스 전에 기록, 선택받은 자 함정",
+      "main": true,
+      "quote": "Fantasy: write the magic's rules, costs, and limits in"
+    },
+    {
+      "topic": "역사: 시대 목소리 vs 가독성, 시대착오(물건·단어·관념) 점검, 실존 인물 처리",
+      "main": true,
+      "quote": "Historical: record `setting-era` in `story.md`, the chosen period"
+    },
+    {
+      "topic": "코미디: 고조, 반전, 세팅과 회수(콜백·삼세번·러닝 개그), 톤의 한계선",
+      "main": true,
+      "quote": "Comedy: record the comic sub-genre in `story.md`, the tone line (where"
+    },
+    {
+      "topic": "연재/에피소드: 시즌 목표, 회차 극적 질문, 매 회 보상, 요약 규율",
+      "main": true,
+      "quote": "Serial: record `season-goal:` in `story.md` and `episode-question:`"
+    },
+    {
+      "topic": "장르 규범에서 의도적으로 벗어난 결정은 이유와 함께 story.md에 기록",
+      "main": false,
+      "quote": "Any deliberate deviation from the pack (a"
+    },
+    {
+      "topic": "장르 감사는 챗이 아니라 개정 계획 또는 continuity/ 감사 파일에 남긴다",
+      "main": false,
+      "quote": "Genre audits live in the revision plan or `continuity/` audit files"
+    }
+  ],
+  "requires": [
+    {
+      "skill": "story-init",
+      "quote": "A story project must already exist (created via the story-init skill) with"
+    }
+  ],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "review",
+    "docs"
+  ],
+  "stage_hint": "genre",
+  "requirements": {
+    "required": [
+      "story-init으로 만든 story 프로젝트와 story.md에 기록된 장르",
+      "해당 팩 references/*.md"
+    ],
+    "optional": [
+      "plot-structure 플롯 구조",
+      "story CLI 또는 번들 폴백 (add clue, clues, pacing, timeline, next, list)",
+      "scene-craft, chapter-writing, worldbuilding, research, editorial-review, series-continuity(상황별 연계)"
+    ]
+  },
+  "commands": [
+    "story",
+    "node"
+  ],
+  "state_files": [
+    "story.md (genre, sub-genre, season-goal, release-every, release-start, target-words, setting-era)",
+    "continuity/clues/",
+    "continuity/promises/",
+    "worldbuilding/systems/",
+    "research/",
+    "chapters/*.md (episode-question, release-date, hook)",
+    "style-sheet.md"
+  ],
+  "cautions": "매니페스트: 동반(companion) 스킬, READY_WITH_LIMITS. references/serial-episodic.md가 상대 경로 ../../../examples/the-left-luggage-office/ 를 링크하는데 ~/.claude/skills 기준으로는 해석되지 않는다(예시는 ~/.local/share/writing-maestro/vendor/danjdewhurst__story-skills/examples/ 에 있으며 포인터일 뿐). 원문에 언급된 better-writing 스킬은 별도 설치 대상이 아님. 순문학 팩 없음."
+}

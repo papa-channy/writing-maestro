@@ -1,0 +1,63 @@
+{
+  "name": "translation",
+  "wm_id": "WM-X0339",
+  "source": "seb1n/awesome-ai-agent-skills writing-and-content/translation/SKILL.md @75865a5, MIT",
+  "role": "언어 간 번역: 문화 적응, 용어 일관성, 포맷 보존으로 기술 문서, 마케팅, UI 문자열, 법률 텍스트 등을 번역한다.",
+  "fits": "번역 요청(대상 언어, 격식 수준, 도메인, 용어집, 출력 포맷 지정 가능). JSON 로케일 파일과 마크다운 문서도 포함.",
+  "not_fits": "원문 작성이나 문체 편집에는 맞지 않는다. 번역 외 윤문은 다른 스킬 영역.",
+  "unique_approach": "원문 문맥·레지스터 분석, 용어집 구축, 서식·플레이스홀더 보존 번역, 로케일 현지화(단위·날짜·관용구), 모호한 선택에 번역자 주석을 붙여 납품한다.",
+  "directives": [
+    {
+      "topic": "번역 충실성과 자연스러움: 의미·톤·문맥 보존, 관용구는 직역 금지",
+      "main": true,
+      "quote": "preserving meaning, tone, and context"
+    },
+    {
+      "topic": "용어 일관성: 용어집을 만들고 문서 전체에서 동일 번역어 사용",
+      "main": true,
+      "quote": "Use the same translated term for a given source term throughout the entire document."
+    },
+    {
+      "topic": "서식 보존: 마크다운, HTML, JSON 키, 코드 블록, 플레이스홀더 유지",
+      "main": false,
+      "quote": "Never strip Markdown, HTML tags, or JSON keys during translation."
+    },
+    {
+      "topic": "격식 레지스터 준수: 번역 전 원하는 격식 확인",
+      "main": false,
+      "quote": "Always confirm the desired register before translating."
+    },
+    {
+      "topic": "로케일 현지화: 단위, 날짜, 통화, 문화적 은유 적응",
+      "main": false,
+      "quote": "Adapt units of measurement, date formats, currency symbols"
+    },
+    {
+      "topic": "복수형 규칙, RTL 양방향 마커, CJK 길이 초과 플래그 처리",
+      "main": false,
+      "quote": "Many languages have complex plural forms"
+    },
+    {
+      "topic": "모호한 선택에 번역자 주석 첨부",
+      "main": false,
+      "quote": "**Annotate ambiguous choices.**"
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [],
+    "optional": [
+      "user glossary / translation memory"
+    ]
+  },
+  "commands": [],
+  "state_files": [],
+  "cautions": "매니페스트: 'translation'은 일반적인 이름이나 설치 시 ~/.claude/skills에서 충돌 없었음. 격식·성별 선택은 사용자 확인이 필요할 수 있으나 핵심 작업은 비대화형으로 처리 가능."
+}

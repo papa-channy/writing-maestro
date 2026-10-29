@@ -1,0 +1,102 @@
+{
+  "name": "scene-craft",
+  "wm_id": "WM-X0165",
+  "source": "danjdewhurst/story-skills skills/scene-craft/SKILL.md @e44c97c, MIT",
+  "role": "플롯 비트와 챕터 산문 사이의 장면 단위 기법을 다루는 스킬: scene/sequel, try/fail, 장면 카드, 대사 서브텍스트, 딥 POV·심리적 거리, 설명, 플래시백·시간 도약, 오프닝.",
+  "fits": "장면 구조 계획, 시퀄 장면, 대화 서브텍스트, 딥 POV, try/fail, 장면 카드, 설명·인포덤프, 플래시백·타임스킵, 소설/챕터 오프닝, 장면 outcome과 챕터 훅.",
+  "not_fits": "책 단위 페이싱·막 구조는 plot-structure, 장면·챕터의 산문 집필은 chapter-writing.",
+  "unique_approach": "문제를 장면 단위 기법 레이어(8개 reference)로 진단해 해당 reference의 체크리스트와 계획 필드를 적용하고, outcome·sequel·date/time·hook을 장면 frontmatter에 기계가독 상태로 기록한다.",
+  "directives": [
+    {
+      "topic": "장면 단위 기법 레이어 선택 후 reference 체크리스트 적용",
+      "main": true,
+      "quote": "**Choose the craft layer.** Identify which scene-grain problem this is:"
+    },
+    {
+      "topic": "필수 입력을 모르면 추측하지 말고 사용자에게 질문",
+      "main": false,
+      "quote": "Never guess at these or proceed on assumptions; a wrong guess edits canon."
+    },
+    {
+      "topic": "산문 전에 장면 계획 입력을 작성",
+      "main": true,
+      "quote": "**Plan before prose.** For the scene in question, write the planning inputs"
+    },
+    {
+      "topic": "장면 outcome(yes/no/yes-but/no-and)을 복잡화 결과 우선으로 설정",
+      "main": false,
+      "quote": "Prefer the complicating `yes-but` and `no-and`; a run of clean `yes` outcomes drains tension"
+    },
+    {
+      "topic": "sequel(반응·딜레마·결정)과 date/time/travel-hours 기록",
+      "main": false,
+      "quote": "Set `sequel: true/false` and fill the `dilemma:` field plus the"
+    },
+    {
+      "topic": "작품 언어로 계획·집필, 영어 단어목록/태그 조언은 언어에 맞게 대체",
+      "main": false,
+      "quote": "the word lists and"
+    },
+    {
+      "topic": "딥 POV 필터 단어 검사, 대사 태그 스왑 테스트, 첫 페이지 훅 점검",
+      "main": false,
+      "quote": "Run the reference's checklist** against the draft or the revision plan"
+    },
+    {
+      "topic": "계획 메타데이터는 채팅이 아닌 장면 파일에 저장",
+      "main": false,
+      "quote": "All planning metadata (dilemma, decision, subtext wants, psychic-distance"
+    },
+    {
+      "topic": "체크리스트 충족을 위해 산문을 덮어쓰지 않고 의도된 이탈을 표시",
+      "main": false,
+      "quote": "Do not overwrite chapter prose merely to satisfy a craft checklist."
+    },
+    {
+      "topic": "characters vs mentions 규칙(현장 인물 vs 회상·기록 인물)",
+      "main": false,
+      "quote": "characters present"
+    }
+  ],
+  "requires": [
+    {
+      "skill": "story-init",
+      "quote": "A story project must already exist (created via the story-init skill), with"
+    },
+    {
+      "skill": "character-management",
+      "quote": "characters defined (character-management)"
+    },
+    {
+      "skill": "plot-structure",
+      "quote": "a plot structure in place"
+    }
+  ],
+  "forbids": [],
+  "interactive": true,
+  "task_types": [
+    "new",
+    "edit"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [
+      "기존 스토리 프로젝트(story.md)",
+      "정의된 캐릭터와 플롯 구조"
+    ],
+    "optional": [
+      "story CLI (pacing, prose, timeline)"
+    ]
+  },
+  "commands": [
+    "story",
+    "node"
+  ],
+  "state_files": [
+    "scenes/chapter-NN-scene-NN.md (outcome, sequel, dilemma, flashback-to, date, time, travel-hours, state-changes)",
+    "chapters/chapter-NN.md (hook)",
+    "continuity/state.md",
+    "continuity/exemptions.md"
+  ],
+  "cautions": "Story Skills 번들 공통: `story` CLI(node>=18, npm 의존성 없음; bun 불필요)에 의존하며 manifest 상 상태 READY, 제한 없음. 상대 파일 참조는 모두 해결됨. 스토리 프로젝트(story.md 기준) 마크다운 폴더 구조와 YAML frontmatter 규칙을 따라야 하며, 소설 프로젝트 파일에 쓰는 스킬이므로 일반 산문/문서 작업에는 맞지 않음. chapter-writing의 outline-first 워크플로를 대체하지 않고 확장. 딥 POV·대사 reference의 단어 목록은 영어 기준. 일부 날짜 있는 플래시백은 `timestamp runs backward` 경고가 나므로 exemptions.md에 기록."
+}

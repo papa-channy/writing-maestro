@@ -1,0 +1,112 @@
+{
+  "name": "humanizer",
+  "wm_id": "companion",
+  "source": "msimchowitz/writing-skills for-agents/humanizer/SKILL.md @214981f, MIT",
+  "role": "AI가 쓴 듯한 문장 패턴(Wikipedia 'Signs of AI writing' 기반)을 감지해 제거하고 더 자연스러운 글로 다듬는다. general-writing이 임베디드 모드로 호출하는 동반 스킬.",
+  "fits": "텍스트를 더 자연스럽고 사람다운 글로 편집하거나 검토할 때, 파일 모드·임베디드 모드·붙여넣기 모드의 문서 워크플로 단계로.",
+  "not_fits": "사실·이름·수치·날짜·인용 창작, 소스 코드·데이터·링크 대상 수정, 기술·법률·참고 문서에 의견이나 1인칭 주입, 인용문·제목·고유명사 속 패턴어 재작성.",
+  "unique_approach": "39개 패턴 카탈로그로 초안-감사-최종 루프를 돌리고, better-usage, academic-voice, writing-cadence, non-autoregressive-writing-pass 네 형제 스킬을 순서대로 적용하며 사실 창작을 결함으로 취급한다.",
+  "directives": [
+    {
+      "topic": "AI 패턴 식별·제거 (초안, 감사, 최종 루프)",
+      "main": true,
+      "quote": "Identify AI patterns"
+    },
+    {
+      "topic": "사실·이름·수치·날짜·인용 창작 금지",
+      "main": false,
+      "quote": "The rewrite must not contain any fact, name, number, date, quote, or citation that isn't in the source text."
+    },
+    {
+      "topic": "엠 대시/엔 대시 완전 제거",
+      "main": false,
+      "quote": "The final rewrite contains no em dashes (—) or en dashes (–)."
+    },
+    {
+      "topic": "중요성·유산 부풀리기, 홍보성 언어, 모호한 출처, -ing 피상 분석 제거",
+      "main": false,
+      "quote": "LLM writing puffs up importance by casting arbitrary details as symbols of a broader topic."
+    },
+    {
+      "topic": "AI 어휘, copula 회피, 부정 병렬, 3항 남용, 유의어 순환 정리",
+      "main": false,
+      "quote": "These words appear far more frequently in post-2023 text."
+    },
+    {
+      "topic": "서식 규칙: 굵은 글씨 남용, 인라인 헤더 리스트, 제목 대문자, 이모지, 곡선 따옴표",
+      "main": false,
+      "quote": "Constructions like \"Not only...but...\" or \"It's not just about..., it's...\" are overused."
+    },
+    {
+      "topic": "의사소통 잔재·지식 컷오프 면책·아부 어조 제거",
+      "main": false,
+      "quote": "Collaborative Communication Artifacts"
+    },
+    {
+      "topic": "필러, 과도한 헤징, 일반적 긍정 결론, 설득 권위 수사, 예고 문구 제거",
+      "main": false,
+      "quote": "Filler Phrases"
+    },
+    {
+      "topic": "제목·소제목·캡션 등 표시 텍스트 검토",
+      "main": true,
+      "quote": "Review the document title and any subtitle first, then its abstract as a complete argument rather than a section summary."
+    },
+    {
+      "topic": "문단 끝·전환·주제문·레지스터 불일치 점검",
+      "main": false,
+      "quote": "Mechanical Paragraph Endings"
+    },
+    {
+      "topic": "느슨한 나열과 리스트 과다 금지, 5항목 초과 리스트 지양",
+      "main": false,
+      "quote": "introduces neither loose catalogs nor lists longer than five items unless the complete set matters."
+    },
+    {
+      "topic": "보이스 보정: 사용자 샘플이 규칙보다 우선",
+      "main": false,
+      "quote": "A sample outranks this skill's style rules, including the em dash rule in §14"
+    },
+    {
+      "topic": "성격과 영혼은 장르가 허용할 때만",
+      "main": false,
+      "quote": "Apply this section only when the content and the author's voice call for it"
+    }
+  ],
+  "requires": [
+    {
+      "skill": "better-usage",
+      "quote": "Read and apply the sibling [better-usage skill](../better-usage/SKILL.md) to the draft."
+    },
+    {
+      "skill": "academic-voice",
+      "quote": "Read and apply the sibling [academic-voice skill](../academic-voice/SKILL.md)."
+    },
+    {
+      "skill": "writing-cadence",
+      "quote": "Read and apply the sibling [writing-cadence skill](../writing-cadence/SKILL.md) last."
+    },
+    {
+      "skill": "non-autoregressive-writing-pass",
+      "quote": "Read and apply the sibling [non-autoregressive writing pass](../non-autoregressive-writing-pass/SKILL.md) after the complete draft is stable."
+    }
+  ],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "edit",
+    "review"
+  ],
+  "stage_hint": "prose",
+  "requirements": {
+    "required": [],
+    "optional": [
+      "사용자 글쓰기 샘플(보이스 보정)"
+    ]
+  },
+  "commands": [],
+  "state_files": [
+    "scripts/validate-package.py (패키지 검증용, 출력에 무관)"
+  ],
+  "cautions": "매니페스트: 동반 스킬(companion), SHA가 선택 목록에 없어 현재 HEAD(214981f)를 설치, 자체 LICENSE 파일 있음. 요청된 필수 항목에 better-usage와 writing-cadence만 언급됐지만 원문 프로세스 3~6단계가 academic-voice와 non-autoregressive-writing-pass도 읽고 적용하라고 명시해 네 개 모두 requires에 기록. academic-voice는 학술·설명문일 때만 학술 레지스터를 쓰고, 캐주얼·법률·기술·개인 글은 저널 문체로 바꾸지 않는다. 임베디드 모드에서는 최종 텍스트만 출력."
+}

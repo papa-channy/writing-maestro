@@ -1,0 +1,72 @@
+{
+  "name": "blog-post-writing",
+  "wm_id": "WM-X0335",
+  "source": "seb1n/awesome-ai-agent-skills writing-and-content/blog-post-writing/SKILL.md @75865a5, MIT",
+  "role": "하우투, 리스티클, 오피니언, 케이스 스터디 등 SEO 최적화 블로그 글을 키워드 조사부터 개요, 초안, SEO, 교정까지 쓴다.",
+  "fits": "블로그 글 작성 요청(주제, 키워드, 포맷, 오디언스, 톤, 분량, CTA 제공 시).",
+  "not_fits": "검색량 없는 오피니언/틈새 글은 SEO가 부차적. 마케팅 랜딩 카피나 학술 글에는 맞지 않는다.",
+  "unique_approach": "검색 의도에 따라 포맷을 고르고 주요 키워드를 제목·첫 문단·H2·메타 설명에 배치하며, 훅-논지-본문-요약+CTA 구조와 피처드 스니펫 섹션을 설계한다.",
+  "directives": [
+    {
+      "topic": "블로그 구조: 제목(키워드), 훅 도입, H2/H3, 결론+CTA",
+      "main": true,
+      "quote": "Create a detailed outline with the title (including the primary keyword)"
+    },
+    {
+      "topic": "SEO: 주요 키워드 배치, 메타 설명 150~160자, 슬러그, 이미지 대체 텍스트",
+      "main": true,
+      "quote": "Write a meta description (150-160 characters)"
+    },
+    {
+      "topic": "훅 우선 도입: 놀라운 사실/질문/독자 문제로 시작",
+      "main": false,
+      "quote": "**Start with the hook, not the backstory.**"
+    },
+    {
+      "topic": "문단 길이: 4~5문장 이하, 소제목·목록으로 스캔 가능하게",
+      "main": false,
+      "quote": "No paragraph should exceed 4-5 sentences in a blog post."
+    },
+    {
+      "topic": "CTA: 모든 글은 구체적 CTA로 끝낸다",
+      "main": false,
+      "quote": "**End with a clear CTA.**"
+    },
+    {
+      "topic": "링크: 1,000단어당 내부 2~3개, 외부 1~2개",
+      "main": false,
+      "quote": "Aim for 2-3 internal links and 1-2 external links per 1,000 words."
+    },
+    {
+      "topic": "근거 검증: 통계·주장에 신뢰할 출처",
+      "main": false,
+      "quote": "Verify all statistics and claims have credible sources."
+    },
+    {
+      "topic": "기존 블로그 보이스: 최근 글 2~3개 검토해 톤 일치",
+      "main": false,
+      "quote": "review 2-3 recent published posts to match the existing tone"
+    },
+    {
+      "topic": "시의성 콘텐츠: Last updated 표기, 3,000단어 이상은 목차",
+      "main": false,
+      "quote": "should include a \"Last updated\" date"
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [],
+    "optional": [
+      "web access for keyword/top-ranking research"
+    ]
+  },
+  "commands": [],
+  "state_files": [],
+  "cautions": "매니페스트: 특이사항 없음. 예시의 통계(Datadog 설문 등)는 예시용이며 실제 작성 시 출처 검증 필요."
+}

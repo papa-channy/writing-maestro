@@ -1,0 +1,93 @@
+{
+  "name": "reviewing-technical-prose",
+  "wm_id": "WM-X0307",
+  "source": "riekelt/technical-writer plugins/technical-writer/skills/reviewing-technical-prose/SKILL.md @85e5372, MIT",
+  "role": "타인의 기술 문서를 검토/재작성하거나 문서 발송 전 최종 점검을 하는 스킬. 심각도 매핑, 발견 사항 형식, 플래그하지 말 목록, 납품 체크리스트를 제공한다.",
+  "fits": "타인의 기술 텍스트 리뷰나 재작성, 문서에 대한 리뷰 보고서 작성, 어떤 문서든 납품 직전 최종 확인.",
+  "not_fits": "코드 리뷰(코드 안의 산문만 해당), 확정된 결정의 재논의, 범위 확장, 자기 취향으로의 재스타일링.",
+  "unique_approach": "이름 붙은 결함이 있을 때만 최소 수정한다. 재작성 시 사실을 더하거나 빼지 않고(통제 질문 3개), 주장 없는 문장은 삭제 후 [input wanted]로 표시한다.",
+  "directives": [
+    {
+      "topic": "심각도 매핑 BLOCKER/WARNING/OBS",
+      "main": true,
+      "quote": "**BLOCKER**: hard-rule violations (banned dashes, changelog sections, delivery history in prose)"
+    },
+    {
+      "topic": "재작성 시 내용 동일 유지, 사실 추가/삭제 금지",
+      "main": true,
+      "quote": "**the content stays identical.**"
+    },
+    {
+      "topic": "재작성 통제 질문 3개 (모델 투 문장, 사실 증감, 패턴 재생성)",
+      "main": true,
+      "quote": "Which sentence still sounds like a language model?"
+    },
+    {
+      "topic": "재작성은 문서의 원래 언어 유지",
+      "main": true,
+      "quote": "**The rewrite keeps the document's language.**"
+    },
+    {
+      "topic": "주장 없는 문장은 삭제하고 [input wanted] 표시",
+      "main": true,
+      "quote": "the correct rewrite is deletion plus a marked gap"
+    },
+    {
+      "topic": "플래그하지 말아야 할 것 (좋은 사람 글에도 나오는 패턴)",
+      "main": true,
+      "quote": "Flag only when several signs coincide in the same paragraph."
+    },
+    {
+      "topic": "리뷰 보고서 형식 (첫 줄 평결, 심각도 순, 위치/수정안/신뢰도, FINDINGS: none)",
+      "main": true,
+      "quote": "Verdict in the first line, findings ordered most severe first."
+    },
+    {
+      "topic": "납품 체크리스트: 대시 금지, 금지 구문, 제목이 내용을 명명, 결론 우선",
+      "main": true,
+      "quote": "**No em dashes, en dashes, or ` -- `**"
+    },
+    {
+      "topic": "납품 체크리스트: 수치는 출처 추적, 참조는 따라가서 확인, 용어 일관",
+      "main": true,
+      "quote": "**Every claim with a number** traces to a source named in the document"
+    },
+    {
+      "topic": "납품 체크리스트: 소리 내어 읽기, 이름 제거 테스트, 대화 맥락 없이 읽힘",
+      "main": true,
+      "quote": "**Remove-the-name test** on the opening and summary"
+    },
+    {
+      "topic": "절차는 문장당 행동 하나, 행위자 명시",
+      "main": false,
+      "quote": "**Procedures**: one action per sentence, with an actor"
+    },
+    {
+      "topic": "편집은 최소 수정, 결함 없는 자연스러운 문장 재작성 금지",
+      "main": true,
+      "quote": "Rewriting natural or approved language without a named defect is itself a defect."
+    }
+  ],
+  "requires": [
+    {
+      "skill": "technical-writing",
+      "quote": "**REQUIRED BACKGROUND:** the `technical-writing` skill, including `references/style.md` (banned constructions) and `references/truth.md` (claim rules)."
+    }
+  ],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "edit",
+    "review"
+  ],
+  "stage_hint": "check",
+  "requirements": {
+    "required": [
+      "technical-writing skill incl. references/style.md and references/truth.md"
+    ],
+    "optional": []
+  },
+  "commands": [],
+  "state_files": [],
+  "cautions": "매니페스트 notes: technical-writing의 references/style.md, truth.md를 형제 스킬 디렉터리에서 읽어야 한다(설치됨). 영어 금지 어휘 목록은 영어 전용."
+}

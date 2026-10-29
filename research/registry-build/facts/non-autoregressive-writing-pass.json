@@ -1,0 +1,67 @@
+{
+  "name": "non-autoregressive-writing-pass",
+  "wm_id": "WM-X0288",
+  "source": "msimchowitz/writing-skills for-agents/non-autoregressive-writing-pass/SKILL.md @214981f, MIT",
+  "role": "완성된 초안 전체를 아는 상태에서 제목, 부제, 소제목, 문단 머리, 문단 간 전환을 다시 쓰는 편집 패스.",
+  "fits": "표시 텍스트가 완성된 작업과 안 맞을 때, 도입이 평범하거나 갑작스러울 때, 문단들이 개별적으로는 명확하나 서로 쌓이지 않을 때, 완성된 초록의 첫 문장 보강, 문단 끝이 자연스럽게 닫히지 않을 때.",
+  "not_fits": "주장·근거·문단 순서·전반 리듬이 아직 안정되지 않은 초안, 구조 개편 대체, 드래프팅 개요 용도.",
+  "unique_approach": "제목-머리 문장 척추를 따로 읽고 문단 끝과 다음 문단 첫 두 문장을 짝지어 관계(연속, 원인, 대조 등)를 명명한 뒤 고친다. 긍정 주장은 부정 프레임보다 먼저 제시한다.",
+  "directives": [
+    {
+      "topic": "제목·부제·소제목·문단 머리 문장 척추 점검",
+      "main": true,
+      "quote": "Extract the title, subtitle, every section and subsection heading, the abstract opening, and the first one or two sentences of every paragraph."
+    },
+    {
+      "topic": "문단 경계 점검과 관계 명명",
+      "main": true,
+      "quote": "Name their relation: continuation, cause, consequence, contrast, qualification, example, change of scale, or change of question."
+    },
+    {
+      "topic": "긍정 주장 먼저, 거부된 대안으로 시작하지 않기",
+      "main": true,
+      "quote": "When the paragraph's main claim is positive, state it before explaining what it is not."
+    },
+    {
+      "topic": "모호한 지시어(This, The same) 대신 지시 대상 명명",
+      "main": false,
+      "quote": "Does it rely on a vague pointer such as \"This,\" \"The same,\" or \"These issues\" when the referent should be named?"
+    },
+    {
+      "topic": "문단 끝은 자기 추론을 먼저 완결, 문서 예고편 금지",
+      "main": true,
+      "quote": "A paragraph's last sentence should first complete that paragraph."
+    },
+    {
+      "topic": "형식적 접속어보다 어휘 연속성과 논리 관계 선호",
+      "main": false,
+      "quote": "Prefer lexical continuity and a clear logical relation to formulaic connectors such as \"Additionally,\" \"However,\" or \"With this in mind.\""
+    },
+    {
+      "topic": "주장·불확실성·증거·범위 불변",
+      "main": false,
+      "quote": "Preserve facts, citations, qualifications, notation, examples, and deliberate voice."
+    }
+  ],
+  "requires": [],
+  "forbids": [
+    {
+      "skill": "humanizer",
+      "quote": "Do not invoke Humanizer, general-writing, writing-cadence, better-usage, or academic-voice; the calling skill owns the larger prose pipeline."
+    }
+  ],
+  "interactive": false,
+  "task_types": [
+    "edit"
+  ],
+  "stage_hint": "prose",
+  "requirements": {
+    "required": [
+      "안정된 완성 초안"
+    ],
+    "optional": []
+  },
+  "commands": [],
+  "state_files": [],
+  "cautions": "매니페스트 이슈 없음(READY). 상태: 완성 초안 이후에 실행. forbids는 다른 스킬이 호출했을 때의 호출 경계 규칙. Humanizer 프로세스 6단계에서 이미 포함되어 호출되므로 humanizer와 중복 실행 금지."
+}

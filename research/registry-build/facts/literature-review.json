@@ -1,0 +1,105 @@
+{
+  "name": "literature-review",
+  "wm_id": "WM-X0287",
+  "source": "msimchowitz/writing-skills for-agents/literature-review/SKILL.md @214981f, MIT",
+  "role": "추적 가능한 근거 기반으로 문헌 검토, 서베이, 관련 연구 종합을 조사·구조화·작성·검증한다.",
+  "fits": "연구 분야 지도 작성, 모델·방법 계보 비교, 학습 레시피 재구성, 근거 표 작성, 공개/미공개 세부 사항 식별, living review 유지, 인용된 문헌 검토 섹션이나 독립 LaTeX 보고서 작성.",
+  "not_fits": "논문(IMRaD 본문) 작성 자체, 출처 없는 논문·수치·저자 창작, 순위표 점수를 학습 메커니즘의 근거로 쓰는 일.",
+  "unique_approach": "review-plan 계약과 source ledger, claim-evidence matrix를 먼저 만들고 모든 근거를 reported/derived/inferred/conflicting/not-disclosed로 표시하며, 감사 스크립트와 LaTeX 빌드로 마무리한다.",
+  "directives": [
+    {
+      "topic": "출처 창작 금지",
+      "main": true,
+      "quote": "Never invent papers, authors, dates, identifiers, datasets, model variants, training stages, numerical results, or implementation details."
+    },
+    {
+      "topic": "리뷰 계약(질문, 독자, 기준일, 분석 단위, 포함·제외 규칙)",
+      "main": true,
+      "quote": "Copy [review-plan.md](assets/review-plan.md) into the project and complete it before broad retrieval."
+    },
+    {
+      "topic": "근거 장부와 근거 등급 표기",
+      "main": true,
+      "quote": "label evidence as `reported`, `derived`, `inferred`, `conflicting`, or `not-disclosed`; and"
+    },
+    {
+      "topic": "미공개 세부 사항을 그럴듯한 레시피로 채우지 않음",
+      "main": true,
+      "quote": "Do not turn an absent detail into a plausible recipe."
+    },
+    {
+      "topic": "출처 우선순위(버전 논문, 공식 저장소, 프로젝트 페이지)",
+      "main": true,
+      "quote": "Prefer sources in this order:"
+    },
+    {
+      "topic": "기술 레시피 재구성 스키마, 계열 수준과 체크포인트 수준 구분",
+      "main": true,
+      "quote": "Keep family-level statements separate from checkpoint-specific statements."
+    },
+    {
+      "topic": "종합 문단 구조: 한 주장, 출처 비교, 인접 인용, 사실과 해석 구분, 결말",
+      "main": true,
+      "quote": "state one synthesis claim;"
+    },
+    {
+      "topic": "한계 섹션과 조사 기준일 명시",
+      "main": true,
+      "quote": "Include a limitations section that names search boundaries, inaccessible artifacts, version ambiguity, contradictory reports, and undisclosed recipe details."
+    },
+    {
+      "topic": "LaTeX 산출물 규칙(<review-name>-main.tex, 섹션 파일, 일반 main.tex 금지)",
+      "main": false,
+      "quote": "Do not create a generic `main.tex`."
+    },
+    {
+      "topic": "직접적 기술 산문, 홍보성 릴리스 어투 회피",
+      "main": false,
+      "quote": "Avoid promotional release language."
+    },
+    {
+      "topic": "리더보드 점수를 메커니즘 증거로 쓰지 않음",
+      "main": false,
+      "quote": "Do not use leaderboard scores as evidence for a training mechanism unless an ablation or controlled comparison supports that mechanism."
+    }
+  ],
+  "requires": [
+    {
+      "skill": "general-writing",
+      "quote": "After claims, citations, and structure are stable, run the complete sibling [`general-writing`](../general-writing/SKILL.md) workflow."
+    },
+    {
+      "skill": "paper-writing",
+      "quote": "For a research-paper or LaTeX deliverable, read the sibling [`paper-writing`](../paper-writing/SKILL.md) skill"
+    }
+  ],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit",
+    "review"
+  ],
+  "stage_hint": "research",
+  "requirements": {
+    "required": [
+      "python3 (stdlib only)",
+      "LaTeX 리뷰 산출 시 latexmk"
+    ],
+    "optional": [
+      "assets/review-plan.md, source-ledger.csv, claim-evidence-matrix.csv 복사본"
+    ]
+  },
+  "commands": [
+    "python3",
+    "latexmk"
+  ],
+  "state_files": [
+    "research/source-ledger.csv",
+    "research/claim-evidence-matrix.csv",
+    "review-plan.md (프로젝트 내)",
+    "<review-name>-main.tex / <review-name>-main.pdf (프로젝트 루트)",
+    "scripts/audit_review.py (스킬 번들, 프로젝트 루트에서 실행)"
+  ],
+  "cautions": "매니페스트: python3 stdlib만 사용, audit_review.py --help 스모크 통과. paper-writing 읽기는 논문/LaTeX 산출물일 때만 조건부, general-writing 실행은 주장·인용·구조 안정 후 마지막 단계. latexmk가 필요한 것은 LaTeX 빌드 시에만. 기준일과 검색 경계를 명시해야 한다."
+}

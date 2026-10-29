@@ -1,0 +1,67 @@
+{
+  "name": "interview-me",
+  "wm_id": "WM-X0063",
+  "source": "addyosmani/agent-skills skills/interview-me/SKILL.md @eb07f19, MIT",
+  "role": "가설과 신뢰도를 밝히고 한 번에 한 질문(추측 첨부)씩 던져 사용자가 실제로 원하는 바를 약 95% 확신까지 끌어내 확정된 의도 진술문을 만든다.",
+  "fits": "요청이 모호할 때(누구를 위해, 왜, 성공 기준, 제약이 빠짐), 사용자가 '인터뷰해줘'라고 할 때, 계획이나 코드 이전에 가정을 채우고 싶을 때.",
+  "not_fits": "명확한 단일 요청(변수명 변경), 속도 우선 요청, 단순 정보 질문, 기계적 작업. 비대화형 환경(CI, 스케줄, /loop)에서는 쓰지 않는다.",
+  "unique_approach": "질문마다 에이전트의 추측을 붙이고, 다음 질문 3개에 대한 반응을 예측할 수 있을 때까지 진행하며, 'Out of scope'가 든 재진술에 명시적 yes를 받으면 즉시 턴을 멈춘다.",
+  "directives": [
+    {
+      "topic": "한 번에 한 질문, 추측 첨부",
+      "main": true,
+      "quote": "Ask one question at a time, each with a guess attached"
+    },
+    {
+      "topic": "가설과 신뢰도 수치로 시작",
+      "main": true,
+      "quote": "write down your current best read of what the user wants in **one sentence**, plus an honest confidence number (0–100%)"
+    },
+    {
+      "topic": "재진술 형식: Outcome/User/Why now/Success/Constraint/Out of scope",
+      "main": true,
+      "quote": "Including \"Out of scope\" is non-negotiable."
+    },
+    {
+      "topic": "명시적 yes 확인 전에는 스펙·계획 산출 금지",
+      "main": false,
+      "quote": "Producing a spec, plan, or task list before the user has explicitly confirmed your restate"
+    },
+    {
+      "topic": "확정 직후 턴 즉시 종료",
+      "main": false,
+      "quote": "**STOP YOUR TURN IMMEDIATELY.** Do NOT invoke tools or start downstream work in this turn."
+    },
+    {
+      "topic": "want vs should-want 구분 질문",
+      "main": false,
+      "quote": "If you didn't have to justify this to anyone, what would you actually want?"
+    },
+    {
+      "topic": "의도 문서 저장은 확정 후에만",
+      "main": false,
+      "quote": "Saving the intent doc before the user has confirmed"
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": true,
+  "task_types": [
+    "new",
+    "edit"
+  ],
+  "stage_hint": "clarify",
+  "requirements": {
+    "required": [
+      "실시간으로 응답하는 사용자(대화형 세션)"
+    ],
+    "optional": [
+      "docs/intent/[topic].md 저장(사용자 확인 시)"
+    ]
+  },
+  "commands": [],
+  "state_files": [
+    "docs/intent/[topic].md (사용자가 원할 때만)"
+  ],
+  "cautions": "매니페스트: sha_match true. 'This skill needs a live, responsive user. **Do not invoke in non-interactive contexts** like CI pipelines, scheduled runs, `/loop`, or autonomous-loop.' spec-driven-development, idea-refine 등은 선택적 후속 연계일 뿐 requires가 아니다(미설치). 확정 후 같은 턴에서 후속 작업을 시작하면 안 된다."
+}

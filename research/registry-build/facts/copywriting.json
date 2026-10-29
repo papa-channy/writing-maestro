@@ -1,0 +1,116 @@
+{
+  "name": "copywriting",
+  "wm_id": "WM-X0131",
+  "source": "coreyhaines31/marketingskills skills/copywriting/SKILL.md @0cd9b3a, MIT",
+  "role": "홈페이지, 랜딩, 가격, 기능, 소개 페이지의 마케팅 카피를 쓰거나 고친다. 입력 상황(공백, 실제 목소리, 부분 수정)을 먼저 진단해 변경 범위를 정한다.",
+  "fits": "'카피 써줘', '이 카피 개선', 헤드라인, CTA, 가치 제안, 'AI 같다/사람처럼' 요청.",
+  "not_fits": "이메일 카피(emails), 팝업(popups), 기존 카피 편집(copy-editing), 보너스와 보증 같은 오퍼 설계(offers).",
+  "unique_approach": "상황 진단(A 공백, B 목소리 보존, C 부분 수정) 후 단위별로 후보를 만들어 고정하고, 세 질문 게이트와 AI 티 금지 목록으로 검증하며, 근거 없는 주장은 거절하고 해제 조건을 명시한다.",
+  "directives": [
+    {
+      "topic": "입력 진단: 공백/목소리 보존/부분 수정",
+      "main": true,
+      "quote": "State the diagnosis in one line with the evidence"
+    },
+    {
+      "topic": "세 질문 게이트: 그릴 수 있나, 참/거짓 입증 가능한가, 경쟁사도 쓸 수 있나",
+      "main": true,
+      "quote": "**Could a competitor write this exact sentence?** If yes, it fails (the swap test)."
+    },
+    {
+      "topic": "명료성 우선, 혜택 우선, 구체성, 고객 언어",
+      "main": true,
+      "quote": "If you have to choose between clear and creative, choose clear."
+    },
+    {
+      "topic": "페이지 구조와 CTA: 약한 CTA 회피",
+      "main": true,
+      "quote": "**Formula:** [Action Verb] + [What They Get] + [Qualifier if needed]"
+    },
+    {
+      "topic": "출력 형식: 카피, 주석, 대안 2-3개",
+      "main": false,
+      "quote": "For headlines and CTAs, provide 2-3 options:"
+    },
+    {
+      "topic": "주장은 근거로 뒷받침, 거절 시 해제 증거 명시",
+      "main": false,
+      "quote": "A declined claim with an unlock path is an action item for the client;"
+    },
+    {
+      "topic": "조작된 통계나 후기 금지",
+      "main": false,
+      "quote": "Fabricated statistics or testimonials erode trust and create legal liability"
+    },
+    {
+      "topic": "AI 티 금지: 대조 반전 'It's not X, it's Y'",
+      "main": false,
+      "quote": "**Contrast reveals.** \"It's not X, it's Y.\" \"Not because X. Because Y.\" \"Not just X, but Y.\" State Y directly, with the reason."
+    },
+    {
+      "topic": "AI 티 금지: 부정 나열 'No X, no Y, no Z'",
+      "main": false,
+      "quote": "**Negation lists.** \"No setup call, no templates, no waiting on IT. No contract.\""
+    },
+    {
+      "topic": "AI 티 금지: 쉼표로 이어지는 꼬리 절",
+      "main": false,
+      "quote": "**Trailing pile-ons.** A full claim followed by a comma and more clauses"
+    },
+    {
+      "topic": "AI 티 금지: 자문자답과 콜론 반전",
+      "main": false,
+      "quote": "**Self-answered questions and colon reveals.** \"The result? 3x faster.\""
+    },
+    {
+      "topic": "AI 티 금지: 상투적 시작 문구",
+      "main": false,
+      "quote": "**Stock openers and phrases.** \"In today's fast-paced world,\""
+    },
+    {
+      "topic": "짧은 카피에서 엠대시 금지",
+      "main": false,
+      "quote": "**Em dashes in short copy.** Headlines, subheads, ads, social posts, and subject lines use none."
+    },
+    {
+      "topic": "AI 티 빈도 제한: 조각문 1개, 3항목 목록 1개, seamless 등 단어",
+      "main": false,
+      "quote": "At most one fragment and one list of three per section"
+    },
+    {
+      "topic": "감탄부호 제거, 수동태 회피, 어려운 어휘 대신 쉬운 어휘",
+      "main": false,
+      "quote": "Exclamation points? (remove them)"
+    },
+    {
+      "topic": "한 번 펀치는 한두 곳만",
+      "main": false,
+      "quote": "A page gets one or two punchy moments"
+    },
+    {
+      "topic": "누락된 증거는 [NEED: ...]로 표시",
+      "main": false,
+      "quote": "flag missing proof as `[NEED: ...]` rather than inventing it."
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [],
+    "optional": [
+      ".agents/product-marketing.md 또는 .claude/product-marketing.md(있으면 읽음)",
+      "references/ai-tells.md, copy-frameworks.md, natural-transitions.md(스킬 폴더 내)"
+    ]
+  },
+  "commands": [],
+  "state_files": [
+    ".agents/product-marketing.md 또는 .claude/product-marketing.md (읽기 전용, 있을 때만)"
+  ],
+  "cautions": "매니페스트: 조건부 product-marketing 파일, 관련 스킬(copy-editing, cro, emails, popups, ab-testing)은 참고 언급만이며 미설치. 자체 AI 티 금지 규칙이 강하므로 humanizer나 다른 문체 스킬과 충돌 가능성을 Task 4에서 평가해야 한다. 영어 마케팅 페이지 중심."
+}

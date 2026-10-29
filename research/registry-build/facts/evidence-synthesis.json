@@ -1,0 +1,99 @@
+{
+  "name": "evidence-synthesis",
+  "wm_id": "WM-X0101",
+  "source": "anayy09/claude-research-skills evidence-synthesis/SKILL.md @f0d3359, MIT",
+  "role": "체계적/스코핑/신속/엄브렐라 등 공식 근거 종합(evidence synthesis)을 프로토콜, 검색, 스크리닝 로그, 편향 위험 평가, GRADE, PRISMA 보고까지 연구 설계로 수행하는 스킬.",
+  "fits": "프로토콜·스크리닝 로그·평가 도구·보고 지침이 필요한 리뷰 논문(systematic review, scoping review, meta-analysis, PRISMA flow, risk of bias, GRADE)과 리뷰 방법론에 대한 심사자 지적 대응.",
+  "not_fits": "관련 연구(related-work) 섹션, 문헌 훑기, 참고문헌 감사, reference diet는 investigating-sources 담당이다.",
+  "unique_approach": "리뷰를 읽기 연습이 아닌 연구 설계로 보고, 검색식을 한 번 정의해 여러 DB 문법으로 렌더링하며 스크리닝 결정을 로그로 남겨 PRISMA 흐름도 숫자를 로그에서 도출해 정합성을 검사한다.",
+  "directives": [
+    {
+      "topic": "확인 불가 인용 제거 및 인용 검증",
+      "main": true,
+      "quote": "A citation you cannot confirm does not go in the document."
+    },
+    {
+      "topic": "PRISMA 흐름도 숫자 정합",
+      "main": true,
+      "quote": "The numbers in the flow diagram must reconcile."
+    },
+    {
+      "topic": "프리프린트 대신 출판본 인용",
+      "main": true,
+      "quote": "Cite the peer-reviewed version of record."
+    },
+    {
+      "topic": "AI 사용 공개(RAISE)",
+      "main": true,
+      "quote": "Disclose AI use where it made or informed a judgment."
+    },
+    {
+      "topic": "리뷰 유형 선택과 보고 지침 매핑",
+      "main": true,
+      "quote": "The type determines the protocol, the reporting guideline, the appraisal tool,"
+    },
+    {
+      "topic": "프로토콜 선등록",
+      "main": true,
+      "quote": "Write the protocol before screening, and register it."
+    },
+    {
+      "topic": "설계별 편향 위험 도구 선택",
+      "main": true,
+      "quote": "Applying one generic checklist to every design is a methodological failure, not"
+    },
+    {
+      "topic": "메타분석 관성 금지, SWiM 사용",
+      "main": true,
+      "quote": "Meta-analysis is one option among several and is often the wrong one."
+    },
+    {
+      "topic": "GRADE 확실성은 결과별 평가",
+      "main": true,
+      "quote": "Report certainty per outcome, not for the review as a whole."
+    },
+    {
+      "topic": "가짜 수치/이중 스크리닝 허위 주장 금지",
+      "main": false,
+      "quote": "claim dual independent\nscreening that did not happen"
+    },
+    {
+      "topic": "출처 질을 출판사 이름으로 판단 금지",
+      "main": false,
+      "quote": "Peer-review status is read from the record type, never from the imprint."
+    }
+  ],
+  "requires": [
+    {
+      "skill": "investigating-sources",
+      "quote": "Citation verification is delegated to the collection's one checker,\n`check_citations.py` in `investigating-sources`"
+    }
+  ],
+  "forbids": [],
+  "interactive": true,
+  "task_types": [
+    "new",
+    "review"
+  ],
+  "stage_hint": "research",
+  "requirements": {
+    "required": [
+      "python3",
+      "investigating-sources/scripts/check_citations.py (verify_citations.py shim delegates to it)"
+    ],
+    "optional": [
+      "web search / scholarly MCP connectors for SEARCH",
+      "requests (live DOI checks)",
+      "network"
+    ]
+  },
+  "commands": [
+    "python3"
+  ],
+  "state_files": [
+    "search.yaml",
+    "screening log (screening_log.py)",
+    "sources.json (--write-log)"
+  ],
+  "cautions": "READY_WITH_LIMITS: 검색 단계는 web search/scholarly MCP가 유리하고 실시간 DOI 확인은 네트워크 필요. 두 번째 사람이 하는 스크리닝은 사용자가 직접 수행해야 하므로 단일 대화로 리뷰를 완성하지 않는다. 형제 스킬(manuscript-writing 등) 인계는 제안일 뿐 필수 아님. requires는 판단: 원문이 인용 검증을 investigating-sources의 check_citations.py에 위임한다고 명시(zip에 사본 포함, 설치본은 형제 경로로 탐색). interactive는 판단: 사용자가 스크리닝을 해야 한다고 명시."
+}

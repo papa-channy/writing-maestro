@@ -1,0 +1,73 @@
+{
+  "name": "writing-cadence",
+  "wm_id": "companion",
+  "source": "msimchowitz/writing-skills for-agents/writing-cadence/SKILL.md @214981f, MIT",
+  "role": "단조로운 짧은 문장 연속, 균일한 길이, 반복 시작, 반복 대조 공식, 행위자를 숨기는 추상 과정 틀을 진단하고 리듬을 의미와 강조에 맞게 고친다. humanizer 5단계 동반 스킬.",
+  "fits": "리듬, 박자, 문장 다양성, 끊기거나 단조로운 산문 요청, 'not X but Y', 'treats X as Y, not Z' 같은 반복 패턴.",
+  "not_fits": "길이를 기계적으로 번갈아 맞추기, 질감용 파편 추가, 분류나 증명처럼 반복 구문이 필요한 고정 형식 문단 억지 수정, 주장·한계를 바꾸는 편집.",
+  "unique_approach": "진단 목록(짧은 문장 연속, 반복 시작, 반복 대조 프레임, 추상 과정 명사)을 규칙이 아닌 진단으로만 쓰고, 문단 끝은 추론이 도달하는 곳에서 끝내며, 소리 내어 읽는 속도로 점검한다.",
+  "directives": [
+    {
+      "topic": "리듬은 의미와 강조에 맞춤, 변화는 명확한 관계의 결과",
+      "main": true,
+      "quote": "Shape rhythm around meaning and emphasis."
+    },
+    {
+      "topic": "스타카토·균일 길이·반복 시작·반복 골격 진단",
+      "main": true,
+      "quote": "runs of three or more sentences of roughly ten words or fewer;"
+    },
+    {
+      "topic": "반복 대조 프레임(not X but Y 등) 정리",
+      "main": true,
+      "quote": "Mark every contrast built from a reusable difference template, including:"
+    },
+    {
+      "topic": "추상 과정 명사가 행위자를 숨기는 경우 행위자 명명",
+      "main": false,
+      "quote": "Name the actor when an abstract process hides who acts."
+    },
+    {
+      "topic": "문단 끝 처리: 요약·슬로건·문서 언급 덧붙이지 않음",
+      "main": true,
+      "quote": "Do not append a summary, slogan, generic implication, or sentence about the document merely because the paragraph seems to need a conclusion."
+    },
+    {
+      "topic": "기계적 길이 교대·질감용 파편 추가 금지",
+      "main": false,
+      "quote": "Do not alternate lengths mechanically, add fragments for texture, or move a modifier merely to avoid repetition."
+    },
+    {
+      "topic": "소리 내어 읽는 속도 점검",
+      "main": false,
+      "quote": "Read the revision aloud or at a deliberate speaking pace."
+    },
+    {
+      "topic": "주장·인용·한정어·목소리 신호 보존",
+      "main": false,
+      "quote": "Preserve every supported claim, qualification, citation, and recognizable voice signal."
+    }
+  ],
+  "requires": [],
+  "forbids": [
+    {
+      "skill": "humanizer",
+      "quote": "Do not invoke Humanizer, general-writing, better-usage, or academic-voice from this skill"
+    }
+  ],
+  "interactive": false,
+  "task_types": [
+    "edit",
+    "review"
+  ],
+  "stage_hint": "prose",
+  "requirements": {
+    "required": [],
+    "optional": [
+      "references/cadence-principles.md (전체 리듬 편집 시)"
+    ]
+  },
+  "commands": [],
+  "state_files": [],
+  "cautions": "매니페스트: 동반 스킬, SHA가 선택 목록에 없어 현재 HEAD 설치. humanizer 5단계가 마지막 순서로 호출한다. forbids는 호출 경계 규칙으로, 이 스킬이 다른 파이프라인 스킬을 호출하지 말라는 의미다."
+}

@@ -1,0 +1,71 @@
+{
+  "name": "citation-verification",
+  "wm_id": "WM-X0030",
+  "source": "KalarisLabs/research-agent-skills skills/citation-verification/SKILL.md @b0ee35a, MIT",
+  "role": "참고문헌이 실제로 존재하고 메타데이터가 일치하는지 Crossref, OpenAlex, arXiv로 확인해 환각·손상·불일치 인용을 투고 전에 잡아내는 스킬.",
+  "fits": ".bib 파일이나 참고문헌 목록 점검, AI가 인용을 작성한 뒤 검증, DOI가 엉뚱한 논문을 가리키는 경우, 누락 DOI 추가, camera-ready 직전.",
+  "not_fits": "일부 항목은 자동 수정하지 않는다: mismatch, uncertain, not-found는 사용자 확인이 필요. 서지 형식·중복 정리는 bibtex-hygiene, 문헌 검색은 literature-review 등 다른 스킬.",
+  "unique_approach": "식별자가 해석되고 제목·제1저자·연도가 모두 일치해야 verified로 보고 verify_citations.py로 항목별 상태(verified, found-add-doi, mismatch, doi-not-found, uncertain, not-found)를 표로 보고한다.",
+  "directives": [
+    {
+      "topic": "기억으로 참고문헌을 쓰지 않음",
+      "main": true,
+      "quote": "1. **Never write a reference from memory.**"
+    },
+    {
+      "topic": "제목·제1저자·연도 일치로만 검증",
+      "main": true,
+      "quote": "2. **A reference is verified only when its identifier resolves to a record whose"
+    },
+    {
+      "topic": "검증 불가는 UNVERIFIED로 표기하고 알림",
+      "main": true,
+      "quote": "3. **If you cannot verify a reference, say so.**"
+    },
+    {
+      "topic": "인용 문장이 논문에 의해 뒷받침되는지 확인",
+      "main": true,
+      "quote": "4. Verify the claim too: open the abstract or the cited section and confirm the"
+    },
+    {
+      "topic": "프리프린트보다 동료심사본 인용",
+      "main": false,
+      "quote": "if both exist, cite the peer-reviewed version unless"
+    },
+    {
+      "topic": "철회 논문 인용 금지",
+      "main": false,
+      "quote": "never cite a retracted paper as support"
+    },
+    {
+      "topic": "결과 보고 형식과 자동 수정 범위",
+      "main": false,
+      "quote": "Apply only mechanical fixes automatically (adding a DOI for a `found-add-doi`"
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "review",
+    "edit"
+  ],
+  "stage_hint": "check",
+  "requirements": {
+    "required": [
+      "python3 >=3.9 (stdlib)",
+      "network access to api.crossref.org, api.openalex.org, export.arxiv.org"
+    ],
+    "optional": [
+      "CROSSREF_MAILTO env var (polite pool)"
+    ]
+  },
+  "commands": [
+    "python3"
+  ],
+  "state_files": [
+    "references.bib",
+    "citation-report.json (--json)"
+  ],
+  "cautions": "READY_WITH_LIMITS: 핵심 기능은 Crossref/OpenAlex/arXiv 외부 네트워크가 필요(스모크 테스트에서 미실행). API 키 불필요. 관련 스킬(bibtex-hygiene 등)은 참고용."
+}

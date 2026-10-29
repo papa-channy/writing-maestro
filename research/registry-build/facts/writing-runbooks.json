@@ -1,0 +1,113 @@
+{
+  "name": "writing-runbooks",
+  "wm_id": "WM-X0313",
+  "source": "riekelt/technical-writer plugins/technical-writer/skills/writing-runbooks/SKILL.md @85e5372, MIT",
+  "role": "런북, 설정 가이드, 릴리스 절차, 마이그레이션/폐기 가이드, 트러블슈팅 항목처럼 누군가 시간에 쫓겨 실행할 순서형 운영 문서를 쓰는 스킬.",
+  "fits": "실행되는 모든 절차 문서, 설정 노트, 마이그레이션 가이드, 증상 우선 트러블슈팅, 시스템 내부 에러 메시지와 로그 문구.",
+  "not_fits": "설계 근거(writing-design-docs), 아무도 실행하지 않는 레퍼런스 자료. 한 번도 실행하지 않은 절차는 런북이 아니라 초안으로 표시해야 한다.",
+  "unique_approach": "실제로 실행해 본 단계만 기록, 위험 범례, TL;DR 해피 패스, 복붙 가능한 명령, 단계별 롤백, 증상 우선 트러블슈팅, 만료일 있는 마이그레이션 가이드.",
+  "directives": [
+    {
+      "topic": "실제 실행에서 나온 단계만 기록, 미실행은 초안 표시",
+      "main": true,
+      "quote": "Write from a real run: every step one actually taken, every failure named one that actually happened."
+    },
+    {
+      "topic": "번호 매긴 단계, 단계당 행동 하나, 행위자 명시",
+      "main": true,
+      "quote": "Numbered ordinal steps (not bullets), one action each, present tense or imperative, with a visible actor."
+    },
+    {
+      "topic": "위험 범례 (안전/운영자 전용/수동)",
+      "main": true,
+      "quote": "**Legend up front** when steps differ in risk, applied to every command"
+    },
+    {
+      "topic": "TL;DR 해피 패스 먼저",
+      "main": true,
+      "quote": "**TL;DR happy path first**"
+    },
+    {
+      "topic": "버전 고정 선행 조건과 확인 명령",
+      "main": true,
+      "quote": "Version-pinned prerequisites before any command, each with a check command."
+    },
+    {
+      "topic": "명령은 그대로 복붙 가능, 구체적 예시 값",
+      "main": true,
+      "quote": "Every command copy-pasteable as-is, with concrete example values"
+    },
+    {
+      "topic": "상태를 바꾸는 절차는 롤백 명시 또는 불가 명시",
+      "main": true,
+      "quote": "Every state-changing procedure names its rollback, or states plainly that none exists and what that means."
+    },
+    {
+      "topic": "끝에 '작동 확인' 섹션",
+      "main": true,
+      "quote": "End with a \"verify it worked\" section"
+    },
+    {
+      "topic": "순서가 틀렸을 때의 결과를 인라인으로 명시",
+      "main": false,
+      "quote": "Ordered steps state the consequence of wrong ordering inline"
+    },
+    {
+      "topic": "트러블슈팅: 증상 우선 형식 (Symptom/Cause/Fix), 정확한 에러 문자열",
+      "main": true,
+      "quote": "Symptom-first:"
+    },
+    {
+      "topic": "마이그레이션 가이드: 매핑 표, 단계별 롤백, 날짜 있는 폐기 계약, 만료",
+      "main": true,
+      "quote": "**The mapping table is the core artifact.**"
+    },
+    {
+      "topic": "마이그레이션 가이드에서는 이전 동작 서술(역사) 허용",
+      "main": false,
+      "quote": "**History is the content here, stated positively.**"
+    },
+    {
+      "topic": "'향후 릴리스에서 제거' 같은 날짜 없는 폐기 문구 금지",
+      "main": false,
+      "quote": "\"Will be removed in a future release\" names no date and is banned here."
+    },
+    {
+      "topic": "운영자용 문자열(에러, 로그)은 구체적이고 실행 가능한 해결책 포함",
+      "main": false,
+      "quote": "keep remediation specific and actionable, and make error states visible"
+    },
+    {
+      "topic": "알 수 없는 값은 대괄호 플레이스홀더로, 발명 금지",
+      "main": false,
+      "quote": "keep the placeholder visibly bracketed, never invented"
+    }
+  ],
+  "requires": [
+    {
+      "skill": "technical-writing",
+      "quote": "**REQUIRED BACKGROUND:** the `technical-writing` skill"
+    }
+  ],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit",
+    "docs"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [
+      "technical-writing skill"
+    ],
+    "optional": [
+      "writing-design-docs, recording-decisions, writing-changelogs (migration guide siblings)"
+    ]
+  },
+  "commands": [],
+  "state_files": [
+    "runbook markdown in repository"
+  ],
+  "cautions": "매니페스트 notes: technical-writing 필수 배경(설치됨). 실제 실행 경험이 없으면 초안으로만 표시 가능. 마이그레이션 가이드는 기반 스킬의 이력 금지 규칙의 명시적 예외."
+}

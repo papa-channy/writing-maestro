@@ -1,0 +1,92 @@
+{
+  "name": "investigating-sources",
+  "wm_id": "WM-X0102",
+  "source": "anayy09/claude-research-skills investigating-sources/SKILL.md @f0d3359, MIT",
+  "role": "모든 사실 주장을 검증된 실제 출처로 추적하는 인용 정직형 리서치 보조: brief, report, lit-review, fact-check, verify, scope, related-work-table, reference-diet 모드.",
+  "fits": "주제 조사, 문헌 검토, 근거 종합, 팩트체크, DOI/출처 실존 확인, 주석 참고문헌, '출처 포함' 보고서, 모호한 질문을 답할 수 있는 질문으로 좁히기, 관련 연구 비교표, 참고문헌 수 줄이기.",
+  "not_fits": "소설, 의견 칼럼, 출처가 핵심이 아닌 마케팅 카피. 프로토콜·스크리닝 로그·위험 평가가 필요한 공식 체계적 리뷰는 evidence-synthesis.",
+  "unique_approach": "7단계 척추(SCOPE-SEARCH-VERIFY-SYNTHESIZE-CHALLENGE-COMPOSE-AUDIT)와 check_citations.py/audit_report.py로 인용 실존을 Crossref/DataCite로 확인하고, 동료심사 문헌을 먼저 검색해 출판본을 인용한다.",
+  "directives": [
+    {
+      "topic": "모든 주장에 검증된 인용",
+      "main": true,
+      "quote": "1. **Every claim is cited.** No unsupported factual assertions in a deliverable."
+    },
+    {
+      "topic": "확인 불가 인용은 실패 처리, 기억으로 인용 금지",
+      "main": true,
+      "quote": "The iron line:** if you cannot confirm a source exists, it is a FAIL, not an"
+    },
+    {
+      "topic": "동료심사 문헌 우선, 출판본 인용",
+      "main": true,
+      "quote": "3. **The peer-reviewed record comes first.**"
+    },
+    {
+      "topic": "상충 증거 공개",
+      "main": true,
+      "quote": "4. **Conflicts are disclosed.**"
+    },
+    {
+      "topic": "한계 섹션 명시",
+      "main": true,
+      "quote": "5. **Limits are stated.**"
+    },
+    {
+      "topic": "수치 날조 금지",
+      "main": false,
+      "quote": "6. **No fabricated rigor.**"
+    },
+    {
+      "topic": "불확실성 정직 표기",
+      "main": false,
+      "quote": "7. **Honest uncertainty.**"
+    },
+    {
+      "topic": "직접 인용 최소화, 요약·인용",
+      "main": false,
+      "quote": "Quotation is minimal; paraphrase in your own words and cite."
+    },
+    {
+      "topic": "AI 문체 징후 회피",
+      "main": false,
+      "quote": "Prose is clean and direct. Avoid the AI-tell patterns listed in"
+    },
+    {
+      "topic": "AI 지원 사용 고지문 포함",
+      "main": false,
+      "quote": "Include a short note that AI-assisted research tools were used and that"
+    },
+    {
+      "topic": "프리프린트 표기",
+      "main": false,
+      "quote": "labelled as unreviewed at the point it is cited"
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "review",
+    "edit"
+  ],
+  "stage_hint": "research",
+  "requirements": {
+    "required": [
+      "python3"
+    ],
+    "optional": [
+      "web_search / scholarly MCP connectors",
+      "requests (live DOI checks)",
+      "network"
+    ]
+  },
+  "commands": [
+    "python3"
+  ],
+  "state_files": [
+    "sources.json (source log)"
+  ],
+  "cautions": "READY_WITH_LIMITS: 검색에 web_search/MCP, 실시간 인용 검증에 네트워크 필요(스크립트는 오프라인 폴백). interactive는 판단: 모드를 사용자에게 묻거나 추론하며 scope 모드만 반복 대화, 핵심 작업은 대화 없이 가능하여 false. related-work 서술 자체는 manuscript-writing(미설치)을 언급하지만 필수 아님."
+}

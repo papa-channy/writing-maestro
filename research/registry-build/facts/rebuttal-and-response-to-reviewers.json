@@ -1,0 +1,72 @@
+{
+  "name": "rebuttal-and-response-to-reviewers",
+  "wm_id": "WM-X0044",
+  "source": "KalarisLabs/research-agent-skills skills/rebuttal-and-response-to-reviewers/SKILL.md @b0ee35a, MIT",
+  "role": "동료심사 리뷰에 대한 응답을 계획하고 작성하는 스킬: 저널 response letter, 학회 rebuttal(길이 제한), 메타리뷰 응답, 이의 제기.",
+  "fits": "리뷰를 받은 뒤 코멘트 분류(triage), 항목별 답변 초안, 추가 실험 결정, 정중한 반박, 수정 변경 로그 관리.",
+  "not_fits": "남의 논문을 심사하는 경우(peer-review를 쓴다). 자기 원고에 대한 리뷰 응답에만 해당한다.",
+  "unique_approach": "리뷰를 원자적 코멘트로 쪼개 유형·노력·계획 표로 분류하고 점수를 좌우하는 2-3개 쟁점을 먼저 다루며, 실험과 원고 수정을 끝낸 뒤 변경 위치를 가리키는 답변을 쓴다.",
+  "directives": [
+    {
+      "topic": "triage 표로 코멘트 분류",
+      "main": true,
+      "quote": "Split every review into atomic comments and classify each in a table:"
+    },
+    {
+      "topic": "수정 후 답변 작성, 변경 로그",
+      "main": true,
+      "quote": "Run the experiments and edit the manuscript **before** drafting replies, so every reply can"
+    },
+    {
+      "topic": "저널 답변 형식: 인용, 첫 문장에 직접 답, 변경 인용",
+      "main": true,
+      "quote": "Answer in the first sentence"
+    },
+    {
+      "topic": "감사 표현은 리뷰어당 한 번",
+      "main": false,
+      "quote": "Thanks once per reviewer, not before every comment."
+    },
+    {
+      "topic": "반박 방식: 우려 인정, 근거, 양보",
+      "main": true,
+      "quote": "Never be sarcastic, never say the reviewer \"failed to understand\"."
+    },
+    {
+      "topic": "학회 rebuttal: 일반 응답 먼저, 길이·링크 규정 준수",
+      "main": true,
+      "quote": "Lead with a short **general response** covering shared concerns and new results."
+    },
+    {
+      "topic": "편집자 커버 노트",
+      "main": true,
+      "quote": "Summarize the main changes in 3-6 bullets, flag any reviewer disagreements you could not"
+    },
+    {
+      "topic": "실행하지 않을 실험을 약속하지 않음",
+      "main": false,
+      "quote": "Never promise experiments you will not run."
+    },
+    {
+      "topic": "품질 체크리스트: 모든 코멘트 응답, 수치 일치, 어조",
+      "main": false,
+      "quote": "Tone: professional, specific, never defensive. Read it as the reviewer would."
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [],
+    "optional": []
+  },
+  "commands": [],
+  "state_files": [
+    "triage table / change log (manuscript section, page, line numbers)"
+  ],
+  "cautions": "READY. 의존성 없음. Related skills(peer-review, scientific-writing 등)는 참고용. 실제 리뷰 텍스트와 수정본이 입력으로 필요하나 대화 인터뷰는 요구하지 않음."
+}

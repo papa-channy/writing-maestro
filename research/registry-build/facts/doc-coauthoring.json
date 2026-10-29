@@ -1,0 +1,93 @@
+{
+  "name": "doc-coauthoring",
+  "wm_id": "WM-X0111",
+  "source": "plugin anthropic-skills (anthropics/skills skills/doc-coauthoring/SKILL.md) @ca45fc4, license: see anthropics/skills repo (not checked)",
+  "role": "문서(스펙, 제안서, 결정 문서 등)를 컨텍스트 수집, 섹션별 구조화/정제, 독자 테스트의 3단계로 사용자와 함께 공동 집필하는 워크플로 스킬.",
+  "fits": "문서 작성, 제안서, 기술 스펙, 결정 문서, PRD, RFC 등 구조화된 문서를 사용자와 협업해 쓰는 실질적 집필 과제.",
+  "not_fits": "사용자가 거절하면 자유 형식으로 진행(워크플로 강요 안 함). 짧은 단발 글쓰기에는 과함.",
+  "unique_approach": "사용자 컨텍스트 덤프 후 5-10개 질문, 섹션마다 5-20개 선택지를 브레인스토밍하고 사용자가 유지/삭제/병합을 고르는 방식, 맥락 없는 새 Claude(서브에이전트)로 독자 테스트.",
+  "directives": [
+    {
+      "topic": "3단계 워크플로: 컨텍스트 수집, 정제와 구조화, 독자 테스트",
+      "main": true,
+      "quote": "Act as an active guide, walking users through three stages: Context Gathering, Refinement & Structure, and Reader Testing."
+    },
+    {
+      "topic": "메타 질문: 문서 유형, 독자, 원하는 영향, 템플릿, 제약",
+      "main": true,
+      "quote": "What type of document is this? (e.g., technical spec, decision doc, proposal)"
+    },
+    {
+      "topic": "컨텍스트 정보 덤프 후 5-10개 번호 질문",
+      "main": true,
+      "quote": "Generate 5-10 numbered questions based on gaps in the context."
+    },
+    {
+      "topic": "섹션별 작업: 질문, 5-20개 브레인스토밍, 큐레이션, 갭 체크, 초안, 정제",
+      "main": true,
+      "quote": "brainstorm [5-20] things that might be included"
+    },
+    {
+      "topic": "가장 불확실한 섹션부터, 요약은 마지막",
+      "main": true,
+      "quote": "Summary sections are best left for last."
+    },
+    {
+      "topic": "수정은 str_replace로 부분 편집, 전체 재출력 금지",
+      "main": true,
+      "quote": "Use `str_replace` to make edits (never reprint the whole doc)"
+    },
+    {
+      "topic": "완성 근처에서 전체 재독: 흐름, 중복, 모순, 'slop'/일반 필러 점검",
+      "main": false,
+      "quote": "Anything that feels like \"slop\" or generic filler"
+    },
+    {
+      "topic": "모든 문장이 무게를 갖는지 점검",
+      "main": false,
+      "quote": "Whether every sentence carries weight"
+    },
+    {
+      "topic": "독자 테스트: 예상 질문 5-10개를 새 서브에이전트로 시험, 모호함/모순 점검",
+      "main": true,
+      "quote": "For each question, invoke a sub-agent with just the document content and the question."
+    },
+    {
+      "topic": "이미지 alt-text 확인 (기존 공유 문서 편집 시)",
+      "main": false,
+      "quote": "Check for images without alt-text"
+    },
+    {
+      "topic": "최종 검토는 사용자 몫: 사실, 링크 재확인 권고",
+      "main": false,
+      "quote": "Recommend they do a final read-through themselves"
+    },
+    {
+      "topic": "어조: 직접적이고 절차적, 접근법을 팔지 않음",
+      "main": false,
+      "quote": "Be direct and procedural"
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": true,
+  "task_types": [
+    "new",
+    "edit",
+    "docs"
+  ],
+  "stage_hint": "clarify",
+  "requirements": {
+    "required": [],
+    "optional": [
+      "Slack/Drive 등 연동(있으면 컨텍스트 수집에 사용)",
+      "sub-agent tool (Reader Testing in Claude Code)",
+      "artifact create_file or markdown file in working directory"
+    ]
+  },
+  "commands": [],
+  "state_files": [
+    "markdown scaffold file in working directory (e.g. decision-doc.md, technical-spec.md) or artifact"
+  ],
+  "cautions": "매니페스트 notes: anthropic-skills:doc-coauthoring로 이미 사용 가능, 플러그인 사본과 동일(중복 설치 안 함). 라이선스 미확인. 사용자와의 다회 상호작용이 전제이며 서브에이전트 없으면 사용자가 수동으로 독자 테스트를 해야 한다."
+}

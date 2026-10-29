@@ -1,0 +1,104 @@
+{
+  "name": "verse-craft",
+  "wm_id": "WM-X0171",
+  "source": "danjdewhurst/story-skills skills/verse-craft/SKILL.md @e44c97c, MIT",
+  "role": "리머릭·소네트·하이쿠·빌라넬·발라드·노래 가사·운율 그림책 텍스트 등 운문을 쓰고, 스캔하고, 고친다. 모든 '스캔된다'는 주장은 강세 표기·음절 수·압운 표로 증명한다.",
+  "fits": "새 시·노래·라임을 정해진 형식으로 쓸 때, 기존 시가 운율·압운 구조를 지키는지 점검할 때, 억지 압운이나 군더더기 행을 고칠 때, 이야기 속 인물의 노래·예언·수수께끼를 쓸 때.",
+  "not_fits": "산문에 우연히 생긴 라임은 line-editing, 타인의 시·가사 인용 허락은 editorial-review를 쓴다. 시집을 story 프로젝트로 만들지 않으며(story init 금지) 시 모음은 일반 파일로 관리한다.",
+  "unique_approach": "행마다 강세·음절·압운 문자를 보여 주는 스캔 표를 필수로 내고, 의도된 변이(deliberate)와 결함(fault)을 구분하며, 수정은 line-editing의 edit-note 형식으로 제안한다.",
+  "directives": [
+    {
+      "topic": "운문 작성·스캔·수정 (형식별 규칙: forms.md)",
+      "main": true,
+      "quote": "Write, scan, and revise verse: fixed forms such as the limerick, sonnet,"
+    },
+    {
+      "topic": "스캔 증명: 강세 표시 없이 '스캔된다'고 말하지 않는다",
+      "main": true,
+      "quote": "Never say a line scans without showing its stresses"
+    },
+    {
+      "topic": "행 패딩 금지(did go, so very, oh)",
+      "main": false,
+      "quote": "Never pad a line to fill the meter"
+    },
+    {
+      "topic": "압운을 위한 어순 도치 금지",
+      "main": false,
+      "quote": "Never invert natural word order to land a rhyme"
+    },
+    {
+      "topic": "저작권 있는 가사·시 재현 금지(한 연도 안 됨)",
+      "main": false,
+      "quote": "Never reproduce copyrighted lyrics or poems, even a stanza."
+    },
+    {
+      "topic": "작가의 시를 통째로 재작성 금지, 행 단위 수정과 근거 제안",
+      "main": false,
+      "quote": "Never rewrite the author's poem wholesale without explicit permission."
+    },
+    {
+      "topic": "이야기 속 시는 그 인물의 목소리(서툰 인물은 의도적으로 서툴게)",
+      "main": false,
+      "quote": "Verse a character writes sounds like that character, not like a"
+    },
+    {
+      "topic": "이야기 속 운문은 프로젝트 정본에 없는 이름·역사·세계 규칙·소소한 사실을 만들지 않는다",
+      "main": false,
+      "quote": "Verse must not state canon the project"
+    },
+    {
+      "topic": "의미 먼저, 박자는 그다음; 자연스러운 통사",
+      "main": false,
+      "quote": "Draft for sense first: every line must say something a reader would"
+    },
+    {
+      "topic": "언어별 전통(음절·장단·모라·성조)으로 쓰고 스캔",
+      "main": false,
+      "quote": "Write and scan in that language's own tradition:"
+    },
+    {
+      "topic": "압운 점검: 압운 스킴 문자 표기, 슬랜트·아이 라임 의도 여부",
+      "main": false,
+      "quote": "Label the rhyme scheme with letters (AABBA)."
+    },
+    {
+      "topic": "소리 내어 읽어 걸리는 행은 표상 스캔돼도 결함",
+      "main": false,
+      "quote": "A line that stumbles aloud is a fault"
+    },
+    {
+      "topic": "산문 속 줄바꿈 유지: 행 끝 백슬래시, 연 사이 빈 줄",
+      "main": false,
+      "quote": "Keep line breaks through every build: end each line of a stanza,"
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit",
+    "review"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [],
+    "optional": [
+      "이야기 속 운문이면 story.md(era, tone, language)와 화자 캐릭터 파일",
+      "story CLI 또는 번들 폴백 (story add matter, reindex, check)",
+      "TTS: say / espeak-ng / spd-say (설치 전 확인)"
+    ]
+  },
+  "commands": [
+    "story",
+    "node"
+  ],
+  "state_files": [
+    "단독 시: 사용자가 지정한 위치의 .md 파일",
+    "이야기 속 운문: 챕터 본문 또는 matter/ 파일(story add matter 'Epigraph' --heading=false)",
+    "story.md",
+    "characters/*.md (voice-words, voice-avoid)"
+  ],
+  "cautions": "매니페스트: READY, 모든 상대 참조 해석됨. 단독 시에는 프로젝트가 필요 없다. references의 형식·예시·강제 압운 신호는 영어 기준이라 타 언어에서는 조정하고 신뢰 불가능하면 그렇다고 밝혀야 한다. story 명령은 번들 폴백 가능."
+}

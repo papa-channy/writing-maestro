@@ -1,0 +1,81 @@
+{
+  "name": "academic-voice",
+  "wm_id": "WM-X0280",
+  "source": "msimchowitz/writing-skills for-agents/academic-voice/SKILL.md @214981f, MIT",
+  "role": "사려 깊고 정확하며 독자 이해를 중시하는 학자의 목소리로 산문을 쓰거나 고친다.",
+  "fits": "연구 설명문, 학술 논문, 교재식 설명, 학술 요약, 기업·LinkedIn·Reddit·GitHub 어조를 피해야 하는 초안.",
+  "not_fits": "매뉴얼·절차서 같은 지시문(직접 지시는 그런 장르에서만), 캐주얼·법률·개인 글을 저널 문체로 바꾸는 일, 다른 스킬 파이프라인 호출(호출 경계에서 금지).",
+  "unique_approach": "추상 명사 압축을 학술적 엄밀함으로 착각하지 않도록 행위자와 관계를 이름 붙이고, 차용된 레지스터 네 가지(기업, LinkedIn, Reddit, GitHub)를 명시적으로 제거한다.",
+  "directives": [
+    {
+      "topic": "학자 음성: 사려 깊고 정확하며 개성 있는 목소리",
+      "main": true,
+      "quote": "Write like an academic who is thoughtful, careful, and precise, and who cares deeply about making the material clear and easy for the reader to understand."
+    },
+    {
+      "topic": "증거·해석·추측 구분, 불확실성 보존",
+      "main": true,
+      "quote": "Distinguish evidence, interpretation, and conjecture."
+    },
+    {
+      "topic": "추상 명사 압축 대신 설명(행위자와 관계 명명)",
+      "main": true,
+      "quote": "Do not mistake abstraction for rigor."
+    },
+    {
+      "topic": "기업어 제거",
+      "main": false,
+      "quote": "Remove corporate language that treats ideas as deliverables, gives prose \"jobs,\" or substitutes alignment and impact for a concrete relation."
+    },
+    {
+      "topic": "LinkedIn 리듬 제거(훅, 한 줄 교훈, 동기부여 마무리)",
+      "main": false,
+      "quote": "Remove LinkedIn cadence: manufactured hooks, one-line lessons, motivational closure, conspicuous vulnerability, and strings of short sentences designed to sound quotable."
+    },
+    {
+      "topic": "Reddit 말투 제거",
+      "main": false,
+      "quote": "Remove Reddit mannerisms: fake-casual throat clearing, canned contrarianism, self-aware asides that add no thought, and argumentative shorthand aimed at winning a thread."
+    },
+    {
+      "topic": "GitHub 레지스터 제거(diff 서술, 변경로그, 이슈 템플릿식 소섹션)",
+      "main": false,
+      "quote": "Remove GitHub register from finished exposition: diff narration, changelog language, terse inventory bullets, interface labels, and tiny sections that read like issue templates."
+    },
+    {
+      "topic": "장르 일치: 설명문은 설명문으로, 당위 조동사 점검",
+      "main": true,
+      "quote": "Write exposition as exposition."
+    },
+    {
+      "topic": "연결된 산문 선호, 지시·슬로건·균등 불릿 지양",
+      "main": false,
+      "quote": "Prefer connected exposition to a stack of directives, slogans, headings, or equally weighted bullets."
+    },
+    {
+      "topic": "학술체 흉내 금지(명사화, 의례적 접속어, 수동태)",
+      "main": false,
+      "quote": "Do not imitate academic voice by adding nominalizations, ceremonial transitions, passive constructions, or claims of importance."
+    }
+  ],
+  "requires": [],
+  "forbids": [
+    {
+      "skill": "humanizer",
+      "quote": "Do not invoke Humanizer, general-writing, writing-cadence, or better-usage; the calling skill owns the larger editing pipeline."
+    }
+  ],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit"
+  ],
+  "stage_hint": "prose",
+  "requirements": {
+    "required": [],
+    "optional": []
+  },
+  "commands": [],
+  "state_files": [],
+  "cautions": "매니페스트 이슈 없음(READY). forbids는 다른 스킬이 호출했을 때의 호출 경계 규칙이다(단독 사용 시 해당 없음)."
+}

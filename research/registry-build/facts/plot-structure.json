@@ -1,0 +1,96 @@
+{
+  "name": "plot-structure",
+  "wm_id": "WM-X0159",
+  "source": "danjdewhurst/story-skills skills/plot-structure/SKILL.md @e44c97c, MIT",
+  "role": "스토리 아크, 플롯 포인트, 타임라인, 복선/회수(promise·clue·question) 기록, 책 단위 페이싱을 계획·관리하는 스킬.",
+  "fits": "플롯 아크 생성, 구조 모델 선택(3막·영웅의 여정 등), 스노플레이크, 타임라인, 복선 추적, 처지는 중반부와 페이싱, 챕터 beat/hook 계획.",
+  "not_fits": "장면 결과와 챕터 훅의 장인 기법은 계획 단계까지만 다루고 scene-craft로, 퇴고 단계의 페이싱 점검은 revision-continuity로 보낸다.",
+  "unique_approach": "구조 모델을 장르에 맞춰 추천하고 아크 파일·beat·hook·outcome을 frontmatter로 기록하며, 각 복선은 하나의 소유 레코드(clue/promise/question)에만 기록하고 `story pacing`/`grid`로 점검한다.",
+  "directives": [
+    {
+      "topic": "장르·형식에 맞는 스토리 구조 모델 선택과 비트 시트",
+      "main": true,
+      "quote": "Recommend a structure based on genre (default to three-act if unclear)."
+    },
+    {
+      "topic": "단편·플래시는 다단계 비트 시트 대신 단편 형식 사용",
+      "main": false,
+      "quote": "For `short-story` and `flash`, use `references/short-story-form.md` instead of a multi-act beat sheet"
+    },
+    {
+      "topic": "챕터에 구조 beat를 짧은 라벨로 기록",
+      "main": false,
+      "quote": "Keep it a short label: `story validate` warns `beat-too-long` above 60 characters."
+    },
+    {
+      "topic": "아크 파일 구성(setup, escalation, climax, resolution)",
+      "main": true,
+      "quote": "Build the arc through conversation: setup, escalations, climax, resolution"
+    },
+    {
+      "topic": "plot/timeline.md 표 형식과 연대순 유지",
+      "main": false,
+      "quote": "Use the `| When | Event | Arc | Chapter |` table with these cell formats:"
+    },
+    {
+      "topic": "장면 outcome과 챕터 hook으로 페이싱 점검 가능하게 계획",
+      "main": true,
+      "quote": "Plan both in the outline, then run `story pacing .` for a per-chapter dashboard"
+    },
+    {
+      "topic": "복선·회수는 한 곳에만 기록(복제 금지)",
+      "main": true,
+      "quote": "Each setup has exactly one record. Pick it by use, update only that record, and never copy a setup into a second place"
+    },
+    {
+      "topic": "재배치는 사용자 승인 후 CLI move 사용",
+      "main": false,
+      "quote": "show the user the proposed new order and wait for their approval before any move, since reordering changes story shape."
+    },
+    {
+      "topic": "MICE 스레드 및 아웃라인 사다리 활용",
+      "main": false,
+      "quote": "Which MICE threads the arc carries"
+    },
+    {
+      "topic": "경고는 규칙이 아니라 재독 신호로 취급",
+      "main": false,
+      "quote": "Treat the warnings as prompts to reread, not rules"
+    }
+  ],
+  "requires": [
+    {
+      "skill": "story-init",
+      "quote": "A story project must already exist (created via the story-init skill). Verify by checking for `story.md` in the project root."
+    }
+  ],
+  "forbids": [],
+  "interactive": true,
+  "task_types": [
+    "new",
+    "docs"
+  ],
+  "stage_hint": "clarify",
+  "requirements": {
+    "required": [
+      "기존 스토리 프로젝트(story.md 존재)"
+    ],
+    "optional": [
+      "story CLI",
+      "characters/ 캐릭터 등록부"
+    ]
+  },
+  "commands": [
+    "story",
+    "node"
+  ],
+  "state_files": [
+    "plot/_index.md (structure)",
+    "plot/arcs/{arc}.md",
+    "plot/timeline.md",
+    "continuity/promises|clues|questions/{id}.md",
+    "chapters/ frontmatter (beat, hook)",
+    "scenes/ frontmatter (outcome)"
+  ],
+  "cautions": "Story Skills 번들 공통: `story` CLI(node>=18, npm 의존성 없음; bun 불필요)에 의존하며 manifest 상 상태 READY, 제한 없음. 상대 파일 참조는 모두 해결됨. 스토리 프로젝트(story.md 기준) 마크다운 폴더 구조와 YAML frontmatter 규칙을 따라야 하며, 소설 프로젝트 파일에 쓰는 스킬이므로 일반 산문/문서 작업에는 맞지 않음. 구조 재배치는 승인 필요. 분할/병합 절차는 revision-continuity의 Structural Edits를 따름."
+}

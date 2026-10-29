@@ -1,0 +1,82 @@
+{
+  "name": "writing-for-agents",
+  "wm_id": "WM-X0272",
+  "source": "mattpocock/skills skills/productivity/writing-for-agents/SKILL.md @59db609, MIT",
+  "role": "스킬, AGENTS.md/CLAUDE.md, 포인터로 닿는 문서 등 에이전트가 읽는 모든 문서를 쓰는 참조 지침이다.",
+  "fits": "스킬을 만들거나 고치거나 AGENTS.md나 CLAUDE.md를 수정할 때.",
+  "not_fits": "사람 독자용 글쓰기는 대상이 아니다. 스킬 프런트매터와 호출 방식 등 스킬 고유 사항은 SKILL-MECHANICS.md가 따로 다룬다.",
+  "unique_approach": "컨텍스트 포인터, 컨텍스트/인지 부하, 정보 위계와 점진적 공개, 완료 기준, 리딩 워드, 가지치기라는 레버로 에이전트 실행 경로의 변동성을 줄인다.",
+  "directives": [
+    {
+      "topic": "컨텍스트 포인터 문구: 가지(branch)별 트리거 하나, 선두 단어, 중복 제거",
+      "main": true,
+      "quote": "One trigger per branch."
+    },
+    {
+      "topic": "정보 위계: 단계는 파일 안, 참조는 필요 시 분리 파일로 점진적 공개",
+      "main": true,
+      "quote": "Progressive disclosure"
+    },
+    {
+      "topic": "각 단계에 확인 가능하고 철저한 완료 기준",
+      "main": true,
+      "quote": "Every step ends on a **completion criterion**"
+    },
+    {
+      "topic": "리딩 워드로 문장을 압축하고 행동 영역을 고정",
+      "main": true,
+      "quote": "A **leading word** is a compact concept already living in the model's pretraining"
+    },
+    {
+      "topic": "금지 대신 긍정형 지시(부정은 그 행동을 부각)",
+      "main": true,
+      "quote": "Prompt the **positive**:"
+    },
+    {
+      "topic": "단일 진실 공급원, 환경에서 조회 가능한 것은 복제 금지",
+      "main": false,
+      "quote": "Keep each meaning in a **single source of truth**"
+    },
+    {
+      "topic": "관련성 점검과 침전물(sediment) 제거",
+      "main": false,
+      "quote": "Check every line for **relevance**"
+    },
+    {
+      "topic": "no-op 문장 삭제: 기본 동작을 바꾸지 않는 지시 제거",
+      "main": false,
+      "quote": "Hunt **no-ops** sentence by sentence"
+    },
+    {
+      "topic": "문서 과장(sprawl) 방지: 분기·순서로 분할",
+      "main": false,
+      "quote": "**Sprawl** is the failure mode here"
+    },
+    {
+      "topic": "개념의 정의·규칙·주의사항은 한 제목 아래 함께 배치",
+      "main": false,
+      "quote": "Keep a concept's definition, rules, and caveats under one heading"
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit",
+    "docs"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [],
+    "optional": [
+      "SKILL-MECHANICS.md when the document being written is a skill"
+    ]
+  },
+  "commands": [],
+  "state_files": [
+    "SKILL-MECHANICS.md (sibling, read-only)",
+    "agents/openai.yaml (ignored by Claude Code)"
+  ],
+  "cautions": "매니페스트: READY, SKILL-MECHANICS.md 링크 해석됨, agents/openai.yaml은 Claude Code에서 무시됨. 대상은 에이전트가 읽는 문서이며 사람용 산문 글쓰기에는 적용하지 않는다. 스킬 작성이면 SKILL-MECHANICS.md를 읽으라고 안내함(조건부)."
+}

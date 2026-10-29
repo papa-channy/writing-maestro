@@ -1,0 +1,84 @@
+{
+  "name": "research-ideation",
+  "wm_id": "WM-X0106",
+  "source": "anayy09/claude-research-skills research-ideation/SKILL.md @f0d3359, MIT",
+  "role": "사용자의 기존 연구 자산(논문, 코드, 데이터, 예비·부정 결과)에서 검증된 신규성 델타와 반증 가능한 주장, 제출까지의 실험 계획을 갖춘 순위화된 연구 방향을 만드는 연구 전략가 스킬.",
+  "fits": "다음에 무엇을 할지, 논문이 무엇을 주장해야 하는지, 기존 결과·실패 실험을 논문으로 바꾸는 법, 신규성 충분 여부, 학위/다논문 계획, 마감 대비 계획.",
+  "not_fits": "문헌 검토 자체(evidence-synthesis, investigating-sources), 학술지 선택(journal-advisor), 완성된 원고 채점(submission-reviewer), 통계 계산, 논문 집필(manuscript-writing)은 범위 밖이다.",
+  "unique_approach": "자산 목록부터 만들고 20여 개 연산자로 후보를 생성해 실제 선행연구로 신규성을 확인한 뒤, 6차원 루브릭과 rank_ideas.py로 결정적으로 점수화하고 plan_timeline.py로 마감 역산 일정을 만든다.",
+  "directives": [
+    {
+      "topic": "자산 목록 선행 작성",
+      "main": true,
+      "quote": "Ideas are only as good as the assets they can stand on, so catalog the assets"
+    },
+    {
+      "topic": "후보는 연산자로 생성, 주장은 반증 가능한 한 문장",
+      "main": true,
+      "quote": "write the claim in one falsifiable sentence before writing"
+    },
+    {
+      "topic": "실제 선행연구 검색으로 신규성 확인",
+      "main": true,
+      "quote": "Search rather than recalling:"
+    },
+    {
+      "topic": "점수화와 순위 밴드 보정",
+      "main": true,
+      "quote": "Reserve 80 and above for directions where the novelty delta was verified against named prior work"
+    },
+    {
+      "topic": "논문 경로: 증거 세트, 킬 실험, 심사자 반박 대비",
+      "main": true,
+      "quote": "produce the gap ledger, the headline results table designed before any run"
+    },
+    {
+      "topic": "보고서 고정 구조",
+      "main": true,
+      "quote": "Use the exact structure in `references/report-format.md`."
+    },
+    {
+      "topic": "선행연구 날조 금지",
+      "main": false,
+      "quote": "**No invented prior work.**"
+    },
+    {
+      "topic": "수치 날조 금지",
+      "main": false,
+      "quote": "**No invented numbers.**"
+    },
+    {
+      "topic": "모든 방향은 반증 가능",
+      "main": false,
+      "quote": "**Every direction is falsifiable.**"
+    },
+    {
+      "topic": "동기부여식 수사 금지",
+      "main": false,
+      "quote": "**No motivational framing.**"
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "review"
+  ],
+  "stage_hint": "research",
+  "requirements": {
+    "required": [
+      "python3 (rank_ideas.py, plan_timeline.py)"
+    ],
+    "optional": [
+      "web search / scholarly tools (novelty check)"
+    ]
+  },
+  "commands": [
+    "python3"
+  ],
+  "state_files": [
+    "ideas.json"
+  ],
+  "cautions": "READY_WITH_LIMITS: 신규성 검사에 web search/학술 도구 필요. 형제 스킬(manuscript-writing, journal-advisor 등) 인계는 제안일 뿐 필수 아님. interactive는 판단: 부족한 정보는 순위에 영향을 줄 때만 묻고 기본값을 가정해 진행하라고 하므로 false."
+}

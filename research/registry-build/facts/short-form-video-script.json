@@ -1,0 +1,86 @@
+{
+  "name": "short-form-video-script",
+  "wm_id": "WM-X0362",
+  "source": "social-media-skills/skills skills/short-form-video-script/SKILL.md @f28cef2, MIT",
+  "role": "릴스/틱톡/쇼츠 등 세로형 숏폼 영상 스크립트(대사, 화면 텍스트, 비트/샷 지시, 훅 변형, CTA)를 시청 지속률 중심으로 쓰는 스킬.",
+  "fits": "숏폼 영상 스크립트, 훅·리텐션·페이싱·엔딩 루프, 음소거 자막, 초반 이탈 개선이 필요할 때.",
+  "not_fits": "영상 생성(ai-video/veo-3/heygen), 기존 긴 영상 클리핑(captions-and-clipping), 긴 영상 스크립트/스토리보드(scripting-and-storyboarding)에는 쓰지 않는다. 사람이 촬영·편집하고 이 스킬은 스크립트만 쓴다.",
+  "unique_approach": "WATCH 프레임워크(첫 3초, 오픈루프 아크, 음소거/유음 두 트랙, 약속 이행, 루프 엔딩+CTA)로 15~35초 3트랙 비트 스크립트를 쓴다. 음소거 버전을 먼저 쓰고 훅 5개 변형을 제시한다.",
+  "directives": [
+    {
+      "topic": "숏폼 스크립트 구조: WATCH 프레임워크, 훅-본문-페이오프-CTA/루프",
+      "main": true,
+      "quote": "## The framework: WATCH"
+    },
+    {
+      "topic": "길이/페이싱: 15~35초(~75단어=30초), 2~4초마다 화면 전환",
+      "main": true,
+      "quote": "~15–35s is the sweet spot (~75 words ≈ 30s)"
+    },
+    {
+      "topic": "첫 3초 훅: 가장 강한 프레임, 인트로/로고/인사 금지, 훅 변형 5개",
+      "main": true,
+      "quote": "Most striking frame first, no intro/logo/\"hey"
+    },
+    {
+      "topic": "음소거 우선: 화면 텍스트가 스토리를 전달, 자막 처음부터",
+      "main": false,
+      "quote": "**T — Two tracks (sound-off + sound-on):** write the muted version first"
+    },
+    {
+      "topic": "훅 정직성: 낚시/바이럴 보장/통계 조작 금지, 약속 이행",
+      "main": false,
+      "quote": "**Never** fabricate a metric or guarantee virality; the **hook must be honest**"
+    },
+    {
+      "topic": "CTA: 가치에 맞는 ~2초 CTA 하나, 기계적 '좋아요 구독' 금지",
+      "main": false,
+      "quote": "fitting ≈2s CTA tied to value"
+    },
+    {
+      "topic": "엔딩 루프: 마지막이 첫 프레임으로 자연스럽게 이어지도록 설계",
+      "main": false,
+      "quote": "engineer the ending to flow back to frame 1"
+    },
+    {
+      "topic": "법적/윤리 고려: AI 공개, 초상/동의, YMYL(치료·교정 주장 금지)",
+      "main": false,
+      "quote": "**AI-disclosure** for AI voice/visuals; **likeness/consent**"
+    }
+  ],
+  "requires": [
+    {
+      "skill": "brand-profile",
+      "quote": "1. **brand-profile** + **voice-builder** — the voice the script speaks in."
+    },
+    {
+      "skill": "voice-builder",
+      "quote": "1. **brand-profile** + **voice-builder** — the voice the script speaks in."
+    },
+    {
+      "skill": "hook-writer",
+      "quote": "and **hook-writer** for the hook line."
+    }
+  ],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [
+      "brand-profile.md and voice.md user files"
+    ],
+    "optional": [
+      "content-angle skill (storytelling/educational/data/listicle/contrarian) - pick-one category, not installed",
+      "reels-script, tiktok-script, youtube-shorts (not installed)"
+    ]
+  },
+  "commands": [],
+  "state_files": [
+    "brand-profile.md (read)",
+    "voice.md (read)"
+  ],
+  "cautions": "'Read these first' 항목의 content-angle 스킬은 미설치(카테고리 선택형). 플랫폼 스킬/게시(WoopSocial)는 범위 밖. 통계는 attribute+verify-quarterly. 네이티브 트렌딩 오디오·영상 생성은 하지 않음."
+}

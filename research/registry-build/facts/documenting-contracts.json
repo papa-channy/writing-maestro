@@ -1,0 +1,82 @@
+{
+  "name": "documenting-contracts",
+  "wm_id": "WM-X0304",
+  "source": "riekelt/technical-writer plugins/technical-writer/skills/documenting-contracts/SKILL.md @85e5372, MIT",
+  "role": "HTTP API, 메시지 페이로드, 큐 계약, DTO, 파일 포맷, 웹훅 같은 기계 인터페이스를 호출자용 계약 문서로 쓰는 스킬. 네 가지 상세 수준과 DTO 카탈로그 구조를 강제한다.",
+  "fits": "호출자가 필드 의미나 에러를 반복해서 묻는 API, 메시지, 웹훅, CLI 명령, 파일 포맷 문서화, 레거시 캠페인의 api-reference.",
+  "not_fits": "내부 코드 인터페이스, 설정 레퍼런스(config-reference), 계약 설계의 좋고 나쁨 평가.",
+  "unique_approach": "인덱스/시맨틱스/형태/예시 네 수준에 각각 한 곳만 두고, DTO를 와이어 타입과 Source 줄로 한 번만 정의하며, 생성된 OpenAPI 스펙이 있으면 필드 표를 스펙에 맡기고 생략 대 null 의미를 명시한다.",
+  "directives": [
+    {
+      "topic": "계약 문서의 4단계 상세 수준 분리 (인덱스/시맨틱스/형태/예시)",
+      "main": true,
+      "quote": "Each level has its own home; the writer moves detail found at the wrong level into the level that owns it:"
+    },
+    {
+      "topic": "DTO 카탈로그: 와이어 타입, Source 줄, 3상태 Required",
+      "main": true,
+      "quote": "**Wire types, not language types.**"
+    },
+    {
+      "topic": "생략 대 null 의미 명시",
+      "main": true,
+      "quote": "**Omitted versus null is stated wherever it matters**"
+    },
+    {
+      "topic": "생성된 스펙이 있으면 필드 표는 스펙이 소유 (one-home)",
+      "main": true,
+      "quote": "never hand-maintain field tables beside a generated one; a second home drifts."
+    },
+    {
+      "topic": "에러는 봉투+상태표로 한 번만 카탈로그",
+      "main": true,
+      "quote": "**Errors are cataloged once**, as envelope plus a status table"
+    },
+    {
+      "topic": "예시는 설명용, 표에 없는 필드 금지, DTO당 최대 1개",
+      "main": true,
+      "quote": "**Examples are illustrative, never normative.**"
+    },
+    {
+      "topic": "직렬화 설정을 읽고 검증 (클래스가 아니라 와이어)",
+      "main": true,
+      "quote": "**Verify against the serializer, not the class.**"
+    },
+    {
+      "topic": "전수성: 엔드포인트와 DTO 수를 분모로 기록",
+      "main": true,
+      "quote": "**The exhaustiveness is checkable.**"
+    },
+    {
+      "topic": "Reference 종류: 모든 엔드포인트, 필드, 에러 수록",
+      "main": false,
+      "quote": "every endpoint, every field, every error."
+    }
+  ],
+  "requires": [
+    {
+      "skill": "technical-writing",
+      "quote": "**REQUIRED BACKGROUND:** the `technical-writing` skill"
+    }
+  ],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit",
+    "docs"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [
+      "technical-writing skill (hard rules, truth rules, style)"
+    ],
+    "optional": [
+      "OpenAPI/AsyncAPI spec when one exists",
+      "documenting-legacy-codebases (not installed, informational)"
+    ]
+  },
+  "commands": [],
+  "state_files": [],
+  "cautions": "매니페스트 notes: documenting-legacy-codebases 교차 참조는 미설치(정보성). 소스 코드의 직렬화 설정과 DTO를 읽어야 정확한 문서가 나온다."
+}

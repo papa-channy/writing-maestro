@@ -1,0 +1,77 @@
+{
+  "name": "content-strategy",
+  "wm_id": "WM-X0129",
+  "source": "coreyhaines31/marketingskills skills/content-strategy/SKILL.md @0cd9b3a, MIT",
+  "role": "어떤 콘텐츠를 만들지 정하는 전략 스킬로 필러, 토픽 클러스터, 우선순위 점수, 캘린더 비율, 배포 계획을 만든다.",
+  "fits": "콘텐츠 전략, 무엇을 쓸지 모를 때, 블로그 주제, 에디토리얼 캘린더, 토픽 클러스터 계획.",
+  "not_fits": "개별 글 작성(copywriting), SEO 기술 감사(seo-audit), 소셜 콘텐츠(social).",
+  "unique_approach": "모든 콘텐츠를 검색형 또는 공유형으로 나누고, 고객 인터뷰와 검색 데이터로 점수화(고객 영향 40%, 적합 30%, 검색 20%, 자원 10%)하며, 60/30/10 캘린더와 한 번 만들어 두 번 배포하는 원칙을 쓴다.",
+  "directives": [
+    {
+      "topic": "모든 콘텐츠는 검색형, 공유형 또는 둘 다",
+      "main": true,
+      "quote": "Every piece of content must be searchable, shareable, or both."
+    },
+    {
+      "topic": "콘텐츠 필러 3-5개와 토픽 클러스터",
+      "main": true,
+      "quote": "Content pillars are the 3-5 core topics your brand will own."
+    },
+    {
+      "topic": "아이디어 우선순위 점수 가중치",
+      "main": true,
+      "quote": "Customer Impact (40%)"
+    },
+    {
+      "topic": "캘린더 60/30/10 분배",
+      "main": true,
+      "quote": "**60% searchable**"
+    },
+    {
+      "topic": "정보 이득 게이트: 상위 결과에 없는 추가 가치 한 문장",
+      "main": false,
+      "quote": "write one sentence on what yours will add that none of them have"
+    },
+    {
+      "topic": "블로그 제목 10안 작성과 약 5회 편집 패스",
+      "main": false,
+      "quote": "write **10 title options** before drafting"
+    },
+    {
+      "topic": "배포 훅을 작성 시점에 넣기",
+      "main": false,
+      "quote": "Build **distribution hooks into the piece at creation time**, not after"
+    },
+    {
+      "topic": "출력 형식: 필러, 우선 주제, 클러스터 맵",
+      "main": false,
+      "quote": "### 1. Content Pillars"
+    },
+    {
+      "topic": "고객 언어와 근거 인용으로 주제 뒷받침",
+      "main": false,
+      "quote": "Output content ideas with supporting quotes."
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "review"
+  ],
+  "stage_hint": "research",
+  "requirements": {
+    "required": [],
+    "optional": [
+      ".agents/product-marketing.md 또는 .claude/product-marketing.md(있으면 읽음)",
+      "키워드 내보내기, 통화 녹취, 설문(사용자 제공 시)",
+      "웹 검색(포럼, 경쟁사 조사)"
+    ]
+  },
+  "commands": [],
+  "state_files": [
+    ".agents/product-marketing.md 또는 .claude/product-marketing.md (읽기 전용, 있을 때만)"
+  ],
+  "cautions": "매니페스트: 조건부 product-marketing 파일, 관련 스킬(copywriting, seo-audit 등) 참고 언급만이며 requires 아님. 'ask if not provided' 방식이라 비대화형으로 판단. 출력은 글이 아니라 전략 문서다."
+}

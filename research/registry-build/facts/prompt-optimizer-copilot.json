@@ -1,0 +1,86 @@
+{
+  "name": "prompt-optimizer-copilot",
+  "wm_id": "WM-X0216",
+  "source": "github/awesome-copilot skills/prompt-optimizer/SKILL.md @b6483db, MIT",
+  "role": "거친 초안이나 아이디어를 채팅창에 붙여 바로 보낼 수 있는, 플레이스홀더 없는 완성 프롬프트 하나(코드블록)로 바꾼다.",
+  "fits": "사용자가 채팅 인터페이스용 프롬프트를 쓰거나 다듬거나 최적화해 달라고 할 때.",
+  "not_fits": "API용 프롬프트가 아니라 채팅 인터페이스용이다. 프롬프트가 아니라 직접 답을 원하는 요청에도 맞지 않는다.",
+  "unique_approach": "'플레이스홀더 금지'와 '무엇을 줬든 완성본 제출' 두 하드 룰, 코드블록 하나만 출력하고 설명은 생략하며, 끝에 깊은 추론 유도 문장을 붙인다.",
+  "directives": [
+    {
+      "topic": "플레이스홀더 금지: 사용자가 그대로 보낼 수 있어야 함",
+      "main": true,
+      "quote": "Never produce a prompt that contains `[paste X here]`"
+    },
+    {
+      "topic": "내용이 없으면 LLM이 입력을 묻게 하거나 다음 턴에 받는 구조로 작성",
+      "main": true,
+      "quote": "Asking the LLM model to ask the user for the specific inputs it needs"
+    },
+    {
+      "topic": "출력은 코드블록 하나만, 앞뒤 설명 금지",
+      "main": true,
+      "quote": "No text before the code block. No text after."
+    },
+    {
+      "topic": "프롬프트 마지막에 깊은 추론 유도 문장 삽입",
+      "main": true,
+      "quote": "The prompt should end with a closing instruction that signals depth of reasoning."
+    },
+    {
+      "topic": "프롬프트 설계: 명확하고 직접적으로, 이유 설명",
+      "main": true,
+      "quote": "State the task explicitly."
+    },
+    {
+      "topic": "부정형보다 긍정형 지시",
+      "main": true,
+      "quote": "Positive framing outperforms negative framing."
+    },
+    {
+      "topic": "복잡한 프롬프트는 XML 태그로 구조화",
+      "main": true,
+      "quote": "Use XML tags when sections multiply"
+    },
+    {
+      "topic": "예시는 형식·어조 지정에 2-4개 사용",
+      "main": true,
+      "quote": "include 2–4 examples in `<example>` tags"
+    },
+    {
+      "topic": "긴 입력은 위, 질문은 아래",
+      "main": true,
+      "quote": "Put long inputs on top, the question on the bottom"
+    },
+    {
+      "topic": "고위험 출력은 자기 검증 지시 추가",
+      "main": true,
+      "quote": "Self-check for high-stakes outputs"
+    },
+    {
+      "topic": "사용자 입력 언어와 같은 언어로 프롬프트 작성",
+      "main": false,
+      "quote": "Write the optimized prompt in the same language."
+    },
+    {
+      "topic": "범위를 문자 그대로 명시, 제안형 대신 명령형",
+      "main": false,
+      "quote": "Suggestion-flavored phrasing produces suggestions."
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [],
+    "optional": []
+  },
+  "commands": [],
+  "state_files": [],
+  "cautions": "원문 name은 prompt-optimizer이며 설치 시 prompt-optimizer-copilot으로 개명(사전 지정). 같은 계열의 prompt-optimizer-sentry와 대상이 겹친다(채팅용 일회성 프롬프트 vs 에이전트/시스템 프롬프트 eval 루프). 출력 형식이 '코드블록만'이라 다른 글쓰기 스킬의 설명·보고 규칙과 충돌 가능."
+}

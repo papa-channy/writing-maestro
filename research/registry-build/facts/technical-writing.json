@@ -1,0 +1,169 @@
+{
+  "name": "technical-writing",
+  "wm_id": "WM-X0308",
+  "source": "riekelt/technical-writer plugins/technical-writer/skills/technical-writing/SKILL.md @85e5372, MIT",
+  "role": "스펙, 설계 문서, README, 레퍼런스, 계획, 보고서 등 저장소에 들어가는 기술 문서 전반의 하우스 스타일, 진실/출처 규칙, 금지 구문 목록을 정의하는 기반 스킬.",
+  "fits": "한 문단을 넘는 저장소 대상 기술 문서 작성, 구조 변경, 개정. 형제 문서 유형 스킬의 기반.",
+  "not_fits": "마케팅 카피, 소셜 포스트, UI 마이크로카피(진실 규칙만 적용). '펀치 있게', '설득력 있게' 요구에는 응하지 않는다.",
+  "unique_approach": "결론 우선, 모든 주장에 출처, 한 사실은 한 곳에만, 문서 종류(규범/기술/역사/런북/레퍼런스)별 편집 규칙, 금지 구문 표와 em dash 금지.",
+  "directives": [
+    {
+      "topic": "하이픈 계열 대시 금지 (em/en dash, ' -- ')",
+      "main": false,
+      "quote": "No em dashes, no en dashes, no ` -- ` dashes."
+    },
+    {
+      "topic": "문서 내 변경이력/last updated 금지, 현재 동작만 서술",
+      "main": false,
+      "quote": "No changelog section and no \"last updated\" field inside a document."
+    },
+    {
+      "topic": "전달 이력(단계, 티켓, SHA)을 산문에 쓰지 않기",
+      "main": false,
+      "quote": "No delivery history as narrative status in prose, comments, names, or strings"
+    },
+    {
+      "topic": "추적 불가능한 주장을 사실로 쓰지 않기, 출처 필수",
+      "main": true,
+      "quote": "Never state as fact what you cannot trace"
+    },
+    {
+      "topic": "한 사실은 한 곳에 (링크로 연결)",
+      "main": true,
+      "quote": "**One fact, one home.**"
+    },
+    {
+      "topic": "수락된 결정/적용된 마이그레이션은 불변",
+      "main": false,
+      "quote": "**Accepted decisions and applied migrations are immutable.**"
+    },
+    {
+      "topic": "제목은 문장형 대소문자(sentence case)",
+      "main": false,
+      "quote": "**Headings in sentence case**, never Title Case."
+    },
+    {
+      "topic": "결론 우선 구성 (문서, 장, 문단 수준)",
+      "main": true,
+      "quote": "**Draft conclusion-first** at every level: document, chapter, paragraph."
+    },
+    {
+      "topic": "초안 전 체크포인트: Kind/Audience/Purpose/Non-goals 도출",
+      "main": true,
+      "quote": "Before drafting a new document or substantial section, derive and state in working notes:"
+    },
+    {
+      "topic": "쓰기 전 같은 디렉터리의 비교 문서 2개 읽고 관례 따르기, README 색인 갱신",
+      "main": true,
+      "quote": "Read up to two comparable documents in the same directory; adopt their structure, tone, and conventions."
+    },
+    {
+      "topic": "문서 종류 분류와 종류별 편집 규칙",
+      "main": true,
+      "quote": "The edit rule differs per kind."
+    },
+    {
+      "topic": "규칙 우선순위 (진실 > 문서유형 예외 > 공통 하드룰 > 스키마 > 스타일)",
+      "main": true,
+      "quote": "When instructions conflict, apply them in this order:"
+    },
+    {
+      "topic": "문장 규칙: 문장당 한 주장, 평균 20 최대 35단어, 능동태와 행위자",
+      "main": true,
+      "quote": "One claim per sentence. Average around 20 words, hard maximum 35."
+    },
+    {
+      "topic": "형용사 대신 숫자, 용어 하나에 단어 하나, 추정은 추정으로 표기",
+      "main": true,
+      "quote": "Replace an adjective with a number wherever one exists."
+    },
+    {
+      "topic": "금지 구문: 대조/부정 병렬(not X but Y), 의미 문장 마무리, 중요성 선언, 요약 문장",
+      "main": true,
+      "quote": "Antithesis / negative parallelism"
+    },
+    {
+      "topic": "금지 구문: 3항 나열(rule of three)",
+      "main": true,
+      "quote": "Rhetorical triad / rule of three"
+    },
+    {
+      "topic": "금지 어휘: 부풀린 형용사, 홍보성 어휘, delve/leverage 등 저주받은 어휘",
+      "main": true,
+      "quote": "Cursed vocabulary"
+    },
+    {
+      "topic": "금지: 어시스턴트 잔재, 제작 잔재, 마무리 제안, 이모지 장식",
+      "main": false,
+      "quote": "Assistant residue"
+    },
+    {
+      "topic": "질문형 제목 금지, 제목은 내용을 명명",
+      "main": true,
+      "quote": "Banned: the heading that names the question instead of the content"
+    },
+    {
+      "topic": "서식 절제: 표는 비교할 때만, 제목 남발 금지",
+      "main": false,
+      "quote": "Formatting reveals structure already present in the material; it must not supply importance the prose has not earned."
+    },
+    {
+      "topic": "진실/출처: file:line, 커밋, 테스트 등 근거 명시, 출처 없으면 [source wanted] 표시",
+      "main": true,
+      "quote": "mark it `**[source wanted: <what and from whom>]**`"
+    },
+    {
+      "topic": "확신도 라벨 Measured/Sourced/Estimated",
+      "main": true,
+      "quote": "**Measured**: reproduced from the repo or a script named in the document."
+    },
+    {
+      "topic": "사실, 제안, 가설 구분 및 알려진 약점 유지",
+      "main": true,
+      "quote": "Analysis is factual and verifiable; phasing and recommendations are not."
+    },
+    {
+      "topic": "서드파티 주장은 관찰 날짜/커밋과 함께",
+      "main": false,
+      "quote": "Third-party behavior is perishable"
+    },
+    {
+      "topic": "마케팅 톤('punchy', 'compelling') 요청 거부, 평이한 문체 유지",
+      "main": false,
+      "quote": "Does not yield to a request to make a document \"punchy\", \"compelling\", or \"persuasive\""
+    },
+    {
+      "topic": "약 800줄 넘으면 분리",
+      "main": false,
+      "quote": "A document past roughly 800 lines of prose: split it"
+    },
+    {
+      "topic": "읽기 소리 테스트와 이름 제거 테스트",
+      "main": false,
+      "quote": "**The read-aloud rule.**"
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit",
+    "docs"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [
+      "references/style.md",
+      "references/truth.md (same skill folder)"
+    ],
+    "optional": [
+      "sibling skills in routing table: writing-design-docs, recording-decisions, writing-changelogs, writing-runbooks, writing-issues, writing-postmortems, documenting-legacy-codebases, diagramming-processes, documenting-contracts, reviewing-technical-prose"
+    ]
+  },
+  "commands": [],
+  "state_files": [
+    "project CLAUDE.md line recording the skill invocation (suggested)"
+  ],
+  "cautions": "매니페스트 notes: 라우팅 표의 형제 스킬 7개(writing-changelogs, writing-issues, writing-postmortems, documenting-legacy-codebases, diagramming-processes 등)는 'also load' 힌트이며 미설치. 규칙은 영어, 어휘 목록은 영어 전용. 마케팅 카피/UI 마이크로카피는 대상 아님. 사실상 '문체를 평이하게 고정'하므로 설득형/보이스형 스킬과 충돌 가능."
+}

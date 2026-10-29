@@ -1,0 +1,128 @@
+{
+  "name": "submission",
+  "wm_id": "companion",
+  "source": "danjdewhurst/story-skills skills/submission/SKILL.md @e44c97c, MIT",
+  "role": "완성 원고의 투고 준비를 맡는다. 투고 준비도 점검, 한 줄 피치, 비교작, 쿼리 레터, 시놉시스, 블러브/소매점 설명, Shunn 형식 원고 빌드, 투고 추적기, 단편 시장과 선집 구성까지 다룬다.",
+  "fits": "원고가 투고 가능한지 점검할 때, 쿼리 레터·피치·시놉시스·블러브·비교작 목록을 쓸 때, Shunn 형식 원고를 만들 때, 자가출판 설명문을 쓸 때, 투고·응답을 기록할 때, 단편을 잡지·선집·공모전에 낼 때.",
+  "not_fits": "여러 권 시리즈 피칭은 series-continuity, 자가출판 제작·메타데이터·판권 계약은 publishing, 원고 자체 수정은 revision-continuity, 독자 피드백 라운드는 feedback-triage를 쓴다. 블러브·소매점 설명·단편 시장이 사는 권리(재수록권 등)는 이 스킬에 남는다.",
+  "unique_approach": "story check/prose/report 결정적 점검으로 준비도 판정(ready/ready-with-caveats/not-ready)을 먼저 내고, 모든 초안에 [TODO: author to supply] 플레이스홀더를 쓰며 작가 정보·시장·응답을 절대 지어내지 않고 작가 본인이 발송하게 한다.",
+  "directives": [
+    {
+      "topic": "투고 준비도 점검과 판정(ready / ready-with-caveats / not-ready)",
+      "main": true,
+      "quote": "Give a verdict: `ready`, `ready-with-caveats` (list them), or `not-ready`"
+    },
+    {
+      "topic": "작가 약력·자격·수상·연락처·에이전트·출판사·시장·지급률·권리·응답 날짜를 지어내지 않는다",
+      "main": true,
+      "quote": "Never invent the author's bio, credentials, awards, publication history,"
+    },
+    {
+      "topic": "발송·이메일·업로드 금지(작가가 직접 제출)",
+      "main": false,
+      "quote": "Never send, email, or upload anything. The user submits."
+    },
+    {
+      "topic": "패키지 문안은 원고에 쓰인 대로만 서술하고 쓰이지 않은 사건·톤·결말을 약속하지 않는다",
+      "main": false,
+      "quote": "Package copy describes the book as written."
+    },
+    {
+      "topic": "한 문장 피치: 주인공+목표+장애물+판돈, 35단어 미만",
+      "main": true,
+      "quote": "Draft a one-sentence pitch: protagonist + goal + obstacle + stakes, in"
+    },
+    {
+      "topic": "비교작: 사용자가 확인하기 전까지 모두 미검증 표시, 판매·수상·추천 주장 금지",
+      "main": false,
+      "quote": "mark every one unverified until the user confirms year,"
+    },
+    {
+      "topic": "쿼리 레터 250~350단어, 훅·책 단락·메타데이터 줄·약력 플레이스홀더",
+      "main": true,
+      "quote": "Keep the letter between 250 and 350 words."
+    },
+    {
+      "topic": "시놉시스: 현재 시제 3인칭, 주요 인물 첫 등장 대문자, 결말 공개",
+      "main": true,
+      "quote": "Rewrite it into polished prose: present tense, third person, main"
+    },
+    {
+      "topic": "블러브·소매점 설명: 150~200단어, 결말을 밝히지 않는다",
+      "main": true,
+      "quote": "The blurb never reveals the ending."
+    },
+    {
+      "topic": "Shunn 원고 형식 빌드(running head, US Letter/A4, 익명 옵션)",
+      "main": false,
+      "quote": "For agents and short-fiction markets, build Shunn manuscript format:"
+    },
+    {
+      "topic": "투고 추적기: 사용자가 알려 준 내용만 기록, 상태값 고정",
+      "main": true,
+      "quote": "Add or update a row each"
+    },
+    {
+      "topic": "단편·선집: 동시/독점 제출, 권리, 투고 이력, 수록 순서와 게재 감사문",
+      "main": false,
+      "quote": "a story with an open exclusive submission goes"
+    },
+    {
+      "topic": "시장·언어: 영어권 시장 관례를 보편으로 제시하지 않고 대상 시장 지침을 따른다",
+      "main": false,
+      "quote": "never present English-market conventions"
+    },
+    {
+      "topic": "분량 수치는 story wordcount에서 가져와 천 단위로 반올림(중·일은 글자 수)",
+      "main": false,
+      "quote": "Word counts in submission copy come from `story wordcount .`, rounded to"
+    },
+    {
+      "topic": "AI 사용 고지: ai-disclosure가 있으면 각 시장 정책에 따라 고지",
+      "main": false,
+      "quote": "If `story.md` has an `ai-disclosure`, check each agent's or market's"
+    },
+    {
+      "topic": "분량을 목표에 맞추려고 임의로 늘리거나 줄이지 않는다",
+      "main": false,
+      "quote": "Never pad or cut to hit a number without the user's direction."
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "review"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [
+      "완성 또는 거의 완성된 초고가 있는 story 프로젝트(story.md에 status, genre, premise, author, contact, language)",
+      "story CLI 또는 번들 폴백 (reindex, wordcount, check, prose, report, synopsis, build)"
+    ],
+    "optional": [
+      "voice-style(style-sheet.md가 스캐폴드일 때 먼저)",
+      "revision-continuity(not-ready 블로커 인계, 분량 length pass)",
+      "story-init의 title-logline.md 로그라인 레시피",
+      "publishing, series-continuity, editorial-review, plot-structure(연계)",
+      "PDF 엔진(shunn --pdf)"
+    ]
+  },
+  "commands": [
+    "story",
+    "node"
+  ],
+  "state_files": [
+    "submission/query.md",
+    "submission/comps.md",
+    "submission/synopsis-1-page.md",
+    "submission/synopsis-3-page.md",
+    "submission/blurb.md",
+    "submission/tracker.md",
+    "dist/<story-id>.shunn.docx|.md|.pdf",
+    "continuity/exemptions.md (후속권으로 넘기는 열린 약속 기록)",
+    "story.md"
+  ],
+  "cautions": "매니페스트: 동반(companion) 스킬, READY. 상대 참조 ../revision-continuity/references/pass-checklists.md 가 submission 폴더 기준으로는 해석되지 않는다(스킬 폴더 형제 위치로는 존재). word-count-norms 등 레퍼런스는 영어권 시장 기준의 대략적 관례이므로 사용자에게 확인시킨다. story.md status가 complete/revising이 아니면 준비도 점검이 실패한다. 투고 패키지는 submission/ 아래에 있고 CLI가 검증하지 않으며 빌드에도 포함되지 않는다."
+}

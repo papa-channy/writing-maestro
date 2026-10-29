@@ -1,0 +1,113 @@
+{
+  "name": "writing-design-docs",
+  "wm_id": "WM-X0310",
+  "source": "riekelt/technical-writer plugins/technical-writer/skills/writing-design-docs/SKILL.md @85e5372, MIT",
+  "role": "제안서, RFC, 설계 문서, 스펙, 마이그레이션 계획처럼 변경을 주장하거나 설계를 기록하는 문서를 쓰는 스킬. Why & What 박스와 완결성 점검을 제공한다.",
+  "fits": "변경을 논증하거나 범위를 정해야 하는 문서, 'should we' 문서, '접근 방식을 정리해줘' 요청.",
+  "not_fits": "이미 내려진 결정 기록(recording-decisions), 절차(writing-runbooks), 상태 보고서.",
+  "unique_approach": "결론 먼저의 요약, 비자명한 선택마다 Why & What 박스(가장 강한 반대 논거, 해결하지 못하는 것, 폴백), 이익과 함께 비용 명시, 사실과 제안 분리.",
+  "directives": [
+    {
+      "topic": "제안서 골격 (상태표, 요약, 분석, 열린 질문, 이익과 비용, 잔여 위험)",
+      "main": true,
+      "quote": "A design document is a proposal made discussable: conclusion first, every non-trivial choice in a Why & What box"
+    },
+    {
+      "topic": "Why & What 박스: What/Why/Alternatives/Fallback",
+      "main": true,
+      "quote": "Every non-trivial choice gets one; readers react to the box, not to the conclusion."
+    },
+    {
+      "topic": "대안은 가장 강한 논거와 함께 (허수아비 금지), 해결 못 하는 것 인정",
+      "main": true,
+      "quote": "An alternative dismissed without its strongest argument is a strawman."
+    },
+    {
+      "topic": "이익과 비용 모두 명시, 이익만 쓰면 영업 문서",
+      "main": true,
+      "quote": "Benefits alone reads as a sales pitch."
+    },
+    {
+      "topic": "목표와 비목표 모두",
+      "main": true,
+      "quote": "**Goals and non-goals both.**"
+    },
+    {
+      "topic": "장 번호 매기기와 인용 (ch. 7.1)",
+      "main": false,
+      "quote": "**Number chapters** and cite them as `ch. 7.1`."
+    },
+    {
+      "topic": "근거 섹션: 사실/출처 표, 특정 커밋 기준 검증",
+      "main": true,
+      "quote": "**A grounding section** pins the facts the design rests on"
+    },
+    {
+      "topic": "출처 없는 사실은 [source wanted]로 표시, 인용 창작 금지",
+      "main": false,
+      "quote": "mark them `**[source wanted: ...]**` and keep writing"
+    },
+    {
+      "topic": "미완성 부분은 [DRAFT - input wanted]로 표시",
+      "main": false,
+      "quote": "**Mark unfinished parts** with `**[DRAFT - input wanted]**` instead of omitting them."
+    },
+    {
+      "topic": "열린 질문에 담당자 지정",
+      "main": false,
+      "quote": "**Open questions get owners**"
+    },
+    {
+      "topic": "제안 어조: 'we propose', 최상급과 약속 언어 금지, 구체적 수치",
+      "main": true,
+      "quote": "No superlatives, no promise language."
+    },
+    {
+      "topic": "부정적 결과 가능성을 앞에서 밝힘",
+      "main": false,
+      "quote": "The expected outcome may be negative; say so up front"
+    },
+    {
+      "topic": "완결성 점검 5가지 (플레이스홀더, 수락 기준, 정의 누락, 검증 가능한 산출물, what without how)",
+      "main": true,
+      "quote": "check the five vagueness defects:"
+    },
+    {
+      "topic": "펀치/압박에도 문체 규칙 유지",
+      "main": false,
+      "quote": "a proposal persuades with its numbers and its named costs, and the register rules hold whatever the deadline"
+    },
+    {
+      "topic": "800줄 초과 시 분할",
+      "main": false,
+      "quote": "past roughly 800 lines, split and let the main document link to the parts."
+    }
+  ],
+  "requires": [
+    {
+      "skill": "technical-writing",
+      "quote": "**REQUIRED BACKGROUND:** the `technical-writing` skill"
+    }
+  ],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit",
+    "docs"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [
+      "technical-writing skill"
+    ],
+    "optional": [
+      "recording-decisions (after acceptance)"
+    ]
+  },
+  "commands": [],
+  "state_files": [
+    "design doc markdown in repository"
+  ],
+  "cautions": "매니페스트 notes: technical-writing 필수 배경(설치됨). 기반 스킬의 대시 금지, 금지 구문 규칙이 함께 적용된다."
+}

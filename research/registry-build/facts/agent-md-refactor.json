@@ -1,0 +1,54 @@
+{
+  "name": "agent-md-refactor",
+  "wm_id": "WM-X0371",
+  "source": "softaworks/agent-toolkit skills/agent-md-refactor/SKILL.md @3027f20, MIT",
+  "role": "비대해진 AGENTS.md, CLAUDE.md 같은 에이전트 지침 파일을 점진적 공개 원칙에 따라 최소 루트 파일과 연결된 주제별 파일로 나눈다.",
+  "fits": "'AGENTS.md가 너무 길다', 'CLAUDE.md 정리/분리' 같은 요청.",
+  "not_fits": "일반 문서나 README 작성, 새 지침의 내용을 만드는 작업. 지침 파일 구조 개편 전용이다.",
+  "unique_approach": "모순 찾기, 필수 추출, 분류, 구조 생성, 삭제 표시의 5단계로 진행하고 루트 파일을 50줄 미만으로 유지한다.",
+  "directives": [
+    {
+      "topic": "루트 파일은 보편 정보만, 50줄 미만",
+      "main": true,
+      "quote": "Root file is minimal** - Under 50 lines, only universal info"
+    },
+    {
+      "topic": "주제별 파일 3-8개로 분리, 링크 연결",
+      "main": true,
+      "quote": "Aim for 3-8 files (not too granular, not too broad)"
+    },
+    {
+      "topic": "모순 지침은 사용자가 해결하도록 질의",
+      "main": false,
+      "quote": "Ask the user to resolve before proceeding."
+    },
+    {
+      "topic": "모호하거나 중복된 지침은 삭제 표시",
+      "main": false,
+      "quote": "| \"Write clean, maintainable code\" | Too vague to be actionable |"
+    },
+    {
+      "topic": "지침은 구체적이고 실행 가능해야 함",
+      "main": false,
+      "quote": "Include only actionable instructions"
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "edit",
+    "docs"
+  ],
+  "stage_hint": "prose",
+  "requirements": {
+    "required": [],
+    "optional": []
+  },
+  "commands": [],
+  "state_files": [
+    "CLAUDE.md 또는 AGENTS.md(루트)",
+    "링크 대상 .claude/*.md 또는 docs/agent-instructions/*.md"
+  ],
+  "cautions": "매니페스트: sha_match true, 제한 없음. Phase 1에서 모순이 발견되면 사용자 답을 받아야 진행하므로 부분적으로 대화가 필요하지만 핵심 작업은 비대화형으로 판단했다."
+}

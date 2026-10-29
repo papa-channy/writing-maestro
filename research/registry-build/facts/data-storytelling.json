@@ -1,0 +1,88 @@
+{
+  "name": "data-storytelling",
+  "wm_id": "WM-X0394",
+  "source": "wshobson/agents plugins/business-analytics/skills/data-storytelling/SKILL.md @0874a27, MIT",
+  "role": "분석 데이터를 시각화, 맥락, 설득 구조로 풀어 이해관계자용 내러티브(보고서, 발표)로 바꾸는 스킬.",
+  "fits": "경영진 분석 발표, 분기 사업 리뷰, 투자자 발표, 데이터 기반 보고서, 비전문가 대상 인사이트 전달, 데이터 기반 제안.",
+  "not_fits": "원문에 명시된 제외 대상 없음. 평이한 기술 문서(technical-writing)와는 설득 중심 구조에서 상충할 수 있다.",
+  "unique_approach": "Setup-Conflict-Resolution 내러티브 아크, 데이터/내러티브/시각화 세 기둥, '[구체 숫자]+[사업 영향]+[실행 맥락]' 헤드라인 공식, 인사이트 선두 배치.",
+  "directives": [
+    {
+      "topic": "스토리 구조: Setup, Conflict, Resolution",
+      "main": true,
+      "quote": "Setup → Conflict → Resolution"
+    },
+    {
+      "topic": "내러티브 아크: Hook, Context, Rising Action, Climax, Resolution, Call to Action",
+      "main": true,
+      "quote": "1. Hook: Grab attention with surprising insight"
+    },
+    {
+      "topic": "세 기둥: 데이터, 내러티브, 시각화",
+      "main": true,
+      "quote": "| **Data**      | Evidence | Numbers, trends, comparisons     |"
+    },
+    {
+      "topic": "'So what'으로 시작, 인사이트 앞세우기",
+      "main": true,
+      "quote": "**Start with the \"so what\"** - Lead with insight"
+    },
+    {
+      "topic": "3의 법칙: 포인트와 비교를 세 개씩",
+      "main": false,
+      "quote": "**Use the rule of three** - Three points, three comparisons"
+    },
+    {
+      "topic": "행동으로 끝맺기, 명확한 다음 단계",
+      "main": true,
+      "quote": "**End with action** - Clear next steps"
+    },
+    {
+      "topic": "데이터 덤프 금지, 엄선",
+      "main": false,
+      "quote": "**Don't data dump** - Curate ruthlessly"
+    },
+    {
+      "topic": "전문 용어 금지, 청중 어휘에 맞춤",
+      "main": false,
+      "quote": "**Don't use jargon** - Match audience vocabulary"
+    },
+    {
+      "topic": "방법론을 먼저 보여주지 않기",
+      "main": false,
+      "quote": "**Don't show methodology first** - Context, then method"
+    },
+    {
+      "topic": "헤드라인 공식: 구체 숫자 + 사업 영향 + 실행 맥락",
+      "main": true,
+      "quote": "[Specific Number] + [Business Impact] + [Actionable Context]"
+    },
+    {
+      "topic": "불확실성 표기: 신뢰구간, 범위, 표본 크기",
+      "main": false,
+      "quote": "Acknowledge limitations:"
+    },
+    {
+      "topic": "청중과 연결(personal)",
+      "main": false,
+      "quote": "**Make it personal** - Connect to audience goals"
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [],
+    "optional": [
+      "references/details.md (worked examples, templates)"
+    ]
+  },
+  "commands": [],
+  "state_files": [],
+  "cautions": "매니페스트 notes: 해당 플러그인 경로만 sparse checkout. 설명 문구가 'compelling', 'persuasive'를 지향하므로 평이한 기술 문체(technical-writing)와 어조 충돌 가능. references/details.md의 헤드라인 예시는 극적 어조(예: 'We're Losing $2.4M...')."
+}

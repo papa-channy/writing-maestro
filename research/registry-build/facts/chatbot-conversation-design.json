@@ -1,0 +1,63 @@
+{
+  "name": "chatbot-conversation-design",
+  "wm_id": "WM-X0317",
+  "source": "seb1n/awesome-ai-agent-skills communication/chatbot-conversation-design/SKILL.md @75865a5, MIT",
+  "role": "챗봇 대화 설계: 페르소나, 인텐트·슬롯, 슬롯 채우기, 모호성 해소, 오류 복구/폴백, 컨텍스트 관리를 설계한다.",
+  "fits": "새 챗봇의 대화 아키텍처 설계 또는 기존 챗봇 대화 흐름 감사(막다른 길, 오류 처리 개선). 대상: 개발자, UX 라이터, PM.",
+  "not_fits": "일반 산문/마케팅 글쓰기에는 맞지 않는다. 대화형 인터페이스(웹 위젯, Slack, WhatsApp, 음성) 설계 전용.",
+  "unique_approach": "불행한 경로를 먼저 설계하고 3단계 폴백(재질문, 선택지 제한, 사람 에스컬레이션)과 대화 상태 스택으로 모든 경로가 해결 또는 핸드오프로 끝나게 한다.",
+  "directives": [
+    {
+      "topic": "대화 설계 워크플로: 페르소나, 인텐트·엔티티 맵, 슬롯 채우기, 폴백, 상태 관리",
+      "main": true,
+      "quote": "1. **Define the bot persona and scope.**"
+    },
+    {
+      "topic": "오류 복구: 3단계 폴백, 막다른 길 금지",
+      "main": true,
+      "quote": "Design three tiers of fallback"
+    },
+    {
+      "topic": "봇 발화 길이: 3문장 이내, 구조화 포맷 사용",
+      "main": false,
+      "quote": "**Keep bot utterances under 3 sentences.**"
+    },
+    {
+      "topic": "되돌릴 수 없는 행동은 실행 전 확인",
+      "main": false,
+      "quote": "**Confirm before executing irreversible actions.**"
+    },
+    {
+      "topic": "점진적 공개와 항상 탈출구(취소, 처음부터, 상담원) 제공",
+      "main": false,
+      "quote": "**Provide escape hatches at every step.**"
+    },
+    {
+      "topic": "감정적 사용자에게 일률적 쾌활함 금지, 먼저 감정 인정",
+      "main": false,
+      "quote": "Never respond with generic cheerfulness to a clearly upset user."
+    },
+    {
+      "topic": "플랫폼 제약(WhatsApp, 웹 위젯 등)에 맞춘 적응",
+      "main": false,
+      "quote": "Design conversations that adapt to the platform's capabilities"
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "review"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [],
+    "optional": [
+      "Botmock, Voiceflow, or Dialogflow CX for prototyping"
+    ]
+  },
+  "commands": [],
+  "state_files": [],
+  "cautions": "매니페스트: 특이사항 없음, 스크립트 없음. 입력으로 봇 목적, 대상 사용자, 지원 작업, 플랫폼 필요(없으면 요청 필요할 수 있음)."
+}

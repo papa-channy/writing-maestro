@@ -1,0 +1,68 @@
+{
+  "name": "crafting-effective-readmes",
+  "wm_id": "WM-X0374",
+  "source": "softaworks/agent-toolkit skills/crafting-effective-readmes/SKILL.md @3027f20, MIT",
+  "role": "독자와 프로젝트 유형(OSS, 개인, 사내, 설정 폴더)에 맞춰 README를 새로 쓰거나 고치거나 점검하도록 템플릿과 지침을 제공한다.",
+  "fits": "README 작성, 개선, 갱신, 정확성 검토.",
+  "not_fits": "README 이외의 일반 산문 품질 조정(그쪽은 writing-clearly-and-concisely를 참조하라고 함).",
+  "unique_approach": "먼저 독자가 누구이고 무엇을 알아야 하는지 묻고, 작업 종류별 질문과 유형별 템플릿(templates/)으로 섹션을 맞춘다.",
+  "directives": [
+    {
+      "topic": "독자 중심: 누가 읽고 무엇이 필요한가",
+      "main": true,
+      "quote": "**Always ask:** Who will read this, and what do they need to know?"
+    },
+    {
+      "topic": "모든 README의 필수 섹션: 이름, 설명, 사용법",
+      "main": true,
+      "quote": "Every README needs at minimum:"
+    },
+    {
+      "topic": "프로젝트 유형별 템플릿 선택",
+      "main": true,
+      "quote": "**Ask the user** if unclear. Don't assume OSS defaults for everything."
+    },
+    {
+      "topic": "초안 후 누락 확인 질문",
+      "main": false,
+      "quote": "After drafting, ask: **\"Anything else to highlight or include that I might have missed?\"**"
+    },
+    {
+      "topic": "흔한 실수 회피: 설치 단계, 예시, 글 벽, 오래된 내용",
+      "main": false,
+      "quote": "**No install steps** - Never assume setup is obvious"
+    },
+    {
+      "topic": "검토 시 실제 프로젝트 상태와 대조",
+      "main": false,
+      "quote": "Check against actual project state (package.json, main files, etc.)"
+    },
+    {
+      "topic": "산문 품질은 별도 스킬 참조",
+      "main": false,
+      "quote": "For general writing advice — clear prose, Strunk's rules, and AI patterns to avoid — use the `writing-clearly-and-concisely` skill."
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit",
+    "review",
+    "docs"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [],
+    "optional": [
+      "templates/oss.md, personal.md, internal.md, xdg-config.md",
+      "section-checklist.md, style-guide.md, using-references.md"
+    ]
+  },
+  "commands": [],
+  "state_files": [
+    "README.md (프로젝트 루트)"
+  ],
+  "cautions": "매니페스트: sha_match true, 상대 참조(templates/*.md 등) 전부 해석됨. writing-clearly-and-concisely는 산문용 참조 안내일 뿐 requires가 아니며 미설치. 프로젝트 유형이 불분명하면 사용자에게 묻도록 되어 있으나 필수 인터뷰는 아니라고 판단."
+}

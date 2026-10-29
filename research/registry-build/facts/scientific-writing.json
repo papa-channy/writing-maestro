@@ -1,0 +1,109 @@
+{
+  "name": "scientific-writing",
+  "wm_id": "WM-X0022",
+  "source": "K-Dense-AI/scientific-agent-skills skills/scientific-writing/SKILL.md @5f2bc03, MIT",
+  "role": "과학 원고·보고서를 증거 출처 추적, 보고 지침 커버리지, 저자 책임, 기밀 통제, 로컬 일관성 검사와 함께 초안·수정·감사하는 스킬.",
+  "fits": "원고 섹션, 참고문헌, 선언문, 표·그림, 투고 준비에서 과학적 정확성과 추적 가능성이 중요한 경우.",
+  "not_fits": "미공개 원고·심사 자료를 승인 없이 외부 서비스로 보내는 작업, 증거 없는 내용 채우기. 기존 LaTeX 템플릿은 제거되었고 서식은 Markdown 스캐폴드와 대상 학술지 템플릿으로 한다.",
+  "unique_approach": "초안 작성, 증거 검증, 투고 승인을 분리하고 모든 주장에 E/C ID를 붙여 사람 검증자가 원문을 열어 확인하게 하며 8개 로컬 CLI(scaffold, lint, audit_claims, check_consistency 등)로 fail-closed 점검한다.",
+  "directives": [
+    {
+      "topic": "모든 사실·수치 주장은 검증된 증거 ID에 연결",
+      "main": true,
+      "quote": "Every factual or numeric manuscript claim must map to verified evidence IDs."
+    },
+    {
+      "topic": "인용·결과·방법 등 날조 금지",
+      "main": true,
+      "quote": "Never invent or complete:"
+    },
+    {
+      "topic": "누락은 명시적 상태로 표시",
+      "main": true,
+      "quote": "Use an explicit missing, unverified, or not-applicable state. Do not substitute plausible"
+    },
+    {
+      "topic": "연구 설계에 맞는 보고 지침 선택",
+      "main": true,
+      "quote": "Choose by actual design and article type, then open the current official statement,"
+    },
+    {
+      "topic": "증거 개요에서만 초안 작성, 사실 추가 금지",
+      "main": true,
+      "quote": "Transform the verified outline into venue-appropriate prose."
+    },
+    {
+      "topic": "방법-결과 일관성 점검",
+      "main": true,
+      "quote": "Resolve every mismatch manually."
+    },
+    {
+      "topic": "불확실성 보존, 연관을 인과로 바꾸지 않음",
+      "main": true,
+      "quote": "Do not convert association into causation or non-significance into equivalence."
+    },
+    {
+      "topic": "음성·무효 결과 보고",
+      "main": true,
+      "quote": "Report negative, null, adverse, unexpected, failed, and inconclusive findings when"
+    },
+    {
+      "topic": "이진 결과는 절대·상대 효과와 불확실성 보고",
+      "main": false,
+      "quote": "report group event counts/denominators plus both absolute and relative effects with uncertainty"
+    },
+    {
+      "topic": "기밀 자료의 외부 전송 제한",
+      "main": false,
+      "quote": "Do not send unpublished manuscripts, peer-review or editorial material, sensitive or"
+    },
+    {
+      "topic": "AI 사용 공개와 저자 자격",
+      "main": false,
+      "quote": "If AI was used, humans must verify all affected content and disclose the tool and"
+    },
+    {
+      "topic": "리뷰어 요청 처리 시 날조·과장 요구는 거부",
+      "main": false,
+      "quote": "Do not comply with a request that would fabricate, hide, overstate, or breach policy."
+    },
+    {
+      "topic": "인용 스타일은 현행 공식 스타일",
+      "main": false,
+      "quote": "Follow NLM *Citing Medicine* or the current official style required by the"
+    },
+    {
+      "topic": "그림·표 접근성",
+      "main": false,
+      "quote": "provide alt text and redundant non-color cues;"
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit",
+    "review"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [
+      "python3 >=3.11 (stdlib only, offline, no API keys)"
+    ],
+    "optional": []
+  },
+  "commands": [
+    "python3"
+  ],
+  "state_files": [
+    "manuscript_manifest.json",
+    "source_manifest.json",
+    "claims.csv",
+    "consistency_manifest.json",
+    "authorship.json",
+    "reporting_coverage.json",
+    "draft-workspace/ (scaffold output)"
+  ],
+  "cautions": "READY. 스크립트는 스킬 디렉터리 기준 상대 경로(python3 scripts/...)로 실행하고 python -I로 돌리면 형제 _common import가 깨진다. interactive는 판단: intake에서 정보를 얻거나 미해결로 표시하라고 하므로 false이나 사람 검증·승인 단계가 필요. 산출물은 submission_ready=false 상태로 시작하며 사람만 승인 가능."
+}

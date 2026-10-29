@@ -1,0 +1,113 @@
+{
+  "name": "chapter-writing",
+  "wm_id": "WM-X0151",
+  "source": "danjdewhurst/story-skills skills/chapter-writing/SKILL.md @e44c97c, MIT",
+  "role": "스토리 챕터를 outline-first로 쓰는 스킬: `story context`로 맥락을 모으고 비트별 아웃라인 승인을 받은 뒤 전체 산문을 쓰고, 장면·연속성·복선 레코드를 갱신한다.",
+  "fits": "챕터 작성, 다음 챕터, 챕터 아웃라인, 이야기 이어쓰기, 장면 집필 등 스토리 프로젝트의 산문 집필.",
+  "not_fits": "장면의 구조·서브텍스트·outcome 계획은 scene-craft, 아웃라인 없는 발견형 집필은 discovery-drafting, 기존 챕터 개정은 revision-continuity(라인 편집은 line-editing).",
+  "unique_approach": "`story context`가 출력한 예산 내 패킹된 맥락(후속 챕터는 제외)만으로 집필하고, 사용자 아웃라인 승인 후 산문을 쓰며, 이후 scene 레코드·continuity/state.md·복선 레코드를 갱신하고 CLI 점검 블록을 돌린다.",
+  "directives": [
+    {
+      "topic": "아웃라인 먼저: 비트별 아웃라인을 만들고 승인받은 뒤 집필",
+      "main": true,
+      "quote": "Present the outline to the user for approval. Revise until approved."
+    },
+    {
+      "topic": "후속 챕터 내용을 읽지 않고 story context로 맥락 수집(스포일러 방지)",
+      "main": true,
+      "quote": "Draft from that output, and do not open project files for background."
+    },
+    {
+      "topic": "작품 언어와 POV·시제로 집필",
+      "main": false,
+      "quote": "Write in the book's `language` and follow the POV and tense from the packed context"
+    },
+    {
+      "topic": "POV 캐릭터의 목소리와 voice-words/voice-avoid 준수",
+      "main": false,
+      "quote": "Give each speaker their recorded voice, using `voice-words` and avoiding `voice-avoid` from their packed character card"
+    },
+    {
+      "topic": "character-knowledge 사실은 '알고 있는 행동'으로만, 독자에게 드러내지 않음",
+      "main": false,
+      "quote": "A line marked `character-knowledge` and `do not reveal` is known to the POV from a flashback the reader has not reached"
+    },
+    {
+      "topic": "보여주기, POV 일관성, 대사 태그 절제, 감각 묘사(산문 기법 가이드)",
+      "main": false,
+      "quote": "Conveys emotion through action, dialogue, and sensory detail rather than stating feelings"
+    },
+    {
+      "topic": "챕터 오프닝/엔딩 지침(날씨·기상 오프닝 지양, 변화나 긴장으로 끝내기)",
+      "main": false,
+      "quote": "Avoid opening with weather or waking up (unless deliberately subverting the cliche)"
+    },
+    {
+      "topic": "산문을 프로젝트 로컬 빌드/생성 스크립트로 쓰지 않음",
+      "main": false,
+      "quote": "Do not stage prose in project-local build scripts, generator scripts, or bulk writer scripts (for example `build-*.js`) to emit chapters."
+    },
+    {
+      "topic": "장면 구분은 단독 줄의 ---",
+      "main": false,
+      "quote": "Within a chapter, separate scenes with `---` on a line of its own"
+    },
+    {
+      "topic": "장면 레코드 date/time/outcome/hook 설정",
+      "main": false,
+      "quote": "Set `outcome` on each goal-driven scene record to what actually happened on the page"
+    },
+    {
+      "topic": "복선·질문은 소유 레코드에만 기록하고 레지스트리 표는 수작업 편집 금지",
+      "main": false,
+      "quote": "Do not add or edit registry rows by hand."
+    },
+    {
+      "topic": "선택 보조 스킬 better-writing은 첫 챕터에서 한 번만 제안, 설치는 승인 필요",
+      "main": false,
+      "quote": "Do not ask about it every session: offer it once, when you draft the project's first chapter"
+    },
+    {
+      "topic": "분기형 책은 interactive-fiction 스킬 사용",
+      "main": false,
+      "quote": "Draft it with the `interactive-fiction` skill"
+    }
+  ],
+  "requires": [
+    {
+      "skill": "story-init",
+      "quote": "A story project must already exist with at least:"
+    }
+  ],
+  "forbids": [],
+  "interactive": true,
+  "task_types": [
+    "new"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [
+      "story.md",
+      "characters/ 에 최소 한 명의 캐릭터",
+      "story CLI(story context 사용)"
+    ],
+    "optional": [
+      "plot/_index.md 플롯 구조",
+      "better-writing 스킬(외부, 산문 품질 보완)",
+      "line-editing 스킬(산문 패스)"
+    ]
+  },
+  "commands": [
+    "story",
+    "node"
+  ],
+  "state_files": [
+    "chapters/chapter-NN.md",
+    "scenes/chapter-NN-scene-NN.md",
+    "continuity/state.md (current-chapter, character-state, object-state, knowledge-state)",
+    "continuity/promises|clues|questions/",
+    "plot/timeline.md",
+    "plot/arcs/*.md Foreshadowing"
+  ],
+  "cautions": "Story Skills 번들 공통: `story` CLI(node>=18, npm 의존성 없음; bun 불필요)에 의존하며 manifest 상 상태 READY, 제한 없음. 상대 파일 참조는 모두 해결됨. 스토리 프로젝트(story.md 기준) 마크다운 폴더 구조와 YAML frontmatter 규칙을 따라야 하며, 소설 프로젝트 파일에 쓰는 스킬이므로 일반 산문/문서 작업에는 맞지 않음. 번들의 line-editing 스킬이 산문 패스를 담당하며 `revised` 표시 전에 실행. 외부 better-writing은 선택 사항이며 설치는 명시적 승인 없이는 실행하지 않음. 분기 책은 interactive-fiction 필요. `story next` 종료 코드는 연속성 결과가 아님."
+}

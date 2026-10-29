@@ -1,0 +1,71 @@
+{
+  "name": "research-grants",
+  "wm_id": "WM-X0017",
+  "source": "K-Dense-AI/scientific-agent-skills skills/research-grants/SKILL.md @5f2bc03, MIT",
+  "role": "NSF, NIH, DOE, DARPA, 대만 NSTC의 연구비 제안서 작성·검토를 기관별 요건, 목표(aims), 심사 기준, 예산, broader impacts, 재제출까지 지원하는 스킬.",
+  "fits": "연구자가 직접 작성하는 제안서 개발, 준수 매트릭스(compliance matrix), 제안서 비평, specific aims와 project description 작성, 예산 정당화, 재제출 대응.",
+  "not_fits": "NIH는 AI가 실질적으로 작성한 신청서·섹션을 정책상 제외하므로 요건 확인, 비평, 일관성 점검, 연구자 작성 자료의 제한적 편집에만 쓴다. 허구의 데이터·인용·승인·파트너 확약 생성 금지.",
+  "unique_approach": "먼저 해당 공고(opportunity)의 식별자·마감·양식·평가 기준을 기록하고 요구사항-원문 섹션-초안 위치-격차 매트릭스를 만든 뒤에 준수 여부를 판단하며, 최종 내보낸 파일로 쪽수를 확인한다.",
+  "directives": [
+    {
+      "topic": "해당 공고를 먼저 확정",
+      "main": true,
+      "quote": "For each task, record agency, opportunity identifier and amendment, activity/project"
+    },
+    {
+      "topic": "요구사항 매트릭스로 준수 판단",
+      "main": true,
+      "quote": "Build a requirement -> source section -> draft location -> gap matrix before judging"
+    },
+    {
+      "topic": "제안서는 설득 문서: 엄밀성·혁신·실현성·파급효과",
+      "main": true,
+      "quote": "**Critical Principle: Grants are persuasive documents that must simultaneously demonstrate scientific rigor, innovation, feasibility, and broader impact.**"
+    },
+    {
+      "topic": "기관별 심사 기준에 명시적으로 답하기",
+      "main": true,
+      "quote": "**Failing to Address Review Criteria**"
+    },
+    {
+      "topic": "분량·서식 한도 준수 및 최종 파일 점검",
+      "main": true,
+      "quote": "Inspect the final exported files; Markdown text does not establish page compliance."
+    },
+    {
+      "topic": "NIH: AI 실질 작성 금지, 연구자 소유권 유지",
+      "main": true,
+      "quote": "excludes applications or sections substantially developed by AI. Preserve applicant"
+    },
+    {
+      "topic": "데이터·인용·약속 날조 금지",
+      "main": false,
+      "quote": "Never invent data, citations, investigator records, partner commitments or approvals."
+    },
+    {
+      "topic": "전문 용어 과다·장황·일관되지 않은 용어 회피",
+      "main": false,
+      "quote": "**Excessive Jargon**: Inaccessible to broader review panel"
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit",
+    "review"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [
+      "network access to verify agency instructions (or supplied dated official documents)"
+    ],
+    "optional": [
+      "scientific-schematics skill + OPENROUTER_API_KEY (figures)"
+    ]
+  },
+  "commands": [],
+  "state_files": [],
+  "cautions": "READY. 선택적 도식 생성은 scientific-schematics(미설치)와 OPENROUTER_API_KEY 필요하며 프롬프트가 제3자 API(OpenRouter)로 전송됨. 'Integration with Other Skills'는 참고용. 공식 패키지가 없으면 제한된 초안 검토만 하고 미해결 규칙을 나열."
+}

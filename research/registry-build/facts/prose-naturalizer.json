@@ -1,0 +1,111 @@
+{
+  "name": "prose-naturalizer",
+  "wm_id": "WM-X0105",
+  "source": "anayy09/claude-research-skills prose-naturalizer/SKILL.md @f0d3359, MIT",
+  "role": "AI가 쓴 듯한 비학술 영문 산문을 내용은 유지한 채 작성자 목소리로 다듬는 스킬(Wikipedia 'Signs of AI writing' 기반).",
+  "fits": "블로그, 에세이, 문서, README, 이메일 등 비학술 글에서 not-X-but-Y 대비, 한 줄 마무리, 삼단 나열, 대시 남발, 과장, 영업 문구, 굵은 라벨 같은 AI 징후 제거.",
+  "not_fits": "연구 원고, 학위논문, 응답서(response letter)에는 로드하지 않는다. manuscript-writing이 해당 패턴 부분집합과 자체 린트를 가지며 둘을 함께 로드하면 지시가 충돌한다.",
+  "unique_approach": "AI 문체 패턴 25개를 강한 순서(§1-§25)로 번호 매겨 표시한 뒤 재작성하고, 재작성이 사실·수치·인용을 더하거나 잃지 않았는지 검사하며 글쓴이 샘플이 있으면 그 목소리를 우선한다.",
+  "directives": [
+    {
+      "topic": "not-X-but-Y 대비 구문 제거",
+      "main": true,
+      "quote": "**Watch for:** not X but Y; not just, not only, or not merely X, but Y; it's not X, it's Y;"
+    },
+    {
+      "topic": "한 줄 마무리와 극적 단편 제거",
+      "main": true,
+      "quote": "a one-sentence paragraph that restates the paragraph before it"
+    },
+    {
+      "topic": "깊어 보이는 격언 제거",
+      "main": true,
+      "quote": "the real question is, at its core, in reality, what really matters"
+    },
+    {
+      "topic": "도입 군더더기 제거",
+      "main": true,
+      "quote": "Let's dive in, let's explore, let's break this down"
+    },
+    {
+      "topic": "가상의 반론 제거",
+      "main": true,
+      "quote": "The text answers an objection or rejects an option that appears nowhere else"
+    },
+    {
+      "topic": "강제 삼단 나열 해소",
+      "main": true,
+      "quote": "Ideas arrive in threes to sound complete, whether the meaning has three parts or not."
+    },
+    {
+      "topic": "em dash/en dash 금지",
+      "main": true,
+      "quote": "The final rewrite must not contain em dashes (—) or en dashes (–) unless the writer's sample uses them"
+    },
+    {
+      "topic": "AI 단어 목록 및 과장 표현",
+      "main": true,
+      "quote": "Models use these words far more often than people do, especially in groups."
+    },
+    {
+      "topic": "의의 부풀리기와 영업 문구 제거",
+      "main": true,
+      "quote": "An ordinary detail is said to mark a change, prove a legacy, or promise a future."
+    },
+    {
+      "topic": "is/are/has 대신 우회 동사 금지",
+      "main": true,
+      "quote": "Simple verbs are replaced with longer phrases. Use *is*, *are*, and *has*."
+    },
+    {
+      "topic": "굵은 글씨 장식과 제목 장식 제거",
+      "main": true,
+      "quote": "Words are bolded without a reason, and vertical lists give every item a bold label and a colon."
+    },
+    {
+      "topic": "챗봇 잔여물 제거",
+      "main": true,
+      "quote": "A chatbot's greeting, praise, offer, or closing remains in text that should stand on its own."
+    },
+    {
+      "topic": "사실 추가·삭제 금지",
+      "main": false,
+      "quote": "Do not add a fact, name, number, date, quote, or citation unless it comes from the source or the user."
+    },
+    {
+      "topic": "글쓴이 샘플이 있으면 목소리 매칭",
+      "main": false,
+      "quote": "If the user gives a writing sample, read it first and match its sentence length, word choice, punctuation, openings, and transitions."
+    },
+    {
+      "topic": "문장 길이 변화",
+      "main": false,
+      "quote": "Vary sentence length; real writing alternates short and long."
+    },
+    {
+      "topic": "파일 모드에서는 코드·경로·링크 변경 금지",
+      "main": false,
+      "quote": "Keep code blocks, inline code, commands, paths, YAML metadata, data, and link targets unchanged."
+    }
+  ],
+  "requires": [],
+  "forbids": [
+    {
+      "skill": "manuscript-writing",
+      "quote": "Do not load it for a research manuscript, thesis, or response letter:\n  manuscript-writing carries the manuscript subset of these patterns and its own"
+    }
+  ],
+  "interactive": false,
+  "task_types": [
+    "edit",
+    "review"
+  ],
+  "stage_hint": "prose",
+  "requirements": {
+    "required": [],
+    "optional": []
+  },
+  "commands": [],
+  "state_files": [],
+  "cautions": "READY. 연구 원고/학위논문/응답서에는 쓰지 말 것. forbids는 설명문 그대로 manuscript-writing으로 기록(해당 스킬은 설치되어 있지 않을 수 있음). 영문 비학술 산문 대상이며 본문 규칙은 영어 표현 기준."
+}

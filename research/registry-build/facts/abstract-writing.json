@@ -1,0 +1,80 @@
+{
+  "name": "abstract-writing",
+  "wm_id": "WM-X0279",
+  "source": "msimchowitz/writing-skills for-agents/abstract-writing/SKILL.md @214981f, MIT",
+  "role": "연구 논문 초록을 섹션별 요약이 아니라 독자를 위한 압축된 논증으로 쓰거나 고치거나 진단한다.",
+  "fits": "초록만 요청받았을 때, 학회·저널·arXiv 초록, 기여 목록이나 목차 압축처럼 읽히는 초록을 다시 쓸 때.",
+  "not_fits": "초록 외 논문 본문 작성, 일반 산문 편집(general-writing 담당), 근거 원고나 노트가 전혀 없는 상태에서의 결과 창작.",
+  "unique_approach": "문제-한계-답-증거-범위-함의의 단일 추론 흐름을 먼저 세우고, 근거 동사 수준과 주장 경계를 원고와 대조해 검증한 뒤 본문 확정 후 초록으로 되돌아가 재점검한다.",
+  "directives": [
+    {
+      "topic": "초록 구조: 하나의 추론 흐름(문제, 답, 증거, 범위)",
+      "main": true,
+      "quote": "Do not give every section or contribution equal space."
+    },
+    {
+      "topic": "근거 우선 읽기, 일반 패턴에서 결과 추론 금지",
+      "main": true,
+      "quote": "Never infer a result, comparison, number, or limitation from a generic abstract pattern."
+    },
+    {
+      "topic": "주장 경계 보호: 비교 대상, 체제, 지표, 불확실성 일치",
+      "main": true,
+      "quote": "Does the abstract name the same comparator, regime, metric, and uncertainty as the supporting result?"
+    },
+    {
+      "topic": "근거 동사 등급(shows/supports/suggests)",
+      "main": true,
+      "quote": "Use \"shows\" or \"demonstrates\" for direct evidence, \"supports\" for partial evidence, and \"suggests\" or \"is consistent with\" for interpretation."
+    },
+    {
+      "topic": "초록 마무리: 지지되는 함의 또는 한계로 끝내고 코드 공개·향후 연구 예고 금지",
+      "main": true,
+      "quote": "Do not end by announcing code, future work, or another contribution unless that information matters to the venue."
+    },
+    {
+      "topic": "금지 래퍼 표현과 기여 목록 문체",
+      "main": false,
+      "quote": "Avoid wrappers such as \"This paper presents,\" \"On the empirical side,\" \"On the theoretical side,\" and \"Beyond proposing.\""
+    },
+    {
+      "topic": "리터럴 동사 사용(주장은 멈추거나 일하지 않음)",
+      "main": false,
+      "quote": "Use literal verbs for claims, evidence, and sections."
+    },
+    {
+      "topic": "문장 길이와 리듬은 논증을 따름",
+      "main": false,
+      "quote": "Let sentence length follow the argument."
+    },
+    {
+      "topic": "본문 확정 후 초록 재점검",
+      "main": true,
+      "quote": "Compare every abstract sentence with the final work."
+    }
+  ],
+  "requires": [
+    {
+      "skill": "general-writing",
+      "quote": "After the claim audit, run the complete sibling [general-writing workflow](../general-writing/SKILL.md) once."
+    }
+  ],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit",
+    "review"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [],
+    "optional": [
+      "원고 본문·도입·결론·한계 (근거로 읽음)",
+      "references/example-abstract-patterns.md (Simchowitz 그룹 음성 맞춤 시)"
+    ]
+  },
+  "commands": [],
+  "state_files": [],
+  "cautions": "매니페스트 이슈 없음(READY). 노트만 있을 때는 계획과 완료 작업을 구분하고 누락된 결과는 사용자에게 묻는다. academic-voice 읽기는 '더 강한 음성 샘플이 없을 때' 조건부이므로 requires에 넣지 않았다."
+}

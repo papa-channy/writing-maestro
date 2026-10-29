@@ -1,0 +1,97 @@
+{
+  "name": "voice-style",
+  "wm_id": "companion",
+  "source": "danjdewhurst/story-skills skills/voice-style/SKILL.md @e44c97c, MIT",
+  "role": "책의 목소리와 표면 관습을 style-sheet.md에 기록하고, story prose(필터 워드·-ly 부사·말버릇 태그·반복어·비슷한 이름)와 story voices(인물별 대사 지문)로 일관성을 점검한다.",
+  "fits": "프로젝트 시작 시 첫 챕터나 샘플이 생겼을 때, 챕터·세션 사이 목소리가 흐려졌을 때, 카피에디트에 스타일 결정을 기록해야 할 때, 공유 전에 기계적 산문 점검이 필요할 때, 인물별 목소리를 기록하고 검사할 때.",
+  "not_fits": "대사 목소리가 다 비슷할 때 대사를 고쳐 쓰는 일은 line-editing, 인물 성격·아크는 character-management, 딥 POV·서브텍스트는 scene-craft, 라인 바이 라인 문장 패스(라인 에디트·카피에디트·소리 내어 읽기·교정)는 line-editing을 쓴다.",
+  "unique_approach": "스타일시트 프런트매터(dialect, preferred, watch-words, allow-words, samples)를 기계가 읽게 만들고, 작가가 승인한 샘플을 기준선으로 삼아 챕터가 그 기준에서 벗어났는지 경고한다. 수치는 재독의 신호이지 명령이 아니다.",
+  "directives": [
+    {
+      "topic": "style-sheet.md 작성: 방언·철자·대문자·하이픈·숫자·대사 구두점·워치 리스트",
+      "main": true,
+      "quote": "Record the book's voice and surface conventions in `style-sheet.md`, then"
+    },
+    {
+      "topic": "이미 원고가 내린 결정만 기록하고 조용히 새 결정을 만들지 않는다; 불일치는 사용자에게 묻는다",
+      "main": false,
+      "quote": "Record decisions the prose already"
+    },
+    {
+      "topic": "샘플 기준선: 작가가 승인한 글만 samples에 등록, 에이전트가 쓴 글은 금지",
+      "main": false,
+      "quote": "Ask the user which; never list prose"
+    },
+    {
+      "topic": "인물별 목소리 기록(voice-words, voice-avoid, Character Voices 한 줄)과 story voices 점검",
+      "main": true,
+      "quote": "Recording each character's voice (the style sheet's Character Voices line, `voice-words`, `voice-avoid`)"
+    },
+    {
+      "topic": "산문 린트: 필터 워드, -ly 부사, 말버릇 태그, 에코, 반복 4-gram, 비슷한 이름",
+      "main": true,
+      "quote": "Filter words | *felt, saw, heard, noticed, realized/realised, wondered, seemed, watched, knew, decided, thought, sensed* in narration"
+    },
+    {
+      "topic": "수치는 재독 신호: 수치를 맞추려고 챕터를 고쳐 쓰지 않는다",
+      "main": false,
+      "quote": "Never rewrite a chapter just to move a number back"
+    },
+    {
+      "topic": "기피 철자는 항상 오류로 즉시 수정",
+      "main": false,
+      "quote": "Fix avoided spellings everywhere; they are always errors of consistency."
+    },
+    {
+      "topic": "리듬 경고는 공식이 아니라 의도로 문장 길이 조정",
+      "main": false,
+      "quote": "revise sentence length by intent (short for"
+    },
+    {
+      "topic": "비슷한 이름 변경은 사용자에게 먼저 묻고 story rename --prose --dry-run으로 미리 보기",
+      "main": false,
+      "quote": "For similar names, ask the user before renaming;"
+    },
+    {
+      "topic": "타 언어 책: dialect unspecified, 단어 목록을 영어 번역으로 채우지 않는다",
+      "main": false,
+      "quote": "Never fill a list from a translation of the English"
+    },
+    {
+      "topic": "기존 정본(캐릭터 파일)과 스타일시트가 어긋나면 스타일시트를 고치거나 사용자에게 묻는다",
+      "main": false,
+      "quote": "The character file is"
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": true,
+  "task_types": [
+    "edit",
+    "review",
+    "docs"
+  ],
+  "stage_hint": "prose",
+  "requirements": {
+    "required": [
+      "story.md가 있는 story 프로젝트(story init이 style-sheet.md 생성)"
+    ],
+    "optional": [
+      "story CLI 또는 번들 폴백 (story prose, story voices, story names, story rename)",
+      "프로즈가 없으면 사용자가 주는 문단이나 비슷한 목소리의 책 3권",
+      "scene-craft의 dialogue-subtext.md(태그 교체 테스트)",
+      "line-editing의 language-conventions.md(타 언어 대사 구두점)"
+    ]
+  },
+  "commands": [
+    "story",
+    "node"
+  ],
+  "state_files": [
+    "style-sheet.md (프런트매터 dialect/preferred/watch-words/allow-words/samples, add-words/replace-words)",
+    "story.md (language, cli-defaults, severity)",
+    "characters/*.md (voice-words, voice-avoid, Voice & Speech Patterns)",
+    "chapters/*.md"
+  ],
+  "cautions": "매니페스트: 동반(companion) 스킬, READY, 상대 참조 해석됨. line-editing이 style-sheet 구축을 위해 의존해 설치됨. 필터 워드·부사·말버릇 목록은 영어, 스페인어, 프랑스어, 독일어 팩만 있고 그 외 언어는 점검이 건너뛰어져 직접 읽어야 한다. 경고는 자문용이며 story.md severity로 오류로 승격 가능. interactive는 샘플 수집·불일치 결정이 필요해 true로 판단함(원문은 조건부 질문)."
+}

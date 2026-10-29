@@ -1,0 +1,75 @@
+{
+  "name": "write-agent-prompts",
+  "wm_id": "WM-X0227",
+  "source": "inanna-malick/agent-skills skills/write-agent-prompts/SKILL.md @fa2ce23, MIT",
+  "role": "유능한 동료 에이전트를 위한 프롬프트와 스킬을, 고현저성 기술 용어와 개념 폭, 의미 압축으로 쓰는 방법을 제시한다.",
+  "fits": "에이전트가 과제 구조를 인식하고 지식을 끌어오며 방법을 고르고 접근을 바꾸는 방식을 형성하는 프롬프트나 스킬을 쓸 때.",
+  "not_fits": "원문에 명시된 제외 대상은 없음. 완성형 단일 채팅 프롬프트 생성이나 평가 루프 중심 작업과는 결이 다르다.",
+  "unique_approach": "인지과학·AI 개념(공통 기반, 인지 과제 분석, 구조 정렬, 메타추론 등)을 렌즈로 삼아 설명을 압축하고 개념 레퍼토리를 구조적으로 조직한다. 스킬 자체가 그 기법의 시연이다.",
+  "directives": [
+    {
+      "topic": "수신자의 공유 어휘로 압축, 모호한 용어는 정박",
+      "main": true,
+      "quote": "Use the recipient's shared technical vocabulary."
+    },
+    {
+      "topic": "전문성 복원: 진단 단서와 기대를 사용자 예시에서 추출",
+      "main": true,
+      "quote": "Recover the expertise the prompt should convey"
+    },
+    {
+      "topic": "문제 표현과 프레임 전환 근거 제공",
+      "main": true,
+      "quote": "Consider what the task becomes under different representations"
+    },
+    {
+      "topic": "관련 방법과 인접 분야를 폭넓게 포함, 관계로 조직",
+      "main": true,
+      "quote": "Survey core methods, neighboring disciplines, alternative formulations"
+    },
+    {
+      "topic": "유추와 대비 사례로 관계 구조 전달",
+      "main": true,
+      "quote": "Transfer connected relationships across domains."
+    },
+    {
+      "topic": "탐색 노력 배분과 중단 근거 전달",
+      "main": true,
+      "quote": "Allocate research and writing effort to conceptual gaps"
+    },
+    {
+      "topic": "도메인·수신자에 맞춘 특수화, 작성 지침과 결과물 구분",
+      "main": true,
+      "quote": "Specialize this writing method to the domain, recipient, and objective."
+    },
+    {
+      "topic": "수신자 관점에서 프롬프트 검증",
+      "main": false,
+      "quote": "Read the prompt as its recipient"
+    },
+    {
+      "topic": "레퍼토리는 실행 의무가 아닌 가용 지식",
+      "main": false,
+      "quote": "A repertoire is available knowledge, not a requirement to execute every named method."
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "edit"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [],
+    "optional": [
+      "references/concepts.md for grounding of referents"
+    ]
+  },
+  "commands": [],
+  "state_files": [
+    "references/concepts.md (read-only)"
+  ],
+  "cautions": "매니페스트: READY, agents/openai.yaml은 메타데이터일 뿐이며 references/concepts.md 링크는 해석됨. 어휘가 추상적이고 압축적이라 사람 독자용 산문에는 부적합하며 에이전트 대상 프롬프트 작성에 한정. prompt-optimizer 계열과 대상이 겹친다."
+}

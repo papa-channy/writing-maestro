@@ -1,0 +1,93 @@
+{
+  "name": "submission-reviewer",
+  "wm_id": "WM-X0107",
+  "source": "anayy09/claude-research-skills submission-reviewer/SKILL.md @f0d3359, MIT",
+  "role": "논문 또는 특허 제출물을 공정하고 건설적인 동료 심사자로서 가중 루브릭에 따라 100점 만점으로 채점하고 순위가 매겨진 수정 목록과 예상 점수를 내는 스킬.",
+  "fits": "원고, 프리프린트, 학위 챕터, 초록, 발명 신고서, 특허 초안에 대한 리뷰, 점수, 제출 전 점검, 신규성·출판 가능성 판단, '심사자가 뭐라 할까' 질문.",
+  "not_fits": "저널/학회 추천(journal-advisor), 산문 재작성(manuscript-writing, prose-naturalizer), 실제 수정 작업(manuscript-editor), 서식 맞춤, 그림 재제작, 통계 계산, 법률 자문은 하지 않는다.",
+  "unique_approach": "claim map을 먼저 만들고 실제 선행기술을 검색해 신규성을 확인한 뒤 score.py로 결정적 점수를 계산하며, authenticity 검사 결과를 비난 없이 사실 문구로 보고하고 수정 목록 표(id, 심각도, 위치, 노력)로 끝낸다.",
+  "directives": [
+    {
+      "topic": "전문 전체를 읽고 채점",
+      "main": true,
+      "quote": "Read the full text before scoring anything."
+    },
+    {
+      "topic": "claim map 작성 후 판단",
+      "main": true,
+      "quote": "Build the claim map before judging anything"
+    },
+    {
+      "topic": "기억이 아닌 검색으로 신규성 확인",
+      "main": true,
+      "quote": "Do not score novelty from memory."
+    },
+    {
+      "topic": "루브릭과 score.py로 결정적 점수",
+      "main": true,
+      "quote": "compute the total with the script so the arithmetic and banding are"
+    },
+    {
+      "topic": "진위·일관성 검사와 비난 없는 문구",
+      "main": true,
+      "quote": "Report what was observed, never an accusation."
+    },
+    {
+      "topic": "보고서 고정 구조와 수정 목록 표",
+      "main": true,
+      "quote": "Use the exact structure in `references/report-format.md`."
+    },
+    {
+      "topic": "어조 계약: 작품을 비판, 저자를 비판하지 않음",
+      "main": false,
+      "quote": "Criticize the artifact, never the author."
+    },
+    {
+      "topic": "모든 문제에 수정 방법 제시",
+      "main": false,
+      "quote": "Every problem gets a fix."
+    },
+    {
+      "topic": "판정 어휘 금지",
+      "main": false,
+      "quote": "No verdict vocabulary."
+    },
+    {
+      "topic": "선행기술·지표 날조 금지",
+      "main": false,
+      "quote": "**No invented prior art.**"
+    },
+    {
+      "topic": "저자 수치를 정확히 재현",
+      "main": false,
+      "quote": "**Reproduce the author's numbers exactly** when quoting them."
+    },
+    {
+      "topic": "치명적 결함 먼저 제시",
+      "main": false,
+      "quote": "**Blocking flaws go first**, in the snapshot, before the strengths."
+    }
+  ],
+  "requires": [],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "review"
+  ],
+  "stage_hint": "check",
+  "requirements": {
+    "required": [
+      "python3 (scripts/score.py)"
+    ],
+    "optional": [
+      "web search / patent databases (prior art)"
+    ]
+  },
+  "commands": [
+    "python3"
+  ],
+  "state_files": [
+    "review report per references/report-format.md"
+  ],
+  "cautions": "READY. 검색 도구가 없으면 신규성 신뢰도를 낮게 표기. 특허 리뷰는 법률 자문이 아님을 한 번 명시. 형제 스킬 인계는 제안일 뿐 필수 아님."
+}

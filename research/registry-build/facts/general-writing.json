@@ -1,0 +1,121 @@
+{
+  "name": "general-writing",
+  "wm_id": "WM-X0282",
+  "source": "msimchowitz/writing-skills for-agents/general-writing/SKILL.md @214981f, MIT",
+  "role": "작가의 의미와 목소리를 보존하면서 초안을 더 명확하고 사람다운 산문으로 편집하거나, 편집 없이 AI 슬롭 패턴만 감사한다.",
+  "fits": "일반 글쓰기, 라인 편집, 명료성·목소리 수정, 간결화, AI 같은 문장 점검, AI 작성 여부 탐지 요청.",
+  "not_fits": "초안 없이 새로 쓰기(초안을 먼저 요청), 사실·주장·통계 창작, 독자용 human-writing-guide 디렉터리 로드(에이전트 컨텍스트에 넣지 말라고 명시).",
+  "unique_approach": "Humanizer를 임베디드 모드로 먼저 돌린 뒤 이 스킬을 최종 하우스 스타일 패스로 적용하고, eval.md 체크리스트로 직접 검증한다. 탐지 요청에는 패턴명과 인용만 반환한다.",
+  "directives": [
+    {
+      "topic": "최소 효과 편집, 작가의 목소리 보존",
+      "main": true,
+      "quote": "Make the minimum effective edit."
+    },
+    {
+      "topic": "편집 결과물 형식: 전체 편집본 + What changed",
+      "main": true,
+      "quote": "Make the minimum effective edit and return the full edited draft plus a short **What changed** section."
+    },
+    {
+      "topic": "탐지 모드: 패턴명·인용·짧은 수정안만, 재작성·점수화 금지",
+      "main": true,
+      "quote": "Do not rewrite, score the draft, or guess whether AI wrote it."
+    },
+    {
+      "topic": "금지 단어 목록",
+      "main": false,
+      "quote": "Ban these unless quoted or technically necessary: delve, foster, leverage, utilize, facilitate, empower, streamline, robust, cutting-edge, paradigm shift, game changer"
+    },
+    {
+      "topic": "군더더기 부사·필러 구문 삭제",
+      "main": false,
+      "quote": "Cut often-empty adverbs when they add nothing: just, literally, honestly, simply, actually, truly, fundamentally, importantly, crucially, inherently, inevitably."
+    },
+    {
+      "topic": "장식적 이항 대조 제거(This is not X. It's Y.)",
+      "main": false,
+      "quote": "**Ornamental binary contrasts.** Replace repeated or canned forms such as \"This is not X. It's Y.\" and \"It's not just X but Y\" with the direct point."
+    },
+    {
+      "topic": "도입부 군말·가짜 통찰 설정·수사적 설정 제거",
+      "main": false,
+      "quote": "**Throat-clearing openers.** Cut \"Here's the thing,\" \"Let me be clear,\" \"I'll be honest,\" and similar delays."
+    },
+    {
+      "topic": "콜론 반전·피상적 -ing 분석·중요성 부풀리기·모호한 출처 제거",
+      "main": false,
+      "quote": "**Colon reveals.** Rewrite noun-phrase-plus-colon dramatic reveals as plain sentences."
+    },
+    {
+      "topic": "의미 불일치 관계, 추상 관계 래퍼, 질문어 절 래퍼, 기계적 관계절 수정",
+      "main": false,
+      "quote": "**Semantically mismatched relations.** Rewrite a grammatical sentence when its subject cannot perform the named action or the verb acts on the wrong object."
+    },
+    {
+      "topic": "독자 없는 기업 약어 교체",
+      "main": false,
+      "quote": "**Readerless corporate shorthand.** Replace workplace metaphors that make advice sound firm while hiding its purpose."
+    },
+    {
+      "topic": "느슨한 나열·리스트 과다 문장 정리, 세 항목 이상 나열 문단 미완성 취급",
+      "main": false,
+      "quote": "**Loose catalogs and list-packed sentences.** Require every series to have a governing relation that the reader can name."
+    },
+    {
+      "topic": "가짜 심오한 마무리·요약 반복 결말 삭제",
+      "main": false,
+      "quote": "**Fake-profound kickers.** Delete the final cute metaphor, aphorism, or mic-drop line."
+    },
+    {
+      "topic": "서식 슬롭 제거, 5항목 초과 수직 리스트 도입 금지",
+      "main": false,
+      "quote": "**List sprawl.** Do not introduce a vertical list longer than five items during an edit."
+    },
+    {
+      "topic": "엠 대시 제한",
+      "main": false,
+      "quote": "**Em dashes.** Do not use them as a default rhythm device."
+    },
+    {
+      "topic": "제목·초록·소제목·캡션 등 구조 텍스트 별도 검토",
+      "main": true,
+      "quote": "Do not treat display text as metadata."
+    },
+    {
+      "topic": "README 전수 적용(코드, 명령, 표, 링크 보존)",
+      "main": false,
+      "quote": "route every README in that task's scope through this Humanizer-first pipeline."
+    },
+    {
+      "topic": "사실·예시·통계·인용·의견 창작 금지",
+      "main": false,
+      "quote": "Do not invent claims, examples, statistics, quotations, or opinions."
+    }
+  ],
+  "requires": [
+    {
+      "skill": "humanizer",
+      "quote": "For editing requests, read the sibling [Humanizer skill](../humanizer/SKILL.md) and invoke it in embedded mode."
+    }
+  ],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "edit",
+    "review"
+  ],
+  "stage_hint": "prose",
+  "requirements": {
+    "required": [
+      "편집할 초안 (없으면 요청)"
+    ],
+    "optional": [
+      "작가의 글쓰기 샘플(Humanizer 보정용)",
+      "대상 독자와 게재 매체"
+    ]
+  },
+  "commands": [],
+  "state_files": [],
+  "cautions": "매니페스트 노트: ../../for-humans/human-writing-guide/ 를 참조하나 이는 사람용 가이드라 미설치이며 로드하지 말라고 명시됨. 형제 스킬(abstract-writing, academic-voice, humanizer 등)은 ~/.claude/skills에서 해석된다. 초안이 없으면 먼저 요청해야 하므로 단독 호출 시 입력 확인 필요. Humanizer 안에서 better-usage, academic-voice, writing-cadence, non-autoregressive-writing-pass가 이미 적용되므로 중복 실행 금지."
+}

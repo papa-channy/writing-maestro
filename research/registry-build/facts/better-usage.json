@@ -1,0 +1,63 @@
+{
+  "name": "better-usage",
+  "wm_id": "companion",
+  "source": "msimchowitz/writing-skills for-agents/better-usage/SKILL.md @214981f, MIT",
+  "role": "문법적으로는 맞지만 주어가 동사를 수행할 수 없거나 목적어가 안 맞는 단어 조합을 의도한 주장을 보존하며 진단하고 고친다. humanizer 3단계 동반 스킬.",
+  "fits": "동사가 주어나 목적어에 문자 그대로 맞지 않을 때, 주장이나 섹션이 할 수 없는 행동을 하는 문장, 모호한 의인화로 가려진 추상 관계, 행위자를 숨기거나 검토를 암시하는 추상 과정 명사, 동사 교체만으로 부족해 중간 명사가 필요한 경우.",
+  "not_fits": "확립된 학술 약어(정리가 함의한다, 증거가 지지한다, 그림이 보여준다)와 의도적 은유의 제거, 절차 세부나 강조를 덧붙이는 수리.",
+  "unique_approach": "주어, 동사, 목적어를 분해해 의도한 관계를 다른 말로 풀어쓴 뒤, 필요한 경우 주장의 범위 같은 누락된 중간 명사를 명명하며 인식적 강도를 유지한다.",
+  "directives": [
+    {
+      "topic": "의미 호응 수리: 주어가 동사를 수행할 수 있는지, 목적어가 맞는지",
+      "main": true,
+      "quote": "Choose words that express the relation the sentence actually asserts."
+    },
+    {
+      "topic": "누락된 중간 명사 명명 (주장의 범위 등)",
+      "main": true,
+      "quote": "When the subject and verb do not connect directly, identify the omitted link."
+    },
+    {
+      "topic": "확립된 학술 관용 행위자 표현 유지",
+      "main": false,
+      "quote": "Keep established scholarly shorthand when it is clear in context."
+    },
+    {
+      "topic": "인식적 강도 유지(지지를 증명으로, 상관을 설명으로 바꾸지 않음)",
+      "main": false,
+      "quote": "Recheck epistemic force. Do not turn support into proof or correlation into explanation."
+    },
+    {
+      "topic": "원문이 설정하지 않은 검토·분석·평가 암시 제거",
+      "main": false,
+      "quote": "Remove an implied review or evaluation when the source states only a contrast between properties."
+    },
+    {
+      "topic": "사실·메커니즘·조건 추가 금지, 절차적 질감 덧붙이기 금지",
+      "main": false,
+      "quote": "Compare with the source to ensure that the repair adds no fact, mechanism, condition, or conclusion."
+    }
+  ],
+  "requires": [],
+  "forbids": [
+    {
+      "skill": "humanizer",
+      "quote": "Do not invoke Humanizer, general-writing, or the writing-cadence or academic-voice skills; the calling skill owns the larger prose pipeline."
+    }
+  ],
+  "interactive": false,
+  "task_types": [
+    "edit",
+    "review"
+  ],
+  "stage_hint": "prose",
+  "requirements": {
+    "required": [],
+    "optional": [
+      "references/compatibility-examples.md (전체 의미 사용 패스 시)"
+    ]
+  },
+  "commands": [],
+  "state_files": [],
+  "cautions": "매니페스트: 동반 스킬, SHA가 선택 목록에 없어 현재 HEAD 설치. humanizer 3단계가 호출하므로 단독 라우팅 대상이 아니다. forbids는 호출 경계 규칙(다른 스킬이 호출했을 때 파이프라인 재호출 금지)."
+}

@@ -1,0 +1,91 @@
+{
+  "name": "theme-craft",
+  "wm_id": "companion",
+  "source": "danjdewhurst/story-skills skills/theme-craft/SKILL.md @e44c97c, MIT",
+  "role": "주제를 장식이 아닌 작동 메커니즘으로 설계하고 감사한다. 통제 아이디어(가치+원인), 거짓/진실/상처와 세 가지 아크 유형, 반대 논거로서의 적대자, 모티프 추적, 퇴고 시 주제 감사를 다룬다.",
+  "fits": "스토리 시작 시 작업 전제 수립, 캐릭터 설계 시 lie/truth/arc-type, 완성 초고 후 주제 감사, 모티프 계획·추적.",
+  "not_fits": "전제 발굴·검증은 premise-workshop, 캐릭터 프로필·관계·'캐릭터 아크' 기록은 character-management를 쓴다.",
+  "unique_approach": "주제를 story.md의 premise/counter-premise와 캐릭터 lie/truth/ghost-wound/arc-type 필드로 기계적으로 기록하고, 감사 결과를 continuity/theme-audit.md에 theme-holds/theme-broken 판정으로 남긴다.",
+  "directives": [
+    {
+      "topic": "통제 아이디어: 가치+원인 한 문장 premise와 counter-premise",
+      "main": true,
+      "quote": "Consult `references/controlling-idea.md` and write a one-sentence"
+    },
+    {
+      "topic": "lie/truth/ghost-wound와 arc-type(change-positive, change-negative, flat)",
+      "main": true,
+      "quote": "`arc-type` is one of `change-positive`, `change-negative`, or `flat`."
+    },
+    {
+      "topic": "평면 아크는 의지의 시험을, 부정 아크는 거부된 진실을 보여 줄 것",
+      "main": false,
+      "quote": "flat arcs need escalating tests of steadfastness, not growth beats;"
+    },
+    {
+      "topic": "적대자 설계: 방어 가능한 반대 신념, 이기는 장면, 제도는 인격화",
+      "main": false,
+      "quote": "give the antagonist an edge, a"
+    },
+    {
+      "topic": "모티프: 구체적 모티프 2~3개를 문자 그대로 심고 변주·결말 공명 추적",
+      "main": false,
+      "quote": "choose two or"
+    },
+    {
+      "topic": "주제는 선택과 결과로 극화하고, 주제를 설명하는 대사·서술 요약·멘토 설교를 넣지 않는다",
+      "main": true,
+      "quote": "Theme is dramatized through choices and consequences."
+    },
+    {
+      "topic": "퇴고 시 주제 감사: 가치 추적, 결말 vs 오프닝 가치 질문, 모티프 회수, 판정 기록",
+      "main": false,
+      "quote": "Record findings in `continuity/theme-audit.md` with a"
+    },
+    {
+      "topic": "kebab-case 모티프 id와 planned/planted/paid-off 상태",
+      "main": false,
+      "quote": "Motif ids are kebab-case and tracked in the motif ledger with"
+    },
+    {
+      "topic": "씬 결정이 막힐 때 가치 연속체와 주인공의 대가로 판단",
+      "main": false,
+      "quote": "which choice engages the value continuum and costs the protagonist"
+    }
+  ],
+  "requires": [
+    {
+      "skill": "story-init",
+      "quote": "A story project must already exist (created via the story-init skill)."
+    }
+  ],
+  "forbids": [],
+  "interactive": false,
+  "task_types": [
+    "new",
+    "review",
+    "docs"
+  ],
+  "stage_hint": "draft",
+  "requirements": {
+    "required": [
+      "story-init으로 만든 story 프로젝트(story.md)"
+    ],
+    "optional": [
+      "character-management 캐릭터 파일, plot-structure 플롯 구조(있거나 진행 중이면 좋음)",
+      "story CLI 또는 번들 폴백 (reindex, wordcount, check)",
+      "continuity/motifs.md, continuity/theme-audit.md"
+    ]
+  },
+  "commands": [
+    "story",
+    "node"
+  ],
+  "state_files": [
+    "story.md 프런트매터(premise, counter-premise)",
+    "characters/*.md (arc-type, lie, truth, ghost-wound)",
+    "continuity/motifs.md",
+    "continuity/theme-audit.md"
+  ],
+  "cautions": "매니페스트: 동반(companion) 스킬(premise-workshop이 controlling-idea.md를 참조), READY. 모티프 원장과 theme-audit.md는 산문 노트라 CLI가 검증하지 않아 모티프 회수·판정은 수동 감사해야 한다. premise를 'tbd-discovery'로 두고 발견형으로 갈 수 있다."
+}
