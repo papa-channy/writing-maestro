@@ -82,7 +82,12 @@
       "quote": "For an abstract-only request, read and follow the sibling [abstract-writing skill](../abstract-writing/SKILL.md)."
     }
   ],
-  "forbids": [],
+  "forbids": [
+    {
+      "skill": "humanizer",
+      "quote": "It invokes Humanizer in embedded mode before applying the house-style check, so do not run Humanizer separately."
+    }
+  ],
   "interactive": false,
   "task_types": [
     "new",
