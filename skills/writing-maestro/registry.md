@@ -4,14 +4,14 @@ writing-maestro가 매 호출 새로 읽는 스킬 목록이다. 앞부분은 �
 
 ## 고치는 법
 
-- **스킬 추가**: `~/.claude/skills/<이름>/`에 설치하고 설치 매니페스트에 올린 뒤, `## 스킬` 아래에 `### <이름>` 항목을 다른 항목과 같은 필드 순서로 쓴다. 주 측면은 그 스킬의 본업으로 결과물에서 정하는 측면, 부 측면은 원문에 규칙이 있지만 본업이 아닌 측면이다. 주·부 측면, 필수 동반, 금지 짝마다 `근거`에 `<키> "<원문 인용>"` 쌍을 하나씩 ` / `로 이어 붙인다(인용 안에 ` / 단어 "` 형태는 쓰지 않는다). 사용자 정보 없이는 결과가 안 나올 때만 단계에 `clarify`를 넣는다. 측면 표의 '주 측면 스킬' 칸도 함께 고친다.
+- **스킬 추가**: `~/.claude/skills/<이름>/`에 설치하고 설치 매니페스트(`research/install/2026-10-29-install-manifest.json`)의 `skills` 목록에 항목을 더한 뒤(`installed_dir`는 설치 폴더 절대 경로로 마지막 이름이 `<이름>`과 같아야 하고, `status`는 `READY`처럼 `BLOCKED`가 아닌 값이어야 설치된 것으로 친다. 나머지 필드는 기존 항목을 따른다. 출처가 `plugin`인 스킬은 설치 확인을 건너뛴다), `## 스킬` 아래에 `### <이름>` 항목을 다른 항목과 같은 필드 순서로 쓴다. 주 측면은 그 스킬의 본업으로 결과물에서 정하는 측면, 부 측면은 원문에 규칙이 있지만 본업이 아닌 측면이다. 주·부 측면, 필수 동반, 금지 짝마다 `근거`에 `<키> "<원문 인용>"` 쌍을 하나씩 ` / `로 이어 붙인다(인용 안에 ` / 단어 "` 형태는 쓰지 않는다). 사용자 정보 없이는 결과가 안 나올 때만 단계에 `clarify`를 넣는다. 측면 표의 '주 측면 스킬' 칸도 함께 고친다.
 - **스킬 제거**: 항목을 지우고, 측면 표와 묶음 표에서 이름을 지운다. 다른 스킬의 `필수 동반`에 남아 있으면 검증이 실패한다.
 - **새 측면**: 두 스킬이 동시에 다르게 지시하면 결과가 흔들리는 결과물 속성일 때만 만든다. id는 소문자 ascii 슬러그.
 - **재생성 주의**: `research/registry-build/build_registry.py`를 다시 돌리면 이 파일의 손 편집이 덮어써진다. 고칠 때는 `research/registry-build/assignments.py`를 고친 뒤 다시 만들거나, 이 파일만 직접 고치고 스크립트는 돌리지 않는다.
-- **검증**: 고친 뒤 다음을 돌려 `OK <n> skills`를 확인한다. 조합 하나를 따져 보려면 `combo_check.py`를 쓴다.
+- **검증**: 고친 뒤 다음을 돌려 `OK <n> skills`를 확인한다(매니페스트는 레지스트리 경로에서 찾는다. 다른 파일은 `--manifest`로 넘긴다). 구조 오류는 exit 1, 설치 불일치는 `WARN` 줄과 `OK <n> skills (<k> warnings)`로 나온다. 조합 하나를 따져 보려면 `combo_check.py`를 쓴다.
 
 ```
-python3 skills/writing-maestro/scripts/registry_check.py --registry skills/writing-maestro/registry.md --manifest research/install/2026-10-29-install-manifest.json
+python3 skills/writing-maestro/scripts/registry_check.py --registry skills/writing-maestro/registry.md
 python3 skills/writing-maestro/scripts/combo_check.py --registry skills/writing-maestro/registry.md copywriting humanizer
 ```
 
@@ -89,7 +89,7 @@ python3 skills/writing-maestro/scripts/combo_check.py --registry skills/writing-
 `combo_check.py`가 다음을 결정적으로 판정한다.
 
 1. **금지 짝**: 어느 쪽이 적었든 두 구성원을 함께 넣지 않는다. 구성원 A가 금지한 스킬 S가 다른 구성원 B의 닫힘에 있어도 충돌이다(`forbidden pair A+S(via B)`). 단 S가 A 자신의 닫힘에 있으면(예: paper-writing은 humanizer를 금지하지만 general-writing을 거쳐 스스로 부른다) 이 경유 충돌은 면제한다.
-2. **주 측면 배제(동반 포함)**: 각 구성원의 `필수 동반`을 끝까지 따라간 닫힘(조건부 동반 포함, 자기 자신 제외)까지 함께 본다. 구성원이 직접 넣지 않아도 그 동반 스킬의 규칙이 시안에 들어가기 때문이다(예: writing-design-docs → technical-writing의 문장 규칙, paper-writing → general-writing → humanizer의 AI식 표현 목록). 측면마다 그것을 주 측면으로 가진 서로 다른 출처 스킬을 모으고, 출처가 둘 이상이며 그 출처끼리 조율되어 있지 않으면 `primary overlap <측면>: <그 출처를 들여온 구성원들>` 충돌이다. 두 구성원이 같은 출처 하나를 들여오는 것(예: writing-design-docs와 reviewing-technical-prose가 둘 다 technical-writing을 부름)은 충돌이 아니다. 조율 = 같은 묶음이고, (구성원 ∪ 닫힘) 안의 어떤 스킬이 `필수 동반`을 따라 두 출처 모두에 닿는다(한 출처가 다른 출처를 부르는 경우 포함, 여러 단계 허용). 부르는 쪽이 순서를 짜기 때문이다. 공통 동반을 함께 부를 뿐인 형제(writing-design-docs와 writing-runbooks가 둘 다 technical-writing을 부름)는 서로 조율되지 않으므로 둘의 골격(structure)은 충돌이다.
+2. **주 측면 배제(동반 포함)**: 각 구성원의 `필수 동반`을 끝까지 따라간 닫힘(조건부 동반 포함, 자기 자신 제외)까지 함께 본다. 구성원이 직접 넣지 않아도 그 동반 스킬의 규칙이 시안에 들어가기 때문이다(예: writing-design-docs → technical-writing의 문장 규칙, paper-writing → general-writing → humanizer의 AI식 표현 목록). 측면마다 그것을 주 측면으로 가진 서로 다른 출처 스킬을 모으고, 출처가 둘 이상이며 그 출처끼리 조율되어 있지 않으면 `primary overlap <측면>: <그 출처를 들여온 구성원들>` 충돌이다. 두 구성원이 같은 출처 하나를 들여오는 것(예: writing-design-docs와 reviewing-technical-prose가 둘 다 technical-writing을 부름)은 충돌이 아니다. 같은 측면의 두 출처를 한 구성원(자신과 그 닫힘)만 들여오면 묶음이 달라도 조율로 보고 충돌이 아니다. 그 구성원이 자기 동반들의 순서를 짜기 때문이다(현재 레지스트리에서는 이런 출처끼리가 모두 같은 묶음이라 아래 조율로도 걸러진다). 조율 = 같은 묶음이고, (구성원 ∪ 닫힘) 안의 어떤 스킬이 `필수 동반`을 따라 두 출처 모두에 닿는다(한 출처가 다른 출처를 부르는 경우 포함, 여러 단계 허용). 부르는 쪽이 순서를 짜기 때문이다. 공통 동반을 함께 부를 뿐인 형제(writing-design-docs와 writing-runbooks가 둘 다 technical-writing을 부름)는 서로 조율되지 않으므로 둘의 골격(structure)은 충돌이다.
 3. **생성 스킬 최대 3개**: 단계가 `clarify`·`check`만이 아닌 구성원이 생성 스킬이다. 조합 안 다른 구성원의 `필수 동반`인 구성원은 세지 않는다. 닫힘에만 있는 동반 스킬은 구성원이 아니므로 세지 않는다.
 4. **명확화 전용 스킬은 조합에 넣지 않는다**: 단계가 `clarify`뿐인 스킬은 ② 명확화 단계로 보낸다.
 5. **우선순위**: 부 측면도 주 측면처럼 (구성원 ∪ 닫힘)으로 보고 구성원에게 돌린다. 구성원 자신이나 그 닫힘의 스킬이 부 측면으로 가진 측면은 그 구성원이 가진 것으로 친다. 그 측면은 주 측면으로 가진 구성원(자기 자신 또는 닫힘이 소유)을 따른다(앞선 구성원 우선). 그런 구성원이 없으면 그 측면을 부 측면으로 가진 구성원 중 조합 순서상 뒤 스킬을 따른다. 따르는 구성원이 아닌 나머지 부 측면 보유 구성원은 `ignored`에 오른다. 단 그 측면을 주 측면으로 가진 구성원은 오르지 않는다. 부 측면 보유 구성원이 하나뿐이고 주 측면 소유자가 없으면 `precedence`에만 있고 `ignored`에는 없다. 시안 지시에 "측면별 따를 스킬"로 적는다.
