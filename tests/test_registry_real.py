@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS = ROOT / "skills" / "writing-maestro" / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
-from registry_lib import parse_registry, validate  # noqa: E402
+from registry_lib import install_warnings, parse_registry, validate  # noqa: E402
 from registry_check import installed_from_manifest  # noqa: E402
 from combo_check import check_combo  # noqa: E402
 
@@ -21,7 +21,9 @@ def load():
 
 def test_registry_valid():
     reg = load()
-    assert validate(reg, installed_from_manifest(MANIFEST), SKILLS_DIR) == []
+    installed = installed_from_manifest(MANIFEST)
+    assert validate(reg, installed, SKILLS_DIR) == []
+    assert install_warnings(reg, installed, SKILLS_DIR) == []
 
 
 def test_known_conflict():

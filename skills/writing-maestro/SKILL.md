@@ -9,7 +9,7 @@ description: 작문 과제(새 글 쓰기, 기존 글 고치기, 검토만 하�
 
 이 문서에서 쓰는 경로:
 - `W` = 이 SKILL.md가 있는 폴더. 설치 경로는 `~/.claude/skills/writing-maestro`(레포 폴더로 가는 심링크)다. `registry.md`, `feedback.md`, `scripts/`가 여기 있다.
-- `M` = `/Users/chan/Developer/Skills/writing-maestro/research/install/2026-10-29-install-manifest.json` (설치 매니페스트)
+- 설치 매니페스트는 `registry_check.py`가 `W/registry.md`의 실제 경로(심링크를 푼 경로)에서 찾는다: 레포 루트의 `research/install/2026-10-29-install-manifest.json`. 따로 넘기지 않는다.
 - 스킬 원문: `~/.claude/skills/<이름>/SKILL.md`. 예외로 `doc-coauthoring`은 플러그인 사본이라 `ls -d ~/.claude/skills/synced/*/doc-coauthoring`으로 찾는다(레지스트리 출처가 plugin).
 
 ## 고정 규칙
@@ -43,7 +43,10 @@ description: 작문 과제(새 글 쓰기, 기존 글 고치기, 검토만 하�
 
 ## 2. 레지스트리 읽기
 호출할 때마다 새로 읽는다. 기억이나 이전 호출 결과를 쓰지 않는다. `registry.md`는 크므로 통째로 읽지 않는다.
-1. 검증: `python3 W/scripts/registry_check.py --registry W/registry.md --manifest M`. `OK <n> skills`가 아니면 출력된 오류를 그대로 보고하고 멈춘다(8절의 레지스트리 실패 형식). 후보도 질문도 만들지 않는다.
+1. 검증: `python3 W/scripts/registry_check.py --registry W/registry.md`. 출력은 세 가지다.
+   - exit 1(구조 오류 줄, `WARN `으로 시작하지 않는 줄)이나 exit 2(`ERROR ` 한 줄, 매니페스트·레지스트리를 못 읽음): 출력된 줄을 그대로 보고하고 멈춘다(8절의 레지스트리 실패 형식). 후보도 질문도 만들지 않는다.
+   - exit 0이고 마지막 줄이 `OK <n> skills (<k> warnings)`: `WARN <스킬>: not installed (...)` 줄의 스킬은 "실행 불가: 설치 필요"로 다룬다. 후보에서 빼고 "실행 불가"에 `<스킬> - 설치 필요 (<괄호 안 사유>)`로 적는다. 구성원의 `필수 동반`(동반의 동반 포함)에 그 스킬이 있는 구성원도 같다. 지명 스킬이어도 바꿔 끼우지 않는다(4절 6번). 나머지는 그대로 진행한다. `WARN <스킬>: installed but not in registry`는 후보에 영향이 없다(brief.md에만 적는다).
+   - exit 0이고 `OK <n> skills`: 그대로 진행한다.
 2. 머리말: `awk '/^## 스킬/{exit} {print}' W/registry.md`. 범위, 측면, 단계, 묶음, 조합 규칙이 여기 있다.
 3. 요약: `python3 W/scripts/registry_lookup.py --registry W/registry.md --summary`. 스킬마다 한 줄 `이름 | 주 측면 | 부 측면 | 단계 | 과제 종류 | 묶음 | 역할`. 줄 순서가 레지스트리 순서다.
 4. 전체 항목은 후보로 남은 스킬만: `python3 W/scripts/registry_lookup.py --registry W/registry.md --skill <이름> ...`. 맞는 상황·맞지 않는 상황·고유 접근·필수 동반·실행 요건·상태 파일·주의를 여기서 본다. 없는 이름이면 exit 1이다.

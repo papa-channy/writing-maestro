@@ -117,6 +117,7 @@ def parse_registry(text: str) -> Registry:
 
 
 def validate(reg: Registry, installed: set[str], skills_dir: Path) -> list[str]:
+    """구조 오류(치명). 설치 불일치는 `install_warnings`가 따로 낸다."""
     errs: list[str] = []
     for name, s in reg.skills.items():
         for key in REQUIRED_FIELDS:
@@ -140,13 +141,27 @@ def validate(reg: Registry, installed: set[str], skills_dir: Path) -> list[str]:
         for key in dict.fromkeys(s.primary + s.secondary + s.requires + s.forbids):
             if key not in s.evidence:
                 errs.append(f"{name}: no evidence for {key}")
-        is_plugin = "plugin" in s.fields.get("출처", "")
-        if not is_plugin and (name not in installed or not (skills_dir / name).is_dir()):
-            errs.append(f"{name}: not installed")
     for b, members in reg.bundles.items():
         for m in members:
             if m not in reg.skills:
                 errs.append(f"bundle {b}: unknown skill {m}")
-    for name in sorted(installed - set(reg.skills)):
-        errs.append(f"{name}: installed but not in registry")
     return errs
+
+
+def install_warnings(reg: Registry, installed: set[str], skills_dir: Path) -> list[str]:
+    """설치 불일치(경고). 등록 스킬이 매니페스트에 없거나 디렉터리가 없으면 그 스킬만
+    실행 불가이고, 매니페스트에만 있는 스킬은 후보가 될 수 없을 뿐이다."""
+    warns: list[str] = []
+    for name, s in reg.skills.items():
+        if "plugin" in s.fields.get("출처", ""):
+            continue
+        causes = []
+        if name not in installed:
+            causes.append("absent from manifest")
+        if not (skills_dir / name).is_dir():
+            causes.append("dir missing")
+        if causes:
+            warns.append(f"{name}: not installed ({', '.join(causes)})")
+    for name in sorted(installed - set(reg.skills)):
+        warns.append(f"{name}: installed but not in registry")
+    return warns

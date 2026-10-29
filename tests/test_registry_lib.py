@@ -3,7 +3,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "skills" / "writing-maestro" / "scripts"))
 
-from registry_lib import parse_registry, validate  # noqa: E402
+from registry_lib import install_warnings, parse_registry, validate  # noqa: E402
 
 FIXTURE = Path(__file__).parent / "fixtures" / "registry_min.md"
 ALL = {"general-writing", "humanizer", "prose-naturalizer", "copywriting"}
@@ -37,6 +37,7 @@ def test_fixture_valid(tmp_path):
     make_dirs(tmp_path)
     reg = parse_registry(FIXTURE.read_text(encoding="utf-8"))
     assert validate(reg, set(ALL), tmp_path) == []
+    assert install_warnings(reg, set(ALL), tmp_path) == []
 
 
 def errors(tmp_path, old, new, installed=None):
@@ -63,15 +64,35 @@ def test_missing_field(tmp_path):
 
 
 def test_missing_install_dir(tmp_path):
+    # Install mismatch is a warning, not a structural error.
     make_dirs(tmp_path, ALL - {"copywriting"})
     reg = parse_registry(FIXTURE.read_text(encoding="utf-8"))
-    assert "copywriting: not installed" in validate(reg, set(ALL), tmp_path)
+    assert validate(reg, set(ALL), tmp_path) == []
+    assert install_warnings(reg, set(ALL), tmp_path) == ["copywriting: not installed (dir missing)"]
+
+
+def test_absent_from_manifest(tmp_path):
+    make_dirs(tmp_path)
+    reg = parse_registry(FIXTURE.read_text(encoding="utf-8"))
+    assert validate(reg, ALL - {"copywriting"}, tmp_path) == []
+    assert install_warnings(reg, ALL - {"copywriting"}, tmp_path) == [
+        "copywriting: not installed (absent from manifest)"
+    ]
+
+
+def test_absent_from_manifest_and_dir_missing(tmp_path):
+    make_dirs(tmp_path, ALL - {"copywriting"})
+    reg = parse_registry(FIXTURE.read_text(encoding="utf-8"))
+    assert install_warnings(reg, ALL - {"copywriting"}, tmp_path) == [
+        "copywriting: not installed (absent from manifest, dir missing)"
+    ]
 
 
 def test_unregistered_installed_skill(tmp_path):
     make_dirs(tmp_path)
     reg = parse_registry(FIXTURE.read_text(encoding="utf-8"))
-    assert "extra: installed but not in registry" in validate(reg, ALL | {"extra"}, tmp_path)
+    assert validate(reg, ALL | {"extra"}, tmp_path) == []
+    assert install_warnings(reg, ALL | {"extra"}, tmp_path) == ["extra: installed but not in registry"]
 
 
 def test_requires_unknown_skill(tmp_path):
@@ -87,6 +108,7 @@ def test_plugin_skill_skips_dir_check(tmp_path):
     )
     reg = parse_registry(text)
     assert validate(reg, set(ALL), tmp_path) == []
+    assert install_warnings(reg, set(ALL), tmp_path) == []
 
 
 def test_unknown_stage_and_task_type(tmp_path):
