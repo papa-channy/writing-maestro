@@ -275,7 +275,7 @@ python3 skills/writing-maestro/scripts/combo_check.py --registry skills/writing-
 - 실행 요건: 필수: node>=18 (built-ins only, no npm deps); UTF-8 JSON .doubt.json output | 선택: doubt-ai@0.8.0 CLI for HTML render ('doubt map') and source verify ('doubt verify'), only if user already installed it and explicitly allows network
 - 필수 명령: node
 - 상태 파일: <decision>.doubt.json (canonical map, user-chosen path); <decision>.html (optional render); scripts/validate.mjs and scripts/contract.mjs in skill dir (validator); references/map-schema.md, references/evidence-ladder.md
-- 주의: 매니페스트: READY_WITH_LIMITS. 렌더러/검증기(doubt-ai@0.8.0)는 설치하지 않아 HTML 렌더와 네트워크 출처 검증은 불가, 검증기 자체는 정상. 검증기가 edge의 추가 'confidence' 키를 거부하지 않음(스키마 문서는 무효라 함). 원문은 doubt verify를 명시적 네트워크 허락 없이 실행하지 말라고 함. 산문 글쓰기 스킬이 아니라 JSON 산출물 스킬이다. 판단: facts의 requires에 있던 node는 스킬이 아니라 실행 파일이라 필수 명령으로 옮겼다.
+- 주의: 매니페스트: READY_WITH_LIMITS. 렌더러/검증기(doubt-ai@0.8.0)는 설치하지 않아 HTML 렌더와 네트워크 출처 검증은 불가, 검증기 자체는 정상. 검증기가 edge의 추가 'confidence' 키를 거부하지 않음(스키마 문서는 무효라 함). 원문은 doubt verify를 명시적 네트워크 허락 없이 실행하지 말라고 함. 산문 글쓰기 스킬이 아니라 JSON 산출물 스킬이다. 판단: facts의 requires에 있던 node는 스킬이 아니라 실행 파일이라 필수 명령으로 옮겼다. 관찰(2026-11-07, 1회): "잠정 입장" 요구가 brief의 "결정하지 말 것"과 충돌했고 증거 지도 JSON은 brief에 없는 추가물이다. 이 둘이 걸리면 시안 지시에 brief가 우선이라고 적고 지도는 본문 밖 `_aux/`에 두게 한다.
 - 근거: evidence "Topical similarity is not support." / review-report "the current position in one sentence;"
 
 ### chapter-writing
@@ -495,7 +495,7 @@ python3 skills/writing-maestro/scripts/combo_check.py --registry skills/writing-
 - 실행 요건: 필수: specification purpose (${input:SpecPurpose} placeholder) | 선택: 없음
 - 필수 명령: 없음
 - 상태 파일: /spec/spec-[a-z0-9-]+.md (output)
-- 주의: SKILL.md에 ${input:SpecPurpose} 플레이스홀더가 그대로 남아 있다(VS Code Copilot 문법). 템플릿 테스트 섹션 예시가 .NET(MSTest 등)에 치우쳐 있다. 산출물은 AI 소비용 기계 판독 명세이므로 사람용 산문 규칙과 충돌할 수 있다.
+- 주의: SKILL.md에 ${input:SpecPurpose} 플레이스홀더가 그대로 남아 있다(VS Code Copilot 문법). 템플릿 테스트 섹션 예시가 .NET(MSTest 등)에 치우쳐 있다. 산출물은 AI 소비용 기계 판독 명세이므로 사람용 산문 규칙과 충돌할 수 있다. 관찰(2026-11-07, 1회): 템플릿이 brief에 없는 절(Test Automation, Compliance 등)을 채우고 영어 절 제목이 섞였다. 시안 지시에 "brief에 없는 절은 쓰지 않는다"를 적는다.
 - 근거: structure "Clearly distinguish between requirements, constraints, and recommendations." / format "The specification should be saved in the `/spec/` directory" / prose-edit "Avoid idioms, metaphors, or context-dependent references." / prompt "Use precise, explicit, and unambiguous language."
 
 ### data-storytelling
